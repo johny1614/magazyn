@@ -1,0 +1,104 @@
+\documentclass[11pt]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\selectlanguage{polish}
+\usepackage{amsmath}
+\newcommand{\R}{\mathbb{R}}
+\begin{document}
+\title{Optymalizacja  systemu sygnalizacji świetlnej w 
+oparciu o przepływowy model ruchu pojazdów.}
+\author{Michał Lis}
+\date{\today}
+\maketitle
+
+\section{Model sieci dróg}
+Modelujemy sieć dróg jako multigraf skierowany oznaczony $G=(V,E)$.
+Gdzie $V$ to zbiór skrzyżowań(węzłów grafu).
+$E$ oznacza zbiór wszystkich pasów ruchu w sieci dróg (krawędzie grafu). Pas ruchu oznaczamy jako $^{k}e^{j}_{i}\in{E}$. Gdzie:
+$i$ - indeks początkowego wierzchołka
+$j$ - indeks docelowego wierzchołka
+$k$ - numer pasu.
+ Funkcja $L_{v}:V\to (0,\infty)$ zwraca długość pasu $v\in{V}$.
+%///Skierowany - bo interesuje nas skąd dokąd jedziemy.
+%Multigraf - bo może być kilka pasów. 
+%Oznaczony - potrzebujemy labelki na pasy.
+\section{Model ruchu drogowego}
+\subsection{Klasyfikacja modeli ruchu drogowego} 
+Modele ruchu drogowego mają na celu ukazanie rzeczywistego przeplywu pojazdów w sposób czysto matematyczny. Ważnym kryterium doboru, czy też tworzenia modelu jest przystępność jego implementacji informatycznej. Powszechnie klasyfikuje się 3 podejścia modelowe dla omawianego problemu \cite{CompareModels} - makroskopijny, mezoskopijny, mikroskopijny. Czasem \cite{multilevel} wyróżnia się także czwarte podejście - submikroskopijne. Jest to podział ze względu na poziom modelu. Najniższy poziom i najbardziej dokładny model gwarantuje podejście mikroskopijne. Rozważa on pojazdy indywidualnie w czasoprzestrzeni. Przyspieszenie pojazdu jest wyliczane na podstawie dynamiki(prędkości, przyspieszenia) i pozycji pojazdu bezpośrednio przed nim. Model mezoskopijny zapewnia indywidualne rozróżnienie pojazdów, jednak ich zachowanie jest wyliczane na danych zagregowanych\cite{mesoscopic}. Przykładowo pojazdy są zgrupowane w grupę podróżującą z pewnego punktu startowego do celu. Inne modele \cite{mesoscopic2} mezoskopijne wyliczają dynamikę ruchu na podstawie aktualnego zatłoczenia drogi. Poziom mezoskopijny jest obliczeniowo bardziej opłacalny od mikroskopijnego.
+Wiele symulatorów stosujących model mezoskopijny oferuje symulację w czasie rzeczywistym dla sieci dróg całego miasta\cite{vu2017high}. Ideą modelu makroskopijnego jest traktowanie ruchu ulicznego identycznie jak ruchu cieczy lub gazów. Po raz pierwszy w roku 1956 M. J. Lighthill i G. B. Whitham \cite{lwr} przedstawili pomysł przyrównania ruchu ulicznego na zatłoczonych drogach do przepływu wody w rzekach. Z tego powodu nie rozróżniamy w nim indywidualnie pojazdów, ani też nawet grupowo. Rozważamy natomiast gęstość ruchu w danym punkcie na drodze i czasie - czyli ilość pojazdów na danym odcinku drogi. Ruch pojazdów jest wyliczany jedynie na podstawie gęstości ruchu. Jest to najmniej kosztowny obliczeniowo model. Właśnie w modelu makroskopijnym zostało stworzone środowisko symulacyjne. Szczegóły modelu są przedstawione w następnym podrozdziale.
+\subsection{Makroskopijny model ruchu} 
+Istotą makroskopijnego modelu ruchu jest pojęcie gęstości ruchu. W niektórych artykułach \cite{helbing2001master} ta wartość jest przedstawiona jako iloraz ilości pojazdów znajdujących się na pewnym odcinku i długości tego odcinka drogi. Nie są to jednak czysto matematyczne formalne definicje. W makroskopijnym modelu nie rozróżniamy pojedynczych pojazdów, ani nawet grup, więc taka definicja gęstości ruchu może być odebrana jako nieścisła z ideą modelu. 
+Makroskopijny model ruchu jest oparty o równanie różniczkowe (1) wraz z warunkiem początkowym (2).  Model makroskopijny traktuje ruch uliczny na drogach podobnie do przepływu wody w rzekach. Możemy zatem gęstość ruchu utożsamiać z wysokością wody w rzece. Jest to także czynnik wpływający na prędkość ruchu. Zmianę gęstości i płynności ruchu definiuje następujący układ równań:
+\begin{math}
+  \left\{
+    \begin{array}{l}
+      \frac{\delta p(x,t)}{\delta t}+\frac{\delta q(x,t)}{\delta x}=0 \hspace*{0pt}\hfill (1)\\
+      p(x,t=0)=p_{0}(x) \hspace*{0pt}\hfill (2),
+    \end{array}
+  \right.
+\end{math}
+
+gdzie $p\in[0,p_{max}]$ to gęstość ruchu w miejscu $x$ w czasie $t$, ,a $p_{0}$ to początkowa gęstość dla punktu $x$ na pewnej ustalonej drodze $e$. Wartość $p_{max}$ to maksymalna gęstość pojazdów przy której samochody przestają się poruszać, a $t_{max}$ to końcowy czas symulacji ruchu. Następnie $q\in{[0,\infty)}$ oznacza przepustowość ruchu. Zakładamy, że $q(p)=pv$.
+Oznaczmy prędkość maksymalną ruchu jako $v_{max} \in(0,\infty)$. Prędkość ruchu definiujemy jako rzeczywistą funkcję gęstości: $$v(p)=(1-\frac{p}{p_{max}})v_{max}$$. Początkową gęstość formalnie definiujemy jako:
+\[ p_0(x) =
+  \begin{cases}
+    p_L       & \quad \text{for } x\leq x_0 \\
+    p_R  & \quad \text{for } x>x_0
+  \end{cases}
+\].
+Punkt $x_0 \in v$ będziemy nazywać punktem przegięcia. Dla punktów $x$ będących na drodze przed $x_0$ gęstość wynosi $p_l$, a dla punktów następujących po $x_0$ jest to $p_r$. Ta różnica gęstości powoduje przemieszczanie się pojazdów.
+\subsection{Dyskretyzacja modelu}
+Modele dyskretne zazwyczaj są łatwiejsze i mniej kosztowne w implementacji komputerowej. Z tego powodu dokonamy dyskretyzacji modelu zarówno sieci drogowej jak i ruchu obowiązującego na niej.
+\subsection{Dyskretyzacja modelu sieci drogowej}
+Niech G=(V,E) będzie multigrafem sieci drogowej. W modelu dyskretnym istotna obliczeniowo jest przeliczalna liczba punktów. Zatem wybierzmy liczbę naturalną $l$. Określa ona punkty które zostaną wybrane z drogi w procesie dyskretyzacji. Ciąg punktów na drodze $v$, dla których będą wyliczane wartości gęstości to: $b_n=(0,\frac{L_v}{l},...,L_v)$. Ustalmy podział drogi tak, aby punkty ciągu $b_n$ były środkami przedziałów:
+
+\[ B_n =
+  \begin{cases}
+    [0,\frac{L_v}{2l}]       & \quad \text{dla } n=0 \\
+        [\frac{(2n-1)L_v}{2l},\frac{(2n+1)L_v}{2l}]  & \quad \text{dla } n=1,2,...,l-1 \\
+    [\frac{(2l-1)L_v}{2l},L_v] & \quad \text{dla } n=l
+  \end{cases}
+\]
+Wyjątkiem są punkty krańcowe drogi $b_1=0$ i $b_2=L_v$, które znajdują się także na krańcach przedziałów $B_0$ i $B_l$. Podział to formalnie:
+$$\displaystyle B=\bigcup_{n=1}^{l}B_n$$
+Podobny proces przeprowadzamy dla osi czasu. Nie będziemy traktować czasu jako wartości ciągłej, więc zdefiniujemy przeskok czasu jako $\Delta t$. Przestrzeń czasową określamy jako zbiór.
+$$\displaystyle T=\bigcup_{t=0}^{m} \Delta t$$
+Dodatkowo nakładamy warunek, że $m$ to taka liczba naturalna, że $t_{max}=m \cdot \Delta t$.
+Dla punktów ciągu $b_n$ jesteśmy zobligowani do przedstawienia wartości reprezentującej gęstość. Będzie ona wyliczona na podstawie odpowiadających zbiorów $B_n$. Gęstość w punkcie $b_n$ i czasie $t_k=k\cdot \Delta t \in T$ definiujemy jako:
+$$p_{n}^{k}=\int\limits_{B_n} {\frac{p(b_n,k \cdot \Delta t)}{\mu(B_n)}dx}.$$
+Gdzie $\mu$ to długość przedziału. 
+Analogicznie definiujemy przepustowość jako:
+$$q_{n}^{k}=\int\limits_{B_n} {\frac{q(b_n,k \cdot \Delta t)}{\mu(B_n)}dx}.$$
+Wspomniane zostały już zalety modelu dyskretnego. Wadą często jest większy stopień skomplikowania. W tym momencie musimy jeszcze odnieść się do sposobu zmiany gęstości ruchu. Na podstawie (LWR) możemy wywnioskować, że:
+$$\int\limits_{B_n} {p(x,t_{k+1})dx-\int\limits_{B_n}p(x,t_{k})dx} +\int\limits_{t_k}^{t_{k+1}} q(B_{n}^{p},t)-q(B_n^{l},t))dt=0$$
+Gdzie symbole $B_n^l, B_n^p$ oznaczają odpowiednio lewy i prawy kraniec przedziału $B_n$. Upraszczając z (odniesienie):
+$$\mu(B_n)(p_n^{k+1}-p_n^{k}) +\int\limits_{t_k}^{t_{k+1}} q(B_{n}^{p},t)-q(B_n^{l},t))dt=0$$
+Przyjmujemy, że wartości przepustowości i gęstości zmieniają się w tylko w chwilach $t\in T$. Wtedy wartości $q(B_{n}^{p},t)$ i $q(B_{n+1}^{p},t)$ są stałe na całym przedziale całkowania $[t_k,t_{k+1})$. Otrzymujemy równanie:
+$$\mu(B_n)(p_n^{k+1}-p_n^{k})  + \Delta t (q(B_{n}^{l},t_k)-q(B_n^p,t_k))=0$$
+Rezultatem jest rekurencyjny wzór na gęstość ruchu:
+$$p^{k+1}_n=p^{k}_n -\frac{\Delta t}{\mu(B_n)} (q(B_{n}^{p},t_k)-q(B_{n}^{l},t_k))=0$$
+Nie znamy płynności na krańcach przedziału $B_n$, gdyż ustaliliśmy, że istotne obliczeniowo będą jedynie punkty ciągu $b_n$. Z tego powodu przyjmujemy, że $q(B_n^l,t_k)=\frac{q(b_n-1,t_k)+q(b_n,t_k)}{2}$ oraz $q(B_n^p)=\frac{q(b_n,t_k)+q(b_n+1,t_k)}{2}$.Ostateczny wzór rekurencyjny to:
+$$p^{k+1}_n=p^{k}_n -\frac{\Delta t}{\mu(B_n)}(\frac{q(b_{n+1},t_k)-q(b_{n-1},t_k)}{2})$$
+Warto zaznaczyć, że powyższy wzór ma sens tylko dla $n=1,2,...,l-1$. Wartość $q(0,t_k)$ odpowiada ilości nowych pojazdów pojawiających się na drodze w trakcie sekundy. Na jej podstawie wyliczane jest $p_0^k$. 
+$$p_0^k=\frac{p_{max}}{2}-\frac{1}{2}(p_{max}^2-4p_{max}q(0,t_k)/v_{max})^{1/2}$$
+Wartość $p^{k+1}_{l}$ liczymy jako:
+$$p^{k+1}_l=p^{k}_l +\frac{\Delta t}{2\mu(B_n)}q(b_{n-1},t_k))$$. Zakładamy, że pojazdy mogą bezproblemowo opuścić drogę.
+
+Przykład:
+
+
+
+
+
+%Podstawową wartością opisującą stan na drodze jest płynność ruchu, którą chcemy na początek zdefiniować. Ustalmy pas ruchu v oraz punkt $x$ znajdujący się na pasie v, wraz z otoczeniem $X=[x-dx,x+dx]$. Ustalmy pewną wartość czasową $t\in(0,\infty)$ oraz przedział czasowy $T=[t-dt,t+dt]$ - na tyle długi, by znacząca ilość pojazdów przejechała przez zdefiniowane właśnie otoczenie X.
+% zdefiniować dla t=0
+%$$q=\frac{n}{r}$$
+
+Wzór:
+$$q=p(1-\frac{p}{p_max})v_{max}$$
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+\end{document}
