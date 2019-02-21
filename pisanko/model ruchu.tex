@@ -95,7 +95,7 @@ Makroskopowy model ruchu jest oparty o równanie różniczkowe (\ref{main_diff_e
 Gdzie $p(x,t)$ to gęstość ruchu w punkcie $x$ i czasie $t$. Wartość funkcji gęstości należy do przedziału $[0,p^{max}]$.\\
 Równanie (\ref{p_init_eq}) zakłada istnienie pewnej z góry nałożonej początkowej gęstości drogi $p_0(x)$.
 Równianie (\ref{main_diff_eq}) określa
-Wedle założeń modelu makroskopowego \cite{lwr} funkcja płynności ruchu $f$ powinna być wklęsła. W przedstawionym w tej pracy modelu funkcja ma następującą definicję:
+wedle założeń modelu makroskopowego \cite{lwr} rozwój gęstości ruchu na drodze. Funkcja płynności ruchu $f$ powinna być wklęsła. W przedstawionym w tej pracy modelu funkcja ma następującą definicję:
 \begin{numcases}{f(p)=}
    \lambda p & \text{dla } $p\in[0,p^{*}]$\\
    \lambda \cdot (2p^{*}-p) & \text{dla } $p\in(p^{*},p^{max}]$ 
@@ -135,19 +135,20 @@ Gdzie $\lambda$ jest stałym parametrem funkcji trójkątnej oraz $p^*=\frac{1}{
 %Wartość $q$ po prawej stronie równania odnosi się do płynności drogi wlotowej $e$ przyporządkowanej do manewru $w$.
 
 \section{Dyskretyzacja modelu}
-Modele dyskretne zazwyczaj są łatwiejsze i mniej kosztowne w implementacji komputerowej. Z tego powodu dokonamy dyskretyzacji modelu zarówno sieci drogowej jak i ruchu obowiązującego na niej.
+Modele dyskretne zazwyczaj są łatwiejsze i mniej kosztowne w implementacji komputerowej. Z tego powodu dokonana zostanie dyskretyzacja osi czasu, modelu sieci drogowej jak i ruchu obowiązującego na niej.
 \section{Dyskretyzacja czasu}
-Proces dyskretyzacji przeprowadzony zostanie najpierw dla osi czasu. Czas nie będzie traktowany jako wartość ciągła, więc zdefiniujemy przeskok czasu jako $\Delta t$. Przestrzeń czasowa określona jest jako zbiór:
+Proces dyskretyzacji przeprowadzony zostanie najpierw dla osi czasu. Czas nie będzie traktowany jako wartość ciągła, więc zdefiniujemy przeskok czasu jako $\Delta t$. Przestrzeń czasowa określona jest jako ciąg:
 \[
-T=\bigcup_{t=0}^{m} \Delta t \addtag
+(t_k)_{k=0}^m=k\Delta t \addtag
 \]
 Gdzie $m$ liczba naturalna określająca moment końca symulacji ruchu drogowego. Oznaczamy go jako $t_{max}=m \cdot \Delta t$.
 
 
 \section{Dyskretyzacja drogi}
-Niech $e$ będzie rozważaną drogą. Pierwszym krokiem jest ustalenie siatki przestrzennej drogi. Niech dana będzie liczba naturalna $l$. Określa ona ilość punktów które zostaną wybrane z drogi w procesie dyskretyzacji. Liczba punktów $l$ określa także odległość między nimi jako $\Delta x=\frac{L_e}{l}$. Ciąg punktów na drodze $e$, dla których będą wyliczane wartości gęstości będziemy nazywać siatką bazową $b_n$. Definiujemy ją następująco: 
-\[b_n=n\cdot \Delta x \quad \text{dla }n=0,1,...,l \addtag \]
-Do celów czysto obliczeniowych przedstawionych w rozdziale \ref{sec:dyskretyzacja_ruchu} utworzona zostaje siatka pomocnicza:
+Niech $e$ będzie odcinkiem rozważanej drogi. Celem jest określenie ciągu $b_n$ wybranych punktów drogi $e$. Niech dana będzie liczba naturalna $l$ określająca ilość wybranych punktów z drogi. Wtedy odległość między sąsiednimi punktami to $\Delta x=\frac{L_e}{l}$. 
+Ciąg $b_n$ jest zdefiniowany następująco: 
+\[b_n=n\cdot \Delta x \quad \text{dla }n=0,1,...,l \addtag \label{eq:ciag_bazowy} \]
+Powyższy ciąg (\ref{eq:ciag_bazowy}) będzie nazywany siatką bazową. Do celów czysto obliczeniowych przedstawionych w rozdziale \ref{sec:dyskretyzacja_ruchu} zostaje utworzona również siatka pomocnicza:
 \[\widetilde{b_n}=n\cdot \Delta x+\frac{\Delta x}{2} \quad \text{dla }n=0,1,...,l-1 \addtag\]
 
 \begin{figure}[H]
@@ -158,18 +159,16 @@ Do celów czysto obliczeniowych przedstawionych w rozdziale \ref{sec:dyskretyzac
 \end{figure}
 \section{Dyskretyzacja makroskopowego przepływu ruchu}\label{sec:dyskretyzacja_ruchu}
 %Dla punktów ciągu $b_n$ zostaną przedstawione wartości gęstości. 
-
-
-
+Od tego momentu rozważamy jedynie punkty niebrzegowe zarówno ciągu pomocniczego jak i bazowego - czyli z wyjątkiem $b_0,b_l,\widetilde{b_0},\widetilde{b_{l+1}}$.
 Dla każdego z punktów ciągu $b_n$ gęstość będzie wyliczona na podstawie jego otoczenia $(\widetilde{b_{n}},\widetilde{b_{n+1}})$. Gęstość w punkcie $b_n$ i czasie $t_k=k\cdot \Delta t$ definiujemy jako:
 \[p_{n}^{k}=\int\limits_{{\widetilde{b_{n}}}}^{{\widetilde{b_{n+1}}}} {\frac{p(x,k \cdot \Delta t)}{\Delta x}dx}. \addtag\]
 %Analogicznie definiujemy płynność jako:
 %\[q_{n}^{k}=\int\limits_{{\widetilde{b_{n}}}}^{{\widetilde{b_{n+1}}}} {\frac{q(x,k \cdot \Delta t)}{\Delta x}dx}. \addtag \]
  Na podstawie (\ref{main_diff_eq}) możemy wywnioskować, że:
-\[\int\limits_{\widetilde{b_{n}}}^{\widetilde{b_{n+1}}} {p(x,t_{k+1})dx-\int\limits_{\widetilde{b_{n}}}^{\widetilde{b_{n+1}}}p(x,t_{k})dx} +\int\limits_{t_k}^{t_{k+1}} q(\widetilde{b_{n+1}},t)-q(\widetilde{b_{n}},t))dt=0 \addtag \]
+\[\int\limits_{\widetilde{b_{n}}}^{\widetilde{b_{n+1}}} {p(x,t_{k+1})dx-\int\limits_{\widetilde{b_{n}}}^{\widetilde{b_{n+1}}}p(x,t_{k})dx} +\int\limits_{t_k}^{t_{k+1}} q(\widetilde{b_{n+1}},t)-q(\widetilde{b_{n}},t))dt=0 \addtag \label{eq:calki-LWR} \]
 Upraszczając otrzymujemy:
 \[\Delta x(p_n^{k+1}-p_n^{k}) +\int\limits_{t_k}^{t_{k+1}} q(\widetilde{b_{n+1}},t)-q(\widetilde{b_{n}},t))dt=0 \addtag \]
-Przyjmujemy, że wartości przepustowości i gęstości zmieniają się w tylko w chwilach $t\in T$. Wtedy wartości $q(\widetilde{b_n},t)$ i $q(\widetilde{b_{n+1}},t)$ są stałe na całym przedziale całkowania $[t_k,t_{k+1})$. Otrzymujemy równanie:
+Przyjmujemy, że wartości przepustowości i gęstości zmieniają się w tylko w chwilach $t_k$. Wtedy wartości $q(\widetilde{b_n},t)$ i $q(\widetilde{b_{n+1}},t)$ są stałe na całym przedziale całkowania $[t_k,t_{k+1})$. Otrzymujemy równanie:
 \[\Delta x(p_n^{k+1}-p_n^{k})  + \Delta t (q(\widetilde{b_{n+1}},t_k)-q(\widetilde{b_{n}},t_k))=0 \addtag \]
 Rezultatem jest rekurencyjny wzór na gęstość ruchu:
 \[p^{k+1}_n=p^{k}_n -\frac{\Delta t}{\Delta x} (q(\widetilde{b_{n+1}},t_k)-q(\widetilde{b_{n}},t_k)) \addtag \label{eq:normal_center_development} \]  
@@ -180,30 +179,42 @@ Powyższy wzór zawiera niezdefiniowane wartości $q$ i $p$ dla punktów ciągu 
 \[ 
 \widetilde{q_n^k} =  \frac{q_{n-1}^k+q_{n}^k}{2} \addtag
 \]
-Powyższe wzory dotyczą $n=1,2,...,l-1$. Dla krańcowych punktów dyskretyzacja prowadzi do wartości:
-\[\widetilde{p^k_0}=p^k_0\]
-\[\widetilde{p^k_l}=p^k_l\]
-Od tego momentu rozważamy jedynie punkty niebrzegowe zarówno ciągu pomocniczego jak i bazowego - czyli z wyjątkiem $b_0,b_l,\widetilde{b_0},\widetilde{b_{l+1}}$. Ustalona zatem będzie ewolucja gęstości dla pomocniczego ciągu $\widetilde{b_n}$. Jest ona opisana analogicznie do (\ref{eq:normal_center_development}):
-\[\widetilde{p^{k+1}_n}=\widetilde{p^k_n}- \frac{\Delta t}{\Delta x}(q(p^k_{n+1})-q(p^k_{n})) \addtag \label{eq:stagered_from_normal} \]
+Powyższe wzory dotyczą $n=1,2,...,l-1$. 
+%Dla krańcowych punktów dyskretyzacja prowadzi do wartości:
+%\[\widetilde{p^k_0}=p^k_0\]
+%\[\widetilde{p^k_l}=p^k_l\]
+ Ustalona zatem będzie ewolucja gęstości dla pomocniczego ciągu $\widetilde{b_n}$. Jest ona opisana analogicznie do (\ref{eq:normal_center_development}):
+\[\widetilde{p^{k+1}_n}=\widetilde{p^k_n}- \frac{\Delta t}{\Delta x}(q(p^k_{n})-q(p^k_{n-1})) \addtag \label{eq:stagered_from_normal} \]
 Z równania (\ref{eq:init_p_stagerred}) można wykazać, że:
 \[p_n^{k+1}=\frac{\widetilde{p_{n}^{k+1}}+\widetilde{p_{n+1}^{k+1}}}{2} \addtag
 \label{eq:normal_from_stagerred} \]
-Na podstawie wzorów (\ref{eq:stagered_from_normal}) i \eqref{eq:normal_from_stagerred} otrzymujemy końcową zależność:
-\[ p_n^{k+1} =\frac{1}{2}\widetilde{p^{k}_n}-\frac{\Delta t}{2\Delta x}(q^k_n-q^k_{n-1})+\frac{1}{2}\widetilde{p^{k}_{n+1}}-\frac{\Delta t}{2\Delta x}(q^k_{n+1}-q^k_{n})  \addtag \]
+Na podstawie wzorów (\ref{eq:stagered_from_normal}) i \eqref{eq:normal_from_stagerred} otrzymujemy:
+\[ p_n^{k+1} =\frac{1}{2}\widetilde{p^{k}_n}-\frac{\Delta t}{2\Delta x}(q^k_n-q^k_{n-1})+\frac{1}{2}\widetilde{p^{k}_{n+1}}-\frac{\Delta t}{2\Delta x}(q^k_{n+1}-q^k_{n})  \addtag \label{eq:final_normal_development}.\]
+Co prowadzi do końcowej zależności:
+\[ p_n^{k+1} =\frac{1}{2}p_n^k+\frac{1}{4}p_{n+1}^k+\frac{1}{4}p_{n-1}^k  -\frac{\Delta t}{2\Delta x}(q^k_n-q^k_{n-1})-\frac{\Delta t}{2\Delta x}(q^k_{n+1}-q^k_{n})  \addtag .\]
+
+
+\[ p_n^{k+1} =\frac{1}{2}p_n^k+\frac{1}{4}p_{n+1}^k+\frac{1}{4}p_{n-1}^k  +\frac{\Delta t}{2\Delta x}(q^k_{n-1}-q^k_{n+1})  \addtag .\]
+
+
 Powyższy wzór kończy rozważania odnośnie punktów wewnętrznych drogi.
-Przypadek punktów brzegowych różni się diametralnie od punktów wewnętrznych ze względu na to iż trzeba w nich ująć aspekty wprowadzenia nowych pojazdów do ruchu oraz opuszczenia drogi. Podstawowe równanie modelu makroskopowego (\ref{main_diff_eq}) nie uwzględnia ani źródła, ani też ujścia ruchu.
+Przypadek punktów brzegowych różni się diametralnie od punktów wewnętrznych ze względu na to iż trzeba w nich ująć aspekty wprowadzenia nowych pojazdów do ruchu oraz opuszczenia drogi. Podstawowe równanie modelu makroskopowego (\ref{main_diff_eq}) nie uwzględnia ani źródła, ani też ujścia ruchu, co pozwala na zastosowanie własnego rozwiązania w tym zakresie.
+Wartość $\widetilde{p_0^k}$ jest źródłem ruchu. Początkowo ustalmy, że jest ona z góry dana i stała na przedziale $(\widetilde{b_0},b_0)$. Wtedy na podstawie wzoru \ref{eq:calki-LWR} otrzymujemy:
+\[\widetilde{p_0^{k+1}} \frac{\Delta x}{2} + \int\limits_{b_{0}}^{\widetilde{b_{1}}} {p(x,t_{k+1})dx-\widetilde{p_0^{k}} \frac{\Delta x}{2}-\int\limits_{b_{0}}^{\widetilde{b_{1}}}p(x,t_{k})dx} +\int\limits_{t_k}^{t_{k+1}} q(\widetilde{b_{1}},t)-q(\widetilde{b_{0}},t))dt=0 \addtag \]
+
+
+%\\------------------------\\
 Przedstawiony zostanie teraz proces wyliczania gęstości na zewnętrznych punktach drogi czyli $b_0$ i $b_l$. 
 Źródło ruchu jest pewną funkcją rzeczywistą oznaczoną jako $\gamma^k_{out}$. Ujście $\gamma^k_{out}$ w przypadku gdy pojazdy mogą bezproblemowo opuścić drogę ma wartość:
-
 \begin{numcases}{\gamma^{k}_{out}=}
-   q(p^k_{l}) & \text{dla } $p^k_{l}\in[0,p^{*}]$\\
-   q(p^*) & \text{dla } $p^k_{l}\in(p^{*},p^{max}]$ 
+   q(\widetilde{p^k_{l+1}}) & \text{dla } $\widetilde{p^k_{l+1}}\in[0,p^{*}]$\\
+   q(p^*) & \text{dla } $\widetilde{p^k_{l+1}}\in(p^{*},p^{max}]$ 
 \end{numcases}
-
 Rozwój gęstości ruchu w skrajnych punktach ciągu $\widetilde{b_n}$ przedstawia się następująco:
-\[\widetilde{p_0^{t+1}}=\widetilde{p_0^{t}}-\frac{2\Delta t}{\Delta x}(f(p_0^t)-\gamma_{in}^t) \addtag \label{eq:stagered_start_development} \]
-\[\widetilde{p_{l+1}^{t+1}}=\widetilde{p_{l+1}^{t}}-\frac{2\Delta t}{\Delta x}(f(p_0^t)-\gamma_{out}^t) \addtag \label{eq:stagered_end_development}  \]
+\[\widetilde{p_0^{t+1}}=\widetilde{p_0^{t}}-\frac{\Delta t}{\frac{1}{2}\Delta x}(f(p_0^t)-\gamma_{in}^t) \addtag \label{eq:stagered_start_development} \]
+\[\widetilde{p_{l+1}^{t+1}}=\widetilde{p_{l+1}^{t}}-\frac{\Delta t}{\frac{1}{2}\Delta x}(f(p_0^t)-\gamma_{out}^t) \addtag \label{eq:stagered_end_development}  \]
 \\
+
 Biorąc pod uwagę 2 powyższe wzory oraz (\ref{eq:normal_from_stagerred}) rozwój ruchu w punktach krańcowych ciągu $b_n$ jest opisany następująco:
 \[
 p_0^{k+1}=\frac{\widetilde{p^k_0}}{2}+\frac{\widetilde{p^k_1}}{2}-\frac{\Delta t}{\Delta x}(f(p_0^k)-\gamma_{in}^t)-\frac{\Delta t}{2\Delta x}(f(p_1^k)-f(p^k_0))
