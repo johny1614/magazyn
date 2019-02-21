@@ -145,11 +145,12 @@ Gdzie $m$ liczba naturalna określająca moment końca symulacji ruchu drogowego
 
 
 \section{Dyskretyzacja drogi}
-Niech $e$ będzie odcinkiem rozważanej drogi. Celem jest określenie ciągu $b_n$ wybranych punktów drogi $e$. Niech dana będzie liczba naturalna $l$ określająca ilość wybranych punktów z drogi. Wtedy odległość między sąsiednimi punktami to $\Delta x=\frac{L_e}{l}$. 
+Zadaniem jest określenie ciągu $b_n$ wybranych punktów drogi $e$ dla których będą wyliczane gęstości. Niech dana będzie liczba naturalna $l$ określająca ilość wybranych punktów z drogi. Wtedy odległość między sąsiednimi punktami to $\Delta x=\frac{L_e}{l}$. 
 Ciąg $b_n$ jest zdefiniowany następująco: 
 \[b_n=n\cdot \Delta x \quad \text{dla }n=0,1,...,l \addtag \label{eq:ciag_bazowy} \]
-Powyższy ciąg (\ref{eq:ciag_bazowy}) będzie nazywany siatką bazową. Do celów czysto obliczeniowych przedstawionych w rozdziale \ref{sec:dyskretyzacja_ruchu} zostaje utworzona również siatka pomocnicza:
-\[\widetilde{b_n}=n\cdot \Delta x+\frac{\Delta x}{2} \quad \text{dla }n=0,1,...,l-1 \addtag\]
+Powyższy ciąg (\ref{eq:ciag_bazowy}) będzie nazywany siatką bazową. Punkty $b_0$,$b_l$ będziemy dalej nazywać jako punkty brzegowe drogi, a $b_1,...,b_{l-1}$ jako wewnętrzne.\\
+Do celów czysto obliczeniowych przedstawionych w rozdziale \ref{sec:dyskretyzacja_ruchu} zostaje utworzona również siatka pomocnicza:
+\[\widetilde{b_n}=n\cdot \Delta x+\frac{\Delta x}{2} \quad \text{dla }n=1,...,l \addtag\]
 
 \begin{figure}[H]
   \centering
@@ -158,9 +159,8 @@ Powyższy ciąg (\ref{eq:ciag_bazowy}) będzie nazywany siatką bazową. Do cel�
  \label{fig:siatka}
 \end{figure}
 \section{Dyskretyzacja makroskopowego przepływu ruchu}\label{sec:dyskretyzacja_ruchu}
-%Dla punktów ciągu $b_n$ zostaną przedstawione wartości gęstości. 
-Od tego momentu rozważamy jedynie punkty niebrzegowe zarówno ciągu pomocniczego jak i bazowego - czyli z wyjątkiem $b_0,b_l,\widetilde{b_0},\widetilde{b_{l+1}}$.
-Dla każdego z punktów ciągu $b_n$ gęstość będzie wyliczona na podstawie jego otoczenia $(\widetilde{b_{n}},\widetilde{b_{n+1}})$. Gęstość w punkcie $b_n$ i czasie $t_k=k\cdot \Delta t$ definiujemy jako:
+Najpierw rozważone zostaną gęstości ruchu jedynie dla punktów wewnętrznych ciągu $b_n$ czyli z pominięciem $b_0$ i $b_l$.
+Dla każdego z tych punktów gęstość będzie wyliczona na podstawie jego otoczenia $(\widetilde{b_{n}},\widetilde{b_{n+1}})$. Gęstość w punkcie $b_n$ i czasie $t_k=k\cdot \Delta t$ definiujemy jako:
 \[p_{n}^{k}=\int\limits_{{\widetilde{b_{n}}}}^{{\widetilde{b_{n+1}}}} {\frac{p(x,k \cdot \Delta t)}{\Delta x}dx}. \addtag\]
 %Analogicznie definiujemy płynność jako:
 %\[q_{n}^{k}=\int\limits_{{\widetilde{b_{n}}}}^{{\widetilde{b_{n+1}}}} {\frac{q(x,k \cdot \Delta t)}{\Delta x}dx}. \addtag \]
@@ -179,83 +179,52 @@ Powyższy wzór zawiera niezdefiniowane wartości $q$ i $p$ dla punktów ciągu 
 \[ 
 \widetilde{q_n^k} =  \frac{q_{n-1}^k+q_{n}^k}{2} \addtag
 \]
-Powyższe wzory dotyczą $n=1,2,...,l-1$. 
-%Dla krańcowych punktów dyskretyzacja prowadzi do wartości:
-%\[\widetilde{p^k_0}=p^k_0\]
-%\[\widetilde{p^k_l}=p^k_l\]
- Ustalona zatem będzie ewolucja gęstości dla pomocniczego ciągu $\widetilde{b_n}$. Jest ona opisana analogicznie do (\ref{eq:normal_center_development}):
+Ustalona teraz będzie ewolucja gęstości dla pomocniczego ciągu $\widetilde{b_n}$. Jest ona opisana analogicznie do (\ref{eq:normal_center_development}):
 \[\widetilde{p^{k+1}_n}=\widetilde{p^k_n}- \frac{\Delta t}{\Delta x}(q(p^k_{n})-q(p^k_{n-1})) \addtag \label{eq:stagered_from_normal} \]
-Z równania (\ref{eq:init_p_stagerred}) można wykazać, że:
+Z równania (\ref{eq:init_p_stagerred}) można wykazać, że dla dowolnego $n$:
 \[p_n^{k+1}=\frac{\widetilde{p_{n}^{k+1}}+\widetilde{p_{n+1}^{k+1}}}{2} \addtag
 \label{eq:normal_from_stagerred} \]
 Na podstawie wzorów (\ref{eq:stagered_from_normal}) i \eqref{eq:normal_from_stagerred} otrzymujemy:
-\[ p_n^{k+1} =\frac{1}{2}\widetilde{p^{k}_n}-\frac{\Delta t}{2\Delta x}(q^k_n-q^k_{n-1})+\frac{1}{2}\widetilde{p^{k}_{n+1}}-\frac{\Delta t}{2\Delta x}(q^k_{n+1}-q^k_{n})  \addtag \label{eq:final_normal_development}.\]
+\[ p_n^{k+1} =\frac{1}{2}\widetilde{p^{k}_n}-\frac{\Delta t}{2\Delta x}(q^k_n-q^k_{n-1})+\frac{1}{2}\widetilde{p^{k}_{n+1}}-\frac{\Delta t}{2\Delta x}(q^k_{n+1}-q^k_{n})  \addtag .\]
 Co prowadzi do końcowej zależności:
 \[ p_n^{k+1} =\frac{1}{2}p_n^k+\frac{1}{4}p_{n+1}^k+\frac{1}{4}p_{n-1}^k  -\frac{\Delta t}{2\Delta x}(q^k_n-q^k_{n-1})-\frac{\Delta t}{2\Delta x}(q^k_{n+1}-q^k_{n})  \addtag .\]
 
 
-\[ p_n^{k+1} =\frac{1}{2}p_n^k+\frac{1}{4}p_{n+1}^k+\frac{1}{4}p_{n-1}^k  +\frac{\Delta t}{2\Delta x}(q^k_{n-1}-q^k_{n+1})  \addtag .\]
+\[ p_n^{k+1} =\frac{1}{2}p_n^k+\frac{1}{4}p_{n+1}^k+\frac{1}{4}p_{n-1}^k  +\frac{\Delta t}{2\Delta x}(q^k_{n-1}-q^k_{n+1})  \addtag \label{eq:final_normal_development}.\]
 
 
 Powyższy wzór kończy rozważania odnośnie punktów wewnętrznych drogi.
-Przypadek punktów brzegowych różni się diametralnie od punktów wewnętrznych ze względu na to iż trzeba w nich ująć aspekty wprowadzenia nowych pojazdów do ruchu oraz opuszczenia drogi. Podstawowe równanie modelu makroskopowego (\ref{main_diff_eq}) nie uwzględnia ani źródła, ani też ujścia ruchu, co pozwala na zastosowanie własnego rozwiązania w tym zakresie.
-Wartość $\widetilde{p_0^k}$ jest źródłem ruchu. Początkowo ustalmy, że jest ona z góry dana i stała na przedziale $(\widetilde{b_0},b_0)$. Wtedy na podstawie wzoru \ref{eq:calki-LWR} otrzymujemy:
-\[\widetilde{p_0^{k+1}} \frac{\Delta x}{2} + \int\limits_{b_{0}}^{\widetilde{b_{1}}} {p(x,t_{k+1})dx-\widetilde{p_0^{k}} \frac{\Delta x}{2}-\int\limits_{b_{0}}^{\widetilde{b_{1}}}p(x,t_{k})dx} +\int\limits_{t_k}^{t_{k+1}} q(\widetilde{b_{1}},t)-q(\widetilde{b_{0}},t))dt=0 \addtag \]
+Przypadek punktów brzegowych $b_0,b_l$ różni się diametralnie od punktów wewnętrznych ze względu na to iż trzeba w nich ująć aspekty wprowadzenia nowych pojazdów do ruchu oraz opuszczenia drogi. Podstawowe równanie modelu makroskopowego (\ref{main_diff_eq}) nie uwzględnia ani źródła, ani też ujścia ruchu, co pozwala na zastosowanie własnego rozwiązania w tym zakresie.
 
 
-%\\------------------------\\
-Przedstawiony zostanie teraz proces wyliczania gęstości na zewnętrznych punktach drogi czyli $b_0$ i $b_l$. 
-Źródło ruchu jest pewną funkcją rzeczywistą oznaczoną jako $\gamma^k_{out}$. Ujście $\gamma^k_{out}$ w przypadku gdy pojazdy mogą bezproblemowo opuścić drogę ma wartość:
-\begin{numcases}{\gamma^{k}_{out}=}
-   q(\widetilde{p^k_{l+1}}) & \text{dla } $\widetilde{p^k_{l+1}}\in[0,p^{*}]$\\
-   q(p^*) & \text{dla } $\widetilde{p^k_{l+1}}\in(p^{*},p^{max}]$ 
-\end{numcases}
-Rozwój gęstości ruchu w skrajnych punktach ciągu $\widetilde{b_n}$ przedstawia się następująco:
-\[\widetilde{p_0^{t+1}}=\widetilde{p_0^{t}}-\frac{\Delta t}{\frac{1}{2}\Delta x}(f(p_0^t)-\gamma_{in}^t) \addtag \label{eq:stagered_start_development} \]
-\[\widetilde{p_{l+1}^{t+1}}=\widetilde{p_{l+1}^{t}}-\frac{\Delta t}{\frac{1}{2}\Delta x}(f(p_0^t)-\gamma_{out}^t) \addtag \label{eq:stagered_end_development}  \]
-\\
-
-Biorąc pod uwagę 2 powyższe wzory oraz (\ref{eq:normal_from_stagerred}) rozwój ruchu w punktach krańcowych ciągu $b_n$ jest opisany następująco:
-\[
-p_0^{k+1}=\frac{\widetilde{p^k_0}}{2}+\frac{\widetilde{p^k_1}}{2}-\frac{\Delta t}{\Delta x}(f(p_0^k)-\gamma_{in}^t)-\frac{\Delta t}{2\Delta x}(f(p_1^k)-f(p^k_0))
-\]
-\[
-p_l^{k+1}=\frac{\widetilde{p^k_l}}{2}+\frac{\widetilde{p^k_{l+1}}}{2}-\frac{\Delta t}{\Delta x}(\gamma_{out}^t-f(p_l^k))-\frac{\Delta t}{2\Delta x}(f(p_l^k)-f(p^k_{l-1}))
-\]
-
-
-
-TODO - napisać czym jest gamma out przede wszystkim i gammma in potem.
--------------------------------------------------
-\\
-Drogę $e$ traktujemy na razie jako układ izolowany posiadający źródło ruchu w punkcie $b_0$. Jedyne ograniczenia co do źródła gęstości w tym punkcie to:
-\[p_0^k<p^{max}.\]
-\[p_0^{k+1}=p_0^k-\frac{2 \Delta t}{\Delta x}(f(p_0^k)-\gamma^{in}) \addtag\]
-
-
-Z kolei punkt $b_l$ jest ujściem ruchu. Zakładamy, że pojazdy nie mają problemu z opuszczeniem drogi oraz, że gęstość w tym punkcie jest równa
-\[p^{k+1}_n=p^{k}_n -\frac{\Delta t}{\Delta x} (\gamma^{out}(p(\widetilde{b_{n}},t_k))-q(\widetilde{b_{n-1}},t_k)), \addtag\]   
-gdzie odpływ drogi definiujemy jako:
-\begin{numcases}{\gamma^{out}(p)=}
-   q(p) & \text{dla } $p\in[0,p^{*}]$\\
-   q(p^*) & \text{dla } $p\in(p^{*},p^{max}]$ 
-\end{numcases}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=14cm]{odcinki-zrodlo-ujscie}
+ \caption{Siatka bazowa $b_n$ wraz ze źródłem i ujściem}
+ \label{fig:odcinki-zrodlo-ujscie}
+\end{figure}
+Przedstawiony w pracy pomysł zakłada, że źródło $b_{in}$ i ujście $b_{out}$ ruchu znajdują się w odległości $\Delta x$ odpowiednio od punktu $b_0$ i $b_l$ (patrz Rysunek \ref{fig:odcinki-zrodlo-ujscie}). \\Gęstość w źródle oznaczamy jako $p^k_{in}$. Rozwój gęstości w początkowym punkcie drogi $b_0$ jest ustalony analogicznym wzorem do (\ref{eq:final_normal_development}):
+\[ p_0^{k+1} =\frac{1}{2}p_0^k+\frac{1}{4}p_{1}^k+\frac{1}{4}p^k_{in}  +\frac{\Delta t}{2\Delta x}(q(p^k_{in})-q^k_{1})  \addtag .\]
+Gęstość ujścia oznaczona jest jako $p^k_{out}$. Gęstość w końcowym punkcie drogi $b_l$ cechuje się następującą zmiennością:
+\[ p_l^{k+1} =\frac{1}{2}p_l^k+\frac{1}{4}p^k_{out}+\frac{1}{4}p^k_{l-1}  +\frac{\Delta t}{2\Delta x}(q(p^k_{l-1})-q(p^k_{out}))  \addtag .\]
 
 \section{Przepływ ruchu na skrzyżowaniu 1}
-Udało się przedstawić przepływ ruchu dla pojedynczej drogi. W tym momencie należy skonstruować logiczny model przepływu ruchu przez skrzyżowanie. Początkowo wykorzystany będzie bardzo prosty przykład, by ustalić przepływ ruchu na skrzyżowaniu. Skrzyżowanie jest przedstawione na rysunku \ref{fig:skrz_1}.
+Udało się przedstawić przepływ ruchu dla pojedynczej drogi. W tym momencie należy skonstruować logiczny model przepływu ruchu przez skrzyżowanie. Początkowo wykorzystany będzie bardzo prosty przykład, aby ustalić przepływ ruchu na skrzyżowaniu. Skrzyżowanie jest przedstawione na rysunku \ref{fig:skrz_1}.
 \begin{figure}[H]
   \centering
     \includegraphics[width=14cm]{skrz_1}
  \caption{Skrzyzowanie 1}
  \label{fig:skrz_1}
 \end{figure}
-Skrzyżowanie $v$ posiada dwie drogi wlotowe $e_1,e_2$ oraz jedną wylotową $e_3$. Źródła ruchu dla tej sieci dróg znajdują się na początku dróg $e_1,e_2$ (punkty 1 i 2). Oznaczmy $\gamma_1,\gamma_2$ jako odpływy dróg $e_1$ i $e_2$ do skrzyżowania $v$. Początkowo założone będzie, że nie ma jeszcze żadnych pojazdów na drodze $e_3$. Skrzyżowanie posiada dwie fazy świateł:\\
+Skrzyżowanie $v$ posiada dwie drogi wlotowe $e_1,e_2$ oraz jedną wylotową $e_3$. Źródła ruchu dla tej sieci dróg znajdują się na początku dróg $e_1,e_2$ (punkty 1 i 2 na Rysunku \ref{fig:skrz_1}). Oznaczmy $_1p_{out}^k$,$_2p_{out}^k$ jako ujścia dróg $e_1$ i $e_2$ do skrzyżowania $v$.
+%Początkowo założone będzie, że nie ma jeszcze żadnych pojazdów na drodze $e_3$. 
+Skrzyżowanie posiada dwie fazy świateł:\\
 $M^{(1)}$ - jazda w lewo z drogi $e_1$\\
 $M^{(2)}$ - jazda w prawo z drogi $e_2$ \\
-Przy uwzględnieniu sygnalizacji możemy opisać gęstość w punkcie początkowym drogi $e_3$ jako:
-\begin{numcases}{p_0=}
-   Min(\gamma_1) & \text{gdy } $M^{(1)}$ jest aktywną fazą\\
-   Min(\gamma_2) & \text{gdy } $M^{(2)}$ jest aktywną fazą 
+Przy uwzględnieniu sygnalizacji możemy opisać gęstość źródła drogi $e_3$ jako:
+\begin{numcases}{_3p_{in}^{k+1}=}
+   _1p_{out}^k & \text{gdy } $M^{(1)}$ jest aktywną fazą\\
+   _2p_{out}^k & \text{gdy } $M^{(2)}$ jest aktywną fazą 
 \end{numcases}
 
 %\\Uznajemy, że na początku symulacji ruchu nie ma żadnych pojazdów co jest równoważne z zerową gęstością ruchu. \\Źródła ruchu znajdują się na początku dróg $e_1,e_2$ (punkty 1 i 2). 
