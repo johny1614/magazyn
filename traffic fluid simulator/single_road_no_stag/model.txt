@@ -1,0 +1,28 @@
+
+
+
+
+Cell:
+  p
+  q
+NormalGrid:
+  cells
+StagerredGrid:
+  cells
+Road:
+  time
+  normalGird
+  stagerredGrid
+  name
+  turnProbability
+  flow_input_type
+  light (0 lub 1)
+  cell_num
+  q_flow_input (dla majacych zrodlo z zewnatrz)
+Network:
+  time
+  roads
+
+Dojebać serwis który:
+1.Importuje światła - i zmienia je w roadach
+2.Eksportuje światła z road'ów
