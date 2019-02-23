@@ -187,7 +187,7 @@ Z równania (\ref{eq:init_p_stagerred}) można wykazać, że dla dowolnego $n$:
 Na podstawie wzorów (\ref{eq:stagered_from_normal}) i \eqref{eq:normal_from_stagerred} otrzymujemy:
 \[ p_n^{k+1} =\frac{1}{2}\widetilde{p^{k}_n}-\frac{\Delta t}{2\Delta x}(q^k_n-q^k_{n-1})+\frac{1}{2}\widetilde{p^{k}_{n+1}}-\frac{\Delta t}{2\Delta x}(q^k_{n+1}-q^k_{n})  \addtag .\]
 Co prowadzi do końcowej zależności:
-\[ p_n^{k+1} =\frac{1}{2}p_n^k+\frac{1}{4}p_{n+1}^k+\frac{1}{4}p_{n-1}^k  -\frac{\Delta t}{2\Delta x}(q^k_n-q^k_{n-1})-\frac{\Delta t}{2\Delta x}(q^k_{n+1}-q^k_{n})  \addtag .\]
+\[ p_n^{k+1} =\frac{1}{2}p_n^k+\frac{1}{4}p_{n+1}^k+\frac{1}{4}p_{n-1}^k  -\frac{\Delta t}{2\Delta x}(q^k_n-q^k_{n-1})-\frac{\Delta t}{2\Delta x}(q^k_{n+1}-q^k_{n}).  \addtag \]
 
 
 \[ p_n^{k+1} =\frac{1}{2}p_n^k+\frac{1}{4}p_{n+1}^k+\frac{1}{4}p_{n-1}^k  +\frac{\Delta t}{2\Delta x}(q^k_{n-1}-q^k_{n+1})  \addtag \label{eq:final_normal_development}.\]
@@ -203,11 +203,11 @@ Przypadek punktów brzegowych $b_0,b_l$ różni się diametralnie od punktów we
  \caption{Siatka bazowa $b_n$ wraz ze źródłem i ujściem}
  \label{fig:odcinki-zrodlo-ujscie}
 \end{figure}
-Przedstawiony w pracy pomysł zakłada, że źródło $b_{in}$ i ujście $b_{out}$ ruchu znajdują się w odległości $\Delta x$ odpowiednio od punktu $b_0$ i $b_l$ (patrz Rysunek \ref{fig:odcinki-zrodlo-ujscie}). \\Gęstość w źródle oznaczamy jako $p^k_{in}$. Rozwój gęstości w początkowym punkcie drogi $b_0$ jest ustalony analogicznym wzorem do (\ref{eq:final_normal_development}):
+Przedstawiony w pracy pomysł zakłada, że źródło $b_{in}$ i ujście $b_{out}$ ruchu znajdują się w odległości $\Delta x$ odpowiednio od punktów $b_0$ i $b_l$ (patrz Rysunek \ref{fig:odcinki-zrodlo-ujscie}). \\Gęstość w źródle oznaczamy jako $p^k_{in}$. Rozwój gęstości w początkowym punkcie drogi $b_0$ jest ustalony analogicznym wzorem do (\ref{eq:final_normal_development}):
 \[ p_0^{k+1} =\frac{1}{2}p_0^k+\frac{1}{4}p_{1}^k+\frac{1}{4}p^k_{in}  +\frac{\Delta t}{2\Delta x}(q(p^k_{in})-q^k_{1})  \addtag .\]
 Gęstość ujścia oznaczona jest jako $p^k_{out}$. Gęstość w końcowym punkcie drogi $b_l$ cechuje się następującą zmiennością:
 \[ p_l^{k+1} =\frac{1}{2}p_l^k+\frac{1}{4}p^k_{out}+\frac{1}{4}p^k_{l-1}  +\frac{\Delta t}{2\Delta x}(q(p^k_{l-1})-q(p^k_{out}))  \addtag .\]
-
+W przypadku pojedynczej drogi $p_0^k$ może być dowolną funkcją. Z kolei $p_l^k$ zakładając, że pojazdy nie mają problemu z opuszczeniem drogi jest równe 0. 
 \section{Przepływ ruchu na skrzyżowaniu 1}
 Udało się przedstawić przepływ ruchu dla pojedynczej drogi. W tym momencie należy skonstruować logiczny model przepływu ruchu przez skrzyżowanie. Początkowo wykorzystany będzie bardzo prosty przykład, aby ustalić przepływ ruchu na skrzyżowaniu. Skrzyżowanie jest przedstawione na rysunku \ref{fig:skrz_1}.
 \begin{figure}[H]
@@ -216,17 +216,17 @@ Udało się przedstawić przepływ ruchu dla pojedynczej drogi. W tym momencie n
  \caption{Skrzyzowanie 1}
  \label{fig:skrz_1}
 \end{figure}
-Skrzyżowanie $v$ posiada dwie drogi wlotowe $e_1,e_2$ oraz jedną wylotową $e_3$. Źródła ruchu dla tej sieci dróg znajdują się na początku dróg $e_1,e_2$ (punkty 1 i 2 na Rysunku \ref{fig:skrz_1}). Oznaczmy $_1p_{out}^k$,$_2p_{out}^k$ jako ujścia dróg $e_1$ i $e_2$ do skrzyżowania $v$.
-%Początkowo założone będzie, że nie ma jeszcze żadnych pojazdów na drodze $e_3$. 
+Skrzyżowanie $v$ posiada dwie drogi wlotowe $e_1,e_2$ oraz jedną wylotową $e_3$. Źródła ruchu dla tej sieci dróg znajdują się na początku dróg $e_1,e_2$ (punkty 1 i 2 na Rysunku \ref{fig:skrz_1}). Należy podkreślić, że ujścia dróg $e_1,e_2$ i źródło drogi $e_3$ są fizycznie w tym samym punkcie oznaczonym jako $v$. Gęstość w tym punkcie w chwili $t_k$ będziemy oznaczać jako $p_v^k$.\\
 Skrzyżowanie posiada dwie fazy świateł:\\
-$M^{(1)}$ - jazda w lewo z drogi $e_1$\\
-$M^{(2)}$ - jazda w prawo z drogi $e_2$ \\
-Przy uwzględnieniu sygnalizacji możemy opisać gęstość źródła drogi $e_3$ jako:
-\begin{numcases}{_3p_{in}^{k+1}=}
-   _1p_{out}^k & \text{gdy } $M^{(1)}$ jest aktywną fazą\\
-   _2p_{out}^k & \text{gdy } $M^{(2)}$ jest aktywną fazą 
+$M^{(1)}$ - umożliwiające jazdę w lewo z drogi $e_1$\\
+$M^{(2)}$ - umożliwiające jazdę w prawo z drogi $e_2$ \\
+Bazując na wzorach opisujących rozwój gęstości w dyskretnym modelu   przedstawiony zostanie wzór opisujący rozwój gęstości w punkcie $v$.
+
+\begin{numcases}{p_{v}^{k+1}=}
+    \frac{1}{2}p_v^k+\frac{1}{4} {_3p_{0}^k}+\frac{1}{4}{_1p_{out}^k}   +\frac{\Delta t}{2\Delta x}({_1q^k_{out}}-{_3q^k_{0}}) & \text{gdy } $M^{(1)}$ jest aktywną fazą\\
+   \frac{1}{2}p_v^k+\frac{1}{4} {_3p_{0}^k}+\frac{1}{4}{_2p_{out}^k}   +\frac{\Delta t}{2\Delta x}({_2q^k_{out}}-{_3q^k_{0}}) & \text{gdy } $M^{(2)}$ jest aktywną fazą 
 \end{numcases}
-Należy podkreślić, że ujścia dróg $e_1,e_2$ i źródło drogi $e_3$ są fizycznie w tym samym punkcie oznaczonym jako $v$. Szczegółowa dane pozwalające na przeprowadzenie symulacji są następujące: \\
+Szczegółowa dane pozwalające na przeprowadzenie symulacji są następujące: \\
 $_1p_{in}^k=0.2$ \\
 $_2p_{in}^k=0.1$ \\
 $p_{max}=0.25$ (dla wszystkich dróg)\\
@@ -234,7 +234,12 @@ $\Delta x=50$\\
 $\Delta t=1$ \\
 $\lambda=2$ \\
 $L_{e_1},L_{e_2},L_{e_3}=200$
-
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=14cm]{skrz_1_discret}
+ \caption{Skrzyzowanie 1}
+ \label{fig:skrz_1}
+\end{figure}
 
 %\\Uznajemy, że na początku symulacji ruchu nie ma żadnych pojazdów co jest równoważne z zerową gęstością ruchu. \\Źródła ruchu znajdują się na początku dróg $e_1,e_2$ (punkty 1 i 2). 
 %Ustalamy, że źródła mają stałą w czasie gęstość ruchu 0.1. \\Wszystkie 3 drogi mają $p_{max}=1$. 
