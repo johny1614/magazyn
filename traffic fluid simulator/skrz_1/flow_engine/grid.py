@@ -3,9 +3,10 @@ sys.path.append("..")
 from params.params import FlowParams
 from utils.utils import q,positive
 class Grid:
-    def __init__(self):
+    def __init__(self,cell_index_start):
         self.numberOfCells = int(FlowParams.x_max / FlowParams.d_x + 1)
-        self.cells = [Cell(cell_no) for cell_no in range(self.numberOfCells)]
+        print('numcells',self.numberOfCells)
+        self.cells = [Cell(cell_no+cell_index_start) for cell_no in range(self.numberOfCells)]
         # self.time = time
     def updateQ(self):
         for cell in self.normalGrid.cells:

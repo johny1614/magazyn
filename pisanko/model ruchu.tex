@@ -194,20 +194,8 @@ Co prowadzi do końcowej zależności:
 
 
 Powyższy wzór kończy rozważania odnośnie punktów wewnętrznych drogi.
-Przypadek punktów brzegowych $b_0,b_l$ różni się diametralnie od punktów wewnętrznych ze względu na to iż trzeba w nich ująć aspekty wprowadzenia nowych pojazdów do ruchu oraz opuszczenia drogi. Podstawowe równanie modelu makroskopowego (\ref{main_diff_eq}) nie uwzględnia ani źródła, ani też ujścia ruchu, co pozwala na zastosowanie własnego rozwiązania w tym zakresie.
+Przypadek punktów brzegowych $b_0,b_l$ różni się diametralnie od punktów wewnętrznych ze względu na to iż trzeba w nich ująć aspekty wprowadzenia nowych pojazdów do ruchu oraz opuszczenia drogi. Podstawowe równanie modelu makroskopowego (\ref{main_diff_eq}) nie uwzględnia ani źródła, ani też ujścia ruchu, co pozwala na zastosowanie własnego rozwiązania w tym zakresie. W przypadku gdy rozważana jest jedynie jedna droga gęstość źródła ruchu $p_0^k$ może być dowolna. Jeśli pojazdy mogą bezproblemowo opuścić drogę wtedy $p_l^k=0$. Przypadek gdy droga kończy lub zaczyna się na skrzyżowaniu zostaje przedstawiony w następnym rozdziale.
 
-
-\begin{figure}[H]
-  \centering
-    \includegraphics[width=14cm]{odcinki-zrodlo-ujscie}
- \caption{Siatka bazowa $b_n$ wraz ze źródłem i ujściem}
- \label{fig:odcinki-zrodlo-ujscie}
-\end{figure}
-Przedstawiony w pracy pomysł zakłada, że źródło $b_{in}$ i ujście $b_{out}$ ruchu znajdują się w odległości $\Delta x$ odpowiednio od punktów $b_0$ i $b_l$ (patrz Rysunek \ref{fig:odcinki-zrodlo-ujscie}). \\Gęstość w źródle oznaczamy jako $p^k_{in}$. Rozwój gęstości w początkowym punkcie drogi $b_0$ jest ustalony analogicznym wzorem do (\ref{eq:final_normal_development}):
-\[ p_0^{k+1} =\frac{1}{2}p_0^k+\frac{1}{4}p_{1}^k+\frac{1}{4}p^k_{in}  +\frac{\Delta t}{2\Delta x}(q(p^k_{in})-q^k_{1})  \addtag .\]
-Gęstość ujścia oznaczona jest jako $p^k_{out}$. Gęstość w końcowym punkcie drogi $b_l$ cechuje się następującą zmiennością:
-\[ p_l^{k+1} =\frac{1}{2}p_l^k+\frac{1}{4}p^k_{out}+\frac{1}{4}p^k_{l-1}  +\frac{\Delta t}{2\Delta x}(q(p^k_{l-1})-q(p^k_{out}))  \addtag .\]
-W przypadku pojedynczej drogi $p_0^k$ może być dowolną funkcją. Z kolei $p_l^k$ zakładając, że pojazdy nie mają problemu z opuszczeniem drogi jest równe 0. 
 \section{Przepływ ruchu na skrzyżowaniu 1}
 Udało się przedstawić przepływ ruchu dla pojedynczej drogi. W tym momencie należy skonstruować logiczny model przepływu ruchu przez skrzyżowanie. Początkowo wykorzystany będzie bardzo prosty przykład, aby ustalić przepływ ruchu na skrzyżowaniu. Skrzyżowanie jest przedstawione na rysunku \ref{fig:skrz_1}.
 \begin{figure}[H]
@@ -222,13 +210,41 @@ $M^{(1)}$ - umożliwiające jazdę w lewo z drogi $e_1$\\
 $M^{(2)}$ - umożliwiające jazdę w prawo z drogi $e_2$ \\
 Bazując na wzorach opisujących rozwój gęstości w dyskretnym modelu   przedstawiony zostanie wzór opisujący rozwój gęstości w punkcie $v$.
 
-\begin{numcases}{p_{v}^{k+1}=}
-    \frac{1}{2}p_v^k+\frac{1}{4} {_3p_{0}^k}+\frac{1}{4}{_1p_{out}^k}   +\frac{\Delta t}{2\Delta x}({_1q^k_{out}}-{_3q^k_{0}}) & \text{gdy } $M^{(1)}$ jest aktywną fazą\\
-   \frac{1}{2}p_v^k+\frac{1}{4} {_3p_{0}^k}+\frac{1}{4}{_2p_{out}^k}   +\frac{\Delta t}{2\Delta x}({_2q^k_{out}}-{_3q^k_{0}}) & \text{gdy } $M^{(2)}$ jest aktywną fazą 
+
+
+$$_3p_{0}^{k+1}= {_3p}_{0}^k-(_3p_1^{k+1}-{_3p}_1^{k})+\frac{1}{2} {_1p}_l^k $$
+
+
+$$_1p_{l}^{k+1}=
+    \frac{1}{2} {_1p}_{l}^{k}+({_1p}_{l-1}^{k}-{_1p}_{l-1}^{k+1})$$
+
+$$_2p_{l}^{k+1}=
+    {_2p}_{l}^{k}+({_2p}_{l-1}^{k}-{_2p}_{l-1}^{k+1})$$
+
+
+
+\begin{numcases}{_3p_{0}^{k+1}=}
+    _3p_{0}^k-(_3p_1^{k+1}-{_3p}_1^{k})+\frac{1}{2} {_1p}_l^k & \text{gdy } $M^{(1)}$ jest aktywną fazą\\
+   _3p_{0}^k-(_3p_1^{k+1}-{_3p}_1^{k})+\frac{1}{2} {_2p}_l^k & \text{gdy } $M^{(2)}$ jest aktywną fazą 
 \end{numcases}
+
+
+\begin{numcases}{_1p_{l}^{k+1}=}
+    \frac{1}{2} {_1p}_{l}^{k}+({_1p}_{l-1}^{k}-{_1p}_{l-1}^{k+1}) & \text{gdy } $M^{(1)}$ jest aktywną fazą\\
+   {_1p}_{l}^{k}+({_1p}_{l-1}^{k}-{_1p}_{l-1}^{k+1}) & \text{gdy } $M^{(2)}$ jest aktywną fazą 
+\end{numcases}
+
+\begin{numcases}{_2p_{l}^{k+1}=}
+    \frac{1}{2} {_2p}_{l}^{k}+({_2p}_{l-1}^{k}-{_2p}_{l-1}^{k+1}) & \text{gdy } $M^{(1)}$ jest aktywną fazą\\
+   {_2p}_{l}^{k}+({_2p}_{l-1}^{k}-{_2p}_{l-1}^{k+1}) & \text{gdy } $M^{(2)}$ jest aktywną fazą 
+\end{numcases}
+
+
+
+
 Szczegółowa dane pozwalające na przeprowadzenie symulacji są następujące: \\
-$_1p_{in}^k=0.2$ \\
-$_2p_{in}^k=0.1$ \\
+$_1p_{0}^k=0.2$ \\
+$_2p_{0}^k=0.1$ \\
 $p_{max}=0.25$ (dla wszystkich dróg)\\
 $\Delta x=50$\\
 $\Delta t=1$ \\

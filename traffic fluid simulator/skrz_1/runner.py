@@ -1,4 +1,3 @@
-from beeprint import pp
 from bokeh.layouts import column
 import networkx as nx
 from bokeh.models import Plot,Arrow,OpenHead, Range1d, Slider,MultiLine,Oval, Circle, HoverTool, BoxZoomTool, ResetTool,StaticLayoutProvider,NodesAndLinkedEdges
@@ -31,6 +30,8 @@ def onTimeChange(attr,old,time):
     changeArrows()
 
 
+
+
 def updateEdges():
     minLineWidth=BokehParams.Edge.minWidth
     maxLineWidth=BokehParams.Edge.maxWidth
@@ -52,7 +53,7 @@ def updateEdges():
             actualData["colors"][i-licznik_pominietych]=color
     graph_renderer.edge_renderer.data_source.data = actualData
 def createNodes(actualNetwork):
-    nodeCellsEachRoad=[roadCells.normalGrid.cells for roadCells in actualNetwork.roads]
+    nodeCellsEachRoad=[road.grid.cells for road in actualNetwork.roads]
     all_members = set(range(sum(len(singleRoadCells) for singleRoadCells in nodeCellsEachRoad)))
     G.add_nodes_from(all_members)
     i=0
@@ -62,12 +63,13 @@ def createNodes(actualNetwork):
             i=i+1
 def createEdges(actualNetwork):
     global G
-    nodeCellsEachRoad=[roadCells.normalGrid.cells for roadCells in actualNetwork.roads]
+    nodeCellsEachRoad=[road.grid.cells for road in actualNetwork.roads]
     for road in nodeCellsEachRoad:# po kolei left,top,right,bottom roady
         startNodes=road[:-1]
         endNodes=road[1:]
         for i in range(len(startNodes)):
             edgeTuple = [tuple([startNodes[i].number, endNodes[i].number])]
+            print("edgeTuple",edgeTuple)
             G.add_edges_from(edgeTuple)
 def style():
     global G
@@ -104,9 +106,10 @@ def changeArrows():
 global G
 global plot
 global actualNetwork
-networkLayout = NetworkLayout(cell_num=26,edge_dispare=15)
+networkLayout = NetworkLayout()
 G = nx.Graph()
 networks = load_networks()
+print(networks)
 actualNetwork=networks[0]
 createNodes(actualNetwork)
 createEdges(actualNetwork)
@@ -119,12 +122,12 @@ node_hover_tool = HoverTool(tooltips=[("index", "@index"),("p","@p"),("(x,y)", "
 plot.add_tools(node_hover_tool, BoxZoomTool(), ResetTool())
 graph_layout=style()
 edge_attrs={}
-nodeCellsEachRoad=[roadCells.normalGrid.cells for roadCells in actualNetwork.roads]
+nodeCellsEachRoad=[roadCells.grid.cells for roadCells in actualNetwork.roads]
 leftCells=nodeCellsEachRoad[0]
 graph_renderer = from_networkx(G, graph_layout, scale=1, center=(0, 0))
 graph_renderer.node_renderer.glyph = Circle(size=6, fill_color="colors", line_width=1.0)
 graph_renderer.node_renderer.data_source.data["colors"]=["red"]*len(G.nodes)
-
+#
 graph_renderer.edge_renderer.glyph = MultiLine(line_color="colors", line_alpha=0.8, line_width="widths")
 graph_renderer.edge_renderer.data_source.data["colors"] = ["purple"] * len(G.edges)
 graph_renderer.edge_renderer.data_source.data["widths"] = [2] * len(G.edges)

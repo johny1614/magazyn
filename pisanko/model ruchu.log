@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2019.1.1)  23 FEB 2019 14:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2019.1.1)  24 FEB 2019 23:27
 entering extended mode
 **"./model ruchu.tex"
 ("model ruchu.tex"
@@ -462,38 +462,33 @@ File: odcinki-2.png Graphic file (type png)
 Package pdftex.def Info: odcinki-2.png  used on input line 157.
 (pdftex.def)             Requested size: 398.33858pt x 197.53946pt.
  [15 <./odcinki-2.png>] [16]
-<odcinki-zrodlo-ujscie.png, id=72, 896.59969pt x 264.23718pt>
-File: odcinki-zrodlo-ujscie.png Graphic file (type png)
-<use odcinki-zrodlo-ujscie.png>
-Package pdftex.def Info: odcinki-zrodlo-ujscie.png  used on input line 202.
-(pdftex.def)             Requested size: 398.33858pt x 117.39365pt.
-<skrz_1.png, id=73, 478.78876pt x 281.55188pt>
+<skrz_1.png, id=72, 478.78876pt x 281.55188pt>
 File: skrz_1.png Graphic file (type png)
 <use skrz_1.png>
-Package pdftex.def Info: skrz_1.png  used on input line 215.
+Package pdftex.def Info: skrz_1.png  used on input line 203.
 (pdftex.def)             Requested size: 398.33858pt x 234.24219pt.
- [17 <./odcinki-zrodlo-ujscie.png>]
-<skrz_1_discret.png, id=78, 724.20563pt x 404.26031pt>
+ [17 <./skrz_1.png>]
+<skrz_1_discret.png, id=76, 724.20563pt x 404.26031pt>
 File: skrz_1_discret.png Graphic file (type png)
 <use skrz_1_discret.png>
-Package pdftex.def Info: skrz_1_discret.png  used on input line 239.
+Package pdftex.def Info: skrz_1_discret.png  used on input line 255.
 (pdftex.def)             Requested size: 398.33858pt x 222.36237pt.
- [18 <./skrz_1.png>] ("model ruchu.bbl" [19 <./skrz_1_discret.png>] [20
+ [18] ("model ruchu.bbl"
+[19 <./skrz_1_discret.png>] [20
 
-]) [21]
-("model ruchu.aux")
+]) [21] ("model ruchu.aux")
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3851 strings out of 492946
- 50804 string characters out of 3141488
- 138078 words of memory out of 3000000
- 7630 multiletter control sequences out of 15000+200000
+ 3845 strings out of 492946
+ 50633 string characters out of 3141488
+ 138067 words of memory out of 3000000
+ 7625 multiletter control sequences out of 15000+200000
  64540 words of font info for 49 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,32p,1218b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,7n,32p,1218b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D://MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{D://MiKTeX 2.9/fonts/enc/dvips/
 lm/lm-rm.enc}{D://MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{D://MiKTeX 2.9/f
 onts/enc/dvips/lm/lm-mathsy.enc}{D://MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.en
@@ -505,9 +500,9 @@ ype1/public/lm/lmr17.pfb><D://MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><D://Mi
 KTeX 2.9/fonts/type1/public/lm/lmr8.pfb><D://MiKTeX 2.9/fonts/type1/public/lm/l
 mri12.pfb><D://MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><D://MiKTeX 2.9/font
 s/type1/public/lm/lmsy10.pfb><D://MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
-Output written on "model ruchu.pdf" (21 pages, 362130 bytes).
+Output written on "model ruchu.pdf" (21 pages, 354597 bytes).
 PDF statistics:
- 140 PDF objects out of 1000 (max. 8388607)
+ 138 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

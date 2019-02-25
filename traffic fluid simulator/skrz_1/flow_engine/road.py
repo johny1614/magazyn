@@ -9,7 +9,7 @@ class Road:
         self.name = name
         self.time=time
         self.cell_index_start=cell_index_start
-        self.grid = Grid()
+        self.grid = Grid(cell_index_start)
         self.turn_probability = {'right':0,'straight':0,'left':0}
         self.light=0
         self.input_flow = [[0.6]*4]*len(ts.time_range)
