@@ -1,16 +1,19 @@
 \documentclass{article}
-\usepackage{amsmath}
-\newcommand\addtag{\refstepcounter{equation}\tag{\theequation}}
-
+\usepackage{amsmath}% http://ctan.org/pkg/amsmath
+\usepackage{kbordermatrix}% http://www.hss.caltech.edu/~kcb/TeX/kbordermatrix.sty
 \begin{document}
 
+\renewcommand{\kbldelim}{(}% Left delimiter
+\renewcommand{\kbrdelim}{)}% Right delimiter
 \[
-  1+1=2  \addtag
+  \text{Mat}_{\varphi\text{ to }M} = \kbordermatrix{
+    & c_1 & c_2 & c_3 & c_4 & c_5 \\
+    r_1 & 1 & 1 & 1 & 1 & 1 \\
+    r_2 & 0 & 1 & 0 & 0 & 1 \\
+    r_3 & 0 & 0 & 1 & 0 & 1 \\
+    r_4 & 0 & 0 & 0 & 1 & 1 \\
+    r_5 & 0 & 0 & 0 & 0 & 1
+  }
 \]
-hujjj
 
-
-\[
-  1+1=2  \addtag
-\]
 \end{document}
