@@ -1,4 +1,6 @@
 \documentclass[12pt]{book}
+\usepackage{booktabs}
+\usepackage{tcolorbox}
 \usepackage[T1]{fontenc}
 \usepackage{wrapfig}
 \usepackage[polish]{babel}
@@ -17,7 +19,8 @@
 \usepackage{float}
 \usepackage[margin=2.5cm]{geometry}
 \newcommand{\R}{\mathbb{R}}
-\newcommand\addtag{\refstepcounter{equation}\tag{\theequation}}
+\newcommand\addtag{\refstepcounter{equation}
+\tag{\theequation}}
 \begin{document}
 \title{Optymalizacja  systemu sygnalizacji świetlnej w 
 oparciu o przepływowy model ruchu pojazdów.}
@@ -85,27 +88,28 @@ gdzie $K$ to wszystkie możliwe do wyboru kierunki jazdy na skrzyżowaniu z drog
 Modele ruchu drogowego mają na celu ukazanie rzeczywistego przepływu pojazdów w sposób czysto matematyczny. Ważnym kryterium doboru modelu jest przystępność jego implementacji informatycznej. Powszechnie klasyfikuje się 3 podejścia modelowe dla omawianego problemu \cite{CompareModels} - makroskopowy, mezoskopowy oraz mikroskopowy. Czasem \cite{multilevel} wyróżnia się także czwarte podejście - submikroskopowe. Jest to podział ze względu na poziom modelu. Najniższy poziom i najbardziej dokładny model gwarantuje podejście mikroskopowe. Rozważa ono pojazdy indywidualnie w czasoprzestrzeni. Przyspieszenie pojazdu jest wyliczane na podstawie dynamiki(prędkości, przyspieszenia) i pozycji pojazdu bezpośrednio przed nim. Model mezoskopowy zapewnia indywidualne rozróżnienie pojazdów, jednak ich zachowanie jest wyliczane na danych zagregowanych \cite{mesoscopic}. Przykładowo pojazdy są zgrupowane w grupę podróżującą z pewnego punktu startowego do celu. Inne modele \cite{mesoscopic2} mezoskopowe wyliczają dynamikę ruchu na podstawie aktualnego zatłoczenia drogi. Poziom mezoskopowy jest obliczeniowo bardziej opłacalny od mikroskopowego.
 Wiele symulatorów stosujących model mezoskopowy oferuje symulację w czasie rzeczywistym dla sieci dróg całego miasta\cite{vu2017high}. Ideą modelu makroskopowego jest traktowanie ruchu ulicznego identycznie jak ruchu cieczy lub gazów. Po raz pierwszy w roku 1956 M. J. Lighthill i G. B. Whitham \cite{lwr} przedstawili pomysł przyrównania ruchu ulicznego na zatłoczonych drogach do przepływu wody w rzekach. Z tego powodu nie rozróżniamy w nim indywidualnie pojazdów, ani też nawet grupowo. Rozważamy natomiast gęstość ruchu w danym punkcie na drodze i czasie - czyli ilość pojazdów na danym odcinku drogi. Sposób w jaki poruszają się pojazdy jest wyliczany jedynie na podstawie gęstości ruchu. Jest to najmniej kosztowny obliczeniowo model. Właśnie w modelu makroskopowym zostało stworzone środowisko symulacyjne. Szczegóły modelu są przedstawione w następnym podrozdziale.
 \section{Model Rozwojowy}
+Ze względu na dużą złożoność końcowego modelu zostanie przedstawiony najpierw bardzo prosty, podstawowy model. W każdej kolejnej sekcji dodawane będą zmiany przybliżające do ostatecznej postaci.
 \subsection{Siatka czasowa i przestrzenna}
-Siatka czasowa jest zdefiniowana jako skończony ciąg liczb naturalnych:
+Ze względu na dyskretny charakter obliczeń należy określić siatkę czasową i przestrzenną. Dla par czasu i miejsc należących do tych dwóch siatek będą określane zmienne stanowe. \\ \textbf{Siatka czasowa} jest zdefiniowana jako skończony ciąg liczb naturalnych:
 \[(0,1,...,K). \addtag \]
-Niech będzie ustalona droga $e$, która jest odcinkiem $[0,L_e]$. Droga zostaje podzielona na $L+1$ odcinków o równej długości $\Delta x=\frac{L_e}{L+1}$. Siatka przestrzenna drogi to następujący ciąg zbiorów:
+Niech będzie ustalona droga $e$, która jest odcinkiem $[0,L_e]$. Droga zostaje podzielona na $L+1$ odcinków o równej długości $\Delta x=\frac{L_e}{L+1}$. \textbf{Siatka przestrzenna} drogi to ciąg zbiorów:
 \[(b_l)_{l=0}^{L}=[l\Delta x,(l+1)\Delta x]\]
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=14cm]{siatka_przestrzenna}
+ \caption{Siatka przestrzenna}
+ \label{fig:siatka_przestrzenna}
+\end{figure}
 
-Macierz przedstawiająca zmienne stanowe na drodze $e$ w chwili $k$ to:
-
-\begin{equation*}
-  P(k)=
-  \begin{blockarray}{*{4}{c} l}
-    \begin{block}{*{4}{>{$\footnotesize}c<{$}} l}
-    \end{block}
-    \begin{block}{[*{4}{c}]>{$\footnotesize}l<{$}}
-       p_0^k & p_1^k & ... & p_L^k  \\
-    \end{block}
-  \end{blockarray} \addtag \label{matrix:zmienne_stanowe}
-\end{equation*}
+%Macierz przedstawiająca zmienne stanowe na drodze $e$ w chwili $k$ to:
+%\[P(k)=\begin{bmatrix}
+%    p_0^k & p_1^k & ... & p_L^k \\ 
+%\end{bmatrix} \addtag \label{matrix:zmienne_stanowe}\]
+%Indeksy kolumn macierzy $P(k)$ odpowiadają punktom siatki przestrzennej $b_l$.
 
 
-\subsection{Sieć dróg}
+
+\subsection{Przykładowe skrzyżowanie}
 Niech dane będą będzie skrzyżowanie dwóch dróg wlotowych $e_1,e_2$ i jednej wylotowej $e_3$. Każda z dróg jest jednakowej długości. Struktura skrzyżowania jest przedstawiona na rysunku \ref{fig:skrz_1}.
 \begin{figure}[H]
   \centering
@@ -114,23 +118,23 @@ Niech dane będą będzie skrzyżowanie dwóch dróg wlotowych $e_1,e_2$ i jedne
  \label{fig:skrz_1}
 \end{figure}
 
-Macierz przedstawiająca zmienne stanowe sieci dróg w chwili k to:
-\begin{equation*}
-  P(k)=
-  \begin{blockarray}{*{4}{c} l}
-    \begin{block}{*{4}{>{$\footnotesize}c<{$}} l}
-      $b_0$ & $b_1$ & ... & $b_{L}$ \\
-    \end{block}
-    \begin{block}{[*{4}{c}]>{$\footnotesize}l<{$}}
-       _1{p_0^k} & _1{p_1^k} & ... & _1{p_{L}^k} & $e_1$ \\
-       _2{p_0^k} & _2{p_1^k} & ... & _2{p_{L}^k} & $e_2$ \\
-       _3{p_0^k} & _3{p_1^k} & ... & _3{p_{L}^k} & $e_3$ \\
-    \end{block}
-  \end{blockarray} \addtag \label{skrz_1_x0}
-\end{equation*}
+%Macierz przedstawiająca zmienne stanowe sieci dróg w chwili k to:
+%\begin{equation*}
+%  P(k)=
+%  \begin{blockarray}{*{4}{c} l}
+%    \begin{block}{*{4}{>{$\footnotesize}c<{$}} l}
+%      $b_0$ & $b_1$ & ... & $b_{L}$ \\
+%    \end{block}
+%    \begin{block}{[*{4}{c}]>{$\footnotesize}l<{$}}
+%       _1{p_0^k} & _1{p_1^k} & ... & _1{p_{L}^k} & $e_1$ \\
+%       _2{p_0^k} & _2{p_1^k} & ... & _2{p_{L}^k} & $e_2$ \\
+%       _3{p_0^k} & _3{p_1^k} & ... & _3{p_{L}^k} & $e_3$ \\
+%    \end{block}
+%  \end{blockarray} \addtag \label{skrz_1_x0}
+%\end{equation*}
 
 
-Macierz B jest macierzą przejścia skrzyżowania $v$. Wartości 1 oznaczają możliwy przejazd na skrzyżowaniu z drogi odpowiadającej indeksowi wiersza do drogi zadanej przez indeks kolumny.
+Macierz B jest \textbf{macierzą przejścia} skrzyżowania $v$. Wartości 1 oznaczają możliwy przejazd na skrzyżowaniu z drogi odpowiadającej indeksowi kolumny do drogi zadanej przez indeks wiersza.
 \begin{equation*}
   B=
   \begin{blockarray}{*{3}{c} l}
@@ -138,9 +142,9 @@ Macierz B jest macierzą przejścia skrzyżowania $v$. Wartości 1 oznaczają mo
      $e_1$ & $e_2$ & $e_3$\\
     \end{block}
     \begin{block}{[*{3}{c}]>{$\footnotesize}l<{$}}
-       0 & 0 & 1 & $e_1$ \\
-       0 & 0 & 1 & $e_2$ \\
-       0 & 0 & 0 & $e_3$ \\
+       0 & 0 & 0 & $e_1$ \\
+       0 & 0 & 0 & $e_2$ \\
+       1 & 1 & 0 & $e_3$ \\
     \end{block}
   \end{blockarray} \addtag
 \end{equation*}
@@ -148,8 +152,8 @@ Macierz B jest macierzą przejścia skrzyżowania $v$. Wartości 1 oznaczają mo
 
 
 
-\subsection{Zero-jedynkowe ujęcie stanu}
-Początkowy model zero-jedynkowy rozróżnia jedynie dwie wartości zmiennej stanowej. Wartość równa 1 oznacza, że na danym odcinku znajduje się przynajmniej jeden pojazd, z kolei 0 oznacza ich brak. Jako przykład niech siatki przestrzenne dróg mają posiadać $L=4$ odcinki. Początkowa macierz stanu $P(0)$ może być przedstawiona jako:
+\subsection{Macierz stanowa sieci dróg}
+Główną strukturą modelu jest \textbf{macierz stanowa}. Składuje ona zmienne stanowe w danym momencie. Każdy wiersz macierzy odpowiada jednej drodze $e$. Indeks kolumny określa konkretny odcinek tej drogi. \\ \\ Początkowo dla ułatwienia wartość zmiennej stanowej równa lub większa niż 1 oznacza, że na danym odcinku znajduje się przynajmniej jeden pojazd, z kolei 0 oznacza ich brak. Jako przykład zostanie przedstawiona początkowa macierz stanowa skrzyżowania z rysunku \ref{fig:skrz_1}. Niech siatki przestrzenne dróg mają $L=4$ odcinki. Początkowa macierz stanu $P(0)$ może być przedstawiona jako:
 \begin{equation*}
   P(0)=
   \begin{blockarray}{*{4}{c} l}
@@ -157,7 +161,7 @@ Początkowy model zero-jedynkowy rozróżnia jedynie dwie wartości zmiennej sta
       $b_0$ & $b_1$ & $b_2$ & $b_3$ \\
     \end{block}
     \begin{block}{[*{4}{c}]>{$\footnotesize}l<{$}}
-       0 & 1 & 1 & 0 & $e_1$ \\
+       0 & 1 & 0 & 1 & $e_1$ \\
        0 & 0 & 0 & 1 & $e_2$ \\
        1 & 0 & 0 & 0 & $e_3$ \\
     \end{block}
@@ -167,12 +171,12 @@ Początkowy model zero-jedynkowy rozróżnia jedynie dwie wartości zmiennej sta
 
 Powyższa macierz przekazuje informację iż w chwili $0$ pojazdy są na następujących drogach:
 \begin{itemize}
-\item $e_1$ - na odcinkach $b_1,b_2$ 
+\item $e_1$ - na odcinkach $b_1,b_3$ 
 \item $e_2$ - na odcinku $b_3$ 
 \item $e_3$ - na odcinku $b_0$ 
 \end{itemize}
 \subsection{Początkowy model przepływu}
-Początkowy model przepływu pojazdów zakłada, iż wszystkie pojazdy w chwili $t+1$ są o jeden odcinek dalej w swojej podróży niż w momencie $t$. Założone jest iż żadne nowe pojazdy nie pojawiają się w sieci dróg, a pojazdy będące w chwili $t$ w ostatnim odcinku drogi $e_3$ opuszczają ukłąd. Wtedy kolejne macierze stanowe dla przykładu \ref{skrz_1_x0} są następujące:
+Początkowy model przepływu pojazdów zakłada, iż wszystkie pojazdy w chwili $t+1$ są o jeden odcinek dalej w swojej podróży niż w momencie $t$. Założone jest iż żadne nowe pojazdy nie pojawiają się w sieci dróg, a pojazdy będące w chwili $t$ w ostatnim odcinku drogi $e_3$ opuszczają układ. Wtedy kolejne macierze stanowe dla przykładu \ref{skrz_1_x0} są następujące:
 \begin{equation*}
   P(1)=
   \begin{blockarray}{*{4}{c} l}
@@ -180,9 +184,9 @@ Początkowy model przepływu pojazdów zakłada, iż wszystkie pojazdy w chwili 
       $b_0$ & $b_1$  & $b_2$ & $b_3$ \\
     \end{block}
     \begin{block}{[*{4}{c}]>{$\footnotesize}l<{$}}
-       0 & 0 & 1 & 1 & $e_1$ \\
+       0 & 0 & 1 & 0 & $e_1$ \\
        0 & 0 & 0 & 0 & $e_2$ \\
-       1 & 1 & 0 & 0 & $e_3$ \\
+       2 & 1 & 0 & 0 & $e_3$ \\
     \end{block}
   \end{blockarray} \addtag
 \end{equation*}
@@ -196,7 +200,7 @@ Początkowy model przepływu pojazdów zakłada, iż wszystkie pojazdy w chwili 
     \begin{block}{[*{4}{c}]>{$\footnotesize}l<{$}}
        0 & 0 & 0 & 1 & $e_1$ \\
        0 & 0 & 0 & 0 & $e_2$ \\
-       1 & 1 & 1 & 0 & $e_3$ \\
+       0 & 2 & 1 & 0 & $e_3$ \\
     \end{block}
   \end{blockarray} \addtag
 \end{equation*}
@@ -211,7 +215,7 @@ Początkowy model przepływu pojazdów zakłada, iż wszystkie pojazdy w chwili 
     \begin{block}{[*{4}{c}]>{$\footnotesize}l<{$}}
        0 & 0 & 0 & 0 & $e_1$ \\
        0 & 0 & 0 & 0 & $e_2$ \\
-       1 & 1 & 1 & 1 & $e_3$ \\
+       1 & 0 & 2 & 1 & $e_3$ \\
     \end{block}
   \end{blockarray} \addtag
 \end{equation*}
@@ -225,15 +229,19 @@ Początkowy model przepływu pojazdów zakłada, iż wszystkie pojazdy w chwili 
     \begin{block}{[*{4}{c}]>{$\footnotesize}l<{$}}
        0 & 0 & 0 & 0 & $e_1$ \\
        0 & 0 & 0 & 0 & $e_2$ \\
-       0 & 1 & 1 & 1 & $e_3$ \\
+       0 & 1 & 0 & 2 & $e_3$ \\
     \end{block}
   \end{blockarray} \addtag
 \end{equation*}
 
-Formalny wzór przedstawiający rozwój na pojedynczej drodze $e$ to:
-\[P(k+1)=\overrightarrow{P(k)} + S(k)\]
-Gdzie $\overrightarrow{P(k)}$ jest operacją macierzową zdefiniowaną w (\ref{arrow_function})
+\subsection{Ogólny wzór rozwoju macierzy stanowej}
+W poprzedniej sekcji został przedstawiony przykład wyliczenia macierzy stanowej dla kolejnych momentów w czasie. Następnym krokiem jest przedstawienie rozwiązania dla ogólnego przypadku. \\ 
 
+\begin{tcolorbox}
+
+Ogólny wzór przedstawiający rozwój macierzy stanowej to:
+\[P(k+1)=\overrightarrow{P(k)} + S(k) \addtag \label{eq:P}\]
+Gdzie $\overrightarrow{P(k)}$ jest następującą operacją macierzową:
 \begin{gather}
 \overrightarrow{
   \begin{bmatrix}
@@ -250,12 +258,306 @@ Gdzie $\overrightarrow{P(k)}$ jest operacją macierzową zdefiniowaną w (\ref{a
    \addtag
    \label{arrow_function}
 \end{gather}
+Macierz $S(k)$ nazywana będzie \textbf{macierzą źródła}. Dotyczy ona ruchu wpływającego do poszczególnych dróg w momencie $k+1$. Jest to macierz rzadka, istotna obliczeniowo jest jedynie pierwsza kolumna, a pozostałe wartości są zerowe by osiągnąć wymiar macierzy pozwalający na dodawanie z $\overrightarrow{P(k)}$. Pierwsza kolumna jest zdefiniowana w oparciu o ostatnią kolumnę macierzy $P(k)$ i jest równa:
+\[S(k,0)=B\cdot P(k,l) \addtag \label{eq:S} \]
+\end{tcolorbox}
 
-Macierz $S(k)$ jest macierzą
+Dla przykładu z poprzedniej sekcji $k=1$:
+\[P(1)=\overrightarrow{P(0)}+S(0) \addtag \label{eq:P_1} \]
+Należy wyliczyć macierz źródła, jej pierwsza kolumna to:
+\[S(0,0)=B\cdot P(0,l)=
+  \begin{bmatrix}
+   0 & 0 & 0\\
+   0 & 0 & 0\\
+   1 & 1 & 0\\
+   \end{bmatrix}
+   \cdot
+   \begin{bmatrix}
+   1\\
+   1\\
+   0\\
+   \end{bmatrix}
+   =
+      \begin{bmatrix}
+   0\\
+   0\\
+   2\\
+   \end{bmatrix}
+ \]
+ Zatem 
+ \[S(0)=\begin{bmatrix}
+ 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0\\
+ 2 & 0 & 0 & 0\\
+ \end{bmatrix}\]
+ Oczywiście
+ \[ \overrightarrow{P(0)}=
+\begin{bmatrix}
+ 0 & 0 & 1 & 0\\
+ 0 & 0 & 0 & 0\\
+ 0 & 1 & 0 & 0\\
+ \end{bmatrix} 
+ \]
+  
+Ostatecznie ze wzoru (\ref{eq:P_1}) wynika, że
+ \[P(1)=\begin{bmatrix}
+ 0 & 0 & 1 & 0\\
+ 0 & 0 & 0 & 0\\
+ 0 & 1 & 0 & 0\\
+ \end{bmatrix}+
+ \begin{bmatrix}
+ 0 & 0 & 0 & 0\\
+ 0 & 0 & 0 & 0\\
+ 2 & 0 & 0 & 0\\
+ \end{bmatrix}=
+  \begin{bmatrix}
+ 0 & 0 & 1 & 0\\
+ 0 & 0 & 0 & 0\\
+ 2 & 1 & 0 & 0\\
+ \end{bmatrix}
+ \]
 
-
-
+Warto zauważyć, że w chwili 0 na obydwu drogach wlotowych $e_1,e_2$ pojazdy znajdowały się na końcowym odcinku. Problemem okazuje się kolizyjność manewrów wjazdu na drogę $e_3$ z dróg odpowiednio $e_1$ i $e_2$. Początkowo ta kwestia została ona pominięta. Następna sekcja przedstawia rozwiązanie tego problemu.
 \subsection{Sygnalizacja świetlna}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=14cm]{skrz_1_sygnalizacja}
+ \caption{Skrzyzowanie 1 z sygnalizacją świetlną}
+ \label{fig:skrz_1_sygnalizacja}
+\end{figure}
+
+Wprowadzona zostaje sygnalizacja świetlna dla dwóch dróg wlotowych $e_1$,$e_2$. Sygnalizacja świetlna będzie oparta o ciąg \textbf{macierzy sygnalizacji}. Określają one z której drogi pojazdy będą mogły wjechać na drogę $e_3$. Dla chwili 0 przyjęte jest, że zgodnie z rysunkiem \ref{fig:skrz_1_sygnalizacja} pojazdy na ostatnim odcinku drogi $e_2$ będą musiały poczekać. 
+Przykładowa początkowa macierz to:
+\begin{equation*}
+  M(0)=
+  \begin{blockarray}{*{3}{c} l}
+    \begin{block}{*{3}{>{$\footnotesize}c<{$}} l}
+     $e_1$ & $e_2$ & $e_3$\\
+    \end{block}
+    \begin{block}{[*{3}{c}]>{$\footnotesize}l<{$}}
+       0 & 0 & 0 & $e_1$ \\
+       0 & 0 & 0 & $e_2$ \\
+       \textbf{1} & \textbf{0} & 0 & $e_3$ \\
+    \end{block}
+  \end{blockarray} \addtag
+\end{equation*}
+
+Przekazuje ona informację, że:
+\begin{itemize}
+\item Jest zielone światło na drodze $e_1$ w chwili 0 
+\item Jest czerwone światło na drodze $e_2$ w chwili 0
+%\item Pogrubione wartości odnoszą się do manewru posiadającego sygnalizację świetlna.
+%\item Niepogrubione wartości równe 0 odnoszą się do sytuacji gdy nie istnieje pożądany manewr.
+%\item Niepogrubione wartości równe 1 dotyczą dwóch tych samych dróg.
+\end{itemize}
+
+Poniższy przykład obrazuje rozwój macierzy stanowej dla skrzyżowania z sygnalizacją świetlną.
+\begin{equation*}
+  P(0)=
+  \begin{blockarray}{*{4}{c} l}
+    \begin{block}{*{4}{>{$\footnotesize}c<{$}} l}
+      $b_0$ & $b_1$ & $b_2$ & $b_3$ \\
+    \end{block}
+    \begin{block}{[*{4}{c}]>{$\footnotesize}l<{$}}
+       0 & 1 & 0 & 1 & $e_1$ \\
+       0 & 1 & 0 & 1 & $e_2$ \\
+       1 & 0 & 0 & 0 & $e_3$ \\
+    \end{block}
+  \end{blockarray} \addtag \label{skrz_1_zmiennaStanu_0_sygnalizacja}
+\end{equation*}
+Czerwone światło na drodze $e_2$ powoduje, że pojazdy nie opuszczają ostatniego odcinka tej drogi. Z kolei pojazdy ostatniego odcinka drogi $e_1$ wjeżdżają na drogę $e_3$. Zatem: 
+\begin{equation*}
+  P(1)=
+  \begin{blockarray}{*{4}{c} l}
+    \begin{block}{*{4}{>{$\footnotesize}c<{$}} l}
+      $b_0$ & $b_1$ & $b_2$ & $b_3$ \\
+    \end{block}
+    \begin{block}{[*{4}{c}]>{$\footnotesize}l<{$}}
+       0 & 0 & 1 & 0 & $e_1$ \\
+       0 & 0 & 1 & 1 & $e_2$ \\
+       1 & 1 & 0 & 0 & $e_3$ \\
+    \end{block}
+  \end{blockarray} \addtag \label{skrz_1_zmiennaStanu_0_sygnalizacja}
+\end{equation*}
+Sygnalizacja świetlna nie zmienia się w chwili 1. Dochodzi do sytuacji gdy ruch kumuluje się na ostatnim odcinku drogi $e_2$.
+\begin{equation*}
+  P(2)=
+  \begin{blockarray}{*{4}{c} l}
+    \begin{block}{*{4}{>{$\footnotesize}c<{$}} l}
+      $b_0$ & $b_1$ & $b_2$ & $b_3$ \\
+    \end{block}
+    \begin{block}{[*{4}{c}]>{$\footnotesize}l<{$}}
+       0 & 0 & 0 & 1 & $e_1$ \\
+       0 & 0 & 0 & 2 & $e_2$ \\
+       0 & 1 & 1 & 0 & $e_3$ \\
+    \end{block}
+  \end{blockarray} \addtag \label{skrz_1_zmiennaStanu_0_sygnalizacja}
+\end{equation*}
+Niech w chwili 2 będzie zielone światło dla drogi $e_2$, czyli
+\begin{equation*}
+  M(2)=
+  \begin{blockarray}{*{3}{c} l}
+    \begin{block}{*{3}{>{$\footnotesize}c<{$}} l}
+     $e_1$ & $e_2$ & $e_3$\\
+    \end{block}
+    \begin{block}{[*{3}{c}]>{$\footnotesize}l<{$}}
+       0 & 0 & 0 & $e_1$ \\
+       0 & 0 & 0 & $e_2$ \\
+       \textbf{0} & \textbf{1} & 0 & $e_3$ \\
+    \end{block}
+  \end{blockarray} \addtag
+\end{equation*}
+Początkowo założone jest, że wszystkie pojazdy na ostatnim odcinku drogi przejeżdżają przez skrzyżowanie. Wtedy:
+\begin{equation*}
+  P(3)=
+  \begin{blockarray}{*{4}{c} l}
+    \begin{block}{*{4}{>{$\footnotesize}c<{$}} l}
+      $b_0$ & $b_1$ & $b_2$ & $b_3$ \\
+    \end{block}
+    \begin{block}{[*{4}{c}]>{$\footnotesize}l<{$}}
+       0 & 0 & 0 & 1 & $e_1$ \\
+       0 & 0 & 0 & 0 & $e_2$ \\
+       2 & 0 & 1 & 1 & $e_3$ \\
+    \end{block}
+  \end{blockarray} \addtag \label{skrz_1_zmiennaStanu_0_sygnalizacja}
+\end{equation*}
+Następnym krokiem jest wyznaczenie ogólnego wzoru macierzy stanowej z uwzględnieniem sygnalizacji świetlnej. 
+\begin{tcolorbox}
+Macierz źródła z uwzględnieniem sygnalizacji świetlnej jest przedstawiona wzorem:
+\[S(k,0)=M(k) \cdot P(k,l) \addtag \label{eq:S} \]
+Oprócz pierwszej kolumny macierz $S$ dalej posiada wartości zerowe.\\
+Wprowadzony zostanie ciąg $W(k)$ pomocniczych \textbf{macierzy oczekujących pojazdów}. Będą to macierze rzadkie z wartościami innymi niż 0 tylko w ostatniej kolumnie. Macierze te będą składowały informację o pojazdach oczekujących na zielone światło w swojej ostatniej kolumnie. Jest ona zdefiniowana jako:
+\[W(k,l)=P(k,l)-S(k,0)\]
+
+Wzór określający rozwój macierzy stanowej jest następujący:
+
+\[P(k+1)=\overrightarrow{P(k)} + S(k) + W(k) \addtag \label{eq:P_sygnalizacja}\]
+\end{tcolorbox}
+\newpage 
+Dla wcześniej przedstawionego przykładu w tabeli są wypisane obliczenia wedle wzoru (\ref{eq:P_sygnalizacja}).
+
+\def \PZero { $\begin{bmatrix}
+0 & 1 & 0 & \textbf{1}  \\
+0 & 1 & 0 & 1  \\
+1 & 0 & 0 & 0  
+\end{bmatrix}$
+}
+\def \PmovedZero {
+$\begin{bmatrix}
+0 & 0 & 1 & 0  \\
+0 & 0 & 1 & 0  \\
+0 & 1 & 0 & 0  
+\end{bmatrix}$
+}
+\def \SZero {
+$\begin{bmatrix}
+1 \\
+0 \\
+0   
+\end{bmatrix}$
+
+}
+\def \WZero {
+$\begin{bmatrix}
+0  \\
+1  \\
+0  
+\end{bmatrix}$
+}
+\def \MZero {$\begin{bmatrix}
+  0 & 0 & 0 \\
+       0 & 0 & 0\\
+       1 & 0 & 0 \\
+\end{bmatrix}$}
+
+
+\def \PI {
+$\begin{bmatrix}
+0 & 0 & 1 & \textbf{0}  \\
+0 & 0 & 1 & 1  \\
+1 & 1 & 0 & 0  
+\end{bmatrix}$
+}
+\def \PmovedI {
+$\begin{bmatrix}
+0 & 1 & 0 & 1  \\
+0 & 0 & 0 & 1  \\
+0 & 0 & 1 & 0  
+\end{bmatrix}$
+}
+\def \SI {
+$\begin{bmatrix}
+0  \\
+0  \\
+0  
+\end{bmatrix}$
+}
+\def \WI {$\begin{bmatrix}
+0  \\
+1  \\
+0  
+\end{bmatrix}$}
+\def \MI {$\begin{bmatrix}
+0 & 0 & 0  \\
+0 & 0 & 0  \\
+1 & 0 & 0  
+\end{bmatrix}$}
+
+
+\def \PII {$\begin{bmatrix}
+0 & 1 & 0 & 1  \\
+0 & 0 & 0 & \textbf{2}  \\
+0 & 0 & 1 & 0  
+\end{bmatrix}$}
+\def \PmovedII {$\begin{bmatrix}
+0 & 0 & 1 & 0  \\
+0 & 0 & 0 & 0  \\
+0 & 0 & 0 & 1  
+\end{bmatrix}$}
+\def \SII {
+$\begin{bmatrix}
+0  \\
+2  \\
+0  
+\end{bmatrix}$}
+\def \WII {$\begin{bmatrix}
+1  \\
+0  \\
+0  
+\end{bmatrix}$}
+\def \MII {$\begin{bmatrix}
+  0 & 0 & 0 \\
+       0 & 0 & 0\\
+       0 & 1 & 0 \\
+\end{bmatrix}$}
+
+
+\def \PIII {
+$\begin{bmatrix}
+  0 & 0 & 1 & 1 \\
+  2 & 0 & 0 & 0 \\
+  0 & 0 & 0 & 1 \\
+\end{bmatrix}$
+}
+\def \PmovedIII {}
+\def \SIII {}
+\def \WIII {}
+\def \MIII {}
+
+\begin{table}[ht]
+\caption{Rozwój macierzy stanowej na skrzyżowaniu 1 z sygnalizacją świetlną}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+k & M(k)& P(k) & $\overrightarrow{P(k)}$ & S(k,0) & W(k,l) \rule{0pt}{18pt} \\
+\hline
+0 & \MZero & \PZero & \PmovedZero & \SZero & \WZero \rule{0pt}{35pt} \\  
+1 & \MI    &\PI    &\PmovedI   &\SI   &\WI   \rule{0pt}{35pt} \\
+2 & \MII   &\PII   &\PmovedII  &\SII  &\WII  \rule{0pt}{35pt} \\
+3 & \MIII  &\PIII  &\PmovedIII &\SIII &\WIII \rule{0pt}{35pt} \\
+\hline
+\end{tabular}
+\label{Tab:Tcr}
+\end{table}
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2019.1.1)  27 FEB 2019 22:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2019.1.1)  2 MAR 2019 23:53
 entering extended mode
 **"./model ruchu.tex"
 ("model ruchu.tex"
@@ -21,6 +21,294 @@ File: bk12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
+("D:\\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen103
+\lightrulewidth=\dimen104
+\cmidrulewidth=\dimen105
+\belowrulesep=\dimen106
+\belowbottomsep=\dimen107
+\aboverulesep=\dimen108
+\abovetopsep=\dimen109
+\cmidrulesep=\dimen110
+\cmidrulekern=\dimen111
+\defaultaddspace=\dimen112
+\@cmidla=\count89
+\@cmidlb=\count90
+\@aboverulesep=\dimen113
+\@belowrulesep=\dimen114
+\@thisruleclass=\count91
+\@lastruleclass=\count92
+\@thisrulewidth=\dimen115
+)
+("D:\\MiKTeX 2.9\tex\latex\tcolorbox\tcolorbox.sty"
+Package: tcolorbox 2018/12/07 version 4.15 text color boxes
+
+("D:\\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty"
+("D:\\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty"
+("D:\\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.tex"
+\pgfutil@everybye=\toks14
+\pgfutil@tempdima=\dimen116
+\pgfutil@tempdimb=\dimen117
+
+("D:\\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common-lists.tex"))
+("D:\\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def"
+\pgfutil@abb=\box27
+
+("D:\\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+("D:\\MiKTeX 2.9\tex\generic\pgf\utilities\pgfrcs.code.tex"
+("D:\\MiKTeX 2.9\tex\generic\pgf\pgf.revision.tex")
+Package: pgfrcs 2019/02/02 v3.1.1 (3.1.1)
+))
+Package: pgf 2019/02/02 v3.1.1 (3.1.1)
+
+("D:\\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgfcore.sty"
+("D:\\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("D:\\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+("D:\\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("D:\\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("D:\\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("D:\\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen118
+\Gin@req@width=\dimen119
+)
+("D:\\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgfsys.sty"
+("D:\\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys.code.tex"
+Package: pgfsys 2019/02/02 v3.1.1 (3.1.1)
+
+("D:\\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"
+\pgfkeys@pathtoks=\toks16
+\pgfkeys@temptoks=\toks17
+
+("D:\\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.code.tex"
+\pgfkeys@tmptoks=\toks18
+))
+\pgf@x=\dimen120
+\pgf@y=\dimen121
+\pgf@xa=\dimen122
+\pgf@ya=\dimen123
+\pgf@xb=\dimen124
+\pgf@yb=\dimen125
+\pgf@xc=\dimen126
+\pgf@yc=\dimen127
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count93
+\c@pgf@countb=\count94
+\c@pgf@countc=\count95
+\c@pgf@countd=\count96
+\t@pgf@toka=\toks19
+\t@pgf@tokb=\toks20
+\t@pgf@tokc=\toks21
+\pgf@sys@id@count=\count97
+
+("D:\\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
+File: pgf.cfg 2019/02/02 v3.1.1 (3.1.1)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+("D:\\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-pdftex.def"
+File: pgfsys-pdftex.def 2019/02/02 v3.1.1 (3.1.1)
+
+("D:\\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-common-pdf.def"
+File: pgfsys-common-pdf.def 2019/02/02 v3.1.1 (3.1.1)
+)))
+("D:\\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex"
+File: pgfsyssoftpath.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfsyssoftpath@smallbuffer@items=\count98
+\pgfsyssoftpath@bigbuffer@items=\count99
+)
+("D:\\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex"
+File: pgfsysprotocol.code.tex 2019/02/02 v3.1.1 (3.1.1)
+))
+("D:\\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("D:\\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+("D:\\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcore.code.tex"
+Package: pgfcore 2019/02/02 v3.1.1 (3.1.1)
+
+("D:\\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"
+("D:\\MiKTeX 2.9\tex\generic\pgf\math\pgfmathcalc.code.tex"
+("D:\\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex")
+("D:\\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex"
+\pgfmath@dimen=\dimen128
+\pgfmath@count=\count100
+\pgfmath@box=\box28
+\pgfmath@toks=\toks22
+\pgfmath@stack@operand=\toks23
+\pgfmath@stack@operation=\toks24
+)
+("D:\\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.code.tex"
+("D:\\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.basic.code.tex")
+("D:\\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.trigonometric.code.tex")
+("D:\\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.random.code.tex")
+("D:\\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.comparison.code.tex")
+("D:\\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.base.code.tex")
+("D:\\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.round.code.tex")
+("D:\\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.misc.code.tex")
+("D:\\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.integerarithmetics.code.
+tex"))) ("D:\\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count101
+))
+("D:\\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex"
+File: pgfcorepoints.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@picminx=\dimen129
+\pgf@picmaxx=\dimen130
+\pgf@picminy=\dimen131
+\pgf@picmaxy=\dimen132
+\pgf@pathminx=\dimen133
+\pgf@pathmaxx=\dimen134
+\pgf@pathminy=\dimen135
+\pgf@pathmaxy=\dimen136
+\pgf@xx=\dimen137
+\pgf@xy=\dimen138
+\pgf@yx=\dimen139
+\pgf@yy=\dimen140
+\pgf@zx=\dimen141
+\pgf@zy=\dimen142
+)
+("D:\\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconstruct.code.tex"
+File: pgfcorepathconstruct.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@path@lastx=\dimen143
+\pgf@path@lasty=\dimen144
+)
+("D:\\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage.code.tex"
+File: pgfcorepathusage.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@shorten@end@additional=\dimen145
+\pgf@shorten@start@additional=\dimen146
+)
+("D:\\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex"
+File: pgfcorescopes.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfpic=\box29
+\pgf@hbox=\box30
+\pgf@layerbox@main=\box31
+\pgf@picture@serial@count=\count102
+)
+("D:\\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicstate.code.tex"
+File: pgfcoregraphicstate.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgflinewidth=\dimen147
+)
+("D:\\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransformations.code.tex"
+File: pgfcoretransformations.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@pt@x=\dimen148
+\pgf@pt@y=\dimen149
+\pgf@pt@temp=\dimen150
+)
+("D:\\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.code.tex"
+File: pgfcorequick.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("D:\\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreobjects.code.tex"
+File: pgfcoreobjects.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("D:\\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathprocessing.code.tex"
+File: pgfcorepathprocessing.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("D:\\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex"
+File: pgfcorearrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfarrowsep=\dimen151
+)
+("D:\\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex"
+File: pgfcoreshade.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@max=\dimen152
+\pgf@sys@shading@range@num=\count103
+)
+("D:\\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.code.tex"
+File: pgfcoreimage.code.tex 2019/02/02 v3.1.1 (3.1.1)
+
+("D:\\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.code.tex"
+File: pgfcoreexternal.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfexternal@startupbox=\box32
+))
+("D:\\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex"
+File: pgfcorelayers.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("D:\\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransparency.code.tex"
+File: pgfcoretransparency.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("D:\\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepatterns.code.tex"
+File: pgfcorepatterns.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("D:\\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorerdf.code.tex"
+File: pgfcorerdf.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)))
+("D:\\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleshapes.code.tex"
+File: pgfmoduleshapes.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfnodeparttextbox=\box33
+)
+("D:\\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.tex"
+File: pgfmoduleplot.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+("D:\\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-0-65.sty"
+Package: pgfcomp-version-0-65 2019/02/02 v3.1.1 (3.1.1)
+\pgf@nodesepstart=\dimen153
+\pgf@nodesepend=\dimen154
+)
+("D:\\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-1-18.sty"
+Package: pgfcomp-version-1-18 2019/02/02 v3.1.1 (3.1.1)
+))
+("D:\\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks25
+\verbatim@line=\toks26
+\verbatim@in@stream=\read2
+)
+("D:\\MiKTeX 2.9\tex\latex\environ\environ.sty"
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+("D:\\MiKTeX 2.9\tex\latex\trimspaces\trimspaces.sty"
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)
+\@envbody=\toks27
+)
+("D:\\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
+Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count104
+)
+\tcb@titlebox=\box34
+\tcb@upperbox=\box35
+\tcb@lowerbox=\box36
+\tcb@phantombox=\box37
+\c@tcbbreakpart=\count105
+\c@tcblayer=\count106
+\tcolorbox@number=\count107
+\tcb@temp=\box38
+\tcb@temp=\box39
+\tcb@temp=\box40
+\tcb@temp=\box41
+\tcb@out=\write4
+\tcb@record@out=\write5
+)
 ("D:\\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
 
@@ -29,11 +317,11 @@ File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 ("D:\\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
-\wrapoverhang=\dimen103
-\WF@size=\dimen104
-\c@WF@wrappedlines=\count89
-\WF@box=\box27
-\WF@everypar=\toks14
+\wrapoverhang=\dimen155
+\WF@size=\dimen156
+\c@WF@wrappedlines=\count108
+\WF@box=\box42
+\WF@everypar=\toks28
 Package: wrapfig 2003/01/31  v 3.6
 )
 ("D:\\MiKTeX 2.9\tex\generic\babel\babel.sty"
@@ -54,22 +342,22 @@ Language: polish 2005/03/31 v1.2l Polish support from the babel system
 
 ("D:\\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2018/11/13 3.27 Babel common definitions
-\babel@savecnt=\count90
-\U@D=\dimen105
+\babel@savecnt=\count109
+\U@D=\dimen157
 
 ("D:\\MiKTeX 2.9\tex\generic\babel\txtbabel.def")
-\bbl@dirlevel=\count91
+\bbl@dirlevel=\count110
 )
 Package babel Info: Making " an active character on input line 83.
-\pl@left=\dimen106
-\pl@down=\dimen107
-\pl@right=\dimen108
-\pl@temp=\dimen109
+\pl@left=\dimen158
+\pl@down=\dimen159
+\pl@right=\dimen160
+\pl@temp=\dimen161
 ))
 ("D:\\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2018/08/11 v1.3c Input encoding file
-\inpenc@prehook=\toks15
-\inpenc@posthook=\toks16
+\inpenc@prehook=\toks29
+\inpenc@posthook=\toks30
 )
 ("D:\\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
@@ -120,24 +408,24 @@ File: upsy.fd 2001/06/04 font definitions for U/psy.
 ))
 ("D:\\MiKTeX 2.9\tex\latex\blkarray\blkarray.sty"
 Package: blkarray 2015/02/27 v0.07 Block array (dpc)
-\c@BAenumi=\count92
-\BA@col=\count93
-\BA@block@cnt=\count94
-\BA@final@box=\box28
-\BA@first@box=\box29
-\BA@colsep=\dimen110
-\BA@ftn=\toks17
-\BAextrarowheight=\dimen111
-\BAextraheightafterhline=\dimen112
-\BAarrayrulewidth=\dimen113
-\BAdoublerulesep=\dimen114
-\BAfootskip=\dimen115
-\BA@dashbox=\box30
-\BA@ddashbox=\box31
+\c@BAenumi=\count111
+\BA@col=\count112
+\BA@block@cnt=\count113
+\BA@final@box=\box43
+\BA@first@box=\box44
+\BA@colsep=\dimen162
+\BA@ftn=\toks31
+\BAextrarowheight=\dimen163
+\BAextraheightafterhline=\dimen164
+\BAarrayrulewidth=\dimen165
+\BAdoublerulesep=\dimen166
+\BAfootskip=\dimen167
+\BA@dashbox=\box45
+\BA@ddashbox=\box46
 )
 ("D:\\MiKTeX 2.9\tex\latex\multirow\bigstrut.sty"
 Package: bigstrut 2018/08/03 v2.3 Provide larger struts in tabulars
-\bigstrutjot=\dimen116
+\bigstrutjot=\dimen168
 )
 ("D:\\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2018/12/01 v2.17b AMS math features
@@ -149,51 +437,51 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 ("D:\\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks18
-\ex@=\dimen117
+\@emptytoks=\toks32
+\ex@=\dimen169
 ))
 ("D:\\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen118
+\pmbraise@=\dimen170
 )
 ("D:\\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count95
+\inf@bad=\count114
 LaTeX Info: Redefining \frac on input line 223.
-\uproot@=\count96
-\leftroot@=\count97
+\uproot@=\count115
+\leftroot@=\count116
 LaTeX Info: Redefining \overline on input line 385.
-\classnum@=\count98
-\DOTSCASE@=\count99
+\classnum@=\count117
+\DOTSCASE@=\count118
 LaTeX Info: Redefining \ldots on input line 482.
 LaTeX Info: Redefining \dots on input line 485.
 LaTeX Info: Redefining \cdots on input line 606.
-\Mathstrutbox@=\box32
-\strutbox@=\box33
-\big@size=\dimen119
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen171
 LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
-\macc@depth=\count100
-\c@MaxMatrixCols=\count101
+\macc@depth=\count119
+\c@MaxMatrixCols=\count120
 \dotsspace@=\muskip10
-\c@parentequation=\count102
-\dspbrk@lvl=\count103
-\tag@help=\toks19
-\row@=\count104
-\column@=\count105
-\maxfields@=\count106
-\andhelp@=\toks20
-\eqnshift@=\dimen120
-\alignsep@=\dimen121
-\tagshift@=\dimen122
-\tagwidth@=\dimen123
-\totwidth@=\dimen124
-\lineht@=\dimen125
-\@envbody=\toks21
+\c@parentequation=\count121
+\dspbrk@lvl=\count122
+\tag@help=\toks33
+\row@=\count123
+\column@=\count124
+\maxfields@=\count125
+\andhelp@=\toks34
+\eqnshift@=\dimen172
+\alignsep@=\dimen173
+\tagshift@=\dimen174
+\tagwidth@=\dimen175
+\totwidth@=\dimen176
+\lineht@=\dimen177
+\@envbody=\toks35
 \multlinegap=\skip44
 \multlinetaggap=\skip45
-\mathdisplay@stack=\toks22
+\mathdisplay@stack=\toks36
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 )
@@ -216,47 +504,23 @@ LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 ("D:\\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
 Package: amsthm 2017/10/31 v2.20.4
-\thm@style=\toks23
-\thm@bodyfont=\toks24
-\thm@headfont=\toks25
-\thm@notefont=\toks26
-\thm@headpunct=\toks27
+\thm@style=\toks37
+\thm@bodyfont=\toks38
+\thm@headfont=\toks39
+\thm@notefont=\toks40
+\thm@headpunct=\toks41
 \thm@preskip=\skip50
 \thm@postskip=\skip51
 \thm@headsep=\skip52
-\dth@everypar=\toks28
-)
-("D:\\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-
-("D:\\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks29
-)
-("D:\\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
-
-("D:\\MiKTeX 2.9\tex\latex\graphics\trig.sty"
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-("D:\\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 99.
-
-("D:\\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
-))
-\Gin@req@height=\dimen126
-\Gin@req@width=\dimen127
+\dth@everypar=\toks42
 )
 ("D:\\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count107
-\float@exts=\toks30
-\float@box=\box34
-\@float@everytoks=\toks31
-\@floatcapt=\box35
+\c@float@type=\count126
+\float@exts=\toks43
+\float@box=\box49
+\@float@everytoks=\toks44
+\@floatcapt=\box50
 )
 ("D:\\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2018/04/16 v5.8 Page Geometry
@@ -271,22 +535,31 @@ Package ifvtex Info: VTeX not detected.
 ("D:\\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count108
-\Gm@cntv=\count109
-\c@Gm@tempcnt=\count110
-\Gm@bindingoffset=\dimen128
-\Gm@wd@mp=\dimen129
-\Gm@odd@mp=\dimen130
-\Gm@even@mp=\dimen131
-\Gm@layoutwidth=\dimen132
-\Gm@layoutheight=\dimen133
-\Gm@layouthoffset=\dimen134
-\Gm@layoutvoffset=\dimen135
-\Gm@dimlist=\toks32
+\Gm@cnth=\count127
+\Gm@cntv=\count128
+\c@Gm@tempcnt=\count129
+\Gm@bindingoffset=\dimen178
+\Gm@wd@mp=\dimen179
+\Gm@odd@mp=\dimen180
+\Gm@even@mp=\dimen181
+\Gm@layoutwidth=\dimen182
+\Gm@layoutheight=\dimen183
+\Gm@layouthoffset=\dimen184
+\Gm@layoutvoffset=\dimen185
+\Gm@dimlist=\toks45
 
 ("D:\\MiKTeX 2.9\tex\latex\geometry\geometry.cfg")) ("model ruchu.aux"
 
-LaTeX Warning: Label `skrz_1_x0' multiply defined.
+LaTeX Warning: Label `skrz_1_zmiennaStanu_0_sygnalizacja' multiply defined.
+
+
+LaTeX Warning: Label `skrz_1_zmiennaStanu_0_sygnalizacja' multiply defined.
+
+
+LaTeX Warning: Label `skrz_1_zmiennaStanu_0_sygnalizacja' multiply defined.
+
+
+LaTeX Warning: Label `eq:S' multiply defined.
 
 
 LaTeX Warning: Label `fig:skrz_1' multiply defined.
@@ -297,35 +570,36 @@ LaTeX Warning: Label `fig:skrz_1' multiply defined.
 )
 \openout1 = `"model ruchu.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 24.
  ("D:\\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
+ABD: EveryShipout initializing macros
 ("D:\\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count111
-\scratchdimen=\dimen136
-\scratchbox=\box36
-\nofMPsegments=\count112
-\nofMParguments=\count113
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count114
-\MPscratchDim=\dimen137
-\MPnumerator=\count115
-\makeMPintoPDFobject=\count116
-\everyMPtoPDFconversion=\toks34
+\scratchcounter=\count130
+\scratchdimen=\dimen186
+\scratchbox=\box51
+\nofMPsegments=\count131
+\nofMParguments=\count132
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count133
+\MPscratchDim=\dimen187
+\MPnumerator=\count134
+\makeMPintoPDFobject=\count135
+\everyMPtoPDFconversion=\toks47
 ) ("D:\\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -403,33 +677,33 @@ G,.JBIG2,.JB2,.eps]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 26.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 29.
 ("D:\\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 26.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 29.
 
 ("D:\\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 26.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 29.
 
 
 ("D:\\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 26.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 29.
 
 
 ("D:\\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 26.
+(Font)              <14.4> on input line 29.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 26.
+(Font)              <10> on input line 29.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 26.
+(Font)              <7> on input line 29.
  [1
 
 
@@ -450,18 +724,18 @@ Rozdzia\l  3.
 ]
 Rozdzia\l  4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 33.
+(Font)              <12> on input line 36.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 33.
+(Font)              <8> on input line 36.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 33.
-<network.png, id=31, 684.30656pt x 529.98pt>
+(Font)              <6> on input line 36.
+<network.png, id=34, 684.30656pt x 529.98pt>
 File: network.png Graphic file (type png)
 <use network.png>
-Package pdftex.def Info: network.png  used on input line 48.
+Package pdftex.def Info: network.png  used on input line 51.
 (pdftex.def)             Requested size: 341.43306pt x 264.43942pt.
 
-Overfull \hbox (31.90149pt too wide) in paragraph at lines 46--56
+Overfull \hbox (31.90149pt too wide) in paragraph at lines 49--59
 []$[]$  $[]$ 
  []
 
@@ -469,68 +743,87 @@ Overfull \hbox (31.90149pt too wide) in paragraph at lines 46--56
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9 <./network.png>] [10]
-<skrz_bez_in_out.png, id=44, 511.15968pt x 484.81125pt>
+<skrz_bez_in_out.png, id=47, 511.15968pt x 484.81125pt>
 File: skrz_bez_in_out.png Graphic file (type png)
 <use skrz_bez_in_out.png>
-Package pdftex.def Info: skrz_bez_in_out.png  used on input line 70.
+Package pdftex.def Info: skrz_bez_in_out.png  used on input line 73.
 (pdftex.def)             Requested size: 398.33858pt x 377.80356pt.
 
 Underfull \vbox (badness 4739) has occurred while \output is active []
 
  [11 <./skrz_bez_in_out.png>] [12]
 Rozdzia\l  5.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13
+[13
 
 ]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 104.
-<skrz_1.png, id=59, 478.78876pt x 281.55188pt>
+<siatka_przestrzenna.png, id=62, 526.21594pt x 115.18031pt>
+File: siatka_przestrzenna.png Graphic file (type png)
+<use siatka_przestrzenna.png>
+Package pdftex.def Info: siatka_przestrzenna.png  used on input line 99.
+(pdftex.def)             Requested size: 398.33858pt x 87.19345pt.
+<skrz_1.png, id=63, 478.78876pt x 281.55188pt>
 File: skrz_1.png Graphic file (type png)
 <use skrz_1.png>
-Package pdftex.def Info: skrz_1.png  used on input line 112.
+Package pdftex.def Info: skrz_1.png  used on input line 116.
 (pdftex.def)             Requested size: 398.33858pt x 234.24219pt.
+ [14 <./siatka_przestrzenna.png> <./skrz_1.png>]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 142.
 
-Underfull \vbox (badness 1067) has occurred while \output is active []
-
- [14 <./skrz_1.png>]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 170.
-
- ("D:\\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
-File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 170.
- [15]
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
 
-[16] [17]
-<odcinki-2.png, id=77, 828.84656pt x 411.03563pt>
-File: odcinki-2.png Graphic file (type png)
-<use odcinki-2.png>
-Package pdftex.def Info: odcinki-2.png  used on input line 334.
-(pdftex.def)             Requested size: 398.33858pt x 197.53946pt.
- [18 <./odcinki-2.png>]
-File: skrz_1.png Graphic file (type png)
-<use skrz_1.png>
-Package pdftex.def Info: skrz_1.png  used on input line 380.
-(pdftex.def)             Requested size: 398.33858pt x 234.24219pt.
- [19]
-Underfull \hbox (badness 10000) in paragraph at lines 384--388
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 174.
+
+("D:\\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 174.
+ [15]
+Underfull \hbox (badness 10000) in paragraph at lines 238--239
+
+ []
+
+[16]
+<skrz_1_sygnalizacja.png, id=76, 352.31625pt x 194.97844pt>
+File: skrz_1_sygnalizacja.png Graphic file (type png)
+<use skrz_1_sygnalizacja.png>
+Package pdftex.def Info: skrz_1_sygnalizacja.png  used on input line 324.
+(pdftex.def)             Requested size: 398.33858pt x 220.44801pt.
+ [17 <./skrz_1_sygnalizacja.png>] [18] [19]
+Underfull \hbox (badness 10000) in paragraph at lines 568--569
 
  []
 
 [20]
-<skrz_1_discret.png, id=90, 724.20563pt x 404.26031pt>
+<odcinki-2.png, id=90, 828.84656pt x 411.03563pt>
+File: odcinki-2.png Graphic file (type png)
+<use odcinki-2.png>
+Package pdftex.def Info: odcinki-2.png  used on input line 636.
+(pdftex.def)             Requested size: 398.33858pt x 197.53946pt.
+ [21] [22 <./odcinki-2.png>]
+File: skrz_1.png Graphic file (type png)
+<use skrz_1.png>
+Package pdftex.def Info: skrz_1.png  used on input line 682.
+(pdftex.def)             Requested size: 398.33858pt x 234.24219pt.
+ [23]
+Underfull \hbox (badness 10000) in paragraph at lines 686--690
+
+ []
+
+
+Underfull \vbox (badness 1448) has occurred while \output is active []
+
+ [24]
+<skrz_1_discret.png, id=105, 724.20563pt x 404.26031pt>
 File: skrz_1_discret.png Graphic file (type png)
 <use skrz_1_discret.png>
-Package pdftex.def Info: skrz_1_discret.png  used on input line 499.
+Package pdftex.def Info: skrz_1_discret.png  used on input line 801.
 (pdftex.def)             Requested size: 398.33858pt x 222.36237pt.
- [21] ("model ruchu.bbl" [22 <./skrz_1_discret.png>]) [23
+
+[25] ("model ruchu.bbl" [26 <./skrz_1_discret.png>]) [27
 
 ] ("model ruchu.aux")
 
@@ -538,30 +831,29 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4194 strings out of 492946
- 55145 string characters out of 3141488
- 146742 words of memory out of 3000000
- 7955 multiletter control sequences out of 15000+200000
- 71111 words of font info for 53 fonts, out of 3000000 for 9000
+ 13954 strings out of 492946
+ 259473 string characters out of 3141488
+ 336239 words of memory out of 3000000
+ 17511 multiletter control sequences out of 15000+200000
+ 80095 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,20n,32p,1218b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 54i,22n,73p,1218b,442s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D://MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{D://MiKTeX 2.9/fonts/enc/dvips/
 lm/lm-rm.enc}{D://MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{D://MiKTeX 2.9/f
 onts/enc/dvips/lm/lm-mathsy.enc}{D://MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.en
 c}<D://MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><D://MiKTeX 2.9/fonts/type1/
 public/lm/lmex10.pfb><D://MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><D://MiKT
 eX 2.9/fonts/type1/public/lm/lmmi12.pfb><D://MiKTeX 2.9/fonts/type1/public/lm/l
-mmi6.pfb><D://MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><D://MiKTeX 2.9/fonts/
-type1/public/lm/lmmi8.pfb><D://MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><D://
-MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><D://MiKTeX 2.9/fonts/type1/public/l
-m/lmr17.pfb><D://MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><D://MiKTeX 2.9/font
-s/type1/public/lm/lmr7.pfb><D://MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><D://
-MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><D://MiKTeX 2.9/fonts/type1/public/
-lm/lmro12.pfb><D://MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><D://MiKTeX 2.9/
-fonts/type1/public/lm/lmsy8.pfb>
-Output written on "model ruchu.pdf" (23 pages, 413047 bytes).
+mmi6.pfb><D://MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><D://MiKTeX 2.9/fonts/
+type1/public/lm/lmr12.pfb><D://MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><D://
+MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><D://MiKTeX 2.9/fonts/type1/public/lm
+/lmr7.pfb><D://MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><D://MiKTeX 2.9/fonts/
+type1/public/lm/lmri12.pfb><D://MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><D:
+//MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><D://MiKTeX 2.9/fonts/type1/publi
+c/lm/lmsy8.pfb>
+Output written on "model ruchu.pdf" (27 pages, 423912 bytes).
 PDF statistics:
- 160 PDF objects out of 1000 (max. 8388607)
+ 170 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
