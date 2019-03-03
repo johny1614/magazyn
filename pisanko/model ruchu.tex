@@ -27,6 +27,7 @@ oparciu o przepływowy model ruchu pojazdów.}
 \author{Michał Lis}
 \date{\today}
 \maketitle
+\tableofcontents
 \chapter{Wprowadzenie}
 \chapter{Cel pracy}
 \chapter{Zakres pracy}
@@ -58,7 +59,7 @@ Punkty z numerem 0 są jedynie początkami i końcami dróg.
 \end{minipage}
 \section{Sygnalizacja świetlna}
 Na końcu drogi kończącej się na skrzyżowaniu znajdują się sygnalizacje świetlne, które zezwalają na jazdę w danym kierunku(lub kierunkach). \\
-Manewr zdefiniowany jest jako para - kierunku jazdy na skrzyżowaniu (np. w prawo) oraz drogi umożliwiającej wjazd na to skrzyżowanie.\\ Faza świateł to zbiór manewrów, które nie powodują ze sobą kolizji. Tylko jedna faza $M_v$ może być aktywna w danej chwili $t$ i będziemy ją oznaczać z indeksem jako $\overline{M_v}$. Aktywna faza określa zielone światła na sygnalizacjach przypisanych do odpowiadających manewrów fazy.
+Manewr zdefiniowany jest jako para drogi wlotowej i wylotowej.\\ Faza świateł to zbiór manewrów, które nie powodują ze sobą kolizji. Tylko jedna faza $M_v$ jest zielona w danej chwili $t$ i będzie oznaczona indeksem jako $\overline{M_v}$. Pozostałe fazy w chwili t są czerwone.
 \newpage
 \subsection{Przykład sygnalizacji}
 Niech dane będzie skrzyżowanie posiadające po 4 drogi wlotowe i wylotowe. Drogi wlotowe oznaczamy nieparzystymi indeksami jako $E_{in}=\{e^{1},e^{3},e^{5},e^{7}\}$, a wlotowe parzystymi t.j. $E_{in}=\{e^2,e^4,e^6,e^8\}$. Położenie dróg przedstawia rysunek \ref{fig:skrzyzowanie} Każda z dróg wlotowych posiada dwie sygnalizacje świetlne - pierwsza określa możliwość manewru skrętu w lewo, a druga - dwóch manewrów: jazdy prosto i skrętu w prawo. Proponowane fazy to:\\
@@ -90,9 +91,9 @@ Wiele symulatorów stosujących model mezoskopowy oferuje symulację w czasie rz
 \section{Model Rozwojowy}
 Ze względu na dużą złożoność końcowego modelu zostanie przedstawiony najpierw bardzo prosty, podstawowy model. W każdej kolejnej sekcji dodawane będą zmiany przybliżające do ostatecznej postaci.
 \subsection{Siatka czasowa i przestrzenna}
-Ze względu na dyskretny charakter obliczeń należy określić siatkę czasową i przestrzenną. Dla par czasu i miejsc należących do tych dwóch siatek będą określane zmienne stanowe. \\ \textbf{Siatka czasowa} jest zdefiniowana jako skończony ciąg liczb naturalnych:
+Ze względu na dyskretny charakter obliczeń należy określić siatkę czasową i przestrzenną. Dla par czasu i miejsc należących do tych dwóch siatek będą określane zmienne stanowe. \\ \\ \textbf{Siatka czasowa} jest zdefiniowana jako skończony ciąg liczb naturalnych:
 \[(0,1,...,K). \addtag \]
-Niech będzie ustalona droga $e$, która jest odcinkiem $[0,L_e]$. Droga zostaje podzielona na $L+1$ odcinków o równej długości $\Delta x=\frac{L_e}{L+1}$. \textbf{Siatka przestrzenna} drogi to ciąg zbiorów:
+Niech będzie ustalona droga $e$, która jest odcinkiem $[0,L_e]$. Droga zostaje podzielona na $L+1$ odcinków o równej długości $\Delta x=\frac{L_e}{L+1}$. \textbf{Siatka przestrzenna} drogi to ciąg odcinków:
 \[(b_l)_{l=0}^{L}=[l\Delta x,(l+1)\Delta x]\]
 \begin{figure}[H]
   \centering
@@ -117,23 +118,6 @@ Niech dane będą będzie skrzyżowanie dwóch dróg wlotowych $e_1,e_2$ i jedne
  \caption{Skrzyzowanie 1}
  \label{fig:skrz_1}
 \end{figure}
-
-%Macierz przedstawiająca zmienne stanowe sieci dróg w chwili k to:
-%\begin{equation*}
-%  P(k)=
-%  \begin{blockarray}{*{4}{c} l}
-%    \begin{block}{*{4}{>{$\footnotesize}c<{$}} l}
-%      $b_0$ & $b_1$ & ... & $b_{L}$ \\
-%    \end{block}
-%    \begin{block}{[*{4}{c}]>{$\footnotesize}l<{$}}
-%       _1{p_0^k} & _1{p_1^k} & ... & _1{p_{L}^k} & $e_1$ \\
-%       _2{p_0^k} & _2{p_1^k} & ... & _2{p_{L}^k} & $e_2$ \\
-%       _3{p_0^k} & _3{p_1^k} & ... & _3{p_{L}^k} & $e_3$ \\
-%    \end{block}
-%  \end{blockarray} \addtag \label{skrz_1_x0}
-%\end{equation*}
-
-
 Macierz B jest \textbf{macierzą przejścia} skrzyżowania $v$. Wartości 1 oznaczają możliwy przejazd na skrzyżowaniu z drogi odpowiadającej indeksowi kolumny do drogi zadanej przez indeks wiersza.
 \begin{equation*}
   B=
@@ -153,7 +137,8 @@ Macierz B jest \textbf{macierzą przejścia} skrzyżowania $v$. Wartości 1 ozna
 
 
 \subsection{Macierz stanowa sieci dróg}
-Główną strukturą modelu jest \textbf{macierz stanowa}. Składuje ona zmienne stanowe w danym momencie. Każdy wiersz macierzy odpowiada jednej drodze $e$. Indeks kolumny określa konkretny odcinek tej drogi. \\ \\ Początkowo dla ułatwienia wartość zmiennej stanowej równa lub większa niż 1 oznacza, że na danym odcinku znajduje się przynajmniej jeden pojazd, z kolei 0 oznacza ich brak. Jako przykład zostanie przedstawiona początkowa macierz stanowa skrzyżowania z rysunku \ref{fig:skrz_1}. Niech siatki przestrzenne dróg mają $L=4$ odcinki. Początkowa macierz stanu $P(0)$ może być przedstawiona jako:
+Strukturą przedstawiającą stan sieci dróg jest \textbf{macierz stanowa}. Składuje ona zmienne stanowe w danym momencie. Każdy wiersz macierzy odpowiada jednej drodze $e$. Indeks kolumny określa konkretny odcinek tej drogi. \\ \\ Wartość zmiennej stanowej początkowo jest ilością pojazdów na danym odcinku.
+Jako przykład zostanie przedstawiona początkowa macierz stanowa skrzyżowania z rysunku \ref{fig:skrz_1}. Niech siatki przestrzenne dróg mają $L=4$ odcinki. Początkowa macierz stanu $P(0)$ może być przedstawiona jako:
 \begin{equation*}
   P(0)=
   \begin{blockarray}{*{4}{c} l}
@@ -175,7 +160,7 @@ Powyższa macierz przekazuje informację iż w chwili $0$ pojazdy są na następ
 \item $e_2$ - na odcinku $b_3$ 
 \item $e_3$ - na odcinku $b_0$ 
 \end{itemize}
-\subsection{Początkowy model przepływu}
+\subsection{Model przepływu - przykład}
 Początkowy model przepływu pojazdów zakłada, iż wszystkie pojazdy w chwili $t+1$ są o jeden odcinek dalej w swojej podróży niż w momencie $t$. Założone jest iż żadne nowe pojazdy nie pojawiają się w sieci dróg, a pojazdy będące w chwili $t$ w ostatnim odcinku drogi $e_3$ opuszczają układ. Wtedy kolejne macierze stanowe dla przykładu \ref{skrz_1_x0} są następujące:
 \begin{equation*}
   P(1)=
@@ -234,7 +219,7 @@ Początkowy model przepływu pojazdów zakłada, iż wszystkie pojazdy w chwili 
   \end{blockarray} \addtag
 \end{equation*}
 
-\subsection{Ogólny wzór rozwoju macierzy stanowej}
+\subsection{Model przepływu - ogólny wzór}
 W poprzedniej sekcji został przedstawiony przykład wyliczenia macierzy stanowej dla kolejnych momentów w czasie. Następnym krokiem jest przedstawienie rozwiązania dla ogólnego przypadku. \\ 
 
 \begin{tcolorbox}
@@ -318,7 +303,7 @@ Ostatecznie ze wzoru (\ref{eq:P_1}) wynika, że
  \]
 
 Warto zauważyć, że w chwili 0 na obydwu drogach wlotowych $e_1,e_2$ pojazdy znajdowały się na końcowym odcinku. Problemem okazuje się kolizyjność manewrów wjazdu na drogę $e_3$ z dróg odpowiednio $e_1$ i $e_2$. Początkowo ta kwestia została ona pominięta. Następna sekcja przedstawia rozwiązanie tego problemu.
-\subsection{Sygnalizacja świetlna}
+\subsection{Model przepływu z sygnalizacją świetlną - przykład}
 \begin{figure}[H]
   \centering
     \includegraphics[width=14cm]{skrz_1_sygnalizacja}
@@ -421,6 +406,9 @@ Początkowo założone jest, że wszystkie pojazdy na ostatnim odcinku drogi prz
     \end{block}
   \end{blockarray} \addtag \label{skrz_1_zmiennaStanu_0_sygnalizacja}
 \end{equation*}
+
+\subsection{Model przepływu z sygnalizacją świetlną - ogólny wzór}
+
 Następnym krokiem jest wyznaczenie ogólnego wzoru macierzy stanowej z uwzględnieniem sygnalizacji świetlnej. 
 \begin{tcolorbox}
 Macierz źródła z uwzględnieniem sygnalizacji świetlnej jest przedstawiona wzorem:
