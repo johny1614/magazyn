@@ -1,21 +1,26 @@
 \babel@toc {polish}{}
 \babel@toc {polish}{}
 \contentsline {chapter}{\numberline {1}Wprowadzenie}{5}% 
-\contentsline {chapter}{\numberline {2}Cel pracy}{7}% 
-\contentsline {chapter}{\numberline {3}Zakres pracy}{9}% 
-\contentsline {chapter}{\numberline {4}Siatka czasowa i przestrzenna}{11}% 
-\contentsline {chapter}{\numberline {5}Makroskopowy model ruchu}{13}% 
-\contentsline {section}{\numberline {5.1}Klasyfikacja modeli ruchu drogowego}{13}% 
-\contentsline {section}{\numberline {5.2}Wst\IeC {\k e}p}{13}% 
-\contentsline {section}{\numberline {5.3}Rozw\IeC {\'o}j g\IeC {\k e}sto\IeC {\'s}ci ruchu na drodze}{14}% 
-\contentsline {section}{\numberline {5.4}Dyskretyzacja makroskopowego modelu ruchu}{14}% 
-\contentsline {chapter}{\numberline {6}Model sieci dr\IeC {\'o}g}{17}% 
-\contentsline {section}{\numberline {6.1}Wst\IeC {\k e}p}{17}% 
-\contentsline {section}{\numberline {6.2}Symbole i notacja obliczeniowa}{17}% 
-\contentsline {section}{\numberline {6.3}Sie\IeC {\'c} dr\IeC {\'o}g}{17}% 
-\contentsline {section}{\numberline {6.4}Przyk\IeC {\l }adowe skrzy\IeC {\.z}owanie}{19}% 
-\contentsline {section}{\numberline {6.5}Macierz stanowa sieci dr\IeC {\'o}g}{19}% 
-\contentsline {section}{\numberline {6.6}Model przep\IeC {\l }ywu - przyk\IeC {\l }ad}{20}% 
-\contentsline {section}{\numberline {6.7}Model przep\IeC {\l }ywu - og\IeC {\'o}lny wz\IeC {\'o}r}{21}% 
-\contentsline {section}{\numberline {6.8}Model przep\IeC {\l }ywu z sygnalizacj\IeC {\k a} \IeC {\'s}wietln\IeC {\k a} - przyk\IeC {\l }ad}{22}% 
-\contentsline {section}{\numberline {6.9}Model przep\IeC {\l }ywu z sygnalizacj\IeC {\k a} \IeC {\'s}wietln\IeC {\k a} - og\IeC {\'o}lny wz\IeC {\'o}r}{23}% 
+\contentsline {chapter}{\numberline {2}Cel i zakres pracy}{7}% 
+\contentsline {chapter}{\numberline {3}Siatka czasowa i przestrzenna}{9}% 
+\contentsline {chapter}{\numberline {4}Makroskopowy model ruchu}{11}% 
+\contentsline {section}{\numberline {4.1}Klasyfikacja modeli ruchu drogowego}{11}% 
+\contentsline {section}{\numberline {4.2}Wst\IeC {\k e}p}{11}% 
+\contentsline {section}{\numberline {4.3}Rozw\IeC {\'o}j g\IeC {\k e}sto\IeC {\'s}ci ruchu na drodze}{12}% 
+\contentsline {section}{\numberline {4.4}Dyskretyzacja makroskopowego modelu ruchu}{12}% 
+\contentsline {chapter}{\numberline {5}Model sieci dr\IeC {\'o}g}{15}% 
+\contentsline {section}{\numberline {5.1}Wst\IeC {\k e}p}{15}% 
+\contentsline {section}{\numberline {5.2}Symbole i notacja obliczeniowa}{15}% 
+\contentsline {section}{\numberline {5.3}Sie\IeC {\'c} dr\IeC {\'o}g}{15}% 
+\contentsline {section}{\numberline {5.4}Przyk\IeC {\l }adowe skrzy\IeC {\.z}owanie}{17}% 
+\contentsline {section}{\numberline {5.5}Macierz stanowa sieci dr\IeC {\'o}g}{17}% 
+\contentsline {section}{\numberline {5.6}Model przep\IeC {\l }ywu - przyk\IeC {\l }ad}{18}% 
+\contentsline {section}{\numberline {5.7}Model przep\IeC {\l }ywu - og\IeC {\'o}lny wz\IeC {\'o}r}{19}% 
+\contentsline {section}{\numberline {5.8}Model przep\IeC {\l }ywu z sygnalizacj\IeC {\k a} \IeC {\'s}wietln\IeC {\k a} - przyk\IeC {\l }ad}{20}% 
+\contentsline {section}{\numberline {5.9}Model przep\IeC {\l }ywu z sygnalizacj\IeC {\k a} \IeC {\'s}wietln\IeC {\k a} - og\IeC {\'o}lny wz\IeC {\'o}r}{21}% 
+\contentsline {section}{\numberline {5.10}Schematy skrzy\IeC {\.z}owa\IeC {\'n} symulacyjnych}{21}% 
+\contentsline {section}{\numberline {5.11}Przedstawienie problemu optymalizacyjnego}{21}% 
+\contentsline {chapter}{\numberline {6}Przegl\IeC {\k a}d metod optymalizacyjnych}{25}% 
+\contentsline {section}{\numberline {6.1}Kategorie uczenia maszynowego}{25}% 
+\contentsline {section}{\numberline {6.2}Uczenie ze wzmocnieniem}{25}% 
+\contentsline {section}{\numberline {6.3}Programowanie dynamiczne}{28}% 

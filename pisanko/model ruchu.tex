@@ -3,6 +3,8 @@
 \usepackage{tcolorbox}
 \usepackage[T1]{fontenc}
 \usepackage{wrapfig}
+\usepackage{url}
+\usepackage{mathtools, nccmath}
 \usepackage[polish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -17,9 +19,12 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{cite}
 \usepackage[margin=2.5cm]{geometry}
 \newcommand{\R}{\mathbb{R}}
 \newcommand\addtag{\refstepcounter{equation}
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
 \tag{\theequation}}
 \begin{document}
 \title{Optymalizacja  systemu sygnalizacji świetlnej w 
@@ -29,9 +34,28 @@ oparciu o przepływowy model ruchu pojazdów.}
 \maketitle
 \tableofcontents
 \chapter{Wprowadzenie}
-\chapter{Cel pracy}
-\chapter{Zakres pracy}
-   
+Problem zatłoczonych ulic staje się coraz bardziej powszechny na całym świecie głównie ze względu na wzrost ekonomiczny. Według banku światowego w roku 1990 suma produktów krajowych brutto wszystkich państw świata wynosiła 22,6 biliona dolarów \cite{worldBank}. Najbardziej aktualne dane banku światowego dotyczą lat 2012-2017. W czasie ich trwania analogiczna wartość oscylowała wokół 75 bilionów dolarów. Nawet przy uwzględnieniu inflacji dolara, która od w okresie 1990 do 2015 wyniosła $80\%$ światowy produkt brutto jest obecnie prawie dwukrotnie większy w porównaniu do roku 1990. Bezpośrednim skutkiem ogólnoświatowego wzrostu stopy życiowej jest zwiększenie ilości samochodów na drogach. Według danych firmy gromadzącej dane statystyczne Statista liczba zarejestrowanych pojazdów na świecie w roku 2006 wynosiła 947 tysięcy \cite{liczbaPojazdowSwiat}. W 2015 roku po świecie jeździło już  1282 tysięcy pojazdów. Wzrost przez te 9 lat był niemalże liniowy - 39,4 tysięcy nowych samochodów rocznie wyznacza stopę wzrostu liczby pojazdów na poziomie 3,7$\%$.
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=14cm]{liczbaPojazdowSwiat}
+ \caption{Liczba pojazdów na świecie}
+ \label{fig:liczbaPojazdowSwiat}
+\end{figure} \noindent
+W Polsce wzrost ilości pojazdów w tych latach 2006 - 2015 był jeszcze większy \cite{liczbaPojazdowPolska}. W 2006 roku według GUS w Polsce było zarejestrowanych 13,4 miliona samochodów osobowych. W 2015 roku ich liczba wyniosła 20,7 miliona co oznacza 5 procentowy roczny wzrost.
+Najbardziej zatłoczonym polskim miastem jest Łódź. Zajmuje ona w rankingu stworzonym przez firmę TomTom bardzo wysokie 5 miejsce na świecie i 1 w Europie pod względem zatłoczenia dróg \cite{rankingTomTom}. Oprócz Łodzi w pierwszej setce najbardziej zatłoczonych miast świata są także inne polskie miasta: Lublin(34), Kraków(48), Warszawa(50), Wrocław(63), Poznań(69), Bydgoszcz(83). Problem mocno dotyczy jednak także całej Europy. Spośród 100 najbardziej zatłoczonych miast świata aż 45 znajduje się w Europie. W 2008 roku Unia Europejska oszacowała iż koszty zatłoczenia dróg to $0,9\%-1,5\%$ PKB unijnego \cite{ue2008}. Raport z 2017 roku może napawać optymizmem, gdyż przedstawione w nim wyliczenia określiły jedynie $0,77\%$ straty całkowitego PKB wspólnoty \cite{ue2017}. Ten sam raport ocenia koszty zatorów komunikacyjnych w Polsce na poziomie $1,2\%$ polskiego PKB.
+Problem w miastach jest o tyle trudny do rozwiązania, gdyż często nie ma miejsca na wybudowanie drogi o większej przepustowości. Rozwiązaniem może być wprowadzenie większej ilości sygnalizacji świetlnych. Istotną kwestią jest optymalizacja ustawień sygnalizacji świetlnej. W celu uzyskania danych potrzebnych do tego procesu rozstawiane są na drogach detektory ruchu. 
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=14cm]{Detektor}
+ \caption{System pętli do detekcji osi pojazdów zainstalowany na badawczym stanowisku pomiarowym na drodze DK81 będący w dyspozycji Katedry Metrologii i Elektroniki AGH.}
+ \label{fig:Detektor}
+\end{figure} \noindent
+%W miastach zachodnioeuropejskich rezultaty naprawdę widać dopiero po roku, gdy system zgromadzi już ogromną ilość danych - mówi Misiorny
+%
+%Czytaj więcej: https://dzienniklodzki.pl/masz-uwagi-do-sygnalizacji-swietlnej-w-lodzi-wyslij-email-do-zdit/ar/9253440
+\chapter{Cel i zakres pracy}
+Celem pracy jest optymalizacja sygnalizacji świetlnej. Jako środowisko uczenia zostanie stworzony symulator ruchu drogowego. Symulacje ruchu będą w pełni zgodny z makroskopowym modelem ruchu. Sam makroskopowy model ruchu zostanie przedstawiony w rozdziale X. Jest to model ciągły. Pożądanym jest dyskretny model ruchu drogowego ze względu na łatwość implementacji komputerowej. Zostanie zatem przedstawiona w sekcji X.Y dyskretyzacja makroskopowego modelu ruchu. W rozdziale X zostanie zdefiniowany model sieci dróg. Na początku będzie on przedstawiony w sposób bardzo prosty, wręcz trywialny pomijając wiele aspektów. W każdej kolejnej sekcji model będzie stopniowo rozwijany. Sieci dróg zdefiniowane według końcowego modelu będą środowiskiem treningowym dla algorytmów uczenia maszynowego. Rozdział X opisuje uczenie ze wzmocnieniem - algorytm treningowy procesu optymalizacji sygnalizacji świetlnej. Rozdział X przedstawia cztery modele sieci dróg dla których został stworzony program symulacyjny. Rozdział X opisuje optymalizację sygnalizacji świetlnej dla wspomnianych sieci dróg.
+
    
 \chapter{Siatka czasowa i przestrzenna}
 Dyskretny charakter modelu przedstawianego w pracy obliguje do określenia siatki czasowej i przestrzennej. Dla par czasu i miejsc należących do tych dwóch siatek będą określane zmienne stanowe. \\ \\ \textbf{Siatka czasowa} jest zdefiniowana jako skończony ciąg liczb naturalnych:
@@ -407,7 +431,8 @@ Początkowo założone jest, że wszystkie pojazdy na ostatnim odcinku drogi prz
 \end{equation*}
 
 \section{Model przepływu z sygnalizacją świetlną - ogólny wzór}
-
+\section{Schematy skrzyżowań symulacyjnych}
+\section{Przedstawienie problemu optymalizacyjnego}
 Następnym krokiem jest wyznaczenie ogólnego wzoru macierzy stanowej z uwzględnieniem sygnalizacji świetlnej. 
 \begin{tcolorbox}
 Macierz źródła z uwzględnieniem sygnalizacji świetlnej jest przedstawiona wzorem:
@@ -553,5 +578,108 @@ Pogrubione wartości odnoszą się do pojazdów, które przejeżdżają w momenc
 
 
 \bibliographystyle{IEEEtran}
+
+\chapter{Przegląd metod optymalizacyjnych}
+\section{Kategorie uczenia maszynowego}
+Uczenie maszynowe to dziedzina wchodząca w skład nauk zajmujących się sztuczną inteligencją. Samo uczenie w najprostszym kształcie może być rozumiane jako dobór parametrów na podstawie dostępnych danych. Uczenie maszynowe jest powszechnie dzielone na 3 kategorie nauki \cite{machineLearningClassification}.
+\begin{enumerate}
+\item \textbf{Nadzorowane} \\
+Dane używane do uczenia nazywane są zbiorem treningowym. Każdy pojedynczy element zbioru treningowego ma informacje wejściowe oraz pewną pożądaną wartość wyjściową. W trakcie uczenia algorytm dopasowuje swoje parametry tak aby na podstawie danych wejściowych mógł przewidzieć wartość wyjściową. Przykładami uczenia nadzorowanego jest np. rozpoznawanie tekstu pisanego, detekcja obiektów na zdjęciach.
+\item \textbf{Nienadzorowane}
+Uczenie nienadzorowane różni się od nadzorowanego tym, że nie  są znane pożądane wartości wyjściowe. Celem nauki jest na podstawie podobieństw poszczególnych elementów zgrupowanie ich do odpowiednich klas. Przykładem uczenia nienadzorowanego może być np. klasyfikacja gatunków drzew na podstawie wiedzy o ich wysokościach i szerokości korony drzew.
+\item \textbf{Wzmocnione}
+W środowisku uczenia ze wzmocnieniem istnieje agent, który jest odpowiedzialny za podejmowanie pewnych decyzji. Każda decyzja ma wpływ na stan środowiska, które zwraca agentowi nagrodę. Celem uczenia ze wzmocnieniem jest ustalenie strategii maksymalizującej skumulowaną wartość nagród.
+\end{enumerate}
+Ze wszystkich trzech kategorii uczenie ze wzmocnieniem odpowiada problemowi rozważanym w rozdziale Y. Szczegółowy opis uczenia ze wzmocnieniem zostanie przedstawiony w następnej sekcji.
+\section{Uczenie ze wzmocnieniem}
+Schemat uczenia ze wzmocnieniem składa się z następujących elementów:
+\begin{enumerate}
+\item \textbf{Agent} jest odpowiedzialny za podejmowanie pewnych decyzji. Ma on wiedzę na temat obecnego stanu środowiska i otrzymuje w każdym kroku czasowym sygnał nagrody. Jego decyzje wpływają na stan środowiska.
+\item \textbf{Środowisko} jest przestrzenią posiadającą dynamiczny stan widoczny dla agenta. Chociaż to agent podejmuje akcje, to środowisko ma zdefiniowany model zmiany stanu. Model zmiany stanu może być stochastyczny oraz niewidoczny dla agenta. Oznacza to, że dwie te same akcje podjęte w tym samym stanie nie zawsze przyniosą identyczny następny stan. Innymi słowy agent nie może być stuprocentowo pewny rezultatów swoich akcji. Środowisko jest także nadawcą sygnału nagrody.
+\item \textbf{Strategia} definiuje sposób doboru akcji przez agenta w danej chwili. Jest to funkcja, która przyjmuje stan środowiska i zwraca akcje, która ma być przeprowadzona. 
+\item \textbf{Sygnał nagrody} definiuje cel problemu uczenia ze wzmocnieniem. W każdym kroku czasowym środowisko wysyła agentowi liczbę rzeczywistą, która jest nazywana nagrodą(reward). Wartości nagród są czynnikiem wpływającym na zmianę strategii, gdyż zadaniem agenta jest maksymalizacja nagród. Wartość nagród zatem definiuje, które zdarzenia są dobre, a które złe dla agenta. Biologicznym odpowiednikiem dodatniej nagrody jest przyjemność, a ujemnej - ból. 
+\item \textbf{Funkcja wartości} zwraca wartość stanu czyli oczekiwaną sumę nagród jakie agent osiągnie w przyszłości będąc aktualnie w tym stanie. 
+\end{enumerate}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=14cm]{agent-srodowisko}
+ \caption{Interakcje pomiędzy agentem a środowiskiem.}
+ \label{fig:agent-srodowisko}
+\end{figure}
+\newpage
+Algorytmy uczenia ze wzmocnieniem zazwyczaj stosuje się do rozwiązywania problemu procesu decyzyjnego Markowa. Sam \textbf{proces decyzyjny Markowa} jest zdefiniowany jako uporządkowana czwórka $(S,A,P_a,R_a)$, gdzie:
+\begin{enumerate}
+\item $S$ to zbiór stanów
+\item $A$ to zbiór akcji. Notacją $A_s$ oznaczane są możliwe akcje dla stanu $s$.
+\item $P_a(s,s')=Pr(s_{t+1}=s'|s_t=s,a_t=a)$ to prawdopodobieństwo, że akcja $a$ wykonana w stanie $s$ w chwili $t$ doprowadzi do stanu $s'$ w chwili $t+1$.
+\item $R_a(s,s')$ to oczekiwana nagroda otrzymana w wyniku akcji podjętej w stanie $s$ prowadzącej do stanu $s'$.
+\end{enumerate}
+
+Problemem procesu decyzyjnego Markowa jest odnalezienie optymalnej strategii. Strategia określona jest jako funkcja $\pi(s)$ przyjmująca jako argument stan, a zwracająca podejmowaną akcję. Celem optymalizacji jest odnalezienie strategii maksymalizującej wartość:
+\[
+G=\sum_{k=0}^{K} \gamma^k R_{k} \addtag \label{eq:Markov_maximize}
+\]
+Chociaż strategii $\pi(s)$ nie ma we wzorcze \ref{eq:Markov_maximize}, to strategia wpływa na otrzymywane nagrody $R_{k}$ w każdej chwili $k$.\\
+$\gamma \in (0,1]$ jest czynnikiem dyskontującym. Idea dyskontowania nagród zaczerpnięta jest z rachunku finansowego. Przykładowo wpływ 1000 złotych po upływie roku czasu jest z pewnością bardziej wartościowy niż za 20 lat. Innymi słowy - pieniądze są liczone w czasie i tak samo należy postępować z nagrodami. Im wartość $\gamma$ jest bliższa 0 tym bardziej istotne są początkowe nagrody. Dla $\gamma=1$ wszystkie nagrody są równie istotne - bez względu na czas ich otrzymania.\\
+Analogicznie do (\ref{eq:Markov_maximize}) jest ustalona funkcja wartości stanu. Jako wartość stanu $s$ określone jest:
+\[
+G_t=\sum_{k=t}^{K} \gamma^k R_{k}=R_{t}+\gamma R_{t+1}+\gamma^{2} R_{t+2}+...+\gamma^{K}R_K \addtag \label{eq:Markov_state_value_G}
+\]
+Zostanie przedstawiony teraz przykład obliczeniowy. Agent podejmuje decyzje na których podstawie otrzymuje ciąg  nagród $R_0=0, R_1=2,R_2=6,R_3=-1,R_4=2,R_5=1$. Czynnik dyskontujący $\gamma$ jest równy 0,9. Jaka jest wartość $G$ oraz $G_1,G_2,G_3,G_4,G_5$?\\
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=14cm]{rewards-graph}
+ \caption{Ciąg nagród i stanów.}
+ \label{fig:agent-srodowisko}
+\end{figure}\noindent
+Najłatwiej obliczenia rozpocząć od $G_5$, ponieważ
+$G_{t}=R_{t}+\gamma G_{t+1}$.\\
+$G_5=R_5=1$.\\
+$G_4=R_4+\gamma G_{5}=\;\;2+0,9\cdot 1=2,9$\\
+$G_3=R_3+\gamma G_{4}=\!-1+0,9\cdot2.9=1,61$\\
+$G_2=R_2+\gamma G_{3}=\;\;6+0,9\cdot1,61 \approx 7,45$\\
+$G_1=R_1+\gamma G_{2}=\;\;2+0,9\cdot 7,45 \approx 8,70$\\
+$G\;\,=R_0+\gamma G_{1}=\;\;0+0,9\cdot 8,70 \approx 7,83$\\
+
+\section{Programowanie dynamiczne}
+Termin programowania dynamicznego odnosi się do algorytmów wyliczających optymalne strategie procesu decyzyjnego Markowa w przypadku posiadanej całkowitej wiedzy na temat modelu środowiska\cite{reinforcementBook}. Środowisko nie musi być w pełni deterministyczne tzn. nie za każdym razem akcja przeprowadzana ze stanu $s_k$ musi w efekcie doprowadzić do tego samego stanu $s_{k+1}$. Jednak w takim przypadku musi być znany rozkład prawdopodobieństwa przydzielania nowego stanu na podstawie poprzedniego i właśnie podjętej przez agenta akcji. Dodatkowo wymagana jest możliwość ustalenia dowolnego stanu w trakcie uczenia. \\ Początkowa strategia $\pi(s)$ jest dowolna, najczęściej losowa.
+Przedstawiony algorytm jest podzielony na 2 części. Część predykcji(prediction) oraz kontroli (control). 
+\\\textbf{Proces predykcji} ma za zadanie ustalenie wartości stanów na podstawie ustalonej strategii. Jej algorytm jest następujący:
+\begin{enumerate}
+\item{Przyjmij daną z góry $\pi$ jako strategię podejmowania akcji}
+\item{Zainicjuj tablicę wartości stanów $V(s)$. Dla wszystkich możliwych stanów $s \in S$ przyjmij wartość $0$.}
+\item{$\Delta=0$}
+\item{Dla każdego $s \in S$:}
+  \begin{enumerate}
+    \item $v=V(s)$
+    \item $V(s)=\sum_{s'}Pr(s'|s,\pi(s))[r+\gamma V(s')]$
+    \item $\Delta = max(\Delta,|v-V(s)|)$
+  \end{enumerate}
+\item Jeśli $\Delta< \theta$ to wróć do 3
+\item Zwróć $V(s)$ jako tablicę wartości stanów $V_{\pi}(s)$ dla strategii $\pi$.
+\end{enumerate}
+Parametr $\theta \geq 0$ definiuje w kroku 5. moment stopu. \\
+Wartość $Pr(s',s,\pi(s))$ to prawdopodobieństwo, że akcja $\pi(s)$ podjęta w stanie $s$ doprowadzi do stanu $s'$. Z kolei $r$ jest właśnie otrzymaną nagrodą.
+\\ Algorytm \textbf{kontroli} ma za zadanie odnaleźć bardziej optymalną strategię niż dotychczas. Jako argument przyjmuje on wyliczoną właśnie tablicę wartości stanów $V_{\pi}(s)$. Wprowadzona zostaje macierz $Q_{\pi}(s,a)$. Jest ona zdefiniowana następująco:
+\begin{equation}
+\begin{split}
+Q_{\pi}(s,a) &= E[R_{t+1}+\gamma v_{\pi}(S_{t+1}) | S_t=s, A_t=a]  \\
+           &= \sum_{s'}Pr(s'|s,a)[r+\gamma V_{pi}(s')] 
+\end{split}
+\end{equation}
+Macierz przedstawia wartość akcji $a$ podjętej w stanie $s$. Algorytm kontroli jest następujący:
+\begin{enumerate}
+\item{Przyjmij wyliczoną przez algorytm predykcji macierz wartości stanów $V_{\pi}(s)$}
+\item{Zainicjuj tablicę wartości stanów $V(s)$. Dla wszystkich możliwych stanów $s \in S$ przyjmij wartość $0$.}
+\item{$policy\_stable=false$}
+\item{Dla każdego $s \in S$:}
+  \begin{enumerate}
+    \item $old\_action=\pi(s)$
+    \item $\pi(s)=argmax_{a\in A_s} \sum_{s'}Pr(s'|s,a)[r+\gamma V(s')]$
+    \item Jeśli $old\_action \neq \pi(s)$ to $policy\_stable = true$
+  \end{enumerate}
+\item Jeśli $policy\_stable=true$ to zwróć strategię $\pi(s)$.
+\end{enumerate}
+
 \bibliography{refs}
 \end{document}
