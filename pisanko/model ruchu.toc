@@ -24,3 +24,4 @@
 \contentsline {section}{\numberline {6.1}Kategorie uczenia maszynowego}{25}% 
 \contentsline {section}{\numberline {6.2}Uczenie ze wzmocnieniem}{25}% 
 \contentsline {section}{\numberline {6.3}Programowanie dynamiczne}{28}% 
+\contentsline {chapter}{\numberline {7}Optymalizacja sygnalizacji \IeC {\'s}wietlnej}{31}% 
