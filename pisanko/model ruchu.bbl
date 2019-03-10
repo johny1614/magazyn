@@ -21,11 +21,6 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{worldBank}
-{World Bank}, ``World development indicators,''
-  \url{https://databank.worldbank.org/data/reports.aspx?source=2&country=&series=NY.GDP.MKTP.CD&period=},
-  2019 (accessed March 3, 2019).
-
 \bibitem{liczbaPojazdowSwiat}
 Statista, ``Number of passenger cars and commercial vehicles in use worldwide
   from 2006 to 2015 in (1,000 units),''

@@ -11,15 +11,16 @@
 \contentsline {chapter}{\numberline {5}Model sieci dr\IeC {\'o}g}{15}% 
 \contentsline {section}{\numberline {5.1}Wst\IeC {\k e}p}{15}% 
 \contentsline {section}{\numberline {5.2}Symbole i notacja obliczeniowa}{15}% 
-\contentsline {section}{\numberline {5.3}Sie\IeC {\'c} dr\IeC {\'o}g}{15}% 
+\contentsline {section}{\numberline {5.3}Sie\IeC {\'c} dr\IeC {\'o}g}{16}% 
 \contentsline {section}{\numberline {5.4}Przyk\IeC {\l }adowe skrzy\IeC {\.z}owanie}{17}% 
 \contentsline {section}{\numberline {5.5}Macierz stanowa sieci dr\IeC {\'o}g}{17}% 
 \contentsline {section}{\numberline {5.6}Model przep\IeC {\l }ywu - przyk\IeC {\l }ad}{18}% 
 \contentsline {section}{\numberline {5.7}Model przep\IeC {\l }ywu - og\IeC {\'o}lny wz\IeC {\'o}r}{19}% 
 \contentsline {section}{\numberline {5.8}Model przep\IeC {\l }ywu z sygnalizacj\IeC {\k a} \IeC {\'s}wietln\IeC {\k a} - przyk\IeC {\l }ad}{20}% 
 \contentsline {section}{\numberline {5.9}Model przep\IeC {\l }ywu z sygnalizacj\IeC {\k a} \IeC {\'s}wietln\IeC {\k a} - og\IeC {\'o}lny wz\IeC {\'o}r}{21}% 
-\contentsline {section}{\numberline {5.10}Schematy skrzy\IeC {\.z}owa\IeC {\'n} symulacyjnych}{21}% 
-\contentsline {section}{\numberline {5.11}Przedstawienie problemu optymalizacyjnego}{21}% 
+\contentsline {section}{\numberline {5.10}Wprowadzenie \IeC {\'z}r\IeC {\'o}de\IeC {\l } ruchu}{23}% 
+\contentsline {section}{\numberline {5.11}Schematy skrzy\IeC {\.z}owa\IeC {\'n} symulacyjnych}{24}% 
+\contentsline {section}{\numberline {5.12}Przedstawienie problemu optymalizacyjnego}{24}% 
 \contentsline {chapter}{\numberline {6}Przegl\IeC {\k a}d metod optymalizacyjnych}{25}% 
 \contentsline {section}{\numberline {6.1}Kategorie uczenia maszynowego}{25}% 
 \contentsline {section}{\numberline {6.2}Uczenie ze wzmocnieniem}{25}% 

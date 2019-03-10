@@ -4,6 +4,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{wrapfig}
 \usepackage{url}
+\usepackage{dsfont}
 \usepackage{mathtools, nccmath}
 \usepackage[polish]{babel}
 \usepackage[utf8]{inputenc}
@@ -21,6 +22,14 @@
 \usepackage{float}
 \usepackage{cite}
 \usepackage[margin=2.5cm]{geometry}
+
+\theoremstyle{plain}
+
+\newtheorem{definicja}{Definicja}
+\newtheorem{twr}{Twierdzenie}
+\newtheorem{lem}[twr]{Lemat}
+\newtheorem{mur}{Murphy}[section]
+
 \newcommand{\R}{\mathbb{R}}
 \newcommand\addtag{\refstepcounter{equation}
 \renewcommand{\labelenumii}{\theenumii}
@@ -117,8 +126,8 @@ Rezultatem jest końcowy rekurencyjny wzór na gęstość ruchu:
 Ze względu na dużą złożoność końcowego modelu zostanie przedstawiony najpierw bardzo prosty, podstawowy model. W każdej kolejnej sekcji dodawane będą zmiany przybliżające do ostatecznej postaci. Jest to podejście pozwalające na proste przedstawienie modelu, który zawiera bardzo wiele aspektów m.in:
 ujęcie sygnalizacji świetlnej, brak kolizyjnych manewrów, makroskopowy przepływ ruchu, przepływ ruchu na skrzyżowaniu, struktura sieci dróg. Zestawienie w jednej sekcji wszystkich tych kwestii byłoby bardzo przytłaczające.
 \section{Symbole i notacja obliczeniowa}
-Obliczenia w tym rozdziale będą wykonywane głównie na macierzach. Zazwyczaj macierze będą wyrazem ciągu, którego indeksem jest czas. Przykładowo $P(k)$ odnosi się do wartości w chwili $k$. Notacja $P(k,l)$ odnosi się do l-tej kolumny macierzy $P(k)$.\\
-$\overrightarrow{P(k)}$ jest następującą operacją macierzową:
+Obliczenia w tym rozdziale będą wykonywane głównie na macierzach. Zazwyczaj macierze będą wyrazem ciągu, którego indeksem jest czas. Przykładowo $P(k)$ odnosi się do wartości w chwili $k$. Notacja $P(k,l)$ odnosi się do l-tej kolumny macierzy $P(k)$.
+\begin{definicja} Operacja przesunięcia kolumn macierzy $\overrightarrow{A}$ jest zdefiniowana następująco:
 \begin{gather}
 \overrightarrow{
   \begin{bmatrix}
@@ -126,16 +135,56 @@ $\overrightarrow{P(k)}$ jest następującą operacją macierzową:
    ... & & ...\\
    a_{n1} & ... & a_{nm}\\
    \end{bmatrix}}
- =
+ :=
   \begin{bmatrix}
    0 & a_{11} & ... & a_{1m-1}\\
    ... & ... & ... & ...\\
    0 & a_{n1} & ... & a_{nm-1}\\
    \end{bmatrix}
-   \addtag
-   \label{arrow_function}
-\end{gather}
-Jak łatwo zauważyć przesuwa ona wszystkie kolumny o jeden indeks w prawo. Pierwsza kolumna jest zerowa.
+   \end{gather}
+\end{definicja}\noindent
+Powyższa operacja jest jednoznaczna z wymnożeniem macierzy $A$ przez następującą macierz rzadką:
+\[
+\begin{bmatrix}
+   0 & 1 &0 &...&0 \\
+   0 & 0 &1 &...&0 \\
+   ... & ...&... &...&... \\
+   0 & 0 &0 &...&1 \\
+   \end{bmatrix}
+\]
+\begin{definicja}
+Niech dana będzie macierz $A$ o wymiarach $nxm$ i wektor $B=[b_1,...,b_m]$. Mnożeniem macierzy przez wektor (*) nazywana jest następująca operacja:
+\[
+\begin{bmatrix}
+a_{11} & ... & a_{1m}\\
+... & ... & ...\\
+a_{n1} & ... & a_{nm}
+\end{bmatrix}
+*
+\begin{bmatrix}
+b_1 & ... & b_m
+\end{bmatrix}
+=\begin{bmatrix}
+a_{11}b_1 & ... & a_{1m}b_m\\
+... & ... & ...\\
+a_{n1}b_1 & ... & a_{nm}b_m
+\end{bmatrix}
+\]
+Powyższa operacja jest jednoznaczna z następującym mnożeniem macierzy:
+\[
+\begin{bmatrix}
+a_{11} & ... & a_{1m}\\
+... & ... & ...\\
+a_{n1} & ... & a_{nm}
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+b1 & ... & 0\\
+0 & ... & 0\\
+0 & ... & b_m
+\end{bmatrix}
+\]
+\end{definicja}
 \section{Sieć dróg}
 Sieć dróg przedstawia uporządkowana dwójka $G=(V,E)$, gdzie:
 \begin{itemize}
@@ -268,7 +317,7 @@ W poprzedniej sekcji został przedstawiony przykład wyliczenia macierzy stanowe
 
 Ogólny wzór przedstawiający rozwój macierzy stanowej to:
 \[P(k+1)=\overrightarrow{P(k)} + S(k) \addtag \label{eq:P}\]
-Macierz $S(k)$ nazywana będzie \textbf{macierzą źródła}. Dotyczy ona ruchu wpływającego do poszczególnych dróg w momencie $k+1$. Jest to macierz rzadka, istotna obliczeniowo jest jedynie pierwsza kolumna, a pozostałe wartości są zerowe by osiągnąć wymiar macierzy pozwalający na dodawanie z $\overrightarrow{P(k)}$. Pierwsza kolumna jest zdefiniowana w oparciu o ostatnią kolumnę macierzy $P(k)$ i jest równa:
+Macierz $S(k)$ nazywana będzie \textbf{macierzą źródła wewnętrznego}. Dotyczy ona ruchu wpływającego do poszczególnych dróg w momencie $k+1$ ze wszystkich skrzyżowań układu. Jest to macierz rzadka, istotna obliczeniowo jest jedynie pierwsza kolumna, a pozostałe wartości są zerowe by osiągnąć wymiar macierzy pozwalający na dodawanie z $\overrightarrow{P(k)}$. Pierwsza kolumna jest zdefiniowana w oparciu o ostatnią kolumnę macierzy $P(k)$ i jest równa:
 \[S(k,0)=B\cdot P(k,l) \addtag \label{eq:S} \]
 \end{tcolorbox} \noindent
 Dla przykładu z poprzedniej sekcji, gdzie
@@ -435,18 +484,19 @@ Początkowo założone jest, że wszystkie pojazdy na ostatnim odcinku drogi prz
 \end{equation*}
 
 \section{Model przepływu z sygnalizacją świetlną - ogólny wzór}
-\section{Schematy skrzyżowań symulacyjnych}
-\section{Przedstawienie problemu optymalizacyjnego}
 Następnym krokiem jest wyznaczenie ogólnego wzoru macierzy stanowej z uwzględnieniem sygnalizacji świetlnej. 
 \begin{tcolorbox}
-Macierz źródła z uwzględnieniem sygnalizacji świetlnej jest przedstawiona wzorem:
+\textbf{Macierz źródła wewnętrznego z uwzględnieniem sygnalizacji świetlnej} jest przedstawiona wzorem:
 \[S(k,0)=M(k) \cdot P(k,l) \addtag \label{eq:S} \]
-Oprócz pierwszej kolumny macierz $S$ dalej posiada wartości zerowe.\\
-Wprowadzony zostanie ciąg $W(k)$ pomocniczych \textbf{macierzy oczekujących pojazdów}. Będą to macierze rzadkie z wartościami innymi niż 0 tylko w ostatniej kolumnie. Macierze te będą składowały informację o pojazdach oczekujących na zielone światło w swojej ostatniej kolumnie. Jest ona zdefiniowana jako:
-\[W(k,l)=P(k,l)-S(k,0)\]
+Oprócz pierwszej kolumny macierz $S$ posiada jedynie wartości zerowe.\\
+Wprowadzony zostanie ciąg $W(k)$ pomocniczych \textbf{macierzy oczekujących pojazdów}. Aby sformułować ten ciąg macierzy należy najpierw zdefiniować macierz pojazdów, które przejechały przez skrzyżowanie $L(k)$. Jest to kolejna macierz rzadka tutaj jedynie z wartościami dodatnimi w ostatniej kolumnie zdefiniowanej jako:
+\[M(k) * P(k,l)^T\]
+Podobnie $W(k)$ jest macierzą w której jedyne inne od zera wartości są w ostatniej kolumnie wedle poniższego wzoru.
+\[
+W(k)=P(k,l)-W(k)
+\]
 
-Wzór określający rozwój macierzy stanowej jest następujący:
-
+Finalny wzór na rozwój gęstości to:
 \[P(k+1)=\overrightarrow{P(k)} + S(k) + W(k) \addtag \label{eq:P_sygnalizacja}\]
 \end{tcolorbox}
 \newpage 
@@ -467,9 +517,9 @@ $\begin{bmatrix}
 }
 \def \SZero {
 $\begin{bmatrix}
-1 \\
 0 \\
-0   
+0 \\
+1   
 \end{bmatrix}$
 
 }
@@ -533,8 +583,8 @@ $\begin{bmatrix}
 \def \SII {
 $\begin{bmatrix}
 0  \\
-2  \\
-0  
+0  \\
+2  
 \end{bmatrix}$}
 \def \WII {$\begin{bmatrix}
 1  \\
@@ -577,9 +627,147 @@ k & M(k)& P(k) & $\overrightarrow{P(k)}$ & S(k,0) & W(k,l) \rule{0pt}{18pt} \\
 \noindent
 Pogrubione wartości odnoszą się do pojazdów, które przejeżdżają w momencie $k$ przez skrzyżowanie.
 
+\section{Wprowadzenie źródeł ruchu}
+Dotychczasowe rozważania zakładały, że do sieci dróg nie napływają nowe pojazdy. Oczywistą konsekwencją tego założenia jest brak pojazdów na drogach od pewnego momentu. Sieć dróg jest układem zamkniętym, zatem dla dróg początkowych należy ustalić pewne źródła ruchu. Wprowadzony jest ciąg \textbf{macierzy źródeł zewnętrznych} $O(k)$ o wymiarach takich samych jak macierz stanu. Macierz źródeł zewnętrznych to macierz rzadka - jej pierwsza kolumna przedstawia ilość pojazdów, które wpływają do dróg odpowiadających indeksowi wierszy. Dla rozważanego skrzyżowania przykładowa macierz źródła $O(k)$ jest następująca:
+
+\begin{equation*}
+  O(0)=
+  \begin{blockarray}{*{4}{c} l}
+    \begin{block}{*{4}{>{$\footnotesize}c<{$}} l}
+      $b_0$ & $b_1$ & $b_2$ & $b_3$ \\
+    \end{block}
+    \begin{block}{[*{4}{c}]>{$\footnotesize}l<{$}}
+       2 & 0 & 0 & 0 & $e_1$ \\
+       1 & 0 & 0 & 0 & $e_2$ \\
+       0 & 0 & 0 & 0 & $e_3$ \\
+    \end{block}
+  \end{blockarray} \addtag \label{skrz_1_zmiennaStanu_0_sygnalizacja}
+\end{equation*}
+Powyższa macierz przekazuje informację, iż w chwili 0:
+\begin{itemize}
+\item Na drogę $e_1$ wjeżdżają 2 pojazdy
+\item Na drogę $e_2$ wjeżdża 1 pojazd
+\end{itemize}
+Kolejnym krokiem jest aktualizacja wzoru rozwoju macierzy stanowej \ref{eq:P_sygnalizacja} wraz z ogólną definicją macierzy $O$.
+\begin{tcolorbox}
+Wzór określający rozwój macierzy stanowej jest następujący:
+
+\[P(k+1)=\overrightarrow{P(k)}+S(k)+W(k)+O(k)\]
+Ogólny wzór macierzy źródła jest następujący:
+\[
+O(k)=\begin{bmatrix}
+O_1 & 0 &...& 0 \\
+O_2 & 0 &...& 0 \\
+... &...&&... ... \\
+O_n & 0&... & 0
+\end{bmatrix}
+\]
+gdzie wartości w pierwszej kolumnie i m-tym wierszu określają ilość pojazdów wpływających do drogi $e_m$ w chwili $k$.
+\end{tcolorbox}
+
+\def \MZero {$\begin{bmatrix}
+x & x & x\\
+x & x & x \\
+1 & 0 & x   
+\end{bmatrix}$}
+\def \OZero {$\begin{bmatrix}
+2 \\
+1 \\
+0   
+\end{bmatrix}$}
+\def \OI {$\begin{bmatrix}
+0 \\
+1 \\
+0   
+\end{bmatrix}$}
+\def \PI {$\begin{bmatrix}
+2 & 0 & 1 & \textbf{0} \\
+1 & 0 & 1 & 1 \\
+1 & 1 & 0 & 0
+\end{bmatrix}$}
+\def \MI {$\begin{bmatrix}
+x & x & x\\
+x & x & x \\
+1 & 0 & x   
+\end{bmatrix}$}
+\def \PmovedI {$\begin{bmatrix}
+0 & 2 & 0 & 1 \\
+0 & 1 & 0 & 1 \\
+0 & 1 & 1 & 0
+\end{bmatrix}$}
+\def \SI {$\begin{bmatrix}
+0 \\
+0 \\
+0  
+\end{bmatrix}$}
+\def \WI {$\begin{bmatrix}
+0 \\
+1 \\
+0  
+\end{bmatrix}$}
+\def \OI {$\begin{bmatrix}
+1 \\
+0 \\
+0  
+\end{bmatrix}$}
+\def \MII {$\begin{bmatrix}
+x & x & x\\
+x & x & x \\
+0 & 1 & x   
+\end{bmatrix}$}
+\def \PII {$\begin{bmatrix}
+1 & 2 & 0 & 1\\
+0 & 1 & 0 & \textbf{1}\\
+0 & 1 & 1 & 0
+\end{bmatrix}$}
+\def \PmovedII {$\begin{bmatrix}
+0 & 1 & 2 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 1 & 1
+\end{bmatrix}$}
+\def \SII {$\begin{bmatrix}
+0 \\
+1 \\
+0  
+\end{bmatrix}$}
+
+
+\def \WII {$\begin{bmatrix}
+1 \\
+0 \\
+0  
+\end{bmatrix}$}
+
+\def \OII {$\begin{bmatrix}
+0 \\
+1 \\
+0  
+\end{bmatrix}$}
+\def \PIII{$\begin{bmatrix}
+0 & 1 & 2 & 1 \\
+1 & 0 & 1 & 0 \\
+1 & 0 & 1 & 1
+\end{bmatrix}$}
 
 
 
+\begin{table}[ht]
+\caption{Rozwój macierzy stanowej na skrzyżowaniu 1 z sygnalizacją świetlną}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|} \hline
+k & M(k)& P(k) & $\overrightarrow{P(k)}$ & S(k,0) & W(k,l) & O(k,0) \rule{0pt}{18pt} \\
+\hline
+0 & \MZero & \PZero & \PmovedZero & \SZero & \WZero & \OZero   \rule{0pt}{35pt} \\  
+1 & \MI & \PI & \PmovedI & \SI & \WI & \OI   \rule{0pt}{35pt} \\  
+2 & \MII & \PII & \PmovedII  & \SII  & \WII  & \OII  \rule{0pt}{35pt} \\
+3 &  & \PIII & & & & \rule{0pt}{35pt} \\
+\hline
+\end{tabular}
+\label{Tab:skrz_1_ze_zrodlem}
+\end{table}
+
+\section{Schematy skrzyżowań symulacyjnych}
+\section{Przedstawienie problemu optymalizacyjnego}
 
 \bibliographystyle{IEEEtran}
 
