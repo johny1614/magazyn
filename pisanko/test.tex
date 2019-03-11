@@ -1,6 +1,11 @@
 \documentclass[11pt,a4paper]{report}
 \usepackage{amsthm}
-
+\usepackage[table]{xcolor}
+\usepackage{booktabs}
+\usepackage[T1]{fontenc}
+\newcommand\x{\times}
+\newcommand\green{\cellcolor{green!10}}
+\newcommand\red{\cellcolor{red!20}}
 \theoremstyle{plain}
 \newtheorem{thm}{Theorem}[chapter] % reset theorem numbering for each chapter
 
@@ -10,6 +15,21 @@
 
 \newcommand{\chaptercontent}{
 \section{Basics}
+\begin{equation}\label{eq:appendrow}
+  \left(\begin{array}{cccc}
+    \rowcolor{red!20}
+    \x  & \x  & \x & \x \\
+    0   & \x  & \x & \x \\
+   \rowcolor{blue!20}
+    0   & 0   & \x & \x \\
+    0   & 0   & 0  & \x \\
+    \green a  &  b  & \green c &  \red d\\
+  \end{array}\right)
+\end{equation}
+
+
+
+
 \begin{defn}Here is a new definition.\end{defn}
 \begin{thm}Here is a new theorem.\end{thm}
 \begin{thm}Here is a new theorem.\end{thm}
