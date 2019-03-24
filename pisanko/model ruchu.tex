@@ -24,7 +24,6 @@
 \usepackage{cite}
 \usepackage[margin=2.5cm]{geometry}
 \theoremstyle{plain}
-
 \newtheorem{definicja}{Definicja}
 \newtheorem{twr}{Twierdzenie}
 \newtheorem{lem}[twr]{Lemat}
@@ -128,104 +127,162 @@ Rezultatem jest końcowy rekurencyjny wzór na gęstość ruchu:
 \section{Wstęp}
 Ze względu na dużą złożoność końcowego modelu zostanie przedstawiony najpierw bardzo prosty, podstawowy model. W każdej kolejnej sekcji dodawane będą zmiany przybliżające do ostatecznej postaci. Jest to podejście pozwalające na proste przedstawienie modelu, który zawiera bardzo wiele aspektów m.in:
 ujęcie sygnalizacji świetlnej, brak kolizyjnych manewrów, makroskopowy przepływ ruchu, przepływ ruchu na skrzyżowaniu, struktura sieci dróg. Zestawienie w jednej sekcji wszystkich tych kwestii byłoby bardzo przytłaczające.
-\section{Symbole i notacja obliczeniowa}
-\begin{definicja} Operacja przesunięcia kolumn macierzy $\overrightarrow{A}$ jest zdefiniowana następująco:
-\begin{gather}
-\overrightarrow{
-  \begin{bmatrix}
-   a_{11} & ... & a_{1m}\\
-   ... & & ...\\
-   a_{n1} & ... & a_{nm}\\
-   \end{bmatrix}}
- :=
-  \begin{bmatrix}
-   0 & a_{11} & ... & a_{1m-1}\\
-   ... & ... & ... & ...\\
-   0 & a_{n1} & ... & a_{nm-1}\\
-   \end{bmatrix}
-   \end{gather}
-\end{definicja}\noindent
-Powyższa operacja jest jednoznaczna z wymnożeniem macierzy $A$ przez następującą macierz rzadką:
-\[
-\begin{bmatrix}
-   0 & 1 &0 &...&0 \\
-   0 & 0 &1 &...&0 \\
-   ... & ...&... &...&... \\
-   0 & 0 &0 &...&1 \\
-   \end{bmatrix} \addtag
-\]
-\begin{definicja}
-Niech dana będzie macierz $A$ o wymiarach $n \times m$ i wektor $B=[b_1,...,b_n]^T$. Mnożeniem macierzy przez wektor (*) nazywana jest następująca operacja:
-\[
-\begin{bmatrix}
-a_{11} & ... & a_{1m}\\
-... & ... & ...\\
-a_{n1} & ... & a_{nm}
-\end{bmatrix}
-*
-\begin{bmatrix}
-b_1 \\ ... \\ b_n
-\end{bmatrix}
-=\begin{bmatrix}
-a_{11}b_1 + & ... & + a_{1m}b_1\\
-... & ... & ...\\
-a_{n1}b_n + & ... & + a_{nm}b_n
-\end{bmatrix}
-\]
-\end{definicja}
-\begin{definicja}
-Niech dana będzie macierz stanowa o wymiarach $n \times m$. Macierz oznaczana jako $S^\theta$ jest macierzą początkową wektora kolumnowego $S$ o wymiarach $n \times 1$. Jest ona zdefiniowana następującym równaniem:
-\[
-S^\theta=\begin{bmatrix}
-s_1 & ... & 0 \\
-... & ... & ... \\
-s_n & ... & 0 
-\end{bmatrix} \addtag \label{eq:S^0}
-\] 
-Analogicznie macierz końcową wektora $S$ przedstawia następujący wzór:
-\[
-^\theta S=\begin{bmatrix}
-0 & ... & s_1 \\
-... & ... & ... \\
-0 & ... & s_n 
-\end{bmatrix} \addtag \label{eq:^0S^}
-\] 
-\end{definicja}
-%\begin{definicja}
-%Macierzą diagonalną wektora $S$ nazywana jest następująca macierz:
-%\[
-%S^{\textbackslash}=
-%\begin{bmatrix}
-%s_1 & ... & 0 \\
-%0 & ... & 0 \\
-%0 & ... & s_n
-%\end{bmatrix}
-%\]
-%
-%\end{definicja}
 \section{Sieć dróg}
 Sieć dróg przedstawia uporządkowana dwójka $G=(V,E)$, gdzie:
 \begin{itemize}
-\item $V$ to zbiór skrzyżowań
-\item $E$ to zbiór dróg
+	\item $V$ to zbiór skrzyżowań
+	\item $E$ to zbiór dróg
 \end{itemize}
+Każda droga $e \in E$ posiada siatkę przestrzenną $(b_l)$.\\
+Każde skrzyżowanie $v$ posiada niepuste zbiory dróg wlotowych $E_{in}$ oraz dróg wylotowych $E_{out}$.\\
 \begin{minipage}{12cm}
-\begin{figure}[H]
-\includegraphics[width=12cm]{network}
-\caption{\label{fig:network} Przykładowa sieć dróg}
-\end{figure}
+	\begin{figure}[H]
+		\includegraphics[width=12cm]{network}
+		\caption{\label{fig:network} Przykładowa sieć dróg}
+	\end{figure}
 \end{minipage} \hfill
 \begin{minipage}{5cm}
-Skrzyżowania są oznaczone numerami: 1,2,3.
-Punkty z numerem 0 są jedynie początkami i końcami dróg.
+	Skrzyżowania są oznaczone numerami: 1,2,3.
+	Punkty z numerem 0 są jedynie początkami i końcami dróg.
 \end{minipage}
 \newgeometry{left=0.8in,right=0.8in,top=1in,bottom=1in} \noindent
-\section{Macierz przejścia}
+\section{Wektor stanowy}
+Wektor stanowy jest strukturą w pełni przedstawiającą stan układu sieci dróg. Dla każdego odcinka drogi składuje on wartości zmiennych stanowych. Początkowo zmienna stanowa jest identyfikowana jako ilość pojazdów na danym odcinku drogi. 
+\subsection{Przykład 1}
+Niech będzie dana droga $e$ z której wydzielone są 4 odcinki ${b_0,b_1,b_2,b_3}$. Przykładowy wektor stanowy
+\[\textbf{x(t)}=\begin{bmatrix}
+2 \\ 4 \\ 3 \\ 0
+\end{bmatrix} \addtag \]
+Zawiera w sobie następujące informacje dla chwili t:
+\begin{itemize}
+	\item Są 2 pojazdy na odcinku $b_0$
+	\item Są 4 pojazdy na odcinku $b_1$
+	\item Są 3 pojazdy na odcinku $b_2$
+	\item Nie ma żadnego pojazdu na odcinku $b_3$
+\end{itemize}
+\subsection{Przykład 2}
+Niech będzie dana sieć składająca się z trzech dróg $G=(V,E)$, gdzie $E={e_1,e_2,e_3}$. Dla każdej drogi zostaną wydzielone 2 odcinki. Przykładowy wektor stanowy
+\[\textbf{x(t)}=\begin{bmatrix}
+2 \\ 4 \\ 3 \\ 0 \\ 1 \\ 5
+\end{bmatrix} \addtag \]
+Zawiera w sobie następujące informacje dla chwili t:
+\begin{itemize}
+	\item Są 2 pojazdy na pierwszym odcinku drogi $e_1$
+	\item Są 4 pojazdy na drugim odcinku drogi $e_1$
+	\item Są 3 pojazdy na pierwszym odcinku drogi $e_2$
+	\item Nie ma żadnych pojazdów na drugim odcinku drogi $e_2$
+	\item Jest 1 pojazd na pierwszym odcinku drogi $e_3$
+	\item Jset 4 pojazdy na drugim odcinku drogi $e_3$
+\end{itemize}
+\section{Rozwój wektora stanowego}
+Wektor stanowy zmienia się wraz z upływem czasu wedle następującego wzoru:
+\[\textbf{x(t+1)}=\textbf{Ax(t)}, \addtag \label{eq:Ax} \]
+gdzie $\textbf{A}$ jest macierzą przejścia (czy systemu?). Określa ona przepływ pojazdów po rozważanej sieci dróg.
+\subsection{Propozycja początkowego modelu przepływu}
+Początkowy model przepływu pojazdów zakłada, iż wszystkie pojazdy w chwili t+1 8są o jeden odcinek dalej w swojej podróży niż w momencie $t$. Założone jest, iż żadne nowe pojazdy nie pojawiają się w sieci dróg, a pojazdy będące w chwili $t$ w ostatnim odcinku drogi kończącej swój bieg opuszczają układ.
 \subsection{Przykład}
-Niech rozważaną siecią dróg będzie skrzyżowanie dwóch dróg wlotowych $e_1,e_2$ i jednej wylotowej $e_3$. Struktura skrzyżowania jest przedstawiona na rysunku \ref{fig:skrz_1}.
-Macierz B jest \textbf{macierzą przejścia} skrzyżowania $v$. Wartości 1 oznaczają możliwy przejazd na skrzyżowaniu z drogi odpowiadającej indeksowi kolumny do drogi zadanej przez indeks wiersza.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{skrz_1}
+	\caption{Skrzyzowanie 1}
+	\label{fig:skrz_1}
+\end{figure}
+
+Niech dane będzie skrzyżowanie będące rozwidleniem drogi $e_1$ na dwie drogi $e_2,e_3$. Siatka każdej drogi posiada jeden odcinek - czyli całą drogę. Początkowy wektor stanu jest następujący:
 \begin{equation*}
-  B=
+\textbf{x(0)}=
+\begin{blockarray}{*{1}{c} l}
+\begin{block}{*{1}{>{$\footnotesize}c<{$}} l}
+\end{block}
+\begin{block}{[*{1}{c}]>{$\footnotesize}l<{$}}
+10 &  $e_1$ \\
+2 &  $e_2$ \\
+7 &  $e_3$ \\
+\end{block}
+\end{blockarray} \addtag
+\end{equation*}
+Dodatkowo założone jest, że 60$\%$ pojazdów na skrzyżowaniu $v$ skręca w lewo, czyli wjeżdża na drogę $e_2$. Pozostałe 40$\%$ wybiera wjazd na drogę $e_3$.
+Wtedy macierz przejścia jest następująca:
+\begin{equation*}
+A=
+\begin{blockarray}{*{3}{c} l}
+\begin{block}{*{3}{>{$\footnotesize}c<{$}} l}
+$e_1$ & $e_2$ & $e_3$\\
+\end{block}
+\begin{block}{[*{3}{c}]>{$\footnotesize}l<{$}}
+0 & 0 & 0 & $e_1$ \\
+60$\%$ & 0 & 0 & $e_2$ \\
+40$\%$ & 0 & 0 & $e_3$ \\
+\end{block}
+\end{blockarray} \addtag
+\end{equation*}
+Warto zauważyć, że wartości macierzy $A$ to liczby pojazdów przejeżdżających z odcinka zadanego przez indeks kolumny do odcinka zadanego przez indeks wiersza.
+Na mocy wzoru \ref{eq:Ax} wektor stanowy w chwili t=1 jest następujący:
+\[
+\textbf{x(1)}=\textbf{Ax(0)}=\begin{bmatrix}
+0 \\ 6 \\ 4
+\end{bmatrix}
+\]
+Interpretacja przekształcenia jest następująca: zarówno dwa pojazdy będące na drodze $e_2$ jak i siedem pojazdów będące na drodze $e_3$ opuściły układ. Z kolei z dziesięciu pojazdów będących na drodze $e_1$ - sześć wjechało na drogę $e_2$, a cztery na drogę $e_3$.
+
+\section{Sygnalizacja świetlna}
+Kolejnym krokiem, który należay rozważyć jest wprowadzenie sygnalizacji świetlnej. Zostanie ona przedstawiona w macierzy sygnalizacji świetlnej $\textbf{B(t)}$. Macierz posiada następujące wartości określające możliwość przejazdu z odcinka zadanego przez kolumnę macierzy do odcinka wyznaczonego przez indeks wiersza:
+\begin{itemize}
+	\item 1 - Jest zielone światło, umożliwiające przejazd
+	\item 0 - Jest czerwone światło, uniemożliwiające przejazd
+	\item $\theta$ - pomiędzy dwiema drogami nie ma bezpośredniego połączenia na skrzyżowaniu. We wszelkich obliczeniach przyjęte jest, że $\theta=0$
+\end{itemize}
+Wzór przedstawiający rozwój wektora stanowego po uwzględnieniu sygnalizacji świetlnej jest następujący:
+\[
+\textbf{x(t+1)}=\textbf{AB(t)x(t)}
+\]
+\subsection{Przykład}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{skrz_1_swiatla_dwa_podzialy}
+	\caption{Skrzyzowanie 1 z uwzględnieniem sygnalizacji świetlnej}
+	\label{fig:skrz_1_swiatla}
+\end{figure}
+Niech dana będzie sieć dróg przedtawiona na rysunku \ref{fig:skrz_1_swiatla}. Przedstawia ono skrzyżowanie z drogą wlotową $e_1$ oraz dwiema drogami wylotowymi $e_2,e_3$. Każda z dróg zostaje podzielona na dwa odcinki. Początkowy wektor stanu przedstawia ilości pojazdów na danych odcinkach drogi.
+\begin{equation*}
+\textbf{x(0)}=
+\begin{blockarray}{*{1}{c} l}
+\begin{block}{*{1}{>{$\footnotesize}c<{$}} l}
+\end{block}
+\begin{block}{[*{1}{c}]>{$\footnotesize}l<{$}}
+10 &  $b_{11}$ \\
+20 &  $b_{12}$ \\
+7 &  $b_{21}$ \\
+30 &  $b_{22}$ \\
+12 &  $b_{31}$ \\
+10 &  $b_{32}$ \\
+\end{block}
+\end{blockarray} \addtag
+\end{equation*}
+Podobnie jak we wcześniejszym przykładzie założone jest, że $60\%$ pojazdów skręca w lewo, a $40\%$ w prawo. Dodatkowo w chwili $t=0$ jest zielone światło tylko dla skręcających w lewo.
+\begin{equation*}
+\textbf{B(0)}=
+\begin{blockarray}{*{6}{c} l}
+\begin{block}{*{6}{>{$\footnotesize}c<{$}} l}
+$b_{11}$ & $b_{12}$ & $b_{21}$ & $b_{22}$ & $b_{31}$ & $b_{32}$ & \\
+\end{block}
+\begin{block}{[*{6}{c}]>{$\footnotesize}l<{$}}
+\theta & \theta & \theta & \theta & \theta & \theta &   $b_{11}$ \\
+\theta & \theta & \theta & \theta & \theta & \theta &   $b_{12}$ \\
+\theta & 1 & \theta & \theta & \theta & \theta &   $b_{21}$ \\
+\theta & \theta & \theta & \theta & \theta & \theta &   $b_{22}$ \\
+\theta & \theta & \theta & \theta & \theta & \theta &   $b_{31}$ \\
+\theta & \theta & \theta & \theta & \theta & \theta &   $b_{32}$ \\
+\end{block}
+\end{blockarray} \addtag
+\end{equation*}
+
+\section{Macierz stanu}
+\subsection{Przykład}
+Niech rozważaną siecią dróg będzie skrzyżowanie jednej drogi wlotowej $e_1$ oraz dwóch wylotowych $e_2,e_3$. Struktura skrzyżowania jest przedstawiona na rysunku \ref{fig:skrz_1}.
+Macierz A jest \textbf{macierzą przejścia} skrzyżowania $v$. Wartości 1 oznaczają możliwy przejazd na skrzyżowaniu z drogi odpowiadającej indeksowi kolumny do drogi zadanej przez indeks wiersza.
+\begin{equation*}
+  A=
   \begin{blockarray}{*{3}{c} l}
     \begin{block}{*{3}{>{$\footnotesize}c<{$}} l}
      $e_1$ & $e_2$ & $e_3$\\
@@ -233,17 +290,11 @@ Macierz B jest \textbf{macierzą przejścia} skrzyżowania $v$. Wartości 1 ozna
     \begin{block}{[*{3}{c}]>{$\footnotesize}l<{$}}
        0 & 0 & 0 & $e_1$ \\
        0 & 0 & 0 & $e_2$ \\
-       1 & 1 & 0 & $e_3$ \\
+       0 & 0 & 0 & $e_3$ \\
     \end{block}
   \end{blockarray} \addtag
 \end{equation*}
-
-\begin{figure}[H]
-  \centering
-    \includegraphics[width=14cm]{skrz_1}
- \caption{Skrzyzowanie 1}
- \label{fig:skrz_1}
-\end{figure}
+ tu byl rysunek
 
 \subsection{Ogólny wzór}
 \begin{tcolorbox}
@@ -420,7 +471,7 @@ Warto zauważyć, że w chwili 0 na obydwu drogach wlotowych $e_1,e_2$ pojazdy z
 \subsection{Przykład}
 \begin{figure}[H]
   \centering
-    \includegraphics[width=14cm]{skrz_1_sygnalizacja}
+    \includegraphics[width=14cm]{skrz_2_sygnalizacja}
  \caption{Skrzyzowanie 1 z sygnalizacją świetlną w chwili 0}
  \label{fig:skrz_1_sygnalizacja}
 \end{figure}
