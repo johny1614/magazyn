@@ -146,40 +146,119 @@ Każde skrzyżowanie $v$ posiada niepuste zbiory dróg wlotowych $E_{in}$ oraz d
 	Punkty z numerem 0 są jedynie początkami i końcami dróg.
 \end{minipage}
 \newgeometry{left=0.8in,right=0.8in,top=1in,bottom=1in} \noindent
-\section{Wektor stanowy}
-Wektor stanowy jest strukturą w pełni przedstawiającą stan układu sieci dróg. Dla każdego odcinka drogi składuje on wartości zmiennych stanowych. Początkowo zmienna stanowa jest identyfikowana jako ilość pojazdów na danym odcinku drogi. 
-\subsection{Przykład 1}
-Niech będzie dana droga $e$ z której wydzielone są 4 odcinki ${b_0,b_1,b_2,b_3}$. Przykładowy wektor stanowy
+\section{Wektor stanowy drogi} \label{sec:wektor_stanowy_drogi}
+Wektor stanowy jest strukturą w pełni przedstawiającą drogi. Dla każdego odcinka drogi składuje on wartości zmiennych stanowych. Początkowo zmienna stanowa jest identyfikowana jako ilość pojazdów na danym odcinku drogi. 
+\subsection{Przykład} \label{subsec:example-single-road}
+Niech będzie dana droga $e$ z której wydzielone są 4 odcinki ${b_1,b_2,b_3,b_4}$. Przykładowy wektor stanowy
 \[\textbf{x(t)}=\begin{bmatrix}
 2 \\ 4 \\ 3 \\ 0
 \end{bmatrix} \addtag \]
 Zawiera w sobie następujące informacje dla chwili t:
 \begin{itemize}
-	\item Są 2 pojazdy na odcinku $b_0$
-	\item Są 4 pojazdy na odcinku $b_1$
-	\item Są 3 pojazdy na odcinku $b_2$
-	\item Nie ma żadnego pojazdu na odcinku $b_3$
+	\item Są 2 pojazdy na odcinku $b_1$
+	\item Są 4 pojazdy na odcinku $b_2$
+	\item Są 3 pojazdy na odcinku $b_3$
+	\item Nie ma żadnego pojazdu na odcinku $b_4$
 \end{itemize}
-\subsection{Przykład 2}
-Niech będzie dana sieć składająca się z trzech dróg $G=(V,E)$, gdzie $E={e_1,e_2,e_3}$. Dla każdej drogi zostaną wydzielone 2 odcinki. Przykładowy wektor stanowy
-\[\textbf{x(t)}=\begin{bmatrix}
-2 \\ 4 \\ 3 \\ 0 \\ 1 \\ 5
-\end{bmatrix} \addtag \]
-Zawiera w sobie następujące informacje dla chwili t:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{single_road_example}
+	\caption{Droga z ilością pojazdów na poszczególnych odcinkach}
+	\label{fig:single_road}
+\end{figure}
+
+Początkowy model przepływu pojazdów zakłada, iż wszystkie pojazdy w chwili t+1 są o jeden odcinek dalej w swojej podróży niż w momencie $t$. Założone jest, iż żadne nowe pojazdy nie pojawiają się w sieci dróg, a pojazdy będące w chwili $t$ w ostatnim odcinku drogi kończącej swój bieg opuszczają układ. Formalnym wzorem definiującym rozwój wektora stanowego jest:
+\[x(t+1)=Ax(t) \addtag \label{eq:single_road} \]
+Gdzie $A$ jest macierzą systemu. Definiuje ona sposób przepływu pojazdów. $A$ jest rzadką, kwadratową macierzą o wartościach równych 1 jedynie bezpośrednio 1 wiersz pod główną przekątną macierzy. Takie wartości gwarantują przepływ pojazdów o jeden odcinek w jednym kroku czasowym.
+\subsection{Przykład}
+Dla przykładu przedstawionego w (\ref{subsec:example-single-road}) zostanie przedstawiony rozwój wektora stanowego. Niech zatem
+\def \xZero {\begin{bmatrix}
+	2 \\ 4 \\ 3 \\ 0
+	\end{bmatrix}}
+\[x(0)=\xZero \addtag \]
+Macierzą systemu jest:
+\def \A {\begin{bmatrix}
+		0 & 0 & 0 & 0 \\
+		1 & 0 & 0 & 0 \\
+		0 & 1 & 0 & 0 \\
+		0 & 0 & 1 & 0 \\
+\end{bmatrix}}
+
+\[
+A=\A \addtag
+\]
+Wedle wzoru (\ref{eq:single_road}) wyliczona zostają wyliczone kolejne wartości wektora stanowego.
+\def \xI {\begin{bmatrix}
+		0 \\ 2 \\ 4 \\ 3
+\end{bmatrix}}
+\[
+x(1)=Ax(0)=\A \xZero = \xI \addtag
+\]
+\def \xII {\begin{bmatrix}
+		0 \\ 0 \\ 2 \\ 4
+\end{bmatrix}}
+\[
+x(2)=Ax(1)=\A \xI = \xII \addtag
+\]
+\def \xIII {\begin{bmatrix}
+		0 \\ 0 \\ 0 \\ 2
+\end{bmatrix}}
+\[
+x(3)=Ax(2)=\A \xII = \xIII \addtag
+\]
+\def \xIV {\begin{bmatrix}
+		0 \\ 0 \\ 0 \\ 2
+\end{bmatrix}}
+\[
+x(4)=Ax(3)=\A \xII = \xIV \addtag
+\]
+
+\section {Wektor stanowy sieci dróg}
+W rozdziale (\ref{sec:wektor_stanowy_drogi}) przedstawiony został wektor stanowy dla pojedynczej drogi. W tym rozdziale zostanie sformułowany wektor stanowy dla bardziej ogólnego przypadku - sieci dróg. Sposób przedstawienia wartości stanowych jednak jest bardzo podobny. Każda z dróg $e_1,...,e_n$ sieci $E$ ma $k$ wydzielonych odcinków oznaczanych jako $b_1,...,b_{nk}$. Dla każdego z odcinków definiowana jest wartość stanowa.
+
+\subsection{Przykład} \label{subsec:wektor_stanowy_siec_przyklad}
+Niech będzie dana sieć składająca się z trzech dróg $E=\{e_1,e_2,e_3\}$. Dla każdej drogi zostaną wydzielone 2 odcinki. Przykładowy wektor stanowy
+\def \xzero {\begin{bmatrix}
+		8 \\ 4 \\ 3 \\ 0 \\ 1 \\ 5
+\end{bmatrix}}
+
+\[\textbf{x(t)}=\xzero \addtag \]
+Zawiera w sobie następujące informacje dotyczące ilości pojazdów na poszczególnych odcinkach w chwili t:
 \begin{itemize}
-	\item Są 2 pojazdy na pierwszym odcinku drogi $e_1$
-	\item Są 4 pojazdy na drugim odcinku drogi $e_1$
-	\item Są 3 pojazdy na pierwszym odcinku drogi $e_2$
-	\item Nie ma żadnych pojazdów na drugim odcinku drogi $e_2$
-	\item Jest 1 pojazd na pierwszym odcinku drogi $e_3$
-	\item Jset 4 pojazdy na drugim odcinku drogi $e_3$
+	\item $\boldsymbol{b_1}$ - Na pierwszym odcinku drogi $e_1$ jest 8 pojazdów
+	\item $\boldsymbol{b_2}$ - Na drugim odcinku drogi $e_1$ są 4 pojazdy 
+	\item $\boldsymbol{b_3}$ - Na pierwszym odcinku drogi $e_2$ są 3 pojazdy 
+	\item $\boldsymbol{b_4}$ - Na drugim odcinku drogi $e_2$ nie ma żadnych pojazdów 
+	\item $\boldsymbol{b_5}$ - Na pierwszym odcinku drogi $e_3$ nie ma żadnych pojazdów 
+	\item $\boldsymbol{b_6}$ -Na drugim odcinku drogi $e_3$ są 4 pojazdy
 \end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{3_single_road}
+	\caption{Sieć dróg z ilościami pojazdów na poszczególnych odcinkach}
+	\label{fig:3_single_road}
+\end{figure}
+
+\section{Rozwój wektora stanowego sieci dróg}
+Przepływ pojazdów niezmiennie jest oparty o założenie, iż w trakcie trwania jednego interwału czasowego pojazdy pokonują 1 odcinek drogi. Równaniem systemu pozostaje $x(t+1)=Ax(t)$, gdyż do układu nie wpływają nowe pojazdy.\\ \\
+Macierz systemu $A$ powinna uwzględnić przepływy pojazdów na skrzyżowaniach. W tym momencie należy rozważyć następującą definicję macierzy $A$:\\
+Wartości macierzy A określają jaka część pojazdów z odcinka zadanego przez indeks kolumny przejeżdża do odcinka zadanego przez indeks wiersza.
+
+
+\subsection{Przykład}
+Dla przykładu przedstawionego w (\ref{subsec:wektor_stanowy_siec_przyklad}) przedstawiony zostanie rozwój wektora stanowego. Niech zatem:
+\[x(0)=\xzero \]
+Założone zostaje, iż $75\perp$ pojazdów będących na drodze $b_2$ opuszcza skrzyżowanie na drodze $b_3$ a pozostałe $25\perp$ przejeżdża do drogi $b_5$. Wtedy:
+AAAAAAAAAAAAAAAAA zrob to
+
 \section{Rozwój wektora stanowego}
 Wektor stanowy zmienia się wraz z upływem czasu wedle następującego wzoru:
 \[\textbf{x(t+1)}=\textbf{Ax(t)}, \addtag \label{eq:Ax} \]
-gdzie $\textbf{A}$ jest macierzą przejścia (czy systemu?). Określa ona przepływ pojazdów po rozważanej sieci dróg.
+gdzie $\textbf{A}$ jest macierzą systemu. Określa ona przepływ pojazdów po rozważanej sieci dróg.
 \subsection{Propozycja początkowego modelu przepływu}
-Początkowy model przepływu pojazdów zakłada, iż wszystkie pojazdy w chwili t+1 8są o jeden odcinek dalej w swojej podróży niż w momencie $t$. Założone jest, iż żadne nowe pojazdy nie pojawiają się w sieci dróg, a pojazdy będące w chwili $t$ w ostatnim odcinku drogi kończącej swój bieg opuszczają układ.
+Początkowy model przepływu pojazdów zakłada, iż wszystkie pojazdy w chwili t+1 są o jeden odcinek dalej w swojej podróży niż w momencie $t$. Założone jest, iż żadne nowe pojazdy nie pojawiają się w sieci dróg, a pojazdy będące w chwili $t$ w ostatnim odcinku drogi kończącej swój bieg opuszczają układ.
 \subsection{Przykład}
 \begin{figure}[H]
 	\centering
