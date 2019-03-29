@@ -1,53 +1,35 @@
-\documentclass[11pt,a4paper]{report}
-\usepackage{amsthm}
-\usepackage[table]{xcolor}
-\usepackage{booktabs}
-\usepackage[T1]{fontenc}
-\newcommand\x{\times}
-\newcommand\green{\cellcolor{green!10}}
-\newcommand\red{\cellcolor{red!20}}
-\theoremstyle{plain}
-\newtheorem{thm}{Theorem}[chapter] % reset theorem numbering for each chapter
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+\usepackage{cellspace}
+\usepackage{amsmath}
+\setlength\cellspacetoplimit{4pt}
+\setlength\cellspacebottomlimit{4pt}
 
-\theoremstyle{definition}
-\newtheorem{defn}[thm]{Definition} % definition numbers are dependent on theorem numbers
-\newtheorem{exmp}[thm]{Example} % same for example numbers
+\newcommand\cincludegraphics[2][]{\raisebox{-0.5\height}{\includegraphics[#1]{#2}}}
 
-\newcommand{\chaptercontent}{
-\section{Basics}
-\begin{equation}\label{eq:appendrow}
-  \left(\begin{array}{cccc}
-    \rowcolor{red!20}
-    \x  & \x  & \x & \x \\
-    0   & \x  & \x & \x \\
-   \rowcolor{blue!20}
-    0   & 0   & \x & \x \\
-    0   & 0   & 0  & \x \\
-    \green a  &  b  & \green c &  \red d\\
-  \end{array}\right)
-\end{equation}
-
-
-
-
-\begin{defn}Here is a new definition.\end{defn}
-\begin{thm}Here is a new theorem.\end{thm}
-\begin{thm}Here is a new theorem.\end{thm}
-\begin{exmp}Here is a good example.\end{exmp}
-\subsection{Some tips}
-\begin{defn}Here is a new definition.\end{defn}
-\section{Advanced stuff}
-\begin{defn}Here is a new definition.\end{defn}
-\subsection{Warnings}
-\begin{defn}Here is a new definition.\end{defn}
+\def \xzero{
+\begin{bmatrix} 3 \\ 5 \\ 4 \\ 2 \\ 7 \\ 1 \end{bmatrix}
+}
+\def \aeI{
+	\begin{bmatrix}
+		0 & 0                     & 0 & 0 & 0 & 0 \\
+		1 & \colorbox{red!30}{0}  & 0 & 0 & 0 & 0 \\
+		0 & 0                     & 0 & 0 & 0 & 0 \\
+		0 & 0                     & 1 & \colorbox{red!30}{1} & 0 & 0 & \\
+		0 & \colorbox{green!30}{1}  & 0 & \colorbox{green!30}{0} & 0 & 0 \\
+		0 & 0                     & 0 & 0 & 1 & 0 \\
+	\end{bmatrix}
+	
 }
 
 \begin{document}
-\tableofcontents
-\part{Addition and Subtraction}
-\chapter{Addition} \chaptercontent
-\chapter{Subtraction} \chaptercontent
-\part{Multiplication and Division}
-\chapter{Multiplication} \chaptercontent
-\chapter{Division} \chaptercontent
-\end{document}
+	
+	\begin{tabular}{| c | c | c | Sc |}
+		\hline
+		t & $\textbf{x(t)}$ & $\textbf{A(t)}=\textbf{S(t)}$ & Rysunek stanu układu \\
+		\hline
+		1 & $\xzero$  & $\aeI$ & \cincludegraphics[height=3cm]{3_drogi_sygnalizacja_0} \\
+		\hline
+	\end{tabular}
+	
+\end{document} 

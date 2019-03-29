@@ -6,6 +6,10 @@
 \usepackage{wrapfig}
 \usepackage{url}
 \usepackage{dsfont}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{booktabs}
+
 \usepackage{mathtools, nccmath}
 \usepackage[polish]{babel}
 \usepackage[utf8]{inputenc}
@@ -15,6 +19,8 @@
 \usepackage{amsmath}
 \usepackage{kbordermatrix}
 \usepackage{cases}
+\usepackage{graphicx}
+\usepackage{cellspace}
 \usepackage[T1]{fontenc}
 \usepackage{amsthm}
 \selectlanguage{polish}
@@ -28,15 +34,19 @@
 \newtheorem{twr}{Twierdzenie}
 \newtheorem{lem}[twr]{Lemat}
 \newtheorem{mur}{Murphy}[section]
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 \newcommand\green{\cellcolor{green!10}}
+\newcommand\cincludegraphics[2][]{\raisebox{-0.5\height}{\includegraphics[#1]{#2}}}
 \newcommand\red{\cellcolor{red!20}}
 \newcommand\blue{\cellcolor{blue!20}}
-
 \newcommand{\R}{\mathbb{R}}
+\newcommand*{\tabbox}[2][t]{%
+	\vspace{0pt}\parbox[#1][3.7\baselineskip]{1cm}{\strut#2\strut}}
 \newcommand\addtag{\refstepcounter{equation}
 \renewcommand{\labelenumii}{\theenumii}
 \renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
 \tag{\theequation}}
+
 \begin{document}
 \title{Optymalizacja  systemu sygnalizacji świetlnej w 
 oparciu o przepływowy model ruchu pojazdów.}
@@ -147,7 +157,7 @@ Każde skrzyżowanie $v$ posiada niepuste zbiory dróg wlotowych $E_{in}$ oraz d
 \end{minipage}
 \newgeometry{left=0.8in,right=0.8in,top=1in,bottom=1in} \noindent
 \section{Wektor stanowy drogi} \label{sec:wektor_stanowy_drogi}
-Wektor stanowy jest strukturą w pełni przedstawiającą drogi. Dla każdego odcinka drogi składuje on wartości zmiennych stanowych. Początkowo zmienna stanowa jest identyfikowana jako ilość pojazdów na danym odcinku drogi. 
+Wektor stanowy jest strukturą w pełni przedstawiającą aktualny stan drogi. Dla każdego odcinka drogi składuje on wartości zmiennych stanowych. Początkowo zmienna stanowa jest identyfikowana jako ilość pojazdów na danym odcinku drogi. 
 \subsection{Przykład} \label{subsec:example-single-road}
 Niech będzie dana droga $e$ z której wydzielone są 4 odcinki ${b_1,b_2,b_3,b_4}$. Przykładowy wektor stanowy
 \[\textbf{x(t)}=\begin{bmatrix}
@@ -167,9 +177,9 @@ Zawiera w sobie następujące informacje dla chwili t:
 	\caption{Droga z ilością pojazdów na poszczególnych odcinkach}
 	\label{fig:single_road}
 \end{figure}
-
+\section{Rozwój wektora stanowego jednej drogi}
 Początkowy model przepływu pojazdów zakłada, iż wszystkie pojazdy w chwili t+1 są o jeden odcinek dalej w swojej podróży niż w momencie $t$. Założone jest, iż żadne nowe pojazdy nie pojawiają się w sieci dróg, a pojazdy będące w chwili $t$ w ostatnim odcinku drogi kończącej swój bieg opuszczają układ. Formalnym wzorem definiującym rozwój wektora stanowego jest:
-\[x(t+1)=Ax(t) \addtag \label{eq:single_road} \]
+\[\textbf{x(t+1)}=\textbf{Ax(t)} \addtag \label{eq:single_road} \]
 Gdzie $A$ jest macierzą systemu. Definiuje ona sposób przepływu pojazdów. $A$ jest rzadką, kwadratową macierzą o wartościach równych 1 jedynie bezpośrednio 1 wiersz pod główną przekątną macierzy. Takie wartości gwarantują przepływ pojazdów o jeden odcinek w jednym kroku czasowym.
 \subsection{Przykład}
 Dla przykładu przedstawionego w (\ref{subsec:example-single-road}) zostanie przedstawiony rozwój wektora stanowego. Niech zatem
@@ -208,10 +218,10 @@ x(2)=Ax(1)=\A \xI = \xII \addtag
 x(3)=Ax(2)=\A \xII = \xIII \addtag
 \]
 \def \xIV {\begin{bmatrix}
-		0 \\ 0 \\ 0 \\ 2
+		0 \\ 0 \\ 0 \\ 0
 \end{bmatrix}}
 \[
-x(4)=Ax(3)=\A \xII = \xIV \addtag
+x(4)=Ax(3)=\A \xIII = \xIV \addtag
 \]
 
 \section {Wektor stanowy sieci dróg}
@@ -230,8 +240,8 @@ Zawiera w sobie następujące informacje dotyczące ilości pojazdów na poszcze
 	\item $\boldsymbol{b_2}$ - Na drugim odcinku drogi $e_1$ są 4 pojazdy 
 	\item $\boldsymbol{b_3}$ - Na pierwszym odcinku drogi $e_2$ są 3 pojazdy 
 	\item $\boldsymbol{b_4}$ - Na drugim odcinku drogi $e_2$ nie ma żadnych pojazdów 
-	\item $\boldsymbol{b_5}$ - Na pierwszym odcinku drogi $e_3$ nie ma żadnych pojazdów 
-	\item $\boldsymbol{b_6}$ -Na drugim odcinku drogi $e_3$ są 4 pojazdy
+	\item $\boldsymbol{b_5}$ - Na pierwszym odcinku drogi $e_3$ jest 1 pojazd
+	\item $\boldsymbol{b_6}$ -Na drugim odcinku drogi $e_3$ jest 5 pojazdów
 \end{itemize}
 
 \begin{figure}[H]
@@ -242,16 +252,204 @@ Zawiera w sobie następujące informacje dotyczące ilości pojazdów na poszcze
 \end{figure}
 
 \section{Rozwój wektora stanowego sieci dróg}
-Przepływ pojazdów niezmiennie jest oparty o założenie, iż w trakcie trwania jednego interwału czasowego pojazdy pokonują 1 odcinek drogi. Równaniem systemu pozostaje $x(t+1)=Ax(t)$, gdyż do układu nie wpływają nowe pojazdy.\\ \\
-Macierz systemu $A$ powinna uwzględnić przepływy pojazdów na skrzyżowaniach. W tym momencie należy rozważyć następującą definicję macierzy $A$:\\
-Wartości macierzy A określają jaka część pojazdów z odcinka zadanego przez indeks kolumny przejeżdża do odcinka zadanego przez indeks wiersza.
+Przepływ pojazdów niezmiennie jest oparty o założenie, iż w trakcie trwania jednego interwału czasowego pojazdy pokonują 1 odcinek drogi. Równaniem systemu pozostaje $\textbf{x(t+1)=Ax(t)}$, gdyż do układu nie wpływają nowe pojazdy.\\ \\
+Macierz systemu $\textbf{A}$ powinna uwzględnić przepływy pojazdów na skrzyżowaniach. W tym momencie należy rozważyć następującą definicję macierzy $\textbf{A}$:\\
+Wartości macierzy \textbf{A} określają jaka część pojazdów z odcinka zadanego przez indeks kolumny przejeżdża do odcinka zadanego przez indeks wiersza.
 
 
 \subsection{Przykład}
-Dla przykładu przedstawionego w (\ref{subsec:wektor_stanowy_siec_przyklad}) przedstawiony zostanie rozwój wektora stanowego. Niech zatem:
-\[x(0)=\xzero \]
-Założone zostaje, iż $75\perp$ pojazdów będących na drodze $b_2$ opuszcza skrzyżowanie na drodze $b_3$ a pozostałe $25\perp$ przejeżdża do drogi $b_5$. Wtedy:
-AAAAAAAAAAAAAAAAA zrob to
+Dla przykładu przedstawionego w (\ref{subsec:wektor_stanowy_siec_przyklad}) przedstawiony zostanie rozwój wektora stanowego. Założone zostaje, iż $75 \%$ pojazdów będących na odcinku $b_2$ opuszcza skrzyżowanie na odcinku $b_3$ a pozostałe $25 \%$ przejeżdża do $b_5$.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{3_single_road_lights}
+	\caption{}
+	\label{fig:3_single_road}
+\end{figure}
+
+Wtedy:
+\def \A{
+\begin{bmatrix}
+	0 & 0    & 0 & 0 & 0 & 0 \\
+	1 & 0    & 0 & 0 & 0 & 0 \\
+	0 & 75\% & 0 & 0 & 0 & 0 \\
+	0 & 0    & 1 & 0 & 0 & 0 \\
+	0 & 25\% & 0 & 0 & 0 & 0 \\
+	0 & 0    & 0 & 0 & 1 & 0 
+\end{bmatrix}
+}
+\begin{equation*}
+A=
+\begin{blockarray}{*{6}{c} l}
+\begin{block}{*{6}{>{$\footnotesize}c<{$}} l}
+$b_1$ & $b_2$ & $b_3$ & $b_4$ & $b_5$ & $b_6$ \\
+\end{block}
+\begin{block}{[*{6}{c}]>{$\footnotesize}l<{$}}
+0 & 0 & 0 & 0 & 0 & 0 & $b_1$ \\
+1 & 0 & 0 & 0 & 0 & 0 & $b_2$ \\
+0 & 75\% & 0 & 0 & 0 & 0 & $b_3$ \\
+0 & 0 & 1 & 0 & 0 & 0 & $b_4$ \\
+0 & 25\% & 0 & 0 & 0 & 0 & $b_5$ \\
+0 & 0 & 0 & 0 & 1 & 0 & $b_6$ \\
+\end{block}
+\end{blockarray} \addtag
+\end{equation*}
+Niech zatem zgodnie z rysunkiem \ref{fig:3_single_road}:
+\[\textbf{x(0)}=\xzero \]
+Kolejne wartości wektora stanowego to:
+\def \xI{\begin{bmatrix}
+	0 \\ 8 \\ 3 \\ 3 \\ 1 \\ 1
+\end{bmatrix}}
+\def \xII{\begin{bmatrix}
+		0 \\ 0 \\ 6 \\ 3 \\ 2 \\ 1
+	\end{bmatrix}}
+\def \xIII{\begin{bmatrix}
+		0 \\ 0 \\ 0 \\ 6 \\ 0 \\ 2
+\end{bmatrix}}
+\[
+\textbf{x(1)}=\textbf{Ax(0)}=\A \xzero = \xI
+\]
+\[
+\textbf{x(2)}=\textbf{Ax(1)}=\A \xI = \xII
+\]
+\[
+\textbf{x(3)}=\textbf{Ax(2)}=\A \xII = \xIII
+\]
+
+
+\section{Wprowadzenie sygnalizacji świetlnej}
+Kolejnym etapem rozwoju modelu jest wprowadzenie sygnalizacji świetlnej. Warto zauważyć, że do tej pory rozważane układy były pozbawione jakiegokolwiek sterowania, czego bezpośrednim skutkiem była niezmienność macierzy $\textbf{A}$ w czasie. W chwili pojawienia się sygnalizacji świetlnej macierz systemu będzie oparta o aktualną fazę sygnalizacji świetlnej. Równanie systemu pozostaje takie samo jak w przypadku braku sygnalizacji świetlnej z jedną małą różnicą:
+\[\textbf{x(t+1)}=\textbf{A(t)x(t)}\]
+Macierz systemu jest zmienna w czasie, zatem w miejse $\textbf{A}$ pojawiło się $\textbf{A(t)}$. \\ \\
+Dla rozważanej sieci dróg zostaje przedstawiona \textbf{macierz topologii} układu $\textbf{T}$. Jej wartości podobnie jak macierzy $\textbf{A}$ odnoszą się do tego jaka część pojazdów z odcinka zadanego przez indeks kolumny przejeżdża do odcinka zadanego przez indeks wiersza. Macierz $\textbf{A}$ dotyczy jednak możliwych przejazdów w konkretnej fazie sygnalizacji świetlnej. Natomiast macierz topologii $\textbf{T}$ odnosi się do możliwych przejazdów uwzględniając wszystkie fazy sygnalizacji świetlnej i jest stała w czasie. \\ \\
+\noindent
+\textbf{Macierz sterowania} (sygnalizacją świetlną) oznaczana będzie jako $\textbf{S(t)}$. Ustala ona macierz systemu na podstawie następującej równości:
+\[\textbf{A(t)}=\textbf{S(t)T} \addtag \]
+Jeśli $S(t)$ określa przejazdy, które są rzeczywiście możliwe w układzie, to:
+\[\textbf{A(t)}=\textbf{S(t)} \addtag \]
+Zatem celem wprowadzenia macierzy topologii oprócz przedstawienia wszystkich możliwych przejazdów jest także walidacja przejazdów zadanych przez macierz sterowania $\textbf{S(t)}$.
+
+\subsection{Przykład}
+Rozważony zostanie przykład sieci trzech dróg $e_1,e_2,e_3$. Każda z nich jest podzielona na dwa odcinki. Drogi $e_1$ i $e_2$ zbiegają się na skrzyżowaniu z sygnalizacją świetlną. Założone jest, że sygnalizacja zmienia się w każdym kroku czasowym, jednak w międzyczasie przez jeden interwał czasowy jest żółte światło dla obydwu dróg. Matematycznie ujmując żółte światło jest równoważne czerwonemu - pojazdy czekają na skrzyżowaniu. Początkowy stan sieci przedstawia rysunek:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{3_drogi_sygnalizacja}
+	\caption{Sieć dróg z sygnalizacją świetlną w chwili t=0}
+	\label{fig:3_drogi_sygnalizacja}
+\end{figure}
+
+Należy zastanowić się nad macierzą topologii układu $\textbf{T}$. Jest ona następująca:
+\begin{equation*}
+T=
+\begin{blockarray}{*{6}{c} l}
+\begin{block}{*{6}{>{$\footnotesize}c<{$}} l}
+$b_1$ & $b_2$ & $b_3$ & $b_4$ & $b_5$ & $b_6$ \\
+\end{block}
+\begin{block}{[*{6}{c}]>{$\footnotesize}l<{$}}
+0 & 0 & 0 & 0 & 0 & 0 & $b_1$ \\
+1 & \colorbox{red!30}{1} & 0 & 0 & 0 & 0 & $b_2$ \\
+0 & 0 & 0 & 0 & 0 & 0 & $b_3$ \\
+0 & 0 & 1 & \colorbox{red!30}{1} & 0 & 0 & $b_4$ \\
+0 & \colorbox{green!30}{1} & 0 & \colorbox{green!30}{1} & 0 & 0 & $b_5$ \\
+0 & 0 & 0 & 0 & 1 & 0 & $b_6$ \\
+\end{block}
+\end{blockarray} \addtag
+\end{equation*}
+\begin{itemize}
+	\item Wartości w kolumnach $b_1,b_3,b_5$ są równe 1 tylko w wierszach odpowiadającym odcinkom $b_2,b_4,b_6$, co wynika z tego, że pojazdy będące na odcinkach $b_1,b_3,b_5$ mają tylko możliwość przejazdu do odpowiednio $b_2,b_4,b_6$.
+	\item Wartości w kolumnie $b_6$ są zerowe, gdyż pojazdy z odcinku $b_6$ opuszczają układ.
+	\item Najbardziej interesujące są kolumny $b_2$ i $b_4$. Odpowiadają one odcinkom leżącym bezpośrednio przed skrzyżowaniem. Obydwie kolumny posiadają dwie wartości 1, gdyż pojazdy będące na odcinkach $b_2,b_4$ mają dwie możliwości przejazdu. Pojazdy będące na odcinku $b_2$ mogą przejechać przez skrzyżowanie i wjechać na $b_5$, albo pozostać dalej na $b_2$ w przypadku czerwonego światła. Analogiczna sytuacja dotyczy pojazdów na odcinku $b_4$. \colorbox{green!30}{Zielone} i \colorbox{red!30}{czerwone} tło określa przy jakiej sygnalizacji świetlnej wartość jest równa 1.
+\end{itemize}
+
+\def \xzero{
+	\begin{bmatrix}
+		4 \\ 5 \\ 4 \\ 2 \\ 7 \\ 1
+	\end{bmatrix}
+}
+Początkowy wektor stanowy (zgodny z rysunkiem \ref{fig:3_drogi_sygnalizacja}) to:
+\[\textbf{x(0)}= \xzero \]
+Macierz stanu w momentach $t=0,4,8$ uwzględniająca zielone światło dla odcinka $b_2$ oraz czerwone dla $b_4$ są przedstawione następująco:
+\def \aeI{
+\begin{bmatrix}
+	0 & 0                     & 0 & 0 & 0 & 0 \\
+	1 & \colorbox{red!30}{0}  & 0 & 0 & 0 & 0 \\
+	0 & 0                     & 0 & 0 & 0 & 0 \\
+	0 & 0                     & 1 & \colorbox{red!30}{1} & 0 & 0 & \\
+	0 & \colorbox{green!30}{1}  & 0 & \colorbox{green!30}{0} & 0 & 0 \\
+	0 & 0                     & 0 & 0 & 1 & 0 \\
+\end{bmatrix}
+
+}
+
+\begin{equation*}
+A_{b_2}=S(0)T=S(0)=
+\begin{blockarray}{*{6}{c} l}
+\begin{block}{*{6}{>{$\footnotesize}c<{$}} l}
+$b_1$ & \colorbox{green!30}{$b_2$} & $b_3$ & \colorbox{red!30}{$b_4$} & $b_5$ & $b_6$ \\
+\end{block}
+\begin{block}{[*{6}{c}]>{$\footnotesize}l<{$}}
+0 & 0                     & 0 & 0 & 0 & 0 & $b_1$ \\
+1 & \colorbox{red!30}{0}  & 0 & 0 & 0 & 0 & $b_2$ \\
+0 & 0                     & 0 & 0 & 0 & 0 &  $b_3$ \\
+0 & 0                     & 1 & \colorbox{red!30}{1} & 0 & 0 & $b_4$ \\
+0 & \colorbox{green!30}{1}  & 0 & \colorbox{green!30}{0} & 0 & 0 & $b_5$ \\
+0 & 0                     & 0 & 0 & 1 & 0 & $b_6$ \\
+\end{block}
+\end{blockarray} \addtag
+\end{equation*}
+Macierz stanu w momentach $t=2,6,10$ uwzględniające zielone światło dla drogi $e_2$ oraz czerwone dla $e_1$ są przedstawione następująco:
+\begin{equation*}
+A_{b_4}=S(1)T=S(1)=
+\begin{blockarray}{*{6}{c} l}
+\begin{block}{*{6}{>{$\footnotesize}c<{$}} l}
+$b_1$ & \colorbox{red!30}{$b_2$} & $b_3$ & \colorbox{green!30}{$b_4$} & $b_5$ & $b_6$ \\
+\end{block}
+\begin{block}{[*{6}{c}]>{$\footnotesize}l<{$}}
+0 & 0                     & 0 & 0 & 0 & 0 & $b_1$ \\
+1 & \colorbox{red!30}{1}  & 0 & 0 & 0 & 0 & $b_2$ \\
+0 & 0                     & 0 & 0 & 0 & 0 &  $b_3$ \\
+0 & 0                     & 1 & \colorbox{red!30}{0} & 0 & 0 & $b_4$ \\
+0 & \colorbox{green!30}{0}  & 0 & \colorbox{green!30}{1} & 0 & 0 & $b_5$ \\
+0 & 0                     & 0 & 0 & 1 & 0 & $b_6$ \\
+\end{block}
+\end{blockarray} \addtag
+\end{equation*}
+
+\def \xzero{
+	\begin{bmatrix}
+		4 \\ 5 \\ 4 \\ 2 \\ 7 \\ 1
+	\end{bmatrix}
+}
+
+\def \xzero{
+	\begin{bmatrix} 3 \\ 5 \\ 4 \\ 2 \\ 7 \\ 1 \end{bmatrix}
+}
+\def \xI{
+	\begin{bmatrix} 0 \\ 3 \\ 0 \\ 6 \\ 5 \\ 7 \end{bmatrix}
+}
+\def \aeI{
+	\begin{bmatrix}
+		0 & 0                     & 0 & 0 & 0 & 0 \\
+		1 & \colorbox{red!30}{0}  & 0 & 0 & 0 & 0 \\
+		0 & 0                     & 0 & 0 & 0 & 0 \\
+		0 & 0                     & 1 & \colorbox{red!30}{1} & 0 & 0 & \\
+		0 & \colorbox{green!30}{1}  & 0 & \colorbox{green!30}{0} & 0 & 0 \\
+		0 & 0                     & 0 & 0 & 1 & 0 \\
+	\end{bmatrix}
+	
+}
+
+	
+	\begin{tabular}{| c | c | c | Sc |}
+		\hline
+		t & $\textbf{x(t)}$ & $\textbf{A(t)}=\textbf{S(t)}$ & Rysunek stanu układu \\
+		\hline
+		0 & $\xzero$  & $\aeI$ & \cincludegraphics[height=3cm]{3_drogi_sygnalizacja_0} \\
+		\hline
+		1 & $\xI$  & $\aeI$ & \cincludegraphics[height=3cm]{3_drogi_sygnalizacja_0} \\
+		\hline
+	\end{tabular}
+
 
 \section{Rozwój wektora stanowego}
 Wektor stanowy zmienia się wraz z upływem czasu wedle następującego wzoru:
