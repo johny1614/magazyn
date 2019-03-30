@@ -21,28 +21,13 @@
 \contentsline {subsection}{\numberline {5.6.1}Przyk\IeC {\l }ad}{20}% 
 \contentsline {section}{\numberline {5.7}Wprowadzenie sygnalizacji \IeC {\'s}wietlnej}{21}% 
 \contentsline {subsection}{\numberline {5.7.1}Przyk\IeC {\l }ad}{22}% 
-\contentsline {section}{\numberline {5.8}Rozw\IeC {\'o}j wektora stanowego}{25}% 
-\contentsline {subsection}{\numberline {5.8.1}Propozycja pocz\IeC {\k a}tkowego modelu przep\IeC {\l }ywu}{25}% 
-\contentsline {subsection}{\numberline {5.8.2}Przyk\IeC {\l }ad}{25}% 
-\contentsline {section}{\numberline {5.9}Sygnalizacja \IeC {\'s}wietlna}{26}% 
-\contentsline {subsection}{\numberline {5.9.1}Przyk\IeC {\l }ad}{27}% 
-\contentsline {section}{\numberline {5.10}Macierz stanu}{28}% 
-\contentsline {subsection}{\numberline {5.10.1}Przyk\IeC {\l }ad}{28}% 
-\contentsline {subsection}{\numberline {5.10.2}Og\IeC {\'o}lny wz\IeC {\'o}r}{28}% 
-\contentsline {section}{\numberline {5.11}Macierz stanowa sieci dr\IeC {\'o}g}{28}% 
-\contentsline {section}{\numberline {5.12}Model przep\IeC {\l }ywu}{29}% 
-\contentsline {subsection}{\numberline {5.12.1}Przyk\IeC {\l }ad}{29}% 
-\contentsline {subsection}{\numberline {5.12.2}Og\IeC {\'o}lny wz\IeC {\'o}r}{29}% 
-\contentsline {subsection}{\numberline {5.12.3}Zastosowanie wzoru}{30}% 
-\contentsline {section}{\numberline {5.13}Model przep\IeC {\l }ywu z sygnalizacj\IeC {\k a} \IeC {\'s}wietln\IeC {\k a}}{31}% 
-\contentsline {subsection}{\numberline {5.13.1}Przyk\IeC {\l }ad}{31}% 
-\contentsline {subsection}{\numberline {5.13.2}Og\IeC {\'o}lny wz\IeC {\'o}r}{33}% 
-\contentsline {subsection}{\numberline {5.13.3}Zastosowanie wzoru}{34}% 
-\contentsline {section}{\numberline {5.14}Wprowadzenie \IeC {\'z}r\IeC {\'o}de\IeC {\l } ruchu}{34}% 
-\contentsline {section}{\numberline {5.15}Schematy skrzy\IeC {\.z}owa\IeC {\'n} symulacyjnych}{35}% 
-\contentsline {section}{\numberline {5.16}Przedstawienie problemu optymalizacyjnego}{35}% 
-\contentsline {chapter}{\numberline {6}Przegl\IeC {\k a}d metod optymalizacyjnych}{37}% 
-\contentsline {section}{\numberline {6.1}Kategorie uczenia maszynowego}{37}% 
-\contentsline {section}{\numberline {6.2}Uczenie ze wzmocnieniem}{37}% 
-\contentsline {section}{\numberline {6.3}Programowanie dynamiczne}{40}% 
-\contentsline {chapter}{\numberline {7}Optymalizacja sygnalizacji \IeC {\'s}wietlnej}{43}% 
+\contentsline {section}{\numberline {5.8}Wprowadzenie \IeC {\'z}r\IeC {\'o}de\IeC {\l } ruchu }{25}% 
+\contentsline {subsection}{\numberline {5.8.1}Przyk\IeC {\l }ad dla pojedynczej drogi}{26}% 
+\contentsline {subsection}{\numberline {5.8.2}Przyk\IeC {\l }ad dla z\IeC {\l }o\IeC {\.z}onej sieci dr\IeC {\'o}g}{27}% 
+\contentsline {section}{\numberline {5.9}Schematy skrzy\IeC {\.z}owa\IeC {\'n} symulacyjnych}{27}% 
+\contentsline {section}{\numberline {5.10}Przedstawienie problemu optymalizacyjnego}{27}% 
+\contentsline {chapter}{\numberline {6}Przegl\IeC {\k a}d metod optymalizacyjnych}{29}% 
+\contentsline {section}{\numberline {6.1}Kategorie uczenia maszynowego}{29}% 
+\contentsline {section}{\numberline {6.2}Uczenie ze wzmocnieniem}{29}% 
+\contentsline {section}{\numberline {6.3}Programowanie dynamiczne}{32}% 
+\contentsline {chapter}{\numberline {7}Optymalizacja sygnalizacji \IeC {\'s}wietlnej}{35}% 
