@@ -642,29 +642,7 @@ Macierz przedstawia wartość akcji $a$ podjętej w stanie $s$. Algorytm kontrol
 \item Jeśli $policy\_stable=true$ to zwróć strategię $\pi(s)$.
 \end{enumerate}
 \section{Metoda Monte Carlo On-Policy}
-Metody Monte Carlo są szeroką klasą algorytmów, których wyniki oparte są o losowe próbkowanie. Nie potrzebują one żadnej wiedzy na temat środowiska - akceptowalne są zarówno środowiska deterministyczne jak i stochastyczne. Są one wyjątkowo użyteczne w problemach o dużej przestrzeni stanów. Algorytmy Monte Carlo uczenia ze wzmocnieniem są dzielone na dwie kategorie - On-Policy oraz Off-policy. W pracy zostanie przedstawiona metoda on-policy, która różni się od on-policy jedynie sposobem eksploracji. Metoda on-policy zakłada, iż ustalana jest pewna liczba $\epsilon$ bliska zeru. Określa ona prawdopodobieństwo kroku eksploracji, czyli wyboru losowej akcji. Pozostałe akcje są wybierane w sposób zachłanny, czyli podejmowana jest najbardziej wartościowa dostępna akcja.
-Monte Carlo podobnie jak algorytm programowania dynamicznego posiada część predykcji i kontroli. Pseudokod cześci predykcji, która jest odpowiedzialna za wyliczenie wartości stanów przy danej strategii $\pi$ byłby następujący, ale kurwa nie jest bo tego sie nie robi w monte carlo, bo zamiast wartości stanu V(s) sie liczy wartość Q(s,a)!:
-
-\begin{enumerate}
-	\item{Przyjmij daną z góry $\pi$ jako strategię podejmowania akcji}
-	\item Zainicjuj:
-		\begin{enumerate}
-			\item{Pusty słownik wartości stanów $V(s)$}
-			\item{Pusty słownik $Returns(s)$ dla zwracanych wartości stanu podczas symulacji}
-		\end{enumerate}
-	\item{Zasymuluj pełny epizod przy strategii $\pi$, który kończy się w chwili $T$ }
-	\item{Dla każdego stanu $s_t$ obecnego w przeprowadzonej symulacji począwszy od $t=T$ aż do $t=0$}	
-		\begin{enumerate}
-			\item $G_t$ to wartość stanu wyliczona ze wzoru (\ref{eq:Markov_state_value_G})
-			\item Dodaj $G_t$ do słownika $Returns(s_t)$
-	\end{enumerate}
-	\item{$V(s)=avg(Returns(s))$}
-\end{enumerate}
-Jeśli środowisko jest deterministyczne - wystarczy jedna symulacja epizodu. 
-
-Część kontroli ma za zadanie polepszyć aktualną strategię $\pi$:
-TODO to jest dla stochastycznego, a ja chce dla deterministycznego kurde 
-od nowa:
+Metody Monte Carlo są szeroką klasą algorytmów, których wyniki oparte są o losowe próbkowanie. Nie potrzebują one żadnej wiedzy na temat środowiska - akceptowalne są zarówno środowiska deterministyczne jak i stochastyczne. Algorytmy Monte Carlo uczenia ze wzmocnieniem są dzielone na dwie kategorie - On-Policy oraz Off-policy. W pracy zostanie przedstawiona metoda on-policy, która różni się od off-policy jedynie sposobem doboru momentu eksploracji. Metoda on-policy zakłada, iż ustalana jest pewna liczba $\epsilon$ bliska zeru. Określa ona prawdopodobieństwo kroku eksploracji, czyli wyboru losowej akcji. Pozostałe akcje są wybierane w sposób zachłanny, czyli podejmowana jest najbardziej wartościowa dostępna akcja. Algorytm przedstawiony jest poniższym pseudokodem.
 \begin{enumerate}
 	\item Zainicjuj słowniki:
 	\begin{enumerate}
@@ -681,38 +659,13 @@ od nowa:
 		\item $\pi(s)=argmax_{a\in{A}}Q(s,a)$. Chyba, że wylosowany został krok ekspolarcji, wtedy $\pi(s)$ jest losowo wybraną akcją $a \in A$.
 	\end{enumerate}
 \end{enumerate}
-
-*(Warto rozważyć iterowanie 3. w kolejności odwrotnej do chronologicznej, gdyż ułatwia to wykorzystanie wzoru (\ref{eq:G_reccurential}))
-
-aaaaaaaaaaaaaaaaaaaaa
+*(Rozsądnym jest iterowanie w 3 kroku w kolejności odwrotnej do chronologicznej, gdyż ułatwia wykorzystanie wzoru (\ref{eq:G_reccurential}))
+\\ Warto zauważyć następujące zalety metody Monte Carlo, których nie zapewniał algorytm programowania dynamicznego:
 \begin{enumerate}
-	\item Zainicjuj:
-	\begin{enumerate}
-		\item Pusty słownik $Q(s,a)$ - dla wartości par stan - akcja.
-		\item Pusty słownik $Returns(s,a)$ dla wartości stanu i akcji zwracanych podczas symulacji.
-		\item Dowolny słownik $\pi(a|s)$ - dla 
-	\end{enumerate}
-\item W pętli
-\begin{enumerate}
-	\item Przeprowadz symulacje epizodu uzywajac strategii $\pi$
-	\item Dla kazdej pary s,a pojawiającej sie w epizodzie:
-	\begin{enumerate}
-		\item Wylicz G ze wzoru \ref{eq:Markov_state_value_G}
-		\item Dodaj G do wartości $Returns(s,a)$
-		\item Wylicz $Q(s,a)=avg(Returns(s,a))$
-	\end{enumerate}
-	\item Dla kazdego s w epizodzie
-	\begin{enumerate}
-		\item $a^*=argmax_a(Q(s,a))$
-		\item Dla wszystkich $a\in A(s)$:
-		\begin{enumerate}
-			\item $\pi(a|s)=1-\epsilon+\epsilon/|A(s)|$
-			\item $\epsilon/|A(s)|$
-		\end{enumerate}
-	\end{enumerate}
+	\item Brak potrzeby wiedzy na tematu modelu
+	\item Nie wymaga często nierealnego założenia, iż stan środowiska może zostać sztywno ustalony przez programistę. Wymagana jest jedynie możliwość przeprowadznia pełnych epizodów, co jest nieporównywalnie słabszym założeniem.
+	\item Dobre skalowanie dla dużej przestrzeni stanu. Więcej czasu treningowego jest poświęcane dla stanów, które są często odwiedzane. Z kolei te, które nie pojawiają się prawie wcale - nie marnują dużo czasu w procesie nauki.
 \end{enumerate}
-\end{enumerate}
-
 
 \chapter{Optymalizacja sygnalizacji świetlnej}
 \bibliography{refs}
