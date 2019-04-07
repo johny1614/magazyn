@@ -1,5 +1,5 @@
 import numpy as np
-from runner import Runner
+from env import Env
 from matrix import A_a_green,A_b_green
 def find_best_action(actions):
 
@@ -20,7 +20,7 @@ def control():
 gamma=1
 n=10
 teta=0.8
-env=Runner(n)
+env=Env(n)
 
 # rewardSum=0
 policy={tuple(env.x[0]):A_a_green}
