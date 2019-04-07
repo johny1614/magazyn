@@ -1,8 +1,7 @@
 import numpy as np
 from matrix import T,x0,A_niepar,A_par,u
-                  #
                   # A->B       ->G->H
- # siec drog to:         ->E->F
+# siec drog to:         ->E->F
                   # C->D       ->I->J
 n=11
 x=[0]*(n+1)

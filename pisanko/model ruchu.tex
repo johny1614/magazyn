@@ -83,7 +83,7 @@ Celem pracy jest stworzenie programu, który zoptymalizuje fazy sygnalizacji św
 
    
 \chapter{Siatka czasowa i przestrzenna}
-Dyskretny charakter modelu przedstawianego w pracy obliguje do określenia siatki czasowej i przestrzennej. Dla par czasu i miejsc należących do tych dwóch siatek będą określane zmienne stanowe. \\ \\ \textbf{Siatka czasowa} jest zdefiniowana jako skończony ciąg liczb naturalnych:
+Dyskretny charakter modelu przedstawianego w pracy obliguje do określenia siatki czasowej i przestrzennej. Dla par czasu i miejsc należących do tych dwóch siatek będą określane zmienne stanu. \\ \\ \textbf{Siatka czasowa} jest zdefiniowana jako skończony ciąg liczb naturalnych:
 \[(0,1,...,K). \addtag \]
 Niech będzie ustalona droga $e$, która jest odcinkiem $[0,L_e]$. Droga zostaje podzielona na $L+1$ odcinków o równej długości $\Delta x=\frac{L_e}{L+1}$. \textbf{Siatka przestrzenna} drogi to ciąg odcinków:
 \[(b_l)_{l=0}^{L}=[l\Delta x,(l+1)\Delta x]\]
@@ -138,10 +138,10 @@ Rezultatem jest końcowy rekurencyjny wzór na gęstość ruchu:
 Ze względu na dużą złożoność końcowego modelu zostanie przedstawiony najpierw bardzo prosty, podstawowy model. W każdej kolejnej sekcji dodawane będą zmiany przybliżające do ostatecznej postaci. Jest to podejście pozwalające na proste przedstawienie modelu, który zawiera bardzo wiele aspektów m.in:
 ujęcie sygnalizacji świetlnej, brak kolizyjnych manewrów, makroskopowy przepływ ruchu, przepływ ruchu na skrzyżowaniu, struktura sieci dróg. Zestawienie w jednej sekcji wszystkich tych kwestii byłoby bardzo przytłaczające.
 
-\section{Wektor stanowy drogi} \label{sec:wektor_stanowy_drogi}
-Wektor stanowy jest strukturą w pełni przedstawiającą aktualny stan drogi. Dla każdego odcinka drogi składuje on wartości zmiennych stanowych. Początkowo zmienna stanowa jest identyfikowana jako ilość pojazdów na danym odcinku drogi. 
+\section{Wektor stanu drogi} \label{sec:wektor_stanu_drogi}
+Wektor stanu jest strukturą w pełni przedstawiającą aktualny stan drogi. Dla każdego odcinka drogi składuje on wartości zmiennych stanuch. Początkowo zmienna stanowa jest identyfikowana jako ilość pojazdów na danym odcinku drogi. 
 \subsection{Przykład} \label{subsec:example-single-road}
-Niech będzie dana droga $e$ z wydzielonymi czterema odcinkami ${b_1,b_2,b_3,b_4}$. Przykładowy wektor stanowy to
+Niech będzie dana droga $e$ z wydzielonymi czterema odcinkami ${b_1,b_2,b_3,b_4}$. Przykładowy wektor stanu to
 \[\textbf{x(t)}=\begin{bmatrix}
 2 \\ 4 \\ 3 \\ 0
 \end{bmatrix} \addtag \]
@@ -159,12 +159,12 @@ Zawiera on w sobie następujące informacje dla chwili t:
 	\caption{Droga z ilością pojazdów na poszczególnych odcinkach}
 	\label{fig:single_road}
 \end{figure}
-\section{Rozwój wektora stanowego jednej drogi}
-Początkowy model przepływu pojazdów zakłada, iż wszystkie pojazdy w chwili t+1 są o jeden odcinek dalej w swojej podróży niż w momencie $t$. Założone jest, iż żadne nowe pojazdy nie pojawiają się w sieci dróg, a pojazdy będące w chwili $t$ w ostatnim odcinku drogi układ. Formalnym wzorem definiującym rozwój wektora stanowego jest:
+\section{Rozwój wektora stanu jednej drogi}
+Początkowy model przepływu pojazdów zakłada, iż wszystkie pojazdy w chwili t+1 są o jeden odcinek dalej w swojej podróży niż w momencie $t$. Założone jest, iż żadne nowe pojazdy nie pojawiają się w sieci dróg, a pojazdy będące w chwili $t$ w ostatnim odcinku drogi układ. Formalnym wzorem definiującym rozwój wektora stanu jest:
 \[\textbf{x(t+1)}=\textbf{Ax(t)} \addtag \label{eq:single_road} \]
 Gdzie $A$ jest macierzą systemu. Definiuje ona sposób przepływu pojazdów. $A$ jest rzadką, kwadratową macierzą o wartościach równych 1 jedynie bezpośrednio 1 wiersz pod główną przekątną macierzy. Takie wartości gwarantują przepływ pojazdów o jeden odcinek w jednym interwale czasowym.
 \subsection{Przykład}
-Dla przykładu przedstawionego w (\ref{subsec:example-single-road}) zostanie przedstawiony rozwój wektora stanowego. Niech zatem
+Dla przykładu przedstawionego w (\ref{subsec:example-single-road}) zostanie przedstawiony rozwój wektora stanu. Niech zatem
 \def \xZero {\begin{bmatrix}
 	2 \\ 4 \\ 3 \\ 0
 	\end{bmatrix}}
@@ -180,7 +180,7 @@ Macierzą systemu jest:
 \[
 \textbf{A}=\A \addtag
 \]
-Wedle wzoru (\ref{eq:single_road}) wyliczone zostają kolejne wartości wektora stanowego.
+Wedle wzoru (\ref{eq:single_road}) wyliczone zostają kolejne wartości wektora stanu.
 \def \xI {\begin{bmatrix}
 		0 \\ 2 \\ 4 \\ 3
 \end{bmatrix}}
@@ -206,11 +206,11 @@ Wedle wzoru (\ref{eq:single_road}) wyliczone zostają kolejne wartości wektora 
 \textbf{x(4)}=\textbf{Ax(3)}=\A \xIII = \xIV \addtag
 \]
 
-\section {Wektor stanowy sieci dróg}
-W rozdziale (\ref{sec:wektor_stanowy_drogi}) przedstawiony został wektor stanowy dla pojedynczej drogi. W tym rozdziale zostanie sformułowany wektor stanowy dla bardziej ogólnego przypadku - sieci dróg. Sposób przedstawienia wartości stanowych jednak jest bardzo podobny. Każda z dróg $e_1,...,e_n$ ma $k$ wydzielonych odcinków oznaczanych jako $b_1,...,b_{nk}$. Dla każdego z odcinków definiowana jest wartość stanowa.
+\section {Wektor stanu sieci dróg}
+W rozdziale (\ref{sec:wektor_stanu_drogi}) przedstawiony został wektor stanu dla pojedynczej drogi. W tym rozdziale zostanie sformułowany wektor stanu dla bardziej ogólnego przypadku - sieci dróg. Sposób przedstawienia wartości stanuch jednak jest bardzo podobny. Każda z dróg $e_1,...,e_n$ ma $k$ wydzielonych odcinków oznaczanych jako $b_1,...,b_{nk}$. Dla każdego z odcinków definiowana jest wartość stanowa.
 
-\subsection{Przykład} \label{subsec:wektor_stanowy_siec_przyklad}
-Niech będzie dana sieć składająca się z trzech dróg $E=\{e_1,e_2,e_3\}$. Dla każdej drogi zostaną wydzielone 2 odcinki. Przykładowy wektor stanowy
+\subsection{Przykład} \label{subsec:wektor_stanu_siec_przyklad}
+Niech będzie dana sieć składająca się z trzech dróg $E=\{e_1,e_2,e_3\}$. Dla każdej drogi zostaną wydzielone 2 odcinki. Przykładowy wektor stanu
 \def \xzero {\begin{bmatrix}
 		8 \\ 4 \\ 3 \\ 0 \\ 1 \\ 5
 \end{bmatrix}}
@@ -233,14 +233,14 @@ Zawiera w sobie następujące informacje dotyczące ilości pojazdów na poszcze
 	\label{fig:3_single_road}
 \end{figure}
 
-\section{Rozwój wektora stanowego sieci dróg}
+\section{Rozwój wektora stanu sieci dróg}
 Przepływ pojazdów niezmiennie jest oparty o założenie, iż w trakcie trwania jednego interwału czasowego pojazdy pokonują 1 odcinek drogi. Równaniem systemu pozostaje $\textbf{x(t+1)=Ax(t)}$, gdyż do układu niezmiennie nie wpływają nowe pojazdy.\\ \\
 Macierz systemu $\textbf{A}$ powinna uwzględnić przepływy pojazdów na skrzyżowaniach. W tym momencie należy przedstawić następującą definicję macierzy $\textbf{A}$:\\
 Wartości macierzy \textbf{A} określają jaka część pojazdów z odcinka zadanego przez indeks kolumny przejeżdża do odcinka zadanego przez indeks wiersza.
 
 
 \subsection{Przykład}
-Dla przykładu (\ref{subsec:wektor_stanowy_siec_przyklad}) przedstawiony zostanie rozwój wektora stanowego. Założone zostaje, iż $75 \%$ pojazdów będących na odcinku $b_2$ opuszcza skrzyżowanie na odcinku $b_3$ a pozostałe $25 \%$ przejeżdża do $b_5$.
+Dla przykładu (\ref{subsec:wektor_stanu_siec_przyklad}) przedstawiony zostanie rozwój wektora stanu. Założone zostaje, iż $75 \%$ pojazdów będących na odcinku $b_2$ opuszcza skrzyżowanie na odcinku $b_3$ a pozostałe $25 \%$ przejeżdża do $b_5$.
 
 \begin{figure}[H]
 	\centering
@@ -278,7 +278,7 @@ $b_1$ & $b_2$ & $b_3$ & $b_4$ & $b_5$ & $b_6$ \\
 \end{equation*}
 Niech zatem zgodnie z rysunkiem \ref{fig:3_single_road}:
 \[\textbf{x(0)}=\xzero \]
-Kolejne wartości wektora stanowego to:
+Kolejne wartości wektora stanu to:
 \def \xI{\begin{bmatrix}
 	0 \\ 8 \\ 3 \\ 3 \\ 1 \\ 1
 \end{bmatrix}}
@@ -348,7 +348,7 @@ $b_1$ & $b_2$ & $b_3$ & $b_4$ & $b_5$ & $b_6$ \\
 		4 \\ 5 \\ 4 \\ 2 \\ 7 \\ 1
 	\end{bmatrix}
 }
-Początkowy wektor stanowy (zgodny z rysunkiem \ref{fig:3_drogi_sygnalizacja}) to:
+Początkowy wektor stanu (zgodny z rysunkiem \ref{fig:3_drogi_sygnalizacja}) to:
 \[\textbf{x(0)}= \xzero \]
 Macierz stanu w momentach $t=0,4$ uwzględnia zielone światło dla drogi $e_1$ oraz czerwone dla $e_2$.
 \def \aeI{
@@ -507,7 +507,7 @@ Niech dana będzie droga $e$ podzielona na 4 odcinki $b_1,b_2,b_3,b_4$. Początk
 Dane są następujące wektory zrodlowe:
 \[\textbf{u(0)}=[7] \;\;\; \textbf{u(1)}=[3] \;\;\; \textbf{u(2)}=[5]\]
 Są to wektory o wymiarze 1, gdyż w układzie jest tylko 1 droga.
-Spodziewany następny wektor stanowy to:\[\textbf{x(1)}=\begin{bmatrix} 7 \\ 2 \\ 4 \\ 3 \end{bmatrix} \addtag \] gdyż na pierwszym odcinku pojawia się 7 pojazdów ze zródła \textbf{u(0)}, a pozostałe pojazdy przejeżdżają jeden odcinek drogi. Oczywiście $\textbf{Ax(0)}=\begin{bmatrix} 0 & 2 & 4 & 3 \end{bmatrix}^T$, zatem koniecznie
+Spodziewany następny wektor stanu to:\[\textbf{x(1)}=\begin{bmatrix} 7 \\ 2 \\ 4 \\ 3 \end{bmatrix} \addtag \] gdyż na pierwszym odcinku pojawia się 7 pojazdów ze zródła \textbf{u(0)}, a pozostałe pojazdy przejeżdżają jeden odcinek drogi. Oczywiście $\textbf{Ax(0)}=\begin{bmatrix} 0 & 2 & 4 & 3 \end{bmatrix}^T$, zatem koniecznie
 $\textbf{Bu(0)}= \begin{bmatrix} 7 & 0 & 0 & 0 \end{bmatrix}^T$
 Macierz $\boldsymbol{B}$ zatem musi być dla tego układu następująca:
 \[\boldsymbol{B}=\begin{bmatrix}
@@ -593,7 +593,7 @@ Zostanie przedstawiony teraz przykład obliczeniowy. Agent podejmuje decyzje na 
  \label{fig:agent-srodowisko}
 \end{figure}\noindent
 Najłatwiej obliczenia rozpocząć od $G_5$, ponieważ
-$G_{t}=R_{t}+\gamma G_{t+1}$.\\
+\[G_{t}=R_{t}+\gamma G_{t+1} \label{eq:G_reccurential} \addtag \].\\
 $G_5=R_5=1$.\\
 $G_4=R_4+\gamma G_{5}=\;\;2+0,9\cdot 1=2,9$\\
 $G_3=R_3+\gamma G_{4}=\!-1+0,9\cdot2.9=1,61$\\
@@ -627,6 +627,7 @@ Q_{\pi}(s,a) &= E[R_{t+1}+\gamma v_{\pi}(S_{t+1}) | S_t=s, A_t=a]  \\
            &= \sum_{s'}Pr(s'|s,a)[r+\gamma V_{pi}(s')] 
 \end{split}
 \end{equation}
+Oczywistym minusem tego algorytmu jest konieczność przeiterowania wszystkich stanów. W przypadku gdy stanów jest bardzo dużo algorytm staje się nieopłacalny.
 Macierz przedstawia wartość akcji $a$ podjętej w stanie $s$. Algorytm kontroli jest następujący:
 \begin{enumerate}
 \item{Przyjmij wyliczoną przez algorytm predykcji macierz wartości stanów $V_{\pi}(s)$}
@@ -640,6 +641,78 @@ Macierz przedstawia wartość akcji $a$ podjętej w stanie $s$. Algorytm kontrol
   \end{enumerate}
 \item Jeśli $policy\_stable=true$ to zwróć strategię $\pi(s)$.
 \end{enumerate}
+\section{Metoda Monte Carlo On-Policy}
+Metody Monte Carlo są szeroką klasą algorytmów, których wyniki oparte są o losowe próbkowanie. Nie potrzebują one żadnej wiedzy na temat środowiska - akceptowalne są zarówno środowiska deterministyczne jak i stochastyczne. Są one wyjątkowo użyteczne w problemach o dużej przestrzeni stanów. Algorytmy Monte Carlo uczenia ze wzmocnieniem są dzielone na dwie kategorie - On-Policy oraz Off-policy. W pracy zostanie przedstawiona metoda on-policy, która różni się od on-policy jedynie sposobem eksploracji. Metoda on-policy zakłada, iż ustalana jest pewna liczba $\epsilon$ bliska zeru. Określa ona prawdopodobieństwo kroku eksploracji, czyli wyboru losowej akcji. Pozostałe akcje są wybierane w sposób zachłanny, czyli podejmowana jest najbardziej wartościowa dostępna akcja.
+Monte Carlo podobnie jak algorytm programowania dynamicznego posiada część predykcji i kontroli. Pseudokod cześci predykcji, która jest odpowiedzialna za wyliczenie wartości stanów przy danej strategii $\pi$ byłby następujący, ale kurwa nie jest bo tego sie nie robi w monte carlo, bo zamiast wartości stanu V(s) sie liczy wartość Q(s,a)!:
+
+\begin{enumerate}
+	\item{Przyjmij daną z góry $\pi$ jako strategię podejmowania akcji}
+	\item Zainicjuj:
+		\begin{enumerate}
+			\item{Pusty słownik wartości stanów $V(s)$}
+			\item{Pusty słownik $Returns(s)$ dla zwracanych wartości stanu podczas symulacji}
+		\end{enumerate}
+	\item{Zasymuluj pełny epizod przy strategii $\pi$, który kończy się w chwili $T$ }
+	\item{Dla każdego stanu $s_t$ obecnego w przeprowadzonej symulacji począwszy od $t=T$ aż do $t=0$}	
+		\begin{enumerate}
+			\item $G_t$ to wartość stanu wyliczona ze wzoru (\ref{eq:Markov_state_value_G})
+			\item Dodaj $G_t$ do słownika $Returns(s_t)$
+	\end{enumerate}
+	\item{$V(s)=avg(Returns(s))$}
+\end{enumerate}
+Jeśli środowisko jest deterministyczne - wystarczy jedna symulacja epizodu. 
+
+Część kontroli ma za zadanie polepszyć aktualną strategię $\pi$:
+TODO to jest dla stochastycznego, a ja chce dla deterministycznego kurde 
+od nowa:
+\begin{enumerate}
+	\item Zainicjuj słowniki:
+	\begin{enumerate}
+		\item $Q(s,a)$ - Wartość określa opłacalność wyboru akcji a w stanie s
+		\item $Returns(s,a)$ - Wartość słownika to tablica wartości $G$ wyliczonych na podstawie otrzymanych reward'ów oraz wzoru (\ref{eq:Markov_state_value_G}).
+		\item $\pi(s)$ - Określa jaka akcja ma zostać podjęta dla stanu s. Początkowo wszystkie akcje są wybrane losowo.
+	\end{enumerate}
+	\item Zasymuluj pełny epizod wedle strategii $\pi$
+	\item Dla każdego stanu s i akcji a, które pojawiły się w epizodzie
+	\begin{enumerate}
+		\item Wylicz $G$ rekurencyjnie wedle wzoru (\ref{eq:G_reccurential})*
+		\item Do tablicy Returns(s,a) dodaj wartość $G$
+		\item $Q(s,a)=avg(Returns(s,a))$
+		\item $\pi(s)=argmax_{a\in{A}}Q(s,a)$. Chyba, że wylosowany został krok ekspolarcji, wtedy $\pi(s)$ jest losowo wybraną akcją $a \in A$.
+	\end{enumerate}
+\end{enumerate}
+
+*(Warto rozważyć iterowanie 3. w kolejności odwrotnej do chronologicznej, gdyż ułatwia to wykorzystanie wzoru (\ref{eq:G_reccurential}))
+
+aaaaaaaaaaaaaaaaaaaaa
+\begin{enumerate}
+	\item Zainicjuj:
+	\begin{enumerate}
+		\item Pusty słownik $Q(s,a)$ - dla wartości par stan - akcja.
+		\item Pusty słownik $Returns(s,a)$ dla wartości stanu i akcji zwracanych podczas symulacji.
+		\item Dowolny słownik $\pi(a|s)$ - dla 
+	\end{enumerate}
+\item W pętli
+\begin{enumerate}
+	\item Przeprowadz symulacje epizodu uzywajac strategii $\pi$
+	\item Dla kazdej pary s,a pojawiającej sie w epizodzie:
+	\begin{enumerate}
+		\item Wylicz G ze wzoru \ref{eq:Markov_state_value_G}
+		\item Dodaj G do wartości $Returns(s,a)$
+		\item Wylicz $Q(s,a)=avg(Returns(s,a))$
+	\end{enumerate}
+	\item Dla kazdego s w epizodzie
+	\begin{enumerate}
+		\item $a^*=argmax_a(Q(s,a))$
+		\item Dla wszystkich $a\in A(s)$:
+		\begin{enumerate}
+			\item $\pi(a|s)=1-\epsilon+\epsilon/|A(s)|$
+			\item $\epsilon/|A(s)|$
+		\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+
 
 \chapter{Optymalizacja sygnalizacji świetlnej}
 \bibliography{refs}

@@ -10,13 +10,13 @@
 \contentsline {section}{\numberline {4.4}Dyskretyzacja makroskopowego modelu ruchu}{12}% 
 \contentsline {chapter}{\numberline {5}Model sieci dr\IeC {\'o}g}{15}% 
 \contentsline {section}{\numberline {5.1}Wst\IeC {\k e}p}{15}% 
-\contentsline {section}{\numberline {5.2}Wektor stanowy drogi}{15}% 
+\contentsline {section}{\numberline {5.2}Wektor stanu drogi}{15}% 
 \contentsline {subsection}{\numberline {5.2.1}Przyk\IeC {\l }ad}{15}% 
-\contentsline {section}{\numberline {5.3}Rozw\IeC {\'o}j wektora stanowego jednej drogi}{16}% 
+\contentsline {section}{\numberline {5.3}Rozw\IeC {\'o}j wektora stanu jednej drogi}{16}% 
 \contentsline {subsection}{\numberline {5.3.1}Przyk\IeC {\l }ad}{16}% 
-\contentsline {section}{\numberline {5.4}Wektor stanowy sieci dr\IeC {\'o}g}{17}% 
+\contentsline {section}{\numberline {5.4}Wektor stanu sieci dr\IeC {\'o}g}{17}% 
 \contentsline {subsection}{\numberline {5.4.1}Przyk\IeC {\l }ad}{17}% 
-\contentsline {section}{\numberline {5.5}Rozw\IeC {\'o}j wektora stanowego sieci dr\IeC {\'o}g}{18}% 
+\contentsline {section}{\numberline {5.5}Rozw\IeC {\'o}j wektora stanu sieci dr\IeC {\'o}g}{18}% 
 \contentsline {subsection}{\numberline {5.5.1}Przyk\IeC {\l }ad}{18}% 
 \contentsline {section}{\numberline {5.6}Wprowadzenie sygnalizacji \IeC {\'s}wietlnej}{21}% 
 \contentsline {subsection}{\numberline {5.6.1}Przyk\IeC {\l }ad}{21}% 
@@ -30,4 +30,5 @@
 \contentsline {section}{\numberline {7.1}Kategorie uczenia maszynowego}{29}% 
 \contentsline {section}{\numberline {7.2}Uczenie ze wzmocnieniem}{29}% 
 \contentsline {section}{\numberline {7.3}Programowanie dynamiczne}{32}% 
-\contentsline {chapter}{\numberline {8}Optymalizacja sygnalizacji \IeC {\'s}wietlnej}{35}% 
+\contentsline {section}{\numberline {7.4}Metoda Monte Carlo On-Policy}{33}% 
+\contentsline {chapter}{\numberline {8}Optymalizacja sygnalizacji \IeC {\'s}wietlnej}{37}% 
