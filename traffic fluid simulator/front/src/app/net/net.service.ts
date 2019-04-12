@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
-export class Point{
-  constructor(public x,public y){
-}
-}
+import { Point } from './net.model';
+ 
 
 @Injectable({
   providedIn: 'root'

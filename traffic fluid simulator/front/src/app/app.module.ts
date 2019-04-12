@@ -7,7 +7,7 @@ import { NetComponent } from './net/net.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NetComponent
+    NetComponent,
   ],
   imports: [
     BrowserModule
