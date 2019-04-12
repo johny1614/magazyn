@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Point, Line } from './net/net.model';
+import { Point, Line, LightPositioned } from './net/net.model';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -41,6 +43,20 @@ export class CanvasService {
       this.ctx.fillText(section.density, section.middlePoint.x, section.middlePoint.y - 10);
     }
   }
+  drawLights(line: Line) {
+    Object.keys(line.lights).forEach(
+      direction => {
+        const light: LightPositioned = line.lights[direction];
+        let arrowImage = new Image();
+        arrowImage.src = "../../assets/arrows/"+light.imageName+".png";
+        arrowImage.onload = () => {
+          const width = 20;
+          const scaledHeight = width * arrowImage.height / arrowImage.width
+          this.ctx.drawImage(arrowImage, light.position.x, light.position.y, width, scaledHeight);
+        }
+      }
+    )
+  }
   drawLine(line: Line) {
     this.ctx.moveTo(line.startPoint.x, line.startPoint.y);
     for (let i = 0; i < line.sections.length; i++) {
@@ -50,8 +66,11 @@ export class CanvasService {
       this.drawPerpendicularLine(section.endPoint, section.a);
       this.writeDensity(section);
       if (i === 0) {
-        this.drawPerpendicularLine(section.startPoint,section.a);
+        this.drawPerpendicularLine(section.startPoint, section.a);
       }
+    }
+    if (line.lights) {
+      this.drawLights(line);
     }
   }
 }

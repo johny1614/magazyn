@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { NetService } from './net.service';
-import { Point, Line } from './net.model';
+import { Point, Line, LightsSignalization, Light, LightPositioned } from './net.model';
 import { CanvasService } from '../canvas.service';
 
 @Component({
@@ -18,7 +18,10 @@ export class NetComponent implements AfterViewInit {
     this.ctx = this.net.nativeElement.getContext("2d");
     this.ns.ctx = this.ctx;
     this.cs.ctx = this.ctx;
-    const line1 = new Line(new Point(100, 300), new Point(200, 300), [2, 1])
+    const lights1=new LightsSignalization();
+    lights1.left=new LightPositioned(Light.green,new Point(215, 285),'right_up_green')
+    lights1.right=new LightPositioned(Light.green,new Point(215, 305),'right_down_green')
+    const line1 = new Line(new Point(100, 300), new Point(200, 300), [2, 1],lights1)
     const line2 = new Line(new Point(300, 270), new Point(400, 230), [1, 2])
     const line3 = new Line(new Point(300, 330), new Point(400, 370), [1, 2])
     this.cs.drawLine(line1);
@@ -27,20 +30,6 @@ export class NetComponent implements AfterViewInit {
     this.ctx.stroke();
     this.ns.roundRectangle(210, 260, 80, 80, 10)
     this.ctx.stroke();
-    let image1 = new Image();
-    image1.src = "../../assets/arrows/right_up_green.png";
-    image1.onload = () => {
-      const width = 20;
-      const scaledHeight = width * image1.height / image1.width
-      this.ctx.drawImage(image1, 215, 285, width, scaledHeight);
-    }
-    let image2 = new Image();
-    image2.src = "../../assets/arrows/right_down_green.png";
-    image2.onload = () => {
-      const width = 20;
-      const scaledHeight = width * image1.height / image1.width
-      this.ctx.drawImage(image2, 215, 305, width, scaledHeight);
-    }
   }
 
 }
