@@ -4,6 +4,25 @@ class Point{
         this.y=y;
     }
 }
+function roundRectangle(ctx,x, y, width, height, radius, fill) {
+  if (typeof radius === "undefined") {
+    radius = 5;
+  }
+  ctx.beginPath();
+  ctx.moveTo(x + radius, y);
+  ctx.lineTo(x + width - radius, y);
+  ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+  ctx.lineTo(x + width, y + height - radius);
+  ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+  ctx.lineTo(x + radius, y + height);
+  ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+  ctx.lineTo(x, y + radius);
+  ctx.quadraticCurveTo(x, y, x + radius, y);
+  ctx.closePath();
+  if (fill) {
+    ctx.fill();
+  }        
+}
 function perpendicularLine(ctx,point,lineStart,lineEnd){
     a=(lineEnd.y-lineStart.y)/(lineEnd.x-lineStart.x)
     aT= -1/a
@@ -47,8 +66,11 @@ function line(ctx,start,end,texts,divisions){
 }
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
-line(ctx,new Point(0,100),new Point(100,130),[1,2],2)
-line(ctx,new Point(0,300),new Point(100,270),[3,4],2)
-line(ctx,new Point(150,200),new Point(250,200),[5,6],2)
+line(ctx,new Point(100,300),new Point(200,300),[1,2],2)
+line(ctx,new Point(300,270),new Point(400,230),[1,2],2)
+line(ctx,new Point(300,330),new Point(400,370),[1,2],2)
 ctx.stroke()
+roundRectangle(ctx,210,260,80,80,10)
+ctx.stroke()
+ctx.drawArrow
 // ctx.font = "12px Arial";
