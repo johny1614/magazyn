@@ -1,4 +1,4 @@
 <div>
-    <input type="range" min="0" [max]="nets.length" value="0" [(ngModel)]="timeDisplay"> {{timeDisplay}}
+    <input type="range" min="0" [max]="nets.length" [(ngModel)]="timeDisplay"> {{timeDisplay}}
 </div>
 <app-net [net]="nets[timeDisplay]"></app-net>

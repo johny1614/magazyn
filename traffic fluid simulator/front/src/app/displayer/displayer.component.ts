@@ -11,7 +11,7 @@ import { CanvasService } from '../canvas.service';
 export class DisplayerComponent implements OnInit {
   @Input()
   nets: Net[];
-  timeDisplay: number;
+  timeDisplay: number = 0;
 
   constructor() { }
 
