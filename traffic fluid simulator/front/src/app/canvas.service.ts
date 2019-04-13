@@ -3,9 +3,7 @@ import { Point, Line, LightPositioned, Net } from './net/net.model';
 
 
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class CanvasService {
   ctx: CanvasRenderingContext2D
 
@@ -36,11 +34,12 @@ export class CanvasService {
     this.ctx.moveTo(point.x, point.y);
   }
   writeDensity(section) {
+    this.ctx.font = "20px Arial";
     if (section.a < -0.5 || section.a > 0.5) {
       this.ctx.fillText(section.density, section.middlePoint.x - 10, section.middlePoint.y);
     }
     else {
-      this.ctx.fillText(section.density, section.middlePoint.x, section.middlePoint.y - 10);
+      this.ctx.fillText(section.density, section.middlePoint.x-5, section.middlePoint.y - 10);
     }
   }
   drawLights(line: Line) {

@@ -1,9 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Input } from '@angular/core';
-import { NetService } from './net.service';
-import { Point, Line, LightsSignalization, Light, LightPositioned, Net, NetFactory } from './net.model';
+import { Net } from './net.model';
 import { CanvasService } from '../canvas.service';
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-net',
   templateUrl: './net.component.html',
@@ -26,8 +23,9 @@ export class NetComponent implements AfterViewInit {
     this.ctx = this.netCanvas.nativeElement.getContext("2d");
     this.cs.ctx = this.ctx;
   }
-
+  
   drawNet() {
+    this.ctx.clearRect(0, 0, this.netCanvas.nativeElement.width, this.netCanvas.nativeElement.height);
     this.cs.drawAllLines(this._net);
     this.ctx.stroke();
   }

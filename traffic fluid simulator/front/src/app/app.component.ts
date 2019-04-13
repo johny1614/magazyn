@@ -11,9 +11,9 @@ import { Net, NetFactory } from './net/net.model';
 export class AppComponent {
   title = 'app';
   nets: Net[] = [];
-  displayNet: Net;
   dynamicData: any;
   staticData: any;
+  timeDisplay;
 
   constructor(private http: HttpClient) { }
   public getJSON(url): Observable<any> {
@@ -28,7 +28,6 @@ export class AppComponent {
           let net: Net = NetFactory.netFromJson(this.staticData,dynamicDataExample);
           this.nets.push(net);
         }
-        this.displayNet=this.nets[1];
       })
     })
   }
