@@ -124,4 +124,4 @@ data = {
     'learningMethod': 'Monte Carlo',
 }
 
-saveToJson('net1', 'den1', data)
+saveToJson('net2', 'den1', data)

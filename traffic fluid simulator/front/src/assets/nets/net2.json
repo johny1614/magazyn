@@ -1,0 +1,46 @@
+{
+    "lines": [
+        {
+            "startPoint": {
+                "x": 100,
+                "y": 170
+            },
+            "endPoint":{
+                "x": 200,
+                "y": 200
+            },
+            "densities":["n"],
+            "ligths":{
+                "left":
+                {
+                    "light":"green",
+                    "position":{"x":200,"y":200},
+                    "imageName":"right_down_green"
+                }
+            }
+        },
+        {
+            "startPoint": {
+                "x": 100,
+                "y": 330
+            },
+            "endPoint":{
+                "x": 200,
+                "y": 300
+            },
+            "densities":["n"]
+        },
+        {
+            "startPoint": {
+                "x": 300,
+                "y": 250
+            },
+            "endPoint":{
+                "x": 400,
+                "y": 250
+            },
+            "densities":["n"]
+        }
+        
+    ]
+}

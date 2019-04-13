@@ -30,29 +30,35 @@ export class Section {
 export interface ILine {
     startPoint: Point;
     endPoint: Point;
-    densities: number[];
+    densities?: number[];
     ligths?: LightsSignalization;
 }
 export class NetFactory {
     static getLine(line: ILine): Line {
-        return new Line(line.startPoint, line.endPoint, line.densities, line.ligths)
+        if(line.densities || line.ligths){
+            return new Line(line.startPoint, line.endPoint, line.densities, line.ligths)
+        }
+        return new Line(line.startPoint,line.endPoint);
     }
-    static netFromJson(staticData, dynamicData): Net {
+    static netFromJson(staticData, dynamicData?): Net {
         const lines = [];
         staticData.lines.forEach(iline => lines.push(NetFactory.getLine(iline)));
         let i = 0;
-        lines.forEach(line => {
-            line.sections.forEach(section => {
-                section.density = dynamicData.densities[i];
-                i++;
+        if(dynamicData){
+            lines.forEach(line => {
+                line.sections.forEach(section => {
+                    section.density = dynamicData.densities[i];
+                    i++;
+                });
             });
-        });
-        return new Net(dynamicData.time, lines);
+        }
+        const time = dynamicData ? dynamicData.time : 0;
+        return new Net(time, lines);
     }
 }
 export class Line {
-    constructor(public startPoint: Point, public endPoint: Point, public densities: number[], public lights?: LightsSignalization) {
-        const divisions = densities.length;
+    constructor(public startPoint: Point, public endPoint: Point, public densities?: number[], public lights?: LightsSignalization) {
+        const divisions = densities ? densities.length : 1;
         this.a = (endPoint.y - startPoint.y) / (endPoint.x - startPoint.x)
         let x = startPoint.x;
         let y = startPoint.y;
@@ -61,7 +67,12 @@ export class Line {
             let old_y = y;
             x = (endPoint.x - startPoint.x) / divisions * i + startPoint.x;
             y = (endPoint.y - startPoint.y) / divisions * i + startPoint.y;
-            const section = new Section(new Point(old_x, old_y), new Point(x, y), this.a, densities[i - 1]);
+            let section: Section;
+            if(densities[i - 1]){
+                section = new Section(new Point(old_x, old_y), new Point(x, y), this.a, densities[i - 1]);
+            }else{
+                section = new Section(new Point(old_x, old_y), new Point(x, y), this.a);
+            }
             this.sections.push(section);
         }
     }
