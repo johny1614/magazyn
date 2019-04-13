@@ -11,8 +11,9 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./net.component.css']
 })
 export class NetComponent implements AfterViewInit {
-  @ViewChild('net')
+  @ViewChild('netCanvas')
   netCanvas: ElementRef;
+
   net: Net;
   ctx: CanvasRenderingContext2D;
   constructor(private ns: NetService, private cs: CanvasService, private http: HttpClient) { }
