@@ -19,33 +19,18 @@ export class NetComponent implements AfterViewInit {
   public getJSON(url): Observable<any> {
     return this.http.get(url);
   }
-
-  ngAfterViewInit() {
-    // console.log('data to',this.json);
-    this.getJSON('assets/nets/net1.json').subscribe(data => {
-      this.ctx = this.netCanvas.nativeElement.getContext("2d");
-      this.cs.ctx = this.ctx;
-      this.net = data;
-      const line1 = NetFactory.getLine(this.net.lines[0]);
-      console.log('l1', line1);
-      const line2 = NetFactory.getLine(this.net.lines[1]);
-      const line3 = NetFactory.getLine(this.net.lines[2]);
-      this.net.lines = [line1, line2, line3];
-      this.cs.drawAllLines(this.net);
-      this.ctx.stroke();
+  ngAfterViewInit() 
+  {
+    this.getJSON('assets/nets/net1.json').subscribe(netData => {
+      this.getJSON('assets/densities/net1_den1.json').subscribe(dynamicData=>{
+        this.ctx = this.netCanvas.nativeElement.getContext("2d");
+        this.net=NetFactory.netFromJson(netData,dynamicData);
+        this.cs.ctx = this.ctx;
+        this.cs.drawAllLines(this.net);
+        this.ctx.stroke();
+        
+      })
     });
-    // this.ns.ctx = this.ctx;
-    // const lights1=new LightsSignalization();
-    // lights1.left=new LightPositioned(Light.green,new Point(215, 285),'right_up_green')
-    // lights1.right=new LightPositioned(Light.green,new Point(215, 305),'right_down_green')
-    // const line1 = new Line(new Point(100, 300), new Point(200, 300), [2, 1],lights1)
-    // const line3 = new Line(new Point(300, 330), new Point(400, 370), [1, 2])
-    // const line2 = new Line(new Point(300, 270), new Point(400, 230), [1, 2])
-    // const net = new Net(0,[line1,line2,line3]);
-    // this.cs.drawAllLines(net);
-    // this.ctx.stroke();
-    // this.ns.roundRectangle(210, 260, 80, 80, 10)
-    // this.ctx.stroke();
   }
 
 }

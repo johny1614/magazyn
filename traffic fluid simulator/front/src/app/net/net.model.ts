@@ -34,8 +34,20 @@ export interface ILine {
     ligths?: LightsSignalization;
 }
 export class NetFactory {
-    static getLine(line: ILine) {
+    static getLine(line: ILine): Line {
         return new Line(line.startPoint, line.endPoint, line.densities, line.ligths)
+    }
+    static netFromJson(netData, dynamicData):Net {
+        const lines = [];
+        netData.lines.forEach(iline => lines.push(NetFactory.getLine(iline));
+        let i=0;
+        lines.forEach(line => {
+            line.sections.forEach(section => {
+                section.density=dynamicData.densities[i];
+                i++;
+            });
+        });
+        return new Net(dynamicData.time,lines);
     }
 }
 export class Line {
