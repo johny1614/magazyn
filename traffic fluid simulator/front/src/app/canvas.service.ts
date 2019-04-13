@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Point, Line, LightPositioned } from './net/net.model';
+import { Point, Line, LightPositioned, Net } from './net/net.model';
 
 
 
@@ -71,6 +71,11 @@ export class CanvasService {
     }
     if (line.lights) {
       this.drawLights(line);
+    }
+  }
+  drawAllLines(net: Net){
+    for (let line of net.lines){
+      this.drawLine(line);
     }
   }
 }
