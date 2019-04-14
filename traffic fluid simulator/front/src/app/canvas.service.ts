@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Point, Line, LightPositioned, Net } from './net/net.model';
+import { Line } from 'src/model/line';
+import { SingleLight } from 'src/model/light';
+import { Net } from 'src/model/net';
 
 
 
@@ -45,7 +47,7 @@ export class CanvasService {
   drawLights(line: Line) {
     Object.keys(line.lights).forEach(
       direction => {
-        const light: LightPositioned = line.lights[direction];
+        const light: SingleLight = line.lights[direction];
         let arrowImage = new Image();
         arrowImage.src = "../../assets/arrows/"+light.imageName+".png";
         arrowImage.onload = () => {

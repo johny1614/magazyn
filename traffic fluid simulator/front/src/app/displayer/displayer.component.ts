@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Net } from '../net/net.model';
 import { CanvasService } from '../canvas.service';
+import { Net } from 'src/model/net';
 
 @Component({
   selector: 'app-displayer',

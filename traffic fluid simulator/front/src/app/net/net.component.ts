@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Input } from '@angular/core';
-import { Net } from './net.model';
 import { CanvasService } from '../canvas.service';
+import { Net } from 'src/model/net';
 @Component({
   selector: 'app-net',
   templateUrl: './net.component.html',
