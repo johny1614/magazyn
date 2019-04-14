@@ -1,6 +1,7 @@
 {
     "lines": [
         {
+            "arrowWidth":40,
             "startPoint": {
                 "x": 100,
                 "y": 170
@@ -11,15 +12,15 @@
             },
             "densities":["n"],
             "ligths":{
-                "left":
+                "straigth":
                 {
-                    "light":"green",
-                    "position":{"x":200,"y":200},
-                    "imageName":"right_down_green"
+                    "position":{"x":210,"y":200},
+                    "imageName":"right_down_slightly_"
                 }
             }
         },
         {
+            "arrowWidth":30,
             "startPoint": {
                 "x": 100,
                 "y": 330
@@ -28,7 +29,14 @@
                 "x": 200,
                 "y": 300
             },
-            "densities":["n"]
+            "densities":["n"],
+            "ligths":{
+                "straigth":
+                {
+                    "position":{"x":210,"y":285},
+                    "imageName":"right_up_slightly_"
+                }
+            }
         },
         {
             "startPoint": {

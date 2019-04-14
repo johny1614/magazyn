@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Net, NetFactory } from './net/net.model';
+import { Net, NetFactory, Line } from './net/net.model';
 
 @Component({
   selector: 'app-root',
@@ -20,23 +20,22 @@ export class AppComponent {
     return this.http.get(url);
   }
   ngOnInit() {
-    // this.getJSON('assets/densities/net1_den1.json').subscribe((dynamicData) => {
-      //   this.dynamicData = dynamicData;
-        this.getJSON('assets/nets/net2.json').subscribe(netData => {
-            this.staticData = netData;
-            let net: Net = NetFactory.netFromJson(this.staticData);
-            console.log('necik pusty',net);
-            this.nets.push(net);
-        });
-
-            // for (let dynamicDataExample of dynamicData.values){
-            //     let net: Net = NetFactory.netFromJson(this.staticData,dynamicDataExample);
-            //     this.nets.push(net);
-            //   }
-            // })
-                      // this.getJSON('assets/densities/net2_den1_python.json').subscribe(dynamicData=> {
-                      //   console.log('d', dynamicData);
-                      // })
-    // })
+    this.getJSON('assets/nets/net2.json').subscribe(netData => {
+      this.staticData = netData;
+      this.getJSON('assets/densities/net2_den1_python.json').subscribe(dynamicData => {
+        for (let i = 0; i < dynamicData.nets.length; i++) {
+          let staticNet = NetFactory.netFromJson(this.staticData);
+          let dynamicNet = dynamicData.nets[i];
+          let k = 0;
+          for (let line of staticNet.lines) {
+            for (let section of line.sections) {
+              section.density = dynamicNet.densities[k]
+              k++;
+            }
+          }
+          this.nets.push(staticNet);
+        }
+      })
+    });
   }
 }

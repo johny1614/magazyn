@@ -113,11 +113,11 @@ memories = epoch()  # last epoch
 reward_sum = count_rewards()
 print(reward_sum)
 print(memories)
-lines = []
+nets = []
 for m in memories:
-    lines.append({'densities': m['state'], 'lights': m['action']})
+    nets.append({'densities': m['state'], 'lights': m['action']})
 data = {
-    'lines': lines,
+    'nets': nets,
     'rewards sum': reward_sum,
     'gamma': gamma,
     'learningEpochs': len(epochs),

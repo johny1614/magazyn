@@ -49,7 +49,7 @@ export class CanvasService {
         let arrowImage = new Image();
         arrowImage.src = "../../assets/arrows/"+light.imageName+".png";
         arrowImage.onload = () => {
-          const width = 20;
+          const width = line.arrowWidth ? line.arrowWidth : 20;
           const scaledHeight = width * arrowImage.height / arrowImage.width
           this.ctx.drawImage(arrowImage, light.position.x, light.position.y, width, scaledHeight);
         }
