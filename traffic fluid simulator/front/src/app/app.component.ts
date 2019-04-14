@@ -28,11 +28,12 @@ export class AppComponent {
     this.globaclService.timeChanger.next(-1);
   }
   ngOnInit() {
-    this.getJSON('assets/nets/net2.json').subscribe(staticData => {
-      this.getJSON('assets/densities/net2_den1_python.json').subscribe(dynamicData => {
-        this.nets = NetFactory.getNetsWithDensity(staticData,dynamicData)
-        NetFactory.attachLights(this.nets,dynamicData)
-      });
+    this.getJSON('assets/nets/net1.json').subscribe(staticData => {
+      this.nets = [NetFactory.netFromJson(staticData)];
+      // this.getJSON('assets/densities/net1_den1.json').subscribe(dynamicData => {
+      //   this.nets = NetFactory.getNetsWithDensity(staticData,dynamicData)
+      //   NetFactory.attachLights(this.nets,dynamicData)
+      // });
     });
   }
 }
