@@ -122,6 +122,7 @@ data = {
     'gamma': gamma,
     'learningEpochs': len(epochs),
     'learningMethod': 'Monte Carlo',
+    # 'turns':env.turns
 }
 
 saveToJson('net2', 'den1', data)

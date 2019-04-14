@@ -15,7 +15,9 @@
                 "straigth":
                 {
                     "position":{"x":210,"y":200},
-                    "imageName":"right_down_slightly_"
+                    "imageName":"right_down_slightly_",
+                    "from":1,
+                    "to":3
                 }
             }
         },
@@ -34,7 +36,9 @@
                 "straigth":
                 {
                     "position":{"x":210,"y":285},
-                    "imageName":"right_up_slightly_"
+                    "imageName":"right_up_slightly_",
+                    "from":2,
+                    "to":3
                 }
             }
         },

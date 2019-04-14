@@ -6,13 +6,17 @@ export class Point {
 export enum Light {
     green, yellow, red, none
 }
-export class LightPositioned {
-    constructor(public light: Light, public position: Point, public imageName: string) { }
+export interface LightPositioned {
+    light: Light;
+    position: Point;
+    imageName: string;
+    from: number; // section number
+    to: number; // section number
 }
 export class LightsSignalization {
-    left: LightPositioned;
-    straigth: LightPositioned;
-    right: LightPositioned;
+    left?: LightPositioned;
+    straigth?: LightPositioned;
+    right?: LightPositioned;
 }
 export class Section {
     constructor(
@@ -47,7 +51,8 @@ export class NetFactory {
     }
     static netFromJson(staticData, dynamicData?): Net {
         const lines = [];
-        staticData.lines.forEach(iline => lines.push(NetFactory.getLine(iline)));
+        const staticLinesCopy=JSON.parse(JSON.stringify(staticData.lines))
+        staticLinesCopy.forEach(iline => lines.push(NetFactory.getLine(iline)));
         let i = 0;
         if (dynamicData) {
             lines.forEach(line => {
@@ -57,7 +62,10 @@ export class NetFactory {
                 });
             });
         }
+        // delete staticLineCopy;
         const time = dynamicData ? dynamicData.time : 0;
+        // console.log('ymm');
+        // lines[0].lights.straigth.imageName+="huja";
         return new Net(time, lines);
     }
     static attachDensities(){
