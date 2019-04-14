@@ -5,6 +5,7 @@ import { Net } from 'src/model/net';
 import { SingleLight } from 'src/model/light';
 import { Line } from 'src/model/line';
 import { NetFactory } from 'src/services/netFactory';
+import { GlobalService } from 'src/services/global.service';
 
 @Component({
   selector: 'app-root',
@@ -18,9 +19,15 @@ export class AppComponent {
   staticData: any;
   timeDisplay;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private globaclService: GlobalService) { }
   public getJSON(url): Observable<any> {
     return this.http.get(url);
+  }
+  increaseTime(){
+    this.globaclService.timeChanger.next(1);
+  }
+  decreaseTime(){
+    this.globaclService.timeChanger.next(-1);
   }
   attachDensities(staticData, dynamicData): Net[] {
     const nets: Net[] = [];

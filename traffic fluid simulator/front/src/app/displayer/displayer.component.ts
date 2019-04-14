@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CanvasService } from '../canvas.service';
 import { Net } from 'src/model/net';
+import { GlobalService } from 'src/services/global.service';
 
 @Component({
   selector: 'app-displayer',
@@ -13,9 +14,12 @@ export class DisplayerComponent implements OnInit {
   nets: Net[];
   timeDisplay: number = 0;
 
-  constructor() { }
+  constructor(private globalService: GlobalService) { }
 
   ngOnInit() {
+    this.globalService.timeChanger.subscribe((timeChange) => {
+      this.timeDisplay += timeChange;
+    })
   }
 
 }
