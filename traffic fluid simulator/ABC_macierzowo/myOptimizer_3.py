@@ -39,16 +39,19 @@ def init_returns():
 
 
 def epoch():
-    env = Env(T)
+    env = Env(state_arr_size, max_time)
     state = tuple(env.x[0])
     memories = []
-    for t in range(T):
+    for t in range(max_time - 1):
         if not pi.has_key(state):
             pi[state]=random.choice(env.action_space)
         action=pi[state]
         old_state = tuple(state)
-        state, reward = env.step(hash_(action))
+        # print('action',action)
+        # print('hash',hash_(action))
+        state,reward = env.step(hash_(action))
         state = tuple(state)
+        # print('state',state)
         memories.append({'state': old_state, 'new_state': state, 'action': hash_(action), 'reward': reward})
     return memories
 
@@ -95,10 +98,11 @@ def count_rewards():
     print(rewards_sum)
     return rewards_sum
 
-
+state_arr_size=6
+max_time = 30
 gamma = 1
 epsilon = 0.1
-env = Env(10)
+env = Env(state_arr_size, max_time)
 wins = 0
 loses = 0
 state_space = []# poczotkowo nic [(x, y, z) for x in range(52) for y in range(52) for z in range(52)]
@@ -107,9 +111,8 @@ Q = {}
 returns = {}
 # returns = init_returns()
 pi = {}
-T = 10
 best_score = 0
-epochs = range(40)
+epochs = range(200)
 for e in epochs:
     memories = epoch()
     update_returns()
@@ -119,7 +122,7 @@ for e in epochs:
 update_pi(False)
 memories = epoch()  # last epoch
 reward_sum = count_rewards()
-print(reward_sum)
+# print(reward_sum)
 # print(memories)
 # nets = []
 # for m in memories:

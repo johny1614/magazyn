@@ -1,39 +1,52 @@
 import numpy as np
-from matrix import T,x0,A_a_green,A_b_green,u,A_a_wait
+from matrix_3 import T,x0, A_WAITING ,UP_A_green,DOWN_A_green,u
 #
 # -A-B-
 #      -E-F
 # -c_D-
 class Env:
-    def __init__(self,n):
+    def __init__(self,x_size,epochs_number):
         self.waitFlag=False
         self.waitTime=0
-        self.incoming_A=None
+        self.incoming_A=self.hash_(A_WAITING)
         self.static_switch_time=1
-        self.actual_A=A_a_green
-        self.wating_A=A_a_wait
-        self.n=n
-        self.x=[0]*(n+1)
+        self.A=self.hash_(UP_A_green)
+        self.wating_A=None
+        self.x=[0]*epochs_number
         self.x[0]=x0
-        self.y=[0]*(n+1)
+        self.y=[0]*epochs_number
         self.t=0
-        self.action_space=[A_a_green,A_b_green]
-    def do_action(self,A):
+        self.action_space=[UP_A_green,DOWN_A_green]
+    def hash_(self,action):
+        return tuple([tuple(a) for a in action])
+    def do_action(self):
+        # print('do action- A',self.A)
         t = self.t
-        self.x[t]=np.dot(A,self.x[t-1])
+        self.x[t]=np.dot(self.A,self.x[t-1])
         self.x[t][0]+=u[t-1][0]
         self.x[t][1]+=u[t-1][1]
-        self.y[t]=self.x[t][2]
+        self.y[t]=self.x[t][-1]
         return self.x[t],self.y[t]
     def switch_wait(self,A):
+        pass
     def step(self,A):
         self.t += 1
-        if(self.actual_A==A):
-            return self.do_action(A)
+        #stay
+        # print('A',A)
+        # print('self.A',self.A)
+        if(self.A==A):
+            return self.do_action()
         # switch
-        if(self.actual_A==self.incoming_A):
-            if(self.waitTime==0):
-                self.do_action(self.wating_a)
+        if(self.incoming_A == A):
+            # we can use light
+            if(self.waitTime == 0):
+                self.A = self.incoming_A
+                self.do_action()
+        else: # we cannot use light yet so we wait
+            self.waitTime -= 1
+            self.A = self.hash_(A_WAITING)
+            self.incoming_A=A
+        return self.do_action()
 
     def dry_step(self,A):
         t=self.t
