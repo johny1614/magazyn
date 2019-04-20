@@ -1,20 +1,21 @@
 import numpy as np
-from matrix_3 import T,x0, A_WAITING ,UP_A_green,DOWN_A_green,u
+from matrices import T,x0, A_WAITING ,UP_A_green,DOWN_A_green,u
 #
 # -A-B-
 #      -E-F
 # -c_D-
 class Env:
-    def __init__(self,x_size,epochs_number):
+    def __init__(self, max_time):
+        self.x_size=6
         self.waitFlag=False
         self.waitTime=0
         self.incoming_A=self.hash_(A_WAITING)
-        self.static_switch_time=1
+        self.static_switch_time=0
         self.A=self.hash_(UP_A_green)
         self.wating_A=None
-        self.x=[0]*epochs_number
+        self.x= [self.x_size*[0]] * max_time
         self.x[0]=x0
-        self.y=[0]*epochs_number
+        self.y= [0] * max_time
         self.t=0
         self.action_space=[UP_A_green,DOWN_A_green]
     def hash_(self,action):
@@ -24,8 +25,19 @@ class Env:
         t = self.t
         self.x[t]=np.dot(self.A,self.x[t-1])
         self.x[t][0]+=u[t-1][0]
-        self.x[t][1]+=u[t-1][1]
-        self.y[t]=self.x[t][-1]
+        self.x[t][2]+=u[t-1][1]
+        self.y[t]=self.x[t][-2]
+        # print('x',self.x[t])
+        if((self.A==DOWN_A_green).all()):
+            print('DOWN')
+        elif((self.A==UP_A_green).all()):
+            print('UP')
+        elif((self.A==A_WAITING).all()):
+            print('WAIT')
+        else:
+            print("NIC!!!!!!!")
+        # if(self.y[t]>0):
+        #     print('reward!',self.y[t])
         return self.x[t],self.y[t]
     def switch_wait(self,A):
         pass
@@ -42,8 +54,10 @@ class Env:
             if(self.waitTime == 0):
                 self.A = self.incoming_A
                 self.do_action()
+            else:
+                self.waitTime -= 1
         else: # we cannot use light yet so we wait
-            self.waitTime -= 1
+            self.waitTime=self.static_switch_time
             self.A = self.hash_(A_WAITING)
             self.incoming_A=A
         return self.do_action()
