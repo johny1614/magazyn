@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import gym
 import random
 import numpy as np
-from env_3 import Env
+from env import Env
 from jsonSaver import saveToJson
 
 
@@ -39,7 +39,7 @@ def init_returns():
 
 
 def epoch():
-    env = Env(state_arr_size, max_time)
+    env = Env( max_time)
     state = tuple(env.x[0])
     memories = []
     for t in range(max_time - 1):
@@ -98,11 +98,10 @@ def count_rewards():
     print(rewards_sum)
     return rewards_sum
 
-state_arr_size=6
 max_time = 30
 gamma = 1
-epsilon = 0.1
-env = Env(state_arr_size, max_time)
+epsilon = 0.2
+env = Env( max_time)
 wins = 0
 loses = 0
 state_space = []# poczotkowo nic [(x, y, z) for x in range(52) for y in range(52) for z in range(52)]
@@ -112,7 +111,7 @@ returns = {}
 # returns = init_returns()
 pi = {}
 best_score = 0
-epochs = range(200)
+epochs = range(100000)
 for e in epochs:
     memories = epoch()
     update_returns()

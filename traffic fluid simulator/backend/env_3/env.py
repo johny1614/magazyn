@@ -1,53 +1,74 @@
 import numpy as np
-from matrix_3 import T,x0, A_WAITING ,UP_A_green,DOWN_A_green,u
+from matrices import T,x0, A_ORANGE ,UP_A_green,DOWN_A_green,u
 #
 # -A-B-
 #      -E-F
 # -c_D-
+# road_1
+#           road_3
+# road_2
+
 class Env:
-    def __init__(self,x_size,epochs_number):
-        self.waitFlag=False
-        self.waitTime=0
-        self.incoming_A=self.hash_(A_WAITING)
-        self.static_switch_time=1
-        self.A=self.hash_(UP_A_green)
-        self.wating_A=None
-        self.x=[0]*epochs_number
+    def __init__(self, max_time):
+        self.x_size=6
+        self.min_light_duration = 3
+        self.orange_light_duration = 1
+        self.A=self.getActionMatrix('road_1')
+        self.incoming_A = None
+        self.actual_light_duration=0
+        self.x= [self.x_size*[0]] * max_time
         self.x[0]=x0
-        self.y=[0]*epochs_number
+        self.y= [0] * max_time
         self.t=0
-        self.action_space=[UP_A_green,DOWN_A_green]
+    def getActionSpace(self):
+        if(self.actual_light_duration>self.min_light_duration):
+            return ['road_1','road_2']
+        else:
+            return ['wait']
+    def getActionName(self,actionMatrix):
+        if(actionMatrix==A_ORANGE):
+            light = "green" if self.actual_light_duration>self.orange_light_duration else "orange"
+            return "wait_"+self.getActionName(self.A)+"_"+light
+        elif (actionMatrix == UP_A_green):
+            return "road_1"
+        elif(actionMatrix==DOWN_A_green):
+            return "road_2"
+        return "action-name-error"
+    def getActionMatrix(self,actionName):
+        if(actionName=="road_1"):
+            return self.hash_(UP_A_green)
+        elif(actionName=="road_2"):
+            return self.hash_(DOWN_A_green)
+        elif(actionName=="wait"):
+            if(self.actual_light_duration>self.min_light_duration):
+                return self.A
+            else:
+                return A_ORANGE
     def hash_(self,action):
         return tuple([tuple(a) for a in action])
-    def do_action(self):
-        # print('do action- A',self.A)
+    def do_action(self,A):
         t = self.t
-        self.x[t]=np.dot(self.A,self.x[t-1])
+        self.x[t]=np.dot(A,self.x[t-1])
         self.x[t][0]+=u[t-1][0]
-        self.x[t][1]+=u[t-1][1]
-        self.y[t]=self.x[t][-1]
-        return self.x[t],self.y[t]
+        self.x[t][2]+=u[t-1][1]
+        self.y[t]=self.x[t][-2]
+        actionName=self.getActionName(A)
+        return self.x[t],self.y[t],actionName
     def switch_wait(self,A):
         pass
-    def step(self,A):
+    def step(self,actionName):
         self.t += 1
-        #stay
-        # print('A',A)
-        # print('self.A',self.A)
-        if(self.A==A):
-            return self.do_action()
-        # switch
-        if(self.incoming_A == A):
-            # we can use light
-            if(self.waitTime == 0):
-                self.A = self.incoming_A
-                self.do_action()
-        else: # we cannot use light yet so we wait
-            self.waitTime -= 1
-            self.A = self.hash_(A_WAITING)
-            self.incoming_A=A
-        return self.do_action()
-
+        A=self.getActionMatrix(actionName)
+        if(actionName=='wait' and self.actual_light_duration<self.orange_light_duration):
+            self.actual_light_duration+=1
+            return self.do_action(A_ORANGE)
+        elif(A!=self.A and not actionName=='wait'):
+            self.A=A
+            self.actual_light_duration=0
+            return self.do_action(A_ORANGE)
+        elif(A==self.A or actionName=='wait'):
+            self.actual_light_duration+=1
+            return self.do_action(self.A)
     def dry_step(self,A):
         t=self.t
         t=t+1
