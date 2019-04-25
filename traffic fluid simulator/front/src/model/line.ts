@@ -10,8 +10,7 @@ export interface ILine {
     arrowWidth?: number;
 }
 export class Line {
-    constructor(public startPoint: Point, public endPoint: Point, public densities?: number[], public lights?: LightsSignalization, public arrowWidth?: number) {
-        this.arrowWidth = this.arrowWidth ? this.arrowWidth : 20;
+    constructor(public startPoint: Point, public endPoint: Point, public densities?: number[], public lights?: LightsSignalization) {
         const divisions = densities ? densities.length : 1;
         this.a = (endPoint.y - startPoint.y) / (endPoint.x - startPoint.x)
         let x = startPoint.x;

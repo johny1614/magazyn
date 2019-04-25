@@ -5,13 +5,14 @@ import { SingleLight } from "src/model/light";
 export class NetFactory {
     static getLine(line: ILine): Line {
         if (line.densities || line.ligths) {
-            return new Line(line.startPoint, line.endPoint, line.densities, line.ligths, line.arrowWidth)
+            return new Line(line.startPoint, line.endPoint, line.densities, line.ligths)
         }
         return new Line(line.startPoint, line.endPoint);
     }
     static netFromJson(staticData, dynamicData?): Net {
         const lines = [];
         const staticLinesCopy=JSON.parse(JSON.stringify(staticData.lines))
+        console.log('staticLinesCopy',staticLinesCopy)
         staticLinesCopy.forEach(iline => lines.push(NetFactory.getLine(iline)));
         let i = 0;
         if (dynamicData) {

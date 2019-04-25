@@ -9,6 +9,7 @@ export interface SingleLight {
     imageName: string;
     from: number; // section number
     to: number; // section number
+    arrowWidth: number;
 }
 export class LightsSignalization {
     left?: SingleLight;

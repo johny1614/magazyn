@@ -28,9 +28,9 @@ export class AppComponent {
     this.globaclService.timeChanger.next(-1);
   }
   ngOnInit() {
-    this.getJSON('assets/nets/net3.json').subscribe(staticData => {
+    this.getJSON('assets/nets/net4.json').subscribe(staticData => {
       this.nets = [NetFactory.netFromJson(staticData)];
-      this.getJSON('assets/densities/net3_den1.json').subscribe(dynamicData => {
+      this.getJSON('assets/densities/net4_den1.json').subscribe(dynamicData => {
         console.log('dy', dynamicData);
 
         this.nets = NetFactory.getNetsWithDensity(staticData, dynamicData)

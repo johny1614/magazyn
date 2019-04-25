@@ -1,0 +1,130 @@
+{
+    "lines": [
+        {
+            "startPoint": {
+                "x": 100,
+                "y": 220
+            },
+            "endPoint":{
+                "x": 220,
+                "y": 220
+            },
+            "densities":["n","n","n"],
+            "ligths":{
+                "straigth":
+                {
+                    "position":{"x":230,"y":260},
+                    "imageName":"right_down_slightly_",
+                    "from":1,
+                    "to":3,
+                    "arrowWidth":30
+                }
+            }
+        },
+        {
+            "startPoint": {
+                "x": 100,
+                "y": 250
+            },
+            "endPoint":{
+                "x": 220,
+                "y": 250
+            },
+            "densities":["n","n","n"],
+            "ligths":{
+                "straigth":
+                {
+                    "position":{"x":230,"y":240},
+                    "imageName":"right_up_slightly_",
+                    "from":2,
+                    "to":3,
+                    "arrowWidth":30
+                }
+            }
+        },
+        {
+            "ligths":{
+                "right":
+                {
+                    "position":{"x":290,"y":220},
+                    "imageName":"top",
+                    "from":2,
+                    "to":3,
+                    "arrowWidth":12
+                },
+                "left":
+                {
+                    "position":{"x":270,"y":230},
+                    "imageName":"left_top_slightly",
+                    "from":2,
+                    "to":3,
+                    "arrowWidth":24
+                }
+            },
+            "startPoint": {
+                "x": 300,
+                "y": 250
+            },
+            "endPoint":{
+                "x": 400,
+                "y": 310
+            },
+            "densities":["n","n","n"]
+        },
+        {
+            "startPoint": {
+                "x": 280,
+                "y": 280
+            },
+            "endPoint":{
+                "x": 380,
+                "y": 340
+            },
+            "ligths":{
+                "straigth":
+                {
+                    "position":{"x":270,"y":190},
+                    "imageName":"down",
+                    "from":2,
+                    "to":3,
+                    "arrowWidth":"15"
+                }
+            },
+            "densities":["n","n","n"]
+        },
+        {
+
+            "startPoint": {
+                "x": 300,
+                "y": 210
+            },
+            "endPoint":{
+                "x": 400,
+                "y": 150
+            },
+            "densities":["n","n","n"]
+        },
+        {
+            "startPoint": {
+                "x": 280,
+                "y": 180
+            },
+            "endPoint":{
+                "x": 380,
+                "y": 120
+            },
+            "ligths":{
+                "straigth":
+                {
+                    "position":{"x":250,"y":180},
+                    "imageName":"left_down_slightly",
+                    "from":2,
+                    "to":3,
+                    "arrowWidth": 25
+                }
+            },
+            "densities":["n","n","n"]
+        }
+        
+    ]
+}

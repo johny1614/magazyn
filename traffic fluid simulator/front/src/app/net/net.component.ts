@@ -18,10 +18,14 @@ export class NetComponent implements AfterViewInit {
   }
   private _net: Net;
   ctx: CanvasRenderingContext2D;
+  mousePosition;
   constructor(private cs: CanvasService) { }
   ngAfterViewInit() {
     this.ctx = this.netCanvas.nativeElement.getContext("2d");
     this.cs.ctx = this.ctx;
+    this.netCanvas.nativeElement.addEventListener("mousemove",
+      (evt)=>this.getMousePos(evt)
+      ); 
   }
   
   drawNet() {
@@ -29,5 +33,12 @@ export class NetComponent implements AfterViewInit {
     this.cs.drawAllLines(this._net);
     this.ctx.stroke();
   }
+  getMousePos(evt) {
+    let rect = this.netCanvas.nativeElement.getBoundingClientRect();
+    this.mousePosition = {
+      x: Math.round(evt.clientX - rect.left),
+      y: Math.round(evt.clientY - rect.top)
+    };
+}
 
 }
