@@ -13,19 +13,7 @@
                 "n",
                 "n",
                 "n"
-            ],
-            "ligths": {
-                "straigth": {
-                    "position": {
-                        "x": 230,
-                        "y": 360
-                    },
-                    "imageName": "right_down_slightly_",
-                    "from": 1,
-                    "to": 3,
-                    "arrowWidth": 30
-                }
-            }
+            ]
         },
         {
             "startPoint": {
@@ -36,23 +24,35 @@
                 "x": 220,
                 "y": 350
             },
+          "ligths": {
+            "right": {
+              "position": {
+                "x": 220,
+                "y": 350
+              },
+              "imageName": "arrow_straight",
+              "from": 2,
+              "to": 3,
+              "arrowWidth": 16,
+              "rotation":70
+            },
+            "left": {
+              "position": {
+                "x": 210,
+                "y": 370
+              },
+              "imageName": "arrow_straight",
+              "from": 2,
+              "to": 3,
+              "arrowWidth": 16,
+              "rotation":110
+            }
+          },
             "densities": [
                 "n",
                 "n",
                 "n"
-            ],
-            "ligths": {
-                "straigth": {
-                    "position": {
-                        "x": 230,
-                        "y": 340
-                    },
-                    "imageName": "right_up_slightly_",
-                    "from": 2,
-                    "to": 3,
-                    "arrowWidth": 30
-                }
-            }
+            ]
         },
         {
             "ligths": {
@@ -61,20 +61,21 @@
                         "x": 290,
                         "y": 320
                     },
-                    "imageName": "top",
+                    "imageName": "arrow_straight",
                     "from": 2,
                     "to": 3,
-                    "arrowWidth": 12
+                    "arrowWidth": 16
                 },
                 "left": {
                     "position": {
                         "x": 270,
-                        "y": 330
+                        "y": 335
                     },
-                    "imageName": "left_top_slightly",
+                    "imageName": "arrow_straight",
                     "from": 2,
                     "to": 3,
-                    "arrowWidth": 24
+                    "arrowWidth": 16,
+                  "rotation":290
                 }
             },
             "startPoint": {
@@ -103,23 +104,25 @@
             "ligths": {
                 "left": {
                     "position": {
-                        "x": 390,
-                        "y": 430
+                        "x": 380,
+                        "y": 450
                     },
-                    "imageName": "right_up_slightly_",
+                    "imageName": "arrow_straight",
                     "from": 2,
                     "to": 3,
-                    "arrowWidth": 24
+                    "arrowWidth": 17,
+                  "rotation":65
                 },
                 "right": {
                     "position": {
-                        "x": 390,
-                        "y": 450
+                        "x": 365,
+                        "y": 460
                     },
-                    "imageName": "right_down_slightly_",
+                    "imageName": "arrow_straight",
                     "from": 2,
                     "to": 3,
-                    "arrowWidth": 24
+                    "arrowWidth": 17,
+                  "rotation":130
                 }
             },
             "densities": [
@@ -140,23 +143,25 @@
             "ligths": {
                 "right": {
                     "position": {
-                        "x": 410,
-                        "y": 250
+                        "x": 390,
+                        "y": 280
                     },
-                    "imageName": "right_down_slightly_",
+                    "imageName": "arrow_right",
                     "from": 2,
                     "to": 3,
-                    "arrowWidth": "20"
+                    "arrowWidth": "22",
+                  "rotation":50
                 },
                 "left": {
                     "position": {
-                        "x": 410,
-                        "y": 230
+                        "x": 400,
+                        "y": 240
                     },
-                    "imageName": "right_up_slightly_",
+                    "imageName": "arrow_straight",
                     "from": 2,
                     "to": 3,
-                    "arrowWidth": "20"
+                    "arrowWidth": "20",
+                  "rotation":60
                 }
             },
             "densities": [
@@ -278,8 +283,8 @@
         },
         {
             "startPoint": {
-                "x": 540,
-                "y": 560
+                "x": 580,
+                "y": 530
             },
             "endPoint": {
                 "x": 480,
@@ -298,13 +303,14 @@
                 },
                 "left": {
                     "position": {
-                        "x": 445,
+                        "x": 450,
                         "y": 455
                     },
-                    "imageName": "left_top_slightly",
+                    "imageName": "arrow_straight",
                     "from": 2,
                     "to": 3,
-                    "arrowWidth": 25
+                    "arrowWidth": 15,
+                  "rotation":310
                 }
             },
             "densities": [
@@ -315,12 +321,12 @@
         },
         {
             "startPoint": {
-                "x": 450,
+                "x": 468,
                 "y": 490
             },
             "endPoint": {
-                "x": 510,
-                "y": 580
+                "x": 568,
+                "y": 550
             },
             "densities": [
                 "n",
@@ -334,29 +340,31 @@
                 "y": 160
             },
             "endPoint": {
-                "x": 550,
-                "y": 70
+                "x": 580,
+                "y": 100
             },
             "ligths": {
                 "right": {
                     "position": {
-                        "x": 450,
-                        "y": 160
+                        "x": 440,
+                        "y": 165
                     },
-                    "imageName": "left_down_slightly",
+                    "imageName": "arrow_straight",
                     "from": 1,
                     "to": 3,
-                    "arrowWidth": 25
+                    "arrowWidth": 17,
+                  "rotation":"240"
                 },
                 "left": {
                     "position": {
-                        "x": 470,
-                        "y": 170
+                        "x": 445,
+                        "y": 175
                     },
-                    "imageName": "down_left_slightly",
+                    "imageName": "arrow_straight",
                     "from": 2,
                     "to": 3,
-                    "arrowWidth": 15
+                    "arrowWidth": 17,
+                  "rotation":210
                 }
             },
             "densities": [
@@ -367,12 +375,12 @@
         },
         {
             "startPoint": {
-                "x": 510,
-                "y": 180
+                "x": 495,
+                "y": 190
             },
             "endPoint": {
-                "x": 580,
-                "y": 90
+                "x": 595,
+                "y": 130
             },
             "densities": [
                 "n",

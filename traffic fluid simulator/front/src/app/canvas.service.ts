@@ -1,7 +1,8 @@
 import {ElementRef, Injectable} from '@angular/core';
 import {Line} from 'src/model/line';
-import {SingleLight} from 'src/model/light';
+import {LightsSignalization, SingleLight} from 'src/model/light';
 import {Net} from 'src/model/net';
+import {Point} from "../model/point";
 
 
 @Injectable()
@@ -49,41 +50,26 @@ export class CanvasService {
     }
   }
 
-  drawRotatedImage(degrees: number, image: HTMLImageElement) {
-    // this.ctx.clearRect(0, 0, this.netCanvas.nativeElement.width, this.netCanvas.nativeElement.height);
-    // to jest nie potrzebne!
-
-    // save the unrotated context of the canvas so we can restore it later
-    // the alternative is to untranslate & unrotate after drawing
+  drawRotatedImage(degrees: number, image: HTMLImageElement,position: Point,width) {
+    const scaledHeight = width * image.height / image.width;
     this.ctx.save();
-
-    // move to the center of the canvas
-    this.ctx.translate(this.netCanvas.nativeElement.width / 2, this.netCanvas.nativeElement.height / 2);
-
-    // drawRotatedImage the canvas to the specified degrees
+    this.ctx.translate(position.x+image.width / 2,position.y);
     this.ctx.rotate(degrees * Math.PI / 180);
-
-    // draw the image
-    // since the context is rotated, the image will be rotated also
-    this.ctx.drawImage(image, -image.width / 2, -image.width / 2);
-
-    // we’re done with the rotating so restore the unrotated context
+    this.ctx.drawImage(image, -image.width / 2, -image.width / 2,width,scaledHeight);
     this.ctx.restore();
-
   }
 
   drawLights(line: Line) {
     Object.keys(line.lights).forEach(
       direction => {
         const light: SingleLight = line.lights[direction];
-        console.log(light.rotation)
         let arrowImage = new Image();
         arrowImage.src = "../../assets/arrows/" + light.imageName + ".png";
         arrowImage.onload = () => {
           const width = light.arrowWidth ? light.arrowWidth : 40;
           const scaledHeight = width * arrowImage.height / arrowImage.width;
           if (light.rotation > 0) {
-            this.drawRotatedImage(light.rotation, arrowImage)
+            this.drawRotatedImage(light.rotation, arrowImage,light.position,width);
           }
           else {
             this.ctx.drawImage(arrowImage, light.position.x, light.position.y, width, scaledHeight);
