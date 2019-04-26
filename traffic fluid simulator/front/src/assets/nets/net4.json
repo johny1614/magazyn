@@ -143,14 +143,14 @@
             "ligths": {
                 "right": {
                     "position": {
-                        "x": 390,
-                        "y": 280
+                        "x": 378,
+                        "y": 285
                     },
                     "imageName": "arrow_right",
                     "from": 2,
                     "to": 3,
                     "arrowWidth": "22",
-                  "rotation":50
+                  "rotation":60
                 },
                 "left": {
                     "position": {
@@ -257,19 +257,19 @@
                 "right": {
                     "position": {
                         "x": 470,
-                        "y": 230
+                        "y": 220
                     },
-                    "imageName": "top_right_slightly",
+                    "imageName": "arrow_right",
                     "from": 2,
                     "to": 3,
-                    "arrowWidth": 20
+                    "arrowWidth": 25
                 },
                 "left": {
                     "position": {
                         "x": 440,
-                        "y": 240
+                        "y": 220
                     },
-                    "imageName": "left_top_slightly",
+                    "imageName": "arrow_left",
                     "from": 2,
                     "to": 3,
                     "arrowWidth": 25
