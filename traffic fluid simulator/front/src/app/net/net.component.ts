@@ -23,11 +23,12 @@ export class NetComponent implements AfterViewInit {
   ngAfterViewInit() {
     this.ctx = this.netCanvas.nativeElement.getContext("2d");
     this.cs.ctx = this.ctx;
+    this.cs.netCanvas = this.netCanvas;
     this.netCanvas.nativeElement.addEventListener("mousemove",
       (evt)=>this.getMousePos(evt)
-      ); 
+      );
   }
-  
+
   drawNet() {
     this.ctx.clearRect(0, 0, this.netCanvas.nativeElement.width, this.netCanvas.nativeElement.height);
     this.cs.drawAllLines(this._net);
