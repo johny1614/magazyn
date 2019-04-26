@@ -121,7 +121,6 @@
                     "to": 3,
                     "arrowWidth": 24
                 }
- 
             },
             "densities": [
                 "n",
@@ -138,7 +137,7 @@
                 "x": 400,
                 "y": 250
             },
-            "ligths":{
+            "ligths": {
                 "right": {
                     "position": {
                         "x": 410,
@@ -211,7 +210,8 @@
             "endPoint": {
                 "x": 440,
                 "y": 400
-            },"ligths": {
+            },
+            "ligths": {
                 "right": {
                     "position": {
                         "x": 420,
@@ -305,6 +305,16 @@
                     "from": 2,
                     "to": 3,
                     "arrowWidth": 25
+                },
+                "straigth": {
+                    "position": {
+                        "x": 400,
+                        "y": 400
+                    },
+                    "imageName": "down",
+                    "from": 2,
+                    "to": 3,
+                    "rotation":44
                 }
             },
             "densities": [

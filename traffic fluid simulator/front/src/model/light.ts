@@ -10,6 +10,7 @@ export interface SingleLight {
     from: number; // section number
     to: number; // section number
     arrowWidth: number;
+    rotation:number;
 }
 export class LightsSignalization {
     left?: SingleLight;

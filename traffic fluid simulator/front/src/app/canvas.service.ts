@@ -41,21 +41,43 @@ export class CanvasService {
       this.ctx.fillText(section.density, section.middlePoint.x - 10, section.middlePoint.y);
     }
     else {
-      this.ctx.fillText(section.density, section.middlePoint.x-5, section.middlePoint.y - 10);
+      this.ctx.fillText(section.density, section.middlePoint.x - 5, section.middlePoint.y - 10);
     }
   }
   drawLights(line: Line) {
     Object.keys(line.lights).forEach(
       direction => {
         const light: SingleLight = line.lights[direction];
+        console.log(light.rotation)
         let arrowImage = new Image();
-        arrowImage.src = "../../assets/arrows/"+light.imageName+".png";
+        arrowImage.src = "../../assets/arrows/" + light.imageName + ".png";
         arrowImage.onload = () => {
-          console.log('line',light.light);
-          
           const width = light.arrowWidth ? light.arrowWidth : 40;
           const scaledHeight = width * arrowImage.height / arrowImage.width
-          this.ctx.drawImage(arrowImage, light.position.x, light.position.y, width, scaledHeight);
+          if (light.rotation > 0) {
+            this.ctx.save();
+            const rotateValue = light.rotation * Math.PI / 180
+            // const rotateValue = 20 * Math.PI / 180;
+            console.log(rotateValue);
+            
+            this.ctx.rotate(rotateValue)
+            this.ctx.drawImage(arrowImage, light.position.x, light.position.y, width, scaledHeight);
+            this.ctx.restore();
+          }
+          else {
+            // this.ctx.drawImage(arrowImage, light.position.x, light.position.y, width, scaledHeight);
+
+          }
+          // this.ctx.save();
+          // this.ctx.rotate(Math.PI)
+          // this.ctx.restore();
+
+
+          // ctx.save(); // save current state
+          // ctx.rotate(Math.PI); // rotate
+          // ctx.drawImage(link,x,y,20,20); // draws a chain link or dagger
+          // ctx.restore(); // restore original states (no rotation etc)
+
         }
       }
     )
@@ -76,8 +98,8 @@ export class CanvasService {
       this.drawLights(line);
     }
   }
-  drawAllLines(net: Net){
-    for (let line of net.lines){
+  drawAllLines(net: Net) {
+    for (let line of net.lines) {
       this.drawLine(line);
     }
   }
