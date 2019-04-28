@@ -27,25 +27,25 @@
           "ligths": {
             "right": {
               "position": {
-                "x": 220,
-                "y": 350
+                "x": 192,
+                "y": 385
               },
-              "imageName": "arrow_straight",
+              "imageName": "arrow_right_light",
               "from": 2,
               "to": 3,
               "arrowWidth": 16,
-              "rotation":70
+              "rotation":90
             },
             "left": {
               "position": {
-                "x": 210,
-                "y": 370
+                "x": 192,
+                "y": 365
               },
-              "imageName": "arrow_straight",
+              "imageName": "arrow_left_light",
               "from": 2,
               "to": 3,
               "arrowWidth": 16,
-              "rotation":110
+              "rotation":90
             }
           },
             "densities": [
@@ -61,21 +61,22 @@
                         "x": 290,
                         "y": 320
                     },
-                    "imageName": "arrow_straight",
+                    "imageName": "arrow_right",
                     "from": 2,
                     "to": 3,
-                    "arrowWidth": 16
+                    "arrowWidth": 20,
+                    "rotation":300
                 },
                 "left": {
                     "position": {
-                        "x": 270,
-                        "y": 335
+                        "x": 275,
+                        "y": 337
                     },
-                    "imageName": "arrow_straight",
+                    "imageName": "arrow_left_light",
                     "from": 2,
                     "to": 3,
                     "arrowWidth": 16,
-                  "rotation":290
+                  "rotation":300
                 }
             },
             "startPoint": {
@@ -104,25 +105,25 @@
             "ligths": {
                 "left": {
                     "position": {
-                        "x": 380,
+                        "x": 330,
                         "y": 450
                     },
-                    "imageName": "arrow_straight",
+                    "imageName": "arrow_left",
                     "from": 2,
                     "to": 3,
-                    "arrowWidth": 17,
-                  "rotation":65
+                    "arrowWidth": 22,
+                  "rotation":120
                 },
                 "right": {
                     "position": {
                         "x": 365,
-                        "y": 460
+                        "y": 465
                     },
                     "imageName": "arrow_straight",
                     "from": 2,
                     "to": 3,
                     "arrowWidth": 17,
-                  "rotation":130
+                  "rotation":120
                 }
             },
             "densities": [
@@ -144,23 +145,23 @@
                 "right": {
                     "position": {
                         "x": 378,
-                        "y": 285
+                        "y": 288
                     },
                     "imageName": "arrow_right",
                     "from": 2,
                     "to": 3,
-                    "arrowWidth": "22",
+                    "arrowWidth": "20",
                   "rotation":60
                 },
                 "left": {
                     "position": {
-                        "x": 400,
-                        "y": 240
+                        "x": 398,
+                        "y": 248
                     },
                     "imageName": "arrow_straight",
                     "from": 2,
                     "to": 3,
-                    "arrowWidth": "20",
+                    "arrowWidth": "17",
                   "rotation":60
                 }
             },
@@ -180,99 +181,103 @@
                 "y": 220
             },
             "ligths": {
-                "right": {
+                "straight": {
                     "position": {
-                        "x": 250,
-                        "y": 280
+                        "x": 238,
+                        "y": 275
                     },
-                    "imageName": "left_down_slightly",
+                    "imageName": "arrow_straight",
                     "from": 1,
                     "to": 3,
-                    "arrowWidth": 25
+                    "arrowWidth": 17,
+                    "rotation":240
                 },
                 "left": {
                     "position": {
-                        "x": 270,
-                        "y": 290
-                    },
-                    "imageName": "down",
-                    "from": 2,
-                    "to": 3,
-                    "arrowWidth": "15"
-                }
-            },
-            "densities": [
-                "n",
-                "n",
-                "n"
-            ]
-        },
-        {
-            "startPoint": {
-                "x": 440,
-                "y": 260
-            },
-            "endPoint": {
-                "x": 440,
-                "y": 400
-            },
-            "ligths": {
-                "right": {
-                    "position": {
-                        "x": 420,
-                        "y": 410
-                    },
-                    "imageName": "down_left_slightly",
-                    "from": 2,
-                    "to": 3,
-                    "arrowWidth": 20
-                },
-                "left": {
-                    "position": {
-                        "x": 440,
-                        "y": 410
-                    },
-                    "imageName": "down",
-                    "from": 2,
-                    "to": 3,
-                    "arrowWidth": 15
-                }
-            },
-            "densities": [
-                "n",
-                "n",
-                "n"
-            ]
-        },
-        {
-            "startPoint": {
-                "x": 470,
-                "y": 260
-            },
-            "endPoint": {
-                "x": 470,
-                "y": 400
-            },
-            "ligths": {
-                "right": {
-                    "position": {
-                        "x": 470,
-                        "y": 220
-                    },
-                    "imageName": "arrow_right",
-                    "from": 2,
-                    "to": 3,
-                    "arrowWidth": 25
-                },
-                "left": {
-                    "position": {
-                        "x": 440,
-                        "y": 220
+                        "x": 240,
+                        "y": 265
                     },
                     "imageName": "arrow_left",
                     "from": 2,
                     "to": 3,
-                    "arrowWidth": 25
+                    "arrowWidth": "20",
+                    "rotation":240
+                }
+            },
+            "densities": [
+                "n",
+                "n",
+                "n"
+            ]
+        },
+        {
+            "startPoint": {
+                "x": 440,
+                "y": 260
+            },
+            "endPoint": {
+                "x": 440,
+                "y": 400
+            },
+            "ligths": {
+                "right": {
+                    "position": {
+                        "x": 365,
+                        "y": 395
+                    },
+                    "imageName": "arrow_right",
+                    "from": 2,
+                    "to": 3,
+                    "arrowWidth": 21,
+                    "rotation":180
+                },
+                "left": {
+                    "position": {
+                        "x": 396,
+                        "y": 400
+                    },
+                    "imageName": "arrow_left_light",
+                    "from": 2,
+                    "to": 3,
+                    "arrowWidth": 15,
+                    "rotation":180
+                }
+            },
+            "densities": [
+                "n",
+                "n",
+                "n"
+            ]
+        },
+        {
+            "startPoint": {
+                "x": 470,
+                "y": 260
+            },
+            "endPoint": {
+                "x": 470,
+                "y": 400
+            },
+            "ligths": {
+                "right": {
+                    "position": {
+                        "x": 473,
+                        "y": 227
+                    },
+                    "imageName": "arrow_right",
+                    "from": 2,
+                    "to": 3,
+                    "arrowWidth": 21
+                },
+                "left": {
+                    "position": {
+                        "x": 448,
+                        "y": 229
+                    },
+                    "imageName": "arrow_left",
+                    "from": 2,
+                    "to": 3,
+                    "arrowWidth": 21
                 }
             },
             "densities": [
@@ -294,23 +299,24 @@
                 "right": {
                     "position": {
                         "x": 470,
-                        "y": 430
+                        "y": 438
                     },
-                    "imageName": "top",
+                    "imageName": "arrow_right",
                     "from": 2,
                     "to": 3,
-                    "arrowWidth": 15
+                    "arrowWidth": 20,
+                    "rotation":300
                 },
                 "left": {
                     "position": {
-                        "x": 450,
-                        "y": 455
+                        "x": 455,
+                        "y": 457
                     },
                     "imageName": "arrow_straight",
                     "from": 2,
                     "to": 3,
                     "arrowWidth": 15,
-                  "rotation":310
+                  "rotation":300
                 }
             },
             "densities": [
@@ -344,27 +350,27 @@
                 "y": 100
             },
             "ligths": {
-                "right": {
+                "straight": {
                     "position": {
-                        "x": 440,
-                        "y": 165
+                        "x": 435,
+                        "y": 152
                     },
                     "imageName": "arrow_straight",
                     "from": 1,
                     "to": 3,
                     "arrowWidth": 17,
-                  "rotation":"240"
+                  "rotation":240
                 },
                 "left": {
                     "position": {
-                        "x": 445,
-                        "y": 175
+                        "x": 435,
+                        "y": 147
                     },
-                    "imageName": "arrow_straight",
+                    "imageName": "arrow_left",
                     "from": 2,
                     "to": 3,
-                    "arrowWidth": 17,
-                  "rotation":210
+                    "arrowWidth": 22,
+                  "rotation":240
                 }
             },
             "densities": [
