@@ -32,7 +32,7 @@
               },
               "imageName": "arrow_right_light",
               "from": 2,
-              "to": 3,
+              "to": 9,
               "arrowWidth": 16,
               "rotation":90
             },
@@ -43,7 +43,7 @@
               },
               "imageName": "arrow_left_light",
               "from": 2,
-              "to": 3,
+              "to": 21,
               "arrowWidth": 16,
               "rotation":90
             }
@@ -62,8 +62,8 @@
                         "y": 320
                     },
                     "imageName": "arrow_right",
-                    "from": 2,
-                    "to": 3,
+                    "from": 20,
+                    "to": 21,
                     "arrowWidth": 20,
                     "rotation":300
                 },
@@ -73,8 +73,8 @@
                         "y": 337
                     },
                     "imageName": "arrow_left_light",
-                    "from": 2,
-                    "to": 3,
+                    "from": 20,
+                    "to": 27,
                     "arrowWidth": 16,
                   "rotation":300
                 }
@@ -109,8 +109,8 @@
                         "y": 450
                     },
                     "imageName": "arrow_left",
-                    "from": 2,
-                    "to": 3,
+                    "from": 11,
+                    "to": 12,
                     "arrowWidth": 22,
                   "rotation":120
                 },
@@ -120,8 +120,8 @@
                         "y": 465
                     },
                     "imageName": "arrow_straight",
-                    "from": 2,
-                    "to": 3,
+                    "from": 11,
+                    "to": 30,
                     "arrowWidth": 17,
                   "rotation":120
                 }
@@ -148,19 +148,19 @@
                         "y": 288
                     },
                     "imageName": "arrow_right",
-                    "from": 2,
-                    "to": 3,
+                    "from": 23,
+                    "to": 24,
                     "arrowWidth": "20",
                   "rotation":60
                 },
-                "left": {
+                "straight": {
                     "position": {
                         "x": 398,
                         "y": 248
                     },
                     "imageName": "arrow_straight",
-                    "from": 2,
-                    "to": 3,
+                    "from": 23,
+                    "to": 33,
                     "arrowWidth": "17",
                   "rotation":60
                 }
@@ -187,8 +187,8 @@
                         "y": 275
                     },
                     "imageName": "arrow_straight",
-                    "from": 1,
-                    "to": 3,
+                    "from": 17,
+                    "to": 27,
                     "arrowWidth": 17,
                     "rotation":240
                 },
@@ -198,8 +198,8 @@
                         "y": 265
                     },
                     "imageName": "arrow_left",
-                    "from": 2,
-                    "to": 3,
+                    "from": 17,
+                    "to": 9,
                     "arrowWidth": "20",
                     "rotation":240
                 }
@@ -226,8 +226,8 @@
                         "y": 395
                     },
                     "imageName": "arrow_right",
-                    "from": 2,
-                    "to": 3,
+                    "from": 26,
+                    "to": 18,
                     "arrowWidth": 21,
                     "rotation":180
                 },
@@ -237,8 +237,8 @@
                         "y": 400
                     },
                     "imageName": "arrow_left_light",
-                    "from": 2,
-                    "to": 3,
+                    "from": 26,
+                    "to": 30,
                     "arrowWidth": 15,
                     "rotation":180
                 }
@@ -265,8 +265,8 @@
                         "y": 227
                     },
                     "imageName": "arrow_right",
-                    "from": 2,
-                    "to": 3,
+                    "from": 14,
+                    "to": 33,
                     "arrowWidth": 21
                 },
                 "left": {
@@ -275,8 +275,8 @@
                         "y": 229
                     },
                     "imageName": "arrow_left",
-                    "from": 2,
-                    "to": 3,
+                    "from": 13,
+                    "to": 15,
                     "arrowWidth": 21
                 }
             },
@@ -302,8 +302,8 @@
                         "y": 438
                     },
                     "imageName": "arrow_right",
-                    "from": 2,
-                    "to": 3,
+                    "from": 5,
+                    "to": 12,
                     "arrowWidth": 20,
                     "rotation":300
                 },
@@ -313,8 +313,8 @@
                         "y": 457
                     },
                     "imageName": "arrow_straight",
-                    "from": 2,
-                    "to": 3,
+                    "from": 5,
+                    "to": 18,
                     "arrowWidth": 15,
                   "rotation":300
                 }
@@ -356,8 +356,8 @@
                         "y": 152
                     },
                     "imageName": "arrow_straight",
-                    "from": 1,
-                    "to": 3,
+                    "from": 8,
+                    "to": 15,
                     "arrowWidth": 17,
                   "rotation":240
                 },
@@ -367,8 +367,8 @@
                         "y": 147
                     },
                     "imageName": "arrow_left",
-                    "from": 2,
-                    "to": 3,
+                    "from": 8,
+                    "to": 24,
                     "arrowWidth": 22,
                   "rotation":240
                 }
