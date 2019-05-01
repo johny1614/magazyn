@@ -1,5 +1,5 @@
 import numpy as np
-from env_data import T,x0, A_ORANGE ,UP_A_green,DOWN_A_green,u,start_A,get_Agents
+from env_data import x0, u,start_A,get_Agents
 
 # trojkatne - 3 skrzyzowania, razem 6 drog
 
@@ -51,4 +51,8 @@ class Env:
         # print('y-'+str(t),self.y[t])
         return x_t,y_t
     def get_global_action_space(self):
-        print('e')
+        global_action_space=[]
+        for agent in self.agents:
+            localSpace=agent.getLocalActionSpace()
+            global_action_space.append(localSpace)
+        return global_action_space
