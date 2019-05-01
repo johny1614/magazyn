@@ -6,7 +6,8 @@ def hash_(action):
 max_time=30
 env = Env(max_time)
 for time in range(max_time-1):
-    a = random.choice(env.getActionSpace())
-    state,r,action = env.step(a)
-    print('a',action)
-    print('s',state)
+    env.get_global_action_space()
+    # a = random.choice(env.getActionSpace())
+    # state,r,action = env.step(a)
+    # print('a',action)
+    # print('s',state)

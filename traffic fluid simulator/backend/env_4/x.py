@@ -1,4 +1,4 @@
-from matrices import start_A, get_Agents
+from env_data import start_A, get_Agents
 from env import Env
 from jsonSaver import saveToJson
 time = 10
