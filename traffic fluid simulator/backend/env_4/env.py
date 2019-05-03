@@ -1,5 +1,6 @@
 import numpy as np
-from env_data import x0, u,start_A,get_Agents,curve_densities
+from env_data import x0, u, start_A, get_Agents, curve_densities, stayCoordinates
+
 
 # trojkatne - 3 skrzyzowania, razem 6 drog
 
@@ -14,21 +15,24 @@ class Env:
         self.x_size=36
         self.A=start_A()
         self.agents=get_Agents()
-        for agent in self.agents:
-            agent.modify_A(self.A)
         self.x= [self.x_size*[0]] * max_time
         self.x[0]=x0
         self.y=[0] * max_time
         self.A_storage=[0]*max_time
         self.A_storage[0]=self.A
         self.t=0
+    def attachStayCoordinates(self,A):
+        # print('ATAAAAAAAAAAAAAAAAAAAAAAAAAAAACHH!!!!!!!!!!!!!!!!!!')
+        for stayCoordinate in stayCoordinates:
+            A[stayCoordinate]=1
     def modify_A(self):
         for agent in self.agents:
-            agent.modify_A(self.A)
+            self.A=agent.modify_A(self.A)
     def do_action(self):
         t = self.t
         self.A_storage[t]=self.A
-        self.modify_A()
+        self.attachStayCoordinates(self.A)
+        self.A=self.modify_A()
         self.x[t]=np.dot(self.A,self.x[t-1])
         self.x[t][0]+=u[t-1][0]
         self.x[t][3]+=u[t-1][1]
@@ -65,10 +69,10 @@ class Env:
             print('time:'+str(t))
             print('density',self.x[t])
             print('density[9]',self.x[t][9])
-            print('A 1 na:')
+            print('A > 0 na:')
             for row_index in range(len(self.A_storage[t])):
                 row=self.A_storage[t][row_index]
                 for column_index in range(len(row)):
                     cell=row[column_index]
                     if(cell>0 and row_index!=column_index+1):
-                        print((row_index,column_index))
+                        print('wartosc '+str(cell)+' na:',(row_index,column_index))
