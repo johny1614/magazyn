@@ -21,18 +21,14 @@ class Env:
         self.A_storage=[0]*max_time
         self.A_storage[0]=self.A
         self.t=0
-    def attachStayCoordinates(self,A):
-        # print('ATAAAAAAAAAAAAAAAAAAAAAAAAAAAACHH!!!!!!!!!!!!!!!!!!')
-        for stayCoordinate in stayCoordinates:
-            A[stayCoordinate]=1
     def modify_A(self):
         for agent in self.agents:
             self.A=agent.modify_A(self.A)
     def do_action(self):
         t = self.t
-        self.A_storage[t]=self.A
-        self.attachStayCoordinates(self.A)
+        self.A=start_A()
         self.modify_A()
+        self.A_storage[t]=self.A
         self.x[t]=np.dot(self.A,self.x[t-1])
         self.x[t][0]+=u[t-1][0]
         self.x[t][3]+=u[t-1][1]
