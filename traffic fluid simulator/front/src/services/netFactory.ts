@@ -69,7 +69,6 @@ export class NetFactory {
       for (let line_index = 0; line_index < nets[i].lines.length; line_index++) {
         const line: Line = nets[i].lines[line_index];
         if (line.lights) {
-          console.log('lights', line.lights);
           NetFactory.lightTheSignalization(nets, i, line_index, dynamicData.nets[i]);
         }
 
