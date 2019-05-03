@@ -87,8 +87,8 @@ export class NetFactory {
       for (let line of staticNet.lines) {
         let densities = [];
         for (let section of line.sections) {
-          section.density = dynamicNet.densities[k];
-          densities.push(dynamicNet.densities[k]);
+          section.density = Math.round(dynamicNet.densities[k] * 10) / 10;
+          densities.push(section.density);
           k++;
         }
         line.densities = densities;

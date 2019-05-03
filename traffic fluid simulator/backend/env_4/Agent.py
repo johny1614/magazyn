@@ -7,6 +7,7 @@ class Agent:
         self.actual_phase = dic['actual_phase'] # sometimes the pending one
         self.real_phase = dic['actual_phase'] # the one changing A matrix
         self.actual_phase_duration = dic['actual_phase_duration']
+        self.curve_densities=dic['curve_densities']
         self.possible_actions = self.getLocalActionSpace()
         self.orange_phase_duration=orange_phase_duration
         self.t=0
@@ -23,8 +24,12 @@ class Agent:
         if (self.actual_phase_duration == 'wait'):
             return
         for manewr in self.real_phase:
-            A[manewr] = 1
-            print(manewr)
+            if(manewr==[]):
+                continue
+            A[manewr] = self.curve_densities[manewr]
+            print('manewr',manewr)
+            print('densities',self.curve_densities)
+            print('value',self.curve_densities[manewr])
     def pass_action(self,action):
         self.t+=1
         if(not action in self.getLocalActionSpace()):
