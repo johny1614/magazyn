@@ -31,15 +31,25 @@ export class NetFactory {
   static getLight(light: SingleLight, restNet): string {
     let restLight = restNet.lights[light.to - 1][light.from - 1];
     const result = restLight === 1 ? 'green' : 'red';
+    // console.log(result);
     return result;
   }
 
-  static lightTheLine(nets, netIndex, line_index, dynamicNet) {
+  static lightTheSignalization(nets, netIndex, line_index, dynamicNet) {
     const line = nets[netIndex].lines[line_index];
     const keys = Object.keys(line.lights);
     keys.forEach(key => {
       if (line.lights) {
-        line.lights.straigth.imageName = line.lights.straigth.imageName + NetFactory.getLight(line.lights.straigth, dynamicNet);
+        if (line.lights.straigth) {
+          line.lights.straigth.imageName = line.lights.straigth.imageName + '_' + NetFactory.getLight(line.lights.straigth, dynamicNet);
+        }
+        if (line.lights.right) {
+          line.lights.right.imageName = line.lights.right.imageName + '_' + NetFactory.getLight(line.lights.right, dynamicNet);
+        }
+        if (line.lights.left) {
+          line.lights.left.imageName = line.lights.left.imageName + '_' + NetFactory.getLight(line.lights.left, dynamicNet);
+          console.log(line.lights.left.imageName);
+        }
       }
     });
   }
@@ -50,7 +60,7 @@ export class NetFactory {
         const line: Line = nets[i].lines[line_index];
         if (line.lights) {
           console.log('lights', line.lights);
-          // NetFactory.lightTheLine(nets, i, line_index, dynamicData.nets[i]);
+          NetFactory.lightTheSignalization(nets, i, line_index, dynamicData.nets[i]);
         }
 
       }

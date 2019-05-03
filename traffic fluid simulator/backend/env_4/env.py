@@ -25,12 +25,8 @@ class Env:
     def do_action(self):
         t = self.t
         print(t)
-        if(t==1):
-            print('poczatkowo',self.x[t])
         self.modify_A()
         self.x[t]=np.dot(self.A,self.x[t-1])
-        if(t==1):
-            print('po przemnozeniu',self.x[t])
         self.x[t][0]+=u[t-1][0]
         self.x[t][3]+=u[t-1][1]
         self.x[t][6]+=u[t-1][1]
@@ -54,7 +50,6 @@ class Env:
         x_t[0]+=u[t-1][0]
         x_t[1]+=u[t-1][1]
         y_t=x_t[2]
-        # print('y-'+str(t),self.y[t])
         return x_t,y_t
     def get_global_action_space(self):
         global_action_space=[]

@@ -19,12 +19,12 @@ class Agent:
         return waitActions
     def getRandomAction(self):
         return random.choice(self.getLocalActionSpace())
-
     def modify_A(self, A):
         if (self.actual_phase_duration == 'wait'):
             return
         for manewr in self.real_phase:
             A[manewr] = 1
+            print(manewr)
     def pass_action(self,action):
         self.t+=1
         if(not action in self.getLocalActionSpace()):
