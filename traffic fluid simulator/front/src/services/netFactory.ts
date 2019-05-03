@@ -10,10 +10,15 @@ export class NetFactory {
     return new Line(line.startPoint, line.endPoint);
   }
 
+  static attachA(nets: Net[], dynamicData) {
+    for (let i = 0; i < nets.length; i++) {
+      nets[i].A = dynamicData.nets[i].lights;
+    }
+  }
+
   static netFromJson(staticData, dynamicData?): Net {
     const lines = [];
     const staticLinesCopy = JSON.parse(JSON.stringify(staticData.lines));
-    console.log('staticLinesCopy', staticLinesCopy);
     staticLinesCopy.forEach(iline => lines.push(NetFactory.getLine(iline)));
     let i = 0;
     if (dynamicData) {

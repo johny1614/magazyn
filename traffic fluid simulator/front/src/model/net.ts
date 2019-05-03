@@ -1,5 +1,7 @@
-import { Line } from "./line";
+import {Line} from './line';
 
 export class Net {
-    constructor(public time: number, public lines: Line[]) { }
+  A: any;
+  constructor(public time: number, public lines: Line[]) {
+  }
 }

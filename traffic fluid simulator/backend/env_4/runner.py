@@ -17,11 +17,12 @@ for time in range(max_time - 1):
     actions = [random.choice(local_action_space) for local_action_space in global_action_space]
     if(actions[0]=='wait'):
         actions=['wait']*3
-    else:
-        print('action space w chwili'+str(time),global_action_space)
-        actions=[3,3,1]
-    print('actions w chwili:'+str(time),actions)
+    elif(time<14):
+        actions=[1,1,1]
+    elif(time>=14 and actions[0]!='wait'):
+        actions=[2,2,2]
     global_state, r = env.step(actions)
     save_data.add_net(global_state)
 saveToJson('net4','den1',save_data)
 # env.pretty_print()
+env.pretty_print_4()

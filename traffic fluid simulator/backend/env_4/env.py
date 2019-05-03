@@ -32,7 +32,7 @@ class Env:
         t = self.t
         self.A_storage[t]=self.A
         self.attachStayCoordinates(self.A)
-        self.A=self.modify_A()
+        self.modify_A()
         self.x[t]=np.dot(self.A,self.x[t-1])
         self.x[t][0]+=u[t-1][0]
         self.x[t][3]+=u[t-1][1]
@@ -70,9 +70,17 @@ class Env:
             print('density',self.x[t])
             print('density[9]',self.x[t][9])
             print('A > 0 na:')
-            for row_index in range(len(self.A_storage[t])):
-                row=self.A_storage[t][row_index]
-                for column_index in range(len(row)):
-                    cell=row[column_index]
-                    if(cell>0 and row_index!=column_index+1):
-                        print('wartosc '+str(cell)+' na:',(row_index,column_index))
+
+    def pretty_print_A(self,t):
+        print('A',t)
+        for row_index in range(len(self.A_storage[t])):
+            row = self.A_storage[t][row_index]
+            for column_index in range(len(row)):
+                cell = row[column_index]
+                if (cell > 0 and row_index != column_index + 1):
+                    print('wartosc ' + str(cell) + ' na:', (row_index, column_index))
+    def pretty_print_4(self):
+        t=4
+        print('densities 3',self.x[t-1])
+        self.pretty_print_A(4)
+        print('densities 4',self.x[t])
