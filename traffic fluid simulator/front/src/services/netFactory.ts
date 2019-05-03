@@ -35,20 +35,30 @@ export class NetFactory {
     return result;
   }
 
+  static removeLightsFromName(imageName) {
+    const regs = ['_red', '_orange', '_green'];
+    for (const reg of regs) {
+      imageName = imageName.replace(reg, '');
+    }
+    return imageName;
+  }
+
   static lightTheSignalization(nets, netIndex, line_index, dynamicNet) {
     const line = nets[netIndex].lines[line_index];
     const keys = Object.keys(line.lights);
     keys.forEach(key => {
       if (line.lights) {
         if (line.lights.straigth) {
+          line.lights.right.imageName = this.removeLightsFromName(line.lights.straigth.imageName);
           line.lights.straigth.imageName = line.lights.straigth.imageName + '_' + NetFactory.getLight(line.lights.straigth, dynamicNet);
         }
         if (line.lights.right) {
+          line.lights.right.imageName = this.removeLightsFromName(line.lights.right.imageName);
           line.lights.right.imageName = line.lights.right.imageName + '_' + NetFactory.getLight(line.lights.right, dynamicNet);
         }
         if (line.lights.left) {
+          line.lights.left.imageName = this.removeLightsFromName(line.lights.left.imageName);
           line.lights.left.imageName = line.lights.left.imageName + '_' + NetFactory.getLight(line.lights.left, dynamicNet);
-          console.log(line.lights.left.imageName);
         }
       }
     });
