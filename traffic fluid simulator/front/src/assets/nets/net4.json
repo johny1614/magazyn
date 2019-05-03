@@ -60,7 +60,7 @@
           "arrowWidth": 20,
           "rotation": 300
         },
-        "left": {
+        "straight": {
           "position": {
             "x": 455,
             "y": 457
@@ -138,7 +138,7 @@
           "arrowWidth": 22,
           "rotation": 120
         },
-        "right": {
+        "straight": {
           "position": {
             "x": 365,
             "y": 465

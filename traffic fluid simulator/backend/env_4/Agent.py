@@ -27,9 +27,6 @@ class Agent:
             if(manewr==[]):
                 continue
             A[manewr] = self.curve_densities[manewr]
-            print('manewr',manewr)
-            print('densities',self.curve_densities)
-            print('value',self.curve_densities[manewr])
     def pass_action(self,action):
         self.t+=1
         if(not action in self.getLocalActionSpace()):

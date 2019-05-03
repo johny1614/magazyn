@@ -29,9 +29,8 @@ export class NetFactory {
   }
 
   static getLight(light: SingleLight, restNet): string {
-    let restLight = restNet.lights[light.to - 1][light.from - 1];
-    const result = restLight === 1 ? 'green' : 'red';
-    // console.log(result);
+    let restLight = restNet.lights[light.to][light.from];
+    const result = restLight === 0 ? 'red' : 'green';
     return result;
   }
 
@@ -47,19 +46,17 @@ export class NetFactory {
     const line = nets[netIndex].lines[line_index];
     const keys = Object.keys(line.lights);
     keys.forEach(key => {
-      if (line.lights) {
-        if (line.lights.straigth) {
-          line.lights.right.imageName = this.removeLightsFromName(line.lights.straigth.imageName);
-          line.lights.straigth.imageName = line.lights.straigth.imageName + '_' + NetFactory.getLight(line.lights.straigth, dynamicNet);
-        }
-        if (line.lights.right) {
-          line.lights.right.imageName = this.removeLightsFromName(line.lights.right.imageName);
-          line.lights.right.imageName = line.lights.right.imageName + '_' + NetFactory.getLight(line.lights.right, dynamicNet);
-        }
-        if (line.lights.left) {
-          line.lights.left.imageName = this.removeLightsFromName(line.lights.left.imageName);
-          line.lights.left.imageName = line.lights.left.imageName + '_' + NetFactory.getLight(line.lights.left, dynamicNet);
-        }
+      if (line.lights.straight) {
+        line.lights.straight.imageName = this.removeLightsFromName(line.lights.straight.imageName);
+        line.lights.straight.imageName = line.lights.straight.imageName + '_' + NetFactory.getLight(line.lights.straight, dynamicNet);
+      }
+      if (line.lights.right) {
+        line.lights.right.imageName = this.removeLightsFromName(line.lights.right.imageName);
+        line.lights.right.imageName = line.lights.right.imageName + '_' + NetFactory.getLight(line.lights.right, dynamicNet);
+      }
+      if (line.lights.left) {
+        line.lights.left.imageName = this.removeLightsFromName(line.lights.left.imageName);
+        line.lights.left.imageName = line.lights.left.imageName + '_' + NetFactory.getLight(line.lights.left, dynamicNet);
       }
     });
   }
@@ -71,7 +68,6 @@ export class NetFactory {
         if (line.lights) {
           NetFactory.lightTheSignalization(nets, i, line_index, dynamicData.nets[i]);
         }
-
       }
     }
   }
