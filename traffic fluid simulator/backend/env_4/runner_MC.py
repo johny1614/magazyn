@@ -1,12 +1,9 @@
 # 2 odcinki na droge!
 
-import matplotlib.pyplot as plt
-import gym
 import random
 import numpy as np
 from Env import Env
 from env_data import max_time
-from jsonSaver import saveToJson
 
 
 def init_Q(state_space, action_space):
@@ -45,13 +42,12 @@ def epoch():
     memories = []
     for t in range(max_time - 1):
         if not pi.has_key(state):
+            actions = [random.choice(local_action_space) for local_action_space in global_action_space]
             pi[state]=random.choice(env.get_global_action_space())
         action=pi[state]
         old_state = tuple(state)
-        # print('hash',hash_(action))
-        state,reward = env.step(hash_(action))
+        state,reward = env.step(action)
         state = tuple(state)
-        # print('state',state)
         memories.append({'state': old_state, 'new_state': state, 'action': hash_(action), 'reward': reward})
     return memories
 
@@ -113,13 +109,20 @@ best_score = 0
 epochs = range(100)
 for e in epochs:
     memories = epoch()
-    update_returns()
-    update_Q()
-    update_pi(True)
-    count_rewards()
-update_pi(False)
-memories = epoch()  # last epoch
-reward_sum = count_rewards()
+#     update_returns()
+#     update_Q()
+#     update_pi(True)
+#     count_rewards()
+# update_pi(False)
+# memories = epoch()  # last epoch
+# reward_sum = count_rewards()
+
+
+
+
+
+
+
 # print(reward_sum)
 # print(memories)
 # nets = []

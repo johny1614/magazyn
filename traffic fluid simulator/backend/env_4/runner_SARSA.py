@@ -1,11 +1,7 @@
 # 2 odcinki na droge!
 
-import matplotlib.pyplot as plt
-import gym
 import random
-import numpy as np
 from Env import Env
-from jsonSaver import saveToJson
 
 
 def init_Q(state_space, action_space):
