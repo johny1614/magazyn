@@ -13,7 +13,7 @@ class Env:
         self.agents = get_Agents()
         self.x = [self.x_size * [0]] * max_time
         self.y = [0] * max_time
-        self.A_storage = [0] * (max_time - 1)
+        self.A_storage = [[]] * (max_time)
         self.t = 0
 
 
@@ -22,7 +22,7 @@ class Env:
         self.A=start_A()
         self.__pass_actions(actions)
         self.__modify_A()
-        self.A_storage[self.t - 1] = self.A
+        self.A_storage[self.t ] = self.A
         self.__execute_phase()
         return self.__execute_phase()
 

@@ -12,6 +12,7 @@ def hash_(action):
 
 save_data = SaveData(learningEpochs=0, learningMethod='Random')
 env = Env()
+save_data.nets.append({'densities':tuple(env.x[0])})
 for time in range(max_time - 1):
     global_action_space = env.get_global_action_space()
     actions = [random.choice(local_action_space) for local_action_space in global_action_space]
@@ -27,5 +28,6 @@ for time in range(max_time - 1):
     save_data.add_net(global_state)
 save_data.attach_lights(env.A_storage)
 saveToJson('net4','den1',save_data)
+print(env.x[0])
 # env.pretty_print()
 # env.pretty_print_4()
