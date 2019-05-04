@@ -5,6 +5,7 @@ import gym
 import random
 import numpy as np
 from Env import Env
+from env_data import max_time
 from jsonSaver import saveToJson
 
 
@@ -39,15 +40,14 @@ def init_returns():
 
 
 def epoch():
-    env = Env( max_time)
+    env = Env()
     state = tuple(env.x[0])
     memories = []
     for t in range(max_time - 1):
         if not pi.has_key(state):
-            pi[state]=random.choice(env.action_space)
+            pi[state]=random.choice(env.get_global_action_space())
         action=pi[state]
         old_state = tuple(state)
-        # print('action',action)
         # print('hash',hash_(action))
         state,reward = env.step(hash_(action))
         state = tuple(state)
@@ -98,20 +98,19 @@ def count_rewards():
     print(rewards_sum)
     return rewards_sum
 
-max_time = 30
 gamma = 1
 epsilon = 0.2
-env = Env( max_time)
+env = Env()
 wins = 0
 loses = 0
 state_space = []# poczotkowo nic [(x, y, z) for x in range(52) for y in range(52) for z in range(52)]
-action_space = env.action_space
+action_space = env.get_global_action_space()
 Q = {}
 returns = {}
 # returns = init_returns()
 pi = {}
 best_score = 0
-epochs = range(100000)
+epochs = range(100)
 for e in epochs:
     memories = epoch()
     update_returns()
