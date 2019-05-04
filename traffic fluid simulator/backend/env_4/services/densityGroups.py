@@ -11,8 +11,13 @@ groups = [
     [101, 200],
 ]
 
-def getGroup(number):
+
+def getGroup(density):
     for i in range(len(groups)):
-        if(number>=groups[i][0] and number>=groups[i][1]):
+        if (density >= groups[i][0] and density >= groups[i][1]):
             return i
     return len(groups)
+
+
+def getRange(groupNumber):
+    return {"from": groups[groupNumber][0], "to": groups[groupNumber][1]}

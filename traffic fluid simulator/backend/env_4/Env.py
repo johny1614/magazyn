@@ -1,10 +1,12 @@
 import numpy as np
 
+from env_data import u, start_A, x_size, max_time
 from model.GlobalState import GlobalState
-from env_data import u, start_A, get_Agents, x_size, max_time
 
 
 # trojkatne - 3 skrzyzowania, razem 6 drog
+from services.agentFactory import get_Agents
+
 
 class Env:
     def __init__(self):
@@ -45,8 +47,12 @@ class Env:
         self.x[t][6] += u[t - 1][1]
         self.y[t] = self.x[t][29] + self.x[t][35] + self.x[t][32]
         global_state = GlobalState(self.x[t], self.agents, self.A)
+        self.__assign_local_states_to_agents()
         return global_state, self.y[t]
 
+    def __assign_local_states_to_agents(self):
+        for agent in self.agents:
+            agent.assignLocalState(self.x[self.t])
     def __pass_actions(self, actions):
         for i in range(self.agents.__len__()):
             agent = self.agents[i]

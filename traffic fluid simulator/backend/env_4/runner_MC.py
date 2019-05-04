@@ -27,6 +27,7 @@ def init_returns():
             Returns[(s, a)] = []
     return Returns
 
+
 #
 # def init_pi():
 #     pi = {}
@@ -42,13 +43,12 @@ def epoch():
     memories = []
     for t in range(max_time - 1):
         if not pi.has_key(state):
-            actions = [random.choice(local_action_space) for local_action_space in global_action_space]
-            pi[state]=random.choice(env.get_global_action_space())
-        action=pi[state]
+            global_action_space = env.get_global_action_space()
+            pi[state] = [random.choice(local_action_space) for local_action_space in global_action_space]
+        actions = pi[state]
         old_state = tuple(state)
-        state,reward = env.step(action)
-        state = tuple(state)
-        memories.append({'state': old_state, 'new_state': state, 'action': hash_(action), 'reward': reward})
+        global_state, reward = env.step(actions)
+        memories.append({'state': old_state, 'new_state': global_state, 'action': hash_(actions), 'reward': reward})
     return memories
 
 
@@ -58,8 +58,8 @@ def update_returns():
         G = gamma * G + m['reward']
         s = m['state']
         a = m['action']
-        if not returns.has_key((s,a)):
-            returns[(s, a)]=[G]
+        if not returns.has_key((s, a)):
+            returns[(s, a)] = [G]
         else:
             returns[(s, a)].append(G)
 
@@ -94,12 +94,13 @@ def count_rewards():
     print(rewards_sum)
     return rewards_sum
 
+
 gamma = 1
 epsilon = 0.2
 env = Env()
 wins = 0
 loses = 0
-state_space = []# poczotkowo nic [(x, y, z) for x in range(52) for y in range(52) for z in range(52)]
+state_space = []  # poczotkowo nic [(x, y, z) for x in range(52) for y in range(52) for z in range(52)]
 action_space = env.get_global_action_space()
 Q = {}
 returns = {}
@@ -116,11 +117,6 @@ for e in epochs:
 # update_pi(False)
 # memories = epoch()  # last epoch
 # reward_sum = count_rewards()
-
-
-
-
-
 
 
 # print(reward_sum)
