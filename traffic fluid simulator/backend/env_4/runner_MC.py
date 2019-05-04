@@ -97,11 +97,10 @@ def count_rewards():
 
 gamma = 1
 epsilon = 0.2
-env = Env()
 wins = 0
 loses = 0
+action_space = Env().get_global_action_space()
 state_space = []  # poczotkowo nic [(x, y, z) for x in range(52) for y in range(52) for z in range(52)]
-action_space = env.get_global_action_space()
 Q = {}
 returns = {}
 # returns = init_returns()

@@ -4,8 +4,7 @@ from model.Agent import Agent
 def get_Agents():
     agent_1_dic = {'all_phases': [[[]], [(9, 2), (21, 2), (27, 17)],
                                   [(21, 20), (27, 20), (9, 2)],
-                                  [(27, 17), (9, 17), (21, 20)]]
-        ,
+                                  [(27, 17), (9, 17), (21, 20)]],
                    'actual_phase': [[]],
                    'actual_phase_duration': 0,
                    'curve_densities': {(9, 2): 0.7, (21, 2): 0.3,
@@ -33,5 +32,7 @@ def get_Agents():
                                        (24, 23): 0.7, (33, 23): 0.3},
                    'local_phase_sections': [8, 14, 23]
                    }
-    agents = [Agent(agent_1_dic, 3, 1), Agent(agent_2_dic, 3, 2), Agent(agent_3_dic, 3, 3)]
+    agents = [Agent(dic=agent_1_dic, min_phase_duration=3, index=1, orange_phase_duration=1),
+              Agent(dic=agent_2_dic, min_phase_duration=3, index=2, orange_phase_duration=1),
+              Agent(dic=agent_3_dic, min_phase_duration=3, index=3, orange_phase_duration=1)]
     return agents

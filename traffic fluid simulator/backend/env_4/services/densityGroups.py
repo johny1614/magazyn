@@ -14,7 +14,7 @@ groups = [
 
 def getGroup(density):
     for i in range(len(groups)):
-        if (density >= groups[i][0] and density >= groups[i][1]):
+        if density >= groups[i][0] and density >= groups[i][1]:
             return i
     return len(groups)
 

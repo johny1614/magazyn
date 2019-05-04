@@ -12,7 +12,7 @@ def pretty_print_A(env, t):
         row = env.A_storage[t][row_index]
         for column_index in range(len(row)):
             cell = row[column_index]
-            if (cell > 0 and row_index != column_index + 1):
+            if cell > 0 and row_index != column_index + 1:
                 print('wartosc ' + str(cell) + ' na:', (row_index, column_index))
 
 
