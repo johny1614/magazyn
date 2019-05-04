@@ -26,7 +26,6 @@ class Agent:
         return random.choice(self.getLocalActionSpace())
 
     def modify_A(self, A):
-        print('faza',self.actual_phase)
         if (self.actual_phase == [[]]):
             return A
         for manewr in self.actual_phase:
@@ -38,8 +37,6 @@ class Agent:
         return A
 
     def pass_action(self, action):
-        if(self.index==1):
-            print('agent1 w chwili:'+str(self.t),self.actual_phase)
         if (action == 'wait'):
             self.phase_duration += 1
             if (self.actual_phase == self.all_phases[0] and self.phase_duration == self.orange_phase_duration):

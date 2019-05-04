@@ -19,10 +19,13 @@ for time in range(max_time - 1):
         actions=['wait']*3
     elif(time<14):
         actions=[1,1,1]
+    elif(time>=20 and actions[0]!='wait'):
+        actions=[3,3,3]
     elif(time>=14 and actions[0]!='wait'):
         actions=[2,2,2]
     global_state, r = env.step(actions)
     save_data.add_net(global_state)
+save_data.attach_lights(env.A_storage)
 saveToJson('net4','den1',save_data)
 # env.pretty_print()
-env.pretty_print_4()
+# env.pretty_print_4()

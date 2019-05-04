@@ -18,8 +18,7 @@ class Env:
         self.x= [self.x_size*[0]] * max_time
         self.x[0]=x0
         self.y=[0] * max_time
-        self.A_storage=[0]*max_time
-        self.A_storage[0]=self.A
+        self.A_storage=[0]*(max_time-1)
         self.t=0
     def modify_A(self):
         for agent in self.agents:
@@ -28,7 +27,7 @@ class Env:
         t = self.t
         self.A=start_A()
         self.modify_A()
-        self.A_storage[t]=self.A
+        self.A_storage[t-1]=self.A
         self.x[t]=np.dot(self.A,self.x[t-1])
         self.x[t][0]+=u[t-1][0]
         self.x[t][3]+=u[t-1][1]
