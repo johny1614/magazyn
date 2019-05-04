@@ -1,19 +1,13 @@
+import random
 import unittest
 
-from env import Env
+from Env import Env
 
 
 class Testing(unittest.TestCase):
 
     def get_env(self):
-        max_time = 30
-        return Env(max_time)
-
-    def test_attachStayCoordinates_areAttached(self):
-        env = self.get_env()
-        env.attachStayCoordinates(env.A)
-        self.assertEqual(env.A[(2, 2)], 1)
-        self.assertEqual(env.A[(17, 17)], 1)
+        return Env()
 
     def test_pass_initial_action(self):
         env = self.get_env()
@@ -57,7 +51,22 @@ class Testing(unittest.TestCase):
         agent.pass_action('wait')
         # now we should have our 1 action
         self.assertEqual(agent.actual_phase,agent.all_phases[1])
-
+    def test_pass_all_3_actions(self):
+        max_time=30
+        env = self.get_env()
+        for time in range(max_time - 1):
+            global_action_space = env.get_global_action_space()
+            actions = [random.choice(local_action_space) for local_action_space in global_action_space]
+            if (actions[0] == 'wait'):
+                actions = ['wait'] * 3
+            elif (time < 14):
+                actions = [1, 1, 1]
+            elif (time >= 20 and actions[0] != 'wait'):
+                actions = [3, 3, 3]
+            elif (time >= 14 and actions[0] != 'wait'):
+                actions = [2, 2, 2]
+            # if(time>1 and time<14):
+            #     self.assertEqual(env.A[][])
 
 if __name__ == '__main__':
     unittest.main()

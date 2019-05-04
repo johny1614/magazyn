@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import gym
 import random
 import numpy as np
-from env import Env
+from Env import Env
 from jsonSaver import saveToJson
 
 

@@ -11,5 +11,4 @@ class SaveData:
         for i in range(len(lights)):
             self.nets[i-1]['lights']=hash_(lights[i])
 def hash_(action):
-    print(action)
     return tuple([tuple(a) for a in action])
