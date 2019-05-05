@@ -1,4 +1,5 @@
 from env_data import sections_of_roads
+from model.LearningState import LearningState
 from services.densityGroups import getGroup
 import numpy as np
 
@@ -11,6 +12,7 @@ class Agent:
         self.all_phases = dic['all_phases']
         self.actual_phase = dic['actual_phase']  # sometimes the pending one
         self.local_phase_sections = dic['local_phase_sections']
+        print('konstruktor agent:'+str(self.index))
         self.phase_duration = dic['actual_phase_duration']
         self.curve_densities = dic['curve_densities']
         self.pending_action_no = 0
@@ -20,6 +22,7 @@ class Agent:
 
     def getLocalActionSpace(self):
         waitActions = ['wait']
+        print('getLocal agent:'+str(self.index),self.phase_duration)
         light_Actions = [1, 2, 3]
         if self.phase_duration >= self.min_phase_duration:
             return light_Actions
@@ -37,39 +40,32 @@ class Agent:
         return A
 
     def pass_action(self, action):
+        print('pass_action agent:'+str(self.index),self.phase_duration)
         if action == 'wait':
             self.phase_duration += 1
             if self.actual_phase == self.all_phases[0] and self.phase_duration == self.orange_phase_duration:
                 self.actual_phase = self.all_phases[self.pending_action_no]
                 self.actual_phase_no = self.pending_action_no
-        else:
-            if self.all_phases[action] == self.actual_phase:
-                self.phase_duration += 1
-            else:  # nowa akcja!
-                self.phase_duration = 0
-                if self.phase_duration == self.orange_phase_duration:
-                    self.actual_phase = self.all_phases[action]
-                    self.actual_phase_no = action
-                else:
-                    self.actual_phase = self.all_phases[0]  # orange
-                    self.actual_phase_no = 0
-                    self.pending_action_no = action
+        # else:
+        #     if self.all_phases[action] == self.actual_phase:
+        #         self.phase_duration += 1
+        #     else:  # nowa akcja!
+        #         self.phase_duration = 0
+        #         print('zerowanie!')
+        #         if self.phase_duration == self.orange_phase_duration:
+        #             self.actual_phase = self.all_phases[action]
+        #             self.actual_phase_no = action
+        #         else:
+        #             self.actual_phase = self.all_phases[0]  # orange
+        #             self.actual_phase_no = 0
+        #             self.pending_action_no = action
         self.t += 1
-
     def assignLocalState(self, densities):
-        pre_cross_densities = []
+        pre_cross_densities = ()
         for sec in self.local_phase_sections:
-            pre_cross_densities.append(getGroup(densities[sec]))
-        global_aggregated_densities = []
+            pre_cross_densities = pre_cross_densities + (getGroup(densities[sec]),)
+        global_aggregated_densities = ()
         for road in sections_of_roads:
-            global_aggregated_densities.append(np.mean([getGroup(den) for den in road]))
-        self.local_state = LocalState(pre_cross_densities, global_aggregated_densities, self.actual_phase_no,
+            global_aggregated_densities = global_aggregated_densities + (np.mean([getGroup(den) for den in road]),)
+        self.local_state = LearningState(pre_cross_densities, global_aggregated_densities, self.actual_phase_no,
                                       self.phase_duration)
-
-
-class LocalState:
-    def __init__(self, pre_cross_densities, global_aggregated_densities, phase_no, phase_duration):
-        self.pre_cross_densities = pre_cross_densities
-        self.global_aggregated_densities = global_aggregated_densities
-        self.phase_no = phase_no
-        self.phase_duration = phase_duration

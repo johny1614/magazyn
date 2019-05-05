@@ -4,6 +4,7 @@ import random
 import numpy as np
 from Env import Env
 from env_data import max_time
+from services.agentFactory import get_SmartAgents
 
 
 def init_Q(state_space, action_space):
@@ -38,30 +39,39 @@ def init_returns():
 
 
 def epoch():
-    env = Env()
-    state = tuple(env.x[0])
+    env = Env(agents)
+    state = tuple([agent.local_state for agent in agents])
     memories = []
     for t in range(max_time - 1):
-        if not pi.has_key(state):
-            global_action_space = env.get_global_action_space()
-            pi[state] = [random.choice(local_action_space) for local_action_space in global_action_space]
-        actions = pi[state]
+        actions=[]
+        for agent in agents:
+            if not agent.pi.has_key(state[agent.index-1]):
+                print(agent.getLocalActionSpace())
+                agent.pi[state]=random.choice(agent.getLocalActionSpace())
+            else:
+                print('powtorka')
+            actions.append(agent.pi[state])
         old_state = tuple(state)
-        global_state, reward = env.step(actions)
-        memories.append({'state': old_state, 'new_state': global_state, 'action': hash_(actions), 'reward': reward})
+        global_state, local_states, reward = env.step(actions)
+        state = tuple(local_states)
+        memories.append({'state': old_state, 'new_state': state, 'action': actions, 'reward': reward})
     return memories
 
 
 def update_returns():
-    G = 0
-    for m in reversed(memories):
-        G = gamma * G + m['reward']
-        s = m['state']
-        a = m['action']
-        if not returns.has_key((s, a)):
-            returns[(s, a)] = [G]
-        else:
-            returns[(s, a)].append(G)
+    for i in range(len(agents)):
+        agent=agents[i]
+        G = 0
+        for m in reversed(memories):
+            G = gamma * G + m['reward']
+            s = m['state'][i]
+            a = m['action'][i]
+            print(a)
+            if not returns.has_key((s, a)):
+                agent.returns[(s, a)] = [G]
+            else:
+                print('yes')
+                agent.returns[(s, a)].append(G)
 
 
 def update_Q():
@@ -95,11 +105,12 @@ def count_rewards():
     return rewards_sum
 
 
+agents = get_SmartAgents()
 gamma = 1
 epsilon = 0.2
 wins = 0
 loses = 0
-action_space = Env().get_global_action_space()
+action_space = Env(agents).get_global_action_space()
 state_space = []  # poczotkowo nic [(x, y, z) for x in range(52) for y in range(52) for z in range(52)]
 Q = {}
 returns = {}
@@ -109,7 +120,7 @@ best_score = 0
 epochs = range(100)
 for e in epochs:
     memories = epoch()
-#     update_returns()
+    update_returns()
 #     update_Q()
 #     update_pi(True)
 #     count_rewards()
