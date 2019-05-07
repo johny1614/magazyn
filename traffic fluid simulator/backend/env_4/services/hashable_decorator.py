@@ -7,7 +7,6 @@ def hashable(*args):
         setattr(cls, '__hash__', eval('__hash__'))
         setattr(cls, '__eq__', eval('__eq__'))
         return cls
-
     return wrapper
 
 
