@@ -1,32 +1,29 @@
+import string
+from dataclasses import dataclass
+
+
+def hashable():
+    def wrapper(cls):
+        setattr(cls, '__hash__', eval('__hash__'))
+        return cls
+    return wrapper
+
+def __hash__(self):
+    all_properties = [prop for prop in dir(self) if not prop.startswith('__')]
+    values = tuple([getattr(self, prop) for prop in all_properties])
+    return hash(values)
+
+
+
+@hashable()
+@dataclass
 class Dog:
-    def __init__(self, id, no):
-        self.id = id
-        self.no = no
+    name: string
+    height: int
 
-    def __str__(self):
-        return 'Dog:  id=' + self.id
-
-    def __eq__(self, other):
-        # print('eq')
-        return self.id == other.id and self.no == other.no
-
-    def __hash__(self):
-        return hash(tuple([self.id,self.no]))
-
-
-names = {}
-dog1 = Dog(1, 3)
-dog2 = Dog(2, 3)
-dog1_again = Dog(1, 56)
-
-names[(1, dog1)] = "siema"
-names[(1, dog2)] = "ehehe"
-names[(1, dog1_again)] = "elooooooooo!"
-names[(1, dog1_again)] = "eloooooooooxd!"
-# print(dog1)
-#
-print(names)
-a = ('2',)
-b = 'z'
-a = a + (b,)
-print(a)
+azor: Dog = Dog('azor',50)
+fafik: Dog = Dog('fafik',20)
+fafik2: Dog = Dog('fafik',24)
+print(azor.__hash__())
+print(fafik.__hash__())
+print(fafik2.__hash__())
