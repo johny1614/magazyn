@@ -1,5 +1,6 @@
-from model.Agent import Agent
+from dataclasses import dataclass
 
+from model.Agent import Agent
 
 class SmartAgent(Agent):
     def __init__(self, dic, min_phase_duration, index, orange_phase_duration=1):

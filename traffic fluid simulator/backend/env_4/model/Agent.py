@@ -1,20 +1,24 @@
+from dataclasses import dataclass
+from typing import Any
+
 from env_data import sections_of_roads
 from model.LearningState import LearningState
 from services.densityGroups import getGroup
 import numpy as np
 
 
+@dataclass
 class Agent:
-    def __init__(self, dic, min_phase_duration, index, orange_phase_duration=1):
-        self.min_phase_duration = min_phase_duration
-        self.index = index
-        self.orange_phase_duration = orange_phase_duration
-        self.all_phases = dic['all_phases']
-        self.actual_phase = dic['actual_phase']  # sometimes the pending one
-        self.local_phase_sections = dic['local_phase_sections']
-        print('konstruktor agent:'+str(self.index))
-        self.phase_duration = dic['actual_phase_duration']
-        self.curve_densities = dic['curve_densities']
+    all_phases: Any
+    actual_phase: Any
+    min_phase_duration: int
+    index: int
+    local_phase_sections: Any
+    phase_duration: Any
+    curve_densities: Any
+    orange_phase_duration: int = 1
+
+    def __init__(self):
         self.pending_action_no = 0
         self.local_state = None
         self.actual_phase_no = None
@@ -22,7 +26,6 @@ class Agent:
 
     def getLocalActionSpace(self):
         waitActions = ['wait']
-        print('getLocal agent:'+str(self.index),self.phase_duration)
         light_Actions = [1, 2, 3]
         if self.phase_duration >= self.min_phase_duration:
             return light_Actions
@@ -40,7 +43,6 @@ class Agent:
         return A
 
     def pass_action(self, action):
-        print('pass_action agent:'+str(self.index),self.phase_duration)
         if action == 'wait':
             self.phase_duration += 1
             if self.actual_phase == self.all_phases[0] and self.phase_duration == self.orange_phase_duration:
@@ -60,6 +62,7 @@ class Agent:
         #             self.actual_phase_no = 0
         #             self.pending_action_no = action
         self.t += 1
+
     def assignLocalState(self, densities):
         pre_cross_densities = ()
         for sec in self.local_phase_sections:
@@ -68,4 +71,4 @@ class Agent:
         for road in sections_of_roads:
             global_aggregated_densities = global_aggregated_densities + (np.mean([getGroup(den) for den in road]),)
         self.local_state = LearningState(pre_cross_densities, global_aggregated_densities, self.actual_phase_no,
-                                      self.phase_duration)
+                                         self.phase_duration)

@@ -28,6 +28,6 @@ for time in range(max_time - 1):
     save_data.add_net(global_state)
 save_data.attach_lights(env.A_storage)
 saveToJson('net4', 'den1', save_data)
-print(env.x[0])
+# print(env.x[0])
 # env.pretty_print()
 # env.pretty_print_4()
