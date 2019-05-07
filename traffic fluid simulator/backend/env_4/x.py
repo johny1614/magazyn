@@ -2,7 +2,8 @@ import string
 from dataclasses import dataclass
 
 
-def hashable():
+def hashable(name):
+    print(name)
     def wrapper(cls):
         setattr(cls, '__hash__', eval('__hash__'))
         return cls
@@ -15,7 +16,7 @@ def __hash__(self):
 
 
 
-@hashable()
+@hashable('name')
 @dataclass
 class Dog:
     name: string
