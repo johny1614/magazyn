@@ -1,7 +1,3 @@
-import string
-from dataclasses import dataclass
-
-
 def hashable(*args):
     def wrapper(cls):
         setattr(cls, '__hash__', eval('__hash__'))

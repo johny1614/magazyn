@@ -1,8 +1,8 @@
 from model.LearningState import LearningState
 
-ls = LearningState(pre_cross_densities=(0, 4, 5), global_aggregated_densities=(2, 4, 5), phase_no=2, phase_duration=1)
-ls2 = LearningState(pre_cross_densities=(0, 4, 5), global_aggregated_densities=(2, 4, 8), phase_no=2, phase_duration=1)
-ls3 = LearningState(pre_cross_densities=(0, 4, 5), global_aggregated_densities=(2, 4, 5), phase_no=2, phase_duration=1)
-myDic = {ls: [2], ls2: [345]}
-myDic[ls3].append(235)
-print(myDic[ls])
+state_1 = LearningState(pre_cross_densities=(0, 4, 5), global_aggregated_densities=(2, 4, 5), phase_no=2, phase_duration=1)
+different_state = LearningState(pre_cross_densities=(0, 4, 5), global_aggregated_densities=(2, 4, 8), phase_no=2, phase_duration=1)
+state_1_also = LearningState(pre_cross_densities=(0, 4, 5), global_aggregated_densities=(2, 4, 5), phase_no=2, phase_duration=1)
+myDic = {state_1: [2], different_state: [6]}
+myDic[state_1_also].append(6)
+print(myDic[state_1])
