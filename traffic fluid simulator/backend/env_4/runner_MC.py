@@ -1,23 +1,23 @@
 # 2 odcinki na droge!
 
-import random
 from typing import List
 
-import numpy as np
 from Env import Env
 from env_data import max_time
 from model.Action import Action
+from model.ExportData import ExportData
+from model.Net import Net
 from services.agentFactory import get_SmartAgents
 from services.globals import Globals
-from services.jsonSaver import saveToJson
 
 
 def epoch():
     Globals().time = 0
     env = Env(agents)
-    for t in range(max_time - 1):
+    for t in range(max_time):
         actions: List[Action] = [agent.get_action_according_to_pi(agent.local_state) for agent in agents]
         env.step(actions)
+    return env
     #     state = local_states
     #     memories.append({'state': old_state, 'new_state': state, 'action': actions, 'reward': reward})
     # return memories
@@ -30,7 +30,13 @@ epsilon = 0.2
 best_score = 0
 epochs = range(1)
 for e in epochs:
-    epoch_memory = epoch()
+    env: Env = epoch()
+    nets: List[Net] = []
+    for t in range(max_time-1):
+        A = env.A_storage[t+1].tolist()
+        x = env.x[t].tolist()
+        net = Net(A, x)
+        nets.append(net)
 #     update_returns()
 #     epoch_rewards = count_rewards(epoch_memory)
 # last_epoch_memory = epoch()  # last epoch
@@ -48,4 +54,6 @@ for e in epochs:
 #     # 'turns':env.turns
 # }
 #
-# saveToJson('net4', 'den_MC', data)
+exportData = ExportData(learningMethod='Monte Carlo TODO', learningEpochs=0, nets=nets, netName='net4',
+                        densityName='77')
+exportData.saveToJson()

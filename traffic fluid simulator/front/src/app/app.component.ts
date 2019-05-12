@@ -34,7 +34,8 @@ export class AppComponent {
   ngOnInit() {
     this.getJSON('assets/nets/net4.json').subscribe(staticData => {
       this.nets = [NetFactory.netFromJson(staticData)];
-      this.getJSON('assets/densities/net4_den1.json').subscribe(dynamicData => {
+      this.getJSON('assets/densities/net4_77.json').subscribe(dynamicData => {
+        console.log('jest dynamicData', dynamicData);
         this.nets = NetFactory.getNetsWithDensity(staticData, dynamicData);
         NetFactory.attachLights(this.nets, dynamicData);
         NetFactory.attachA(this.nets, dynamicData);

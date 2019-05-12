@@ -9,4 +9,3 @@ class LearningState:
     global_aggregated_densities: Tuple[int]
     phase_index: int
     phase_duration: int
-
