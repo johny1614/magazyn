@@ -1,25 +1,22 @@
 from typing import List, Tuple
 
-import numpy as np
 import attr
-from env_data import u, start_A, x_size, max_time
+import numpy as np
+
+from env_data import u, start_A, env_data_x, env_data_A_storage
+from model import GlobalState
 from model.Action import Action
 from model.Agent import Agent
-from model.SaveState import SaveState
-from model.LearningState import LearningState
-
 # trojkatne - 3 skrzyzowania, razem 6 drog
 from services.globals import Globals
+from services.prettyPrinter import pretty_print_A
 
 
 @attr.s(auto_attribs=True)
 class Env:
     agents: List[Agent]
-    max_time = max_time
-    x_size = 36
-    x = [x_size * [0]] * max_time
-    y = [0] * max_time
-    A_storage = [[]] * max_time
+    x = env_data_x
+    A_storage = env_data_A_storage
 
     @property
     def t(self):
@@ -29,41 +26,55 @@ class Env:
     def A(self):
         return self.A_storage[self.t]
 
+    @property
+    def global_state(self) -> GlobalState:
+        return tuple(agent.local_state for agent in self.agents)
+
+    @property
+    def global_reward(self) -> float:
+        t = self.t
+        return self.x[t][29] + self.x[t][35] + self.x[t][32]
+
     @A.setter
     def A(self, new_A):
         self.A_storage[self.t] = new_A
 
-    def step(self, actions):
-        Globals().time += 1
-        print('time',self.t)
-        self.A_storage[self.t] = start_A()
-        self.__pass_actions(actions)
+    @property
+    def global_action_space(self) -> Tuple[Action]:
+        global_action_space = ()
+        for agent in self.agents:
+            localSpace = agent.local_action_space()
+            global_action_space = global_action_space + (localSpace,)
+        return global_action_space
+
+    def step(self, actions: List[Action]):
+        print('actions', actions)
+        self.A = start_A()
+        self.__pass_actions_to_agents(actions)
         self.__modify_A()
-        self.A_storage[self.t] = self.A
-        return self.__execute_phase()
+        self.__execute_phase()
+        self.__assign_rewards_to_agents()
+        print('t', self.t)
+        print('x', self.x[self.t])
+        print('A', self.A)
+        pretty_print_A(self.A)
+        Globals().time += 1
 
     def __execute_phase(self):
         t = self.t
         self.x[t] = np.dot(self.A, self.x[t - 1])
-        self.y[t] = self.__calculate_y()
-        save_state = SaveState(self.x[t], self.agents, self.A)
+        self.__include_source_cars()
         self.__assign_local_states_to_agents()
-        return save_state, tuple([agent.local_state for agent in self.agents]), self.y[t]
 
-    def __pass_actions(self, actions):
+    def __assign_rewards_to_agents(self):
+        for agent in self.agents:
+            agent.assign_reward(previous_x=self.x[self.t - 1], actual_x=self.x[self.t],
+                                global_reward=self.global_reward)
+
+    def __pass_actions_to_agents(self, actions: List[Action]):
         for i in range(self.agents.__len__()):
             agent = self.agents[i]
             agent.pass_action(actions[i])
-
-    def get_global_state(self) -> Tuple[LearningState]:
-        return tuple(self.agent.local_state for agent in self.agents)
-
-    def get_global_action_space(self) -> Tuple[Action]:
-        global_action_space = ()
-        for agent in self.agents:
-            localSpace = agent.get_local_action_space()
-            global_action_space = global_action_space + (localSpace,)
-        return global_action_space
 
     # global_aggregated_densities = global_aggregated_densities + (np.mean([getGroup(den) for den in road]),)
 
@@ -77,10 +88,10 @@ class Env:
         self.x[t][3] += u[t - 1][1]
         self.x[t][6] += u[t - 1][1]
 
-    def __calculate_y(self):
+    def __calculate_global_reward(self):
         t = self.t
         return self.x[t][29] + self.x[t][35] + self.x[t][32]
 
     def __assign_local_states_to_agents(self):
         for agent in self.agents:
-            agent.assignLocalState(self.x[self.t])
+            agent.assign_local_state(self.x[self.t])

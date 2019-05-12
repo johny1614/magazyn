@@ -1,0 +1,3557 @@
+Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)]))
+actions [Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)])), Action(index=3, agent_index=1, decided_phase=Phase(index=3, moves=[(18, 26), (30, 26), (12, 5)])), Action(index=2, agent_index=2, decided_phase=Phase(index=2, moves=[(24, 8), (15, 8), (33, 14)]))]
+D
+D
+D
+modify 0
+modify 0
+modify 0
+t 0
+x [10.  0.  0. 10.  0.  0. 10.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 1.0 na: (11, 11)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+modify 3
+modify 3
+modify 2
+t 1
+x [ 2. 10.  0.  2. 10.  0.  2. 10.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 0.30000000000000004 na: (5, 5)
+wartosc 0.3 na: (9, 17)
+wartosc 1.0 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 0.30000000000000004 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 5.551115123125783e-17 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 0.30000000000000004 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 0.3 na: (24, 8)
+wartosc 5.551115123125783e-17 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.3 na: (30, 26)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)]))
+actions [Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)])), Action(index=3, agent_index=1, decided_phase=Phase(index=3, moves=[(18, 26), (30, 26), (12, 5)])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+D
+C
+D
+modify 0
+modify 3
+modify 0
+t 2
+x [ 4.  2. 10.  4.  2. 10.  4.  2. 10.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 0.30000000000000004 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 1.0 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 5.551115123125783e-17 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.3 na: (30, 26)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+modify 2
+modify 0
+modify 1
+t 3
+x [ 6.  4.  5.  6.  4. 12.  6.  4. 12.  7.  0.  0.  0.  0.  0.  0.  0.  0.
+  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+A [[0.  0.  0.  ... 0.  0.  0. ]
+ [1.  0.  0.  ... 0.  0.  0. ]
+ [0.  1.  0.3 ... 0.  0.  0. ]
+ ...
+ [0.  0.  0.  ... 0.  0.  0. ]
+ [0.  0.  0.  ... 1.  0.  0. ]
+ [0.  0.  0.  ... 0.  1.  1. ]]
+wartosc 0.30000000000000004 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 5.551115123125783e-17 na: (20, 20)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.3 na: (27, 20)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)]))
+actions [Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=3, agent_index=2, decided_phase=Phase(index=3, moves=[(24, 23), (33, 23), (15, 8)]))]
+D
+D
+modify 0
+modify 2
+modify 0
+t 4
+x [ 8.   6.   9.   8.   6.   4.   8.   6.  16.   0.   7.   0.   8.4  0.
+  0.   0.   0.   0.   3.6  0.   0.   0.   0.   0.   0.   0.   0.   0.
+  0.   0.   0.   0.   0.   0.   0.   0. ]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=3, agent_index=1, decided_phase=Phase(index=3, moves=[(18, 26), (30, 26), (12, 5)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+modify 1
+modify 0
+modify 3
+t 5
+x [10.   8.   6.  10.   8.  10.  10.   8.  10.8  6.3  0.   7.   0.   8.4
+  0.  11.2  0.   0.   0.   3.6  0.   2.7  0.   0.   0.   0.   0.   0.
+  0.   0.   0.   0.   0.   0.   0.   0. ]
+A [[0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [1.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 1.00000000e+00 5.55111512e-17 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ ...
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 1.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  1.00000000e+00 1.00000000e+00]]
+wartosc 5.551115123125783e-17 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 0.30000000000000004 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 1.0 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 0.30000000000000004 na: (17, 17)
+wartosc 1.0 na: (20, 20)
+wartosc 0.3 na: (21, 2)
+wartosc 5.551115123125783e-17 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 0.3 na: (33, 23)
+wartosc 1.0 na: (35, 35)
+Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)]))
+actions [Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+C
+D
+modify 1
+modify 3
+modify 0
+t 6
+x [ 2.  10.   8.   2.  10.  11.   2.  10.  18.8  4.2  6.3  7.   7.   0.
+  8.4  0.  11.2  0.   0.   0.   3.6  1.8  2.7  0.   0.   0.   0.   0.
+  0.   0.   0.   0.   0.   0.   0.   0. ]
+A [[0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [1.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 1.00000000e+00 5.55111512e-17 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ ...
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 1.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  1.00000000e+00 1.00000000e+00]]
+wartosc 5.551115123125783e-17 na: (2, 2)
+wartosc 0.30000000000000004 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 0.30000000000000004 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 0.3 na: (21, 2)
+wartosc 1.0 na: (23, 23)
+wartosc 5.551115123125783e-17 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.3 na: (30, 26)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)]))
+actions [Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+D
+modify 0
+modify 0
+modify 1
+t 7
+x [4.0000000e+00 2.0000000e+00 1.8000000e+01 4.0000000e+00 2.0000000e+00
+ 2.1000000e+01 4.0000000e+00 2.0000000e+00 2.8800000e+01 0.0000000e+00
+ 4.2000000e+00 1.3300000e+01 0.0000000e+00 7.0000000e+00 4.6629367e-16
+ 2.5200000e+00 0.0000000e+00 1.1200000e+01 0.0000000e+00 0.0000000e+00
+ 3.6000000e+00 0.0000000e+00 1.8000000e+00 2.7000000e+00 0.0000000e+00
+ 0.0000000e+00 0.0000000e+00 0.0000000e+00 0.0000000e+00 0.0000000e+00
+ 0.0000000e+00 0.0000000e+00 0.0000000e+00 5.8800000e+00 0.0000000e+00
+ 0.0000000e+00]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 1.0 na: (11, 11)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 1.0 na: (20, 20)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=2, agent_index=2, decided_phase=Phase(index=2, moves=[(24, 8), (15, 8), (33, 14)]))]
+D
+modify 2
+modify 2
+modify 0
+t 8
+x [6.00000000e+00 4.00000000e+00 7.40000000e+00 6.00000000e+00
+ 4.00000000e+00 2.00000000e+00 6.00000000e+00 4.00000000e+00
+ 3.08000000e+01 1.26000000e+01 0.00000000e+00 8.19000000e+00
+ 1.47000000e+01 0.00000000e+00 7.00000000e+00 0.00000000e+00
+ 2.52000000e+00 1.12000000e+01 6.30000000e+00 0.00000000e+00
+ 1.99840144e-16 2.52000000e+00 0.00000000e+00 4.50000000e+00
+ 0.00000000e+00 0.00000000e+00 0.00000000e+00 1.08000000e+00
+ 0.00000000e+00 0.00000000e+00 9.31000000e+00 0.00000000e+00
+ 0.00000000e+00 0.00000000e+00 5.88000000e+00 0.00000000e+00]
+A [[0.  0.  0.  ... 0.  0.  0. ]
+ [1.  0.  0.  ... 0.  0.  0. ]
+ [0.  1.  0.3 ... 0.  0.  0. ]
+ ...
+ [0.  0.  0.  ... 0.  0.  0. ]
+ [0.  0.  0.  ... 1.  0.  0. ]
+ [0.  0.  0.  ... 0.  1.  1. ]]
+wartosc 0.30000000000000004 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 5.551115123125783e-17 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.3 na: (27, 20)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)]))
+actions [Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+C
+modify 0
+modify 2
+modify 2
+t 9
+x [8.00000000e+00 6.00000000e+00 1.14000000e+01 8.00000000e+00
+ 6.00000000e+00 4.00000000e+00 8.00000000e+00 6.00000000e+00
+ 4.00000000e+00 0.00000000e+00 1.26000000e+01 2.45700000e+00
+ 1.40000000e+00 1.47000000e+01 2.10000000e+00 2.15600000e+01
+ 0.00000000e+00 1.37200000e+01 6.00000000e-01 6.30000000e+00
+ 1.99840144e-16 0.00000000e+00 2.52000000e+00 4.50000000e+00
+ 9.24000000e+00 0.00000000e+00 0.00000000e+00 0.00000000e+00
+ 1.08000000e+00 0.00000000e+00 5.73300000e+00 9.31000000e+00
+ 0.00000000e+00 4.90000000e+00 0.00000000e+00 5.88000000e+00]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 0.30000000000000004 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 1.0 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 0.3 na: (24, 8)
+wartosc 1.0 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=3, agent_index=2, decided_phase=Phase(index=3, moves=[(24, 23), (33, 23), (15, 8)]))]
+C
+D
+modify 3
+modify 2
+modify 0
+t 10
+x [1.00000000e+01 8.00000000e+00 1.74000000e+01 1.00000000e+01
+ 8.00000000e+00 6.00000000e+00 1.00000000e+01 8.00000000e+00
+ 1.00000000e+01 4.11600000e+00 0.00000000e+00 1.33371000e+01
+ 2.80000000e+00 1.40000000e+00 1.68000000e+01 0.00000000e+00
+ 2.15600000e+01 7.61612995e-16 1.20000000e+00 6.00000000e-01
+ 6.30000000e+00 1.39888101e-16 0.00000000e+00 7.02000000e+00
+ 0.00000000e+00 9.24000000e+00 0.00000000e+00 9.60400000e+00
+ 0.00000000e+00 1.08000000e+00 1.71990000e+00 5.73300000e+00
+ 9.31000000e+00 0.00000000e+00 4.90000000e+00 5.88000000e+00]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.3 na: (9, 17)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 5.551115123125783e-17 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 0.30000000000000004 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)]))
+actions [Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)])), Action(index=3, agent_index=1, decided_phase=Phase(index=3, moves=[(18, 26), (30, 26), (12, 5)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+D
+modify 0
+modify 0
+modify 3
+t 11
+x [2.00000000e+00 1.00000000e+01 2.54000000e+01 2.00000000e+00
+ 1.00000000e+01 1.40000000e+01 2.00000000e+00 1.00000000e+01
+ 1.10000000e+01 0.00000000e+00 4.11600000e+00 1.33371000e+01
+ 0.00000000e+00 2.80000000e+00 1.82000000e+01 7.00000000e+00
+ 0.00000000e+00 2.15600000e+01 0.00000000e+00 1.20000000e+00
+ 6.90000000e+00 0.00000000e+00 1.39888101e-16 3.89688282e-16
+ 4.91400000e+00 0.00000000e+00 9.24000000e+00 0.00000000e+00
+ 9.60400000e+00 1.08000000e+00 0.00000000e+00 1.71990000e+00
+ 1.50430000e+01 2.10600000e+00 0.00000000e+00 1.07800000e+01]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 0.30000000000000004 na: (8, 8)
+wartosc 1.0 na: (11, 11)
+wartosc 1.0 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 1.0 na: (17, 17)
+wartosc 1.0 na: (20, 20)
+wartosc 5.551115123125783e-17 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 0.3 na: (33, 23)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=2, agent_index=2, decided_phase=Phase(index=2, moves=[(24, 8), (15, 8), (33, 14)]))]
+D
+modify 1
+modify 3
+modify 0
+t 12
+x [4.00000000e+00 2.00000000e+00 1.00000000e+01 4.00000000e+00
+ 2.00000000e+00 1.42000000e+01 4.00000000e+00 2.00000000e+00
+ 2.10000000e+01 1.77800000e+01 0.00000000e+00 1.74531000e+01
+ 9.80000000e+00 0.00000000e+00 2.10000000e+01 0.00000000e+00
+ 7.00000000e+00 6.46800000e+00 6.46800000e+00 0.00000000e+00
+ 8.10000000e+00 7.62000000e+00 0.00000000e+00 5.29576383e-16
+ 0.00000000e+00 4.91400000e+00 5.12923037e-16 1.50920000e+01
+ 0.00000000e+00 1.06840000e+01 2.77200000e+00 0.00000000e+00
+ 1.67629000e+01 0.00000000e+00 2.10600000e+00 1.07800000e+01]
+A [[0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [1.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 1.00000000e+00 5.55111512e-17 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ ...
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 1.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  1.00000000e+00 1.00000000e+00]]
+wartosc 5.551115123125783e-17 na: (2, 2)
+wartosc 0.30000000000000004 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 0.30000000000000004 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 0.3 na: (21, 2)
+wartosc 1.0 na: (23, 23)
+wartosc 5.551115123125783e-17 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.3 na: (30, 26)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)]))
+actions [Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)])), Action(index=3, agent_index=1, decided_phase=Phase(index=3, moves=[(18, 26), (30, 26), (12, 5)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+C
+modify 0
+modify 3
+modify 2
+t 13
+x [6.00000000e+00 4.00000000e+00 1.20000000e+01 6.00000000e+00
+ 4.00000000e+00 6.26000000e+00 6.00000000e+00 4.00000000e+00
+ 2.00000000e+00 0.00000000e+00 1.77800000e+01 1.74531000e+01
+ 9.94000000e+00 9.80000000e+00 6.30000000e+00 1.47000000e+01
+ 0.00000000e+00 1.34680000e+01 3.59046126e-16 6.46800000e+00
+ 8.10000000e+00 0.00000000e+00 7.62000000e+00 5.29576383e-16
+ 6.30000000e+00 0.00000000e+00 4.91400000e+00 0.00000000e+00
+ 1.50920000e+01 1.06840000e+01 1.53876911e-16 2.77200000e+00
+ 1.67629000e+01 1.47000000e+01 0.00000000e+00 1.28860000e+01]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 0.30000000000000004 na: (5, 5)
+wartosc 1.0 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 0.30000000000000004 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 1.0 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 0.3 na: (24, 8)
+wartosc 5.551115123125783e-17 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.3 na: (30, 26)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=2, agent_index=2, decided_phase=Phase(index=2, moves=[(24, 8), (15, 8), (33, 14)]))]
+D
+C
+modify 3
+modify 0
+modify 2
+t 14
+x [8.00000000e+00 6.00000000e+00 1.60000000e+01 8.00000000e+00
+ 6.00000000e+00 1.02600000e+01 8.00000000e+00 6.00000000e+00
+ 4.00000000e+00 4.04040000e+00 0.00000000e+00 3.52331000e+01
+ 0.00000000e+00 9.94000000e+00 1.16900000e+01 1.40000000e+00
+ 1.47000000e+01 7.47624185e-16 0.00000000e+00 3.59046126e-16
+ 8.89800000e+00 5.67000000e+00 0.00000000e+00 7.62000000e+00
+ 6.00000000e-01 6.30000000e+00 4.91400000e+00 9.42760000e+00
+ 0.00000000e+00 2.57760000e+01 0.00000000e+00 1.53876911e-16
+ 1.95349000e+01 4.41000000e+00 1.47000000e+01 1.28860000e+01]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 0.3 na: (9, 17)
+wartosc 1.0 na: (11, 11)
+wartosc 0.30000000000000004 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 5.551115123125783e-17 na: (17, 17)
+wartosc 0.30000000000000004 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 0.3 na: (24, 8)
+wartosc 1.0 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)]))
+actions [Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=3, agent_index=2, decided_phase=Phase(index=3, moves=[(24, 23), (33, 23), (15, 8)]))]
+D
+D
+modify 0
+modify 2
+modify 0
+t 15
+x [10.       8.      22.      10.       8.       6.      10.       8.
+ 10.       0.       4.0404  10.56993  7.182    0.      21.63     0.
+  1.4     14.7      3.078    0.       8.898    0.       5.67     7.62
+  0.       0.6     11.214    0.       9.4276  25.776   24.66317  0.
+ 19.5349   0.       4.41    27.586  ]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+C
+modify 1
+modify 2
+modify 3
+t 16
+x [ 2.       10.        8.        2.       10.        8.        2.
+ 10.       11.       15.4       0.        7.211379  4.2       7.182
+ 21.63      7.        0.        5.81      1.8       3.078     8.898
+  6.6       0.        5.67      5.334     0.       11.814    10.29
+  0.       35.2036    7.398951 24.66317  19.5349    2.286     0.
+ 31.996   ]
+A [[0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [1.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 1.00000000e+00 5.55111512e-17 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ ...
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 1.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  1.00000000e+00 1.00000000e+00]]
+wartosc 5.551115123125783e-17 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 0.30000000000000004 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 0.30000000000000004 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 1.0 na: (20, 20)
+wartosc 0.3 na: (21, 2)
+wartosc 5.551115123125783e-17 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.3 na: (33, 23)
+wartosc 1.0 na: (35, 35)
+Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)]))
+actions [Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)])), Action(index=3, agent_index=1, decided_phase=Phase(index=3, moves=[(18, 26), (30, 26), (12, 5)])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+C
+D
+D
+modify 1
+modify 0
+modify 0
+t 17
+x [ 4.        2.       10.        4.        2.       18.        4.
+  2.       21.        5.6      15.4       7.211379  0.        4.2
+ 28.812     0.        7.        1.743     0.        1.8      11.976
+  2.4       6.6       5.67      0.        5.334    11.814     4.067
+ 10.29     35.2036    0.        7.398951 44.19807   0.        2.286
+ 31.996   ]
+A [[0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [1.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 1.00000000e+00 5.55111512e-17 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ ...
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 1.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  1.00000000e+00 1.00000000e+00]]
+wartosc 5.551115123125783e-17 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 1.0 na: (14, 14)
+wartosc 0.30000000000000004 na: (17, 17)
+wartosc 1.0 na: (20, 20)
+wartosc 0.3 na: (21, 2)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)]))
+actions [Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+modify 0
+modify 3
+modify 1
+t 18
+x [ 6.        4.       12.        6.        4.        7.4       6.
+  4.       23.        0.        5.6      22.611379 12.6       0.
+  4.2       8.6436    0.        8.743     8.2698    0.       13.776
+  0.        2.4       8.301     3.969     0.        5.334     0.
+  4.067    45.4936    3.5442    0.       51.597021 20.1684    0.
+ 34.282   ]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 0.30000000000000004 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 1.0 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 5.551115123125783e-17 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.3 na: (30, 26)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=1, agent_index=1, decided_phase=Phase(index=1, moves=[(12, 11), (30, 11), (18, 26)])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+D
+C
+modify 3
+modify 0
+modify 1
+t 19
+x [8.00000000e+00 6.00000000e+00 1.60000000e+01 8.00000000e+00
+ 6.00000000e+00 1.14000000e+01 8.00000000e+00 6.00000000e+00
+ 2.70000000e+01 2.62290000e+00 0.00000000e+00 2.82113790e+01
+ 0.00000000e+00 1.26000000e+01 2.33146835e-16 1.26000000e+00
+ 8.64360000e+00 4.85333995e-16 0.00000000e+00 8.26980000e+00
+ 4.13280000e+00 9.64320000e+00 0.00000000e+00 4.89030000e+00
+ 5.81070000e+00 3.96900000e+00 5.33400000e+00 6.12010000e+00
+ 0.00000000e+00 4.95606000e+01 0.00000000e+00 3.54420000e+00
+ 5.15970210e+01 2.94000000e+00 2.01684000e+01 3.42820000e+01]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.3 na: (9, 17)
+wartosc 1.0 na: (11, 11)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 5.551115123125783e-17 na: (17, 17)
+wartosc 0.30000000000000004 na: (20, 20)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)]))
+actions [Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=3, agent_index=2, decided_phase=Phase(index=3, moves=[(24, 23), (33, 23), (15, 8)]))]
+D
+D
+modify 0
+modify 1
+modify 0
+t 20
+x [10.         8.        22.        10.         8.        17.4
+ 10.         8.        33.         0.         2.6229     0.
+  8.4634137  0.        12.6        0.         1.26       8.6436
+  3.7338     0.        12.4026     0.         9.6432     4.8903
+  0.         5.8107     5.5692     0.         6.1201    49.5606
+ 19.7479653  0.        55.141221   0.         2.94      54.4504   ]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 0.30000000000000004 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+modify 2
+modify 0
+modify 3
+t 21
+x [2.00000000e+00 1.00000000e+01 1.46000000e+01 2.00000000e+00
+ 1.00000000e+01 2.54000000e+01 2.00000000e+00 1.00000000e+01
+ 1.79000000e+01 1.54000000e+01 0.00000000e+00 2.62290000e+00
+ 0.00000000e+00 8.46341370e+00 1.26000000e+01 2.31000000e+01
+ 0.00000000e+00 9.90360000e+00 0.00000000e+00 3.73380000e+00
+ 6.88482604e-16 8.68182000e+00 0.00000000e+00 9.64320000e+00
+ 3.42321000e+00 0.00000000e+00 1.13799000e+01 3.72078000e+00
+ 0.00000000e+00 5.56807000e+01 0.00000000e+00 1.97479653e+01
+ 5.51412210e+01 1.46709000e+00 0.00000000e+00 5.73904000e+01]
+A [[0.  0.  0.  ... 0.  0.  0. ]
+ [1.  0.  0.  ... 0.  0.  0. ]
+ [0.  1.  0.3 ... 0.  0.  0. ]
+ ...
+ [0.  0.  0.  ... 0.  0.  0. ]
+ [0.  0.  0.  ... 1.  0.  0. ]
+ [0.  0.  0.  ... 0.  1.  1. ]]
+wartosc 0.30000000000000004 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 0.30000000000000004 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 1.0 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 1.0 na: (17, 17)
+wartosc 5.551115123125783e-17 na: (20, 20)
+wartosc 5.551115123125783e-17 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.3 na: (27, 20)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 0.3 na: (33, 23)
+wartosc 1.0 na: (35, 35)
+Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)]))
+actions [Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+C
+D
+modify 2
+modify 2
+modify 0
+t 22
+x [4.00000000e+00 2.00000000e+00 1.43800000e+01 4.00000000e+00
+ 2.00000000e+00 1.00000000e+01 4.00000000e+00 2.00000000e+00
+ 2.79000000e+01 1.02200000e+01 1.54000000e+01 7.86870000e-01
+ 1.77800000e+01 0.00000000e+00 2.10634137e+01 0.00000000e+00
+ 2.31000000e+01 9.90360000e+00 7.62000000e+00 0.00000000e+00
+ 3.73380000e+00 4.81937823e-16 8.68182000e+00 9.64320000e+00
+ 0.00000000e+00 3.42321000e+00 1.13799000e+01 2.06544781e-16
+ 3.72078000e+00 5.56807000e+01 1.83603000e+00 0.00000000e+00
+ 7.48891863e+01 0.00000000e+00 1.46709000e+00 5.73904000e+01]
+A [[0.  0.  0.  ... 0.  0.  0. ]
+ [1.  0.  0.  ... 0.  0.  0. ]
+ [0.  1.  0.3 ... 0.  0.  0. ]
+ ...
+ [0.  0.  0.  ... 0.  0.  0. ]
+ [0.  0.  0.  ... 1.  0.  0. ]
+ [0.  0.  0.  ... 0.  1.  1. ]]
+wartosc 0.30000000000000004 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 5.551115123125783e-17 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.3 na: (27, 20)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)]))
+actions [Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)])), Action(index=1, agent_index=1, decided_phase=Phase(index=1, moves=[(12, 11), (30, 11), (18, 26)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+D
+modify 0
+modify 0
+modify 1
+t 23
+x [6.00000000e+00 4.00000000e+00 1.63800000e+01 6.00000000e+00
+ 4.00000000e+00 1.20000000e+01 6.00000000e+00 4.00000000e+00
+ 2.99000000e+01 0.00000000e+00 1.02200000e+01 1.61868700e+01
+ 0.00000000e+00 1.77800000e+01 1.16925434e-15 6.31902411e+00
+ 0.00000000e+00 3.30036000e+01 0.00000000e+00 7.62000000e+00
+ 3.73380000e+00 0.00000000e+00 4.81937823e-16 1.15747800e+01
+ 6.75024000e+00 0.00000000e+00 1.48031100e+01 0.00000000e+00
+ 2.06544781e-16 5.94014800e+01 0.00000000e+00 1.83603000e+00
+ 7.48891863e+01 1.47443896e+01 0.00000000e+00 5.88574900e+01]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 1.0 na: (11, 11)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 1.0 na: (20, 20)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+C
+modify 3
+modify 1
+modify 1
+t 24
+x [8.00000000e+00 6.00000000e+00 2.03800000e+01 8.00000000e+00
+ 6.00000000e+00 1.60000000e+01 8.00000000e+00 6.00000000e+00
+ 3.39000000e+01 9.90108000e+00 0.00000000e+00 1.02200000e+01
+ 4.85606100e+00 0.00000000e+00 1.77800000e+01 3.50776303e-16
+ 6.31902411e+00 1.83206783e-15 1.03621770e+01 0.00000000e+00
+ 8.74014000e+00 2.61366000e+00 0.00000000e+00 3.47243400e+00
+ 8.10234600e+00 6.75024000e+00 4.44093300e+00 2.31025200e+01
+ 0.00000000e+00 5.94014800e+01 1.13308090e+01 0.00000000e+00
+ 7.67252163e+01 8.18478040e-16 1.47443896e+01 5.88574900e+01]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.3 na: (9, 17)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 5.551115123125783e-17 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 0.30000000000000004 na: (20, 20)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 0.30000000000000004 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)]))
+actions [Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=3, agent_index=2, decided_phase=Phase(index=3, moves=[(24, 23), (33, 23), (15, 8)]))]
+C
+D
+D
+modify 3
+modify 0
+modify 0
+t 25
+x [1.00000000e+01 8.00000000e+00 2.63800000e+01 1.00000000e+01
+ 8.00000000e+00 2.20000000e+01 1.00000000e+01 8.00000000e+00
+ 3.99000000e+01 5.49620349e-16 9.90108000e+00 1.02200000e+01
+ 0.00000000e+00 4.85606100e+00 1.77800000e+01 0.00000000e+00
+ 3.50776303e-16 6.31902411e+00 0.00000000e+00 1.03621770e+01
+ 2.62204200e+00 6.11809800e+00 2.61366000e+00 3.47243400e+00
+ 0.00000000e+00 8.10234600e+00 1.11911730e+01 1.28244748e-15
+ 2.31025200e+01 5.94014800e+01 0.00000000e+00 1.13308090e+01
+ 7.67252163e+01 0.00000000e+00 8.18478040e-16 7.36018796e+01]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.3 na: (9, 17)
+wartosc 1.0 na: (11, 11)
+wartosc 1.0 na: (14, 14)
+wartosc 5.551115123125783e-17 na: (17, 17)
+wartosc 0.30000000000000004 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)]))
+actions [Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+modify 0
+modify 2
+modify 3
+t 26
+x [2.00000000e+00 1.00000000e+01 3.43800000e+01 2.00000000e+00
+ 1.00000000e+01 8.00000000e+00 2.00000000e+00 1.00000000e+01
+ 1.99700000e+01 0.00000000e+00 5.49620349e-16 1.29670800e+01
+ 1.54000000e+01 0.00000000e+00 2.26360610e+01 2.79300000e+01
+ 0.00000000e+00 6.31902411e+00 6.60000000e+00 0.00000000e+00
+ 1.29842190e+01 0.00000000e+00 6.11809800e+00 2.61366000e+00
+ 2.43070380e+00 0.00000000e+00 1.92935190e+01 0.00000000e+00
+ 1.28244748e-15 8.25040000e+01 7.15400000e+00 0.00000000e+00
+ 8.80560253e+01 1.04173020e+00 0.00000000e+00 7.36018796e+01]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 0.30000000000000004 na: (8, 8)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 1.0 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 1.0 na: (20, 20)
+wartosc 5.551115123125783e-17 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.3 na: (33, 23)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+C
+D
+modify 2
+modify 2
+modify 0
+t 27
+x [4.00000000e+00 2.00000000e+00 2.03140000e+01 4.00000000e+00
+ 2.00000000e+00 1.00000000e+01 4.00000000e+00 2.00000000e+00
+ 2.99700000e+01 2.40660000e+01 0.00000000e+00 3.89012400e+00
+ 5.60000000e+00 1.54000000e+01 2.26360610e+01 0.00000000e+00
+ 2.79300000e+01 6.31902411e+00 2.40000000e+00 6.60000000e+00
+ 7.20768945e-16 9.08895330e+00 0.00000000e+00 8.73175800e+00
+ 0.00000000e+00 2.43070380e+00 1.92935190e+01 3.89526570e+00
+ 0.00000000e+00 8.25040000e+01 9.07695600e+00 7.15400000e+00
+ 8.80560253e+01 0.00000000e+00 1.04173020e+00 7.36018796e+01]
+A [[0.  0.  0.  ... 0.  0.  0. ]
+ [1.  0.  0.  ... 0.  0.  0. ]
+ [0.  1.  0.3 ... 0.  0.  0. ]
+ ...
+ [0.  0.  0.  ... 0.  0.  0. ]
+ [0.  0.  0.  ... 1.  0.  0. ]
+ [0.  0.  0.  ... 0.  1.  1. ]]
+wartosc 0.30000000000000004 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 5.551115123125783e-17 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.3 na: (27, 20)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)]))
+actions [Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+C
+modify 0
+modify 2
+modify 1
+t 28
+x [ 6.          4.         22.314       6.          4.          2.
+  6.          4.         31.97        0.         24.066       1.1670372
+  7.          5.6        15.4         6.7908183   0.         34.24902411
+  3.          2.4         6.6         0.          9.0889533   2.6195274
+  6.1122306   0.         21.7242228   0.          3.8952657  82.504
+  2.7230868   9.076956   95.2100253  15.8452427   0.         74.64360979]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 1.0 na: (20, 20)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=1, agent_index=1, decided_phase=Phase(index=1, moves=[(12, 11), (30, 11), (18, 26)])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+D
+C
+modify 1
+modify 0
+modify 1
+t 29
+x [  8.           6.           4.           8.           6.
+   6.           8.           6.          35.97        15.6198
+   0.          25.2330372    0.           7.           5.6
+   4.62         6.7908183   10.27470723   0.           3.
+   9.           6.6942       0.           9.87481152   1.83366918
+   6.1122306   21.7242228   23.97431688   0.          86.3992657
+   0.           2.7230868  104.2869813   10.78        15.8452427
+  74.64360979]
+A [[0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [1.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 1.00000000e+00 5.55111512e-17 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ ...
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 1.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  1.00000000e+00 1.00000000e+00]]
+wartosc 5.551115123125783e-17 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 0.30000000000000004 na: (17, 17)
+wartosc 1.0 na: (20, 20)
+wartosc 0.3 na: (21, 2)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)]))
+actions [Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+D
+C
+modify 0
+modify 1
+modify 1
+t 30
+x [ 10.           8.          10.          10.           8.
+  12.          10.           8.          41.97         0.
+  15.6198       0.           7.56991116   0.           7.
+   1.68         4.62        17.06552553  15.20695596   0.
+  12.           0.           6.6942       2.96244346   6.91236806
+   1.83366918  12.62949744   0.          23.97431688  86.3992657
+  17.66312604   0.         107.0100681    3.92        10.78
+  90.48885249]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 0.30000000000000004 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=1, agent_index=1, decided_phase=Phase(index=1, moves=[(12, 11), (30, 11), (18, 26)])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+C
+C
+modify 3
+modify 1
+modify 1
+t 31
+x [2.00000000e+00 1.00000000e+01 1.80000000e+01 2.00000000e+00
+ 1.00000000e+01 2.00000000e+01 2.00000000e+00 1.00000000e+01
+ 4.99700000e+01 5.11965766e+00 0.00000000e+00 1.56198000e+01
+ 0.00000000e+00 7.56991116e+00 3.88578059e-16 2.10000000e+00
+ 1.68000000e+00 4.62000000e+00 8.84064821e+00 1.52069560e+01
+ 3.60000000e+00 8.40000000e+00 0.00000000e+00 7.58293304e+00
+ 2.07371042e+00 6.91236806e+00 5.62251841e+00 1.19458679e+01
+ 0.00000000e+00 1.10373583e+02 0.00000000e+00 1.76631260e+01
+ 1.07010068e+02 4.90000000e+00 3.92000000e+00 1.01268852e+02]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.3 na: (9, 17)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 5.551115123125783e-17 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 0.30000000000000004 na: (20, 20)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 0.30000000000000004 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)]))
+actions [Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)])), Action(index=1, agent_index=1, decided_phase=Phase(index=1, moves=[(12, 11), (30, 11), (18, 26)])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+C
+C
+C
+modify 3
+modify 1
+modify 1
+t 32
+x [4.00000000e+00 2.00000000e+00 2.80000000e+01 4.00000000e+00
+ 2.00000000e+00 3.00000000e+01 4.00000000e+00 2.00000000e+00
+ 5.99700000e+01 1.38600000e+00 5.11965766e+00 0.00000000e+00
+ 4.68594000e+00 0.00000000e+00 7.56991116e+00 1.16573418e-16
+ 2.10000000e+00 1.68000000e+00 3.93576289e+00 8.84064821e+00
+ 1.62869560e+01 2.52000000e+00 8.40000000e+00 2.27487991e+00
+ 5.30805313e+00 2.07371042e+00 8.59912359e+00 3.23400000e+00
+ 1.19458679e+01 1.10373583e+02 1.09338600e+01 0.00000000e+00
+ 1.24673194e+02 2.72004641e-16 4.90000000e+00 1.05188852e+02]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.3 na: (9, 17)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 5.551115123125783e-17 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 0.30000000000000004 na: (20, 20)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 0.30000000000000004 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)]))
+actions [Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)])), Action(index=3, agent_index=1, decided_phase=Phase(index=3, moves=[(18, 26), (30, 26), (12, 5)])), Action(index=3, agent_index=2, decided_phase=Phase(index=3, moves=[(24, 23), (33, 23), (15, 8)]))]
+D
+D
+D
+modify 0
+modify 0
+modify 0
+t 33
+x [6.00000000e+00 4.00000000e+00 3.00000000e+01 6.00000000e+00
+ 4.00000000e+00 3.20000000e+01 6.00000000e+00 4.00000000e+00
+ 6.19700000e+01 0.00000000e+00 1.38600000e+00 5.11965766e+00
+ 0.00000000e+00 4.68594000e+00 7.56991116e+00 0.00000000e+00
+ 1.16573418e-16 3.78000000e+00 0.00000000e+00 3.93576289e+00
+ 2.51276042e+01 0.00000000e+00 2.52000000e+00 1.06748799e+01
+ 0.00000000e+00 5.30805313e+00 1.06728340e+01 0.00000000e+00
+ 3.23400000e+00 1.22319450e+02 0.00000000e+00 1.09338600e+01
+ 1.24673194e+02 0.00000000e+00 2.72004641e-16 1.10088852e+02]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 1.0 na: (11, 11)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+modify 1
+modify 3
+modify 3
+t 34
+x [  8.           6.           4.           8.           6.
+  13.6          8.           6.          22.591       21.
+   0.           6.50565766  22.4          0.          12.25585116
+  43.379        0.           1.134        7.4709838    0.
+  29.06336706   9.           0.           2.52         7.47241594
+   0.           5.30805313   2.646        0.         125.55345045
+   3.2018502    0.         135.60705414   3.20246397   0.
+ 110.08885249]
+A [[0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [1.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 1.00000000e+00 5.55111512e-17 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ ...
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 1.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  1.00000000e+00 1.00000000e+00]]
+wartosc 5.551115123125783e-17 na: (2, 2)
+wartosc 0.30000000000000004 na: (5, 5)
+wartosc 0.30000000000000004 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 0.30000000000000004 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 0.3 na: (21, 2)
+wartosc 5.551115123125783e-17 na: (23, 23)
+wartosc 5.551115123125783e-17 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.3 na: (30, 26)
+wartosc 1.0 na: (32, 32)
+wartosc 0.3 na: (33, 23)
+wartosc 1.0 na: (35, 35)
+Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)]))
+actions [Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)])), Action(index=1, agent_index=1, decided_phase=Phase(index=1, moves=[(12, 11), (30, 11), (18, 26)])), Action(index=2, agent_index=2, decided_phase=Phase(index=2, moves=[(24, 8), (15, 8), (33, 14)]))]
+D
+D
+D
+modify 0
+modify 0
+modify 0
+t 35
+x [ 10.           8.          10.          10.           8.
+  19.6         10.           8.          28.591        0.
+  21.           6.50565766   0.          22.4         12.25585116
+   0.          43.379        1.134        0.           7.4709838
+  29.06336706   0.           9.           2.52         0.
+   7.47241594   5.30805313   0.           2.646      125.55345045
+   0.           3.2018502  135.60705414   0.           3.20246397
+ 110.08885249]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 1.0 na: (11, 11)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+modify 2
+modify 1
+modify 2
+t 36
+x [  2.          10.          11.           2.          10.
+  27.6          2.          10.           8.           7.
+   0.          21.           1.9516973    0.          26.07675535
+  20.0137       0.          44.513        3.71563719   0.
+   7.4709838   20.34435694   0.          11.52         8.5773
+   0.           9.06483188   8.71901012   0.         128.19945045
+   4.55396036   0.         138.80890434   8.57909581   0.
+ 113.29131646]
+A [[0.  0.  0.  ... 0.  0.  0. ]
+ [1.  0.  0.  ... 0.  0.  0. ]
+ [0.  1.  0.3 ... 0.  0.  0. ]
+ ...
+ [0.  0.  0.  ... 0.  0.  0. ]
+ [0.  0.  0.  ... 1.  0.  0. ]
+ [0.  0.  0.  ... 0.  1.  1. ]]
+wartosc 0.30000000000000004 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 0.7 na: (9, 2)
+wartosc 0.30000000000000004 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 1.0 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 5.551115123125783e-17 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 0.3 na: (24, 8)
+wartosc 0.30000000000000004 na: (26, 26)
+wartosc 0.3 na: (27, 20)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)]))
+actions [Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)])), Action(index=1, agent_index=1, decided_phase=Phase(index=1, moves=[(12, 11), (30, 11), (18, 26)])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+D
+C
+D
+modify 0
+modify 1
+modify 0
+t 37
+x [  4.           2.          21.           4.           2.
+  37.6          4.           2.          18.           0.
+   7.           0.           6.3          1.9516973   26.07675535
+   0.          20.0137      44.513        6.34538231   3.71563719
+   7.4709838    0.          20.34435694  11.52         0.
+   8.5773       2.71944956   0.           8.71901012 128.19945045
+  14.7          4.55396036 138.80890434   0.           8.57909581
+ 113.29131646]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 0.30000000000000004 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=1, agent_index=1, decided_phase=Phase(index=1, moves=[(12, 11), (30, 11), (18, 26)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+C
+modify 3
+modify 1
+modify 1
+t 38
+x [  6.           4.          23.           6.           4.
+  39.6          6.           4.          20.          13.3539
+   0.           7.           0.           6.3          1.9516973
+   7.8230266    0.          20.0137       1.90361469   6.34538231
+   5.95693233   5.22968866   0.          23.80035694   8.064
+   0.           9.39313487  31.1591       0.         136.91846057
+   0.          14.7        143.3628647   18.25372874   0.
+ 121.87041228]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.3 na: (9, 17)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 5.551115123125783e-17 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 0.30000000000000004 na: (20, 20)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 0.30000000000000004 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)]))
+actions [Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)])), Action(index=1, agent_index=1, decided_phase=Phase(index=1, moves=[(12, 11), (30, 11), (18, 26)])), Action(index=2, agent_index=2, decided_phase=Phase(index=2, moves=[(24, 8), (15, 8), (33, 14)]))]
+D
+C
+D
+modify 0
+modify 1
+modify 0
+t 39
+x [  8.           6.          27.           8.           6.
+  43.6          8.           6.          24.           0.
+  13.3539       0.           2.1          0.           8.2516973
+   0.           7.8230266   20.0137       6.57519441   1.90361469
+  12.30231464   0.           5.22968866  23.80035694   0.
+   8.064        2.81794046   0.          31.1591     136.91846057
+   4.9          0.         158.0628647    0.          18.25372874
+ 121.87041228]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 0.30000000000000004 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=3, agent_index=1, decided_phase=Phase(index=3, moves=[(18, 26), (30, 26), (12, 5)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+modify 2
+modify 0
+modify 2
+t 40
+x [ 10.           8.          14.1         10.           8.
+  49.6         10.           8.           6.          18.9
+   0.          13.3539       0.           2.1          2.47550919
+  16.8          0.          27.8367266    0.           6.57519441
+   1.90361469   8.61162025   0.          29.0300456    7.2
+   0.          10.88194046   3.69069439   0.         168.07756057
+   0.           4.9        158.0628647    5.77618811   0.
+ 140.12414102]
+A [[0.  0.  0.  ... 0.  0.  0. ]
+ [1.  0.  0.  ... 0.  0.  0. ]
+ [0.  1.  0.3 ... 0.  0.  0. ]
+ ...
+ [0.  0.  0.  ... 0.  0.  0. ]
+ [0.  0.  0.  ... 1.  0.  0. ]
+ [0.  0.  0.  ... 0.  1.  1. ]]
+wartosc 0.30000000000000004 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 0.30000000000000004 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 1.0 na: (17, 17)
+wartosc 5.551115123125783e-17 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 0.3 na: (24, 8)
+wartosc 1.0 na: (26, 26)
+wartosc 0.3 na: (27, 20)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)]))
+actions [Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+D
+D
+modify 0
+modify 3
+modify 0
+t 41
+x [2.00000000e+00 1.00000000e+01 2.21000000e+01 2.00000000e+00
+ 1.00000000e+01 2.28800000e+01 2.00000000e+00 1.00000000e+01
+ 1.40000000e+01 0.00000000e+00 1.89000000e+01 1.33539000e+01
+ 3.47200000e+01 0.00000000e+00 4.57550919e+00 0.00000000e+00
+ 1.68000000e+01 2.78367266e+01 7.61735832e+00 0.00000000e+00
+ 8.47880910e+00 0.00000000e+00 8.61162025e+00 2.90300456e+01
+ 0.00000000e+00 7.20000000e+00 6.04069043e-16 0.00000000e+00
+ 3.69069439e+00 1.68077561e+02 3.26458214e+00 0.00000000e+00
+ 1.62962865e+02 0.00000000e+00 5.77618811e+00 1.40124141e+02]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 0.30000000000000004 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 1.0 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 5.551115123125783e-17 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.3 na: (30, 26)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+modify 1
+modify 0
+modify 1
+t 42
+x [4.00000000e+00 2.00000000e+00 1.00000000e+01 4.00000000e+00
+ 2.00000000e+00 3.28800000e+01 4.00000000e+00 2.00000000e+00
+ 2.40000000e+01 1.54700000e+01 0.00000000e+00 3.22539000e+01
+ 0.00000000e+00 3.47200000e+01 2.53991783e-16 1.37265276e+00
+ 0.00000000e+00 2.51510180e+01 0.00000000e+00 7.61735832e+00
+ 8.47880910e+00 6.63000000e+00 0.00000000e+00 1.73206339e+01
+ 2.03210319e+01 0.00000000e+00 7.20000000e+00 1.94857086e+01
+ 0.00000000e+00 1.71768255e+02 0.00000000e+00 3.26458214e+00
+ 1.62962865e+02 3.20285643e+00 0.00000000e+00 1.45900329e+02]
+A [[0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [1.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 1.00000000e+00 5.55111512e-17 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ ...
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 1.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  1.00000000e+00 1.00000000e+00]]
+wartosc 5.551115123125783e-17 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 0.30000000000000004 na: (17, 17)
+wartosc 1.0 na: (20, 20)
+wartosc 0.3 na: (21, 2)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)]))
+actions [Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+C
+C
+modify 1
+modify 2
+modify 1
+t 43
+x [6.00000000e+00 4.00000000e+00 2.00000000e+00 6.00000000e+00
+ 4.00000000e+00 2.00000000e+00 6.00000000e+00 4.00000000e+00
+ 2.60000000e+01 7.00000000e+00 1.54700000e+01 9.67617000e+00
+ 2.30160000e+01 0.00000000e+00 3.47200000e+01 7.61975348e-17
+ 1.37265276e+00 7.54530539e+00 9.86400000e+00 0.00000000e+00
+ 1.60961674e+01 3.00000000e+00 6.63000000e+00 5.19619018e+00
+ 1.21244438e+01 2.03210319e+01 7.20000000e+00 1.76057126e+01
+ 1.94857086e+01 1.71768255e+02 2.25777300e+01 0.00000000e+00
+ 1.66227447e+02 1.77794248e-16 3.20285643e+00 1.45900329e+02]
+A [[0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [1.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 1.00000000e+00 5.55111512e-17 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ ...
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 1.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  1.00000000e+00 1.00000000e+00]]
+wartosc 5.551115123125783e-17 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 0.30000000000000004 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 1.0 na: (20, 20)
+wartosc 0.3 na: (21, 2)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)]))
+actions [Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=3, agent_index=2, decided_phase=Phase(index=3, moves=[(24, 23), (33, 23), (15, 8)]))]
+D
+C
+D
+modify 0
+modify 2
+modify 0
+t 44
+x [8.00000000e+00 6.00000000e+00 6.00000000e+00 8.00000000e+00
+ 6.00000000e+00 4.00000000e+00 8.00000000e+00 6.00000000e+00
+ 3.00000000e+01 0.00000000e+00 7.00000000e+00 1.83728510e+01
+ 1.40000000e+00 2.30160000e+01 3.47200000e+01 0.00000000e+00
+ 7.61975348e-17 8.91795815e+00 6.00000000e-01 9.86400000e+00
+ 1.60961674e+01 0.00000000e+00 3.00000000e+00 1.18261902e+01
+ 0.00000000e+00 1.21244438e+01 2.75210319e+01 0.00000000e+00
+ 1.76057126e+01 1.91253964e+02 6.77331900e+00 2.25777300e+01
+ 1.66227447e+02 0.00000000e+00 1.77794248e-16 1.49103186e+02]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+C
+modify 2
+modify 2
+modify 3
+t 45
+x [ 10.           8.           7.8         10.           8.
+   6.          10.           8.          15.           4.2
+   0.          12.5118553    2.8          1.4         57.736
+  21.           0.           8.91795815   1.2          0.6
+   9.864       11.2673172    0.           3.           8.27833313
+   0.          39.64547567   4.82885023   0.         208.85967617
+  12.8609957    6.773319   188.80517684   3.54785705   0.
+ 149.10318556]
+A [[0.  0.  0.  ... 0.  0.  0. ]
+ [1.  0.  0.  ... 0.  0.  0. ]
+ [0.  1.  0.3 ... 0.  0.  0. ]
+ ...
+ [0.  0.  0.  ... 0.  0.  0. ]
+ [0.  0.  0.  ... 1.  0.  0. ]
+ [0.  0.  0.  ... 0.  1.  1. ]]
+wartosc 0.30000000000000004 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 0.30000000000000004 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 1.0 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 5.551115123125783e-17 na: (20, 20)
+wartosc 5.551115123125783e-17 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.3 na: (27, 20)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.3 na: (33, 23)
+wartosc 1.0 na: (35, 35)
+Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)]))
+actions [Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)])), Action(index=3, agent_index=1, decided_phase=Phase(index=3, moves=[(18, 26), (30, 26), (12, 5)])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+C
+D
+D
+modify 2
+modify 0
+modify 0
+t 46
+x [  2.          10.          10.34         2.          10.
+  14.           2.          10.          23.           5.46
+   4.2         12.5118553    0.           2.8         59.136
+   0.          21.           8.91795815   0.           1.2
+   0.6          6.9048      11.2673172    3.           0.
+   8.27833313  39.64547567   2.9592       4.82885023 208.85967617
+   0.          12.8609957  195.57849584   0.           3.54785705
+ 149.10318556]
+A [[0.  0.  0.  ... 0.  0.  0. ]
+ [1.  0.  0.  ... 0.  0.  0. ]
+ [0.  1.  0.3 ... 0.  0.  0. ]
+ ...
+ [0.  0.  0.  ... 0.  0.  0. ]
+ [0.  0.  0.  ... 1.  0.  0. ]
+ [0.  0.  0.  ... 0.  1.  1. ]]
+wartosc 0.30000000000000004 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 5.551115123125783e-17 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.3 na: (27, 20)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)]))
+actions [Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+C
+modify 2
+modify 3
+modify 1
+t 47
+x [4.00000000e+00 2.00000000e+00 1.31020000e+01 4.00000000e+00
+ 2.00000000e+00 1.42000000e+01 4.00000000e+00 2.00000000e+00
+ 3.30000000e+01 7.23800000e+00 5.46000000e+00 1.67118553e+01
+ 9.80000000e+00 0.00000000e+00 2.80000000e+00 1.77408000e+01
+ 0.00000000e+00 2.99179582e+01 2.77518330e+01 0.00000000e+00
+ 1.20000000e+00 4.20000000e-01 6.90480000e+00 1.21673172e+01
+ 2.10000000e+00 0.00000000e+00 8.27833313e+00 1.80000000e-01
+ 2.95920000e+00 2.13688526e+02 1.18936427e+01 0.00000000e+00
+ 2.08439492e+02 4.13952000e+01 0.00000000e+00 1.52651043e+02]
+A [[0.  0.  0.  ... 0.  0.  0. ]
+ [1.  0.  0.  ... 0.  0.  0. ]
+ [0.  1.  0.3 ... 0.  0.  0. ]
+ ...
+ [0.  0.  0.  ... 0.  0.  0. ]
+ [0.  0.  0.  ... 1.  0.  0. ]
+ [0.  0.  0.  ... 0.  1.  1. ]]
+wartosc 0.30000000000000004 na: (2, 2)
+wartosc 0.30000000000000004 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 5.551115123125783e-17 na: (20, 20)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 5.551115123125783e-17 na: (26, 26)
+wartosc 0.3 na: (27, 20)
+wartosc 1.0 na: (29, 29)
+wartosc 0.3 na: (30, 26)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)]))
+actions [Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)])), Action(index=1, agent_index=1, decided_phase=Phase(index=1, moves=[(12, 11), (30, 11), (18, 26)])), Action(index=3, agent_index=2, decided_phase=Phase(index=3, moves=[(24, 23), (33, 23), (15, 8)]))]
+C
+D
+D
+modify 2
+modify 0
+modify 0
+t 48
+x [6.00000000e+00 4.00000000e+00 5.93060000e+00 6.00000000e+00
+ 4.00000000e+00 1.62000000e+01 6.00000000e+00 4.00000000e+00
+ 3.50000000e+01 9.17140000e+00 7.23800000e+00 2.21718553e+01
+ 0.00000000e+00 9.80000000e+00 2.80000000e+00 0.00000000e+00
+ 1.77408000e+01 2.99179582e+01 0.00000000e+00 2.77518330e+01
+ 6.66133815e-17 8.40000000e-01 4.20000000e-01 1.90721172e+01
+ 0.00000000e+00 2.10000000e+00 8.27833313e+00 3.60000000e-01
+ 1.80000000e-01 2.16647726e+02 0.00000000e+00 1.18936427e+01
+ 2.08439492e+02 0.00000000e+00 4.13952000e+01 1.52651043e+02]
+A [[0.  0.  0.  ... 0.  0.  0. ]
+ [1.  0.  0.  ... 0.  0.  0. ]
+ [0.  1.  0.3 ... 0.  0.  0. ]
+ ...
+ [0.  0.  0.  ... 0.  0.  0. ]
+ [0.  0.  0.  ... 1.  0.  0. ]
+ [0.  0.  0.  ... 0.  1.  1. ]]
+wartosc 0.30000000000000004 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 5.551115123125783e-17 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.3 na: (27, 20)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)]))
+actions [Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+modify 0
+modify 1
+modify 3
+t 49
+x [  8.           6.           9.9306       8.           6.
+  20.2          8.           6.          14.5          0.
+   9.1714       7.238        6.65155659   0.          12.6
+  24.5          0.          47.65875815   5.79483319   0.
+  27.75183297   0.           0.84         0.42        13.35048204
+   0.           4.58349994   0.           0.36       216.8277264
+  15.52029871   0.         220.33313424   5.72163516   0.
+ 194.04624261]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 0.30000000000000004 na: (8, 8)
+wartosc 1.0 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 1.0 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 5.551115123125783e-17 na: (23, 23)
+wartosc 0.30000000000000004 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.3 na: (33, 23)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=2, agent_index=2, decided_phase=Phase(index=2, moves=[(24, 8), (15, 8), (33, 14)]))]
+D
+D
+modify 3
+modify 0
+modify 0
+t 50
+x [1.00000000e+01 8.00000000e+00 1.59306000e+01 1.00000000e+01
+ 8.00000000e+00 2.62000000e+01 1.00000000e+01 8.00000000e+00
+ 2.05000000e+01 1.42976274e+01 0.00000000e+00 1.64094000e+01
+ 0.00000000e+00 6.65155659e+00 1.26000000e+01 0.00000000e+00
+ 2.45000000e+01 2.64559253e-15 0.00000000e+00 5.79483319e+00
+ 8.32554989e+00 1.94262831e+01 0.00000000e+00 1.26000000e+00
+ 0.00000000e+00 1.33504820e+01 4.58349994e+00 3.33611307e+01
+ 0.00000000e+00 2.17187726e+02 0.00000000e+00 1.55202987e+01
+ 2.20333134e+02 0.00000000e+00 5.72163516e+00 1.94046243e+02]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.3 na: (9, 17)
+wartosc 1.0 na: (11, 11)
+wartosc 1.0 na: (14, 14)
+wartosc 5.551115123125783e-17 na: (17, 17)
+wartosc 0.30000000000000004 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)]))
+actions [Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+modify 0
+modify 2
+modify 2
+t 51
+x [  2.          10.          23.9306       2.          10.
+   8.           2.          10.           8.           0.
+  14.29762745   4.92282     18.34         0.          10.43155659
+  14.35         0.          24.5          7.86         0.
+  14.12038308   0.          19.42628308   1.26         6.15
+   0.          17.93398198   0.          33.36113071 217.1877264
+  11.48658      0.         235.85343295   8.82         0.
+ 199.76787777]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 0.30000000000000004 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 1.0 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 0.3 na: (24, 8)
+wartosc 1.0 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=3, agent_index=2, decided_phase=Phase(index=3, moves=[(24, 23), (33, 23), (15, 8)]))]
+C
+D
+modify 1
+modify 2
+modify 0
+t 52
+x [  4.           2.          10.           4.           2.
+  10.           4.           2.          18.          16.75142
+   0.          15.77447345   5.6         18.34        10.43155659
+   0.          14.35         7.35         2.4          7.86
+  14.12038308   7.17918      0.          20.68628308   0.
+   6.15        17.93398198  17.15         0.         250.5488571
+   3.445974    11.48658    235.85343295   0.           8.82
+ 199.76787777]
+A [[0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [1.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 1.00000000e+00 5.55111512e-17 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ ...
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 1.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  1.00000000e+00 1.00000000e+00]]
+wartosc 5.551115123125783e-17 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 0.30000000000000004 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 1.0 na: (20, 20)
+wartosc 0.3 na: (21, 2)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)]))
+actions [Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+C
+modify 0
+modify 2
+modify 3
+t 53
+x [6.00000000e+00 4.00000000e+00 1.20000000e+01 6.00000000e+00
+ 4.00000000e+00 2.00000000e+00 6.00000000e+00 4.00000000e+00
+ 7.40000000e+00 0.00000000e+00 1.67514200e+01 4.73234203e+00
+ 7.00000000e+00 5.60000000e+00 2.87715566e+01 1.26000000e+01
+ 0.00000000e+00 2.17000000e+01 3.00000000e+00 2.40000000e+00
+ 2.19803831e+01 0.00000000e+00 7.17918000e+00 1.14831939e-15
+ 1.44803982e+01 0.00000000e+00 2.40839820e+01 0.00000000e+00
+ 1.71500000e+01 2.50548857e+02 1.10421314e+01 3.44597400e+00
+ 2.47340013e+02 6.20588492e+00 0.00000000e+00 2.08587878e+02]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 0.30000000000000004 na: (8, 8)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 1.0 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 1.0 na: (20, 20)
+wartosc 5.551115123125783e-17 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.3 na: (33, 23)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+C
+D
+modify 2
+modify 2
+modify 0
+t 54
+x [  8.           6.           7.6          8.           6.
+   4.           8.           6.          11.4          8.4
+   0.          18.17112261   1.4          7.          34.37155659
+   0.          12.6         21.7          0.6          3.
+   2.4         15.38626816   0.           7.17918      0.
+  14.48039816  24.08398198   6.59411492   0.         267.6988571
+   3.31263942  11.04213141 250.78598695   0.           6.20588492
+ 208.58787777]
+A [[0.  0.  0.  ... 0.  0.  0. ]
+ [1.  0.  0.  ... 0.  0.  0. ]
+ [0.  1.  0.3 ... 0.  0.  0. ]
+ ...
+ [0.  0.  0.  ... 0.  0.  0. ]
+ [0.  0.  0.  ... 1.  0.  0. ]
+ [0.  0.  0.  ... 0.  1.  1. ]]
+wartosc 0.30000000000000004 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 5.551115123125783e-17 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.3 na: (27, 20)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)]))
+actions [Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+C
+C
+modify 2
+modify 2
+modify 1
+t 55
+x [ 10.           8.           8.28        10.           8.
+   6.          10.           8.          17.4          5.32
+   8.4          5.45133678   2.8          1.4          7.
+  10.31146698   0.          34.3          1.2          0.6
+   3.           1.68        15.38626816   2.153754     5.025426
+   0.          38.56438013   0.72         6.59411492 267.6988571
+  12.71978583   3.31263942 261.82811837  24.06008961   0.
+ 214.7937627 ]
+A [[0.  0.  0.  ... 0.  0.  0. ]
+ [1.  0.  0.  ... 0.  0.  0. ]
+ [0.  1.  0.3 ... 0.  0.  0. ]
+ ...
+ [0.  0.  0.  ... 0.  0.  0. ]
+ [0.  0.  0.  ... 1.  0.  0. ]
+ [0.  0.  0.  ... 0.  1.  1. ]]
+wartosc 0.30000000000000004 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 5.551115123125783e-17 na: (20, 20)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.3 na: (27, 20)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)]))
+actions [Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)])), Action(index=3, agent_index=1, decided_phase=Phase(index=3, moves=[(18, 26), (30, 26), (12, 5)])), Action(index=3, agent_index=2, decided_phase=Phase(index=3, moves=[(24, 23), (33, 23), (15, 8)]))]
+D
+D
+D
+modify 0
+modify 0
+modify 0
+t 56
+x [  2.          10.          16.28         2.          10.
+  14.           2.          10.          25.4          0.
+   5.32        13.85133678   0.           2.8          8.4
+   0.          10.31146698  34.3          0.           1.2
+   3.6          0.           1.68        17.54002216   0.
+   5.025426    38.56438013   0.           0.72       274.29297203
+   0.          12.71978583 265.14075779   0.          24.06008961
+ 214.7937627 ]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 1.0 na: (11, 11)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+modify 3
+modify 3
+modify 3
+t 57
+x [  4.           2.          26.28         4.           2.
+  14.2          4.           2.          17.62        10.29
+   0.          19.17133678   9.8          0.          11.2
+  17.78         0.          10.31146698  26.99506609   0.
+   2.28         2.52         0.           1.68        12.27801551
+   0.           5.025426    24.01         0.         275.01297203
+  11.56931404   0.         277.86054362   5.26200665   0.
+ 238.85385231]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 0.30000000000000004 na: (5, 5)
+wartosc 0.30000000000000004 na: (8, 8)
+wartosc 0.3 na: (9, 17)
+wartosc 1.0 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 5.551115123125783e-17 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 0.30000000000000004 na: (20, 20)
+wartosc 5.551115123125783e-17 na: (23, 23)
+wartosc 5.551115123125783e-17 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.3 na: (30, 26)
+wartosc 1.0 na: (32, 32)
+wartosc 0.3 na: (33, 23)
+wartosc 1.0 na: (35, 35)
+Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)]))
+actions [Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)])), Action(index=3, agent_index=1, decided_phase=Phase(index=3, moves=[(18, 26), (30, 26), (12, 5)])), Action(index=2, agent_index=2, decided_phase=Phase(index=2, moves=[(24, 8), (15, 8), (33, 14)]))]
+C
+C
+D
+modify 3
+modify 3
+modify 0
+t 58
+x [6.00000000e+00 4.00000000e+00 2.82800000e+01 6.00000000e+00
+ 4.00000000e+00 6.26000000e+00 6.00000000e+00 4.00000000e+00
+ 1.96200000e+01 3.09344009e+00 1.02900000e+01 1.91713368e+01
+ 9.94000000e+00 9.80000000e+00 1.12000000e+01 0.00000000e+00
+ 1.77800000e+01 5.72401403e-16 3.51779820e+00 2.69950661e+01
+ 6.84000000e-01 1.59600000e+00 2.52000000e+00 1.68000000e+00
+ 0.00000000e+00 1.22780155e+01 2.78967183e-16 7.21802688e+00
+ 2.40100000e+01 2.75012972e+02 1.50762780e+00 1.15693140e+01
+ 2.77860544e+02 0.00000000e+00 5.26200665e+00 2.38853852e+02]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 0.30000000000000004 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.3 na: (9, 17)
+wartosc 1.0 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 5.551115123125783e-17 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 0.30000000000000004 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 5.551115123125783e-17 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.3 na: (30, 26)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)]))
+actions [Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)])), Action(index=3, agent_index=1, decided_phase=Phase(index=3, moves=[(18, 26), (30, 26), (12, 5)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+C
+modify 0
+modify 3
+modify 2
+t 59
+x [8.00000000e+00 6.00000000e+00 3.22800000e+01 8.00000000e+00
+ 6.00000000e+00 5.87800000e+00 8.00000000e+00 6.00000000e+00
+ 4.00000000e+00 0.00000000e+00 3.09344009e+00 2.94613368e+01
+ 4.38200000e+00 9.94000000e+00 1.31600000e+01 1.37340000e+01
+ 0.00000000e+00 1.77800000e+01 1.95277028e-16 3.51779820e+00
+ 2.76790661e+01 0.00000000e+00 1.59600000e+00 4.20000000e+00
+ 5.88600000e+00 0.00000000e+00 1.22780155e+01 0.00000000e+00
+ 7.21802688e+00 2.99022972e+02 8.36901548e-17 1.50762780e+00
+ 2.89429858e+02 7.84000000e+00 0.00000000e+00 2.44115859e+02]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 0.30000000000000004 na: (5, 5)
+wartosc 1.0 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 0.30000000000000004 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 1.0 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 0.3 na: (24, 8)
+wartosc 5.551115123125783e-17 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.3 na: (30, 26)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=3, agent_index=2, decided_phase=Phase(index=3, moves=[(24, 23), (33, 23), (15, 8)]))]
+D
+D
+modify 1
+modify 0
+modify 0
+t 60
+x [1.00000000e+01 8.00000000e+00 6.00000000e+00 1.00000000e+01
+ 8.00000000e+00 1.18780000e+01 1.00000000e+01 8.00000000e+00
+ 1.00000000e+01 2.25960000e+01 0.00000000e+00 3.25547769e+01
+ 0.00000000e+00 4.38200000e+00 2.31000000e+01 0.00000000e+00
+ 1.37340000e+01 5.33400000e+00 0.00000000e+00 1.95277028e-16
+ 3.11968643e+01 9.68400000e+00 0.00000000e+00 5.79600000e+00
+ 0.00000000e+00 5.88600000e+00 1.22780155e+01 1.24460000e+01
+ 0.00000000e+00 3.06240999e+02 0.00000000e+00 8.36901548e-17
+ 2.90937485e+02 0.00000000e+00 7.84000000e+00 2.44115859e+02]
+A [[0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [1.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 1.00000000e+00 5.55111512e-17 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ ...
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 1.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  1.00000000e+00 1.00000000e+00]]
+wartosc 5.551115123125783e-17 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 1.0 na: (14, 14)
+wartosc 0.30000000000000004 na: (17, 17)
+wartosc 1.0 na: (20, 20)
+wartosc 0.3 na: (21, 2)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)]))
+actions [Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+C
+modify 1
+modify 2
+modify 3
+t 61
+x [2.00000000e+00 1.00000000e+01 8.00000000e+00 2.00000000e+00
+ 1.00000000e+01 8.00000000e+00 2.00000000e+00 1.00000000e+01
+ 1.10000000e+01 4.20000000e+00 2.25960000e+01 9.76643306e+00
+ 8.31460000e+00 0.00000000e+00 2.74820000e+01 7.00000000e+00
+ 0.00000000e+00 1.53342000e+01 3.56340000e+00 0.00000000e+00
+ 3.11968643e+01 1.80000000e+00 9.68400000e+00 3.21742633e-16
+ 4.05720000e+00 0.00000000e+00 1.81640155e+01 3.73380000e+00
+ 1.24460000e+01 3.06240999e+02 2.27883438e+01 0.00000000e+00
+ 2.90937485e+02 1.73880000e+00 0.00000000e+00 2.51955859e+02]
+A [[0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [1.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 1.00000000e+00 5.55111512e-17 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ ...
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 1.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  1.00000000e+00 1.00000000e+00]]
+wartosc 5.551115123125783e-17 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 0.30000000000000004 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 0.30000000000000004 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 1.0 na: (20, 20)
+wartosc 0.3 na: (21, 2)
+wartosc 5.551115123125783e-17 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.3 na: (33, 23)
+wartosc 1.0 na: (35, 35)
+Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)]))
+actions [Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)])), Action(index=1, agent_index=1, decided_phase=Phase(index=1, moves=[(12, 11), (30, 11), (18, 26)])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+D
+D
+D
+modify 0
+modify 0
+modify 0
+t 62
+x [  4.           2.          18.           4.           2.
+  18.           4.           2.          21.           0.
+   4.2         32.36243306   0.           8.3146      27.482
+   0.           7.          15.3342       0.           3.5634
+  31.19686429   0.           1.8          9.684        0.
+   4.0572      18.16401551   0.           3.7338     318.68699891
+   0.          22.78834381 290.93748546   0.           1.7388
+ 251.95585896]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 1.0 na: (11, 11)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+modify 2
+modify 1
+modify 1
+t 63
+x [  6.           4.           7.4          6.           4.
+  20.           6.           4.          23.          12.6
+   0.           4.2          9.70872992   0.           8.3146
+   8.2446       0.          22.3342      12.71481086   0.
+   3.5634      21.837805     0.           4.7052       6.7788
+   0.           9.50640465   9.35905929   0.         322.42079891
+  22.65370314   0.         313.72582927  19.2374       0.
+ 253.69465896]
+A [[0.  0.  0.  ... 0.  0.  0. ]
+ [1.  0.  0.  ... 0.  0.  0. ]
+ [0.  1.  0.3 ... 0.  0.  0. ]
+ ...
+ [0.  0.  0.  ... 0.  0.  0. ]
+ [0.  0.  0.  ... 1.  0.  0. ]
+ [0.  0.  0.  ... 0.  1.  1. ]]
+wartosc 0.30000000000000004 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 5.551115123125783e-17 na: (20, 20)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 0.30000000000000004 na: (26, 26)
+wartosc 0.3 na: (27, 20)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)]))
+actions [Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)])), Action(index=1, agent_index=1, decided_phase=Phase(index=1, moves=[(12, 11), (30, 11), (18, 26)])), Action(index=3, agent_index=2, decided_phase=Phase(index=3, moves=[(24, 23), (33, 23), (15, 8)]))]
+D
+C
+D
+modify 0
+modify 1
+modify 0
+t 64
+x [  8.           6.          11.4          8.           6.
+  24.           8.           6.          27.           0.
+  12.6          0.           1.26         9.70872992   8.3146
+   0.           8.2446      22.3342       6.65448326  12.71481086
+   3.5634       0.          21.837805     4.7052       0.
+   6.7788       2.8519214    0.           9.35905929 322.42079891
+   2.94        22.65370314 313.72582927   0.          19.2374
+ 253.69465896]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 0.30000000000000004 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=1, agent_index=1, decided_phase=Phase(index=1, moves=[(12, 11), (30, 11), (18, 26)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+C
+modify 1
+modify 1
+modify 3
+t 65
+x [ 10.           8.           6.          10.           8.
+  30.          10.           8.          14.1          7.98
+   0.          12.6          0.           1.26        18.02332992
+  18.9          0.          14.94486      1.99634498   6.65448326
+  16.27821086   3.42         0.          21.837805     3.29364
+   0.           7.63437642  15.63394      0.         331.7798582
+   0.           2.94       336.37953241   1.41156      0.
+ 272.93205896]
+A [[0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [1.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 1.00000000e+00 5.55111512e-17 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ ...
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 1.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  1.00000000e+00 1.00000000e+00]]
+wartosc 5.551115123125783e-17 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 0.30000000000000004 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 0.30000000000000004 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 0.3 na: (21, 2)
+wartosc 5.551115123125783e-17 na: (23, 23)
+wartosc 0.30000000000000004 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.3 na: (33, 23)
+wartosc 1.0 na: (35, 35)
+Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)]))
+actions [Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)])), Action(index=3, agent_index=1, decided_phase=Phase(index=3, moves=[(18, 26), (30, 26), (12, 5)])), Action(index=2, agent_index=2, decided_phase=Phase(index=2, moves=[(24, 8), (15, 8), (33, 14)]))]
+C
+D
+D
+modify 1
+modify 0
+modify 0
+t 66
+x [  2.          10.           8.           2.          10.
+  38.           2.          10.          22.1          4.2
+   7.98        12.6          0.           0.          19.28332992
+   0.          18.9          4.483458     0.           1.99634498
+  22.93269411   1.8          3.42        21.837805     0.
+   3.29364      7.63437642  10.461402    15.63394    331.7798582
+   0.           0.         339.31953241   0.           1.41156
+ 272.93205896]
+A [[0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [1.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 1.00000000e+00 5.55111512e-17 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ ...
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 1.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  1.00000000e+00 1.00000000e+00]]
+wartosc 5.551115123125783e-17 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 1.0 na: (14, 14)
+wartosc 0.30000000000000004 na: (17, 17)
+wartosc 1.0 na: (20, 20)
+wartosc 0.3 na: (21, 2)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)]))
+actions [Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+modify 0
+modify 3
+modify 2
+t 67
+x [  4.           2.          18.           4.           2.
+  21.4          4.           2.          10.           0.
+   4.2         20.58        26.6          0.           5.78499898
+  15.47         0.          23.383458     5.34406349   0.
+  24.92903909   0.           1.8         25.257805     6.63
+   0.           3.29364      0.          10.461402   347.4137982
+   2.29031293   0.         339.31953241  13.49833094   0.
+ 274.34361896]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 0.30000000000000004 na: (5, 5)
+wartosc 1.0 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 0.30000000000000004 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 1.0 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 0.3 na: (24, 8)
+wartosc 5.551115123125783e-17 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.3 na: (30, 26)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=1, agent_index=1, decided_phase=Phase(index=1, moves=[(12, 11), (30, 11), (18, 26)])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+D
+D
+modify 2
+modify 0
+modify 0
+t 68
+x [6.00000000e+00 4.00000000e+00 7.40000000e+00 6.00000000e+00
+ 4.00000000e+00 2.34000000e+01 6.00000000e+00 4.00000000e+00
+ 1.20000000e+01 1.26000000e+01 0.00000000e+00 2.47800000e+01
+ 0.00000000e+00 2.66000000e+01 5.78499898e+00 0.00000000e+00
+ 1.54700000e+01 2.33834580e+01 0.00000000e+00 5.34406349e+00
+ 1.38383966e-15 1.74503274e+01 0.00000000e+00 2.70578050e+01
+ 0.00000000e+00 6.63000000e+00 3.29364000e+00 7.47871173e+00
+ 0.00000000e+00 3.57875200e+02 0.00000000e+00 2.29031293e+00
+ 3.39319532e+02 0.00000000e+00 1.34983309e+01 2.74343619e+02]
+A [[0.  0.  0.  ... 0.  0.  0. ]
+ [1.  0.  0.  ... 0.  0.  0. ]
+ [0.  1.  0.3 ... 0.  0.  0. ]
+ ...
+ [0.  0.  0.  ... 0.  0.  0. ]
+ [0.  0.  0.  ... 1.  0.  0. ]
+ [0.  0.  0.  ... 0.  1.  1. ]]
+wartosc 0.30000000000000004 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 5.551115123125783e-17 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.3 na: (27, 20)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)]))
+actions [Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+C
+modify 2
+modify 1
+modify 1
+t 69
+x [8.00000000e+00 6.00000000e+00 6.22000000e+00 8.00000000e+00
+ 6.00000000e+00 2.74000000e+01 8.00000000e+00 6.00000000e+00
+ 1.60000000e+01 5.18000000e+00 1.26000000e+01 0.00000000e+00
+ 7.43400000e+00 0.00000000e+00 2.66000000e+01 1.73549969e+00
+ 0.00000000e+00 3.88534580e+01 2.30554800e+00 0.00000000e+00
+ 5.34406349e+00 9.68687761e-16 1.74503274e+01 8.11734150e+00
+ 1.89404635e+01 0.00000000e+00 7.61809200e+00 4.15151898e-16
+ 7.47871173e+00 3.57875200e+02 1.73460000e+01 0.00000000e+00
+ 3.41609845e+02 4.04949928e+00 0.00000000e+00 2.87841950e+02]
+A [[0.  0.  0.  ... 0.  0.  0. ]
+ [1.  0.  0.  ... 0.  0.  0. ]
+ [0.  1.  0.3 ... 0.  0.  0. ]
+ ...
+ [0.  0.  0.  ... 0.  0.  0. ]
+ [0.  0.  0.  ... 1.  0.  0. ]
+ [0.  0.  0.  ... 0.  1.  1. ]]
+wartosc 0.30000000000000004 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 5.551115123125783e-17 na: (20, 20)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 0.30000000000000004 na: (26, 26)
+wartosc 0.3 na: (27, 20)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)]))
+actions [Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)])), Action(index=3, agent_index=1, decided_phase=Phase(index=3, moves=[(18, 26), (30, 26), (12, 5)])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+D
+D
+C
+modify 0
+modify 0
+modify 1
+t 70
+x [1.00000000e+01 8.00000000e+00 1.22200000e+01 1.00000000e+01
+ 8.00000000e+00 3.34000000e+01 1.00000000e+01 8.00000000e+00
+ 2.20000000e+01 0.00000000e+00 5.18000000e+00 1.26000000e+01
+ 0.00000000e+00 7.43400000e+00 1.47659662e-15 7.98000000e+00
+ 1.73549969e+00 3.88534580e+01 0.00000000e+00 2.30554800e+00
+ 5.34406349e+00 0.00000000e+00 9.68687761e-16 1.98855298e+01
+ 5.68213905e+00 1.89404635e+01 7.61809200e+00 0.00000000e+00
+ 4.15151898e-16 3.65353912e+02 0.00000000e+00 1.73460000e+01
+ 3.41609845e+02 1.86200000e+01 4.04949928e+00 2.87841950e+02]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 1.0 na: (11, 11)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 1.0 na: (20, 20)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=3, agent_index=2, decided_phase=Phase(index=3, moves=[(24, 23), (33, 23), (15, 8)]))]
+D
+modify 1
+modify 3
+modify 0
+t 71
+x [  2.          10.           8.           2.          10.
+  18.02         2.          10.          30.           8.554
+   0.          17.78        23.38         0.           7.434
+   0.           7.98        13.39153709   5.3326644    0.
+   7.64961149   3.666        0.          19.88552981   0.
+   5.68213905  18.9404635   27.1974206    0.         365.35391193
+   2.2854276    0.         358.95584534   0.          18.62
+ 291.89144918]
+A [[0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [1.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 1.00000000e+00 5.55111512e-17 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ ...
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 1.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  1.00000000e+00 1.00000000e+00]]
+wartosc 5.551115123125783e-17 na: (2, 2)
+wartosc 0.30000000000000004 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 0.30000000000000004 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 0.3 na: (21, 2)
+wartosc 1.0 na: (23, 23)
+wartosc 5.551115123125783e-17 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.3 na: (30, 26)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)]))
+actions [Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)])), Action(index=3, agent_index=1, decided_phase=Phase(index=3, moves=[(18, 26), (30, 26), (12, 5)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+C
+modify 0
+modify 3
+modify 3
+t 72
+x [4.00000000e+00 2.00000000e+00 1.80000000e+01 4.00000000e+00
+ 2.00000000e+00 1.54060000e+01 4.00000000e+00 2.00000000e+00
+ 1.90000000e+01 0.00000000e+00 8.55400000e+00 1.77800000e+01
+ 1.26140000e+01 2.33800000e+01 7.43400000e+00 2.10000000e+01
+ 0.00000000e+00 2.13715371e+01 1.32583245e+01 5.33266440e+00
+ 7.64961149e+00 0.00000000e+00 3.66600000e+00 1.10386865e-15
+ 1.39198709e+01 0.00000000e+00 5.68213905e+00 0.00000000e+00
+ 2.71974206e+01 3.65353912e+02 5.68213905e+00 2.28542760e+00
+ 3.58955845e+02 5.96565894e+00 0.00000000e+00 3.10511449e+02]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 0.30000000000000004 na: (5, 5)
+wartosc 0.30000000000000004 na: (8, 8)
+wartosc 1.0 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 1.0 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 5.551115123125783e-17 na: (23, 23)
+wartosc 5.551115123125783e-17 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.3 na: (30, 26)
+wartosc 1.0 na: (32, 32)
+wartosc 0.3 na: (33, 23)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=2, agent_index=2, decided_phase=Phase(index=2, moves=[(24, 8), (15, 8), (33, 14)]))]
+D
+D
+modify 2
+modify 0
+modify 0
+t 73
+x [  6.           4.           7.4          6.           4.
+  17.406        6.           4.          21.          12.6
+   0.          26.334        0.          12.614       30.814
+   0.          21.          21.37153709   0.          13.25832445
+   5.3326644    5.35472805   0.           3.666        0.
+  13.91987087   5.68213905   2.29488345   0.         392.55133253
+   0.           5.68213905 361.24127294   0.           5.96565894
+ 310.51144918]
+A [[0.  0.  0.  ... 0.  0.  0. ]
+ [1.  0.  0.  ... 0.  0.  0. ]
+ [0.  1.  0.3 ... 0.  0.  0. ]
+ ...
+ [0.  0.  0.  ... 0.  0.  0. ]
+ [0.  0.  0.  ... 1.  0.  0. ]
+ [0.  0.  0.  ... 0.  1.  1. ]]
+wartosc 0.30000000000000004 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 5.551115123125783e-17 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.3 na: (27, 20)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)]))
+actions [Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+C
+modify 2
+modify 2
+modify 2
+t 74
+x [  8.           6.           6.22         8.           6.
+   4.           8.           6.           4.           5.18
+  12.6          7.9002      12.1842       0.          21.8582
+  14.7          0.          42.37153709   5.2218       0.
+  13.25832445   3.73286508   5.35472805   3.666        6.3
+   0.          19.60200992   1.59979932   2.29488345 392.55133253
+  18.4338       0.         366.92341199  21.5698       0.
+ 316.47710813]
+A [[0.  0.  0.  ... 0.  0.  0. ]
+ [1.  0.  0.  ... 0.  0.  0. ]
+ [0.  1.  0.3 ... 0.  0.  0. ]
+ ...
+ [0.  0.  0.  ... 0.  0.  0. ]
+ [0.  0.  0.  ... 1.  0.  0. ]
+ [0.  0.  0.  ... 0.  1.  1. ]]
+wartosc 0.30000000000000004 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 0.7 na: (9, 2)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 0.30000000000000004 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 1.0 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 5.551115123125783e-17 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 0.3 na: (24, 8)
+wartosc 1.0 na: (26, 26)
+wartosc 0.3 na: (27, 20)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)]))
+actions [Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)])), Action(index=3, agent_index=1, decided_phase=Phase(index=3, moves=[(18, 26), (30, 26), (12, 5)])), Action(index=2, agent_index=2, decided_phase=Phase(index=2, moves=[(24, 8), (15, 8), (33, 14)]))]
+C
+D
+C
+modify 2
+modify 0
+modify 2
+t 75
+x [1.00000000e+01 8.00000000e+00 7.86600000e+00 1.00000000e+01
+ 8.00000000e+00 1.00000000e+01 1.00000000e+01 8.00000000e+00
+ 6.00000000e+00 4.35400000e+00 5.18000000e+00 2.05002000e+01
+ 0.00000000e+00 1.21842000e+01 6.55746000e+00 2.80000000e+00
+ 1.47000000e+01 4.23715371e+01 0.00000000e+00 5.22180000e+00
+ 7.35984854e-16 9.28082712e+00 3.73286508e+00 9.02072805e+00
+ 1.20000000e+00 6.30000000e+00 1.96020099e+01 3.97749734e+00
+ 1.59979932e+00 3.94846216e+02 0.00000000e+00 1.84338000e+01
+ 3.66923412e+02 1.53007400e+01 2.15698000e+01 3.16477108e+02]
+A [[0.  0.  0.  ... 0.  0.  0. ]
+ [1.  0.  0.  ... 0.  0.  0. ]
+ [0.  1.  0.3 ... 0.  0.  0. ]
+ ...
+ [0.  0.  0.  ... 0.  0.  0. ]
+ [0.  0.  0.  ... 1.  0.  0. ]
+ [0.  0.  0.  ... 0.  1.  1. ]]
+wartosc 0.30000000000000004 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 0.30000000000000004 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 1.0 na: (17, 17)
+wartosc 5.551115123125783e-17 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 0.3 na: (24, 8)
+wartosc 1.0 na: (26, 26)
+wartosc 0.3 na: (27, 20)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)]))
+actions [Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=3, agent_index=2, decided_phase=Phase(index=3, moves=[(24, 23), (33, 23), (15, 8)]))]
+D
+D
+modify 0
+modify 3
+modify 0
+t 76
+x [  2.          10.          15.866        2.          10.
+  11.           2.          10.          14.           0.
+   4.354       25.6802       7.           0.          18.74166
+   0.           2.8         57.07153709  13.72140694   0.
+   5.2218       0.           9.28082712  12.75359313   0.
+   1.2          6.3          0.           3.97749734 396.44601529
+   5.88060298   0.         385.35721199   0.          15.30074
+ 338.04690813]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 0.30000000000000004 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 1.0 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 5.551115123125783e-17 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.3 na: (30, 26)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=3, agent_index=1, decided_phase=Phase(index=3, moves=[(18, 26), (30, 26), (12, 5)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+C
+modify 1
+modify 3
+modify 3
+t 77
+x [  4.           2.          10.           4.           2.
+  13.3          4.           2.          14.2         11.1062
+   0.          30.0342       7.7          7.          18.74166
+   9.8          0.          19.92146113   4.41        13.72140694
+   5.2218       4.7598       0.           9.28082712   8.92751519
+   0.           1.2         39.95007596   0.         400.42351263
+   1.89         5.88060298 385.35721199   3.82607794   0.
+ 353.34764813]
+A [[0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [1.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 1.00000000e+00 5.55111512e-17 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ ...
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 1.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  1.00000000e+00 1.00000000e+00]]
+wartosc 5.551115123125783e-17 na: (2, 2)
+wartosc 0.30000000000000004 na: (5, 5)
+wartosc 0.30000000000000004 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 0.30000000000000004 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 0.3 na: (21, 2)
+wartosc 5.551115123125783e-17 na: (23, 23)
+wartosc 5.551115123125783e-17 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.3 na: (30, 26)
+wartosc 1.0 na: (32, 32)
+wartosc 0.3 na: (33, 23)
+wartosc 1.0 na: (35, 35)
+Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)]))
+actions [Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)])), Action(index=3, agent_index=1, decided_phase=Phase(index=3, moves=[(18, 26), (30, 26), (12, 5)])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+C
+C
+D
+modify 1
+modify 3
+modify 0
+t 78
+x [6.00000000e+00 4.00000000e+00 2.00000000e+00 6.00000000e+00
+ 4.00000000e+00 5.99000000e+00 6.00000000e+00 4.00000000e+00
+ 1.62000000e+01 7.00000000e+00 1.11062000e+01 3.00342000e+01
+ 9.31000000e+00 7.70000000e+00 2.57416600e+01 0.00000000e+00
+ 9.80000000e+00 5.97643834e+00 8.40000000e-01 4.41000000e+00
+ 1.89432069e+01 3.00000000e+00 4.75980000e+00 9.28082712e+00
+ 0.00000000e+00 8.92751519e+00 6.66133815e-17 1.39450228e+01
+ 3.99500760e+01 4.00423513e+02 3.60000000e-01 1.89000000e+00
+ 3.91237815e+02 0.00000000e+00 3.82607794e+00 3.53347648e+02]
+A [[0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [1.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 1.00000000e+00 5.55111512e-17 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ ...
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 1.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  1.00000000e+00 1.00000000e+00]]
+wartosc 5.551115123125783e-17 na: (2, 2)
+wartosc 0.30000000000000004 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 0.30000000000000004 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 0.3 na: (21, 2)
+wartosc 1.0 na: (23, 23)
+wartosc 5.551115123125783e-17 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.3 na: (30, 26)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)]))
+actions [Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+D
+modify 0
+modify 0
+modify 1
+t 79
+x [8.00000000e+00 6.00000000e+00 6.00000000e+00 8.00000000e+00
+ 6.00000000e+00 9.99000000e+00 8.00000000e+00 6.00000000e+00
+ 2.02000000e+01 0.00000000e+00 7.00000000e+00 4.11404000e+01
+ 0.00000000e+00 9.31000000e+00 7.70000000e+00 7.72249800e+00
+ 0.00000000e+00 1.57764383e+01 0.00000000e+00 8.40000000e-01
+ 2.33532069e+01 0.00000000e+00 3.00000000e+00 7.54404813e+00
+ 6.49657898e+00 0.00000000e+00 8.92751519e+00 0.00000000e+00
+ 1.39450228e+01 4.40373589e+02 0.00000000e+00 3.60000000e-01
+ 3.93127815e+02 1.80191620e+01 0.00000000e+00 3.57173726e+02]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 1.0 na: (11, 11)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 1.0 na: (20, 20)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=2, agent_index=2, decided_phase=Phase(index=2, moves=[(24, 8), (15, 8), (33, 14)]))]
+D
+modify 3
+modify 2
+modify 0
+t 80
+x [1.00000000e+01 8.00000000e+00 1.20000000e+01 1.00000000e+01
+ 8.00000000e+00 6.00000000e+00 1.00000000e+01 8.00000000e+00
+ 2.62000000e+01 4.73293150e+00 0.00000000e+00 1.93421200e+01
+ 6.99300000e+00 0.00000000e+00 1.70100000e+01 0.00000000e+00
+ 7.72249800e+00 8.75768254e-16 2.99700000e+00 0.00000000e+00
+ 7.84596208e+00 1.63472449e+01 0.00000000e+00 1.05440481e+01
+ 0.00000000e+00 6.49657898e+00 8.92751519e+00 1.10435068e+01
+ 0.00000000e+00 4.54318611e+02 2.87982800e+01 0.00000000e+00
+ 3.93487815e+02 0.00000000e+00 1.80191620e+01 3.57173726e+02]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.3 na: (9, 17)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 5.551115123125783e-17 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 0.30000000000000004 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)]))
+actions [Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)])), Action(index=3, agent_index=1, decided_phase=Phase(index=3, moves=[(18, 26), (30, 26), (12, 5)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+D
+modify 0
+modify 0
+modify 2
+t 81
+x [  2.          10.          20.           2.          10.
+  14.           2.          10.           8.           0.
+   4.7329315   19.34212      0.           6.993        5.103
+  18.34         0.           7.722498     0.           2.997
+   7.84596208   0.          16.34724486  10.54404813   7.86
+   0.          15.42409417   0.          11.04350684 454.31861138
+   0.          28.79828    393.48781497  11.907        0.
+ 375.19288806]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (11, 11)
+wartosc 0.30000000000000004 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 1.0 na: (17, 17)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 0.3 na: (24, 8)
+wartosc 1.0 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=3, agent_index=2, decided_phase=Phase(index=3, moves=[(24, 23), (33, 23), (15, 8)]))]
+D
+modify 1
+modify 3
+modify 0
+t 82
+x [4.00000000e+00 2.00000000e+00 1.00000000e+01 4.00000000e+00
+ 2.00000000e+00 1.42000000e+01 4.00000000e+00 2.00000000e+00
+ 1.80000000e+01 1.40000000e+01 0.00000000e+00 2.40750515e+01
+ 9.80000000e+00 0.00000000e+00 1.20960000e+01 0.00000000e+00
+ 1.83400000e+01 2.31674940e+00 1.07968659e+01 0.00000000e+00
+ 1.08429621e+01 6.00000000e+00 0.00000000e+00 2.68912930e+01
+ 0.00000000e+00 7.86000000e+00 8.56209224e-16 5.40574860e+00
+ 0.00000000e+00 4.65362118e+02 4.62722825e+00 0.00000000e+00
+ 4.22286095e+02 0.00000000e+00 1.19070000e+01 3.75192888e+02]
+A [[0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [1.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 1.00000000e+00 5.55111512e-17 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ ...
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 1.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  1.00000000e+00 1.00000000e+00]]
+wartosc 5.551115123125783e-17 na: (2, 2)
+wartosc 0.30000000000000004 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 0.30000000000000004 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 0.3 na: (21, 2)
+wartosc 1.0 na: (23, 23)
+wartosc 5.551115123125783e-17 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.3 na: (30, 26)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)]))
+actions [Action(index=2, agent_index=0, decided_phase=Phase(index=2, moves=[(21, 20), (27, 20), (9, 2)])), Action(index=3, agent_index=1, decided_phase=Phase(index=3, moves=[(18, 26), (30, 26), (12, 5)])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+C
+modify 0
+modify 3
+modify 3
+t 83
+x [6.00000000e+00 4.00000000e+00 1.20000000e+01 6.00000000e+00
+ 4.00000000e+00 6.26000000e+00 6.00000000e+00 4.00000000e+00
+ 7.40000000e+00 0.00000000e+00 1.40000000e+01 2.40750515e+01
+ 9.94000000e+00 9.80000000e+00 1.20960000e+01 1.26000000e+01
+ 0.00000000e+00 2.06567494e+01 5.99346457e-16 1.07968659e+01
+ 1.08429621e+01 0.00000000e+00 6.00000000e+00 1.49276663e-15
+ 1.88239051e+01 0.00000000e+00 7.86000000e+00 0.00000000e+00
+ 5.40574860e+00 4.65362118e+02 2.56862767e-16 4.62722825e+00
+ 4.22286095e+02 8.06738790e+00 0.00000000e+00 3.87099888e+02]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 0.30000000000000004 na: (5, 5)
+wartosc 0.30000000000000004 na: (8, 8)
+wartosc 1.0 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 1.0 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 1.0 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 5.551115123125783e-17 na: (23, 23)
+wartosc 5.551115123125783e-17 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.3 na: (30, 26)
+wartosc 1.0 na: (32, 32)
+wartosc 0.3 na: (33, 23)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=1, agent_index=1, decided_phase=Phase(index=1, moves=[(12, 11), (30, 11), (18, 26)])), Action(index=2, agent_index=2, decided_phase=Phase(index=2, moves=[(24, 8), (15, 8), (33, 14)]))]
+D
+D
+modify 2
+modify 0
+modify 0
+t 84
+x [8.00000000e+00 6.00000000e+00 7.60000000e+00 8.00000000e+00
+ 6.00000000e+00 1.02600000e+01 8.00000000e+00 6.00000000e+00
+ 1.14000000e+01 8.40000000e+00 0.00000000e+00 3.80750515e+01
+ 0.00000000e+00 9.94000000e+00 2.18960000e+01 0.00000000e+00
+ 1.26000000e+01 2.06567494e+01 0.00000000e+00 5.99346457e-16
+ 1.07968659e+01 7.59007346e+00 0.00000000e+00 6.00000000e+00
+ 0.00000000e+00 1.88239051e+01 7.86000000e+00 3.25288862e+00
+ 0.00000000e+00 4.70767867e+02 0.00000000e+00 2.56862767e-16
+ 4.26913323e+02 0.00000000e+00 8.06738790e+00 3.87099888e+02]
+A [[0.  0.  0.  ... 0.  0.  0. ]
+ [1.  0.  0.  ... 0.  0.  0. ]
+ [0.  1.  0.3 ... 0.  0.  0. ]
+ ...
+ [0.  0.  0.  ... 0.  0.  0. ]
+ [0.  0.  0.  ... 1.  0.  0. ]
+ [0.  0.  0.  ... 0.  1.  1. ]]
+wartosc 0.30000000000000004 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 1.0 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 5.551115123125783e-17 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.3 na: (27, 20)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)]))
+actions [Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+D
+modify 0
+modify 1
+modify 2
+t 85
+x [ 10.           8.          13.6         10.           8.
+  16.26        10.           8.           6.           0.
+   8.4          0.          11.42251545   0.          16.5088
+   7.98         0.          33.2567494    5.502        0.
+  10.79686592   0.           7.59007346   6.           3.42
+   0.          21.1819051    0.           3.25288862 470.76786682
+  26.65253605   0.         426.91332322  15.3272       0.
+ 395.16727596]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 0.30000000000000004 na: (14, 14)
+wartosc 0.7 na: (15, 8)
+wartosc 1.0 na: (17, 17)
+wartosc 0.7 na: (18, 26)
+wartosc 1.0 na: (20, 20)
+wartosc 1.0 na: (23, 23)
+wartosc 0.3 na: (24, 8)
+wartosc 0.30000000000000004 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[]))
+actions [Action(index=0, agent_index=0, decided_phase=Phase(index=0, moves=[])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+D
+D
+modify 1
+modify 0
+modify 0
+t 86
+x [  2.          10.           8.           2.          10.
+  24.26         2.          10.          14.           9.52
+   0.           8.4          0.          11.42251545  16.5088
+   0.           7.98         9.97702482   0.           5.502
+  10.79686592   4.08         0.          13.59007346   0.
+   3.42        21.1819051   23.27972458   0.         474.02075544
+   0.          26.65253605 426.91332322   0.          15.3272
+ 395.16727596]
+A [[0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [1.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 1.00000000e+00 5.55111512e-17 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ ...
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 1.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  1.00000000e+00 1.00000000e+00]]
+wartosc 5.551115123125783e-17 na: (2, 2)
+wartosc 1.0 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 1.0 na: (11, 11)
+wartosc 1.0 na: (14, 14)
+wartosc 0.30000000000000004 na: (17, 17)
+wartosc 1.0 na: (20, 20)
+wartosc 0.3 na: (21, 2)
+wartosc 1.0 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 1.0 na: (32, 32)
+wartosc 1.0 na: (35, 35)
+Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)]))
+actions [Action(index=1, agent_index=0, decided_phase=Phase(index=1, moves=[(9, 2), (21, 2), (27, 17)])), Action(index=0, agent_index=1, decided_phase=Phase(index=0, moves=[])), Action(index=0, agent_index=2, decided_phase=Phase(index=0, moves=[]))]
+C
+modify 1
+modify 2
+modify 1
+t 87
+x [  4.           2.          10.           4.           2.
+  10.           4.           2.          24.           5.6
+   9.52         2.52        16.982        0.          11.42251545
+   4.95264      0.          10.97310745   7.278        0.
+  16.29886592   2.4          4.08         4.07702204   9.51305142
+   0.          24.6019051    6.98391737  23.27972458 474.02075544
+   5.88         0.         453.56585927  11.55616      0.
+ 410.49447596]
+A [[0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [1.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 1.00000000e+00 5.55111512e-17 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ ...
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 1.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 0.00000000e+00 0.00000000e+00 ... 0.00000000e+00
+  1.00000000e+00 1.00000000e+00]]
+wartosc 5.551115123125783e-17 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.7 na: (9, 2)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 0.30000000000000004 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 1.0 na: (20, 20)
+wartosc 0.3 na: (21, 2)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 0.7 na: (27, 17)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)
+Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)]))
+actions [Action(index=3, agent_index=0, decided_phase=Phase(index=3, moves=[(27, 17), (9, 17), (21, 20)])), Action(index=2, agent_index=1, decided_phase=Phase(index=2, moves=[(12, 5), (18, 5), (30, 11)])), Action(index=1, agent_index=2, decided_phase=Phase(index=1, moves=[(33, 14), (15, 14), (24, 23)]))]
+D
+C
+C
+modify 0
+modify 2
+modify 1
+t 88
+x [6.00000000e+00 4.00000000e+00 1.20000000e+01 6.00000000e+00
+ 4.00000000e+00 2.00000000e+00 6.00000000e+00 4.00000000e+00
+ 2.60000000e+01 0.00000000e+00 5.60000000e+00 1.02760000e+01
+ 7.00000000e+00 1.69820000e+01 6.34076983e-16 3.42675464e+00
+ 4.95264000e+00 1.09731074e+01 3.00000000e+00 7.27800000e+00
+ 1.62988659e+01 0.00000000e+00 2.40000000e+00 5.30310661e+00
+ 2.85391543e+00 9.51305142e+00 2.46019051e+01 0.00000000e+00
+ 6.98391737e+00 4.97300480e+02 1.76400000e+00 5.88000000e+00
+ 4.53565859e+02 7.99576082e+00 1.15561600e+01 4.10494476e+02]
+A [[0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ [0. 1. 1. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 1. 0. 0.]
+ [0. 0. 0. ... 0. 1. 1.]]
+wartosc 1.0 na: (2, 2)
+wartosc 5.551115123125783e-17 na: (5, 5)
+wartosc 1.0 na: (8, 8)
+wartosc 0.30000000000000004 na: (11, 11)
+wartosc 0.7 na: (12, 5)
+wartosc 5.551115123125783e-17 na: (14, 14)
+wartosc 1.0 na: (17, 17)
+wartosc 0.3 na: (18, 5)
+wartosc 1.0 na: (20, 20)
+wartosc 0.30000000000000004 na: (23, 23)
+wartosc 1.0 na: (26, 26)
+wartosc 1.0 na: (29, 29)
+wartosc 0.7 na: (30, 11)
+wartosc 1.0 na: (32, 32)
+wartosc 0.7 na: (33, 14)
+wartosc 1.0 na: (35, 35)

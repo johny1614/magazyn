@@ -1,49 +1,32 @@
-# import string
-#
-# from model.LearningState import LearningState
-#
-# state_1 = LearningState(pre_cross_densities=(0, 4, 5), global_aggregated_densities=(2, 4, 5), phase_no=2,
-#                         phase_duration=1)
-# different_state = LearningState(pre_cross_densities=(0, 4, 5), global_aggregated_densities=(2, 4, 8), phase_no=2,
-#                                 phase_duration=1)
-# state_1_also = LearningState(pre_cross_densities=(0, 4, 5), global_aggregated_densities=(2, 4, 5), phase_no=2,
-#                              phase_duration=1)
-# myDic = {state_1: [2], different_state: [7]}
-# myDic[state_1_also].append(6)
-# print(myDic[state_1])
-# # import string
-# #
-# import attr
-#
-#
-# @attr.s(auto_attribs=True)
-# class Animal:
-#     ssie: bool
-#     foots: int = 5
-#     smart: string = 'yes'
-#
-#
-# @attr.s(auto_attribs=True)
-# class Dog(Animal):
-#     name: string = 'BezImenny'
-#     # def __init__(self,name):
-#     # self.name=name
-#
-#
-# # @attr.s
-# # class Coordinates(object):
-# #     x = attr.ib()
-# #     y = attr.ib()
-# #
-# #
-# # cord = Coordinates(x=12, y=5)
-# # cord_2 = Coordinates(x=17, y=5)
-# # cord_also = Coordinates(x=12, y=5)
-# dog = Dog(name='Azor', foots=4,ssie=True)
-# dog_also = Dog(name='Azor', foots=4,ssie=True)
-# # print('cord==cord_also', cord == cord_also)
-# print('dog==dog_also', dog == dog_also)
-import numpy as np
+import attr
+from model.LearningState import LearningState
 
-a = np.zeros([36, 36])
-print(a)
+
+@attr.s(auto_attribs=True)
+class AgentWithState:
+    state: LearningState = None
+
+
+state = LearningState(pre_cross_densities=(2, 3),
+                      global_aggregated_densities=(1, 17),
+                      phase_index=2,
+                      phase_duration=24)
+state_2 = LearningState(pre_cross_densities=(7, 8),
+                        global_aggregated_densities=(4, 22),
+                        phase_index=6,
+                        phase_duration=14)
+state_3 = LearningState(pre_cross_densities=(32, 12),
+                        global_aggregated_densities=(21, 22),
+                        phase_index=22,
+                        phase_duration=2)
+agent_1 = AgentWithState(state)
+agent_2 = AgentWithState(state_2)
+print(state)
+print(state_2)
+print(agent_1)
+print(agent_2)
+agent_1.state=state_3
+print(agent_1)
+print(agent_2)
+
+

@@ -6,10 +6,9 @@ def pretty_print(env):
         print('A > 0 na:')
 
 
-def pretty_print_A(env, t):
-    print('A', t)
-    for row_index in range(len(env.A_storage[t])):
-        row = env.A_storage[t][row_index]
+def pretty_print_A(A):
+    for row_index in range(len(A)):
+        row = A[row_index]
         for column_index in range(len(row)):
             cell = row[column_index]
             if cell > 0 and row_index != column_index + 1:

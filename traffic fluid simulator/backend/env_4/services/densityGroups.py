@@ -13,7 +13,6 @@ groups = [
 
 
 def getGroup(density):
-    print(density)
     for i in range(len(groups)):
         if density >= groups[i][0]:
             if density <= groups[i][1]:

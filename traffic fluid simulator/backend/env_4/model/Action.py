@@ -1,11 +1,7 @@
-from dataclasses import dataclass
-
 from model import Phase
-from services.hashable_decorator import hashable
+import attr
 
-
-@hashable
-@dataclass
+@attr.s(auto_attribs=True,frozen=True)
 class Action:
     index: int
     agent_index: int
