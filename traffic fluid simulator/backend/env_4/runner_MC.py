@@ -16,19 +16,7 @@ def epoch():
     Globals().time = 0
     env = Env(agents)
     for t in range(max_time - 1):
-        actions: List[Action] = []
-        # for agent_index in range(len(agents)):
-        #     agent=agents[agent_index]
-        #     action=agent.get_action_
-        # for agent in agents:
-        #     agent.get_action_according_to_pi(agents[0].local_state)
-        #     print('dupa')
-        # action_agent_0=
-        action_0=agents[0].get_action_according_to_pi(agents[0].local_state)
-        print(action_0)
-        actions.append(action_0)
-        actions.append(agents[1].get_action_according_to_pi(agents[1].local_state))
-        actions.append(agents[2].get_action_according_to_pi(agents[2].local_state))
+        actions: List[Action] = [agent.get_action_according_to_pi(agent.local_state) for agent in agents]
         env.step(actions)
     #     state = local_states
     #     memories.append({'state': old_state, 'new_state': state, 'action': actions, 'reward': reward})

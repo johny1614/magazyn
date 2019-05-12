@@ -1,14 +1,13 @@
-from dataclasses import dataclass
-from typing import Any, List, Dict, Tuple
+from typing import List, Dict, Tuple
 
 import attr
+import numpy as np
 
 from env_data import sections_of_roads
 from model.Action import Action
 from model.LearningState import LearningState
 from model.Phase import Phase
 from services.densityGroups import getGroup
-import numpy as np
 
 
 @attr.s(auto_attribs=True)
@@ -17,11 +16,11 @@ class Agent:
     all_phases: List[Phase]
     local_phase_sections: List[int]
     curve_densities: Dict[Tuple[int, int], int]
+    phase_duration: int = 10
+    orange_phase_duration: int = 1
     local_state: LearningState = None
     pending_phase: Phase = None
     rewards: List[float] = []
-    orange_phase_duration: int = 1
-    phase_duration: int = 10
 
     def __attrs_post_init__(self):
         self.actual_phase: Phase = self.all_phases[0]
@@ -50,8 +49,8 @@ class Agent:
         return A
 
     def pass_action(self, action: Action):
-        if(action not in self.local_action_space):
-            print('action not in local action space!',2/0)
+        if (action not in self.local_action_space):
+            print('action not in local action space!', 2 / 0)
         if action.index == 0:  # wait
             self.phase_duration += 1
             if self.actual_phase.index == 0 and self.phase_duration == self.orange_phase_duration:
@@ -60,37 +59,20 @@ class Agent:
                 print('B')
                 pass
         elif action.index != 0:
-            if(action.index==self.actual_phase.index):
+            if (action.index == self.actual_phase.index):
                 print('C')
-                self.phase_duration+=1
+                self.phase_duration += 1
             else:
-                self.pending_phase=action.decided_phase
-                self.phase_duration=0
-                self.actual_phase=self.all_phases[0]
-                if(self.phase_duration>=self.orange_phase_duration):
-                    self.actual_phase=self.pending_phase
+                self.pending_phase = action.decided_phase
+                self.phase_duration = 0
+                self.actual_phase = self.all_phases[0]
+                if (self.phase_duration >= self.orange_phase_duration):
+                    self.actual_phase = self.pending_phase
                     print('E')
                 else:
                     print('D')
-            # if self.all_phases[action.index] == self.actual_phase:
-            #     print('C')
-            #     self.phase_duration += 1
-            # else:  # nowa akcja!
-            #     self.phase_duration = 0
-            #     if self.phase_duration == self.orange_phase_duration:
-            #         print('D')
-            #         self.actual_phase = self.all_phases[action.index]
-            #         self.actual_phase_no = action
-            #     else:
-            #         print('E')
-            #         self.actual_phase = self.all_phases[0]  # orange
-            #         self.actual_phase_no = 0
-            #         self.pending_action_no = action
 
     def assign_local_state(self, densities):
-        # print('agent nr',self.index)
-        # print('ma takie local_phase_sections',self.local_phase_sections)
-        # print('podczas gdy jego local state to',self.local_state)
         pre_cross_densities = ()
         for sec in self.local_phase_sections:
             pre_cross_densities = pre_cross_densities + (getGroup(densities[sec]),)
