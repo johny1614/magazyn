@@ -17,6 +17,7 @@ class Env:
     agents: List[Agent]
     x = env_data_x
     A_storage = env_data_A_storage
+    global_rewards = []
 
     @property
     def global_state(self) -> GlobalState:
@@ -30,10 +31,10 @@ class Env:
             global_action_space = global_action_space + (localSpace,)
         return global_action_space
 
-    @property
-    def global_reward(self) -> float:
+    def append_global_rewards(self) -> float:
         t = self.t
-        return self.x[t][29] + self.x[t][35] + self.x[t][32]
+        reward = self.x[t][29] + self.x[t][35] + self.x[t][32]
+        self.global_rewards.append(reward)
 
     @property
     def t(self):
@@ -53,7 +54,7 @@ class Env:
         self.__pass_actions_to_agents(actions)
         self.__modify_A()
         self.__execute_phase()
-        self.__assign_rewards_to_agents()
+        self.append_global_rewards()
         print('t', self.t)
         print('x', self.x[self.t])
         print('A', self.A)
@@ -66,10 +67,6 @@ class Env:
         self.__include_source_cars()
         self.__assign_local_states_to_agents()
 
-    def __assign_rewards_to_agents(self):
-        for agent in self.agents:
-            agent.assign_reward(previous_x=self.x[self.t - 1], actual_x=self.x[self.t],
-                                global_reward=self.global_reward)
 
     def __pass_actions_to_agents(self, actions: List[Action]):
         for i in range(self.agents.__len__()):

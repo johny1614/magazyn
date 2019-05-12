@@ -1,13 +1,14 @@
-from typing import List, Dict, Tuple
+from dataclasses import dataclass
+from typing import Any, List, Dict, Tuple
 
 import attr
-import numpy as np
 
 from env_data import sections_of_roads
 from model.Action import Action
 from model.LearningState import LearningState
 from model.Phase import Phase
 from services.densityGroups import getGroup
+import numpy as np
 
 
 @attr.s(auto_attribs=True)
@@ -73,6 +74,7 @@ class Agent:
                     print('D')
 
     def assign_local_state(self, densities):
+        # print('podczas gdy jego local state to',self.local_state)
         pre_cross_densities = ()
         for sec in self.local_phase_sections:
             pre_cross_densities = pre_cross_densities + (getGroup(densities[sec]),)

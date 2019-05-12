@@ -7,6 +7,7 @@ from env_data import max_time
 from model.Action import Action
 from model.ExportData import ExportData
 from model.Net import Net
+from model.SmartAgent import SmartAgent
 from services.agentFactory import get_SmartAgents
 from services.globals import Globals
 
@@ -23,7 +24,7 @@ def epoch():
     # return memories
 
 
-agents = get_SmartAgents()
+agents: List[SmartAgent] = get_SmartAgents()
 gamma = 1
 epsilon = 0.2
 # state_space = []  # poczotkowo nic [(x, y, z) for x in range(52) for y in range(52) for z in range(52)]
@@ -32,12 +33,11 @@ epochs = range(1)
 for e in epochs:
     env: Env = epoch()
     nets: List[Net] = []
-    for t in range(max_time-1):
-        A = env.A_storage[t+1].tolist()
+    for t in range(max_time - 1):
+        A = env.A_storage[t + 1].tolist()
         x = env.x[t].tolist()
-        net = Net(A, x)
-        nets.append(net)
-#     update_returns()
+        nets.append(Net(A, x))
+print('end')
 #     epoch_rewards = count_rewards(epoch_memory)
 # last_epoch_memory = epoch()  # last epoch
 # reward_sum = count_rewards(last_epoch_memory)
