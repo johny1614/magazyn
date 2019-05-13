@@ -6,4 +6,4 @@ import attr
 @attr.s(auto_attribs=True, frozen=True)
 class Phase:
     index: int
-    moves: List[Tuple[int, int]]
+    moves: Tuple[Tuple[int, int]]

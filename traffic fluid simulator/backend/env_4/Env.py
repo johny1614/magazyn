@@ -3,21 +3,23 @@ from typing import List, Tuple
 import attr
 import numpy as np
 
-from env_data import u, start_A, env_data_x, env_data_A_storage
+from env_data import u, start_A, env_data_A_storage, max_time, get_x
 from model import GlobalState
 from model.Action import Action
 from model.Agent import Agent
 # trojkatne - 3 skrzyzowania, razem 6 drog
 from services.globals import Globals
-from services.prettyPrinter import pretty_print_A
 
 
 @attr.s(auto_attribs=True)
 class Env:
     agents: List[Agent]
-    x = env_data_x
     A_storage = env_data_A_storage
-    global_rewards = []
+    global_rewards: List[float] = attr.Factory(list)
+    x = get_x()
+
+    def __attrs_post_init__(self):
+        self.__assign_local_states_to_agents()
 
     @property
     def global_state(self) -> GlobalState:
@@ -49,24 +51,20 @@ class Env:
         self.A_storage[self.t] = new_A
 
     def step(self, actions: List[Action]):
-        print('actions', actions)
         self.A = start_A()
         self.__pass_actions_to_agents(actions)
         self.__modify_A()
         self.__execute_phase()
         self.append_global_rewards()
-        print('t', self.t)
-        print('x', self.x[self.t])
-        print('A', self.A)
-        pretty_print_A(self.A)
+        # pretty_print_A(self.A)
         Globals().time += 1
+        if self.t != 0 and self.t != max_time:  # state of 0 is initialized, the last one is not interesting us if  time runs out
+            self.__assign_local_states_to_agents()
 
     def __execute_phase(self):
         t = self.t
         self.x[t] = np.dot(self.A, self.x[t - 1])
         self.__include_source_cars()
-        self.__assign_local_states_to_agents()
-
 
     def __pass_actions_to_agents(self, actions: List[Action]):
         for i in range(self.agents.__len__()):

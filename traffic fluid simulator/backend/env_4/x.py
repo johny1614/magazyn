@@ -1,20 +1,25 @@
+# from dataclasses import dataclass, field
+# from typing import List
+#
 # import attr
 #
 #
-# def empty_dic():
-#     return {}
+# def empty_list():
+#     return []
 #
 #
-# d = {}
+# @attr.s(auto_attribs=True)
+# class Env:
+#     lista: List = attr.Factory(list)
 #
 #
-# @attr.s()
-# class A(object):
-#     dic = attr.ib(default=attr.Factory((empty_dic)))
-# a = A()
-# a2 = A()
-# a.dic['dupa'] = 4
-# print(a.dic['dupa'])
-# print(a2.dic['dupa'])
-for x in reversed(range(10)):
-    print(x)
+# env = Env()
+# env.lista.append(23)
+# # del env
+# env = Env()
+# print(env)
+
+import matplotlib.pyplot as plt
+scores=[2,45,23,432,52,33,44]
+plt.plot(scores)
+plt.show()
