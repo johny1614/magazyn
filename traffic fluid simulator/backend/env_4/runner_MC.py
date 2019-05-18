@@ -18,7 +18,7 @@ def epoch():
     Globals().time = 0
     env = Env(agents)
     for t in range(max_time):
-        actions: List[Action] = [agent.get_action_according_to_pi(agent.local_state) for agent in agents]
+        actions: List[Action] = [agent.get_action_according_to_pi(agent.local_state,0.1) for agent in agents]
         env.step(actions)
     return env
     #     state = local_states
@@ -50,8 +50,8 @@ for e in epochs:
         agent.update_Q()
         agent.update_pi()
         agent.clear_epoch_local_data()
-plt.plot(scores)
-plt.show()
+# plt.plot(scores)
+# plt.show()
     #     print(agent)
     #     for state in agent.epoch_local_state_storage:
     #         print(state)

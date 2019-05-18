@@ -10,6 +10,7 @@ from model.LearningState import LearningState
 import random
 
 from services.densityGroups import getGroup
+from services.globals import Globals
 
 
 def empty_dic():
@@ -22,8 +23,11 @@ class SmartAgent(Agent):
     Q: Dict[LearningState, Action] = attr.ib(default=attr.Factory((empty_dic)))
     pi: Dict[LearningState, Action] = attr.ib(default=attr.Factory((empty_dic)))
 
-    def get_action_according_to_pi(self, learning_state: LearningState) -> Action:
-        # print('agent ',self.index)
+    def get_action_according_to_pi(self, learning_state: LearningState,random_probabilty: float) -> Action:
+        if(random_probabilty):
+            rand_value=random.random()
+            if(rand_value<random_probabilty):
+                return random.choice(list(self.local_action_space))
         if learning_state not in self.pi:
             # print('adding leagning state',learning_state)
             random_action = random.choice(list(self.local_action_space))
@@ -37,10 +41,12 @@ class SmartAgent(Agent):
         for i in range(len(G)):
             if ((self.epoch_local_state_storage[i], self.epoch_local_action_storage[i]) in self.returns.keys()):
                 self.returns[self.epoch_local_state_storage[i], self.epoch_local_action_storage[i]].append(G[i])
+                Globals().state_repeats += 1
             else:
+                Globals().new_states += 1
                 self.returns[self.epoch_local_state_storage[i], self.epoch_local_action_storage[i]] = [G[i]]
-            print('len',len(self.returns[self.epoch_local_state_storage[i], self.epoch_local_action_storage[i]]))
-
+        print('powtorki',Globals().state_repeats)
+        print('nowe',Globals().new_states)
     def update_Q(self):
         for i in range(len(self.epoch_local_state_storage)):
             state = self.epoch_local_state_storage[i]

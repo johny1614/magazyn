@@ -1,8 +1,5 @@
-from dataclasses import dataclass
 from typing import Any, List, Dict, Tuple
-
 import attr
-
 from env_data import sections_of_roads
 from model.Action import Action
 from model.LearningState import LearningState
@@ -96,6 +93,7 @@ class Agent:
                                     global_aggregated_densities=global_aggregated_densities,
                                     phase_index=self.actual_phase.index,
                                     phase_duration=self.phase_duration)
+        print(local_state)
         self.epoch_local_state_storage = self.epoch_local_state_storage + (local_state,)
 
     def assign_reward(self, previous_x, actual_x, global_reward):

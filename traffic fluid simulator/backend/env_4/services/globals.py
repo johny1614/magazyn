@@ -10,6 +10,8 @@ class Singleton(type):
 class BaseClass:
     def __init__(self):
         self.time = 0
+        self.state_repeats = 0
+        self.new_states=0
 
 
 class Globals(BaseClass, metaclass=Singleton):
