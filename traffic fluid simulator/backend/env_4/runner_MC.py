@@ -31,10 +31,9 @@ gamma = 0.8
 epsilon = 0.2
 # state_space = []  # poczotkowo nic [(x, y, z) for x in range(52) for y in range(52) for z in range(52)]
 best_score = 0
-epochs = range(45)
+epochs = range(450)
 scores = []
 for e in epochs:
-    print(e)
     env: Env = epoch()
     score = sum([x for x in env.global_rewards])
     scores.append(score)
@@ -46,10 +45,15 @@ for e in epochs:
         x = env.x[t].tolist()
         nets.append(Net(A, x))
     for agent in agents:
+        agent.add_states_to_map_state()
+        agent.states_map.update_clusters()
+        print('done')
+        agent.print_used_states()
         agent.add_returns(G)
         agent.update_Q()
         agent.update_pi()
         agent.clear_epoch_local_data()
+    print(sum(env.global_rewards))
 # plt.plot(scores)
 # plt.show()
     #     print(agent)

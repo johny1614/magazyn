@@ -100,7 +100,6 @@ def count_rewards():
     rewards_sum = 0
     for m in memories:
         rewards_sum += m['reward']
-    print(rewards_sum)
     return rewards_sum
 def get_action(state,is_train=True):
     rand=random.random()

@@ -84,16 +84,15 @@ class Agent:
     def assign_local_state(self, densities):
         pre_cross_densities = ()
         for sec in self.local_phase_sections:
-            pre_cross_densities = pre_cross_densities + (getGroup(densities[sec]),)
+            pre_cross_densities = pre_cross_densities + (densities[sec],)
         global_aggregated_densities = ()
         for road in sections_of_roads:
             global_aggregated_densities = global_aggregated_densities + (
-                round(np.mean([getGroup(densities[section]) for section in road])),)
+                round(np.sum([getGroup(densities[section]) for section in road])),)
         local_state = LearningState(pre_cross_densities=pre_cross_densities,
                                     global_aggregated_densities=global_aggregated_densities,
                                     phase_index=self.actual_phase.index,
                                     phase_duration=self.phase_duration)
-        print(local_state)
         self.epoch_local_state_storage = self.epoch_local_state_storage + (local_state,)
 
     def assign_reward(self, previous_x, actual_x, global_reward):
