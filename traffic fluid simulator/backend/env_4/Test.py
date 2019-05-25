@@ -2,6 +2,8 @@ import random
 import unittest
 
 from Env import Env
+from model import SmartAgent
+from nn_data import S1, S3
 from services.agentFactory import get_SmartAgents
 
 
@@ -114,6 +116,22 @@ class Testing(unittest.TestCase):
     #         # if(time>1 and time<14):
     #         #     self.assertEqual(env.A[][])
 
+    def test_pass_action_2_several_times(self):
+        # actions: 2, wait, wait and we have 2 phase on
+        agents, env = get_agents_env()
+        agent:SmartAgent = env.agents[0]
+        for state in S3:
+            agent.states_map.add_state(state)
+        agent.states_map.update_clusters()
+        cluster_2 = agent.states_map.get_cluster(S3[2])
+        cluster_3 = agent.states_map.get_cluster(S3[3])
+        cluster_last = agent.states_map.get_cluster(S3[-1])
+        print(cluster_2)
+        print(cluster_3)
+        print(cluster_last)
+        print(cluster_2.index)
+        print(cluster_3.index)
+        print(cluster_last.index)
 
 if __name__ == '__main__':
     unittest.main()

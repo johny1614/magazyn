@@ -1,11 +1,12 @@
 import random
+from typing import List
 
 from model.LearningState import LearningState
 from model.Phase import Phase
 from model.SmartAgent import SmartAgent
 
 
-def get_SmartAgents():
+def get_SmartAgents() -> List[SmartAgent]:
     agents: SmartAgent = []
     agent_0 = SmartAgent(index=0,
                          all_phases=[Phase(index=0, moves=()),

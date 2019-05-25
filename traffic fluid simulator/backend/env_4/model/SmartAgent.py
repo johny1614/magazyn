@@ -1,3 +1,4 @@
+import itertools
 from typing import Tuple, Dict, List
 import attr
 import numpy as np
@@ -7,7 +8,7 @@ from model.Agent import Agent
 from model.LearningState import LearningState
 import random
 
-from StateMap import StateMap
+from StateMap import StateMap, cluster_index
 from services.globals import Globals
 
 
@@ -15,12 +16,16 @@ def empty_dic():
     return {}
 
 
+def state_map():
+    return StateMap(10)
+
+
 @attr.s(auto_attribs=True)
 class SmartAgent(Agent):
     returns: Dict[Tuple[LearningState, Action], List[float]] = attr.ib(default=attr.Factory((empty_dic)))
-    Q: Dict[Tuple[int,Action],float] = attr.ib(default=attr.Factory((empty_dic)))
+    Q: Dict[Tuple[cluster_index, Action], float] = attr.ib(default=attr.Factory((empty_dic)))
     pi: Dict[int, Action] = attr.ib(default=attr.Factory((empty_dic)))
-    states_map = StateMap(10)
+    states_map: StateMap = attr.ib(default=attr.Factory((state_map)))
 
     def get_action_according_to_pi(self, learning_state: LearningState, random_probabilty: float) -> Action:
         if (random_probabilty):
@@ -37,14 +42,16 @@ class SmartAgent(Agent):
     def add_states_to_map_state(self):
         for state in self.epoch_local_state_storage:
             self.states_map.add_state(state)
+        self.states_map.last_epoch_states = self.epoch_local_state_storage
 
     def print_used_states(self):
-        used=0
+        used = 0
         for cluster in self.states_map.clusters:
             # print(cluster.states)
-            if len(cluster.states)>2:
-                used+=1
+            if len(cluster.states) > 2:
+                used += 1
         print(used)
+
     def add_returns(self, G):
         for i in range(len(G)):
             if ((self.epoch_local_state_storage[i], self.epoch_local_action_storage[i]) in self.returns.keys()):
@@ -58,7 +65,13 @@ class SmartAgent(Agent):
         for i in range(len(self.epoch_local_state_storage)):
             state: LearningState = self.epoch_local_state_storage[i]
             action: Action = self.epoch_local_action_storage[i]
-            self.Q[(state.cluster_index,action)] = np.mean(self.returns[state, action])
+            key_returns_of_cluster_action_pair = [ret for ret in self.returns if
+                                                  ret[0].cluster_index == state.cluster_index and ret[1] == action]
+            values_returns_of_cluster_action_pair = [self.returns[key] for key in key_returns_of_cluster_action_pair]
+            flat_values = list(itertools.chain.from_iterable(values_returns_of_cluster_action_pair))
+            self.Q[(state.cluster_index, action)] = np.mean(flat_values)
+            # appearance = len(flat_values)
+            # print('update q na podstawie ilosci par klaster-akcja', appearance)
 
     def update_pi(self):
         for i in range(len(self.epoch_local_state_storage) - 1):

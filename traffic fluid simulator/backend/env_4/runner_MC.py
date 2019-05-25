@@ -18,7 +18,7 @@ def epoch():
     Globals().time = 0
     env = Env(agents)
     for t in range(max_time):
-        actions: List[Action] = [agent.get_action_according_to_pi(agent.local_state,0.1) for agent in agents]
+        actions: List[Action] = [agent.get_action_according_to_pi(agent.local_state, 0.1) for agent in agents]
         env.step(actions)
     return env
     #     state = local_states
@@ -32,34 +32,35 @@ epsilon = 0.2
 # state_space = []  # poczotkowo nic [(x, y, z) for x in range(52) for y in range(52) for z in range(52)]
 best_score = 0
 epochs = range(450)
-scores = []
 for e in epochs:
-    env: Env = epoch()
-    score = sum([x for x in env.global_rewards])
-    scores.append(score)
-    # # old_score=score
+    env: Env = epoch()  # :1
     nets: List[Net] = []
-    G = get_G(env.global_rewards, gamma)
     for t in range(max_time - 1):
         A = env.A_storage[t + 1].tolist()
         x = env.x[t].tolist()
         nets.append(Net(A, x))
     for agent in agents:
-        agent.add_states_to_map_state()
-        agent.states_map.update_clusters()
-        print('done')
-        agent.print_used_states()
-        agent.add_returns(G)
-        agent.update_Q()
-        agent.update_pi()
-        agent.clear_epoch_local_data()
-    print(sum(env.global_rewards))
+        agent.add_states_to_map_state()  # :2
+        # print('2')
+        agent.states_map.update_clusters() # :3
+        # print('3')
+        G = get_G(env.global_rewards, gamma)
+        agent.add_returns(G) # :4
+        # print('4')
+        agent.update_Q() # :5
+        # print('5')
+        agent.update_pi() # :6
+        # print('6')
+        agent.clear_epoch_local_data() # :7
+        # print('7')
+        agent.states_map.activate_unused_clusters() #:8
+    print('rewards',sum(env.global_rewards))
 # plt.plot(scores)
 # plt.show()
-    #     print(agent)
-    #     for state in agent.epoch_local_state_storage:
-    #         print(state)
-    # print(agent.epoch_local_state_storage)
+#     print(agent)
+#     for state in agent.epoch_local_state_storage:
+#         print(state)
+# print(agent.epoch_local_state_storage)
 #     epoch_rewards = count_rewards(epoch_memory)
 # last_epoch_memory = epoch()  # last epoch
 # reward_sum = count_rewards(last_epoch_memory)

@@ -42,3 +42,17 @@ S2.append(to_array(LearningState(pre_cross_densities=(2, 0, 0), global_aggregate
 S2.append(to_array(LearningState(pre_cross_densities=(2, 0, 2), global_aggregated_densities=(1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.0, 1.0, 0.0), phase_index=0, phase_duration=0)))
 S2.append(to_array(LearningState(pre_cross_densities=(1, 2, 0), global_aggregated_densities=(1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.0, 1.0, 0.0), phase_index=0, phase_duration=0)))
 S2.append(to_array(LearningState(pre_cross_densities=(2, 2, 0), global_aggregated_densities=(1.0, 1.0, 2.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.0, 1.0, 0.0), phase_index=3, phase_duration=2)))
+
+
+
+S3=[]
+S3.append(LearningState(pre_cross_densities=(2, 2, 2), global_aggregated_densities=(1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0), phase_index=0, phase_duration=0))
+S3.append(LearningState(pre_cross_densities=(1, 2, 2), global_aggregated_densities=(0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0), phase_index=0, phase_duration=0))
+S3.append(LearningState(pre_cross_densities=(2, 4, 1), global_aggregated_densities=(0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0), phase_index=0, phase_duration=0))
+S3.append(LearningState(pre_cross_densities=(2, 4, 1), global_aggregated_densities=(0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0), phase_index=0, phase_duration=0))
+S3.append(LearningState(pre_cross_densities=(1, 2, 0), global_aggregated_densities=(0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0), phase_index=2, phase_duration=1))
+S3.append(LearningState(pre_cross_densities=(1, 2, 2), global_aggregated_densities=(1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 0.0, 1.0), phase_index=1, phase_duration=1))
+S3.append(LearningState(pre_cross_densities=(2, 0, 1), global_aggregated_densities=(1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 0.0, 1.0), phase_index=2, phase_duration=1))
+S3.append(LearningState(pre_cross_densities=(1, 2, 0), global_aggregated_densities=(1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 0.0, 1.0), phase_index=0, phase_duration=0))
+S3.append(LearningState(pre_cross_densities=(1, 1, 2), global_aggregated_densities=(1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0), phase_index=1, phase_duration=2))
+S3.append(LearningState(pre_cross_densities=(500, 500, 500), global_aggregated_densities=(23.0, 25.0, 436.0, 44.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0), phase_index=2, phase_duration=2))

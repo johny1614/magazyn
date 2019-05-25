@@ -11,11 +11,16 @@ from model.Agent import Agent
 from services.globals import Globals
 
 
+def empty_3_list():
+    return [[], [], []]
+
+
 @attr.s(auto_attribs=True)
 class Env:
     agents: List[Agent]
     A_storage = env_data_A_storage
     global_rewards: List[float] = attr.Factory(list)
+    local_awards: List[List[float]] = attr.Factory(empty_3_list)
     x = get_x()
 
     def __attrs_post_init__(self):
@@ -33,10 +38,18 @@ class Env:
             global_action_space = global_action_space + (localSpace,)
         return global_action_space
 
-    def append_global_rewards(self) -> float:
+    def append_global_rewards(self):
         t = self.t
         reward = self.x[t][29] + self.x[t][35] + self.x[t][32]
         self.global_rewards.append(reward)
+
+    def append_local_rewards(self):
+        # TODO
+        self.local_awards[0].append(0)
+        self.local_awards[1].append(0)
+        self.local_awards[2].append(0)
+
+
 
     @property
     def t(self):
@@ -56,6 +69,7 @@ class Env:
         self.__modify_A()
         self.__execute_phase()
         self.append_global_rewards()
+        self.append_local_rewards()
         # pretty_print_A(self.A)
         Globals().time += 1
         if self.t != 0 and self.t != max_time:  # state of 0 is initialized, the last one is not interesting us if  time runs out
