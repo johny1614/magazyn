@@ -1,0 +1,296 @@
+liczba stanow to 90
+czas to 0.14992165565490723
+liczba stanow to 90
+czas to 0.1279284954071045
+liczba stanow to 90
+czas to 0.16590452194213867
+rewards 1334.4438669774886
+liczba stanow to 180
+states_updated 17
+states_updated 9
+czas to 3.0473473072052
+liczba stanow to 180
+states_updated 17
+states_updated 9
+czas to 2.9882473945617676
+liczba stanow to 180
+states_updated 9
+czas to 2.069324254989624
+rewards 1600.7898061720434
+liczba stanow to 270
+states_updated 14
+czas to 2.9933013916015625
+liczba stanow to 270
+states_updated 25
+states_updated 18
+czas to 4.491420030593872
+liczba stanow to 270
+states_updated 27
+states_updated 14
+czas to 4.688323974609375
+rewards 1668.4853893304444
+liczba stanow to 360
+czas to 2.1407546997070312
+liczba stanow to 360
+czas to 2.1307601928710938
+liczba stanow to 360
+states_updated 31
+states_updated 33
+states_updated 23
+czas to 8.932863712310791
+rewards 1585.9065342776473
+liczba stanow to 450
+czas to 2.771392345428467
+liczba stanow to 450
+states_updated 31
+czas to 5.76169753074646
+liczba stanow to 450
+czas to 3.1032204627990723
+rewards 1603.2507153347083
+liczba stanow to 540
+czas to 3.529963493347168
+liczba stanow to 540
+czas to 3.593925952911377
+liczba stanow to 540
+czas to 3.712862968444824
+rewards 1606.832082941886
+liczba stanow to 630
+czas to 4.366508722305298
+liczba stanow to 630
+czas to 4.404491901397705
+liczba stanow to 630
+states_updated 35
+czas to 9.157747745513916
+rewards 1634.0554264021314
+liczba stanow to 720
+states_updated 41
+czas to 10.633918046951294
+liczba stanow to 720
+czas to 5.304957628250122
+liczba stanow to 720
+czas to 5.456883430480957
+rewards 1643.1685446082085
+liczba stanow to 810
+czas to 6.224420070648193
+liczba stanow to 810
+czas to 6.27440619468689
+liczba stanow to 810
+czas to 6.403327941894531
+rewards 1643.0159112305537
+liczba stanow to 900
+czas to 7.234833240509033
+liczba stanow to 900
+states_updated 49
+czas to 14.633607625961304
+liczba stanow to 900
+czas to 7.4787232875823975
+rewards 1561.8892597713364
+liczba stanow to 990
+czas to 8.230284690856934
+liczba stanow to 990
+czas to 8.441141128540039
+liczba stanow to 990
+states_updated 54
+czas to 17.348050832748413
+rewards 1660.2358320746034
+liczba stanow to 1080
+czas to 9.491556406021118
+liczba stanow to 1080
+czas to 9.58551573753357
+liczba stanow to 1080
+states_updated 55
+czas to 20.055485725402832
+rewards 1612.173956971907
+liczba stanow to 1170
+czas to 10.69986343383789
+liczba stanow to 1170
+czas to 11.039681673049927
+liczba stanow to 1170
+czas to 11.293527841567993
+rewards 1634.9116716358187
+liczba stanow to 1260
+czas to 12.320921182632446
+liczba stanow to 1260
+czas to 12.404898166656494
+liczba stanow to 1260
+czas to 12.603771686553955
+rewards 1592.3200629217233
+liczba stanow to 1350
+czas to 13.887053966522217
+liczba stanow to 1350
+czas to 13.748128175735474
+liczba stanow to 1350
+czas to 14.230825662612915
+rewards 1604.1578119417813
+liczba stanow to 1440
+czas to 15.499129295349121
+liczba stanow to 1440
+czas to 15.535085678100586
+liczba stanow to 1440
+czas to 15.781949043273926
+rewards 1647.2538363122226
+liczba stanow to 1530
+czas to 16.876334190368652
+liczba stanow to 1530
+czas to 16.78236198425293
+liczba stanow to 1530
+czas to 17.38104557991028
+rewards 1616.369925834701
+liczba stanow to 1620
+czas to 18.61930823326111
+liczba stanow to 1620
+czas to 18.337483167648315
+liczba stanow to 1620
+czas to 18.92216181755066
+rewards 1640.1248489847674
+liczba stanow to 1710
+czas to 20.306368112564087
+liczba stanow to 1710
+czas to 20.400288343429565
+liczba stanow to 1710
+czas to 20.425273656845093
+rewards 1568.9614975182992
+liczba stanow to 1800
+czas to 22.432130575180054
+liczba stanow to 1800
+czas to 21.8704571723938
+liczba stanow to 1800
+czas to 22.583048343658447
+rewards 1642.2262495420512
+liczba stanow to 1890
+czas to 24.228087902069092
+liczba stanow to 1890
+czas to 23.739386320114136
+liczba stanow to 1890
+czas to 24.458972692489624
+rewards 1612.1253043289842
+liczba stanow to 1980
+czas to 26.362889051437378
+liczba stanow to 1980
+czas to 25.901132822036743
+liczba stanow to 1980
+czas to 26.196958780288696
+rewards 1638.6627311010332
+liczba stanow to 2070
+states_updated 140
+czas to 57.998738050460815
+liczba stanow to 2070
+czas to 29.49507999420166
+liczba stanow to 2070
+czas to 28.86744451522827
+rewards 1623.419341572322
+liczba stanow to 2160
+czas to 31.01622462272644
+liczba stanow to 2160
+czas to 29.833889961242676
+liczba stanow to 2160
+czas to 30.997210025787354
+rewards 1596.0091241819937
+liczba stanow to 2250
+czas to 33.12001991271973
+liczba stanow to 2250
+czas to 32.76620388031006
+liczba stanow to 2250
+czas to 33.37485933303833
+rewards 1631.1688541473497
+liczba stanow to 2340
+czas to 35.54261660575867
+liczba stanow to 2340
+czas to 34.44723033905029
+liczba stanow to 2340
+czas to 35.770485639572144
+rewards 1654.075585427188
+liczba stanow to 2430
+czas to 38.51589822769165
+liczba stanow to 2430
+czas to 37.991212368011475
+liczba stanow to 2430
+czas to 37.89325571060181
+rewards 1633.222738751788
+liczba stanow to 2520
+czas to 40.34884548187256
+liczba stanow to 2520
+czas to 40.34185075759888
+liczba stanow to 2520
+czas to 40.31686592102051
+rewards 1594.1950398989843
+liczba stanow to 2610
+czas to 42.74748373031616
+liczba stanow to 2610
+czas to 43.05231428146362
+liczba stanow to 2610
+czas to 43.386131048202515
+rewards 1638.9464635841432
+liczba stanow to 2700
+czas to 45.600860834121704
+liczba stanow to 2700
+czas to 45.64382362365723
+liczba stanow to 2700
+czas to 45.54489302635193
+rewards 1606.7702008751578
+liczba stanow to 2790
+czas to 47.59671664237976
+liczba stanow to 2790
+czas to 48.84398818016052
+liczba stanow to 2790
+czas to 49.77545428276062
+rewards 1629.631176840686
+liczba stanow to 2880
+czas to 52.4808874130249
+liczba stanow to 2880
+czas to 54.48876142501831
+liczba stanow to 2880
+czas to 50.89680886268616
+rewards 1608.4327224714953
+liczba stanow to 2970
+czas to 53.05458641052246
+liczba stanow to 2970
+czas to 53.52830171585083
+liczba stanow to 2970
+czas to 53.77017569541931
+rewards 1595.8444958316861
+liczba stanow to 3060
+czas to 56.23573589324951
+liczba stanow to 3060
+czas to 56.598541259765625
+liczba stanow to 3060
+czas to 56.54956936836243
+rewards 1633.2382883048435
+liczba stanow to 3150
+czas to 58.792282581329346
+liczba stanow to 3150
+czas to 60.601258516311646
+liczba stanow to 3150
+czas to 59.37696051597595
+rewards 1620.7333451543132
+liczba stanow to 3240
+czas to 61.88049912452698
+liczba stanow to 3240
+czas to 62.32026481628418
+liczba stanow to 3240
+czas to 62.3452582359314
+rewards 1639.7906512851334
+liczba stanow to 3330
+czas to 64.9547610282898
+liczba stanow to 3330
+czas to 65.29057383537292
+liczba stanow to 3330
+czas to 65.75728869438171
+rewards 1564.3657002733426
+liczba stanow to 3420
+czas to 68.33880805969238
+liczba stanow to 3420
+czas to 68.07995629310608
+liczba stanow to 3420
+czas to 68.44574689865112
+rewards 1657.279248117395
+liczba stanow to 3510
+czas to 71.5229823589325
+liczba stanow to 3510
+czas to 71.48700714111328
+liczba stanow to 3510
+czas to 72.10365390777588
+rewards 1596.3318379789123
+liczba stanow to 3600
+czas to 74.77413535118103
+liczba stanow to 3600
