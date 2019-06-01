@@ -16,6 +16,8 @@ class BaseClass:
         self.time_b=0
         self.time_c=0
         self.time_d=0
+    def epsilon(self):
+        return 0.01
 
 
 class Globals(BaseClass, metaclass=Singleton):

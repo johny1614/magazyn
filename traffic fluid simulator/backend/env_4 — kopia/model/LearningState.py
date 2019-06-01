@@ -1,5 +1,6 @@
 from typing import Tuple
 import attr
+import numpy as np
 
 
 @attr.s(auto_attribs=True, cmp=False)
@@ -19,7 +20,8 @@ class LearningState:
 
     def __eq__(self, other):
         return self.__hash__() == other.__hash__()
-
+    def to_nd_array(self):
+        return np.array([self.to_array()])
     def to_array(self):
         array = []
         for den in self.pre_cross_densities:

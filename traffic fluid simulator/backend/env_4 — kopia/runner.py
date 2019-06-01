@@ -1,33 +1,81 @@
-from model.SaveData import SaveData
+import matplotlib.pyplot as plt
+# 2 odcinki na droge!
+
+from typing import List
+
 from Env import Env
-import random
-
 from env_data import max_time
-from services.jsonSaver import saveToJson
+from model.ExportData import ExportData
+from model.Net import Net
+from model.SmartAgent import SmartAgent
+from services.agentFactory import get_SmartAgents
+from services.globals import Globals
+from services.parser import get_G
 
+ActionInt=int
 
-def hash_(action):
-    return tuple([tuple(a) for a in action])
+def epoch():
+    Globals().time = 0
+    env = Env(agents)
+    for t in range(max_time):
+        actions: List[ActionInt] = [agent.get_action(agent.local_state) for agent in agents]
+        env.step(actions)
+    return env
 
-
-save_data = SaveData(learningEpochs=0, learningMethod='Random')
-env = Env()
-save_data.nets.append({'densities': tuple(env.x[0])})
-for time in range(max_time - 1):
-    global_action_space = env.get_global_action_space()
-    actions = [random.choice(local_action_space) for local_action_space in global_action_space]
-    if actions[0] == 'wait':
-        actions = ['wait'] * 3
-    elif time < 14:
-        actions = [1, 1, 1]
-    elif time >= 20 and actions[0] != 'wait':
-        actions = [3, 3, 3]
-    elif time >= 14 and actions[0] != 'wait':
-        actions = [2, 2, 2]
-    global_state, r = env.step(actions)
-    save_data.add_net(global_state)
-save_data.attach_lights(env.A_storage)
-saveToJson('net4', 'den1', save_data)
-# print(env.x[0])
-# env.pretty_print()
-# env.pretty_print_4()
+agents: List[SmartAgent] = get_SmartAgents()
+gamma = 0.8
+epsilon = 0.2
+best_score = 0
+epochs = range(450)
+for e in epochs:
+    env: Env = epoch()  # :1
+    print(env.cars_out)
+    for agent in env.agents:
+        agent.train()
+pass
+    # nets: List[Net] = []
+    # for t in range(max_time - 1):
+    #     A = env.A_storage[t + 1].tolist()
+    #     x = env.x[t].tolist()
+    #     nets.append(Net(A, x))
+    # for agent in agents:
+    #     agent.add_states_to_map_state()  # :2
+    #     # print('2')
+    #     agent.states_map.update_clusters() # :3
+    #     # print('3')
+    #     G = get_G(env.global_rewards, gamma)
+    #     agent.add_returns(G) # :4
+    #     # print('4')
+    #     agent.update_Q() # :5
+    #     # print('5')
+    #     agent.update_pi() # :6
+    #     # print('6')
+    #     agent.clear_epoch_local_data() # :7
+    #     # print('7')
+    #     agent.states_map.activate_unused_clusters() #:8
+    # print('rewards',sum(env.global_rewards))
+# plt.plot(scores)
+# plt.show()
+#     print(agent)
+#     for state in agent.epoch_local_state_storage:
+#         print(state)
+# print(agent.epoch_local_state_storage)
+#     epoch_rewards = count_rewards(epoch_memory)
+# last_epoch_memory = epoch()  # last epoch
+# reward_sum = count_rewards(last_epoch_memory)
+#
+# nets = []
+# for m in last_epoch_memory:
+#     nets.append({'densities': m['state'], 'lights': m['action']})
+# data = {
+#     'nets': nets,
+#     'rewards sum': reward_sum,
+#     'gamma': gamma,
+#     'learningEpochs': len(epochs),
+#     'learningMethod': 'Monte Carlo',
+#     # 'turns':env.turns
+# }
+# #
+# exportData = ExportData(learningMethod='Monte Carlo TODO', learningEpochs=0, nets=nets, netName='net4',
+#                         densityName='77')
+# exportData.saveToJson()
