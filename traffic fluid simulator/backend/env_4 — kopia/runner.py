@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 # 2 odcinki na droge!
 
 from typing import List
-
+from matplotlib import pyplot
 from Env import Env
 from env_data import max_time
 from model.ExportData import ExportData
@@ -26,56 +26,33 @@ agents: List[SmartAgent] = get_SmartAgents()
 gamma = 0.8
 epsilon = 0.2
 best_score = 0
+scores=[]
 epochs = range(450)
+our_memories = None
 for e in epochs:
     env: Env = epoch()  # :1
     print(env.cars_out)
+    scores.append(env.cars_out)
+    if env.cars_out > best_score:
+        best_score=env.cars_out
+        our_memories = env.global_memories
     for agent in env.agents:
         agent.train()
-pass
-    # nets: List[Net] = []
-    # for t in range(max_time - 1):
-    #     A = env.A_storage[t + 1].tolist()
-    #     x = env.x[t].tolist()
-    #     nets.append(Net(A, x))
-    # for agent in agents:
-    #     agent.add_states_to_map_state()  # :2
-    #     # print('2')
-    #     agent.states_map.update_clusters() # :3
-    #     # print('3')
-    #     G = get_G(env.global_rewards, gamma)
-    #     agent.add_returns(G) # :4
-    #     # print('4')
-    #     agent.update_Q() # :5
-    #     # print('5')
-    #     agent.update_pi() # :6
-    #     # print('6')
-    #     agent.clear_epoch_local_data() # :7
-    #     # print('7')
-    #     agent.states_map.activate_unused_clusters() #:8
-    # print('rewards',sum(env.global_rewards))
-# plt.plot(scores)
-# plt.show()
-#     print(agent)
-#     for state in agent.epoch_local_state_storage:
-#         print(state)
-# print(agent.epoch_local_state_storage)
-#     epoch_rewards = count_rewards(epoch_memory)
-# last_epoch_memory = epoch()  # last epoch
-# reward_sum = count_rewards(last_epoch_memory)
-#
-# nets = []
-# for m in last_epoch_memory:
-#     nets.append({'densities': m['state'], 'lights': m['action']})
+# for memory in env.global_memories:
+    # nets.append({'densities': m['state'], 'lights': m['action']})
 # data = {
-#     'nets': nets,
-#     'rewards sum': reward_sum,
+#     'nets': env.global_memories,
+#     'rewards sum': 70,
 #     'gamma': gamma,
 #     'learningEpochs': len(epochs),
 #     'learningMethod': 'Monte Carlo',
 #     # 'turns':env.turns
 # }
 # #
-# exportData = ExportData(learningMethod='Monte Carlo TODO', learningEpochs=0, nets=nets, netName='net4',
-#                         densityName='77')
-# exportData.saveToJson()
+pyplot.plot(scores)
+pyplot.show()
+
+
+exportData = ExportData(learningMethod='Monte Carlo TODO', learningEpochs=0, nets=our_memories, netName='net4',
+                        densityName='77')
+exportData.saveToJson()

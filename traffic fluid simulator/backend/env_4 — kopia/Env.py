@@ -7,6 +7,7 @@ from env_data import u, start_A, env_data_A_storage, max_time, get_x
 from model import GlobalState
 from model.Agent import Agent
 # trojkatne - 3 skrzyzowania, razem 6 drog
+from model.Net import Net
 from services.globals import Globals
 
 ActionInt = int
@@ -18,14 +19,14 @@ def empty_3_list():
 @attr.s(auto_attribs=True)
 class Env:
     agents: List[Agent]
-    A_storage = env_data_A_storage
     global_rewards: List[float] = attr.Factory(list)
     local_awards: List[List[float]] = attr.Factory(empty_3_list)
-    x = get_x()
-    A = start_A()
-    cars_out = 0
+    global_memories: List[Net] = attr.Factory(list)
 
     def __attrs_post_init__(self):
+        self.x = get_x()
+        self.A = start_A()
+        self.cars_out = 0
         self.__assign_local_states_to_agents()
 
     @property
@@ -46,6 +47,7 @@ class Env:
             for agent in self.agents:
                 agent.remember(self.x[self.t])
         self._count_cars_out()
+        self.remember_global_memory()
         Globals().time += 1
 
     def _execute_phase(self):
@@ -77,4 +79,6 @@ class Env:
         self.cars_out+=self.x[self.t][32]
         self.cars_out+=self.x[self.t][35]
 
-
+    def remember_global_memory(self):
+        net = Net(lights=self.A.tolist(),densities=self.x[self.t].tolist())
+        self.global_memories.append(net)
