@@ -12,6 +12,7 @@ from services.globals import Globals
 
 ActionInt = int
 
+
 def empty_3_list():
     return [[], [], []]
 
@@ -42,10 +43,12 @@ class Env:
         self._pass_actions_to_agents(actions)
         self._modify_A()
         self._execute_phase()
-        if self.t != 0 and self.t != max_time:  # state of 0 is initialized, the last one is not interesting us if  time runs out
+        if True or self.t != 0 and self.t != max_time:  # state of 0 is initialized, the last one is not interesting us if  time runs out
             # self.__assign_local_states_to_agents()
             for agent in self.agents:
                 agent.remember(self.x[self.t])
+            rewards = sum([agent.memories[-1].reward for agent in self.agents])
+            self.global_rewards.append(rewards)
         self._count_cars_out()
         self.remember_global_memory()
         Globals().time += 1
@@ -63,6 +66,22 @@ class Env:
     def _modify_A(self):
         for agent in self.agents:
             self.A = agent.modify_A(self.A)
+        if self.t > 0:
+            for i in range(len(self.x[self.t - 1])):
+                density = self.x[self.t - 1][i]
+                if density > 10:
+                    for j in range(len(self.A[:][i])):
+                        if j!=i and self.A[j][i]*density>10:
+                            A_cell = self.A[j][i]
+                            nev_value = 10 / density
+                            change = A_cell - nev_value
+                            self.A[i][i] += change
+                            A_cell = nev_value
+                            # print('cell',A_cell)
+                            # print('i',i)
+                            # print('j',j)
+                            self.A[j][i] = A_cell
+                            # print('a',self.A[j][i])
 
     def __include_source_cars(self):
         t = self.t
@@ -75,10 +94,10 @@ class Env:
             agent.assign_local_state(self.x[self.t])
 
     def _count_cars_out(self):
-        self.cars_out+=self.x[self.t][29]
-        self.cars_out+=self.x[self.t][32]
-        self.cars_out+=self.x[self.t][35]
+        self.cars_out += self.x[self.t][29]
+        self.cars_out += self.x[self.t][32]
+        self.cars_out += self.x[self.t][35]
 
     def remember_global_memory(self):
-        net = Net(lights=self.A.tolist(),densities=self.x[self.t].tolist())
+        net = Net(lights=self.A.tolist(), densities=self.x[self.t].tolist(),rewards=self.global_rewards[self.t])
         self.global_memories.append(net)

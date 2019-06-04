@@ -19,23 +19,33 @@ def epoch():
     env = Env(agents)
     for t in range(max_time):
         actions: List[ActionInt] = [agent.get_action(agent.local_state) for agent in agents]
+        actions=[1,1,1]
         env.step(actions)
+    Globals().epochs_done+=1
     return env
 
 agents: List[SmartAgent] = get_SmartAgents()
-gamma = 0.8
-epsilon = 0.2
 best_score = 0
 scores=[]
-epochs = range(450)
+epochs = range(5)
 our_memories = None
+global_rewards=[]
+best_reward=-100
 for e in epochs:
     env: Env = epoch()  # :1
-    print(env.cars_out)
-    scores.append(env.cars_out)
-    if env.cars_out > best_score:
-        best_score=env.cars_out
+    # print(env.cars_out)
+    rewards = sum(env.global_rewards)
+    global_rewards.append(rewards)
+    if rewards > best_reward:
+        best_reward = rewards
         our_memories = env.global_memories
+        best_score = env.cars_out
+    # global_rewards.append(sum(env.global_rewards))
+    # scores.append(env.cars_out)
+    print(env.cars_out)
+    # if env.cars_out > best_score:
+    #     best_score=env.cars_out
+    #     our_memories = env.global_memories
     for agent in env.agents:
         agent.train()
 # for memory in env.global_memories:
@@ -49,9 +59,10 @@ for e in epochs:
 #     # 'turns':env.turns
 # }
 # #
-pyplot.plot(scores)
+pyplot.plot(global_rewards)
 pyplot.show()
 
+print('score to',best_score)
 
 exportData = ExportData(learningMethod='Monte Carlo TODO', learningEpochs=0, nets=our_memories, netName='net4',
                         densityName='77')

@@ -1,12 +1,7 @@
-class Dog:
-    def __init__(self):
-        self.name = 'azor'
-        self.age = 34
-
-    def __hash__(self):
-        return hash((self.age, self.name))
 
 
-dog1 = Dog()
-dog2 = Dog()
-pass
+mylist = [1,2,3,4,5]
+for i, item in enumerate(mylist):
+    mylist[i]='huj xd'
+
+print(mylist)

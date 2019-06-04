@@ -27,6 +27,7 @@ def state_map():
 @attr.s
 class SmartAgent(Agent):
     memories: List[Memory] = attr.ib(factory=list)
+    single_epoch_memory: List[Memory] = attr.ib(factory=list)
 
     def __attrs_post_init__(self):
         self.model = self._build_model()
@@ -48,17 +49,19 @@ class SmartAgent(Agent):
 
         # return random.choice(self.local_action_space)
 
-    def _build_model(self, learning_rate=0.01):
+    def _build_model(self):
         # neural net to approximate Q-value function:
         model = Sequential()
         model.add(Dense(24, input_dim=17, activation='relu'))  # 1st hidden layer; states as input
         model.add(Dense(24, activation='relu'))  # 2nd hidden layer
         model.add(Dense(4, activation='linear'))  # 2 actions, so 2 output neurons: 0 and 1 (L/R)
         model.compile(loss='mse',
-                      optimizer=Adam(lr=learning_rate))
+                      optimizer=Adam(lr=Globals().learning_rate))
         return model
 
-    def train(self, batch_size=50, gamma=0.8, ):
+    def train(self):
+        gamma = Globals().gamma
+        batch_size = Globals().batch_size
         minibatch = random.sample(self.memories, batch_size)
         for memory in minibatch:
             state = memory.state.to_nd_array()
@@ -67,7 +70,8 @@ class SmartAgent(Agent):
                       np.amax(self.model.predict(new_state)))  # (maximum target Q based on future action a')
             actual_result_net = self.model.predict(state)
             actual_result_net[0][memory.action] = target
-            pass
+            self.model.fit(state, actual_result_net, epochs=Globals().epochs_learn, verbose=0)
+        self.single_epoch_memory=[]
 
     def remember(self, densities):
         state = self.local_state
@@ -77,6 +81,7 @@ class SmartAgent(Agent):
         reward = self.count_reward(state, new_state)
         memory = Memory(state=state, action=action, new_state=new_state, reward=reward)
         self.memories.append(memory)
+        self.single_epoch_memory.append(memory)
 
     def count_reward(self, state, new_state):
         return new_state.pre_cross_densities[2] - state.pre_cross_densities[2]

@@ -10,14 +10,18 @@ class Singleton(type):
 class BaseClass:
     def __init__(self):
         self.time = 0
+        self.epochs_done = 0
         self.state_repeats = 0
-        self.new_states=0
-        self.time_a=0
-        self.time_b=0
-        self.time_c=0
-        self.time_d=0
+        self.new_states = 0
+        self.epochs_learn = 10
+        self.gamma = 0.8
+        self.learning_rate = 0.001
+        self.batch_size = 50
+
     def epsilon(self):
-        return 0.01
+        min_epsilon = 0.01
+        epsilon_decay = 0.995
+        return min_epsilon + epsilon_decay ** self.epochs_done
 
 
 class Globals(BaseClass, metaclass=Singleton):

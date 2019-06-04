@@ -1,5 +1,6 @@
 from typing import Any, List, Dict, Tuple
 import attr
+import random
 from env_data import sections_of_roads
 from model.LearningState import LearningState
 from model.Phase import PhaseInt
@@ -37,40 +38,40 @@ class Agent:
         # if self.actual_phase == 0:
         #     return A
         actual_moves = self.moves[self.actual_phase]
+        print(f'phase {self.actual_phase} i jego moves: {actual_moves}')
         for move in actual_moves:
             A[move] = self.curve_densities[move]
             fromSection = move[1]
             A[fromSection][fromSection] -= A[move]
+            if move == (9, 2):
+                print(f'no i kurwa zmienilbym! {A[move]}')
+        # A[9, 2] = 2
         return A
 
     def pass_action(self, action: ActionInt):
+        # print(f'actual_phase:{self.actual_phase} pending_phase:{self.pending_phase}, action:{self.action}, phase_duration:{self.phase_duration}, orange:{self.orange_phase_duration}')
+        if (action not in self.local_action_space):
+            print(f'action not in local action space! Instead of {action}')
+            action = random.choice(self.local_action_space)
+            print(f'new action {action}')
+            # self.action = 0
         self.action = action
-        # if (action not in self.local_action_space):
-        #     print('action not in local action space!')
-        #     print('action space is ', self.local_action_space)
-        #     print('recieved action', action)
-        #     print('phejs duration', self.phase_duration)
         if action == 0:  # wait
             self.phase_duration += 1
             if self.actual_phase == 0 and self.phase_duration == self.orange_phase_duration:
                 self.actual_phase = self.pending_phase
             else:
-                # print('B')
+                print('B')
                 pass
         elif action != 0:
-            if (action == self.actual_phase):
-                # print('C')
+            if action == self.actual_phase:
                 self.phase_duration += 1
             else:
                 self.pending_phase = action
                 self.phase_duration = 0
                 self.actual_phase = 0
-                if (self.phase_duration >= self.orange_phase_duration):
-                    self.actual_phase = self.pending_phase
-                    # print('E')
-                # else:
-                # print('D')
-
+            if self.phase_duration >= self.orange_phase_duration:
+                self.actual_phase = self.pending_phase
 
     def assign_local_state(self, densities):
         pre_cross_densities = ()
