@@ -11,3 +11,4 @@ class Memory:
     action: ActionInt
     reward: float
     new_state: LearningState
+    times: any

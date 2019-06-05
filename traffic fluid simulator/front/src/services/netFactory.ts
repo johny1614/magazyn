@@ -1,6 +1,6 @@
-import {Line, ILine} from 'src/model/line';
-import {Net} from 'src/model/net';
-import {SingleLight} from 'src/model/light';
+import { Line, ILine } from 'src/model/line';
+import { Net } from 'src/model/net';
+import { SingleLight } from 'src/model/light';
 
 export class NetFactory {
   static getLine(line: ILine): Line {
@@ -67,13 +67,30 @@ export class NetFactory {
   }
 
   static attachLights(nets, dynamicData) {
-    for (let i = 0; i < nets.length; i++) {
-      for (let line_index = 0; line_index < nets[i].lines.length; line_index++) {
-        const line: Line = nets[i].lines[line_index];
+    console.log('nets',nets);
+    for (let net_index = 0; net_index < nets.length; net_index++) {
+      console.log('net_index',net_index);
+      console.log('A',dynamicData.nets[net_index].lights)
+      for (let line_index = 0; line_index < nets[net_index].lines.length; line_index++) {
+        const line: Line = nets[net_index].lines[line_index];
         if (line.lights) {
-          NetFactory.lightTheSignalization(nets, i, line_index, dynamicData.nets[i]);
+          NetFactory.lightTheSignalization(nets, net_index, line_index, dynamicData.nets[net_index]);
         }
       }
+    }
+  }
+
+  static attachRewards(nets, dynamicData) {
+    console.log(dynamicData)
+    for (let i = 0; i < nets.length; i++) {
+      let net = nets[i]
+      net.rewards = dynamicData.nets[i].rewards
+    }
+  }
+  static attachActions(nets,dynamicData){
+    for (let i = 0; i < nets.length; i++) {
+      let net = nets[i]
+      net.actions = dynamicData.nets[i].actions
     }
   }
 

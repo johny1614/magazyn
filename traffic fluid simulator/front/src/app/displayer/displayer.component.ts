@@ -1,7 +1,7 @@
-import {Component, OnInit, Input} from '@angular/core';
-import {CanvasService} from '../canvas.service';
-import {Net} from 'src/model/net';
-import {GlobalService} from 'src/services/global.service';
+import { Component, OnInit, Input } from '@angular/core';
+import { CanvasService } from '../canvas.service';
+import { Net } from 'src/model/net';
+import { GlobalService } from 'src/services/global.service';
 
 @Component({
   selector: 'app-displayer',
@@ -23,8 +23,17 @@ export class DisplayerComponent implements OnInit {
     });
   }
 
-  logA() {
-    console.log('A', this.nets[this.timeDisplay].A);
+  logNets() {
+    console.log(this.nets);
+
   }
+
+  roundedRewards() {
+    let rewards = []
+    this.nets[this.timeDisplay] && this.nets[this.timeDisplay].rewards && 
+    this.nets[this.timeDisplay].rewards.forEach(reward => rewards.push(Math.round(reward)));
+    return rewards;
+  }
+
 
 }

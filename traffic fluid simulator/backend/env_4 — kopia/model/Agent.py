@@ -35,25 +35,21 @@ class Agent:
         return wait_action
 
     def modify_A(self, A):
-        # if self.actual_phase == 0:
-        #     return A
         actual_moves = self.moves[self.actual_phase]
-        print(f'phase {self.actual_phase} i jego moves: {actual_moves}')
+        # print(f'agent:{self.index} phase {self.actual_phase} i jego moves: {actual_moves}')
         for move in actual_moves:
             A[move] = self.curve_densities[move]
             fromSection = move[1]
             A[fromSection][fromSection] -= A[move]
-            if move == (9, 2):
-                print(f'no i kurwa zmienilbym! {A[move]}')
-        # A[9, 2] = 2
+
         return A
 
     def pass_action(self, action: ActionInt):
         # print(f'actual_phase:{self.actual_phase} pending_phase:{self.pending_phase}, action:{self.action}, phase_duration:{self.phase_duration}, orange:{self.orange_phase_duration}')
         if (action not in self.local_action_space):
-            print(f'action not in local action space! Instead of {action}')
+            # print(f'action not in local action space! Instead of {action}')
             action = random.choice(self.local_action_space)
-            print(f'new action {action}')
+            # print(f'new action {action}')
             # self.action = 0
         self.action = action
         if action == 0:  # wait
@@ -70,7 +66,7 @@ class Agent:
                 self.pending_phase = action
                 self.phase_duration = 0
                 self.actual_phase = 0
-            if self.phase_duration >= self.orange_phase_duration:
+            if self.phase_duration > self.orange_phase_duration:
                 self.actual_phase = self.pending_phase
 
     def assign_local_state(self, densities):

@@ -1,9 +1,12 @@
 import matplotlib.pyplot as plt
 # 2 odcinki na droge!
+import os
 
+os.environ["PATH"] += os.pathsep + 'C:/Graphviz/bin'
 from typing import List
 from matplotlib import pyplot
 from Env import Env
+from Utils import nested_sum
 from env_data import max_time
 from model.ExportData import ExportData
 from model.Net import Net
@@ -12,58 +15,88 @@ from services.agentFactory import get_SmartAgents
 from services.globals import Globals
 from services.parser import get_G
 
-ActionInt=int
+ActionInt = int
+
+
+def ez_stategy():
+    if t > 1:
+        actions = []
+        for agent in env.agents:
+            best_action = -2
+            best_action_value = -20
+            for i in range(len(agent.local_phase_sections)):
+                section = agent.local_phase_sections[i]
+                action_value = env.x[t - 1][section]
+                # print('a value', action_value)
+                if action_value > best_action_value:
+                    best_action_value = action_value
+                    for action_index in range(len(agent.moves)):
+                        moves = agent.moves[action_index]
+                        for move in moves:
+                            if move[1] == section:
+                                best_action = action_index
+            # print(f'akcja{best_action} value:{best_action_value}')
+            actions.append(best_action)
+    # print(f'{t}:{actions}')
+
 
 def epoch():
     Globals().time = 0
     env = Env(agents)
     for t in range(max_time):
-        actions: List[ActionInt] = [agent.get_action(agent.local_state) for agent in agents]
-        actions=[1,1,1]
+        # actions: List[ActionInt] = [agent.get_action(agent.local_state) for agent in agents]
+        actions: List[ActionInt] = [1,1,1]
+        if t >= 30:
+            actions = [2,2,3]
+        if t==31:
+            print('31 kurwa!')
+        print(f'time:{t}')
         env.step(actions)
-    Globals().epochs_done+=1
+        # print('x', env.x[t])
+    Globals().epochs_done += 1
     return env
+
 
 agents: List[SmartAgent] = get_SmartAgents()
 best_score = 0
-scores=[]
-epochs = range(5)
+scores = []
+epochs = range(1)
 our_memories = None
-global_rewards=[]
-best_reward=-100
+last_epoch = None
+global_rewards = []
+best_reward = -100
 for e in epochs:
+    if e == epochs[-1]:
+        print('last EPOCH +==============================')
     env: Env = epoch()  # :1
     # print(env.cars_out)
-    rewards = sum(env.global_rewards)
+    rewards = nested_sum(env.global_rewards)
     global_rewards.append(rewards)
     if rewards > best_reward:
         best_reward = rewards
         our_memories = env.global_memories
         best_score = env.cars_out
-    # global_rewards.append(sum(env.global_rewards))
-    # scores.append(env.cars_out)
-    print(env.cars_out)
-    # if env.cars_out > best_score:
-    #     best_score=env.cars_out
-    #     our_memories = env.global_memories
+        our_env = env
+    scores.append(env.cars_out)
+    print(f'Epizod:{e} Cars_out:{round(env.cars_out)} reward:{round(rewards)} epsilon:{Globals().epsilon()}')
+    if env.cars_out > best_score:
+        best_score = env.cars_out
+        our_memories = env.global_memories
     for agent in env.agents:
         agent.train()
-# for memory in env.global_memories:
-    # nets.append({'densities': m['state'], 'lights': m['action']})
-# data = {
-#     'nets': env.global_memories,
-#     'rewards sum': 70,
-#     'gamma': gamma,
-#     'learningEpochs': len(epochs),
-#     'learningMethod': 'Monte Carlo',
-#     # 'turns':env.turns
-# }
-# #
+    if e == epochs[-1]:
+        last_epoch = env.global_memories
+
 pyplot.plot(global_rewards)
 pyplot.show()
 
-print('score to',best_score)
+print('score to', best_score)
 
 exportData = ExportData(learningMethod='Monte Carlo TODO', learningEpochs=0, nets=our_memories, netName='net4',
                         densityName='77')
 exportData.saveToJson()
+exportData = ExportData(learningMethod='Monte Carlo TODO', learningEpochs=0, nets=our_memories, netName='net4',
+                        densityName='last_epoch')
+exportData.saveToJson()
+pass
+

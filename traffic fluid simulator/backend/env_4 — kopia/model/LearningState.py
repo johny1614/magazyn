@@ -20,8 +20,13 @@ class LearningState:
 
     def __eq__(self, other):
         return self.__hash__() == other.__hash__()
+
+    def to_learn_nd_array(self):
+        return np.array([[self.pre_cross_densities[0], self.phase_index, self.phase_duration]])
+
     def to_nd_array(self):
         return np.array([self.to_array()])
+
     def to_array(self):
         array = []
         for den in self.pre_cross_densities:
@@ -31,9 +36,8 @@ class LearningState:
         array.append(self.phase_index)
         array.append(self.phase_duration)
         return array
+
     @staticmethod
     def from_array(arr):
-        return LearningState(pre_cross_densities=tuple(arr[0:3]),global_aggregated_densities=tuple(arr[3:15]),phase_index=arr[15],phase_duration=arr[16])
-
-
-
+        return LearningState(pre_cross_densities=tuple(arr[0:3]), global_aggregated_densities=tuple(arr[3:15]),
+                             phase_index=arr[15], phase_duration=arr[16])

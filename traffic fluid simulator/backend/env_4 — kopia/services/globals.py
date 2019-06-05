@@ -15,13 +15,14 @@ class BaseClass:
         self.new_states = 0
         self.epochs_learn = 10
         self.gamma = 0.8
-        self.learning_rate = 0.001
+        self.learning_rate = 0.01
         self.batch_size = 50
 
     def epsilon(self):
         min_epsilon = 0.01
-        epsilon_decay = 0.995
-        return min_epsilon + epsilon_decay ** self.epochs_done
+        epsilon_decay = 0.99
+        epsilon = min_epsilon + epsilon_decay ** self.epochs_done
+        return epsilon
 
 
 class Globals(BaseClass, metaclass=Singleton):

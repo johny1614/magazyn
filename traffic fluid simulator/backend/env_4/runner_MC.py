@@ -31,30 +31,30 @@ gamma = 0.8
 epsilon = 0.2
 # state_space = []  # poczotkowo nic [(x, y, z) for x in range(52) for y in range(52) for z in range(52)]
 best_score = 0
-epochs = range(450)ge
-for e in epochs:
-    env: Env = epoch()  # :1
-    nets: List[Net] = []
-    for t in range(max_time - 1):
-        A = env.A_storage[t + 1].tolist()
-        x = env.x[t].tolist()
-        nets.append(Net(A, x))
-    for agent in agents:
-        agent.add_states_to_map_state()  # :2
-        # print('2')
-        agent.states_map.update_clusters() # :3
-        # print('3')
-        G = get_G(env.global_rewards, gamma)
-        agent.add_returns(G) # :4
-        # print('4')
-        agent.update_Q() # :5
-        # print('5')
-        agent.update_pi() # :6
-        # print('6')
-        agent.clear_epoch_local_data() # :7
-        # print('7')
-        agent.states_map.activate_unused_clusters() #:8
-    print('rewards',sum(env.global_rewards))
+epochs = range(10)
+# for e in epochs:
+#     env: Env = epoch()  # :1
+#     nets: List[Net] = []
+#     for t in range(max_time - 1):
+#         A = env.A_storage[t + 1].tolist()
+#         x = env.x[t].tolist()
+#         nets.append(Net(A, x))
+#     for agent in agents:
+#         agent.add_states_to_map_state()  # :2
+#         # print('2')
+#         agent.states_map.update_clusters() # :3
+#         # print('3')
+#         G = get_G(env.global_rewards, gamma)
+#         agent.add_returns(G) # :4
+#         # print('4')
+#         agent.update_Q() # :5
+#         # print('5')
+#         agent.update_pi() # :6
+#         # print('6')
+#         agent.clear_epoch_local_data() # :7
+#         # print('7')
+#         agent.states_map.activate_unused_clusters() #:8
+#     print('rewards',sum(env.global_rewards))
 # plt.plot(scores)
 # plt.show()
 #     print(agent)
@@ -62,20 +62,20 @@ for e in epochs:
 #         print(state)
 # print(agent.epoch_local_state_storage)
 #     epoch_rewards = count_rewards(epoch_memory)
-# last_epoch_memory = epoch()  # last epoch
+last_epoch_memory = epoch()  # last epoch
 # reward_sum = count_rewards(last_epoch_memory)
-#
-# nets = []
-# for m in last_epoch_memory:
-#     nets.append({'densities': m['state'], 'lights': m['action']})
-# data = {
-#     'nets': nets,
-#     'rewards sum': reward_sum,
-#     'gamma': gamma,
-#     'learningEpochs': len(epochs),
-#     'learningMethod': 'Monte Carlo',
-#     # 'turns':env.turns
-# }
+reward_sum=50
+nets = []
+for m in last_epoch_memory:
+    nets.append({'densities': m['state'], 'lights': m['action']})
+data = {
+    'nets': nets,
+    'rewards sum': reward_sum,
+    'gamma': gamma,
+    'learningEpochs': len(epochs),
+    'learningMethod': 'Monte Carlo',
+    # 'turns':env.turns
+}
 #
 exportData = ExportData(learningMethod='Monte Carlo TODO', learningEpochs=0, nets=nets, netName='net4',
                         densityName='77')

@@ -17,6 +17,9 @@ export class NetComponent implements AfterViewInit {
     }
   }
   private _net: Net;
+  get net(): Net{
+    return this._net;
+  }
   ctx: CanvasRenderingContext2D;
   mousePosition;
   constructor(private cs: CanvasService) { }
