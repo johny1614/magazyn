@@ -74,10 +74,13 @@ class Env:
         for agent in self.agents:
             actual_moves = agent.moves[agent.actual_phase]
             for move in actual_moves:
+                A_cell=self.A[Globals().time - 1][move]
                 section_from_index = move[1]
-                value = self.A[Globals().time - 1][move] * self.x[self.t - 1][section_from_index]
+                previous_density = self.x[self.t - 1][section_from_index]
+                value =  A_cell * previous_density
                 flow = {'agent_index': agent.index, 'old_time': old_time, 'new_time': new_time, 'move': move,
                         'value': value}
+                print(flow)
                 self.last_flows.append(flow)
         for flow in self.last_flows:
             self.flow_memories.append(flow)
@@ -98,22 +101,19 @@ class Env:
         t = self.t
         for agent in self.agents:
             self.A[t] = agent.modify_A(self.A[t])
-        if self.t > 0:
-            for i in range(len(self.x[self.t - 1])):
-                density = self.x[self.t - 1][i]
-                if density > 10:
-                    for j in range(len(self.A[t][:][i])):
-                        if j != i and self.A[t][j][i] * density > 10:
-                            A_cell = self.A[t][j][i]
-                            nev_value = 10 / density
-                            change = A_cell - nev_value
-                            self.A[t][i][i] += change
-                            A_cell = nev_value
-                            # print('cell',A_cell)
-                            # print('i',i)
-                            # print('j',j)
-                            self.A[j][i] = A_cell
-                            # print('a',self.A[j][i])
+        # if self.t > 0:
+        #     for i in range(len(self.x[self.t - 1])):
+        #         density = self.x[self.t - 1][i]
+        #         if density > 10:
+        #             for j in range(len(self.A[t][:][i])):
+        #                 if j != i and self.A[t][j][i] * density > 10:
+        #                     A_cell = self.A[t][j][i]
+        #                     nev_value = 10 / density
+        #                     change = A_cell - nev_value
+        #                     self.A[t][i][i] += change
+        #                     A_cell = nev_value
+        #                     self.A[j][i] = A_cell
+
 
     def __include_source_cars(self):
         t = self.t

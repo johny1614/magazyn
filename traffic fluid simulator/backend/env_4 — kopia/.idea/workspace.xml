@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3bc62bd-0327-4a90-b067-71b6ea844ee3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4/runner_MC.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4/runner_MC.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/app/net/net.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/net/net.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/app/net/net.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/net/net.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net4_77.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net4_77.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net4_last_epoch.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net4_last_epoch.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +17,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/Agent.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1377">
+              <caret line="81" column="65" selection-start-line="81" selection-start-column="65" selection-end-line="81" selection-end-column="65" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Net.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -32,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Env.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="157" lean-forward="true" selection-start-line="157" selection-end-line="157" />
+            <state relative-caret-position="221">
+              <caret line="86" column="12" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="12" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -45,22 +54,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/runner.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="96" column="17" selection-start-line="96" selection-start-column="17" selection-end-line="96" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/ExportData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="23" column="73" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
+            <state relative-caret-position="162">
+              <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -71,7 +68,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-102" />
+            <state relative-caret-position="-133" />
           </provider>
         </entry>
       </file>
@@ -86,12 +83,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>remember_global_memory</find>
-      <find>_execute_phase</find>
-      <find>self.x[t]</find>
-      <find>get_x</find>
-      <find>self.x[t</find>
-      <find>ExportData</find>
       <find>to_array</find>
       <find>memory.new_state</find>
       <find>memories</find>
@@ -100,8 +91,6 @@
       <find>rememb</find>
       <find>flow_memories</find>
       <find>save</find>
-      <find>save_motions</find>
-      <find>last_flows</find>
       <find>count_rewards</find>
       <find>single_epoch_memory</find>
       <find>_count_cars_out</find>
@@ -116,6 +105,14 @@
       <find>po akcji jest</find>
       <find>shift</find>
       <find>update_global_memory_lights</find>
+      <find>30</find>
+      <find>count_</find>
+      <find>cou</find>
+      <find>rewards</find>
+      <find>last_flows</find>
+      <find>save_motions</find>
+      <find>old_time':</find>
+      <find>45.</find>
     </findStrings>
     <replaceStrings>
       <replace>actual_phase</replace>
@@ -176,12 +173,12 @@
         <option value="$PROJECT_DIR$/res.txt" />
         <option value="$PROJECT_DIR$/runner.py" />
         <option value="$PROJECT_DIR$/model/Net.py" />
-        <option value="$PROJECT_DIR$/Env.py" />
         <option value="$PROJECT_DIR$/model/ExportData.py" />
+        <option value="$PROJECT_DIR$/Env.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -379,10 +376,10 @@
     <option name="totallyTimeSpent" value="8000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20495258" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21260683" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -393,8 +390,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.45837724" visible="true" weight="0.3488624" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.54162276" side_tool="true" visible="true" weight="0.3488624" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.45833334" visible="true" weight="0.3522976" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5416667" side_tool="true" visible="true" weight="0.3522976" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.5438787" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32936078" />
       <window_info anchor="bottom" id="Mypy" order="12" />
@@ -870,16 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/Agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="36" column="16" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/pyt36/Lib/json/encoder.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
@@ -921,6 +908,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res.txt">
+      <provider editor-type-id="LargeFileEditor">
+        <state relative-caret-position="383">
+          <caret line="108" column="26" lean-forward="true" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-133" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="81" column="65" selection-start-line="81" selection-start-column="65" selection-end-line="81" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/Net.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -931,20 +938,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res.txt">
-      <provider editor-type-id="LargeFileEditor">
-        <state relative-caret-position="383">
-          <caret line="108" column="26" lean-forward="true" selection-start-line="108" selection-start-column="26" selection-end-line="108" selection-end-column="26" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/model/ExportData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102" />
+        <state relative-caret-position="162">
+          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/runner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="96" column="17" selection-start-line="96" selection-start-column="17" selection-end-line="96" selection-end-column="17" />
+        <state relative-caret-position="239">
+          <caret line="30" column="31" lean-forward="true" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -953,20 +960,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Env.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="157" lean-forward="true" selection-start-line="157" selection-end-line="157" />
+        <state relative-caret-position="221">
+          <caret line="86" column="12" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="12" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/ExportData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="23" column="73" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
