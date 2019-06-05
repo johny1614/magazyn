@@ -64,7 +64,7 @@ class Env:
         rewards = [0] * len(self.agents)
         for flow in self.last_flows:
             rewards[flow['agent_index']] += flow['value']
-        print(f'wyliczone rewardy {rewards}')
+        # print(f'wyliczone rewardy {rewards}')
         return rewards
 
     def save_motions(self):
@@ -80,7 +80,7 @@ class Env:
                 value =  A_cell * previous_density
                 flow = {'agent_index': agent.index, 'old_time': old_time, 'new_time': new_time, 'move': move,
                         'value': value}
-                print(flow)
+                # print(flow)
                 self.last_flows.append(flow)
         for flow in self.last_flows:
             self.flow_memories.append(flow)

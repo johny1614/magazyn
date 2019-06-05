@@ -45,14 +45,14 @@ class SmartAgent(Agent):
             for a in sorted_actions:
                 if a in self.local_action_space:
                     return action
-        return action
+        return int(action) # sometimes jump to int64
 
         # return random.choice(self.local_action_space)
 
     def _build_model(self):
         # neural net to approximate Q-value function:
         model = Sequential()
-        model.add(Dense(6, input_dim=3, activation='relu'))  # 1st hidden layer; states as input
+        model.add(Dense(12, input_dim=5, activation='relu'))  # 1st hidden layer; states as input
         model.add(BatchNormalization())
         model.add(Dense(10, activation='relu'))  # 2nd hidden layer
         model.add(Dense(4, activation='linear'))  # 2 actions, so 2 output neurons: 0 and 1 (L/R)

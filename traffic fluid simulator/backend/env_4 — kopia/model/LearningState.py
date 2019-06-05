@@ -21,8 +21,35 @@ class LearningState:
     def __eq__(self, other):
         return self.__hash__() == other.__hash__()
 
+    def den_group(self,den):
+        den_group=None
+        if den ==0:
+            den_group=0
+        elif 0 < den < 5:
+            den_group=1
+        elif 0 < den <= 5:
+            den_group=2
+        elif 5 < den <= 10:
+            den_group = 3
+        elif 10 < den <= 20:
+            den_group = 4
+        elif 20 < den <= 40:
+            den_group = 5
+        elif 40 < den <= 50:
+            den_group = 6
+        elif 50 < den <= 90:
+            den_group = 7
+        elif 90 < den <= 200:
+            den_group = 8
+        return den_group
+
+
     def to_learn_nd_array(self):
-        return np.array([[self.pre_cross_densities[0], self.phase_index, self.phase_duration]])
+        den_group0 = self.den_group(self.pre_cross_densities[0])
+        den_group1 = self.den_group(self.pre_cross_densities[0])
+        den_group2 = self.den_group(self.pre_cross_densities[0])
+
+        return np.array([[den_group0,den_group1,den_group2, self.phase_index, self.phase_duration]])
 
     def to_nd_array(self):
         return np.array([self.to_array()])

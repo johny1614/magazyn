@@ -32,11 +32,14 @@ class ExportData:
     def saveToJson(self):
         # self.shift_lights()
         dicSelf = attr.asdict(self)
-        jsonData = json.dumps(dicSelf)
-        with open('../../front/src/assets/densities/' + self.netName + '_' + self.densityName + '.json',
-                  'w') as outfile:
-            outfile.write(str(jsonData))
-            outfile.close()
+        try:
+            jsonData = json.dumps(dicSelf)
+            with open('../../front/src/assets/densities/' + self.netName + '_' + self.densityName + '.json',
+                      'w') as outfile:
+                outfile.write(str(jsonData))
+                outfile.close()
+        except:
+            print('error',dicSelf)
 
 
 def shift(lista, n):

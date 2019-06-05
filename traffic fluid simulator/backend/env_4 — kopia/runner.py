@@ -44,13 +44,13 @@ def epoch():
     Globals().time = 0
     env = Env(agents)
     for t in range(max_time):
-        # actions: List[ActionInt] = [agent.get_action(agent.local_state) for agent in agents]
-        actions: List[ActionInt] = [1,1,1]
-        if t >= 30:
-            actions = [2,2,3]
-        if t==31:
-            print('31 kurwa!')
-        print(f'time:{t}')
+        actions: List[ActionInt] = [agent.get_action(agent.local_state) for agent in agents]
+        # actions: List[ActionInt] = [1,1,1]
+        # if t >= 30:
+        #     actions = [2,2,3]
+        # if t==31:
+            # print('31 kurwa!')
+        # print(f'time:{t}')
         env.step(actions)
         # print('x', env.x[t])
     Globals().epochs_done += 1
@@ -60,7 +60,7 @@ def epoch():
 agents: List[SmartAgent] = get_SmartAgents()
 best_score = 0
 scores = []
-epochs = range(1)
+epochs = range(400)
 our_memories = None
 last_epoch = None
 global_rewards = []
