@@ -66,7 +66,6 @@ class Env:
         rewards = [0] * len(self.agents)
         for flow in self.last_flows:
             rewards[flow['agent_index']] += flow['value']
-        # print(f'wyliczone rewardy {rewards}')
         return rewards
 
     def save_motions(self):
@@ -125,6 +124,7 @@ class Env:
 
     def __assign_local_states_to_agents(self):
         for agent in self.agents:
+            print('t',self.t)
             agent.assign_local_state(self.x[self.t])
 
     def _count_cars_out(self):
