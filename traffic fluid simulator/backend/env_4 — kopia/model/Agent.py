@@ -66,7 +66,7 @@ class Agent:
                 self.pending_phase = action
                 self.phase_duration = 0
                 self.actual_phase = 0
-            if self.phase_duration > self.orange_phase_duration:
+            if self.phase_duration >= self.orange_phase_duration:
                 self.actual_phase = self.pending_phase
 
     def assign_local_state(self, densities):

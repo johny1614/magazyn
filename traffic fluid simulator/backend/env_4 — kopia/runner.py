@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 # 2 odcinki na droge!
 import os
-
+import random
 os.environ["PATH"] += os.pathsep + 'C:/Graphviz/bin'
 from typing import List
 from matplotlib import pyplot
@@ -60,14 +60,13 @@ def epoch():
 agents: List[SmartAgent] = get_SmartAgents()
 best_score = 0
 scores = []
-epochs = range(400)
+epochs = range(800)
 our_memories = None
 last_epoch = None
 global_rewards = []
 best_reward = -100
+session_rewards=[]
 for e in epochs:
-    if e == epochs[-1]:
-        print('last EPOCH +==============================')
     env: Env = epoch()  # :1
     # print(env.cars_out)
     rewards = nested_sum(env.global_rewards)
@@ -77,6 +76,7 @@ for e in epochs:
         our_memories = env.global_memories
         best_score = env.cars_out
         our_env = env
+    session_rewards.append(rewards)
     scores.append(env.cars_out)
     print(f'Epizod:{e} Cars_out:{round(env.cars_out)} reward:{round(rewards)} epsilon:{Globals().epsilon()}')
     if env.cars_out > best_score:
@@ -86,7 +86,7 @@ for e in epochs:
         agent.train()
     if e == epochs[-1]:
         last_epoch = env.global_memories
-
+print('srednia rewardow', sum(session_rewards)/len(session_rewards))
 pyplot.plot(global_rewards)
 pyplot.show()
 

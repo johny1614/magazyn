@@ -52,9 +52,11 @@ class SmartAgent(Agent):
     def _build_model(self):
         # neural net to approximate Q-value function:
         model = Sequential()
-        model.add(Dense(12, input_dim=5, activation='relu'))  # 1st hidden layer; states as input
+
+        model.add(Dense(Globals().l1, input_dim=5, activation='relu'))  # 1st hidden layer; states as input
         model.add(BatchNormalization())
-        model.add(Dense(10, activation='relu'))  # 2nd hidden layer
+        model.add(Dense(Globals().l2, activation='relu'))  # 2nd hidden layer
+        model.add(Dense(Globals().l3, activation='relu'))  # 2nd hidden layer
         model.add(Dense(4, activation='linear'))  # 2 actions, so 2 output neurons: 0 and 1 (L/R)
         model.compile(loss='mse',
                       optimizer=Adam(lr=Globals().learning_rate))
@@ -66,6 +68,7 @@ class SmartAgent(Agent):
         minibatch = random.sample(self.memories, batch_size)
         for memory in minibatch:
             state = memory.state.to_learn_nd_array()
+            print(state)
             new_state = memory.new_state.to_learn_nd_array()
             target = (memory.reward + gamma *  # (target) = reward + (discount rate gamma) *
                       np.amax(self.model.predict(new_state)))  # (maximum target Q based on future action a')

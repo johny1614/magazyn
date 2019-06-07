@@ -17,10 +17,13 @@ class BaseClass:
         self.gamma = 0.8
         self.learning_rate = 0.005
         self.batch_size = 50
+        self.l1=8
+        self.l2=168
+        self.l3=54
 
     def epsilon(self):
         min_epsilon = 0.01
-        epsilon_decay = 0.995
+        epsilon_decay = 0.997
         epsilon = min_epsilon + epsilon_decay ** self.epochs_done
         return epsilon
 

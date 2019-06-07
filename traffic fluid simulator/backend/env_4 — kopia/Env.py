@@ -3,6 +3,7 @@ from typing import List, Tuple
 import attr
 import numpy as np
 
+import env_data
 from env_data import u, start_A, env_data_A_storage, max_time, get_x
 from model import GlobalState
 from model.Agent import Agent
@@ -30,6 +31,7 @@ class Env:
     global_memories: List[Net] = attr.Factory(list)
     flow_memories: List = attr.Factory(list)
     last_flows: List = attr.Factory(list)
+    u = env_data.u
 
     def __attrs_post_init__(self):
         # self.x = get_x()
@@ -117,9 +119,9 @@ class Env:
 
     def __include_source_cars(self):
         t = self.t
-        self.x[t][0] += u[t - 1][0]
-        self.x[t][3] += u[t - 1][1]
-        self.x[t][6] += u[t - 1][1]
+        self.x[t][0] += self.u[t - 1][0]
+        self.x[t][3] += self.u[t - 1][1]
+        self.x[t][6] += self.u[t - 1][1]
 
     def __assign_local_states_to_agents(self):
         for agent in self.agents:
