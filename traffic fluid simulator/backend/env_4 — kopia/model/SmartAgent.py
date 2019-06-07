@@ -44,7 +44,7 @@ class SmartAgent(Agent):
             sorted_actions = np.argsort(-act_values[0])
             for a in sorted_actions:
                 if a in self.local_action_space:
-                    return action
+                    return int(a)
         return int(action) # sometimes jump to int64
 
         # return random.choice(self.local_action_space)
@@ -65,16 +65,23 @@ class SmartAgent(Agent):
     def train(self):
         gamma = Globals().gamma
         batch_size = Globals().batch_size
-        minibatch = random.sample(self.memories, batch_size)
+        minibatch = self.memories[-90:]
+        # minibatch = self.memories
+        # minibatch = random.sample(self.memories, batch_size)
+        i=0
+        x_batch=[]
+        y_batch=[]
         for memory in minibatch:
             state = memory.state.to_learn_nd_array()
-            print(state)
             new_state = memory.new_state.to_learn_nd_array()
+            y_target = self.model.predict(state)
             target = (memory.reward + gamma *  # (target) = reward + (discount rate gamma) *
                       np.amax(self.model.predict(new_state)))  # (maximum target Q based on future action a')
-            actual_result_net = self.model.predict(state)
-            actual_result_net[0][memory.action] = target
-
+            y_target[0][memory.action] = target
+            x_batch.append(state[0])
+            y_batch.append(y_target[0])
+            i+=1
+        self.model.fit(np.array(x_batch),np.array(y_batch),batch_size=len(x_batch),verbose=0)
 
     def remember(self, densities,reward):
         state = self.local_state

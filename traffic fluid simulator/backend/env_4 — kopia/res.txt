@@ -1,0 +1,1001 @@
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 3
+action ogarniana 3
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 3
+action ogarniana 3
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 3
+action ogarniana 3
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 2
+action ogarniana 2
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 2
+action ogarniana 2
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 2
+action ogarniana 2
+e
+action dana 1
+action ogarniana 1
+e
+action dana 1
+action ogarniana 1
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 2
+action ogarniana 2
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 3
+action ogarniana 3
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 2
+action ogarniana 2
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+e
+action dana 1
+action ogarniana 1
+e
+action dana 1
+action ogarniana 1
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 3
+action ogarniana 3
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+e
+action dana 3
+action ogarniana 3
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 2
+action ogarniana 2
+e
+action dana 1
+action ogarniana 1
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 2
+action ogarniana 2
+e
+action dana 1
+action ogarniana 1
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 2
+action ogarniana 2
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+e
+action dana 3
+action ogarniana 3
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 3
+action ogarniana 3
+e
+action dana 3
+action ogarniana 3
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 3
+action ogarniana 3
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 2
+action ogarniana 2
+e
+action dana 1
+action ogarniana 1
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 2
+action ogarniana 2
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 2
+action ogarniana 2
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 2
+action ogarniana 2
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 2
+action ogarniana 2
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 2
+action ogarniana 2
+e
+action dana 2
+action ogarniana 2
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 3
+action ogarniana 3
+e
+action dana 2
+action ogarniana 2
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 3
+action ogarniana 3
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 2
+action ogarniana 2
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 2
+action ogarniana 2
+e
+action dana 1
+action ogarniana 1
+e
+action dana 3
+action ogarniana 3
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 3
+action ogarniana 3
+e
+action dana 1
+action ogarniana 1
+e
+action dana 1
+action ogarniana 1
+e
+action dana 3
+action ogarniana 3
+e
+action dana 1
+action ogarniana 1
+e
+action dana 1
+action ogarniana 1
+e
+action dana 3
+action ogarniana 3
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 2
+action ogarniana 2
+e
+action dana 3
+action ogarniana 3
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 2
+action ogarniana 2
+e
+action dana 1
+action ogarniana 1
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 3
+action ogarniana 3
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 2
+action ogarniana 2
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 2
+action ogarniana 2
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 1
+action ogarniana 1
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 2
+action ogarniana 2
+b
+e
+action dana 3
+action ogarniana 3
+b
+e
+action dana 1
+action ogarniana 1
+b
+e
+action dana 2
+action ogarniana 2
+e
+Epizod:0 Cars_out:1683.0 reward:5879.0 epsilon:1.007
+done

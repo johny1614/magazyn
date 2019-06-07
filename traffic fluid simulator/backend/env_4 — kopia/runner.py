@@ -60,7 +60,7 @@ def epoch():
 agents: List[SmartAgent] = get_SmartAgents()
 best_score = 0
 scores = []
-epochs = range(800)
+epochs = range(2000)
 our_memories = None
 last_epoch = None
 global_rewards = []
@@ -82,6 +82,9 @@ for e in epochs:
     if env.cars_out > best_score:
         best_score = env.cars_out
         our_memories = env.global_memories
+    exportData = ExportData(learningMethod='Monte Carlo TODO', learningEpochs=0, nets=our_memories, netName='net4',
+                            densityName='cross')
+    exportData.saveToJson()
     for agent in env.agents:
         agent.train()
     if e == epochs[-1]:

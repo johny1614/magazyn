@@ -124,7 +124,6 @@ class Env:
 
     def __assign_local_states_to_agents(self):
         for agent in self.agents:
-            print('t',self.t)
             agent.assign_local_state(self.x[self.t])
 
     def _count_cars_out(self):

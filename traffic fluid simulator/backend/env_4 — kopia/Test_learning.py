@@ -2,6 +2,8 @@ import random
 import unittest
 from typing import List
 
+import numpy as np
+
 import env_data
 from Env import Env, ActionInt
 from env_data import max_time
@@ -21,10 +23,11 @@ def get_agents_env():
 class Testing(unittest.TestCase):
     def test_learn_no_1_pass_action_1_1_1_long_time_then_2_2_2(self):
         # u - wplywaja co chwile 2 pojazdy wszedzie
-        # caly czasz dajemy akcje [1,1,1]
+        # caly czas dajemy akcje [1,1,1]
+        # w momencie 60 dajemy akcje [2,2,2]
         # Przechodza wszystkie pojazdy w time stepie
         # orange_phase_duration = 0 tak samo jak phase_duration
-        # TESTUJEMY: rewardy, zmiana faz, zmiana A
+        # TESTUJEMY: czy SmartAgenci sie ucza na podstawie poprawnych nagrod i stanow
         max_time = 90
         agents = get_SmartAgents()
         for agent in agents:
@@ -36,13 +39,32 @@ class Testing(unittest.TestCase):
             actions = [1,1,1] if t<60 else [2,2,2]
             env.step(actions)
             print(f't:{t} {env.global_rewards[t]}')
-        self.assertTrue(env.global_rewards[60][0]>30)  # 30.28 to reward
-        self.assertTrue(env.global_rewards[60][1]>110) # 116.8 to reward
-        self.assertTrue(env.global_rewards[60][2]>110) # 116.8 to reward
+            if t < 60:
+                self.assertEqual([agent.actual_phase for agent in agents],[1,1,1])
+            if t>=60:
+                self.assertEqual([agent.actual_phase for agent in agents],[2,2,2])
+        print(agents[0].memories)
+        self.assertEqual(agents[0].memories[60].action,2)
+        self.assertAlmostEqual(agents[0].memories[60].reward, 30.28, 1)
+
+        # Moment 60
+        real_state = agents[0].memories[60].state.to_learn_nd_array()
+        expected_state = np.array([[1,4,1,1,59]]) # densities are 2.0,28.88,0.18 so groups are 1,5,1
+        np.testing.assert_equal(real_state, expected_state)
+
+        # Moment 61
+        real_state = agents[0].memories[61].state.to_learn_nd_array()
+        expected_state = np.array([[1,1,1,2,0]]) # densities are 2.0,0.6,0.18 so groups are 1,5,1
+        np.testing.assert_equal(real_state, expected_state)
+
+        Globals().batch_size=90
+        for agent in env.agents:
+            agent.train()
+
 
         exportData = ExportData(learningMethod='Monte Carlo TODO', learningEpochs=0, nets=env.global_memories,
                                 netName='net4',
-                                densityName='test_no_2')
+                                densityName='test_learn_no_2')
         exportData.saveToJson()
         # if 0 <= t <= 2:
         #     self.assertEqual(env.global_rewards[t],[0,0,0]) # nic nie przeplywa jeszcze w ogole

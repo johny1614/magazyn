@@ -19,8 +19,8 @@ class Agent:
     local_phase_sections: List[int]
     curve_densities: Dict[Tuple[int, int], int]
     local_state: LearningState = None
-    phase_duration: int = 10
-    orange_phase_duration: int = 1
+    phase_duration: int = 0
+    orange_phase_duration: int = 0
     pending_phase: PhaseInt = None
     rewards: List[float] = []
     actual_phase = 0
@@ -44,21 +44,47 @@ class Agent:
 
         return A
 
-    def pass_action(self, action: ActionInt):
+    def pass_action(self,action: ActionInt):
+        self.action=action
+        if action not in self.local_action_space:
+            print(f'uwagaAAAAAAAAAAAAAAAAAAA akcja {action} nie jest w local_action_space')
+        if action == 0:
+            if self.actual_phase==0:
+                self.phase_duration+=1
+            else:
+                self.actual_phase=0
+                self.phase_duration=0
+            if self.phase_duration>=self.orange_phase_duration:
+                self.actual_phase=self.pending_phase
+                self.phase_duration=0
+        if action != 0:
+            if action==self.actual_phase:
+                self.phase_duration+=1
+            else:
+                self.phase_duration=0
+                self.pending_phase=action
+            if self.phase_duration>=self.orange_phase_duration:
+                self.actual_phase=self.pending_phase
+            else:
+                self.actual_phase=0
+
+
+
+    def pass_action_old(self, action: ActionInt):
+        print('action dana',action)
         # print(f'actual_phase:{self.actual_phase} pending_phase:{self.pending_phase}, action:{self.action}, phase_duration:{self.phase_duration}, orange:{self.orange_phase_duration}')
         if (action not in self.local_action_space):
             # print(f'action not in local action space! Instead of {action}')
             action = random.choice(self.local_action_space)
             # print(f'new action {action}')
             # self.action = 0
-        self.action = action
+        print('action ogarniana',action)
         if action == 0:  # wait
             self.phase_duration += 1
-            if self.actual_phase == 0 and self.phase_duration == self.orange_phase_duration:
+            print('a')
+            if self.actual_phase == 0 and self.phase_duration >= self.orange_phase_duration:
+                self.pending_phase = self.pending_phase if self.pending_phase else action
                 self.actual_phase = self.pending_phase
-            else:
-                print('B')
-                pass
         elif action != 0:
             if action == self.actual_phase:
                 self.phase_duration += 1
@@ -66,8 +92,12 @@ class Agent:
                 self.pending_phase = action
                 self.phase_duration = 0
                 self.actual_phase = 0
+                print('b')
             if self.phase_duration >= self.orange_phase_duration:
                 self.actual_phase = self.pending_phase
+                print('e')
+        if self.actual_phase==0:
+            print(f'jest faza 0 u agenta {self.index} w chwili {Globals().time}')
 
     def assign_local_state(self, densities):
         pre_cross_densities = ()
