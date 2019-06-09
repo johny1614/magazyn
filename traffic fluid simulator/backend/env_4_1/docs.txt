@@ -1,0 +1,3 @@
+
+Maksymalnie moze wyjechac 10 pojazdow w danym kierunku (czyli 20 w obu).
+
