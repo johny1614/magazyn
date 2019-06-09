@@ -23,8 +23,6 @@ class ExportData:
             if isinstance(self.nets[net_index].lights, ndarray):
                 self.nets[net_index].lights = self.nets[net_index].lights.tolist()
 
-        print('done')
-
     # def shift_lights(self):
     #     for i in range(len(self.nets))[:-1]:
     #         self.nets[i].lights = self.nets[i + 1].lights

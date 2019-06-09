@@ -14,16 +14,18 @@ class BaseClass:
         self.state_repeats = 0
         self.new_states = 0
         self.epochs_learn = 10
-        self.gamma = 0.8
+        self.gamma = 0
         self.learning_rate = 0.005
         self.batch_size = 50
         self.l1=8
         self.l2=168
         self.l3=54
+        self.x_batch=[]
+        self.y_batch=[]
 
     def epsilon(self):
         min_epsilon = 0.01
-        epsilon_decay = 0.997
+        epsilon_decay = 0.99
         epsilon = min_epsilon + epsilon_decay ** self.epochs_done
         return epsilon
 

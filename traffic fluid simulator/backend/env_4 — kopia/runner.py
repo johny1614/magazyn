@@ -2,6 +2,9 @@ import matplotlib.pyplot as plt
 # 2 odcinki na droge!
 import os
 import random
+
+import numpy as np
+
 os.environ["PATH"] += os.pathsep + 'C:/Graphviz/bin'
 from typing import List
 from matplotlib import pyplot
@@ -45,7 +48,7 @@ def epoch():
     env = Env(agents)
     for t in range(max_time):
         actions: List[ActionInt] = [agent.get_action(agent.local_state) for agent in agents]
-        # actions: List[ActionInt] = [1,1,1]
+        # actions: List[ActionInt] = [3,3,3]
         # if t >= 30:
         #     actions = [2,2,3]
         # if t==31:
@@ -60,13 +63,14 @@ def epoch():
 agents: List[SmartAgent] = get_SmartAgents()
 best_score = 0
 scores = []
-epochs = range(2000)
+epochs = range(1700)
 our_memories = None
 last_epoch = None
 global_rewards = []
 best_reward = -100
 session_rewards=[]
 for e in epochs:
+    # print('============================',e)
     env: Env = epoch()  # :1
     # print(env.cars_out)
     rewards = nested_sum(env.global_rewards)
@@ -103,3 +107,5 @@ exportData = ExportData(learningMethod='Monte Carlo TODO', learningEpochs=0, net
 exportData.saveToJson()
 pass
 
+# np.savetxt('x_batch.txt',Globals().x_batch,delimiter=',')
+# np.savetxt('y_batch.txt',Globals().y_batch,delimiter=',')

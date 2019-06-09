@@ -39,14 +39,18 @@ class LearningState:
             den_group = 6
         elif 90 < den <= 200:
             den_group = 7
+        else:
+            den_group = 8
         return den_group
 
     def to_learn_nd_array(self):
         den_group0 = self.den_group(self.pre_cross_densities[0])
         den_group1 = self.den_group(self.pre_cross_densities[1])
         den_group2 = self.den_group(self.pre_cross_densities[2])
-
-        return np.array([[den_group0, den_group1, den_group2, self.phase_index, self.phase_duration]])
+        if den_group0 is None or den_group1 is None or den_group2 is None:
+            pass
+        return np.array([[den_group0, den_group1, den_group2]])
+        # return np.array([[den_group0, den_group1, den_group2, self.phase_index, self.phase_duration]])
 
     def to_nd_array(self):
         return np.array([self.to_array()])
