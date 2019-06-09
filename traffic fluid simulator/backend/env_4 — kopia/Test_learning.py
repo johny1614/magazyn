@@ -38,7 +38,8 @@ class Testing(unittest.TestCase):
         for t in range(max_time):
             actions = [1,1,1] if t<60 else [2,2,2]
             env.step(actions)
-            print(f't:{t} {env.global_rewards[t]}')
+            print(t)
+            # print(f't:{t} {env.global_rewards[t]}')
             if t < 60:
                 self.assertEqual([agent.actual_phase for agent in agents],[1,1,1])
             if t>=60:
@@ -49,12 +50,12 @@ class Testing(unittest.TestCase):
 
         # Moment 60
         real_state = agents[0].memories[60].state.to_learn_nd_array()
-        expected_state = np.array([[1,4,1,1,59]]) # densities are 2.0,28.88,0.18 so groups are 1,5,1
+        expected_state = np.array([[1,4,1]]) # densities are 2.0,28.88,0.18 so groups are 1,4,1
         np.testing.assert_equal(real_state, expected_state)
 
         # Moment 61
         real_state = agents[0].memories[61].state.to_learn_nd_array()
-        expected_state = np.array([[1,1,1,2,0]]) # densities are 2.0,0.6,0.18 so groups are 1,5,1
+        expected_state = np.array([[1,1,1]]) # densities are 2.0,0.6,0.18 so groups are 1,5,1
         np.testing.assert_equal(real_state, expected_state)
 
         Globals().batch_size=90
