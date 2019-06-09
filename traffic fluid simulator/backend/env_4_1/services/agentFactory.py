@@ -1,9 +1,19 @@
 import random
 from typing import List
 
+from tensorflow.python.keras.models import load_model
+
 from model.LearningState import LearningState
 from model.SmartAgent import SmartAgent
 
+
+def get_LearnSmartAgents() -> List[SmartAgent]:
+    agents = get_SmartAgents()
+    for agent in agents:
+        file_name = 'agent' + str(agent.index) + '.h5'
+        model = load_model(file_name)
+        agent.model = model
+    return agents
 
 def get_SmartAgents() -> List[SmartAgent]:
     agents: SmartAgent = []

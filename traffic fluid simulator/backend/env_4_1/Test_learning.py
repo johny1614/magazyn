@@ -36,32 +36,28 @@ class Testing(unittest.TestCase):
         env = Env(agents)
         env.u = env_data.u_all_2
         for t in range(max_time):
-            actions = [1,1,1] if t<60 else [2,2,2]
+            actions = [1, 1, 1] if t < 60 else [2, 2, 2]
             env.step(actions)
-            print(t)
-            # print(f't:{t} {env.global_rewards[t]}')
             if t < 60:
-                self.assertEqual([agent.actual_phase for agent in agents],[1,1,1])
-            if t>=60:
-                self.assertEqual([agent.actual_phase for agent in agents],[2,2,2])
-        print(agents[0].memories)
-        self.assertEqual(agents[0].memories[60].action,2)
-        self.assertAlmostEqual(agents[0].memories[60].reward, 30.28, 1)
+                self.assertEqual([agent.actual_phase for agent in agents], [1, 1, 1])
+            if t >= 60:
+                self.assertEqual([agent.actual_phase for agent in agents], [2, 2, 2])
+        self.assertEqual(agents[0].memories[60].action, 2)
+        self.assertAlmostEqual(agents[0].memories[60].reward, 20.0, 0)
 
         # Moment 60
         real_state = agents[0].memories[60].state.to_learn_nd_array()
-        expected_state = np.array([[1,4,1]]) # densities are 2.0,28.88,0.18 so groups are 1,4,1
-        np.testing.assert_equal(real_state, expected_state)
+        expected_state = np.array([[1, 4, 1]])  # densities are 2.0,28.88,0.18 so groups are 1,5,1
+        np.testing.assert_almost_equal(real_state, expected_state, decimal=0)
 
         # Moment 61
         real_state = agents[0].memories[61].state.to_learn_nd_array()
-        expected_state = np.array([[1,1,1]]) # densities are 2.0,0.6,0.18 so groups are 1,5,1
-        np.testing.assert_equal(real_state, expected_state)
+        expected_state = np.array([[1, 3, 1]])  # densities are 2.6,10.8,0.3 so groups are 1,5,1
+        np.testing.assert_almost_equal(real_state, expected_state, decimal=0)
 
-        Globals().batch_size=90
+        Globals().batch_size = 90
         for agent in env.agents:
             agent.train()
-
 
         exportData = ExportData(learningMethod='Monte Carlo TODO', learningEpochs=0, nets=env.global_memories,
                                 netName='net4',

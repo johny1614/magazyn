@@ -4,7 +4,6 @@ import random
 from env_data import sections_of_roads
 from model.LearningState import LearningState
 from model.Phase import PhaseInt
-from services.densityGroups import getGroup
 import numpy as np
 
 from services.globals import Globals

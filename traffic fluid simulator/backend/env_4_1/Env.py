@@ -84,8 +84,6 @@ class Env:
                 # print(flow)
                 self.last_flows.append(flow)
         for flow in self.last_flows:
-            if old_time==60:
-                print('flow',self.last_flows)
             self.flow_memories.append(flow)
 
     def _execute_phase(self):
@@ -156,8 +154,6 @@ class Env:
         rewards = self.global_rewards[self.t - 1]
         densities = self.x[self.t - 1]
         lights = self.A[self.t-1]
-        if times.old_time==60:
-            print('e')
         net = Net(times=times, densities=densities,
                   rewards=rewards,
                   actions=actions,

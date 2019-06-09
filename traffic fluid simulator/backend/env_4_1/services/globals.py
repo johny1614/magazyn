@@ -22,11 +22,14 @@ class BaseClass:
         self.l3=54
         self.x_batch=[]
         self.y_batch=[]
+        self.max_epsilon=1
+        self.min_epsilon = 0.01
 
     def epsilon(self):
-        min_epsilon = 0.01
         epsilon_decay = 0.99
-        epsilon = min_epsilon + epsilon_decay ** self.epochs_done
+        epsilon = self.min_epsilon + epsilon_decay ** self.epochs_done
+        epsilon = epsilon if epsilon > self.min_epsilon else self.min_epsilon
+        epsilon = epsilon if epsilon < self.max_epsilon else self.max_epsilon
         return epsilon
 
 
