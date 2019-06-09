@@ -84,11 +84,15 @@ class Env:
                 # print(flow)
                 self.last_flows.append(flow)
         for flow in self.last_flows:
+            if old_time==60:
+                print('flow',self.last_flows)
             self.flow_memories.append(flow)
 
     def _execute_phase(self):
         t = self.t
         x_t = np.dot(self.A[t - 1], self.x[t - 1])
+        if t == 61:
+            print(self.A[t-1][12][5])
         self.x.append(x_t)
         # self.x = np.dot(self.A[t-1], self.x[t - 1])
         self.__include_source_cars()
@@ -102,18 +106,19 @@ class Env:
         t = self.t
         for agent in self.agents:
             self.A[t] = agent.modify_A(self.A[t])
-        # if self.t > 0:
-        #     for i in range(len(self.x[self.t - 1])):
-        #         density = self.x[self.t - 1][i]
-        #         if density > 10:
-        #             for j in range(len(self.A[t][:][i])):
-        #                 if j != i and self.A[t][j][i] * density > 10:
-        #                     A_cell = self.A[t][j][i]
-        #                     nev_value = 10 / density
-        #                     change = A_cell - nev_value
-        #                     self.A[t][i][i] += change
-        #                     A_cell = nev_value
-        #                     self.A[j][i] = A_cell
+        if self.t > 0:
+            for i in range(len(self.x[self.t - 1])):
+                density = self.x[self.t][i]
+                if density > 10:
+                    for j in range(len(self.A[t][:][i])):
+                        if j != i and self.A[t][j][i] * density > 10:
+                            A_cell = self.A[t][j][i]
+                            new_value = 10 / density
+                            change = A_cell - new_value
+                            self.A[t][i][i] += change
+                            A_cell = new_value
+                            self.A[t][j][i] = A_cell
+
 
 
     def __include_source_cars(self):
@@ -151,6 +156,8 @@ class Env:
         rewards = self.global_rewards[self.t - 1]
         densities = self.x[self.t - 1]
         lights = self.A[self.t-1]
+        if times.old_time==60:
+            print('e')
         net = Net(times=times, densities=densities,
                   rewards=rewards,
                   actions=actions,

@@ -67,18 +67,13 @@ class Testing(unittest.TestCase):
                 self.assertEqual([agent.actual_phase for agent in agents],[1,1,1])
             if t>=60:
                 self.assertEqual([agent.actual_phase for agent in agents],[2,2,2])
-            print(f't:{t} {env.global_rewards[t]}')
-        self.assertTrue(env.global_rewards[60][0] > 30)  # 30.28 to reward
-        self.assertTrue(env.global_rewards[60][1] > 110)  # 116.8 to reward
-        self.assertTrue(env.global_rewards[60][2] > 110)  # 116.8 to reward
 
-        self.assertEqual(env.A[59][27][17], 0.7)  # w chwili 59 do sekcji 27 przejezda z sekcji 17 dokladnie 0.7
-        self.assertEqual(env.A[60][27][17], 0.0)    # w chwili 60 do sekcji 27 przejezda z sekcji 17 dokladnie 0
-
-        self.assertEqual(env.A[59][15][8], 0)    # w chwili 59 do sekcji 15 przejezda z sekcji 8 dokladnie 0
-        self.assertEqual(env.A[60][15][8], 0.7)  # w chwili 60 do sekcji 15 przejezda z sekcji 8 dokladnie 0.7
-
-
+        self.assertAlmostEqual(env.x[60][20],28.9,places=1)
+        self.assertAlmostEqual(env.x[60][5],116,places = 1)
+        self.assertEqual(env.A[60][12][5]*env.x[60][5],10) # wiecej niz 10 by chcialo przejechac bo 116 stoi przed swiatlami zatem A jest bardzo male
+        self.assertEqual(env.A[60][12][5],10/env.x[60][5]) # wiecej niz 10 by chcialo przejechac bo 116 stoi przed swiatlami zatem A jest bardzo male
+        self.assertAlmostEqual(env.x[60][12],0.4,places=1)
+        self.assertAlmostEqual(env.x[61][12],10,places=1)
 
         exportData = ExportData(learningMethod='Monte Carlo TODO', learningEpochs=0, nets=env.global_memories,
                                 netName='net4',
