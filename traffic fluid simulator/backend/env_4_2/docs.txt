@@ -1,0 +1,6 @@
+
+Maksymalnie moze wyjechac 10 pojazdow w danym kierunku (czyli 20 w obu).
+Pomaranczowe swiatlo trwa 2 tury.
+Poczatkowo sa fazy [1,1,1] i mamy phase_duration = 2 zatem od razu mozna zmieniac swiatla.
+
+Wazne aby dawac akcje z action_space.
