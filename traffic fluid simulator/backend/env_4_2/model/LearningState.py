@@ -47,9 +47,10 @@ class LearningState:
         den_group0 = self.den_group(self.pre_cross_densities[0])
         den_group1 = self.den_group(self.pre_cross_densities[1])
         den_group2 = self.den_group(self.pre_cross_densities[2])
+        actual_phase = self.phase_index
         if den_group0 is None or den_group1 is None or den_group2 is None:
             pass
-        return np.array([[den_group0, den_group1, den_group2]])
+        return np.array([[den_group0, den_group1, den_group2, actual_phase]])
         # return np.array([[den_group0, den_group1, den_group2, self.phase_index, self.phase_duration]])
 
     def to_nd_array(self):

@@ -38,14 +38,15 @@ class SmartAgent(Agent):
 
     def get_action(self, state):
         if np.random.rand() <= Globals().epsilon():  # if acting randomly, take random action
+            # print(f'{self.local_action_space} bo phase_duration {self.phase_duration}')
             action =random.choice(self.local_action_space)
+            # TODO tutaj losuje zera!
+            # print(action)
             # if self.index == 0 and Globals().time == 14:
             #     print(f'stan {state.to_learn_nd_array()} i losowa akcja: {action} ')
             return action
         predictions = self.model.predict(
             state.to_learn_nd_array())  # if not acting randomly, predict reward value based on current state
-        if self.index == 0 and Globals().time == 14:
-            print(f'predictions {predictions[0]} dla stanu {state.to_learn_nd_array()}')
         action = np.argmax(predictions[0])
         if action not in self.local_action_space:
             sorted_actions = np.argsort(-predictions[0])
@@ -65,8 +66,8 @@ class SmartAgent(Agent):
         # model.add(Dense(Globals().l3, activation='relu'))  # 2nd hidden layer
         # model.add(Dense(4, activation='linear'))  # 2 actions, so 2 output neurons: 0 and 1 (L/R)
 
-        model.add(Dense(10, input_dim=3, activation='relu'))  # 1st hidden layer; states as input
-        model.add(Dense(20, activation='relu'))
+        model.add(Dense(12, input_dim=4, activation='relu'))  # 1st hidden layer; states as input
+        model.add(Dense(40, activation='relu'))
         model.add(Dense(4, activation='linear'))
         model.compile(loss='mse',
                       optimizer=Adam(lr=Globals().learning_rate))
@@ -75,9 +76,9 @@ class SmartAgent(Agent):
     def train(self):
         gamma = Globals().gamma
         batch_size = Globals().batch_size
-        minibatch = self.memories[-90:]
+        # minibatch = self.memories[-90:]
         # minibatch = self.memories
-        # minibatch = random.sample(self.memories, batch_size)
+        minibatch = random.sample(self.memories, batch_size)
         i = 0
         artificial_state = [6, 1, 1]
         artifical_y = [0, 0, 1000000, 0]
@@ -96,13 +97,13 @@ class SmartAgent(Agent):
             y_target[0][memory.action] = target
             x_batch.append(state[0])
             y_batch.append(y_target[0])
-            # if self.index == 0:
+            if self.index == 0:
             #     if 14 == i:
             #         # print(f'time {i} state {state} action {memory.action} reward {memory.reward} y_target {y_target[0]} dla akcji {y_target[0][memory.action]}')
-            #         private_x_batch = [state[0]]
-            #         private_y_batch = [y_target[0]]
-            #         Globals().x_batch.append(state[0])
-            #         Globals().y_batch.append(y_target[0])
+                private_x_batch = [state[0]]
+                private_y_batch = [y_target[0]]
+                Globals().x_batch.append(state[0])
+                Globals().y_batch.append(y_target[0])
             #         self.private_model.fit(np.array(Globals().x_batch),np.array(Globals().y_batch),epochs=100,validation_split=0.2,verbose=0)
             #         pred = self.private_model.predict(np.array([[6, 1, 1]]))
             #         print(pred)

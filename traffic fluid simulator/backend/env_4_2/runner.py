@@ -21,14 +21,20 @@ from services.parser import get_G
 ActionInt = int
 
 
+best_actions={
+    0: [1,1,1]
+}
+
 def epoch():
     Globals().time = 0
     env = Env(agents)
     for t in range(max_time):
         actions: List[ActionInt] = [agent.get_action(agent.local_state) for agent in agents]
+        # actions = best_actions[t] if len(best_actions)>=t else [0,0,0]
         env.step(actions)
     Globals().epochs_done += 1
     return env
+
 
 
 Globals().max_epsilon=0
@@ -39,5 +45,5 @@ print('rewards', rewards)
 print('carsout', env.cars_out)
 
 exportData = ExportData(learningMethod='Monte Carlo TODO', learningEpochs=0, nets=env.global_memories, netName='net4',
-                        densityName='last_epoch')
+                        densityName='my_best')
 exportData.saveToJson()

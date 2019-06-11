@@ -49,7 +49,10 @@ class Agent:
         #     if self.local_action_space == [0]:
         #         action = 0
         #         print('akcja zmieniona na 0')
+
         self.action = action
+        # if 60 <= Globals().time <= 63 and self.index == 0:
+            # print(f'Na poczatku chwili {Globals().time} jest faza {self.actual_phase} akcja to:{action} phase_duration:{self.phase_duration} pending_phase:{self.pending_phase}')
         if action == 0:
             if self.actual_phase == 0:
                 self.phase_duration += 1
@@ -60,7 +63,7 @@ class Agent:
             if self.phase_duration >= self.orange_phase_duration:
                 self.actual_phase = self.pending_phase
                 # print('b')
-                self.phase_duration = 0
+                # self.phase_duration = 0
         if action != 0:
             if action == self.actual_phase:
                 self.phase_duration += 1
@@ -68,13 +71,12 @@ class Agent:
                 if action == self.pending_phase:
                     self.phase_duration += 1
                 else:
-                    self.phase_duration=0
-                    self.pending_phase=action
+                    self.phase_duration = 0
+                    self.pending_phase = action
                 if self.phase_duration >= self.orange_phase_duration:
                     self.actual_phase = self.pending_phase
-        if self.index == 0:
-            print(f't:{Globals().time} akcja: {action} faza: {self.actual_phase} duration {self.phase_duration}')
-
+        # if 60 <= Globals().time <= 63 and self.index == 0:
+        #     print(f'Na koniec   chwili {Globals().time} jest faza {self.actual_phase} akcja to:{action} phase_duration:{self.phase_duration} pending_phase:{self.pending_phase}')
     def assign_local_state(self, densities):
         pre_cross_densities = ()
         for sec in self.local_phase_sections:

@@ -48,11 +48,12 @@ def epoch():
     env = Env(agents)
     for t in range(max_time):
         actions: List[ActionInt] = [agent.get_action(agent.local_state) for agent in agents]
+        # print(actions)
         # actions: List[ActionInt] = [3,3,3]
         # if t >= 30:
         #     actions = [2,2,3]
         # if t==31:
-            # print('31 kurwa!')
+        # print('31 kurwa!')
         # print(f'time:{t}')
         env.step(actions)
         # print('x', env.x[t])
@@ -68,7 +69,7 @@ our_memories = None
 last_epoch = None
 global_rewards = []
 best_reward = -100
-session_rewards=[]
+session_rewards = []
 for e in epochs:
     # print('============================',e)
     env: Env = epoch()  # :1
@@ -82,26 +83,31 @@ for e in epochs:
         our_env = env
     session_rewards.append(rewards)
     scores.append(env.cars_out)
-    print(f'Epizod:{e} Cars_out:{round(env.cars_out)} reward:{round(rewards)} epsilon:{Globals().epsilon()}')
+    # print(f'Epizod:{e} Cars_out:{round(env.cars_out)} reward:{round(rewards)} epsilon:{Globals().epsilon()}')
+    # pred = env.agents[0].model.predict(np.array([[7, 1, 1,1]]))
+    # print(pred)
     if env.cars_out > best_score:
         best_score = env.cars_out
         our_memories = env.global_memories
     # if i%10==0:
-    # exportData = ExportData(learningMethod='Monte Carlo TODO', learningEpochs=0, nets=our_memories, netName='net4',
-    #                         densityName='cross')
-    # exportData.saveToJson()
+    exportData = ExportData(learningMethod='Monte Carlo TODO', learningEpochs=0, nets=our_memories, netName='net4',
+                            densityName='cross')
+    exportData.saveToJson()
     for agent in env.agents:
         agent.train()
+    pred = env.agents[0].model.predict(np.array([[1,7,1,2]]))
+    print(pred)
+    env.agents[0].model.evaluate(np.array(Globals().x_batch), np.array(Globals().y_batch))
     if e == epochs[-1]:
         last_epoch = env.global_memories
-print('srednia rewardow', sum(session_rewards)/len(session_rewards))
+print('srednia rewardow', sum(session_rewards) / len(session_rewards))
 pyplot.plot(global_rewards)
 pyplot.show()
 
 print('score to', best_score)
 
 for agent in env.agents:
-    name = 'agent'+str(agent.index)+'.h5'
+    name = 'agent' + str(agent.index) + '.h5'
     agent.model.save(name)
 
 exportData = ExportData(learningMethod='Monte Carlo TODO', learningEpochs=0, nets=our_memories, netName='net4',

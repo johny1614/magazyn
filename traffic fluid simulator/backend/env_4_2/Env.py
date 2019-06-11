@@ -89,8 +89,6 @@ class Env:
     def _execute_phase(self):
         t = self.t
         x_t = np.dot(self.A[t - 1], self.x[t - 1])
-        if t == 61:
-            print(self.A[t-1][12][5])
         self.x.append(x_t)
         # self.x = np.dot(self.A[t-1], self.x[t - 1])
         self.__include_source_cars()
@@ -107,7 +105,8 @@ class Env:
         if self.t > 0:
             for i in range(len(self.x[self.t - 1])):
                 density = self.x[self.t][i]
-                if density > 10:
+                last_sections = [2,5,8,11,14,17,20,23,26,29,32,35]
+                if density > 10 and i in last_sections:
                     for j in range(len(self.A[t][:][i])):
                         if j != i and self.A[t][j][i] * density > 10:
                             A_cell = self.A[t][j][i]
