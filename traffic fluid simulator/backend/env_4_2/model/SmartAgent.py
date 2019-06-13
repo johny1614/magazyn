@@ -39,7 +39,7 @@ class SmartAgent(Agent):
     def get_action(self, state):
         if np.random.rand() <= Globals().epsilon():  # if acting randomly, take random action
             # print(f'{self.local_action_space} bo phase_duration {self.phase_duration}')
-            action =random.choice(self.local_action_space)
+            action = random.choice(self.local_action_space)
             # TODO tutaj losuje zera!
             # print(action)
             # if self.index == 0 and Globals().time == 14:
@@ -73,22 +73,38 @@ class SmartAgent(Agent):
                       optimizer=Adam(lr=Globals().learning_rate))
         return model
 
+    def save_batch(self):
+        gamma = Globals().gamma
+        batch_size = Globals().batch_size
+        # minibatch = random.sample(self.memories, batch_size)
+        x_batch = []
+        y_batch = []
+        for memory in self.memories:
+            state = memory.state.to_learn_nd_array()
+            new_state = memory.new_state.to_learn_nd_array()
+            y = self.model.predict(state)
+            future_actions_values_predictions = self.model.predict(new_state)
+            possible_actions = memory.state.possible_actions(self.orange_phase_duration)
+            best_possible_future_action_value = np.amax(
+                [future_actions_values_predictions[0][i] for i in possible_actions])
+            target_action = (memory.reward + gamma *  # (target) = reward + (discount rate gamma) *
+                             best_possible_future_action_value)  # (maximum target Q based on future action a')
+            # so this is the q value for action made in state leading to new_state
+            # counted basing on - reward and reward of future best action
+            y[0][memory.action] = target_action
+            x_batch.append(state[0])
+            y_batch.append(y[0])
+            if self.index == 0:
+                Globals().x_batch.append(state[0])
+                Globals().y_batch.append(y[0])
+
     def train(self):
         gamma = Globals().gamma
         batch_size = Globals().batch_size
-        # minibatch = self.memories[-90:]
-        # minibatch = self.memories
         minibatch = random.sample(self.memories, batch_size)
-        i = 0
-        artificial_state = [6, 1, 1]
-        artifical_y = [0, 0, 1000000, 0]
         x_batch = []
         y_batch = []
         for memory in minibatch:
-            # if self.index != 0:
-            #     if 14 != i:
-            #         i+=1
-            #         continue
             state = memory.state.to_learn_nd_array()
             new_state = memory.new_state.to_learn_nd_array()
             y_target = self.model.predict(state)
@@ -97,19 +113,7 @@ class SmartAgent(Agent):
             y_target[0][memory.action] = target
             x_batch.append(state[0])
             y_batch.append(y_target[0])
-            if self.index == 0:
-            #     if 14 == i:
-            #         # print(f'time {i} state {state} action {memory.action} reward {memory.reward} y_target {y_target[0]} dla akcji {y_target[0][memory.action]}')
-                private_x_batch = [state[0]]
-                private_y_batch = [y_target[0]]
-                Globals().x_batch.append(state[0])
-                Globals().y_batch.append(y_target[0])
-            #         self.private_model.fit(np.array(Globals().x_batch),np.array(Globals().y_batch),epochs=100,validation_split=0.2,verbose=0)
-            #         pred = self.private_model.predict(np.array([[6, 1, 1]]))
-            #         print(pred)
-            #         # self.private_model.evaluate(x=np.array(Globals().x_batch),y=np.array(Globals().y_batch))
-            # i += 1
-        self.model.fit(np.array(x_batch), np.array(y_batch),epochs=100, batch_size=len(x_batch), verbose=0)
+        self.model.fit(np.array(x_batch), np.array(y_batch), epochs=100, batch_size=len(x_batch), verbose=0)
 
     def remember(self, densities, reward):
         state = self.local_state
@@ -118,4 +122,12 @@ class SmartAgent(Agent):
         new_state = self.local_state
         times = {'old': Globals().time - 1, 'new': Globals().time}
         memory = Memory(state=state, action=action, new_state=new_state, reward=reward, times=times)
+        # if self.index ==0:
+        #     print(memory)
         self.memories.append(memory)
+
+    def reshape_rewards(self):
+        for i in range(len(self.memories) - 3):
+            memory = self.memories[i]
+            future_rewards = [mem.reward for mem in self.memories[i+1:i + 4]]  # 3 next rewards
+            memory.reward += sum(future_rewards)

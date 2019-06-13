@@ -49,10 +49,9 @@ class Agent:
         #     if self.local_action_space == [0]:
         #         action = 0
         #         print('akcja zmieniona na 0')
-
         self.action = action
         # if 60 <= Globals().time <= 63 and self.index == 0:
-            # print(f'Na poczatku chwili {Globals().time} jest faza {self.actual_phase} akcja to:{action} phase_duration:{self.phase_duration} pending_phase:{self.pending_phase}')
+        # print(f'Na poczatku chwili {Globals().time} jest faza {self.actual_phase} akcja to:{action} phase_duration:{self.phase_duration} pending_phase:{self.pending_phase}')
         if action == 0:
             if self.actual_phase == 0:
                 self.phase_duration += 1
@@ -73,10 +72,13 @@ class Agent:
                 else:
                     self.phase_duration = 0
                     self.pending_phase = action
+                    self.actual_phase = 0
                 if self.phase_duration >= self.orange_phase_duration:
                     self.actual_phase = self.pending_phase
+        self.local_state.actual_phase=self.actual_phase
         # if 60 <= Globals().time <= 63 and self.index == 0:
         #     print(f'Na koniec   chwili {Globals().time} jest faza {self.actual_phase} akcja to:{action} phase_duration:{self.phase_duration} pending_phase:{self.pending_phase}')
+
     def assign_local_state(self, densities):
         pre_cross_densities = ()
         for sec in self.local_phase_sections:
@@ -87,7 +89,7 @@ class Agent:
                 round(np.sum([densities[section] for section in road])),)
         local_state = LearningState(pre_cross_densities=pre_cross_densities,
                                     global_aggregated_densities=global_aggregated_densities,
-                                    phase_index=self.actual_phase,
+                                    actual_phase=self.actual_phase,
                                     phase_duration=self.phase_duration)
         self.local_state = local_state
 

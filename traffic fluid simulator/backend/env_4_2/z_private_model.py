@@ -7,9 +7,9 @@ from sklearn.model_selection import GridSearchCV
 from timeit import default_timer as timer
 
 def create_model(layers, activation):
-    global a
-    print('x',a)
-    a+=1
+    # global a
+    # print('x',a)
+    # a+=1
     model = Sequential()
     for i, nodes in enumerate(layers):
         if i == 0:
@@ -27,22 +27,32 @@ time=timer()
 x_batch=np.array(np.loadtxt('x_batch.txt',delimiter=','))
 y_batch=np.array(np.loadtxt('y_batch.txt',delimiter=','))
 
-model = KerasRegressor(build_fn=create_model, verbose=0)
-layers = [[30], [40, 20], [45, 30, 15],[30,10],[50,70],[20,30],[40,70]]
-activations = [sigmoid, relu]
-param_grid = dict(layers=layers, activation=activations, batch_size = [128, 256], epochs=[700])
-a=1
-grid = GridSearchCV(estimator=model, param_grid=param_grid, scoring='neg_mean_squared_error')
-# print(len(x_batch))
-grid_result = grid.fit(x_batch[0:2000], y_batch[0:2000])
+# model = KerasRegressor(build_fn=create_model, verbose=0)
+# layers = [[70,120], [50,100,150,100,80,60,30]]
+# # layers = [[70,120], [45, 60, 90],[30,10],[50,70],[20,50,70,40],[30,20,40,20],[70,120,70],[50,100,150,100,80,60,30]]
+# activations = [relu]
+# param_grid = dict(layers=layers, activation=activations, batch_size = [128, 256], epochs=[700])
+# a=1
+# grid = GridSearchCV(estimator=model, param_grid=param_grid, scoring='neg_mean_squared_error')
+# # print(len(x_batch))
+# grid_result = grid.fit(x_batch[0:2000], y_batch[0:2000])
 
-print([grid_result.best_score_, grid_result.best_params_])
+best_model=create_model([50,100,150,100,80,60,30],relu)
+best_model.fit(x_batch,y_batch,epochs=1700,validation_split=0.2)
+# best_model=create_model(grid_result.best_params_['layers'],relu)
+# print([grid_result.best_score_, grid_result.best_params_])
 print(timer()-time)
+best_model.evaluate(x_batch[0:2000],y_batch[0:2000])
+print('ok?')
 
 
 
+# [-69.99014799098367, {'activation': <function relu at 0x00000215C0B86620>, 'batch_size': 128, 'epochs': 700, 'layers': [50, 70]}]
+# [-68.68425594968505, {'activation': <function relu at 0x00000293163BC620>, 'batch_size': 128, 'epochs': 700, 'layers': [45, 60, 90]}]
+# [-68.34868468302862, {'activation': <function relu at 0x000001F1E425C620>, 'batch_size': 128, 'epochs': 700, 'layers': [70, 120]}]
+# [-64.25238957167741, {'activation': <function relu at 0x0000020C055B7620>, 'batch_size': 128, 'epochs': 700, 'layers': [50, 100, 150, 100, 80, 60, 30]}]
 
-
+# 700 epochs
 
 
 

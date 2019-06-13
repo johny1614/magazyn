@@ -4,7 +4,6 @@ import time
 import numpy as np
 
 from model.LearningState import LearningState
-from nn_data import S1
 from services.dist import dist
 from services.globals import Globals
 

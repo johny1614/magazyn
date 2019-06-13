@@ -5,7 +5,7 @@ from model.Action import ActionInt
 from model.LearningState import LearningState
 
 
-@attr.s(auto_attribs=True,frozen=True)
+@attr.s(auto_attribs=True)
 class Memory:
     state: LearningState
     action: ActionInt

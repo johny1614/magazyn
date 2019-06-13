@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e3bc62bd-0327-4a90-b067-71b6ea844ee3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/app/displayer/displayer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/displayer/displayer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/runner_random.data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/runner_random.meta.json" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,74 +16,53 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6416979">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/trainer.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret line="77" column="34" lean-forward="true" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="34" />
-                  <folding>
-                    <element signature="e#0#31#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/z_private_model.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="329">
-                  <caret line="27" column="57" lean-forward="true" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
-                  <folding>
-                    <element signature="e#0#18#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/model/LearningState.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="414">
-                  <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-                  <folding>
-                    <element signature="e#0#24#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/model/SmartAgent.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="397">
-                  <caret line="111" column="107" selection-start-line="111" selection-start-column="107" selection-end-line="111" selection-end-column="107" />
-                  <folding>
-                    <element signature="e#0#16#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/actions.png">
-              <provider selected="true" editor-type-id="images" />
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/obraz.png">
-              <provider selected="true" editor-type-id="images" />
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test_Env.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="178" column="35" lean-forward="true" selection-start-line="178" selection-start-column="35" selection-end-line="178" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/z_private_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runner_random.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="419">
+              <caret line="50" column="57" lean-forward="true" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/env_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="56" column="36" lean-forward="true" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -93,36 +73,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>akcje</find>
-      <find>duration =</find>
-      <find>'uwa</find>
-      <find>print</find>
-      <find>action</find>
-      <find>global_memories</find>
-      <find>'t:</find>
-      <find>akcja</find>
-      <find>'t</find>
-      <find>actions</find>
-      <find>get_ac</find>
-      <find>get_</find>
-      <find>u</find>
-      <find>local</find>
-      <find>passi</find>
-      <find>Na koniec</find>
-      <find>_space</find>
-      <find>bo ph</find>
-      <find>print(f</find>
-      <find>print(</find>
-      <find>'na po</find>
-      <find>get_ac\\</find>
-      <find>pass_ac</find>
-      <find>to_</find>
-      <find>to_learn_nd_array</find>
-      <find>build</find>
+      <find>x_ba</find>
       <find>x_batch</find>
-      <find>Globals().x_batch</find>
-      <find>train</find>
-      <find>predict</find>
+      <find>local</find>
+      <find>action_sp</find>
+      <find>globals</find>
+      <find>memory</find>
+      <find>90</find>
+      <find>.memory</find>
+      <find>.memor</find>
+      <find>.m</find>
+      <find>actual_phase</find>
+      <find>global_memories</find>
+      <find>reme</find>
+      <find>memories</find>
+      <find>.memories</find>
+      <find>local_state</find>
+      <find>.actual_phase</find>
+      <find>print</find>
+      <find>phase_index</find>
+      <find>memo</find>
+      <find>'t:</find>
+      <find>self.ac</find>
+      <find>gamma</find>
+      <find>save_batch</find>
+      <find>reward</find>
+      <find>memory(</find>
+      <find>remember</find>
+      <find>almos</find>
+      <find>almo</find>
+      <find>max_time =</find>
     </findStrings>
     <replaceStrings>
       <replace>actual_phase</replace>
@@ -134,8 +114,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/services/decorators.py" />
-        <option value="$PROJECT_DIR$/services/x.py" />
         <option value="$PROJECT_DIR$/services/hashable_decorator.py" />
         <option value="$PROJECT_DIR$/model/Move.py" />
         <option value="$PROJECT_DIR$/services/prettyPrinter.py" />
@@ -151,9 +129,7 @@
         <option value="$PROJECT_DIR$/runner_SARSA.py" />
         <option value="$PROJECT_DIR$/services/StateFactory.py" />
         <option value="$PROJECT_DIR$/model/GlobalState.py" />
-        <option value="$PROJECT_DIR$/nn_data.py" />
         <option value="$PROJECT_DIR$/cluster_process_tester.py" />
-        <option value="$PROJECT_DIR$/StateMap.py" />
         <option value="$PROJECT_DIR$/y.py" />
         <option value="$PROJECT_DIR$/services/dist.py" />
         <option value="$PROJECT_DIR$/runner_MC.py" />
@@ -162,7 +138,6 @@
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/x.py" />
         <option value="$PROJECT_DIR$/Utils.py" />
-        <option value="$PROJECT_DIR$/model/Memory.py" />
         <option value="$PROJECT_DIR$/model/Net.py" />
         <option value="$PROJECT_DIR$/res3.txt" />
         <option value="$PROJECT_DIR$/res5.txt" />
@@ -174,17 +149,22 @@
         <option value="$PROJECT_DIR$/services/agentFactory.py" />
         <option value="$PROJECT_DIR$/Test_learning.py" />
         <option value="$PROJECT_DIR$/docs.txt" />
-        <option value="$PROJECT_DIR$/Test_Env.py" />
         <option value="$PROJECT_DIR$/res.txt" />
-        <option value="$PROJECT_DIR$/model/Agent.py" />
-        <option value="$PROJECT_DIR$/model/LearningState.py" />
         <option value="$PROJECT_DIR$/services/globals.py" />
         <option value="$PROJECT_DIR$/runner.py" />
-        <option value="$PROJECT_DIR$/env_data.py" />
         <option value="$PROJECT_DIR$/Env.py" />
-        <option value="$PROJECT_DIR$/model/SmartAgent.py" />
         <option value="$PROJECT_DIR$/trainer.py" />
+        <option value="$PROJECT_DIR$/trainer_off_policy.py" />
+        <option value="$PROJECT_DIR$/model/LearningState.py" />
+        <option value="$PROJECT_DIR$/StateMap.py" />
+        <option value="$PROJECT_DIR$/nn_data.py" />
+        <option value="$PROJECT_DIR$/model/Agent.py" />
+        <option value="$PROJECT_DIR$/model/Memory.py" />
+        <option value="$PROJECT_DIR$/model/SmartAgent.py" />
+        <option value="$PROJECT_DIR$/Test_Env.py" />
+        <option value="$PROJECT_DIR$/runner_random.py" />
         <option value="$PROJECT_DIR$/z_private_model.py" />
+        <option value="$PROJECT_DIR$/env_data.py" />
       </list>
     </option>
   </component>
@@ -243,7 +223,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.z_private_model">
-    <configuration name="runner" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="runner_random" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="promotora_macierzowo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -255,28 +235,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\magisterka\traffic fluid simulator\backend\env_4_1\trainer.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="trainer" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="promotora_macierzowo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trainer.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runner_random.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -306,7 +265,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for Test_Env.Testing.test_no_1_pass_action_1_1_1_all_time" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for Test_Env.Testing.test_no_4_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="promotora_macierzowo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -316,11 +275,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Test_Env.Testing.test_no_1_pass_action_1_1_1_all_time&quot;" />
+      <option name="_new_target" value="&quot;Test_Env.Testing.test_no_4_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for Test_Env.Testing.test_no_2_pass_action_1_1_1_long_time_then_2_2_2" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for Test_Env.Testing.test_no_5_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="promotora_macierzowo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -330,17 +289,31 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Test_Env.Testing.test_no_2_pass_action_1_1_1_long_time_then_2_2_2&quot;" />
+      <option name="_new_target" value="&quot;Test_Env.Testing.test_no_5_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in Test_Env.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="promotora_macierzowo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Test_Env.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.z_private_model" />
-        <item itemvalue="Python.trainer" />
-        <item itemvalue="Python.runner" />
-        <item itemvalue="Python tests.Unittests for Test_Env.Testing.test_no_2_pass_action_1_1_1_long_time_then_2_2_2" />
-        <item itemvalue="Python tests.Unittests for Test_Env.Testing.test_no_1_pass_action_1_1_1_all_time" />
+        <item itemvalue="Python.runner_random" />
+        <item itemvalue="Python tests.Unittests for Test_Env.Testing.test_no_5_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3" />
+        <item itemvalue="Python tests.Unittests in Test_Env.py" />
+        <item itemvalue="Python tests.Unittests for Test_Env.Testing.test_no_4_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3" />
       </list>
     </recent_temporary>
   </component>
@@ -359,35 +332,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_Test_learning_Testing_test_learn_no_1_pass_action_1_1_1_long_time_then_2_2_2 - 2019.06.07 at 17h 11m 36s.xml">
-      <configuration name="Unittests for Test_learning.Testing.test_learn_no_1_pass_action_1_1_1_long_time_then_2_2_2" configurationId="tests" />
+    <history-entry file="Unittests_in_Test_Env_py - 2019.06.13 at 20h 59m 13s.xml">
+      <configuration name="Unittests in Test_Env.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_Test_learning_Testing_test_learn_no_1_pass_action_1_1_1_long_time_then_2_2_2 - 2019.06.07 at 17h 34m 32s.xml">
-      <configuration name="Unittests for Test_learning.Testing.test_learn_no_1_pass_action_1_1_1_long_time_then_2_2_2" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_Env_Testing_test_no_5_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3 - 2019.06.13 at 21h 19m 21s.xml">
+      <configuration name="Unittests for Test_Env.Testing.test_no_5_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_Test_Env_Testing_test_no_2_pass_action_1_1_1_long_time_then_2_2_2 - 2019.06.09 at 19h 27m 51s.xml">
-      <configuration name="Unittests for Test_Env.Testing.test_no_2_pass_action_1_1_1_long_time_then_2_2_2" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_Env_Testing_test_no_5_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3 - 2019.06.13 at 21h 27m 10s.xml">
+      <configuration name="Unittests for Test_Env.Testing.test_no_5_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_Test_Env_Testing_test_no_2_pass_action_1_1_1_long_time_then_2_2_2 - 2019.06.09 at 19h 40m 12s.xml">
-      <configuration name="Unittests for Test_Env.Testing.test_no_2_pass_action_1_1_1_long_time_then_2_2_2" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_Env_Testing_test_no_5_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3 - 2019.06.13 at 21h 34m 42s.xml">
+      <configuration name="Unittests for Test_Env.Testing.test_no_5_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_Test_Env_Testing_test_no_2_pass_action_1_1_1_long_time_then_2_2_2 - 2019.06.09 at 19h 40m 14s.xml">
-      <configuration name="Unittests for Test_Env.Testing.test_no_2_pass_action_1_1_1_long_time_then_2_2_2" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_Env_Testing_test_no_5_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3 - 2019.06.13 at 21h 36m 37s.xml">
+      <configuration name="Unittests for Test_Env.Testing.test_no_5_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_Test_Env_Testing_test_no_2_pass_action_1_1_1_long_time_then_2_2_2 - 2019.06.09 at 19h 44m 06s.xml">
-      <configuration name="Unittests for Test_Env.Testing.test_no_2_pass_action_1_1_1_long_time_then_2_2_2" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_Env_Testing_test_no_5_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3 - 2019.06.13 at 21h 36m 53s.xml">
+      <configuration name="Unittests for Test_Env.Testing.test_no_5_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_Test_Env_Testing_test_no_2_pass_action_1_1_1_long_time_then_2_2_2 - 2019.06.09 at 22h 36m 36s.xml">
-      <configuration name="Unittests for Test_Env.Testing.test_no_2_pass_action_1_1_1_long_time_then_2_2_2" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_Env_Testing_test_no_5_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3 - 2019.06.13 at 21h 37m 31s.xml">
+      <configuration name="Unittests for Test_Env.Testing.test_no_5_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_Test_Env_Testing_test_no_1_pass_action_1_1_1_all_time - 2019.06.10 at 00h 27m 19s.xml">
-      <configuration name="Unittests for Test_Env.Testing.test_no_1_pass_action_1_1_1_all_time" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_Env_Testing_test_no_5_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3 - 2019.06.13 at 21h 37m 55s.xml">
+      <configuration name="Unittests for Test_Env.Testing.test_no_5_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_Test_Env_Testing_test_no_2_pass_action_1_1_1_long_time_then_2_2_2 - 2019.06.10 at 21h 51m 36s.xml">
-      <configuration name="Unittests for Test_Env.Testing.test_no_2_pass_action_1_1_1_long_time_then_2_2_2" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_Env_Testing_test_no_5_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3 - 2019.06.13 at 21h 55m 43s.xml">
+      <configuration name="Unittests for Test_Env.Testing.test_no_5_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_Test_Env_Testing_test_no_2_pass_action_1_1_1_long_time_then_2_2_2 - 2019.06.10 at 21h 54m 00s.xml">
-      <configuration name="Unittests for Test_Env.Testing.test_no_2_pass_action_1_1_1_long_time_then_2_2_2" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_Env_Testing_test_no_5_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3 - 2019.06.13 at 21h 55m 55s.xml">
+      <configuration name="Unittests for Test_Env.Testing.test_no_5_pass_action_1_1_1_long_time_then_2_2_2_long_time_then_3_3_3" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
@@ -396,19 +369,19 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15595363" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.07744995" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49894625" weight="0.32719395" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49525815" weight="0.38353196" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.65806115" weight="0.43770313" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49841937" weight="0.32719395" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4926238" weight="0.38353196" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.92729187" visible="true" weight="0.33802816" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.5142255" visible="true" weight="0.3336945" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.4857745" side_tool="true" visible="true" weight="0.3336945" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.6548999" weight="0.3336945" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.072708115" side_tool="true" visible="true" weight="0.33802816" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.5438787" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32936078" />
       <window_info anchor="bottom" id="Mypy" order="12" />
@@ -450,12 +423,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/z_private_model.py</url>
-          <line>69</line>
+          <line>79</line>
           <option name="timeStamp" value="213" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Test_Env.py</url>
-          <line>124</line>
+          <line>120</line>
           <option name="timeStamp" value="229" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -470,7 +443,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/z_private_model.py</url>
-          <line>65</line>
+          <line>75</line>
           <option name="timeStamp" value="243" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -479,9 +452,19 @@
           <option name="timeStamp" value="245" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/runner_random.py</url>
+          <line>49</line>
+          <option name="timeStamp" value="252" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/z_private_model.py</url>
-          <line>39</line>
-          <option name="timeStamp" value="248" />
+          <line>45</line>
+          <option name="timeStamp" value="264" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/runner_random.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="269" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -609,89 +592,58 @@ for i in range(0,40,10):
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>grid_result</expression-string>
+        <expression-string>best_model.predict(np.array([[1,1,7,3]]))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>[grid_result.best_score_, grid_result.best_params_]</expression-string>
+        <expression-string>best_model.predict(np.array([[1,1,7,2]]))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>model.evaluate(x_batch, y_batch)</expression-string>
+        <expression-string>best_model.predict(np.array([[1,1,7,1]]))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>model.fit(x_batch, y_batch,batch_size=len(x_batch), epochs=700,validation_split=0.2,verbose=0)</expression-string>
+        <expression-string>best_model.predict(np.array([[1,1,6,1]]))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>model.fit(x_batch, y_batch,batch_size=len(x_batch), epochs=90,validation_split=0.2,verbose=0)</expression-string>
+        <expression-string>best_model.predict(np.array([[1,1,1,1]]))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>env.agents[0].model.evaluate(np.array(Globals().x_batch[1530:1540]), np.array(Globals().y_batch[1530:1540]))</expression-string>
+        <expression-string>best_model.predict(np.array([[1,5,1,1]]))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>env.agents[0].model.evaluate(np.array(Globals().x_batch[2530:2540]), np.array(Globals().y_batch[2530:2540]))</expression-string>
+        <expression-string>best_model.predict(np.array([[1,6,1,2]]))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>np.array(Globals().x_batch)</expression-string>
+        <expression-string>best_model.predict(np.array([[1,5,1,2]]))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>env.agents[0].model.evaluate(np.array(Globals().x_batch[530:540]), np.array(Globals().y_batch[530:540]))</expression-string>
+        <expression-string>best_model.predict(np.array([[0,5,1,2]]))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>best_model.predict(np.array([[1,8,1,2]]))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/StateMap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nn_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runner_SARSA.py" />
-    <entry file="file://$PROJECT_DIR$/runner_MC.py" />
-    <entry file="file://$PROJECT_DIR$/.mypy_cache/3.7/model/Action.meta.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="231" selection-start-column="231" selection-end-column="231" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/Phase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/Action.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -741,16 +693,6 @@ for i in range(0,40,10):
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
           <caret line="1134" selection-start-line="1134" selection-end-line="1134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/Memory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="e#1#12#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -838,16 +780,6 @@ for i in range(0,40,10):
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/ExportData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/GlobalState.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -893,16 +825,6 @@ for i in range(0,40,10):
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test_Env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="116" column="21" selection-start-line="116" selection-start-column="21" selection-end-line="116" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-102">
@@ -920,16 +842,6 @@ for i in range(0,40,10):
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/Agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="67" column="43" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/globals.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
@@ -940,42 +852,12 @@ for i in range(0,40,10):
     <entry file="file://$PROJECT_DIR$/model.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/obraz.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Env.py">
+    <entry file="file://$PROJECT_DIR$/trainer_off_policy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="109" column="49" lean-forward="true" selection-start-line="109" selection-start-column="49" selection-end-line="109" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-935">
-          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="413">
+          <caret line="95" column="12" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="12" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test_learning.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="35" column="25" lean-forward="true" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -989,30 +871,23 @@ for i in range(0,40,10):
     </entry>
     <entry file="file://$PROJECT_DIR$/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="77" column="34" lean-forward="true" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="34" />
+        <state relative-caret-position="209">
+          <caret line="80" column="36" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="36" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/LearningState.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/obraz.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/SmartAgent.py">
+    <entry file="file://$PROJECT_DIR$/runner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="111" column="107" selection-start-line="111" selection-start-column="107" selection-end-line="111" selection-end-column="107" />
+        <state relative-caret-position="420">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1020,10 +895,138 @@ for i in range(0,40,10):
     <entry file="file://$PROJECT_DIR$/actions.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/model/ExportData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/LearningState.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StateMap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nn_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="130" selection-start-line="7" selection-start-column="130" selection-end-line="7" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/StateFactory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="73" column="47" lean-forward="true" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="128" column="30" lean-forward="true" selection-start-line="128" selection-start-column="30" selection-end-line="128" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Memory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding>
+            <element signature="e#1#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/pyt36/Lib/site-packages/attr/_make.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="433" column="7" lean-forward="true" selection-start-line="433" selection-start-column="7" selection-end-line="433" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test_learning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="45" selection-start-line="45" selection-end-line="46" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/SmartAgent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="132" column="48" lean-forward="true" selection-start-line="132" selection-start-column="48" selection-end-line="132" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test_Env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="178" column="35" lean-forward="true" selection-start-line="178" selection-start-column="35" selection-end-line="178" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="56" column="36" lean-forward="true" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runner_random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="50" column="57" lean-forward="true" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/z_private_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="27" column="57" lean-forward="true" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+        <state relative-caret-position="327">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
