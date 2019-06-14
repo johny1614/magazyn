@@ -34,8 +34,8 @@ def epoch():
 
 
 Globals().max_epsilon=0
-agents: List[SmartAgent] = get_LearnSmartAgents()
-epochs=range(20)
+agents: List[SmartAgent] = get_SmartAgents()
+epochs=range(1)
 for e in epochs:
     env: Env = epoch()  # :1
 #     rewards = nested_sum(env.global_rewards)

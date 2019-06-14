@@ -35,10 +35,12 @@ export class AppComponent {
   ngOnInit() {
     this.getJSON('assets/nets/net4.json').subscribe(staticData => {
       this.nets = [NetFactory.netFromJson(staticData)];
-      let net = 'assets/densities/net4_cross.json'
+      // let net = 'assets/densities/net4_cross.json'
+      let net = 'assets/densities/net4_random.json'
       // let net = 'assets/densities/net4_last_epoch.json'
-      // let net = 'assets/densities/net4_test_no_3.json';
+      // let net = 'assets/densities/net4_test_no_4.json';
       // waaat
+      // let net = 'assets/densities/net4_test_no_5.json';
       // let net = 'assets/densities/net4_test_no_2.json';
       // let net = 'assets/densities/net4_test_no_1.json';
 // sdfsdf

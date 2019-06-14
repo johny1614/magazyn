@@ -68,7 +68,7 @@ class SmartAgent(Agent):
 
         model.add(Dense(12, input_dim=4, activation='relu'))  # 1st hidden layer; states as input
         model.add(Dense(40, activation='relu'))
-        model.add(Dense(4, activation='linear'))
+        model.add(Dense(3, activation='linear'))
         model.compile(loss='mse',
                       optimizer=Adam(lr=Globals().learning_rate))
         return model
@@ -85,13 +85,16 @@ class SmartAgent(Agent):
             y = self.model.predict(state)
             future_actions_values_predictions = self.model.predict(new_state)
             possible_actions = memory.state.possible_actions(self.orange_phase_duration)
+            if possible_actions == [0]:
+                continue
+            possible_actions = [1,2,3]
             best_possible_future_action_value = np.amax(
-                [future_actions_values_predictions[0][i] for i in possible_actions])
+                [future_actions_values_predictions[0][i-1] for i in possible_actions])
             target_action = (memory.reward + gamma *  # (target) = reward + (discount rate gamma) *
                              best_possible_future_action_value)  # (maximum target Q based on future action a')
             # so this is the q value for action made in state leading to new_state
             # counted basing on - reward and reward of future best action
-            y[0][memory.action] = target_action
+            y[0][memory.action-1] = target_action
             x_batch.append(state[0])
             y_batch.append(y[0])
             if self.index == 0:
