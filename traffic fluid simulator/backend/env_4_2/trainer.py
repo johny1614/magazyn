@@ -64,7 +64,7 @@ def epoch():
 agents: List[SmartAgent] = get_SmartAgents()
 best_score = 0
 scores = []
-epochs = range(2000)
+epochs = range(1000)
 our_memories = None
 last_epoch = None
 global_rewards = []
@@ -95,9 +95,9 @@ for e in epochs:
     exportData.saveToJson()
     for agent in env.agents:
         agent.train()
-    pred = env.agents[0].model.predict(np.array([[1,7,1,2]]))
-    print(pred)
-    env.agents[0].model.evaluate(np.array(Globals().x_batch), np.array(Globals().y_batch))
+    # pred = env.agents[0].model.predict(np.array([[1,7,1,2]]))
+    # print(pred)
+    # env.agents[0].model.evaluate(np.array(Globals().x_batch), np.array(Globals().y_batch))
     if e == epochs[-1]:
         last_epoch = env.global_memories
 print('srednia rewardow', sum(session_rewards) / len(session_rewards))

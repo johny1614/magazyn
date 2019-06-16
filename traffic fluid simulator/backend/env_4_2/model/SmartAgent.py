@@ -4,6 +4,7 @@ from typing import Tuple, Dict, List
 import attr
 import numpy as np
 from tensorflow.python.keras.layers import BatchNormalization
+from tensorflow.python.keras.losses import huber_loss
 from tensorflow.python.keras.utils import plot_model
 import matplotlib.pyplot as plt
 
@@ -46,7 +47,7 @@ class SmartAgent(Agent):
             #     print(f'stan {state.to_learn_nd_array()} i losowa akcja: {action} ')
             return action
         predictions = self.model.predict(
-            state.to_learn_nd_array())  # if not acting randomly, predict reward value based on current state
+            state.to_learn_nd_array_full())  # if not acting randomly, predict reward value based on current state
         action = np.argmax(predictions[0])
         if action not in self.local_action_space:
             sorted_actions = np.argsort(-predictions[0])
@@ -65,11 +66,12 @@ class SmartAgent(Agent):
         # model.add(Dense(Globals().l2, activation='relu'))  # 2nd hidden layer
         # model.add(Dense(Globals().l3, activation='relu'))  # 2nd hidden layer
         # model.add(Dense(4, activation='linear'))  # 2 actions, so 2 output neurons: 0 and 1 (L/R)
-
-        model.add(Dense(12, input_dim=4, activation='relu'))  # 1st hidden layer; states as input
+        model.add(Dense(60, input_dim=37, activation='relu'))  # 1st hidden layer; states as input
+        model.add(BatchNormalization())
+        model.add(Dense(90, activation='relu'))
         model.add(Dense(40, activation='relu'))
-        model.add(Dense(3, activation='linear'))
-        model.compile(loss='mse',
+        model.add(Dense(4, activation='linear'))
+        model.compile(loss=huber_loss,
                       optimizer=Adam(lr=Globals().learning_rate))
         return model
 
@@ -79,22 +81,23 @@ class SmartAgent(Agent):
         # minibatch = random.sample(self.memories, batch_size)
         x_batch = []
         y_batch = []
+        i = 0
         for memory in self.memories:
-            state = memory.state.to_learn_nd_array()
-            new_state = memory.new_state.to_learn_nd_array()
+            if memory.action == 0:
+                continue
+            i += 1
+            state = memory.state.to_learn_nd_array_full()
+            new_state = memory.new_state.to_learn_nd_array_full()
             y = self.model.predict(state)
             future_actions_values_predictions = self.model.predict(new_state)
             possible_actions = memory.state.possible_actions(self.orange_phase_duration)
-            if possible_actions == [0]:
-                continue
-            possible_actions = [1,2,3]
             best_possible_future_action_value = np.amax(
-                [future_actions_values_predictions[0][i-1] for i in possible_actions])
+                [future_actions_values_predictions[0][i] for i in possible_actions])
             target_action = (memory.reward + gamma *  # (target) = reward + (discount rate gamma) *
                              best_possible_future_action_value)  # (maximum target Q based on future action a')
             # so this is the q value for action made in state leading to new_state
             # counted basing on - reward and reward of future best action
-            y[0][memory.action-1] = target_action
+            y[0][memory.action] = target_action
             x_batch.append(state[0])
             y_batch.append(y[0])
             if self.index == 0:
@@ -104,19 +107,40 @@ class SmartAgent(Agent):
     def train(self):
         gamma = Globals().gamma
         batch_size = Globals().batch_size
-        minibatch = random.sample(self.memories, batch_size)
+        minibatch = random.sample(self.memories, min(len(self.memories), batch_size))
         x_batch = []
         y_batch = []
         for memory in minibatch:
-            state = memory.state.to_learn_nd_array()
-            new_state = memory.new_state.to_learn_nd_array()
+            state = memory.state.to_learn_nd_array_full()
+            new_state = memory.new_state.to_learn_nd_array_full()
             y_target = self.model.predict(state)
             target = (memory.reward + gamma *  # (target) = reward + (discount rate gamma) *
                       np.amax(self.model.predict(new_state)))  # (maximum target Q based on future action a')
             y_target[0][memory.action] = target
             x_batch.append(state[0])
             y_batch.append(y_target[0])
-        self.model.fit(np.array(x_batch), np.array(y_batch), epochs=100, batch_size=len(x_batch), verbose=0)
+        val_loss = 999999999
+        i = 0
+        while True:
+            res = self.model.fit(np.array(x_batch), np.array(y_batch), epochs=70, batch_size=len(x_batch), verbose=0,
+                                 validation_split=0.2)
+            i += 100
+            if sum(res.history['val_loss']) > val_loss:
+                if self.index == 0:
+                    print(f'agent {self.index} po {i} epochach dal rade i ma loss {val_loss}')
+                    # biggest_diff = 0
+                    # diff_el = x_batch[0]
+                    # for i in range(len(x_batch)):
+                    y_pred = self.model.predict([x_batch[0:10]])
+                    diffs = abs(y_batch[0:10] - y_pred)
+                    # print('roznica najwieksza', np.max(diffs))
+                    # print(np.argmax(diffs))
+                    x = [0, 0, 60] + [0] * 33 + [1]
+                    print(self.model.predict(np.array([x])))
+                    a = 1
+                    pass
+                break
+            val_loss = sum(res.history['val_loss'])
 
     def remember(self, densities, reward):
         state = self.local_state
@@ -132,5 +156,8 @@ class SmartAgent(Agent):
     def reshape_rewards(self):
         for i in range(len(self.memories) - 3):
             memory = self.memories[i]
-            future_rewards = [mem.reward for mem in self.memories[i+1:i + 4]]  # 3 next rewards
+            future_rewards = [mem.reward for mem in self.memories[i + 1:i + 3]]  # 2 next rewards
+            if i == 60:
+                print(future_rewards)
             memory.reward += sum(future_rewards)
+            self.memories[i] = memory

@@ -84,11 +84,15 @@ class Agent:
         for sec in self.local_phase_sections:
             pre_cross_densities = pre_cross_densities + (densities[sec],)
         global_aggregated_densities = ()
+        global_densities = []
         for road in sections_of_roads:
             global_aggregated_densities = global_aggregated_densities + (
                 round(np.sum([densities[section] for section in road])),)
+            for sec in road:
+                global_densities.append(densities[sec])
         local_state = LearningState(pre_cross_densities=pre_cross_densities,
                                     global_aggregated_densities=global_aggregated_densities,
+                                    global_densities=global_densities,
                                     actual_phase=self.actual_phase,
                                     phase_duration=self.phase_duration)
         self.local_state = local_state

@@ -106,15 +106,15 @@ class Env:
             for i in range(len(self.x[self.t - 1])):
                 density = self.x[self.t][i]
                 last_sections = [2,5,8,11,14,17,20,23,26,29,32,35]
-                if density > 10 and i in last_sections:
-                    for j in range(len(self.A[t][:][i])):
-                        if j != i and self.A[t][j][i] * density > 10:
-                            A_cell = self.A[t][j][i]
-                            new_value = 10 / density
-                            change = A_cell - new_value
-                            self.A[t][i][i] += change
-                            A_cell = new_value
-                            self.A[t][j][i] = A_cell
+                # if density > 10 and i in last_sections:
+                #     for j in range(len(self.A[t][:][i])):
+                #         if j != i and self.A[t][j][i] * density > 10:
+                #             A_cell = self.A[t][j][i]
+                #             new_value = 10 / density
+                #             change = A_cell - new_value
+                #             self.A[t][i][i] += change
+                #             A_cell = new_value
+                #             self.A[t][j][i] = A_cell
 
 
 
@@ -159,6 +159,10 @@ class Env:
                   lights=lights)
         self.global_memories.append(net)
 
+    def update_global_memory_rewards(self):
+        for i in range(len(self.global_memories)):
+            net = self.global_memories[i]
+            net.rewards=[agent.memories[i].reward for agent in self.agents]
 # @attr.s(auto_attribs=True)
 # class GlobalMemory:
 #

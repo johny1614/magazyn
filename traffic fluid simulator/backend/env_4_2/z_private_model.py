@@ -1,10 +1,11 @@
 import numpy as np
 from tensorflow.python.keras.models import Sequential
 from tensorflow.python.keras.activations import sigmoid, relu
-from tensorflow.python.keras.layers import Dense, Activation
+from tensorflow.python.keras.layers import Dense, Activation, BatchNormalization
 from tensorflow.python.keras.wrappers.scikit_learn import KerasRegressor
 from sklearn.model_selection import GridSearchCV
 from timeit import default_timer as timer
+
 
 def create_model(layers, activation):
     # global a
@@ -13,8 +14,8 @@ def create_model(layers, activation):
     model = Sequential()
     for i, nodes in enumerate(layers):
         if i == 0:
-            model.add(Dense(nodes, input_dim=4))
-            model.add(Activation(activation))
+            model.add(Dense(nodes, input_dim=37, activation='linear'))
+            model.add(BatchNormalization())
         else:
             model.add(Dense(nodes))
             model.add(Activation(activation))
@@ -23,9 +24,10 @@ def create_model(layers, activation):
     model.compile(optimizer='adadelta', loss='mse')
     return model
 
-time=timer()
-x_batch=np.array(np.loadtxt('x_batch.txt',delimiter=','))
-y_batch=np.array(np.loadtxt('y_batch.txt',delimiter=','))
+
+time = timer()
+x_batch = np.array(np.loadtxt('x_batch.txt', delimiter=','))
+y_batch = np.array(np.loadtxt('y_batch.txt', delimiter=','))
 
 # model = KerasRegressor(build_fn=create_model, verbose=0)
 # layers = [[70,120], [50,100,150,100,80,60,30]]
@@ -37,15 +39,28 @@ y_batch=np.array(np.loadtxt('y_batch.txt',delimiter=','))
 # # print(len(x_batch))
 # grid_result = grid.fit(x_batch[0:2000], y_batch[0:2000])
 
-best_model=create_model([50,100,150,100,80,60,30],relu)
-best_model.fit(x_batch,y_batch,epochs=1700,validation_split=0.2)
+# best_model = create_model([45, 60, 90], relu)
+
+best_model = create_model([70, 100, 150, 100, 80, 60, 30], relu)
+# best_model.fit(x_batch,y_batch,epochs=1700,validation_split=0.2)
+i = 0
+val_loss = 99999999
+while True:
+    print('epoch:' + str(i))
+    i += 200
+    res = best_model.fit(x_batch, y_batch, validation_split=0.2, epochs=200, verbose=0)
+    # print('loss',res.history['val_loss'][-1])
+    print(f"loss {res.history['loss'][-1]} val_loss: {res.history['val_loss'][-1]}")
+    if res.history['val_loss'][-1] > val_loss:
+        print('KONIEC!')
+        break
+    val_loss = res.history['val_loss'][-1]
+
 # best_model=create_model(grid_result.best_params_['layers'],relu)
 # print([grid_result.best_score_, grid_result.best_params_])
-print(timer()-time)
-best_model.evaluate(x_batch[0:2000],y_batch[0:2000])
+print(timer() - time)
+best_model.evaluate(x_batch[0:20], y_batch[0:20])
 print('ok?')
-
-
 
 # [-69.99014799098367, {'activation': <function relu at 0x00000215C0B86620>, 'batch_size': 128, 'epochs': 700, 'layers': [50, 70]}]
 # [-68.68425594968505, {'activation': <function relu at 0x00000293163BC620>, 'batch_size': 128, 'epochs': 700, 'layers': [45, 60, 90]}]
@@ -53,11 +68,6 @@ print('ok?')
 # [-64.25238957167741, {'activation': <function relu at 0x0000020C055B7620>, 'batch_size': 128, 'epochs': 700, 'layers': [50, 100, 150, 100, 80, 60, 30]}]
 
 # 700 epochs
-
-
-
-
-
 
 
 # for x in range(1):
@@ -69,11 +79,11 @@ print('ok?')
 #     model.compile(loss='mse',
 #                   optimizer=Adam(lr=learning_rate))
 #     x=model.fit(x_batch, y_batch,batch_size=len(x_batch), epochs=90,validation_split=0.2,verbose=0)
-    # print(x.history['loss'][-1])
-    # pred = model.predict(np.array([[1,7,1,2]]))
-    # print(pred)
-    # model.evaluate(x_batch,y_batch)
-    # pass
+# print(x.history['loss'][-1])
+# pred = model.predict(np.array([[1,7,1,2]]))
+# print(pred)
+# model.evaluate(x_batch,y_batch)
+# pass
 # for i in range(10):
 #     model.fit(x_batch, y_batch,batch_size=len(x_batch), epochs=40,validation_split=0.2,verbose=0)
 # pred=model.predict(x_batch)

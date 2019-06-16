@@ -1,4 +1,4 @@
-from typing import Tuple
+from typing import Tuple, List
 import attr
 import numpy as np
 
@@ -9,6 +9,7 @@ class LearningState:
     global_aggregated_densities: Tuple[int]
     actual_phase: int
     phase_duration: int
+    global_densities: List[int]
 
     def __attrs_post_init__(self):
         self.cluster_index: int = 0
@@ -43,7 +44,20 @@ class LearningState:
             den_group = 8
         return den_group
 
+    def to_learn_nd_array_full(self):
+        return np.array([self.global_densities+[self.actual_phase]])
+
     def to_learn_nd_array(self):
+        # den_group0 = self.den_group(self.pre_cross_densities[0])
+        # den_group1 = self.den_group(self.pre_cross_densities[1])
+        # den_group2 = self.den_group(self.pre_cross_densities[2])
+        # actual_phase = self.actual_phase
+        # if den_group0 is None or den_group1 is None or den_group2 is None:
+        #     pass
+        return np.array([[self.pre_cross_densities[0], self.pre_cross_densities[1], self.pre_cross_densities[2],
+                          self.actual_phase]])
+
+    def to_learn_nd_array_densities_group(self):
         den_group0 = self.den_group(self.pre_cross_densities[0])
         den_group1 = self.den_group(self.pre_cross_densities[1])
         den_group2 = self.den_group(self.pre_cross_densities[2])
@@ -65,7 +79,8 @@ class LearningState:
         array.append(self.actual_phase)
         array.append(self.phase_duration)
         return array
-    def possible_actions(self,orange_phase_duration):
+
+    def possible_actions(self, orange_phase_duration):
         wait_action = [0]
         light_Actions = [1, 2, 3]
         if self.phase_duration >= orange_phase_duration:

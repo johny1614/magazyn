@@ -16,7 +16,7 @@ class BaseClass:
         self.epochs_learn = 10
         self.gamma = 0
         self.learning_rate = 0.005
-        self.batch_size = 50
+        self.batch_size = 5
         self.l1=8
         self.l2=168
         self.l3=54

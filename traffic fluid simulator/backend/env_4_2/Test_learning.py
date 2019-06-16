@@ -46,12 +46,12 @@ class Testing(unittest.TestCase):
         self.assertAlmostEqual(agents[0].memories[60].reward, 20.0, 0)
 
         # Moment 60
-        real_state = agents[0].memories[60].state.to_learn_nd_array()
+        real_state = agents[0].memories[60].state.to_learn_nd_array_densities_group()
         expected_state = np.array([[1, 4, 1]])  # densities are 2.0,28.88,0.18 so groups are 1,5,1
         np.testing.assert_almost_equal(real_state, expected_state, decimal=0)
 
         # Moment 61
-        real_state = agents[0].memories[61].state.to_learn_nd_array()
+        real_state = agents[0].memories[61].state.to_learn_nd_array_densities_group()
         expected_state = np.array([[1, 3, 1]])  # densities are 2.6,10.8,0.3 so groups are 1,5,1
         np.testing.assert_almost_equal(real_state, expected_state, decimal=0)
 
