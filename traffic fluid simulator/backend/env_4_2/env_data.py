@@ -47,7 +47,7 @@ def start_A():
         A[cord] = 1
     return A
 
-max_time = 10
+max_time = 90
 def get_x():
     x_size = 36
     x = [x_size * [0]] #* max_time

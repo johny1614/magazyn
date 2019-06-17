@@ -15,7 +15,6 @@ def create_model(layers, activation):
     for i, nodes in enumerate(layers):
         if i == 0:
             model.add(Dense(nodes, input_dim=37, activation='linear'))
-            model.add(BatchNormalization())
         else:
             model.add(Dense(nodes))
             model.add(Activation(activation))
@@ -48,19 +47,21 @@ val_loss = 99999999
 while True:
     print('epoch:' + str(i))
     i += 200
-    res = best_model.fit(x_batch, y_batch, validation_split=0.2, epochs=200, verbose=0)
+    res = best_model.fit(x_batch, y_batch, validation_split=0.2, epochs=100, verbose=0)
     # print('loss',res.history['val_loss'][-1])
-    print(f"loss {res.history['loss'][-1]} val_loss: {res.history['val_loss'][-1]}")
-    if res.history['val_loss'][-1] > val_loss:
-        print('KONIEC!')
-        break
-    val_loss = res.history['val_loss'][-1]
+    # print(f"loss {res.history['loss'][-1]} val_loss: {res.history['val_loss'][-1]}")
+    # if res.history['val_loss'][-1] > val_loss:
+    #     print('KONIEC!')
+    #     break
+    # val_loss = res.history['val_loss'][-1]
+    # print(val_loss)
+    # print(res.history['loss'][-1])
 
 # best_model=create_model(grid_result.best_params_['layers'],relu)
 # print([grid_result.best_score_, grid_result.best_params_])
-print(timer() - time)
-best_model.evaluate(x_batch[0:20], y_batch[0:20])
-print('ok?')
+# print(timer() - time)
+# best_model.evaluate(x_batch[0:20], y_batch[0:20])
+# print('ok?')
 
 # [-69.99014799098367, {'activation': <function relu at 0x00000215C0B86620>, 'batch_size': 128, 'epochs': 700, 'layers': [50, 70]}]
 # [-68.68425594968505, {'activation': <function relu at 0x00000293163BC620>, 'batch_size': 128, 'epochs': 700, 'layers': [45, 60, 90]}]

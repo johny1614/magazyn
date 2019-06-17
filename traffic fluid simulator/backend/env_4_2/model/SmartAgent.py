@@ -66,13 +66,19 @@ class SmartAgent(Agent):
         # model.add(Dense(Globals().l2, activation='relu'))  # 2nd hidden layer
         # model.add(Dense(Globals().l3, activation='relu'))  # 2nd hidden layer
         # model.add(Dense(4, activation='linear'))  # 2 actions, so 2 output neurons: 0 and 1 (L/R)
-        model.add(Dense(60, input_dim=37, activation='relu'))  # 1st hidden layer; states as input
-        model.add(BatchNormalization())
-        model.add(Dense(90, activation='relu'))
-        model.add(Dense(40, activation='relu'))
+        model.add(Dense(70, input_dim=37, activation='relu'))  # 1st hidden layer; states as input
+        # model.add(BatchNormalization())
+
+        # 70, 100, 150, 100, 80, 60, 30
+        model.add(Dense(100, activation='relu'))
+        model.add(Dense(150, activation='relu'))
+        model.add(Dense(100, activation='relu'))
+        model.add(Dense(80, activation='relu'))
+        model.add(Dense(60, activation='relu'))
+        model.add(Dense(30, activation='relu'))
         model.add(Dense(4, activation='linear'))
         model.compile(loss=huber_loss,
-                      optimizer=Adam(lr=Globals().learning_rate))
+                      optimizer=Adam())
         return model
 
     def save_batch(self):
@@ -104,9 +110,8 @@ class SmartAgent(Agent):
                 Globals().x_batch.append(state[0])
                 Globals().y_batch.append(y[0])
 
-    def train(self):
+    def memory_to_minibatch(self, batch_size):
         gamma = Globals().gamma
-        batch_size = Globals().batch_size
         minibatch = random.sample(self.memories, min(len(self.memories), batch_size))
         x_batch = []
         y_batch = []
@@ -119,28 +124,33 @@ class SmartAgent(Agent):
             y_target[0][memory.action] = target
             x_batch.append(state[0])
             y_batch.append(y_target[0])
-        val_loss = 999999999
-        i = 0
-        while True:
-            res = self.model.fit(np.array(x_batch), np.array(y_batch), epochs=70, batch_size=len(x_batch), verbose=0,
-                                 validation_split=0.2)
-            i += 100
-            if sum(res.history['val_loss']) > val_loss:
-                if self.index == 0:
-                    print(f'agent {self.index} po {i} epochach dal rade i ma loss {val_loss}')
-                    # biggest_diff = 0
-                    # diff_el = x_batch[0]
-                    # for i in range(len(x_batch)):
-                    y_pred = self.model.predict([x_batch[0:10]])
-                    diffs = abs(y_batch[0:10] - y_pred)
-                    # print('roznica najwieksza', np.max(diffs))
-                    # print(np.argmax(diffs))
-                    x = [0, 0, 60] + [0] * 33 + [1]
-                    print(self.model.predict(np.array([x])))
-                    a = 1
-                    pass
-                break
-            val_loss = sum(res.history['val_loss'])
+        return x_batch, y_batch
+
+    def train(self):
+        batch_size = Globals().batch_size
+        val_batch_size = Globals().validation_batch_size
+        x_batch, y_batch = self.memory_to_minibatch(batch_size)
+        x_val_batch, y_val_batch = self.memory_to_minibatch(val_batch_size)
+        # validation_batch_size = Globals().validation_batch_size
+        # validation_batch = random.sample(self.memories, min(len(self.memories), validation_batch_size))
+        i=9
+        if self.index == 0:
+            val_loss = 999999999
+            while True:
+                i+=10
+                res = self.model.fit(np.array(x_batch), np.array(y_batch), epochs=10, batch_size=len(x_batch),
+                                     verbose=0)
+                validation = self.model.evaluate(np.array(x_val_batch), np.array(y_val_batch),verbose=0)
+                if validation > val_loss:
+                    print(f'agent {self.index} po {10} epochach ma  {validation}')
+                    break
+                val_loss = validation
+                # y_pred = self.model.predict([x_batch[0:10]])
+                x = [0, 0, 60] + [0] * 33 + [1]
+                print(self.model.predict(np.array([x])))
+                # val_loss = self.model.evaluate()
+
+                # i = 2
 
     def remember(self, densities, reward):
         state = self.local_state
