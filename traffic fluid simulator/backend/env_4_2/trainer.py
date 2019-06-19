@@ -5,6 +5,8 @@ import random
 
 import numpy as np
 
+import env_data
+
 os.environ["PATH"] += os.pathsep + 'C:/Graphviz/bin'
 from typing import List
 from matplotlib import pyplot
@@ -46,6 +48,7 @@ def ez_stategy():
 def epoch():
     Globals().time = 0
     env = Env(agents)
+    env.u = env_data.u_v1
     for t in range(max_time):
         actions: List[ActionInt] = [agent.get_action(agent.local_state) for agent in agents]
         # print(actions)
@@ -64,7 +67,7 @@ def epoch():
 agents: List[SmartAgent] = get_SmartAgents()
 best_score = 0
 scores = []
-epochs = range(1000)
+epochs = range(100)
 our_memories = None
 last_epoch = None
 global_rewards = []
@@ -83,7 +86,7 @@ for e in epochs:
         our_env = env
     session_rewards.append(rewards)
     scores.append(env.cars_out)
-    # print(f'Epizod:{e} Cars_out:{round(env.cars_out)} reward:{round(rewards)} epsilon:{Globals().epsilon()}')
+    print(f'Epizod:{e} Cars_out:{round(env.cars_out)} reward:{round(rewards)} epsilon:{Globals().epsilon()}')
     # pred = env.agents[0].model.predict(np.array([[7, 1, 1,1]]))
     # print(pred)
     if env.cars_out > best_score:
@@ -93,8 +96,10 @@ for e in epochs:
     exportData = ExportData(learningMethod='Monte Carlo TODO', learningEpochs=0, nets=our_memories, netName='net4',
                             densityName='cross')
     exportData.saveToJson()
-    for agent in env.agents:
-        agent.train()
+    env.agents[0].reshape_rewards()
+    env.agents[0].train()
+    # for agent in env.agents:
+    #     agent.train()
     # pred = env.agents[0].model.predict(np.array([[1,7,1,2]]))
     # print(pred)
     # env.agents[0].model.evaluate(np.array(Globals().x_batch), np.array(Globals().y_batch))

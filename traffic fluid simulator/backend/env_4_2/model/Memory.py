@@ -12,3 +12,4 @@ class Memory:
     reward: float
     new_state: LearningState
     times: any
+    reshapedReward: bool = False

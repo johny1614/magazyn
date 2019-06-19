@@ -25,6 +25,7 @@ class BaseClass:
         self.y_batch=[]
         self.max_epsilon=1
         self.min_epsilon = 0.01
+        self.goodmemes = []
 
     def epsilon(self):
         epsilon_decay = 0.99

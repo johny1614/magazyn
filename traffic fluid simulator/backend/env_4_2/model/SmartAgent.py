@@ -77,8 +77,8 @@ class SmartAgent(Agent):
         model.add(Dense(60, activation='relu'))
         model.add(Dense(30, activation='relu'))
         model.add(Dense(4, activation='linear'))
-        model.compile(loss=huber_loss,
-                      optimizer=Adam())
+        model.compile(loss='mse',
+                      optimizer=Adam(learning_rate=0.00001))
         return model
 
     def save_batch(self):
@@ -110,12 +110,17 @@ class SmartAgent(Agent):
                 Globals().x_batch.append(state[0])
                 Globals().y_batch.append(y[0])
 
-    def memory_to_minibatch(self, batch_size):
+    def random_minibatch(self, batch_size):
         gamma = Globals().gamma
         minibatch = random.sample(self.memories, min(len(self.memories), batch_size))
         x_batch = []
         y_batch = []
+        goodmemes1 = [mem for mem in self.memories if mem.state.global_densities[2] > 60 and mem.action == 1]
+        i=0
         for memory in minibatch:
+            if memory in goodmemes1:
+                i+=1
+                Globals().goodmemes.append(memory)
             state = memory.state.to_learn_nd_array_full()
             new_state = memory.new_state.to_learn_nd_array_full()
             y_target = self.model.predict(state)
@@ -126,31 +131,50 @@ class SmartAgent(Agent):
             y_batch.append(y_target[0])
         return x_batch, y_batch
 
+    def memory_to_minibatch(self, memories):
+        gamma = Globals().gamma
+        x_batch = []
+        y_batch = []
+        for memory in memories:
+            state = memory.state.to_learn_nd_array_full()
+            new_state = memory.new_state.to_learn_nd_array_full()
+            y_target = self.model.predict(state)
+            target = (memory.reward + gamma *  # (target) = reward + (discount rate gamma) *
+                      np.amax(self.model.predict(new_state)))  # (maximum target Q based on future action a')
+            y_target[0][memory.action] = target
+            x_batch.append(state[0])
+            y_batch.append(y_target[0])
+        return x_batch, y_batch
+
+    def train_good_memes(self):
+        x_batch, y_batch = self.memory_to_minibatch(Globals().goodmemes)
+        res = self.model.fit(np.array(x_batch), np.array(y_batch), epochs=10, batch_size=len(x_batch),
+                             verbose=0)
+        x = [0, 0, 60] + [0] * 33 + [1]
+        print(self.model.predict(np.array([x])))
+
     def train(self):
         batch_size = Globals().batch_size
         val_batch_size = Globals().validation_batch_size
-        x_batch, y_batch = self.memory_to_minibatch(batch_size)
-        x_val_batch, y_val_batch = self.memory_to_minibatch(val_batch_size)
+        x_batch, y_batch = self.random_minibatch(batch_size)
+        x_val_batch, y_val_batch = self.random_minibatch(val_batch_size)
         # validation_batch_size = Globals().validation_batch_size
         # validation_batch = random.sample(self.memories, min(len(self.memories), validation_batch_size))
         i=9
         if self.index == 0:
-            val_loss = 999999999
-            while True:
-                i+=10
-                res = self.model.fit(np.array(x_batch), np.array(y_batch), epochs=10, batch_size=len(x_batch),
-                                     verbose=0)
-                validation = self.model.evaluate(np.array(x_val_batch), np.array(y_val_batch),verbose=0)
-                if validation > val_loss:
-                    print(f'agent {self.index} po {10} epochach ma  {validation}')
-                    break
-                val_loss = validation
-                # y_pred = self.model.predict([x_batch[0:10]])
-                x = [0, 0, 60] + [0] * 33 + [1]
-                print(self.model.predict(np.array([x])))
-                # val_loss = self.model.evaluate()
-
-                # i = 2
+            res = self.model.fit(np.array(x_batch), np.array(y_batch), epochs=10, batch_size=len(x_batch),
+                                 verbose=0)
+            # val_loss = 999999999
+            # while True:
+            #     i+=10
+            #     res = self.model.fit(np.array(x_batch), np.array(y_batch), epochs=10, batch_size=len(x_batch),
+            #                          verbose=0)
+            #     validation = self.model.evaluate(np.array(x_val_batch), np.array(y_val_batch),verbose=0)
+            #     if validation > val_loss:
+            #         break
+            #     val_loss = validation
+            x = [0, 0, 60] + [0] * 33 + [1]
+            print(self.model.predict(np.array([x])))
 
     def remember(self, densities, reward):
         state = self.local_state
@@ -159,15 +183,17 @@ class SmartAgent(Agent):
         new_state = self.local_state
         times = {'old': Globals().time - 1, 'new': Globals().time}
         memory = Memory(state=state, action=action, new_state=new_state, reward=reward, times=times)
-        # if self.index ==0:
+        # if if self.index ==0:
         #     print(memory)
         self.memories.append(memory)
 
     def reshape_rewards(self):
         for i in range(len(self.memories) - 3):
             memory = self.memories[i]
-            future_rewards = [mem.reward for mem in self.memories[i + 1:i + 3]]  # 2 next rewards
-            if i == 60:
-                print(future_rewards)
-            memory.reward += sum(future_rewards)
-            self.memories[i] = memory
+            if not memory.reshapedReward:
+                memory.reshapedReward = True
+                future_rewards = [mem.reward for mem in self.memories[i + 1:i + 3]]  # 2 next rewards
+                if i == 60:
+                    print(future_rewards)
+                memory.reward += sum(future_rewards)
+                self.memories[i] = memory

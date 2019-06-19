@@ -96,7 +96,3 @@ class Agent:
                                     actual_phase=self.actual_phase,
                                     phase_duration=self.phase_duration)
         self.local_state = local_state
-
-    def assign_reward(self, previous_x, actual_x, global_reward):
-        # TODO dodac lokalny reward
-        self.rewards.append(global_reward)

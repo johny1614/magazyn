@@ -63,7 +63,7 @@ def _build_model():
     model.add(Dense(40, activation='relu'))
     model.add(Dense(4, activation='linear'))
     model.compile(loss=huber_loss,
-                  optimizer=Adam())
+                  optimizer=Adam(learning_rate=0.00001))
     return model
 
 def get_batches(memoriez):

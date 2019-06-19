@@ -9,7 +9,6 @@ from Env import Env, ActionInt
 from env_data import max_time
 from model import SmartAgent
 from model.ExportData import ExportData
-from nn_data import S1, S3
 from services.agentFactory import get_SmartAgents
 from services.globals import Globals
 

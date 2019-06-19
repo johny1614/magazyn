@@ -15,7 +15,7 @@ class LearningState:
         self.cluster_index: int = 0
 
     def __hash__(self):
-        all_properties = ['pre_cross_densities', 'global_aggregated_densities', 'phase_index', 'phase_duration']
+        all_properties = ['pre_cross_densities', 'global_aggregated_densities', 'actual_phase', 'phase_duration']
         values = tuple([getattr(self, prop) for prop in all_properties])
         return hash(values)
 
