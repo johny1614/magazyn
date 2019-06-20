@@ -38,7 +38,7 @@ class SmartAgent(Agent):
         self.private_model = self._build_model()
 
     def get_action(self, state):
-        if np.random.rand() <= Globals().epsilon():  # if acting randomly, take random action
+        if np.random.rand() <= Globals().epsilon:  # if acting randomly, take random action
             # print(f'{self.local_action_space} bo phase_duration {self.phase_duration}')
             action = random.choice(self.local_action_space)
             # TODO tutaj losuje zera!
@@ -47,7 +47,7 @@ class SmartAgent(Agent):
             #     print(f'stan {state.to_learn_nd_array()} i losowa akcja: {action} ')
             return action
         predictions = self.model.predict(
-            state.to_learn_nd_array_full())  # if not acting randomly, predict reward value based on current state
+            state.to_9_densities_learn_array())  # if not acting randomly, predict reward value based on current state
         action = np.argmax(predictions[0])
         if action not in self.local_action_space:
             sorted_actions = np.argsort(-predictions[0])
@@ -66,19 +66,20 @@ class SmartAgent(Agent):
         # model.add(Dense(Globals().l2, activation='relu'))  # 2nd hidden layer
         # model.add(Dense(Globals().l3, activation='relu'))  # 2nd hidden layer
         # model.add(Dense(4, activation='linear'))  # 2 actions, so 2 output neurons: 0 and 1 (L/R)
-        model.add(Dense(70, input_dim=37, activation='relu'))  # 1st hidden layer; states as input
+        model.add(Dense(70, input_dim=10, activation='relu'))  # 1st hidden layer; states as input
         # model.add(BatchNormalization())
 
         # 70, 100, 150, 100, 80, 60, 30
-        model.add(Dense(100, activation='relu'))
-        model.add(Dense(150, activation='relu'))
-        model.add(Dense(100, activation='relu'))
-        model.add(Dense(80, activation='relu'))
-        model.add(Dense(60, activation='relu'))
+        # model.add(Dense(100, activation='relu'))
+        # model.add(Dense(150, activation='relu'))
+        # model.add(Dense(100, activation='relu'))
+        # model.add(Dense(80, activation='relu'))
+        model.add(Dense(20, activation='relu'))
+        model.add(Dense(40, activation='relu'))
         model.add(Dense(30, activation='relu'))
         model.add(Dense(4, activation='linear'))
         model.compile(loss='mse',
-                      optimizer=Adam(learning_rate=0.00001))
+                      optimizer=Adam(learning_rate=0.0001))
         return model
 
     def save_batch(self):
@@ -92,8 +93,8 @@ class SmartAgent(Agent):
             if memory.action == 0:
                 continue
             i += 1
-            state = memory.state.to_learn_nd_array_full()
-            new_state = memory.new_state.to_learn_nd_array_full()
+            state = memory.state.to_9_densities_learn_array()
+            new_state = memory.new_state.to_9_densities_learn_array()
             y = self.model.predict(state)
             future_actions_values_predictions = self.model.predict(new_state)
             possible_actions = memory.state.possible_actions(self.orange_phase_duration)
@@ -115,14 +116,9 @@ class SmartAgent(Agent):
         minibatch = random.sample(self.memories, min(len(self.memories), batch_size))
         x_batch = []
         y_batch = []
-        goodmemes1 = [mem for mem in self.memories if mem.state.global_densities[2] > 60 and mem.action == 1]
-        i=0
         for memory in minibatch:
-            if memory in goodmemes1:
-                i+=1
-                Globals().goodmemes.append(memory)
-            state = memory.state.to_learn_nd_array_full()
-            new_state = memory.new_state.to_learn_nd_array_full()
+            state = memory.state.to_9_densities_learn_array()
+            new_state = memory.new_state.to_9_densities_learn_array()
             y_target = self.model.predict(state)
             target = (memory.reward + gamma *  # (target) = reward + (discount rate gamma) *
                       np.amax(self.model.predict(new_state)))  # (maximum target Q based on future action a')
@@ -136,8 +132,8 @@ class SmartAgent(Agent):
         x_batch = []
         y_batch = []
         for memory in memories:
-            state = memory.state.to_learn_nd_array_full()
-            new_state = memory.new_state.to_learn_nd_array_full()
+            state = memory.state.to_9_densities_learn_array()
+            new_state = memory.new_state.to_9_densities_learn_array()
             y_target = self.model.predict(state)
             target = (memory.reward + gamma *  # (target) = reward + (discount rate gamma) *
                       np.amax(self.model.predict(new_state)))  # (maximum target Q based on future action a')
@@ -153,28 +149,37 @@ class SmartAgent(Agent):
         x = [0, 0, 60] + [0] * 33 + [1]
         print(self.model.predict(np.array([x])))
 
+    def full_batch(self):
+        x_batch = []
+        y_batch = []
+        gamma = Globals().gamma
+        for memory in self.memories:
+            state = memory.state.to_9_densities_learn_array()
+            new_state = memory.new_state.to_9_densities_learn_array()
+            y_target = self.model.predict(state)
+            target = (memory.reward + gamma *  # (target) = reward + (discount rate gamma) *
+                      np.amax(self.model.predict(new_state)))  # (maximum target Q based on future action a')
+            y_target[0][memory.action] = target
+            x_batch.append(state[0])
+            y_batch.append(y_target[0])
+        return x_batch, y_batch
+
+    def train_full(self, epochs):
+        # batch_size = Globals().batch_size
+        # val_batch_size = Globals().validation_batch_size
+        x_batch, y_batch = self.full_batch()
+        res = self.model.fit(np.array(x_batch), np.array(y_batch), epochs=epochs, batch_size=len(x_batch),
+                             verbose=0)
+    def evaluate_full(self):
+        x_batch, y_batch = self.full_batch()
+        return self.model.evaluate(np.array(x_batch), np.array(y_batch),verbose=0)
+
+
     def train(self):
         batch_size = Globals().batch_size
-        val_batch_size = Globals().validation_batch_size
         x_batch, y_batch = self.random_minibatch(batch_size)
-        x_val_batch, y_val_batch = self.random_minibatch(val_batch_size)
-        # validation_batch_size = Globals().validation_batch_size
-        # validation_batch = random.sample(self.memories, min(len(self.memories), validation_batch_size))
-        i=9
-        if self.index == 0:
-            res = self.model.fit(np.array(x_batch), np.array(y_batch), epochs=10, batch_size=len(x_batch),
-                                 verbose=0)
-            # val_loss = 999999999
-            # while True:
-            #     i+=10
-            #     res = self.model.fit(np.array(x_batch), np.array(y_batch), epochs=10, batch_size=len(x_batch),
-            #                          verbose=0)
-            #     validation = self.model.evaluate(np.array(x_val_batch), np.array(y_val_batch),verbose=0)
-            #     if validation > val_loss:
-            #         break
-            #     val_loss = validation
-            x = [0, 0, 60] + [0] * 33 + [1]
-            print(self.model.predict(np.array([x])))
+        res = self.model.fit(np.array(x_batch), np.array(y_batch), epochs=16, batch_size=len(x_batch),verbose=0)
+        # print(res.history['loss'][-1])
 
     def remember(self, densities, reward):
         state = self.local_state

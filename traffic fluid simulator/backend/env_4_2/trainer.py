@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 # 2 odcinki na droge!
 import os
 import random
+from timeit import default_timer as timer
 
 import numpy as np
 
@@ -51,15 +52,7 @@ def epoch():
     env.u = env_data.u_v1
     for t in range(max_time):
         actions: List[ActionInt] = [agent.get_action(agent.local_state) for agent in agents]
-        # print(actions)
-        # actions: List[ActionInt] = [3,3,3]
-        # if t >= 30:
-        #     actions = [2,2,3]
-        # if t==31:
-        # print('31 kurwa!')
-        # print(f'time:{t}')
         env.step(actions)
-        # print('x', env.x[t])
     Globals().epochs_done += 1
     return env
 
@@ -67,7 +60,7 @@ def epoch():
 agents: List[SmartAgent] = get_SmartAgents()
 best_score = 0
 scores = []
-epochs = range(100)
+epochs = range(140)
 our_memories = None
 last_epoch = None
 global_rewards = []
@@ -75,6 +68,7 @@ best_reward = -100
 session_rewards = []
 for e in epochs:
     # print('============================',e)
+    Globals().epsilon = 1 if e != epochs[-1] else 0
     env: Env = epoch()  # :1
     # print(env.cars_out)
     rewards = nested_sum(env.global_rewards)
@@ -86,25 +80,29 @@ for e in epochs:
         our_env = env
     session_rewards.append(rewards)
     scores.append(env.cars_out)
-    print(f'Epizod:{e} Cars_out:{round(env.cars_out)} reward:{round(rewards)} epsilon:{Globals().epsilon()}')
-    # pred = env.agents[0].model.predict(np.array([[7, 1, 1,1]]))
-    # print(pred)
+    print(f'Epizod:{e} Cars_out:{round(env.cars_out)} reward:{round(rewards)} epsilon:{Globals().epsilon}')
     if env.cars_out > best_score:
         best_score = env.cars_out
         our_memories = env.global_memories
-    # if i%10==0:
-    exportData = ExportData(learningMethod='Monte Carlo TODO', learningEpochs=0, nets=our_memories, netName='net4',
-                            densityName='cross')
-    exportData.saveToJson()
-    env.agents[0].reshape_rewards()
-    env.agents[0].train()
-    # for agent in env.agents:
-    #     agent.train()
-    # pred = env.agents[0].model.predict(np.array([[1,7,1,2]]))
-    # print(pred)
-    # env.agents[0].model.evaluate(np.array(Globals().x_batch), np.array(Globals().y_batch))
-    if e == epochs[-1]:
+    for agent in env.agents:
+        agent.reshape_rewards()
+    if e > 100:
+        print()
+        for agent in env.agents:
+            i=0
+            while i < 3:
+                time = timer()
+                agent.train()
+                i += 1
+                full_eval = agent.evaluate_full()
+            print('train time', timer() - time)
+            print('full_eval', full_eval)
+            print('koniec uczonka agenta !', agent.index)
+        Globals().epsilon = 0
+        env: Env = epoch()
         last_epoch = env.global_memories
+        print(f'Ostatnie epizody:{e} Cars_out:{round(env.cars_out)} reward:{round(rewards)} epsilon:{Globals().epsilon}')
+
 print('srednia rewardow', sum(session_rewards) / len(session_rewards))
 pyplot.plot(global_rewards)
 pyplot.show()

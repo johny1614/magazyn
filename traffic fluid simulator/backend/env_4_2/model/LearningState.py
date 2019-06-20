@@ -10,6 +10,7 @@ class LearningState:
     actual_phase: int
     phase_duration: int
     global_densities: List[int]
+    densities_9: List[int]
 
     def __attrs_post_init__(self):
         self.cluster_index: int = 0
@@ -56,6 +57,8 @@ class LearningState:
         #     pass
         return np.array([[self.pre_cross_densities[0], self.pre_cross_densities[1], self.pre_cross_densities[2],
                           self.actual_phase]])
+    def to_9_densities_learn_array(self):
+        return np.array([self.densities_9+[self.actual_phase]])
 
     def to_learn_nd_array_densities_group(self):
         den_group0 = self.den_group(self.pre_cross_densities[0])

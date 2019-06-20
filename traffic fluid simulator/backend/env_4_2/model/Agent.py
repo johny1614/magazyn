@@ -17,6 +17,7 @@ class Agent:
     moves: List[Tuple[int, int]]
     local_phase_sections: List[int]
     curve_densities: Dict[Tuple[int, int], int]
+    sections_9_indexes: List[int]
     local_state: LearningState = None
     phase_duration: int = 2  # na starcie mamy mozliwosc przelaczania - taki bonus
     orange_phase_duration: int = 2
@@ -85,14 +86,18 @@ class Agent:
             pre_cross_densities = pre_cross_densities + (densities[sec],)
         global_aggregated_densities = ()
         global_densities = []
+        densities_9 = []
         for road in sections_of_roads:
             global_aggregated_densities = global_aggregated_densities + (
                 round(np.sum([densities[section] for section in road])),)
             for sec in road:
                 global_densities.append(densities[sec])
+        for sec in self.sections_9_indexes:
+            densities_9.append(densities[sec])
         local_state = LearningState(pre_cross_densities=pre_cross_densities,
                                     global_aggregated_densities=global_aggregated_densities,
                                     global_densities=global_densities,
                                     actual_phase=self.actual_phase,
-                                    phase_duration=self.phase_duration)
+                                    phase_duration=self.phase_duration,
+                                    densities_9=densities_9)
         self.local_state = local_state

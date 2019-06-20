@@ -26,13 +26,14 @@ class BaseClass:
         self.max_epsilon=1
         self.min_epsilon = 0.01
         self.goodmemes = []
+        self.epsilon=1
 
-    def epsilon(self):
-        epsilon_decay = 0.99
-        epsilon = self.min_epsilon + epsilon_decay ** self.epochs_done
-        epsilon = epsilon if epsilon > self.min_epsilon else self.min_epsilon
-        epsilon = epsilon if epsilon < self.max_epsilon else self.max_epsilon
-        return epsilon
+    # def epsilon(self):
+    #     epsilon_decay = 0.96
+    #     epsilon = self.min_epsilon + epsilon_decay ** self.epochs_done
+    #     epsilon = epsilon if epsilon > self.min_epsilon else self.min_epsilon
+    #     epsilon = epsilon if epsilon < self.max_epsilon else self.max_epsilon
+    #     return epsilon
 
 
 class Globals(BaseClass, metaclass=Singleton):
