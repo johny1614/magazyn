@@ -1,0 +1,24 @@
+Env_4_6
+Maksymalnie moze wyjechac 10 pojazdow w danym kierunku (czyli 20 w obu).
+Pomaranczowe swiatlo trwa 2 tury.
+
+Wazne aby dawac akcje z action_space.
+
+
+Wprowadzone zmiany:
+Action_space będzie 'orange' lub [0,1,2] - stare 1,2,3 to teraz 0,1,2. Z kolei stare 0 to teraz 'orange'
+
+
+UWAGA WAŻNA RZECZ:
+kiedy mam zrobić predict(new_state) to new_state będzie mial 'orange' jako akcje.
+Co wtedy? My nawet teoretycznie potrzebujemy ocene tego stanu.
+Teoretycznie mozemy we wzorze dać gamme=0
+target_action = (memory.reward + gamma *  # (target) = reward + (discount rate gamma) *
+                             best_possible_future_action_value)  # (maximum target Q based on future action a')
+bo reward i tak uwzglednia najblizsze 3 interwaly czasowe
+
+Na probe robimy zatem target_action = memory.reward
+
+
+UWAGA 2:
+Mozna po prostu dac np jako akcje -1?
