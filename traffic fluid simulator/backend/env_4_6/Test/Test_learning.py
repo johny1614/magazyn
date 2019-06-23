@@ -1,15 +1,9 @@
-import random
 import unittest
 from typing import List
-
-import numpy as np
-
 import env_settings
-from Env import Env, ActionInt
-from env_settings import max_time
+from Env import Env
 from model import SmartAgent
 from model.ExportData import ExportData
-from runner_random import run_random
 from services.agentFactory import get_SmartAgents
 from services.globals import Globals
 

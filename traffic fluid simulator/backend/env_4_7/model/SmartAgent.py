@@ -188,8 +188,5 @@ class SmartAgent(Agent):
             if not memory.reshapedReward:
                 memory.reshapedReward = True
                 future_rewards = [mem.reward for mem in self.memories[i + 1:i + 3]]  # 2 next rewards
-                print(f'{i} {future_rewards}')
                 memory.reward += sum(future_rewards)
-                if memory.reward < 0:
-                    print('wtf')
                 self.memories[i] = memory

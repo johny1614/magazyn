@@ -19,7 +19,7 @@ orange = 'orange'
 
 
 def actions_fun(t):
-    actions = [0, 0, 0]
+    actions = [1, 1, 1]
     if t == 60 or t >= 63:
         actions = [1, 1, 1]
     if t == 61 or t == 62:
@@ -36,8 +36,8 @@ for e in epochs:
     for agent in env.agents:
         agent.reshape_rewards()
 
-for agent in agents:
-    agent.save_batch()
+# for agent in agents:
+#     agent.save_batch()
 # env.update_global_memory_rewards()
 exportData = ExportData(learningMethod='Monte Carlo TODO', learningEpochs=0, nets=env.global_memories,
                                 netName='net4',

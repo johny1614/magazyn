@@ -21,10 +21,10 @@ class Agent:
     local_state: LearningState = None
     phase_duration: int = 2  # na starcie mamy mozliwosc przelaczania - taki bonus
     orange_phase_duration: int = 2
-    pending_phase: PhaseInt = 0
+    pending_phase: PhaseInt = 2
     rewards: List[float] = []
-    actual_phase = 0
-    starting_actual_phase = 0
+    actual_phase = 2
+    starting_actual_phase = 2
     action = None
 
     @property
@@ -47,12 +47,7 @@ class Agent:
         if action not in self.local_action_space:
             print(
                 f'uwagaAAAAAAAAAAAAAAAAAAA akcja {action} nie jest w local_action_space ktory jest rowny {self.local_action_space}, w chwili {Globals().time}, aktualny phase_duration: {self.phase_duration}')
-        #     if self.local_action_space == [0]:
-        #         action = 0
-        #         print('akcja zmieniona na 0')
         self.action = action
-        # if 60 <= Globals().time <= 63 and self.index == 0:
-        # print(f'Na poczatku chwili {Globals().time} jest faza {self.actual_phase} akcja to:{action} phase_duration:{self.phase_duration} pending_phase:{self.pending_phase}')
         orange='orange'
         if action == orange:
             if self.actual_phase == orange:

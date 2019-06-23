@@ -26,7 +26,7 @@ def epoch(agents, u=env_settings.u_all_2):
     Globals().epochs_done += 1
     return env
 
-epochs = range(14)
+epochs = range(100)
 # epochs = range(1, 2)
 xy_20_all = []
 agents: List[SmartAgent] = get_SmartAgents()
@@ -37,10 +37,10 @@ for e in epochs:
         agent.reshape_rewards()
     env.update_memory_rewards()
     env.remember_memory()
-    exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
-                            netName='net4',
-                            densityName='random_' + str(e))
-    exportData.saveToJson()
+    # exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
+    #                         netName='net4',
+    #                         densityName='random_' + str(e))
+    # exportData.saveToJson()
     x_batch, y_batch = agents[0].memory_to_minibatch_with_oranges()
     xy_20 = [(x_batch[i], y_batch[i], i, agents[0].memories[i], e) for i in range(len(x_batch)) if
              25 > x_batch[i][2] > 15 and agents[0].memories[i].action == 0]

@@ -1,0 +1,9 @@
+Env_4_6
+Maksymalnie moze wyjechac 10 pojazdow w danym kierunku (czyli 20 w obu).
+Pomaranczowe swiatlo trwa 2 tury.
+
+Wazne aby dawac akcje z action_space.
+
+
+Wprowadzone zmiany:
+Restrukturyzacja folderów

@@ -7,12 +7,13 @@ from model.LearningState import LearningState
 from model.SmartAgent import SmartAgent
 
 
-def get_LearnSmartAgents() -> List[SmartAgent]:
+def get_LearnSmartAgents(file_names=None) -> List[SmartAgent]:
     agents = get_SmartAgents()
-    for agent in agents:
-        file_name = 'agent' + str(agent.index) + '.h5'
-        model = load_model(file_name)
-        agent.model = model
+    if file_names == None:
+        file_names = ['static_files/model-agent0.h5','static_files/model-agent1.h5','static_files/model-agent2.h5']
+    for i in range(len(agents)):
+        model = load_model(file_names[i])
+        agents[i].model = model
     return agents
 
 

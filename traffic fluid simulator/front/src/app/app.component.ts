@@ -36,14 +36,16 @@ export class AppComponent {
     this.getJSON('assets/nets/net4.json').subscribe(staticData => {
       this.nets = [NetFactory.netFromJson(staticData)];
       // let net = 'assets/densities/net4_cross.json'
-      let net = 'assets/densities/net4_random.json'
+      // let net = 'assets/densities/net4_random.json';
+      // let net = 'assets/densities/net4_sequential.json'
       // let net = 'assets/densities/net4_last_epoch.json'
-      // let net = 'assets/densities/net4_test_no_4.json';
+      // let net = 'assets/densities/net4_learnt1.json';
       // waaat
       // let net = 'assets/densities/net4_test_no_5.json';
       // let net = 'assets/densities/net4_test_no_2.json';
-      // let net = 'assets/densities/net4_test_no_1.json';
-// sdfsdf
+      let net = 'assets/densities/net4_seq.json';
+      // let net = 'assets/densities/net4_random_0.json';
+      // let net = 'assets/densities/net4_random_1.json';
       this.getJSON(net).subscribe(dynamicData => {
         console.log('jest dynamicData', dynamicData);
         this.nets = NetFactory.getNetsWithDensity(staticData, dynamicData);
