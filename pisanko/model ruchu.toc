@@ -24,11 +24,5 @@
 \contentsline {subsection}{\numberline {5.7.1}Przyk\IeC {\l }ad dla pojedynczej drogi}{25}% 
 \contentsline {subsection}{\numberline {5.7.2}Przyk\IeC {\l }ad dla z\IeC {\l }o\IeC {\.z}onej sieci dr\IeC {\'o}g}{26}% 
 \contentsline {section}{\numberline {5.8}Wprowadzenie g\IeC {\k e}sto\IeC {\'s}ci ruchu}{26}% 
-\contentsline {section}{\numberline {5.9}Uk\IeC {\l }ady symulacyjne}{26}% 
-\contentsline {chapter}{\numberline {6}Przedstawienie problemu optymalizacyjnego}{27}% 
-\contentsline {chapter}{\numberline {7}Przegl\IeC {\k a}d metod optymalizacyjnych}{29}% 
-\contentsline {section}{\numberline {7.1}Kategorie uczenia maszynowego}{29}% 
-\contentsline {section}{\numberline {7.2}Uczenie ze wzmocnieniem}{29}% 
-\contentsline {section}{\numberline {7.3}Programowanie dynamiczne}{32}% 
-\contentsline {section}{\numberline {7.4}Metoda Monte Carlo On-Policy}{33}% 
-\contentsline {chapter}{\numberline {8}Optymalizacja sygnalizacji \IeC {\'s}wietlnej}{35}% 
+\contentsline {chapter}{\numberline {6}\IeC {\'s}rodowiska symulacyjne qwe}{27}% 
+\contentsline {section}{\numberline {6.1}Srodowisko 4}{27}% 

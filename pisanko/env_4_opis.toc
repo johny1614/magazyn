@@ -1,0 +1,6 @@
+\babel@toc {polish}{}
+\babel@toc {polish}{}
+\contentsline {chapter}{\numberline {1}\IeC {\'s}rodowiska symulacyjne qwe}{5}% 
+\contentsline {section}{\numberline {1.1}Srodowisko 4}{5}% 
+\contentsline {section}{\numberline {1.2}Uczenie srodowiska 4}{6}% 
+\contentsline {subsection}{\numberline {1.2.1}Podej\IeC {\'s}cie 1}{6}% 

@@ -532,8 +532,60 @@ Dalszy rozwój ruchu-
 Do zrobienia :)
 \section{Wprowadzenie gęstości ruchu}
 Do zrobienia :)
-\section{Układy symulacyjne}
-Do zrobienia :)
+
+
+
+
+
+
+
+
+
+
+
+
+\chapter {środowiska symulacyjne qwe}
+\section{Srodowisko 4}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{env_4_agenci}
+	\label{fig:env_4_agenci}
+	\caption{środowisko 4}
+\end{figure}
+
+środowisko posiada 12 jednokierunkowych dróg. Każda droga ma 3 odcinki co daje w sumie 36 odcinków (są numerowane od 0 co widać na rysunku \ref{fig:env_4_agenci}).
+W sieci dróg znajdują się 3 skrzyżowania. Do każdego z nich jest przypisany agent, który odpowiada za sterowanie sygnalizacją świetlną.
+
+Model ruchu:
+Pojazdy w jednym interwale czasowym pokonują jeden odcinek. Na skrzyżowaniach w przypadku zielonego światła przejeżdża maksymalnie 10 pojazdów w jedną stronę.
+Fazy świetlne: Każde skrzyżowanie posiada 4 fazy świetlne przedstawione poniżej. Fazy 0,1 i 2 są fazami, które posiadają pewne zielone światła. Agent podejmuje decyzję o zmianie tych faz. Zmiana ta nie jest natychmiastowa i następuje dopiero po 2 interwałach fazy żółtych 
+świateł.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{env_4_fazy}
+	\label{fig:env_4_fazy}
+	\caption{środowisko 4 - fazy świateł}
+\end{figure}
+
+\end{document} 
+
+Uczenie:
+Każdy agent jako stan przyjmuje 10 elementową tablicę. 9 elementów to ilości pojazdów na odcinkach będących przed skrzyżowaniem przypisanym do agenta.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \chapter{Przedstawienie problemu optymalizacyjnego}
 
