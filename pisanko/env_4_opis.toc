@@ -1,6 +1,9 @@
 \babel@toc {polish}{}
 \babel@toc {polish}{}
-\contentsline {chapter}{\numberline {1}\IeC {\'s}rodowiska symulacyjne qwe}{5}% 
-\contentsline {section}{\numberline {1.1}Srodowisko 4}{5}% 
-\contentsline {section}{\numberline {1.2}Uczenie srodowiska 4}{6}% 
+\contentsline {chapter}{\numberline {1}\IeC {\'S}rodowiska symulacyjne i ich nauka}{5}% 
+\contentsline {section}{\numberline {1.1}\IeC {\'S}rodowisko 4}{5}% 
+\contentsline {section}{\numberline {1.2}Uczenie \IeC {\'S}rodowiska 4}{6}% 
 \contentsline {subsection}{\numberline {1.2.1}Podej\IeC {\'s}cie 1}{6}% 
+\contentsline {subsection}{\numberline {1.2.2}Monitorowanie decyzji dla wybranego stanu}{7}% 
+\contentsline {section}{\numberline {1.3}Analiza wynik\IeC {\'o}w uczenia}{9}% 
+\contentsline {section}{\numberline {1.4}Monitorowanie kolejnego stanu}{10}% 
