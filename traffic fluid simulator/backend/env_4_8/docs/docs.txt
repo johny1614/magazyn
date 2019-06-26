@@ -1,0 +1,13 @@
+Env_4_6
+Maksymalnie moze wyjechac 10 pojazdow w danym kierunku (czyli 20 w obu).
+Pomaranczowe swiatlo trwa 2 tury.
+Action_space to 'orange' lub [0,1,2]
+Wazne aby dawac akcje z action_space.
+
+
+Wprowadzone zmiany:
+
+Tym razem trzeba zrobic chociaz 2 okrazenia! Poniewaz w pierwszym generowaniu - mamy problem, że
+jest model.predict(state) - a model jeszcze nie jest wytrenowany!
+Trzeba wymazac memories, ale nie model w nastepnym generowanku!
+
