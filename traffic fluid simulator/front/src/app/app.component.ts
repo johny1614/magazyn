@@ -43,9 +43,11 @@ export class AppComponent {
       // waaat
       // let net = 'assets/densities/net4_test_no_5.json';
       // let net = 'assets/densities/net4_test_no_2.json';
-      let net = 'assets/densities/net4_seq.json';
+      // let net = 'assets/densities/net4_seq.json';
       // let net = 'assets/densities/net4_random_0.json';
-      // let net = 'assets/densities/net4_random_1.json';
+      // let net = 'assets/densities/net4_random_3.json';
+      let net = 'assets/densities/net4_stan_monitorowany_2.json';
+
       this.getJSON(net).subscribe(dynamicData => {
         console.log('jest dynamicData', dynamicData);
         this.nets = NetFactory.getNetsWithDensity(staticData, dynamicData);

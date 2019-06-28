@@ -5,7 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3bc62bd-0327-4a90-b067-71b6ea844ee3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../obrazy.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../obrazy.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_7/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_8/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_8/cars_out.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_8/cars_out_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_8/cars_out_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_8/cars_out_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_8/cars_out_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_8/foo2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_8/nn_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/nn_trainer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_8/rewards.png" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/rewards.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_8/rewards_mean.png" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/rewards_mean.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_8/runner_all.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/runner_all.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_8/services/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/services/globals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_8/static_files/model-agent0.h5" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/static_files/model-agent0.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_8/static_files/model-agent1.h5" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/static_files/model-agent1.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_8/static_files/model-agent2.h5" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/static_files/model-agent2.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_8/static_files/x_batch_agent_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/static_files/x_batch_agent_0.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_8/static_files/x_batch_agent_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/static_files/x_batch_agent_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_8/static_files/x_batch_agent_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/static_files/x_batch_agent_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_8/static_files/y_batch_agent_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/static_files/y_batch_agent_0.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_8/static_files/y_batch_agent_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/static_files/y_batch_agent_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_8/static_files/y_batch_agent_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/static_files/y_batch_agent_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/app/canvas.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/canvas.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/app/displayer/displayer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/displayer/displayer.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/app/net/net.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/net/net.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net4_learnt1.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net4_learnt1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net4_random_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net4_random_3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net4_random_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net4_seq.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net4_seq.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/services/netFactory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/services/netFactory.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,16 +181,6 @@
               <item name="env_4_6" type="b2602c69:ProjectViewProjectNode" />
               <item name="env_4_6" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="env_4_6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="env_4_6" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="env_4_6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="env_4_6" type="462c0819:PsiDirectoryNode" />
-              <item name="static_files" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -170,7 +191,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../env_4_8" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
@@ -355,6 +376,7 @@
       <workItem from="1557619533499" duration="8000" />
       <workItem from="1561144135477" duration="17000" />
       <workItem from="1561404441056" duration="593000" />
+      <workItem from="1561751659259" duration="34000" />
     </task>
     <servers />
   </component>
@@ -391,7 +413,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="618000" />
+    <option name="totallyTimeSpent" value="652000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -405,7 +427,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14383562" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14383562" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -416,8 +438,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49947312" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.60010535" visible="true" weight="0.48212352" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.39989462" side_tool="true" visible="true" weight="0.48212352" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.5995785" visible="true" weight="0.48212352" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.4004215" side_tool="true" visible="true" weight="0.48212352" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.5438787" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32936078" />
       <window_info anchor="bottom" id="Mypy" order="12" />

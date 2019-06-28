@@ -80,7 +80,7 @@ def train(learntAgents=True, max_time_learn=20):
             plt.plot([pred[0][2] for pred in Globals().pred_plot_memory], color='blue', label='2')
             plt.legend()
             plt.title('Nagrody przewidziane dla akcji podjętych podczas monitorowanego stanu')
-            plt.savefig('foo.png')
+            plt.savefig('foo'+str(Globals().run_no)+'.png')
             plt.close()
 
 

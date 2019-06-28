@@ -28,6 +28,7 @@ class BaseClass:
         self.goodmemes = []
         self.epsilon=1
         self.pred_plot_memory=[]
+        self.run_no=0
 
     # def epsilon(self):
     #     epsilon_decay = 0.96

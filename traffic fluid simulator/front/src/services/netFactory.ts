@@ -32,6 +32,11 @@ export class NetFactory {
     const time = dynamicData ? dynamicData.time : 0;
     return new Net(time, lines);
   }
+  // static getLightNormalNet(line,){
+  //   let restLight = restNet.lights[light.to][light.from];
+  //   const result = restLight === 0 ? 'red' : 'green';
+  //   return result;
+  // }
 
   static getLight(light: SingleLight, restNet): string {
     let restLight = restNet.lights[light.to][light.from];
@@ -54,6 +59,7 @@ export class NetFactory {
       if (line.lights.straight) {
         line.lights.straight.imageName = this.removeLightsFromName(line.lights.straight.imageName);
         line.lights.straight.imageName = line.lights.straight.imageName + '_' + NetFactory.getLight(line.lights.straight, dynamicNet);
+        console.log('po ', line.lights.straight.imageName)
       }
       if (line.lights.right) {
         line.lights.right.imageName = this.removeLightsFromName(line.lights.right.imageName);
@@ -66,11 +72,43 @@ export class NetFactory {
     });
   }
 
+  static changeLights(net): Net {
+    for (let line of net.lines) {
+      // console.log('przed ', line.lights.straight.imageName)
+      if (net.lights) {
+        if (line.lights.straight) {
+          line.lights.straight.imageName = this.removeLightsFromName(line.lights.straight.imageName);
+          let actual_light = net.A[line.lights.straight.to][line.lights.straight.from] > 0 ? 'green' : 'red';
+          line.lights.straight.imageName = line.lights.straight.imageName + '_' + actual_light
+          if (actual_light=='green'){
+            console.log('linia zielona!',line)
+          }
+        }
+        if (line.lights.right) {
+          line.lights.right.imageName = this.removeLightsFromName(line.lights.right.imageName);
+          let actual_light = net.A[line.lights.right.to][line.lights.right.from] > 0 ? 'green' : 'red';
+          line.lights.right.imageName = line.lights.right.imageName + '_' + actual_light
+          console.log('linia zielona!',line)
+
+        }
+        if (line.lights.left) {
+          line.lights.left.imageName = this.removeLightsFromName(line.lights.left.imageName);
+          let actual_light = net.A[line.lights.left.to][line.lights.left.from] > 0 ? 'green' : 'red';
+          line.lights.left.imageName = line.lights.left.imageName + '_' + actual_light
+          console.log('linia zielona!',line)
+
+          // line.lights.left.imageName = line.lights.left.imageName + '_' + NetFactory.getLight(line.lights.left, dynamicNet);
+        }
+      }
+    }
+    return net
+  }
+
   static attachLights(nets, dynamicData) {
-    console.log('nets',nets);
+    console.log('nets', nets);
     for (let net_index = 0; net_index < nets.length; net_index++) {
-      console.log('net_index',net_index);
-      console.log('A',dynamicData.nets[net_index].lights)
+      console.log('net_index', net_index);
+      console.log('A', dynamicData.nets[net_index].lights)
       for (let line_index = 0; line_index < nets[net_index].lines.length; line_index++) {
         const line: Line = nets[net_index].lines[line_index];
         if (line.lights) {
@@ -87,7 +125,7 @@ export class NetFactory {
       net.rewards = dynamicData.nets[i].rewards
     }
   }
-  static attachActions(nets,dynamicData){
+  static attachActions(nets, dynamicData) {
     for (let i = 0; i < nets.length; i++) {
       let net = nets[i]
       net.actions = dynamicData.nets[i].actions

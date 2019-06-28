@@ -35,5 +35,4 @@ export class DisplayerComponent implements OnInit {
     return rewards;
   }
 
-
 }

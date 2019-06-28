@@ -60,9 +60,11 @@ export class CanvasService {
   }
 
   drawLights(line: Line) {
+    console.log('LINIA',line)
     Object.keys(line.lights).forEach(
       direction => {
         const light: SingleLight = line.lights[direction];
+        console.log('light',light)
         let arrowImage = new Image();
         arrowImage.src = "../../assets/arrows/" + light.imageName + ".png";
         arrowImage.onload = () => {
@@ -97,6 +99,7 @@ export class CanvasService {
   }
 
   drawAllLines(net: Net) {
+    console.log('serwis ma neta',net)
     for (let line of net.lines) {
       this.drawLine(line);
     }
