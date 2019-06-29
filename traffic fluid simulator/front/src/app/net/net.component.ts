@@ -13,11 +13,8 @@ export class NetComponent implements AfterViewInit {
   @Input()
   set net(v: Net) {
     this._net = v;
-    console.log('e', this._net.lines[0].densities[0])
     this._net.lines[0].densities[0] = 12
-    console.log('b', this._net.lines[0].densities[0])
     if (this._net) {
-      console.log('draw!')
       this.drawNet();
     }
   }
@@ -80,7 +77,7 @@ export class NetComponent implements AfterViewInit {
 
   drawNet() {
     this.ctx.clearRect(0, 0, this.netCanvas.nativeElement.width, this.netCanvas.nativeElement.height);
-    console.log('rysuje wedle', this._net)
+    // console.log('rysuje wedle', this._net)
     this.cs.drawAllLines(this._net);
     this.ctx.stroke();
   }

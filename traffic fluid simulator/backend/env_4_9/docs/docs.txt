@@ -1,0 +1,17 @@
+Env_4_6
+Maksymalnie moze wyjechac 10 pojazdow w danym kierunku (czyli 20 w obu).
+Pomaranczowe swiatlo trwa 2 tury.
+Action_space to 'orange' lub [0,1,2]
+Wazne aby dawac akcje z action_space.
+Dalej rewardy to z 3 interwalow czasowych przejazdy.
+
+Wprowadzone zmiany:
+
+Feature dry-run akcji ktory nam da rewardsy.
+Trzeba najlepiej zrobic do tego dry-run-service.
+Niech ma on nastepujace metodki:
+
+dry_run(env,actions):-> Env,rewards
+Przy czym zwyklego env - nie zmienia!
+
+

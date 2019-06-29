@@ -150,8 +150,24 @@ W tej sekcji zostanie przedstawione jak zmieniały się rekomendowane przez agen
 		\label{fig:env_4_monitorowany_stan_2_ucz.png}
 	\end{figure}
 
-Ten losowo wybrany stan, który wydaje się być wymagający w kwesti doboru najlepszej decyzji okazuje się nie sprawiać problemów dla agenta. Należy zatem prześledzić symulację, aby odnaleźć stany w których są podejmowane nieoptymalne akcje.
-	
+Ten losowo wybrany stan, który wydaje się być wymagający w kwesti doboru najlepszej decyzji okazuje się nie sprawiać problemów dla agenta. Należy zatem prześledzić symulację, aby odnaleźć stany w których są podejmowane nieoptymalne akcje. Przykładowy stan z którym agent nie radzi sobie jest przedstawiony poniżej. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{env4_3_monitorowany_stan.png}
+	\label{fig:	env4_3_monitorowany_stan.png}
+\end{figure}
+
+Dobrym wyborem wydaje się być podtrzymanie fazy 0. Przez conajmniej 3 najbliższe interwały czasowe faza 0 gwarantuje przepływ 30 pojazdów w trakcie pojedynczego interwału. Warto zauważyć, że 30 przejeżdżających pojazdów przez skrzyżowanie to maksymalna ilość na 1 interwał. Pomimo tego argumentu agent zazwyczaj decyduje się na akcję 1. Chociaż faza 1 także wydaje się być dobra - to karencja w postaci żółtego światła na 2 interwały czasowe zdecydowanie przechyla szalę na korzyść akcji 0 i podtrzymania aktualnej fazy.
+
+
+
+Wykonane zostaną następujące kroki, które potencjalnie mogą pozwolić agentowi uczyć się lepiej oraz odnajdywać poprawną akcję dla monitorowanego stanu.
+- Epsilon-greedy learning - początkowo dane będą dalej generowane w pełni losowo. Z czasem uczenia do generowania danych używane będą także akcje dobrane wedle najwyższej oczekiwanej nagrody.
+- Ciągła walidacja w trakcie uczenia
+- Wprowadzenie możliwości ustanowienia stanu w środowisku i nauki dla niego.
+
+
 \end{document} 
 
 

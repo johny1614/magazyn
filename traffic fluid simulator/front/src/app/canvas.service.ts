@@ -42,11 +42,12 @@ export class CanvasService {
 
   writeDensity(section) {
     this.ctx.font = "20px Arial";
+    let densityRounded = Math.round(section.density).toString();
     if (section.a < -0.5 || section.a > 0.5) {
-      this.ctx.fillText(section.density, section.middlePoint.x - 10, section.middlePoint.y);
+      this.ctx.fillText(densityRounded, section.middlePoint.x - 10, section.middlePoint.y);
     }
     else {
-      this.ctx.fillText(section.density, section.middlePoint.x - 5, section.middlePoint.y - 10);
+      this.ctx.fillText(densityRounded, section.middlePoint.x - 5, section.middlePoint.y - 10);
     }
   }
 
@@ -60,11 +61,11 @@ export class CanvasService {
   }
 
   drawLights(line: Line) {
-    console.log('LINIA',line)
+    // console.log('LINIA',line)
     Object.keys(line.lights).forEach(
       direction => {
         const light: SingleLight = line.lights[direction];
-        console.log('light',light)
+        // console.log('light',light)
         let arrowImage = new Image();
         arrowImage.src = "../../assets/arrows/" + light.imageName + ".png";
         arrowImage.onload = () => {
@@ -99,7 +100,7 @@ export class CanvasService {
   }
 
   drawAllLines(net: Net) {
-    console.log('serwis ma neta',net)
+    // console.log('serwis ma neta',net)
     for (let line of net.lines) {
       this.drawLine(line);
     }

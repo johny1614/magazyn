@@ -39,15 +39,15 @@ export class AppComponent {
       // let net = 'assets/densities/net4_random.json';
       // let net = 'assets/densities/net4_sequential.json'
       // let net = 'assets/densities/net4_last_epoch.json'
-      // let net = 'assets/densities/net4_learnt1.json';
+      let net = 'assets/densities/net4_learnt-10.json';
       // waaat
       // let net = 'assets/densities/net4_test_no_5.json';
       // let net = 'assets/densities/net4_test_no_2.json';
       // let net = 'assets/densities/net4_seq.json';
       // let net = 'assets/densities/net4_random_0.json';
       // let net = 'assets/densities/net4_random_3.json';
-      let net = 'assets/densities/net4_stan_monitorowany_2.json';
-
+      // let net = 'assets/densities/net4_stan_monitorowany_3.json';
+      // let net = 'assets/densities/net4_learnt-3.json';
       this.getJSON(net).subscribe(dynamicData => {
         console.log('jest dynamicData', dynamicData);
         this.nets = NetFactory.getNetsWithDensity(staticData, dynamicData);
