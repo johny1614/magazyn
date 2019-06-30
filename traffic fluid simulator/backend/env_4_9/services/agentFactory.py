@@ -8,13 +8,30 @@ from model.SmartAgent import SmartAgent
 
 
 def get_LearnSmartAgents(file_names=None) -> List[SmartAgent]:
-    models=[]
+    models = []
     if file_names == None:
-        file_names = ['static_files/model-agent0.h5','static_files/model-agent1.h5','static_files/model-agent2.h5']
+        file_names = ['static_files/model-agent0.h5', 'static_files/model-agent1.h5', 'static_files/model-agent2.h5']
     for i in range(3):
         model = load_model(file_names[i])
         models.append(model)
     return get_SmartAgents_with_model(models)
+
+
+def deep_copy_agent(agent):
+    new_agent = SmartAgent(index=agent.index,
+                           moves=agent.moves,
+                           local_phase_sections=agent.local_phase_sections,
+                           curve_densities=agent.curve_densities,
+                           sections_9_indexes=agent.sections_9_indexes)
+    new_agent.local_state = agent.local_state
+    new_agent.orange_phase_duration = agent.orange_phase_duration
+    new_agent.pending_phase = agent.pending_phase
+    new_agent.rewards = agent.rewards
+    new_agent.actual_phase = agent.actual_phase
+    new_agent.starting_actual_phase = agent.starting_actual_phase
+    new_agent.action = agent.action
+    return new_agent
+
 def get_SmartAgents() -> List[SmartAgent]:
     agents: SmartAgent = []
     agent_0 = SmartAgent(index=0,

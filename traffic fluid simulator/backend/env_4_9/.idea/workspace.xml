@@ -5,59 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3bc62bd-0327-4a90-b067-71b6ea844ee3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../env_4_8/10mins_state_3_monitored_bad/foo0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env_4_8/10mins_state_3_monitored_bad/foo1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env_4_8/10mins_state_3_monitored_bad/foo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env_4_8/10mins_state_3_monitored_bad/foo3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env_4_8/10mins_state_3_monitored_ok/foo1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env_4_8/10mins_state_3_monitored_ok/foo3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env_4_8/10mins_state_3_monitored_ok/foo4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../env_4_8/10mins_state_3_monitored_ok/foo5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../pisanko/env_4_opis.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/env_4_opis.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../pisanko/env_4_opis.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/env_4_opis.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../pisanko/env_4_opis.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/env_4_opis.synctex.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mypy_cache/3.6/dryRunnerService.data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mypy_cache/3.6/dryRunnerService.data.json.947b8cded78d4691" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mypy_cache/3.6/dryRunnerService.meta.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mypy_cache/3.6/services/dryRunnerService.data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mypy_cache/3.6/services/dryRunnerService.meta.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/Test_DryRunner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/dryRunnerService.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net4_test_dry_runner_no_1.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../pisanko/env_4_opis.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/env_4_opis.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../env_4_8/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/cars_out0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/cars_out1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/foo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/foo0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/foo1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/foo2_another.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/foo2_last.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/foo2_new.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/foo2_yetanother.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/nn_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/nn_trainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/rewards.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/rewards0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/rewards1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/rewards2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/rewards3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/rewards_mean.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/rewards_mean0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/rewards_mean1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/rewards_mean2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/rewards_mean3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/runner_all.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/runner_all.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/runner_learnt.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/runner_learnt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/services/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/services/globals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/static_files/model-agent0.h5" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/static_files/model-agent0.h5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/static_files/model-agent1.h5" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/static_files/model-agent1.h5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/static_files/model-agent2.h5" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/static_files/model-agent2.h5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/static_files/x_batch_agent_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/static_files/x_batch_agent_0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/static_files/x_batch_agent_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/static_files/x_batch_agent_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/static_files/x_batch_agent_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/static_files/x_batch_agent_2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/static_files/y_batch_agent_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/static_files/y_batch_agent_0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/static_files/y_batch_agent_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/static_files/y_batch_agent_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_8/static_files/y_batch_agent_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_8/static_files/y_batch_agent_2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/app/canvas.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/canvas.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/app/net/net.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/net/net.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net4_random_49.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net4_test_learn_no_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net4_test_learn_no_1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net4_test_no_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net4_test_no_1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net4_test_no_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net4_test_no_3.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net4_test_no_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net4_test_no_4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/Test_Env.data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/Test_Env.meta.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/runner.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/runner.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Env.py" beforeDir="false" afterPath="$PROJECT_DIR$/Env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/Test_Env.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Test_Env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_out0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_out1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_out2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_out3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_out4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars_out5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img_cars_out_random.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img_rewards_mean_random.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img_rewards_random.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rewards0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rewards1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rewards2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rewards3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rewards4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rewards5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rewards_mean0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rewards_mean1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rewards_mean2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rewards_mean3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rewards_mean4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rewards_mean5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/agentFactory.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/agentFactory.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,32 +55,55 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Test/Test_Env.py">
+        <entry file="file://$PROJECT_DIR$/services/dryRunnerService.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="256" column="50" selection-start-line="256" selection-start-column="50" selection-end-line="256" selection-end-column="50" />
+            <state relative-caret-position="255">
+              <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/Test_DryRunner.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1561819003801" expanded="true" signature="7893:10398" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/SmartAgent.py">
+        <entry file="file://C:/pyt36/Lib/unittest/case.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="74" column="31" lean-forward="true" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
+            <state relative-caret-position="10115">
+              <caret line="608" column="51" selection-start-line="608" selection-start-column="51" selection-end-line="608" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/Agent.py">
+        <entry file="file://$PROJECT_DIR$/Env.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+            <state relative-caret-position="2720">
+              <caret line="173" selection-start-line="173" selection-end-line="173" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/random_epochs_generator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="48" column="29" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="48" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,8 +119,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>memo</find>
-      <find>__assign_local_states_to_agents</find>
       <find>pyplot</find>
       <find>plot</find>
       <find>show(</find>
@@ -139,6 +147,8 @@
       <find>save</find>
       <find>starting_actual_phase</find>
       <find>actua</find>
+      <find>start</find>
+      <find>step</find>
     </findStrings>
     <replaceStrings>
       <replace>actual_phase</replace>
@@ -151,8 +161,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/services/dist.py" />
-        <option value="$PROJECT_DIR$/runner_MC.py" />
         <option value="$PROJECT_DIR$/model/Action.py" />
         <option value="$PROJECT_DIR$/model/Phase.py" />
         <option value="$PROJECT_DIR$/readme.md" />
@@ -189,19 +197,21 @@
         <option value="$PROJECT_DIR$/trainer_all.py" />
         <option value="$PROJECT_DIR$/Test/Test_random_batching.py" />
         <option value="$PROJECT_DIR$/runner.py" />
-        <option value="$PROJECT_DIR$/services/agentFactory.py" />
         <option value="$PROJECT_DIR$/sequential_epochs_generator.py" />
-        <option value="$PROJECT_DIR$/Env.py" />
         <option value="$PROJECT_DIR$/random_epochs_generator.py" />
         <option value="$PROJECT_DIR$/services/globals.py" />
         <option value="$PROJECT_DIR$/runner_learnt.py" />
         <option value="$PROJECT_DIR$/nn_trainer.py" />
         <option value="$PROJECT_DIR$/runner_all.py" />
-        <option value="$PROJECT_DIR$/docs/docs.txt" />
         <option value="$PROJECT_DIR$/model/LearningState.py" />
         <option value="$PROJECT_DIR$/model/SmartAgent.py" />
-        <option value="$PROJECT_DIR$/model/Agent.py" />
+        <option value="$PROJECT_DIR$/docs/docs.txt" />
         <option value="$PROJECT_DIR$/Test/Test_Env.py" />
+        <option value="$PROJECT_DIR$/model/Agent.py" />
+        <option value="$PROJECT_DIR$/services/agentFactory.py" />
+        <option value="$PROJECT_DIR$/Env.py" />
+        <option value="$PROJECT_DIR$/Test/Test_DryRunner.py" />
+        <option value="$PROJECT_DIR$/services/dryRunnerService.py" />
       </list>
     </option>
   </component>
@@ -217,6 +227,31 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="env_4_9" type="b2602c69:ProjectViewProjectNode" />
+              <item name="env_4_9" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="env_4_9" type="b2602c69:ProjectViewProjectNode" />
+              <item name="env_4_9" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="env_4_9" type="b2602c69:ProjectViewProjectNode" />
+              <item name="env_4_9" type="462c0819:PsiDirectoryNode" />
+              <item name="Test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="env_4_9" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -228,31 +263,6 @@
               <item name="env_4_7" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="static_files" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="env_4_9" type="b2602c69:ProjectViewProjectNode" />
-              <item name="env_4_9" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="env_4_9" type="b2602c69:ProjectViewProjectNode" />
-              <item name="env_4_9" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="env_4_9" type="b2602c69:ProjectViewProjectNode" />
-              <item name="env_4_9" type="462c0819:PsiDirectoryNode" />
-              <item name="Test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="env_4_9" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -293,8 +303,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for Test_Env.Testing.test_no_5_reshaping_pass_action_0_0_0_long_time_then_1_1_1_long_time_then_2_2_2">
-    <configuration name="random_epochs_generator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python tests.Unittests for Test_DryRunner.Testing.test_no_1_000_then_111">
+    <configuration name="dryRunnerService" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="promotora_macierzowo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -302,32 +312,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/services" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/random_epochs_generator.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="runner_all" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="promotora_macierzowo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runner_all.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/services/dryRunnerService.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -378,6 +367,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for Test_DryRunner.Testing.test_no_1_000_then_111" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="promotora_macierzowo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Test_DryRunner.Testing.test_no_1_000_then_111&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests for Test_Env.Testing.test_no_5_reshaping_pass_action_0_0_0_long_time_then_1_1_1_long_time_then_2_2_2" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="promotora_macierzowo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -394,6 +397,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for Test_DryRunner.Testing.test_no_1_000_then_111" />
+        <item itemvalue="Python.dryRunnerService" />
         <item itemvalue="Python tests.Unittests for Test_Env.Testing.test_no_5_reshaping_pass_action_0_0_0_long_time_then_1_1_1_long_time_then_2_2_2" />
       </list>
     </recent_temporary>
@@ -415,35 +420,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_Test_learning_py - 2019.06.22 at 16h 28m 27s.xml">
-      <configuration name="Unittests in Test_learning.py" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_DryRunner_Testing_test_no_1_000_then_111 - 2019.06.29 at 19h 54m 30s.xml">
+      <configuration name="Unittests for Test_DryRunner.Testing.test_no_1_000_then_111" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Test_learning_py - 2019.06.22 at 16h 29m 56s.xml">
-      <configuration name="Unittests in Test_learning.py" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_DryRunner_Testing_test_no_1_000_then_111 - 2019.06.29 at 19h 55m 11s.xml">
+      <configuration name="Unittests for Test_DryRunner.Testing.test_no_1_000_then_111" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Test_learning_py - 2019.06.22 at 16h 33m 17s.xml">
-      <configuration name="Unittests in Test_learning.py" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_DryRunner_Testing_test_no_1_000_then_111 - 2019.06.29 at 20h 04m 23s.xml">
+      <configuration name="Unittests for Test_DryRunner.Testing.test_no_1_000_then_111" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Test_learning_py - 2019.06.22 at 16h 33m 58s.xml">
-      <configuration name="Unittests in Test_learning.py" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_DryRunner_Testing_test_no_1_000_then_111 - 2019.06.29 at 20h 05m 30s.xml">
+      <configuration name="Unittests for Test_DryRunner.Testing.test_no_1_000_then_111" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_Test_learning_Testing_test_no_1_000_then_111_what_is_brilliant_idea - 2019.06.22 at 16h 34m 48s.xml">
-      <configuration name="Unittests for Test_learning.Testing.test_no_1_000_then_111_what_is_brilliant_idea" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_DryRunner_Testing_test_no_1_000_then_111 - 2019.06.29 at 20h 05m 42s.xml">
+      <configuration name="Unittests for Test_DryRunner.Testing.test_no_1_000_then_111" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_Test_learning_Testing_test_no_2_000_then_111_what_is_brilliant_idea - 2019.06.22 at 16h 51m 49s.xml">
-      <configuration name="Unittests for Test_learning.Testing.test_no_2_000_then_111_what_is_brilliant_idea" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_DryRunner_Testing_test_no_1_000_then_111 - 2019.06.29 at 20h 07m 06s.xml">
+      <configuration name="Unittests for Test_DryRunner.Testing.test_no_1_000_then_111" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_Test_learning_Testing_test_no_2_000_then_111_what_is_brilliant_idea - 2019.06.22 at 16h 53m 05s.xml">
-      <configuration name="Unittests for Test_learning.Testing.test_no_2_000_then_111_what_is_brilliant_idea" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_DryRunner_Testing_test_no_1_000_then_111 - 2019.06.29 at 20h 07m 33s.xml">
+      <configuration name="Unittests for Test_DryRunner.Testing.test_no_1_000_then_111" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_Test_Env_Testing_test_no_5_reshaping_pass_action_0_0_0_long_time_then_1_1_1_long_time_then_2_2_2 - 2019.06.29 at 15h 43m 50s.xml">
-      <configuration name="Unittests for Test_Env.Testing.test_no_5_reshaping_pass_action_0_0_0_long_time_then_1_1_1_long_time_then_2_2_2" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_DryRunner_Testing_test_no_1_000_then_111 - 2019.06.29 at 20h 09m 16s.xml">
+      <configuration name="Unittests for Test_DryRunner.Testing.test_no_1_000_then_111" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_Test_Env_Testing_test_no_5_reshaping_pass_action_0_0_0_long_time_then_1_1_1_long_time_then_2_2_2 - 2019.06.29 at 16h 22m 26s.xml">
-      <configuration name="Unittests for Test_Env.Testing.test_no_5_reshaping_pass_action_0_0_0_long_time_then_1_1_1_long_time_then_2_2_2" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_DryRunner_Testing_test_no_1_000_then_111 - 2019.06.29 at 20h 15m 42s.xml">
+      <configuration name="Unittests for Test_DryRunner.Testing.test_no_1_000_then_111" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_Test_Env_Testing_test_no_5_reshaping_pass_action_0_0_0_long_time_then_1_1_1_long_time_then_2_2_2 - 2019.06.29 at 16h 35m 58s.xml">
-      <configuration name="Unittests for Test_Env.Testing.test_no_5_reshaping_pass_action_0_0_0_long_time_then_1_1_1_long_time_then_2_2_2" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_DryRunner_Testing_test_no_1_000_then_111 - 2019.06.29 at 21h 54m 19s.xml">
+      <configuration name="Unittests for Test_DryRunner.Testing.test_no_1_000_then_111" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
@@ -460,21 +465,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18177028" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.48946258" weight="0.32719395" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.61485773" weight="0.41061756" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.54531085" weight="0.39111593" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4889357" weight="0.32719395" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.613804" weight="0.5092091" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.54162276" weight="0.45070422" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49947312" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.55268705" visible="true" weight="0.43445286" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.44731295" side_tool="true" visible="true" weight="0.43445286" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.54741836" visible="true" weight="0.42578548" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.45258167" side_tool="true" visible="true" weight="0.42578548" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.5438787" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32936078" />
       <window_info anchor="bottom" id="Mypy" order="12" />
@@ -494,6 +498,21 @@
           <url>file://$PROJECT_DIR$/model/SmartAgent.py</url>
           <line>74</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/services/dryRunnerService.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/services/dryRunnerService.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Env.py</url>
+          <line>173</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -609,122 +628,57 @@ model.predict(np.array([x]))</expression-string>
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>self.memories</expression-string>
+        <expression-string>rewards</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>cars_outs</expression-string>
+        <expression-string>[x[0] for x in env_copy.global_rewards[-4:]]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.model</expression-string>
+        <expression-string>env_copy.global_rewards[-4:]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.model.layers[0]</expression-string>
+        <expression-string>env_copy.global_rewards[-4:][0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>plt</expression-string>
+        <expression-string>[(x[0],x[1],x[2]) for x in env_copy.global_rewards[-4:]]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>plt.legend</expression-string>
+        <expression-string>[x for x in env_copy.global_rewards[-4:]]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>plt.savefig('foo.png')</expression-string>
+        <expression-string>env_copy.global_rewards[-3:]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>plt.plot([pred[0][0] for pred in Globals().pred_plot_memory], color='red', label='0')</expression-string>
+        <expression-string>env_copy.global_rewards[-3:-1]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>[res[0] for res in results]</expression-string>
+        <expression-string>env_copy.global_rewards[-1:-4]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cars_out_3.png" />
-    <entry file="file://$PROJECT_DIR$/cars_out_4.png" />
-    <entry file="file://$PROJECT_DIR$/rewards.png" />
-    <entry file="file://$PROJECT_DIR$/foo2_another.png" />
-    <entry file="file://$PROJECT_DIR$/foo2_new.png" />
-    <entry file="file://$PROJECT_DIR$/img_rewards_monitored_state_2/foo_rew.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cars_out.png" />
-    <entry file="file://$PROJECT_DIR$/model/GlobalState.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10min_learnings/cars_out2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10min_learnings/cars_out3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10min_learnings/cars_out4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10min_learnings/cars_out5.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10min_learnings/cars_out1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10min_learnings/foo1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10min_learnings/foo2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10min_learnings/foo3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10min_learnings/foo4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10min_learnings/foo5.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10min_learnings/cars_out0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10min_learnings/foo0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/foo.png" />
     <entry file="file://$PROJECT_DIR$/services/globals.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="31" column="26" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runner_learnt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -740,16 +694,6 @@ model.predict(np.array([x]))</expression-string>
     <entry file="file://$PROJECT_DIR$/10mins_state_3_monitored_bad/foo3.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/agentFactory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="21" column="61" lean-forward="true" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/siec z agentami.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -762,18 +706,10 @@ model.predict(np.array([x]))</expression-string>
     <entry file="file://$PROJECT_DIR$/10mins_state_3_monitored_ok/foo1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/cars_out3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cars_out2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cars_out1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cars_out0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/cars_out3.png" />
+    <entry file="file://$PROJECT_DIR$/cars_out2.png" />
+    <entry file="file://$PROJECT_DIR$/cars_out1.png" />
+    <entry file="file://$PROJECT_DIR$/cars_out0.png" />
     <entry file="file://$PROJECT_DIR$/img_rewards_monitored_state_2/foo_rew2.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -809,13 +745,6 @@ model.predict(np.array([x]))</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/docs.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nn_trainer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -833,27 +762,130 @@ model.predict(np.array([x]))</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/Agent.py">
+    <entry file="file://$PROJECT_DIR$/docs/docs.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/SmartAgent.py">
+    <entry file="file://$PROJECT_DIR$/rewards0.png" />
+    <entry file="file://$PROJECT_DIR$/rewards1.png" />
+    <entry file="file://$PROJECT_DIR$/rewards2.png" />
+    <entry file="file://$PROJECT_DIR$/rewards3.png" />
+    <entry file="file://$PROJECT_DIR$/rewards4.png" />
+    <entry file="file://$PROJECT_DIR$/rewards5.png" />
+    <entry file="file://$PROJECT_DIR$/rewards_mean0.png" />
+    <entry file="file://$PROJECT_DIR$/rewards_mean1.png" />
+    <entry file="file://$PROJECT_DIR$/rewards_mean2.png" />
+    <entry file="file://$PROJECT_DIR$/rewards_mean3.png" />
+    <entry file="file://$PROJECT_DIR$/rewards_mean4.png" />
+    <entry file="file://$PROJECT_DIR$/rewards_mean5.png" />
+    <entry file="file://$PROJECT_DIR$/res.txt" />
+    <entry file="file://$PROJECT_DIR$/Test/Test_learning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="74" column="31" lean-forward="true" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/Test_Env.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="256" column="50" selection-start-line="256" selection-start-column="50" selection-end-line="256" selection-end-column="50" />
+        <state relative-caret-position="181">
+          <caret line="165" column="43" selection-start-line="165" selection-start-column="22" selection-end-line="165" selection-end-column="43" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1561819003801" expanded="true" signature="7893:10398" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/SmartAgent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env_settings.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="27" column="11" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/agentFactory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runner_learnt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/dryRunnerService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/Test_DryRunner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/pyt36/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10115">
+          <caret line="608" column="51" selection-start-line="608" selection-start-column="51" selection-end-line="608" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2720">
+          <caret line="173" selection-start-line="173" selection-end-line="173" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/random_epochs_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="48" column="29" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="48" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>

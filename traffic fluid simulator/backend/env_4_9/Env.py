@@ -10,6 +10,7 @@ from model.Agent import Agent
 # trojkatne - 3 skrzyzowania, razem 6 drog
 from model.Net import Net, Times
 from model.SmartAgent import SmartAgent
+from services.agentFactory import deep_copy_agent
 from services.globals import Globals
 
 ActionInt = int
@@ -173,3 +174,10 @@ class Env:
         for i in range(len(self.global_memories)):
             net = self.global_memories[i]
             net.rewards = [agent.memories[i].reward for agent in self.agents]
+
+    def deepCopy(self):
+        copied_agents = [deep_copy_agent(agent) for agent in self.agents]
+        new_env = Env(copied_agents)
+        new_env.__dict__ = self.__dict__.copy()  # just a shallow copy
+        new_env.agents = copied_agents
+        return new_env

@@ -95,3 +95,5 @@ class Agent:
                                     densities_9=densities_9,
                                     starting_actual_phase=self.actual_phase)
         self.local_state = local_state
+
+    # def copyAgent(self):

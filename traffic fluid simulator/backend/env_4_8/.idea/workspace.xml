@@ -5,59 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3bc62bd-0327-4a90-b067-71b6ea844ee3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/10mins_state_3_monitored_bad/foo0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10mins_state_3_monitored_bad/foo1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10mins_state_3_monitored_bad/foo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10mins_state_3_monitored_bad/foo3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10mins_state_3_monitored_ok/foo1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10mins_state_3_monitored_ok/foo3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10mins_state_3_monitored_ok/foo4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10mins_state_3_monitored_ok/foo5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../pisanko/env_4_opis.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/env_4_opis.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../pisanko/env_4_opis.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/env_4_opis.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../pisanko/env_4_opis.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/env_4_opis.synctex.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env_4_9/.mypy_cache/3.6/dryRunnerService.data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env_4_9/.mypy_cache/3.6/dryRunnerService.data.json.947b8cded78d4691" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env_4_9/.mypy_cache/3.6/dryRunnerService.meta.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env_4_9/.mypy_cache/3.6/services/dryRunnerService.data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env_4_9/.mypy_cache/3.6/services/dryRunnerService.meta.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env_4_9/Test/Test_DryRunner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env_4_9/services/dryRunnerService.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net4_test_dry_runner_no_1.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../pisanko/env_4_opis.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/env_4_opis.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_out0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars_out1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foo0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foo1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foo2_another.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foo2_last.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foo2_new.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foo2_yetanother.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nn_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/nn_trainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rewards.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rewards0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rewards1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rewards2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rewards3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rewards_mean.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rewards_mean0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rewards_mean1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rewards_mean2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rewards_mean3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runner_all.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner_all.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runner_learnt.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner_learnt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/globals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/model-agent0.h5" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/model-agent0.h5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/model-agent1.h5" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/model-agent1.h5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/model-agent2.h5" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/model-agent2.h5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/x_batch_agent_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/x_batch_agent_0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/x_batch_agent_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/x_batch_agent_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/x_batch_agent_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/x_batch_agent_2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/y_batch_agent_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/y_batch_agent_0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/y_batch_agent_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/y_batch_agent_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/y_batch_agent_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/y_batch_agent_2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/app/canvas.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/canvas.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/app/net/net.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/net/net.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net4_random_49.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net4_test_learn_no_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net4_test_learn_no_1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net4_test_no_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net4_test_no_1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net4_test_no_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net4_test_no_3.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net4_test_no_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net4_test_no_4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/.mypy_cache/3.6/Test_Env.data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/.mypy_cache/3.6/Test_Env.meta.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/.mypy_cache/3.6/runner.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_9/.mypy_cache/3.6/runner.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/Env.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_9/Env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/Test/Test_Env.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_9/Test/Test_Env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/cars_out0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/cars_out1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/cars_out2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/cars_out3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/cars_out4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/cars_out5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/img_cars_out_random.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/img_rewards_mean_random.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/img_rewards_random.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/model/Agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_9/model/Agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/res.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/rewards0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/rewards1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/rewards2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/rewards3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/rewards4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/rewards5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/rewards_mean0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/rewards_mean1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/rewards_mean2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/rewards_mean3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/rewards_mean4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/rewards_mean5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_9/services/agentFactory.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_9/services/agentFactory.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +52,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/runner_all.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -82,7 +68,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nn_trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="1020">
               <caret line="72" column="50" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -441,9 +427,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27424484" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27424484" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -454,8 +439,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49947312" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.55484897" visible="true" weight="0.46251443" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.44515103" side_tool="true" visible="true" weight="0.46251443" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.5540541" visible="true" weight="0.46251443" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.44594595" side_tool="true" visible="true" weight="0.46251443" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.5438787" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32936078" />
       <window_info anchor="bottom" id="Mypy" order="12" />
@@ -755,15 +740,9 @@ model.predict(np.array([x]))</expression-string>
     <entry file="file://$PROJECT_DIR$/docs/siec z agentami.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/10mins_state_3_monitored_ok/foo0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/foo1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/foo2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/10mins_state_3_monitored_ok/foo0.png" />
+    <entry file="file://$PROJECT_DIR$/foo1.png" />
+    <entry file="file://$PROJECT_DIR$/foo2.png" />
     <entry file="file://$PROJECT_DIR$/10mins_state_3_monitored_ok/foo2.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -807,22 +786,22 @@ model.predict(np.array([x]))</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nn_trainer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="72" column="50" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/runner_all.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nn_trainer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="72" column="50" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
