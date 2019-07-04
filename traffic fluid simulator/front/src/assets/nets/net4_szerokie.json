@@ -1,0 +1,399 @@
+{
+    "lines": [
+      {
+        "startPoint": {
+          "x": 50,
+          "y": 350
+        },
+        "endPoint": {
+          "x": 170,
+          "y": 350
+        },
+        "ligths": {
+          "right": {
+            "position": {
+              "x": 142,
+              "y": 385
+            },
+            "imageName": "arrow_right_light",
+            "from": 2,
+            "to": 9,
+            "arrowWidth": 16,
+            "rotation": 90
+          },
+          "left": {
+            "position": {
+              "x": 142,
+              "y": 365
+            },
+            "imageName": "arrow_left_light",
+            "from": 2,
+            "to": 21,
+            "arrowWidth": 16,
+            "rotation": 90
+          }
+        },
+        "densities": [
+          "0",
+          "1",
+          "2"
+        ]
+      },
+      {
+        "startPoint": {
+          "x": 590,
+          "y": 550
+        },
+        "endPoint": {
+          "x": 490,
+          "y": 490
+        },
+        "ligths": {
+          "right": {
+            "position": {
+              "x": 480,
+              "y": 458
+            },
+            "imageName": "arrow_right",
+            "from": 5,
+            "to": 12,
+            "arrowWidth": 20,
+            "rotation": 300
+          },
+          "straight": {
+            "position": {
+              "x": 464,
+              "y": 475
+            },
+            "imageName": "arrow_straight",
+            "from": 5,
+            "to": 18,
+            "arrowWidth": 15,
+            "rotation": 300
+          }
+        },
+        "densities": [
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      {
+        "startPoint": {
+          "x": 590,
+          "y": 80
+        },
+        "endPoint": {
+          "x": 490,
+          "y": 140
+        },
+        "ligths": {
+          "straight": {
+            "position": {
+              "x": 448,
+              "y": 132
+            },
+            "imageName": "arrow_straight",
+            "from": 8,
+            "to": 15,
+            "arrowWidth": 17,
+            "rotation": 240
+          },
+          "left": {
+            "position": {
+              "x": 448,
+              "y": 127
+            },
+            "imageName": "arrow_left",
+            "from": 8,
+            "to": 24,
+            "arrowWidth": 22,
+            "rotation": 240
+          }
+        },
+        "densities": [
+          "6",
+          "7",
+          "8"
+        ]
+      },
+      {
+        "startPoint": {
+          "x": 280,
+          "y": 400
+        },
+        "endPoint": {
+          "x": 380,
+          "y": 460
+        },
+        "ligths": {
+          "left": {
+            "position": {
+              "x": 330,
+              "y": 470
+            },
+            "imageName": "arrow_left",
+            "from": 11,
+            "to": 12,
+            "arrowWidth": 22,
+            "rotation": 120
+          },
+          "straight": {
+            "position": {
+              "x": 363,
+              "y": 485
+            },
+            "imageName": "arrow_straight",
+            "from": 11,
+            "to": 30,
+            "arrowWidth": 17,
+            "rotation": 120
+          }
+        },
+        "densities": [
+          "9",
+          "10",
+          "11"
+        ]
+      },
+      {
+        "startPoint": {
+          "x": 480,
+          "y": 400
+        },
+        "endPoint": {
+          "x": 480,
+          "y": 260
+        },
+        "ligths": {
+          "right": {
+            "position": {
+              "x": 483,
+              "y": 229
+            },
+            "imageName": "arrow_right",
+            "from": 14,
+            "to": 33,
+            "arrowWidth": 21
+          },
+          "left": {
+            "position": {
+              "x": 458,
+              "y": 229
+            },
+            "imageName": "arrow_left",
+            "from": 14,
+            "to": 15,
+            "arrowWidth": 21
+          }
+        },
+        "densities": [
+          "12",
+          "13",
+          "14"
+        ]
+      },
+      {
+        "startPoint": {
+          "x": 380,
+          "y": 200
+        },
+        "endPoint": {
+          "x": 280,
+          "y": 260
+        },
+        "ligths": {
+          "straight": {
+            "position": {
+              "x": 238,
+              "y": 255
+            },
+            "imageName": "arrow_straight",
+            "from": 17,
+            "to": 27,
+            "arrowWidth": 17,
+            "rotation": 240
+          },
+          "left": {
+            "position": {
+              "x": 240,
+              "y": 245
+            },
+            "imageName": "arrow_left",
+            "from": 17,
+            "to": 9,
+            "arrowWidth": "20",
+            "rotation": 240
+          }
+        },
+        "densities": [
+          "15",
+          "16",
+          "17"
+        ]
+      },
+      {
+        "startPoint": {
+          "x": 400,
+          "y": 430
+        },
+        "endPoint": {
+          "x": 300,
+          "y": 370
+        },
+        "ligths": {
+          "right": {
+            "position": {
+              "x": 290,
+              "y": 340
+            },
+            "imageName": "arrow_right",
+            "from": 20,
+            "to": 21,
+            "arrowWidth": 20,
+            "rotation": 300
+          },
+          "left": {
+            "position": {
+              "x": 275,
+              "y": 357
+            },
+            "imageName": "arrow_left_light",
+            "from": 20,
+            "to": 27,
+            "arrowWidth": 16,
+            "rotation": 300
+          }
+        },
+        "densities": [
+          "18",
+          "19",
+          "20"
+        ]
+      },
+      {
+        "startPoint": {
+          "x": 300,
+          "y": 290
+        },
+        "endPoint": {
+          "x": 400,
+          "y": 230
+        },
+        "ligths": {
+          "right": {
+            "position": {
+              "x": 378,
+              "y": 270
+            },
+            "imageName": "arrow_right",
+            "from": 23,
+            "to": 24,
+            "arrowWidth": "20",
+            "rotation": 60
+          },
+          "straight": {
+            "position": {
+              "x": 398,
+              "y": 230
+            },
+            "imageName": "arrow_straight",
+            "from": 23,
+            "to": 33,
+            "arrowWidth": "17",
+            "rotation": 60
+          }
+        },
+        "densities": [
+          "21",
+          "22",
+          "23"
+        ]
+      },
+      {
+        "startPoint": {
+          "x": 450,
+          "y": 260
+        },
+        "endPoint": {
+          "x": 450,
+          "y": 400
+        },
+        "ligths": {
+          "right": {
+            "position": {
+              "x": 373,
+              "y": 394
+            },
+            "imageName": "arrow_right",
+            "from": 26,
+            "to": 18,
+            "arrowWidth": 21,
+            "rotation": 180
+          },
+          "left": {
+            "position": {
+              "x": 403,
+              "y": 400
+            },
+            "imageName": "arrow_left_light",
+            "from": 26,
+            "to": 30,
+            "arrowWidth": 15,
+            "rotation": 180
+          }
+        },
+        "densities": [
+          "24",
+          "25",
+          "26"
+        ]
+      },
+      {
+        "startPoint": {
+          "x": 170,
+          "y": 320
+        },
+        "endPoint": {
+          "x": 50,
+          "y": 320
+        },
+        "densities": [
+          "27",
+          "28",
+          "29"
+        ]
+      },
+      {
+        "startPoint": {
+          "x": 475,
+          "y": 520
+        },
+        "endPoint": {
+          "x": 575,
+          "y": 580
+        },
+        "densities": [
+          "30",
+          "31",
+          "32"
+        ]
+      },
+      {
+        "startPoint": {
+          "x": 505,
+          "y": 170
+        },
+        "endPoint": {
+          "x": 605,
+          "y": 110
+        },
+        "densities": [
+          "33",
+          "34",
+          "35"
+        ]
+      }
+    ]
+  }
+  

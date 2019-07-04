@@ -1,0 +1,9 @@
+\babel@toc {polish}{}
+\babel@toc {polish}{}
+\contentsline {chapter}{\numberline {1}\IeC {\'S}rodowiska symulacyjne i ich nauka}{5}% 
+\contentsline {section}{\numberline {1.1}\IeC {\'S}rodowisko 1}{5}% 
+\contentsline {subsection}{\numberline {1.1.1}Fazy \IeC {\'s}wietlne}{5}% 
+\contentsline {subsection}{\numberline {1.1.2}Przep\IeC {\l }yw pojazd\IeC {\'o}w}{6}% 
+\contentsline {subsection}{\numberline {1.1.3}Macierze \IeC {\'s}wiate\IeC {\l } i stanowe dla poszczeg\IeC {\'o}lnych faz \IeC {\'s}wiate\IeC {\l }}{7}% 
+\contentsline {subsection}{\numberline {1.1.4}Korki}{7}% 
+\contentsline {subsection}{\numberline {1.1.5}Ko\IeC {\'n}cowe r\IeC {\'o}wnanie stanu - podsumowanie wzor\IeC {\'o}w matematycznych}{8}% 

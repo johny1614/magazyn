@@ -33,22 +33,27 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.getJSON('assets/nets/net4.json').subscribe(staticData => {
+    this.getJSON('assets/nets/net4_szerokie.json').subscribe(staticData => {
       this.nets = [NetFactory.netFromJson(staticData)];
-      // let net = 'assets/densities/net4_cross.json'
-      // let net = 'assets/densities/net4_random.json';
       // let net = 'assets/densities/net4_sequential.json'
+      let net = 'assets/densities/net4_0_1_2_yellow_phase.json';
+
+
+      // let net = 'assets/densities/net4_cross.json'
+      // let net = 'assets/densities/net4_base_zeros.json';
       // let net = 'assets/densities/net4_last_epoch.json'
-      let net = 'assets/densities/net4_learnt-10.json';
+      // let net = 'assets/densities/net4_learnt-10.json';
       // waaat
+      // let net = 'assets/densities/net1_den1.json';
       // let net = 'assets/densities/net4_test_no_5.json';
       // let net = 'assets/densities/net4_test_no_2.json';
       // let net = 'assets/densities/net4_seq.json';
-      // let net = 'assets/densities/net4_random_0.json';
+      // let net = 'assets/densities/net5_random_0.json';
       // let net = 'assets/densities/net4_random_3.json';
       // let net = 'assets/densities/net4_stan_monitorowany_3.json';
       // let net = 'assets/densities/net4_learnt-3.json';
       this.getJSON(net).subscribe(dynamicData => {
+        // asdsa
         console.log('jest dynamicData', dynamicData);
         this.nets = NetFactory.getNetsWithDensity(staticData, dynamicData);
         NetFactory.attachLights(this.nets, dynamicData);

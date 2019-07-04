@@ -1,0 +1,62 @@
+{
+    "lines": [
+        {
+            "arrowWidth":"20",
+            "startPoint": {
+                "x": 100,
+                "y": 300
+            },
+            "endPoint":{
+                "x": 170,
+                "y":300
+            },
+            "densities":["n"],
+            "ligths":{
+                "right":
+                {
+                    "light":"green",
+                    "position":{"x":165,"y":335},
+                    "imageName":"arrow_right_light",
+                    "rotation":90,
+                    "arrowWidth": 25,
+                    "from": 0,
+                    "to": 2
+                },
+                "left":{
+                    "light":"green",
+                    "position":{"x":165,"y":305},
+                    "imageName":"arrow_left_light",
+                    "rotation":90,
+                    "arrowWidth": 25,
+                    "from": 0,
+                    "to": 1
+                }
+            }
+        },
+        {
+            "arrowWidth":"20px",
+            "startPoint": {
+                "x": 240,
+                "y": 270
+            },
+            "endPoint":{
+                "x": 318,
+                "y": 250
+            },
+            "densities":["n"]
+        },
+        {
+            "arrowWidth":"20",
+            "startPoint": {
+                "x": 240,
+                "y": 330
+            },
+            "endPoint":{
+                "x": 318,
+                "y": 350
+            },
+            "densities":["n"]
+        }
+        
+    ]
+}
