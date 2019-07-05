@@ -139,30 +139,30 @@ Ze względu na dużą złożoność końcowego modelu zostanie przedstawiony naj
 ujęcie sygnalizacji świetlnej, brak kolizyjnych manewrów, makroskopowy przepływ ruchu, przepływ ruchu na skrzyżowaniu, struktura sieci dróg. Zestawienie w jednej sekcji wszystkich tych kwestii byłoby bardzo przytłaczające.
 
 \section{Wektor stanu drogi} \label{sec:wektor_stanu_drogi}
-Wektor stanu jest strukturą w pełni przedstawiającą aktualny stan drogi. Dla każdego odcinka drogi składuje on wartości zmiennych stanuch. Początkowo zmienna stanowa jest identyfikowana jako ilość pojazdów na danym odcinku drogi. 
+Wektor stanu jest strukturą przedstawiającą stan środowiska. Dla każdego odcinka drogi składuje on wartości zmiennych stanowych. Początkowo zmienna stanowa jest identyfikowana jako ilość pojazdów na danym odcinku drogi. 
 \subsection{Przykład} \label{subsec:example-single-road}
-Niech będzie dana droga $e$ z wydzielonymi czterema odcinkami ${b_1,b_2,b_3,b_4}$. Przykładowy wektor stanu to
+Niech będzie dana droga $e$ z wydzielonymi czterema odcinkami. Przykładowy wektor stanu to
 \[\textbf{x(t)}=\begin{bmatrix}
 2 \\ 4 \\ 3 \\ 0
 \end{bmatrix} \addtag \]
 Zawiera on w sobie następujące informacje dla chwili t:
 \begin{itemize}
-	\item Są 2 pojazdy na odcinku $b_1$
-	\item Są 4 pojazdy na odcinku $b_2$
-	\item Są 3 pojazdy na odcinku $b_3$
-	\item Nie ma żadnego pojazdu na odcinku $b_4$
+	\item Są 2 pojazdy na zerowym odcinku
+	\item Są 4 pojazdy na pierwszym odcinku
+	\item Są 3 pojazdy na drugim odcinku
+	\item Nie ma żadnego pojazdu na trzecim odcinku
 \end{itemize}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=14cm]{single_road_example}
+	\includegraphics[width=14cm]{images/1_droga_4_odcinki}
 	\caption{Droga z ilością pojazdów na poszczególnych odcinkach}
 	\label{fig:single_road}
 \end{figure}
 \section{Rozwój wektora stanu jednej drogi}
 Początkowy model przepływu pojazdów zakłada, iż wszystkie pojazdy w chwili t+1 są o jeden odcinek dalej w swojej podróży niż w momencie $t$. Założone jest, iż żadne nowe pojazdy nie pojawiają się w sieci dróg, a pojazdy będące w chwili $t$ w ostatnim odcinku drogi układ. Formalnym wzorem definiującym rozwój wektora stanu jest:
 \[\textbf{x(t+1)}=\textbf{Ax(t)} \addtag \label{eq:single_road} \]
-Gdzie $A$ jest macierzą systemu. Definiuje ona sposób przepływu pojazdów. $A$ jest rzadką, kwadratową macierzą o wartościach równych 1 jedynie bezpośrednio 1 wiersz pod główną przekątną macierzy. Takie wartości gwarantują przepływ pojazdów o jeden odcinek w jednym interwale czasowym.
+Gdzie $\textbf{A}$ jest macierzą systemu. Definiuje ona sposób przepływu pojazdów. $\textbf{A}$ jest rzadką, kwadratową macierzą o wartościach równych 1 jedynie bezpośrednio 1 wiersz pod główną przekątną macierzy. Takie wartości gwarantują przepływ pojazdów o jeden odcinek w jednym interwale czasowym.
 \subsection{Przykład}
 Dla przykładu przedstawionego w (\ref{subsec:example-single-road}) zostanie przedstawiony rozwój wektora stanu. Niech zatem
 \def \xZero {\begin{bmatrix}
@@ -210,93 +210,85 @@ Wedle wzoru (\ref{eq:single_road}) wyliczone zostają kolejne wartości wektora 
 W rozdziale (\ref{sec:wektor_stanu_drogi}) przedstawiony został wektor stanu dla pojedynczej drogi. W tym rozdziale zostanie sformułowany wektor stanu dla bardziej ogólnego przypadku - sieci dróg. Sposób przedstawienia wartości stanuch jednak jest bardzo podobny. Każda z dróg $e_1,...,e_n$ ma $k$ wydzielonych odcinków oznaczanych jako $b_1,...,b_{nk}$. Dla każdego z odcinków definiowana jest wartość stanowa.
 
 \subsection{Przykład} \label{subsec:wektor_stanu_siec_przyklad}
-Niech będzie dana sieć składająca się z trzech dróg $E=\{e_1,e_2,e_3\}$. Dla każdej drogi zostaną wydzielone 2 odcinki. Przykładowy wektor stanu
+Niech będzie dana sieć składająca się z trzech dróg. Dla każdej drogi zostaną wydzielone 2 odcinki. W sumie środowisko posiada 6 odcinków. Odcinki są ponumerowane od 0 co przedstawia poniższy rysunek.
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{images/env_11}
+	\label{fig:env_11}
+	\caption Numeracja odcinków środowiska
+\end{figure}
+
+Niech przykładowym wektorem stanu będzie:
 \def \xzero {\begin{bmatrix}
 		8 \\ 4 \\ 3 \\ 0 \\ 1 \\ 5
 \end{bmatrix}}
 
 \[\textbf{x(t)}=\xzero \addtag \]
-Zawiera w sobie następujące informacje dotyczące ilości pojazdów na poszczególnych odcinkach w chwili t:
-\begin{itemize}
-	\item $\boldsymbol{b_1}$ - Na pierwszym odcinku drogi $e_1$ jest 8 pojazdów
-	\item $\boldsymbol{b_2}$ - Na drugim odcinku drogi $e_1$ są 4 pojazdy 
-	\item $\boldsymbol{b_3}$ - Na pierwszym odcinku drogi $e_2$ są 3 pojazdy 
-	\item $\boldsymbol{b_4}$ - Na drugim odcinku drogi $e_2$ nie ma żadnych pojazdów 
-	\item $\boldsymbol{b_5}$ - Na pierwszym odcinku drogi $e_3$ jest 1 pojazd
-	\item $\boldsymbol{b_6}$ -Na drugim odcinku drogi $e_3$ jest 5 pojazdów
-\end{itemize}
-
+Zawiera on w sobie informacje dotyczące ilości pojazdów na poszczególnych odcinkach w chwili t. Poniższy obraz przedstawia ilości pojazdów na poszczególnych odcinkach dla stanu zadanego przez wektor $\textbf{x(t)}$
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=14cm]{3_single_road}
+	\includegraphics[width=10cm]{images/env_11_843015}
 	\caption{Sieć dróg z ilościami pojazdów na poszczególnych odcinkach}
 	\label{fig:3_single_road}
 \end{figure}
 
 \section{Rozwój wektora stanu sieci dróg}
-Przepływ pojazdów niezmiennie jest oparty o założenie, iż w trakcie trwania jednego interwału czasowego pojazdy pokonują 1 odcinek drogi. Równaniem systemu pozostaje $\textbf{x(t+1)=Ax(t)}$, gdyż do układu niezmiennie nie wpływają nowe pojazdy.\\ \\
+Przepływ pojazdów niezmiennie jest oparty o założenie, iż w trakcie trwania jednego interwału czasowego pojazdy pokonują 1 odcinek drogi. Równaniem systemu pozostaje $\textbf{x(t+1)=Ax(t)}$, gdyż do układu nie wpływają nowe pojazdy.\\ \\
 Macierz systemu $\textbf{A}$ powinna uwzględnić przepływy pojazdów na skrzyżowaniach. W tym momencie należy przedstawić następującą definicję macierzy $\textbf{A}$:\\
 Wartości macierzy \textbf{A} określają jaka część pojazdów z odcinka zadanego przez indeks kolumny przejeżdża do odcinka zadanego przez indeks wiersza.
 
 
 \subsection{Przykład}
-Dla przykładu (\ref{subsec:wektor_stanu_siec_przyklad}) przedstawiony zostanie rozwój wektora stanu. Założone zostaje, iż $75 \%$ pojazdów będących na odcinku $b_2$ opuszcza skrzyżowanie na odcinku $b_3$ a pozostałe $25 \%$ przejeżdża do $b_5$.
+Rozważone zostanie środowisko (\ref{subsec:wektor_stanu_siec_przyklad}) z dodatkowym założeniem, że 75 procent pojazdów ma zamiar skręcić w prawo. Pozostałe 25 procent wybiera skręt w lewo. Srodowisko przedstawiają poniższe obrazki.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=14cm]{3_single_road_lights}
-	\caption{}
-	\label{fig:3_single_road}
-\end{figure}
+\begin{tabular}{| c  | Sc |}
+	\hline
+	Numeracja odcinków   & Ilości pojazdów \\
+	\hline
+	\cincludegraphics[width=7cm]{images/env_11}  & \cincludegraphics[width=7cm]{images/env_11_843015_procenty} \\
+	\hline 
+\end{tabular}
 
-Wtedy:
+
 \def \A{
 \begin{bmatrix}
 	0 & 0    & 0 & 0 & 0 & 0 \\
 	1 & 0    & 0 & 0 & 0 & 0 \\
-	0 & 75\% & 0 & 0 & 0 & 0 \\
+	0 & 0.25 & 0 & 0 & 0 & 0 \\
 	0 & 0    & 1 & 0 & 0 & 0 \\
-	0 & 25\% & 0 & 0 & 0 & 0 \\
+	0 & 0.75 & 0 & 0 & 0 & 0 \\
 	0 & 0    & 0 & 0 & 1 & 0 
 \end{bmatrix}
 }
-\begin{equation*}
-\textbf{A}=
-\begin{blockarray}{*{6}{c} l}
-\begin{block}{*{6}{>{$\footnotesize}c<{$}} l}
-$b_1$ & $b_2$ & $b_3$ & $b_4$ & $b_5$ & $b_6$ \\
-\end{block}
-\begin{block}{[*{6}{c}]>{$\footnotesize}l<{$}}
-0 & 0 & 0 & 0 & 0 & 0 & $b_1$ \\
-1 & 0 & 0 & 0 & 0 & 0 & $b_2$ \\
-0 & 75\% & 0 & 0 & 0 & 0 & $b_3$ \\
-0 & 0 & 1 & 0 & 0 & 0 & $b_4$ \\
-0 & 25\% & 0 & 0 & 0 & 0 & $b_5$ \\
-0 & 0 & 0 & 0 & 1 & 0 & $b_6$ \\
-\end{block}
-\end{blockarray} \addtag
-\end{equation*}
-Niech zatem zgodnie z rysunkiem \ref{fig:3_single_road}:
-\[\textbf{x(0)}=\xzero \]
-Kolejne wartości wektora stanu to:
+Przepływ pojazdów definiuje poniższa macierz stanowa.
+\[\textbf{A}=\A\]
+
+Wartości wektora stanu zmieniają się w czasie w następujący sposób:
 \def \xI{\begin{bmatrix}
-	0 \\ 8 \\ 3 \\ 3 \\ 1 \\ 1
+		0 \\ 8 \\ 3 \\ 3 \\ 1 \\ 1
 \end{bmatrix}}
 \def \xII{\begin{bmatrix}
 		0 \\ 0 \\ 6 \\ 3 \\ 2 \\ 1
-	\end{bmatrix}}
+\end{bmatrix}}
 \def \xIII{\begin{bmatrix}
 		0 \\ 0 \\ 0 \\ 6 \\ 0 \\ 2
 \end{bmatrix}}
-\[
-\textbf{x(1)}=\textbf{Ax(0)}=\A \xzero = \xI
-\]
-\[
-\textbf{x(2)}=\textbf{Ax(1)}=\A \xI = \xII
-\]
-\[
-\textbf{x(3)}=\textbf{Ax(2)}=\A \xII = \xIII
-\]
+\linebreak
+\begin{tabular}{| c | c | Sc |}
+	\hline
+	t   & Równanie x & Podgląd środowiska \\
+	\hline
+	0 & 
+	$ \textbf{x(0)} = \xzero$  & \cincludegraphics[width=7cm]{images/env_11_843015_procenty} \\
+	\hline 
+	1 & $\textbf{x(1)}=\textbf{Ax(0)}=\A \xzero = \xI$  & \cincludegraphics[width=7cm]{images/env_11_083311_procenty} \\
+	\hline 
+	2 & $\textbf{x(2)}=\textbf{Ax(1)}=\A \xI = \xII$  & \cincludegraphics[width=7cm]{images/env_11_006321_procenty} \\
+	\hline 
+	3 &	$\textbf{x(3)}=\textbf{Ax(2)}=\A \xII = \xIII$ & \cincludegraphics[width=7cm]{images/env_11_000602_procenty} \\
+\hline 
+\end{tabular}
+
 
 \newpage
 \section{Wprowadzenie sygnalizacji świetlnej}

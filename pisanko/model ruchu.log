@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.24)  4 JUL 2019 01:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.24)  5 JUL 2019 20:09
 entering extended mode
 **"./model ruchu.tex"
 ("model ruchu.tex"
@@ -676,11 +676,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \c@twr=\count140
 \c@mur=\count141
 
-("model ruchu.aux"
-
-LaTeX Warning: Label `fig:3_single_road' multiply defined.
-
-)
+("model ruchu.aux")
 \openout1 = `"model ruchu.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
@@ -924,93 +920,138 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 150.
-<single_road_example.png, id=64, 495.35063pt x 107.65219pt>
-File: single_road_example.png Graphic file (type png)
-<use single_road_example.png>
-Package pdftex.def Info: single_road_example.png  used on input line 158.
-(pdftex.def)             Requested size: 398.33858pt x 86.56865pt.
- [15] [16 <./single_road_example.png>]
-<3_single_road.png, id=71, 487.06969pt x 327.47343pt>
-File: 3_single_road.png Graphic file (type png)
-<use 3_single_road.png>
-Package pdftex.def Info: 3_single_road.png  used on input line 231.
-(pdftex.def)             Requested size: 398.33858pt x 267.81541pt.
- [17]
-Overfull \hbox (30.11282pt too wide) in paragraph at lines 237--240
+<images/1_droga_4_odcinki.png, id=64, 522.45187pt x 82.05656pt>
+File: images/1_droga_4_odcinki.png Graphic file (type png)
+<use images/1_droga_4_odcinki.png>
+Package pdftex.def Info: images/1_droga_4_odcinki.png  used on input line 158.
+(pdftex.def)             Requested size: 398.33858pt x 62.56395pt.
+ [15] [16 <./images/1_droga_4_odcinki.png>]
+<images/env_11.png, id=73, 248.42813pt x 162.6075pt>
+File: images/env_11.png Graphic file (type png)
+<use images/env_11.png>
+Package pdftex.def Info: images/env_11.png  used on input line 216.
+(pdftex.def)             Requested size: 284.52756pt x 186.25034pt.
+ [17 <./images/env_11.png>]
+<images/env_11_843015.png, id=78, 344.78813pt x 229.60782pt>
+File: images/env_11_843015.png Graphic file (type png)
+<use images/env_11_843015.png>
+Package pdftex.def Info: images/env_11_843015.png  used on input line 230.
+(pdftex.def)             Requested size: 284.52756pt x 189.47783pt.
+
+Overfull \hbox (30.11282pt too wide) in paragraph at lines 236--239
 \T1/lmr/m/n/12 waªu cza-so-wego po-jazdy po-ko-nuj¡ 1 od-ci-nek drogi. Rów-na-n
 iem sys-temu po-zo-staje $[]$,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--240
+Underfull \hbox (badness 10000) in paragraph at lines 236--239
 
  []
 
-<3_single_road_lights.png, id=77, 480.29437pt x 330.48468pt>
-File: 3_single_road_lights.png Graphic file (type png)
-<use 3_single_road_lights.png>
-Package pdftex.def Info: 3_single_road_lights.png  used on input line 247.
-(pdftex.def)             Requested size: 398.33858pt x 274.09546pt.
+File: images/env_11.png Graphic file (type png)
+<use images/env_11.png>
+Package pdftex.def Info: images/env_11.png  used on input line 248.
+(pdftex.def)             Requested size: 199.16928pt x 130.36655pt.
+<images/env_11_843015_procenty.png, id=79, 350.05782pt x 245.41687pt>
+File: images/env_11_843015_procenty.png Graphic file (type png)
+<use images/env_11_843015_procenty.png>
+Package pdftex.def Info: images/env_11_843015_procenty.png  used on input line 
+248.
+(pdftex.def)             Requested size: 199.16928pt x 139.63441pt.
+[18 <./images/env_11_843015.png>]
+File: images/env_11_843015_procenty.png Graphic file (type png)
+<use images/env_11_843015_procenty.png>
+Package pdftex.def Info: images/env_11_843015_procenty.png  used on input line 
+282.
+(pdftex.def)             Requested size: 199.16928pt x 139.63441pt.
+<images/env_11_083311_procenty.png, id=84, 245.41687pt x 166.37157pt>
+File: images/env_11_083311_procenty.png Graphic file (type png)
+<use images/env_11_083311_procenty.png>
+Package pdftex.def Info: images/env_11_083311_procenty.png  used on input line 
+284.
+(pdftex.def)             Requested size: 199.16928pt x 135.02423pt.
+<images/env_11_006321_procenty.png, id=85, 245.41687pt x 161.85469pt>
+File: images/env_11_006321_procenty.png Graphic file (type png)
+<use images/env_11_006321_procenty.png>
+Package pdftex.def Info: images/env_11_006321_procenty.png  used on input line 
+286.
+(pdftex.def)             Requested size: 199.16928pt x 131.35841pt.
+<images/env_11_000602_procenty.png, id=86, 244.66406pt x 165.61874pt>
+File: images/env_11_000602_procenty.png Graphic file (type png)
+<use images/env_11_000602_procenty.png>
+Package pdftex.def Info: images/env_11_000602_procenty.png  used on input line 
+288.
+(pdftex.def)             Requested size: 199.16928pt x 134.82518pt.
 
-Underfull \vbox (badness 1859) has occurred while \output is active []
+Underfull \hbox (badness 2261) in paragraph at lines 266--291
+[]\T1/lmr/m/n/12 Warto±ci wek-tora stanu zmie-niaj¡ si¦ w cza-sie w na-st¦-pu-j
+¡cy spo-sób:   
+ []
 
- [18 <./3_single_road.png>]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 267.
+
+Overfull \hbox (30.9875pt too wide) in paragraph at lines 266--291
+[] 
+ []
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19 <./3_single_road_lights.png>] [20]
-Underfull \hbox (badness 10000) in paragraph at lines 304--309
+ [19 <./images/env_11_843015_procenty.png>] [20 <./images/env_11_083311_procent
+y.png> <./images/env_11_006321_procenty.png> <./images/env_11_000602_procenty.p
+ng>]
+Underfull \hbox (badness 10000) in paragraph at lines 296--301
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--309
+Underfull \hbox (badness 10000) in paragraph at lines 296--301
 
  []
 
-<3_drogi_sygnalizacja.png, id=90, 598.48593pt x 330.48468pt>
+<3_drogi_sygnalizacja.png, id=98, 598.48593pt x 330.48468pt>
 File: 3_drogi_sygnalizacja.png Graphic file (type png)
 <use 3_drogi_sygnalizacja.png>
-Package pdftex.def Info: 3_drogi_sygnalizacja.png  used on input line 318.
+Package pdftex.def Info: 3_drogi_sygnalizacja.png  used on input line 310.
 (pdftex.def)             Requested size: 398.33858pt x 219.96622pt.
 
 Underfull \vbox (badness 5802) has occurred while \output is active []
 
  [21]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 320.
+
 Underfull \vbox (badness 2478) has occurred while \output is active []
 
  [22 <./3_drogi_sygnalizacja.png>]
-<3_drogi_sygnalizacja_0.png, id=99, 572.1375pt x 313.9228pt>
+<3_drogi_sygnalizacja_0.png, id=108, 572.1375pt x 313.9228pt>
 File: 3_drogi_sygnalizacja_0.png Graphic file (type png)
 <use 3_drogi_sygnalizacja_0.png>
-Package pdftex.def Info: 3_drogi_sygnalizacja_0.png  used on input line 483.
+Package pdftex.def Info: 3_drogi_sygnalizacja_0.png  used on input line 475.
 (pdftex.def)             Requested size: 155.56172pt x 85.35826pt.
-<3_drogi_sygnalizacja_1.png, id=100, 573.64313pt x 308.65312pt>
+<3_drogi_sygnalizacja_1.png, id=109, 573.64313pt x 308.65312pt>
 File: 3_drogi_sygnalizacja_1.png Graphic file (type png)
 <use 3_drogi_sygnalizacja_1.png>
-Package pdftex.def Info: 3_drogi_sygnalizacja_1.png  used on input line 485.
+Package pdftex.def Info: 3_drogi_sygnalizacja_1.png  used on input line 477.
 (pdftex.def)             Requested size: 158.64078pt x 85.35826pt.
-<3_drogi_sygnalizacja_2.png, id=101, 457.71pt x 249.18094pt>
+<3_drogi_sygnalizacja_2.png, id=110, 457.71pt x 249.18094pt>
 File: 3_drogi_sygnalizacja_2.png Graphic file (type png)
 <use 3_drogi_sygnalizacja_2.png>
-Package pdftex.def Info: 3_drogi_sygnalizacja_2.png  used on input line 487.
+Package pdftex.def Info: 3_drogi_sygnalizacja_2.png  used on input line 479.
 (pdftex.def)             Requested size: 156.78568pt x 85.35826pt.
-<3_drogi_sygnalizacja_3.png, id=102, 453.94594pt x 244.66406pt>
+<3_drogi_sygnalizacja_3.png, id=111, 453.94594pt x 244.66406pt>
 File: 3_drogi_sygnalizacja_3.png Graphic file (type png)
 <use 3_drogi_sygnalizacja_3.png>
-Package pdftex.def Info: 3_drogi_sygnalizacja_3.png  used on input line 489.
+Package pdftex.def Info: 3_drogi_sygnalizacja_3.png  used on input line 481.
 (pdftex.def)             Requested size: 158.37088pt x 85.35826pt.
-<3_drogi_sygnalizacja_4.png, id=103, 461.47406pt x 250.68657pt>
+<3_drogi_sygnalizacja_4.png, id=112, 461.47406pt x 250.68657pt>
 File: 3_drogi_sygnalizacja_4.png Graphic file (type png)
 <use 3_drogi_sygnalizacja_4.png>
-Package pdftex.def Info: 3_drogi_sygnalizacja_4.png  used on input line 491.
+Package pdftex.def Info: 3_drogi_sygnalizacja_4.png  used on input line 483.
 (pdftex.def)             Requested size: 157.13147pt x 85.35826pt.
-<3_drogi_sygnalizacja_5.png, id=104, 459.21562pt x 256.70906pt>
+<3_drogi_sygnalizacja_5.png, id=113, 459.21562pt x 256.70906pt>
 File: 3_drogi_sygnalizacja_5.png Graphic file (type png)
 <use 3_drogi_sygnalizacja_5.png>
-Package pdftex.def Info: 3_drogi_sygnalizacja_5.png  used on input line 493.
+Package pdftex.def Info: 3_drogi_sygnalizacja_5.png  used on input line 485.
 (pdftex.def)             Requested size: 152.69078pt x 85.35826pt.
 
 Underfull \vbox (badness 1983) has occurred while \output is active []
@@ -1019,39 +1060,36 @@ Underfull \vbox (badness 1983) has occurred while \output is active []
 [24 <./3_drogi_sygnalizacja_0.png> <./3_drogi_sygnalizacja_1.png> <./3_drogi_sy
 gnalizacja_2.png> <./3_drogi_sygnalizacja_3.png> <./3_drogi_sygnalizacja_4.png>
  <./3_drogi_sygnalizacja_5.png>] [25]
-<5_drog.png, id=119, 797.22844pt x 365.86688pt>
+<5_drog.png, id=129, 797.22844pt x 365.86688pt>
 File: 5_drog.png Graphic file (type png)
 <use 5_drog.png>
-Package pdftex.def Info: 5_drog.png  used on input line 527.
+Package pdftex.def Info: 5_drog.png  used on input line 519.
 (pdftex.def)             Requested size: 398.33858pt x 182.80458pt.
  [26 <./5_drog.png>]
 Rozdzia\l  6.
-<env_4_agenci.png, id=123, 411.78844pt x 385.44pt>
+<env_4_agenci.png, id=133, 411.78844pt x 385.44pt>
 File: env_4_agenci.png Graphic file (type png)
 <use env_4_agenci.png>
-Package pdftex.def Info: env_4_agenci.png  used on input line 551.
+Package pdftex.def Info: env_4_agenci.png  used on input line 543.
 (pdftex.def)             Requested size: 284.52756pt x 266.3244pt.
 [27
 
  <./env_4_agenci.png>]
-<env_4_fazy.png, id=128, 722.7pt x 542.025pt>
+<env_4_fazy.png, id=138, 722.7pt x 542.025pt>
 File: env_4_fazy.png Graphic file (type png)
 <use env_4_fazy.png>
-Package pdftex.def Info: env_4_fazy.png  used on input line 566.
+Package pdftex.def Info: env_4_fazy.png  used on input line 558.
 (pdftex.def)             Requested size: 398.33858pt x 298.7515pt.
  [28 <./env_4_fazy.png>] ("model ruchu.aux")
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 15652 strings out of 492895
- 290370 string characters out of 3133470
- 399790 words of memory out of 3000000
- 19157 multiletter control sequences out of 15000+200000
+ 15674 strings out of 492895
+ 291101 string characters out of 3133470
+ 399765 words of memory out of 3000000
+ 19174 multiletter control sequences out of 15000+200000
  90897 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,19n,73p,1222b,299s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1061,21 +1099,20 @@ nc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ma
 thex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/lm/lmbx6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/lm/lmbx8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/lm/lmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi
-8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmib10.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/lm/lmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8
-.pfb>
-Output written on "model ruchu.pdf" (28 pages, 704891 bytes).
+/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi
+b10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/lm/lmsy8.pfb>
+Output written on "model ruchu.pdf" (28 pages, 718728 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
+ 200 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 88 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 108 words of extra memory for PDF output out of 10000 (max. 10000000)
 

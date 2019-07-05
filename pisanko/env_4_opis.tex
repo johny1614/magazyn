@@ -50,6 +50,8 @@
 	\tag{\theequation}}
 \newcommand{\specialcell}[2][c]{%
 	\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+\let\oldref\ref
+\renewcommand{\ref}[1]{(\oldref{#1})}
 
 \begin{document}
 	\title{Optymalizacja  systemu sygnalizacji świetlnej w 
@@ -74,21 +76,27 @@
 \subsection{Sygnalizacje świetlne}	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=14cm]{env_4_fazy}
+		\includegraphics[width=14cm]{images/env_4_fazy}
 		\label{fig:env_4_fazy}
 		\caption{środowisko 4 - fazy świateł}
 	\end{figure}\noindent
 Każde skrzyżowanie posiada 4 fazy świetlne przedstawione powyżej. Fazy 0, 1 i 2 posiadają pewne zielone światła i umożliwiają ruch. Automatycznie ustawiana jest faza żółtych świateł przez 2 interwały czasowe w przypadku podjęcia akcji zmiany aktualnej fazy. Agent może także oczywiście przedłużyć aktualną fazę.
 \subsection{Możliwe do wykonania manewry}
-Niech manewr (m,n) będzie manewrem polegającym na bezpośrednim przejeździe z odcinka m na odcinek n. Zostanie zdefiniowana macierz sygnalizacji świetlnej S. Określa ona wykonalność dowolnego manewru.
-ZACZNIJ TUTAJAAAAAAAAAAAAAAA. Mozna by wyzej obrazek pozmieniac z liczbami na odcinkach?
+Niech wektor [m,n] będzie manewrem polegającym na bezpośrednim przejeździe z odcinka m na odcinek n. Zostanie teraz zdefiniowana macierz sygnalizacji świetlnej S. Określa ona wykonalność dowolnego manewru.
 \begin{numcases}{S_{mn}=}
-0 & dla nieistniejącego manewru \\
-0 & dla manewru wstrzymanego przez czerwone światło \\
-1 & dla manewru zezwolonego przez zielone światło \\
-1 & dla istniejącego manewru bez sygnalizacji świetlnej
+0 & dla niemożliwego manewru \label{eq:manewr_not_existing} \\
+0 & dla manewru wstrzymanego przez czerwone światło \label{eq:stopped_by_light} \\
+1 & dla manewru zezwolonego przez zielone światło \label{eq:allowed_by_light} \\
+1 & dla istniejącego manewru bez sygnalizacji świetlnej \label{eq:manewr_existing}
 \end{numcases}
-	
+Przykłady poszczególnych manewrów są następujące:
+\begin{itemize}
+\item \ref{eq:manewr_not_existing} Niemożliwym manewrem jest np. [8,10], gdyż nie ma możliwości bezpośredniego przejazdu z odcinka 8 do 10.
+\item \ref{eq:stopped_by_light} - Dla fazy świetlnej 0 jednym z wielu manewrów zatrzymanych przez czerwone światło  jest [17,9].
+\item \ref{eq:allowed_by_light} - Manewrem zezwolonym przez zielone światło  dla fazy 0 są np. [2,9] lub [11,30].
+\item \ref{eq:manewr_existing} - Prawidłowym manewrem bez sygnalizacji świetlnej są np. [0,1],[9,10],[10,11],[34,35].
+\end{itemize}
+
 \subsection{Przepływ pojazdów}
 Pojazdy pokonują jeden odcinek podczas jednego pełnego interwału czasowego. Każde skrzyżowanie posiada dwa możliwe manewry do wykonania. Prawdopodobieństwa skrętu w prawo to zawsze 70 procent. Jeśli nie ma skrętu w prawo - to jazda prosto ma prawdopodobieństwo 70 procent. Jazda w lewo z kolei zawsze ma pozostałe 30 procent prawdopodobieństwa.  Szczegółowy rozkład wraz z wartościami macierzy P jest przedstawiony w poniższej tabeli. Pozostałe wartości macierzy P to zera.
 
@@ -107,49 +115,57 @@ Pojazdy pokonują jeden odcinek podczas jednego pełnego interwału czasowego. K
 \end{tabular}
 \end{figure}
 \clearpage \noindent
-Odpływ pojazdów z układu następuje na końcach odcinków 29,32 oraz 35. Z tego względu zostaje wprowadzona macierz rzadka $\mathbbm{1}$ o wymiarach 36 na 36. Ma ona na celu usuwać 
-\begin{numcases}{\mathbbm{1}_{mn}=}
-0 & dla $m \neq n \vee n \in {29,32,35}$ \\
-1 & dla pozostałych przypadków
-\end{numcases}
-Wiersze i kolumny macierzy są numerowane od 0 - zgodnie z konwencją przyjętą w pracy.
+%Odpływ pojazdów z układu następuje na końcach odcinków 29,32 oraz 35. Z tego względu zostaje wprowadzona macierz rzadka $\mathbbm{1}$ o wymiarach 36 na 36. Ma ona na celu usuwać pojazdy opuszczające układ.
+%\begin{numcases}{\mathbbm{1}_{mn}=}
+%0 & dla $m \neq n \vee n \in {29,32,35}$ \\
+%1 & dla pozostałych przypadków
+%\end{numcases}
+%Wiersze i kolumny macierzy są numerowane od 0 - zgodnie z konwencją przyjętą w pracy.
 Macierz stanowa A jest określona następująco:
 \begin{numcases}{A_{ij}=}
-0 & dla $S[i,j]=0$ \\
+0 & dla $S[i,j]=0 \vee i \in {29,32,35}$ \\
 P[i,j] & dla $ S[i,j]=1$ \\
 1-\delta(i) & dla i=j
 \end{numcases}
-Gdzie delta jest sumą wszystkich pozostałych liczb z kolumny i, czyli: 
-$$\delta(i)=\sum_{j\in{\{0,...,35\}},j!=i} P[i,j]$$
+Gdzie delta jest sumą wszystkich pozostałych liczb kolumny i rozważanej macierzy, czyli: 
+\[\delta(i)=\sum_{j\in{\{0,...,35\}},j!=i} P[i,j] \addtag \]
+Końcowe równanie stanu jest następujące:
+\[
+\textbf{x[t]}=\textbf{Ax[t-1]}+\textbf{u[t-1]} \addtag
+\]
+Gdzie $\textbf{u[t]}$ to wektor pojazdów napływających do układu. Wektor określa źródła ruchu drogowego. Elementy 0,3,6 wektora określają ilości pojazdów napływających do tych odcinków. Pozostałe wartości wektora $\textbf{u[t]}$ to zera.
 
-\subsection{Przepływ pojazdów - }
+\subsection{Pojęcie zatoru }
 
-Powyzsze przedstawienie macierzy stanowej nie zawiera w sobie jeszcze pojecia korka. W
-jednym interwale czasowym moze przejechac przez skrzyzowanie astronomiczna wrecz liczba
+Powyzsze przedstawienie macierzy stanowej nie zawiera w sobie jeszcze pojecia zatoru drogowego. W
+jednym interwale czasowym moze przejechac przez skrzyzowanie astronomiczna wręcz liczba
 pojazdów. Dodane zostanie zatem ograniczenie do maksymalnie 10 pojazdów przejezdzajacych
 w trakcie jednego interwału czasowego. Nalezy sformułowac funkcje, która okresli przepływ
-z uwzglednieniem tworzenia sie korka w przypadku wiekszej liczby pojazdów. Niech i, j
-oznaczaja rozwazane odcinki wlotowe i wylotowe. Wtedy funkcja korka jest nastepujaca:
+z uwzglednieniem tworzenia sie zatoru w przypadku wiekszej liczby pojazdów. Niech i, j
+oznaczaja rozwazane odcinki wlotowe i wylotowe. Wtedy funkcja zatoru jest nastepujaca:
 
 \begin{numcases}{f(i,j)=}
-0 & dla $S[i,j]=0$ - czerwone światło \\
-P[i,j] & dla $ S[i,j]=1 \wedge P[i,j] x[i]<10$ - zielone światło, bez korka \\
-\frac{10}{x[i]} & dla $S[i,j]=1  \wedge P[i,j] x[i] \geq 10$ - zielone światło i korek
+0 & dla $S[i,j]=0$ - niemożliwy przejazd \\
+P[i,j] & dla $ S[i,j]=1 \wedge P[i,j] x[i]<10$ - przejazd bez zatoru \\
+\frac{10}{x[i]} & dla $S[i,j]=1  \wedge P[i,j] x[i] \geq 10$ - przejazd z zatorem
 \end{numcases}
 Macierz stanowa $A$ przedstawia się następująco:
 
 \def \A_f {\begin{bmatrix}
-		1-S & f(1,0) & ... & f(35,0) \\
-		f(0,1) &1-S& ... & f(35,1) \\
+		1-\delta(0) & f(1,0) & ... & f(35,0) \\
+		f(0,1) &1-\delta(1)& ... & f(35,1) \\
 		f(0,2) &f(1,2)& ... & f(35,2) \\
 		...   &...& ... & ... \\
-		f(0,35) &f(35,1)& ... & 1-S
+		f(0,35) &f(35,1)& ... & 1-\delta(35)
 
 \end{bmatrix}}
 
 
-\[A=\A_f \]
+\[A=\A_f \addtag \label{eq_A_z_korkiem} \]
+Gdzie $\delta$ w tym przypadku to:
+\[\delta(i)=\sum_{j\in{\{0,...,35\}},j!=i} f(i,j) \addtag \]
 
+Równanie stanu $\textbf{x[t]}=\textbf{Ax[t-1]}+\textbf{u[t-1]}$ zgodne z powyżej zdefiniowaną \ref{eq_A_z_korkiem} macierzą stanu $\textbf{A}$ opisuje ruch uliczny z uwzględnieniem możliwych zatorów.
 
 \section{Uczenie Środowiska 4}	
 \subsection{Podejście 1}

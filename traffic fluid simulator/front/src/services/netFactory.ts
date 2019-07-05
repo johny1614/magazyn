@@ -106,6 +106,7 @@ export class NetFactory {
 
   static attachLights(nets, dynamicData) {
     console.log('nets', nets);
+    console.log('nets lenf',nets.length)
     for (let net_index = 0; net_index < nets.length; net_index++) {
       console.log('net_index', net_index);
       console.log('A', dynamicData.nets[net_index].lights)
