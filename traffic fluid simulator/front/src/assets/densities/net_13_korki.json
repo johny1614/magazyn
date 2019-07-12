@@ -1,0 +1,45 @@
+{
+    "learningMethod": "none",
+    "learningEpochs": 0,
+    "nets": [
+        {
+            "times": {
+                "old_time": 0,
+                "new_time": 1
+            },
+            "densities": [
+                0,1,2,3
+            ]
+        },
+        {
+            "times": {
+                "old_time": 0,
+                "new_time": 1
+            },
+            "densities": [
+                17,2,11,4
+            ]
+        },
+        {
+            "times": {
+                "old_time": 0,
+                "new_time": 1
+            },
+            "densities": [
+                7,10,3,10
+            ]
+        },
+        {
+            "times": {
+                "old_time": 0,
+                "new_time": 1
+            },
+            "densities": [
+                0,7,10,3
+            ]
+        }
+    ],
+
+    "netName": "net13",
+    "densityName": ""
+}

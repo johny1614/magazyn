@@ -36,11 +36,19 @@ export class AppComponent {
     this.getJSON('assets/nets/net11.json').subscribe(staticData => {
       console.log('static jest',staticData)
       this.nets = [NetFactory.netFromJson(staticData)];
+      // sdfdsfsdfdsf
+      // asdsd
+      // let net = 'assets/densities/net_11_korki.json';
       // let net = 'assets/densities/net4_sequential.json'
       // let net = 'assets/densities/net11_den_843015.json';
-      // let net = 'assets/densities/net11_den_083311.json';
-      // let net = 'assets/densities/net11_den_0006321.json';
-      let net = 'assets/densities/net11_den_000602.json';
+      // let net = 'assets/densities/net11_den_081331.json'; // to jest ogarniete
+      // let net = 'assets/densities/net11_den_002163.json';
+      // let net = 'assets/densities/net11_den_000602.json';
+      // let net = 'assets/densities/net_12_densities_example.json';
+      // let net = 'assets/densities/net11_MC_2.json';
+      let net = 'assets/densities/net11_test_no_5.json';
+      // let net = 'assets/densities/net11_seq.json';
+
 
       // let net = 'assets/densities/net11_den_phase_0_1_yellow_purple.json';
       // let net = 'assets/densities/net4_0_1_2_yellow_phase.json';

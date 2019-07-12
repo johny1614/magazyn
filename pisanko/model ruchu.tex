@@ -9,7 +9,7 @@
 \usepackage{enumitem}
 \usepackage{array}
 \usepackage{booktabs}
-
+\usepackage{multirow}
 \usepackage{mathtools, nccmath}
 \usepackage[polish]{babel}
 \usepackage[utf8]{inputenc}
@@ -46,6 +46,9 @@
 \renewcommand{\labelenumii}{\theenumii}
 \renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
 \tag{\theequation}}
+\newcommand{\myref}[1]{(\ref{#1})} 
+\newcommand{\specialcell}[2][c]{%
+	\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 
 \begin{document}
 \title{Optymalizacja  systemu sygnalizacji świetlnej w 
@@ -133,15 +136,15 @@ Rezultatem jest końcowy rekurencyjny wzór na gęstość ruchu:
 \[p_l^{k+1}=p_l^{k}  -\frac{1}{\Delta x}  (f(b_{l+1},k)-f(b_l,k)) \addtag \]
 
 
-\chapter{Model sieci dróg}
+\chapter{Model sieci dróg} \label{chapter:model_sieci_drog}
 \section{Wstęp}
 Ze względu na dużą złożoność końcowego modelu zostanie przedstawiony najpierw bardzo prosty, podstawowy model. W każdej kolejnej sekcji dodawane będą zmiany przybliżające do ostatecznej postaci. Jest to podejście pozwalające na proste przedstawienie modelu, który zawiera bardzo wiele aspektów m.in:
-ujęcie sygnalizacji świetlnej, brak kolizyjnych manewrów, makroskopowy przepływ ruchu, przepływ ruchu na skrzyżowaniu, struktura sieci dróg. Zestawienie w jednej sekcji wszystkich tych kwestii byłoby bardzo przytłaczające.
+sygnalizacji świetlnej, wielu dróg, zatoru drogowego, źródła i ujścia ruchu. Zestawienie w jednej sekcji wszystkich tych kwestii byłoby bardzo przytłaczające.
 
 \section{Wektor stanu drogi} \label{sec:wektor_stanu_drogi}
 Wektor stanu jest strukturą przedstawiającą stan środowiska. Dla każdego odcinka drogi składuje on wartości zmiennych stanowych. Początkowo zmienna stanowa jest identyfikowana jako ilość pojazdów na danym odcinku drogi. 
 \subsection{Przykład} \label{subsec:example-single-road}
-Niech będzie dana droga $e$ z wydzielonymi czterema odcinkami. Przykładowy wektor stanu to
+Niech będzie dana droga z wydzielonymi czterema odcinkami. Przykładowy wektor stanu takiego środowiska to
 \[\textbf{x(t)}=\begin{bmatrix}
 2 \\ 4 \\ 3 \\ 0
 \end{bmatrix} \addtag \]
@@ -160,7 +163,7 @@ Zawiera on w sobie następujące informacje dla chwili t:
 	\label{fig:single_road}
 \end{figure}
 \section{Rozwój wektora stanu jednej drogi}
-Początkowy model przepływu pojazdów zakłada, iż wszystkie pojazdy w chwili t+1 są o jeden odcinek dalej w swojej podróży niż w momencie $t$. Założone jest, iż żadne nowe pojazdy nie pojawiają się w sieci dróg, a pojazdy będące w chwili $t$ w ostatnim odcinku drogi układ. Formalnym wzorem definiującym rozwój wektora stanu jest:
+Początkowy model przepływu pojazdów zakłada, iż wszystkie pojazdy w chwili t+1 są o jeden odcinek dalej w swojej podróży niż w momencie $t$. Założone jest, iż żadne nowe pojazdy nie pojawiają się w sieci dróg. Ujście pojazdów znajduje się na końcu ostatniego odcinka. Wszystkie pojazdy będące w chwili $t$ na ostatnim odcinku w chwili $t+1$ opuszczają układ. Formalnym wzorem definiującym rozwój wektora stanu jest:
 \[\textbf{x(t+1)}=\textbf{Ax(t)} \addtag \label{eq:single_road} \]
 Gdzie $\textbf{A}$ jest macierzą systemu. Definiuje ona sposób przepływu pojazdów. $\textbf{A}$ jest rzadką, kwadratową macierzą o wartościach równych 1 jedynie bezpośrednio 1 wiersz pod główną przekątną macierzy. Takie wartości gwarantują przepływ pojazdów o jeden odcinek w jednym interwale czasowym.
 \subsection{Przykład}
@@ -215,7 +218,7 @@ Niech będzie dana sieć składająca się z trzech dróg. Dla każdej drogi zos
 	\centering
 	\includegraphics[width=10cm]{images/env_11}
 	\label{fig:env_11}
-	\caption Numeracja odcinków środowiska
+	\caption{Numeracja odcinków środowiska}
 \end{figure}
 
 Niech przykładowym wektorem stanu będzie:
@@ -233,13 +236,17 @@ Zawiera on w sobie informacje dotyczące ilości pojazdów na poszczególnych od
 \end{figure}
 
 \section{Rozwój wektora stanu sieci dróg}
-Przepływ pojazdów niezmiennie jest oparty o założenie, iż w trakcie trwania jednego interwału czasowego pojazdy pokonują 1 odcinek drogi. Równaniem systemu pozostaje $\textbf{x(t+1)=Ax(t)}$, gdyż do układu nie wpływają nowe pojazdy.\\ \\
-Macierz systemu $\textbf{A}$ powinna uwzględnić przepływy pojazdów na skrzyżowaniach. W tym momencie należy przedstawić następującą definicję macierzy $\textbf{A}$:\\
-Wartości macierzy \textbf{A} określają jaka część pojazdów z odcinka zadanego przez indeks kolumny przejeżdża do odcinka zadanego przez indeks wiersza.
+Przepływ pojazdów niezmiennie jest oparty o założenie, iż w trakcie trwania jednego interwału czasowego pojazdy pokonują 1 odcinek drogi. Nie pojawiają się nowe pojazdy w trakcie trwania symulacji, a ujścia ruchu znajdują się na końcu odcinków 3 i 5.
+%Równaniem systemu pozostaje $\textbf{x(t+1)=Ax(t)}$, gdyż do układu nie wpływają nowe pojazdy.\\ \\
+Macierz systemu $\textbf{A}$ powinna uwzględnić przepływy pojazdów na skrzyżowaniach. Do tej pory wszystkie pojazdy poruszały się do przodu. W przypadku sieci dróg trzeba uwzględnić przypadek skrzyżowania, gdzie pojazdy mogą obrać różne kierunki ruchu.
+%W tym momencie należy przedstawić następującą definicję macierzy $\textbf{A}$:\\
+%Wartości macierzy \textbf{A} określają jaka część pojazdów z odcinka zadanego przez indeks kolumny przejeżdża do odcinka zadanego przez indeks wiersza. 
+Zdefiniowana zostanie zatem macierz $ \textbf{P} $ prawdopodobieństwa manerwów. Jest to niezmienna w czasie rzadka macierz. Wartości macierzy $ \textbf{P} $ w kolumnie i oraz wierszu j to prawdopodobieństwo przejazdu pojazdu będącego na odcinku i do odcinka j.
 
 
 \subsection{Przykład}
-Rozważone zostanie środowisko (\ref{subsec:wektor_stanu_siec_przyklad}) z dodatkowym założeniem, że 75 procent pojazdów ma zamiar skręcić w prawo. Pozostałe 25 procent wybiera skręt w lewo. Srodowisko przedstawiają poniższe obrazki.
+Rozważone zostanie środowisko (\ref{subsec:wektor_stanu_siec_przyklad}) z dodatkowym założeniem, że 75 procent pojazdów ma zamiar skręcić w prawo. Pozostałe 25 procent wybiera skręt w lewo. 
+Srodowisko przedstawiają poniższe obrazki.
 
 \begin{tabular}{| c  | Sc |}
 	\hline
@@ -248,6 +255,27 @@ Rozważone zostanie środowisko (\ref{subsec:wektor_stanu_siec_przyklad}) z doda
 	\cincludegraphics[width=7cm]{images/env_11}  & \cincludegraphics[width=7cm]{images/env_11_843015_procenty} \\
 	\hline 
 \end{tabular}
+
+Taki sposób przepływu definiuje rzadką macierz prawdopodobieństwa $ \textbf{P} $ o wymiarach 6 na 6.
+\begin{itemize}
+	\item $\textbf{P}[1,2]=0.25$ wyznacza manewr skrętu w lewo
+	\item $\textbf{P}[1,4]=0.75$ wyznacza manewr skrętu w prawo
+	\item $\textbf{P}[0,1]=1 \;\; \textbf{P}[2,3]=1 \;\; \textbf{P}[4,5]=1$ co wynika z przepływu pojazdów pomiędzy sekcjami na jednej drodze
+	\item Pozostałe wartości macierzy $\textbf{P}$ to zera.
+\end{itemize}
+
+\def \P {\begin{bmatrix}
+		0 & 0 & 0 & 0 & 0 & 0 \\
+		1 & 0 & 0 & 0 & 0 & 0 \\
+		0 & 0.25 & 0 & 0 & 0 & 0 \\
+		0 & 0 & 1 & 0 & 0 & 0 \\
+		0 & 0.75 & 0 & 0 & 0 & 0 \\
+		0 & 0 & 0 & 0 & 1 & 0 
+\end{bmatrix}}
+\[P=\P\]
+
+
+
 
 
 \def \A{
@@ -260,30 +288,29 @@ Rozważone zostanie środowisko (\ref{subsec:wektor_stanu_siec_przyklad}) z doda
 	0 & 0    & 0 & 0 & 1 & 0 
 \end{bmatrix}
 }
-Przepływ pojazdów definiuje poniższa macierz stanowa.
-\[\textbf{A}=\A\]
+\begin{flushleft}
+W sytuacji gdy nie ma uwzględnionej sygnalizacji świetlnej oraz pojęcia zatoru macierz systemu jest macierzą prawdopodobieństwa, czyli $A=P$. \linebreak Wartości wektora stanu zmieniają się zgodnie równaniem stanu $\textbf{x(t)}=\textbf{Ax(t-1)}$. Poniżej zapisane są obliczenia.
+\end{flushleft}
 
-Wartości wektora stanu zmieniają się w czasie w następujący sposób:
 \def \xI{\begin{bmatrix}
-		0 \\ 8 \\ 3 \\ 3 \\ 1 \\ 1
+		0 \\ 8 \\ 1 \\ 3 \\ 3 \\ 1
 \end{bmatrix}}
 \def \xII{\begin{bmatrix}
-		0 \\ 0 \\ 6 \\ 3 \\ 2 \\ 1
+		0 \\ 0 \\ 2 \\ 1 \\ 6 \\ 3
 \end{bmatrix}}
 \def \xIII{\begin{bmatrix}
 		0 \\ 0 \\ 0 \\ 6 \\ 0 \\ 2
 \end{bmatrix}}
-\linebreak
 \begin{tabular}{| c | c | Sc |}
 	\hline
-	t   & Równanie x & Podgląd środowiska \\
+	t   & Równanie stanu & Podgląd środowiska \\
 	\hline
 	0 & 
 	$ \textbf{x(0)} = \xzero$  & \cincludegraphics[width=7cm]{images/env_11_843015_procenty} \\
 	\hline 
-	1 & $\textbf{x(1)}=\textbf{Ax(0)}=\A \xzero = \xI$  & \cincludegraphics[width=7cm]{images/env_11_083311_procenty} \\
+	1 & $\textbf{x(1)}=\textbf{Ax(0)}=\A \xzero = \xI$  & \cincludegraphics[width=7cm]{images/env_11_081331_procenty} \\
 	\hline 
-	2 & $\textbf{x(2)}=\textbf{Ax(1)}=\A \xI = \xII$  & \cincludegraphics[width=7cm]{images/env_11_006321_procenty} \\
+	2 & $\textbf{x(2)}=\textbf{Ax(1)}=\A \xI = \xII$  & \cincludegraphics[width=7cm]{images/env_11_002163_procenty} \\
 	\hline 
 	3 &	$\textbf{x(3)}=\textbf{Ax(2)}=\A \xII = \xIII$ & \cincludegraphics[width=7cm]{images/env_11_000602_procenty} \\
 \hline 
@@ -292,251 +319,405 @@ Wartości wektora stanu zmieniają się w czasie w następujący sposób:
 
 \newpage
 \section{Wprowadzenie sygnalizacji świetlnej}
-Kolejnym etapem rozwoju modelu jest wprowadzenie sygnalizacji świetlnej. Warto zauważyć, że do tej pory rozważane układy były pozbawione jakiegokolwiek sterowania, czego bezpośrednim skutkiem była niezmienność macierzy $\textbf{A}$ w czasie. W chwili pojawienia się sygnalizacji świetlnej macierz systemu będzie oparta o aktualną fazę sygnalizacji świetlnej. Równanie systemu pozostaje takie samo jak w przypadku braku sygnalizacji świetlnej z jedną małą różnicą:
-\[\textbf{x(t+1)}=\textbf{A(t)x(t)} \addtag \]
-Macierz systemu jest zmienna w czasie, zatem w miejse $\textbf{A}$ pojawiło się $\textbf{A(t)}$. \\ \\
-Dla rozważanej sieci dróg zostaje przedstawiona \textbf{macierz topologii} układu $\textbf{T}$. Jej wartości podobnie jak macierzy $\textbf{A}$ odnoszą się do tego jaka część pojazdów z odcinka zadanego przez indeks kolumny przejeżdża do odcinka zadanego przez indeks wiersza. Macierz $\textbf{A}$ dotyczy jednak możliwych przejazdów w konkretnej fazie sygnalizacji świetlnej. Natomiast macierz topologii $\textbf{T}$ odnosi się do wszystkich możliwych przejazdów -  uwzględniając wszystkie fazy sygnalizacji świetlnej i jest stała w czasie. \\ \\
-\noindent
-\textbf{Macierz sterowania} (sygnalizacją świetlną) oznaczana będzie jako $\textbf{S(t)}$. Ustala ona macierz systemu na podstawie następującej równości:
-\[\textbf{A(t)}=\textbf{S(t)T} \addtag \]
-Jeśli $S(t)$ określa przejazdy, które są rzeczywiście możliwe w układzie, to:
-\[\textbf{A(t)}=\textbf{S(t)} \addtag \]
-Zatem celem wprowadzenia macierzy topologii oprócz przedstawienia wszystkich możliwych przejazdów jest także walidacja przejazdów zadanych przez macierz sterowania $\textbf{S(t)}$.
+Kolejnym etapem rozwoju modelu jest wprowadzenie sygnalizacji świetlnej. Warto zauważyć, że do tej pory rozważane układy były pozbawione jakiegokolwiek sterowania, czego bezpośrednim skutkiem była niezmienność macierzy $\textbf{A}$ w czasie. 
+Niech wektor $ [i,j] $ będzie manewrem polegającym na bezpośrednim przejeździe z odcinka $ i $ na odcinek $ j $. Zostanie teraz zdefiniowana macierz sygnalizacji świetlnej $\textbf{S}$. Określa ona wykonalność dowolnego manewru.
 
-\subsection{Przykład}
-Rozważony zostanie przykład sieci trzech dróg $e_1,e_2,e_3$. Każda z nich jest podzielona na dwa odcinki. Drogi $e_1$ i $e_2$ zbiegają się na skrzyżowaniu z sygnalizacją świetlną. Założone jest, że sygnalizacja zmienia się w każdym kroku czasowym, jednak w międzyczasie przez jeden interwał czasowy jest żółte światło dla obydwu dróg. Matematycznie ujmując żółte światło jest równoważne czerwonemu - pojazdy czekają na skrzyżowaniu. Początkowy stan sieci przedstawia rysunek:
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=14cm]{3_drogi_sygnalizacja}
-	\caption{Sieć dróg z sygnalizacją świetlną w chwili t=0}
-	\label{fig:3_drogi_sygnalizacja}
-\end{figure}
+\begin{numcases}{S_{ij}=}
+1 & dla manewru zezwolonego przez zielone światło \label{eq:allowed_by_light} \\
+1 & dla manewru nie wymagającego sygnalizacji świetlnej \label{eq:manewr_existing} \\
+0 & dla manewru wstrzymanego przez czerwone światło \label{eq:stopped_by_light} \\
+0 & dla niemożliwego manewru \label{eq:manewr_not_existing}
+\end{numcases}
+Sygnalizacja świetlna zawsze posiada pewną fazę, która określa dozwolone \myref{eq:allowed_by_light} oraz niedozwolone \myref{eq:stopped_by_light} manewry. Fazy świetlne będą oczywiście zmieniane w trakcie symulacji zatem macierz $\textbf{S}$ też jest zmienna w czasie. Wartości macierzy $\textbf{S}$ obejmujące przypadki \ref{eq:manewr_not_existing} oraz \ref{eq:manewr_existing} są z kolei niezmienne dla ustalonego środowiska.
+\subsection{Przykład macierzy sygnalizacji świetlnej} \label{subsec:macierz_sygnalizacji}
+Rozważone będzie znane z poprzednich przykładów skrzyżowanie - tym razem mające sygnalizację świetlną z aktywną fazą zezwalającą na manewr [1,2]. Ta sama faza zabrania przejazdu z 1 odcinka do 4. 
 
-Należy zastanowić się nad macierzą topologii układu $\textbf{T}$. Jest ona następująca:
-\begin{equation*}
-\textbf{T}=
-\begin{blockarray}{*{6}{c} l}
-\begin{block}{*{6}{>{$\footnotesize}c<{$}} l}
-$b_1$ & $b_2$ & $b_3$ & $b_4$ & $b_5$ & $b_6$ \\
-\end{block}
-\begin{block}{[*{6}{c}]>{$\footnotesize}l<{$}}
-0 & 0 & 0 & 0 & 0 & 0 & $b_1$ \\
-1 & \colorbox{red!30}{1} & 0 & 0 & 0 & 0 & $b_2$ \\
-0 & 0 & 0 & 0 & 0 & 0 & $b_3$ \\
-0 & 0 & 1 & \colorbox{red!30}{1} & 0 & 0 & $b_4$ \\
-0 & \colorbox{green!30}{1} & 0 & \colorbox{green!30}{1} & 0 & 0 & $b_5$ \\
-0 & 0 & 0 & 0 & 1 & 0 & $b_6$ \\
-\end{block}
-\end{blockarray} \addtag
-\end{equation*}
+\begin{tabular}{| Sc  | Sc |}
+	\hline
+	Numeracja odcinków   & Ilości pojazdów \\
+	\hline
+	\cincludegraphics[width=7cm]{images/env_11_faza_0_procenty}  & \cincludegraphics[width=7cm]{images/env_11_lights_0_943015_procenty} \\
+	\hline 
+\end{tabular}
+
+Poszczególne manewry są następujące:
 \begin{itemize}
-	\item Wartości w kolumnach $b_1,b_3,b_5$ są równe 1 tylko w wierszach odpowiadającym odcinkom $b_2,b_4,b_6$, co wynika z tego, że pojazdy będące na odcinkach $b_1,b_3,b_5$ mają tylko możliwość przejazdu do odpowiednio $b_2,b_4,b_6$.
-	\item Wartości w kolumnie $b_6$ są zerowe, gdyż pojazdy z odcinku $b_6$ opuszczają układ.
-	\item Najbardziej interesujące są kolumny $b_2$ i $b_4$. Odpowiadają one odcinkom leżącym bezpośrednio przed skrzyżowaniem. Obydwie kolumny posiadają dwie wartości 1, gdyż pojazdy będące na odcinkach $b_2,b_4$ mają dwie możliwości przejazdu. Pojazdy będące na odcinku $b_2$ mogą przejechać przez skrzyżowanie i wjechać na $b_5$, albo pozostać dalej na $b_2$ w przypadku czerwonego światła. Analogiczna sytuacja dotyczy pojazdów na odcinku $b_4$. \colorbox{green!30}{Zielone} i \colorbox{red!30}{czerwone} tło określają przy jakiej sygnalizacji świetlnej opisany przejazd jest możliwy.
+	\item \myref{eq:allowed_by_light} - Manewrem zezwolonym przez zielone światło  dla fazy $ 0 $ jest $ [1,2] $.
+	\item \myref{eq:manewr_existing} - Prawidłowym manewrem bez sygnalizacji świetlnej są manewry $ [0,1] $, $ [2,3] $, $ [4,5] $.
+	\item \myref{eq:stopped_by_light} - Dla fazy świetlnej $ 0 $ manewrem zatrzymanym przez czerwone światło  jest $ [1,4] $.
+	\item \myref{eq:manewr_not_existing} - Pozostałe manewry są niemożliwe. Przykładem niech będzie $ [0,2] $, gdyż nie ma możliwości bezpośredniego przejazdu z odcinka $ 0 $ do $ 2 $. Teoretycznie możliwy mógłby się wydawać manewr [1,1] jednak jest on uznany za niemożliwy.
 \end{itemize}
+Macierz sygnalizacji świetlnej dla tego przykładu jest następująca:
+\def \S{\begin{bmatrix}
+		0 & 0 & 0 & 0 & 0 & 0 \\
+		1 & 0 & 0 & 0 & 0 & 0 \\
+		0 & 0 & 0 & 0 & 0 & 0 \\
+		0 & 0 & 1 & 0 & 0 & 0 \\
+		0 & 0 & 0 & 0 & 0 & 0 \\
+		0 & 0 & 0 & 0 & 1 & 0 \\
+\end{bmatrix}}
+\[\textbf{S}=\S\]
 
-\def \xzero{
+
+\subsection{Macierz systemu uwzględniająca sygnalizację świetlną}
+Mając zdefiniowaną zarówno macierz prawdopodobieństwa przejazdów $\textbf{P}$ jak i macierz sygnalizacji świetlnej $ \textbf{S} $ można ustalić macierz systemu $\textbf{A}$ uwzględniającą już sygnalizacje świetlne. Niech $Q$ będzie zbiorem odcinków, które znajdują się bezpośrednio przed ujściem ruchu. Wtedy macierz systemu zdefiniowana jest jako: 
+\begin{numcases}{A[i,j]=}
+0 & dla $S[i,j]=0 \vee i \in {Q}$ \\
+P[i,j] & dla $ S[i,j]=1$ \\
+1-\delta(i) & dla $i=j \wedge  i \not\in {Q}$
+\end{numcases}
+Równanie systemu jest następujące:
+\[\textbf{x(t+1)}=\textbf{A(t)x(t)} \addtag \]
+Macierz systemu jest teraz zmienna w czasie, zatem w miejse $\textbf{A}$ dotychczasowego równania pojawiło się $\textbf{A(t)}$. \\ \\
+\subsection{Przykład rozwoju wektora stanowego}
+Niech dla chwili t=0 będzie dany układ z przykładu \myref{subsec:macierz_sygnalizacji}. W chwili t=2 zostanie zmieniona faza świetlna. Od tego momentu obydwa manewry na skrzyżowaniu są dozwolone.  W chwili t=3 wartości stanowe nie są całkowite, co nie przeszkadza modelowi matematycznemu. Wartości stanowe były identyfikowane do tej pory jako ilość pojazdów na odcinku i dalej jest to dobra interpretacja o ile przyjmiemy, że pojazdy są możliwe do podzielenia na części. Rozwój wektora stanu został przedstawiony w poniższej tabeli.
+
+\def \xzero{\begin{bmatrix}
+		9 \\ 4 \\ 3 \\ 0 \\ 1 \\ 5
+\end{bmatrix}}
+\def \xI{\begin{bmatrix}
+		0 \\ 12 \\ 1 \\ 3 \\ 0 \\ 1
+\end{bmatrix}}
+\def \xII{\begin{bmatrix}
+		0 \\ 9 \\ 3 \\ 1 \\ 0 \\ 0
+\end{bmatrix}}
+\def \xIII{\begin{bmatrix}
+		0 \\ 0 \\ 2 \frac{1}{4} \\ 3 \\ 7 \frac{3}{4} \\ 0
+\end{bmatrix}}
+
+\def \AZero{
 	\begin{bmatrix}
-		4 \\ 5 \\ 4 \\ 2 \\ 7 \\ 1
-	\end{bmatrix}
+		0 & 0            & 0 & 0 & 0 & 0 \\
+		1 & \frac{3}{4}  & 0 & 0 & 0 & 0 \\
+		0 & \frac{1}{4}  & 0 & 0 & 0 & 0 \\
+		0 & 0            & 1 & 0 & 0 & 0 & \\
+		0 & 0            & 0 & 0 & 0 & 0 \\
+		0 & 0            & 0 & 0 & 1 & 0 \\
+	\end{bmatrix}	
 }
-Początkowy wektor stanu (zgodny z rysunkiem \ref{fig:3_drogi_sygnalizacja}) to:
-\[\textbf{x(0)}= \xzero \]
-Macierz stanu w momentach $t=0,4$ uwzględnia zielone światło dla drogi $e_1$ oraz czerwone dla $e_2$.
-\def \aeI{
-\begin{bmatrix}
-	0 & 0                     & 0 & 0 & 0 & 0 \\
-	1 & \colorbox{red!30}{0}  & 0 & 0 & 0 & 0 \\
-	0 & 0                     & 0 & 0 & 0 & 0 \\
-	0 & 0                     & 1 & \colorbox{red!30}{1} & 0 & 0 & \\
-	0 & \colorbox{green!30}{1}  & 0 & \colorbox{green!30}{0} & 0 & 0 \\
-	0 & 0                     & 0 & 0 & 1 & 0 \\
+
+\def \AI{
+	\begin{bmatrix}
+	0 & 0            & 0 & 0 & 0 & 0 \\
+	1 & \frac{3}{4}  & 0 & 0 & 0 & 0 \\
+	0 & \frac{1}{4}  & 0 & 0 & 0 & 0 \\
+	0 & 0            & 1 & 0 & 0 & 0 & \\
+	0 & 0            & 0 & 0 & 0 & 0 \\
+	0 & 0            & 0 & 0 & 1 & 0 \\
+\end{bmatrix}	
+}
+\def \AII{
+	\begin{bmatrix}
+	0 & 0            & 0 & 0 & 0 & 0 \\
+	1 & 0            & 0 & 0 & 0 & 0 \\
+	0 & \frac{1}{4}  & 0 & 0 & 0 & 0 \\
+	0 & 0            & 1 & 0 & 0 & 0 & \\
+	0 & \frac{3}{4}  & 0 & 0 & 0 & 0 \\
+	0 & 0            & 0 & 0 & 1 & 0 \\
 \end{bmatrix}
-
 }
 
-\begin{equation*}
-\boldsymbol{A_{e_1}}=
-\begin{blockarray}{*{6}{c} l}
-\begin{block}{*{6}{>{$\footnotesize}c<{$}} l}
-$b_1$ & \colorbox{green!30}{$b_2$} & $b_3$ & \colorbox{red!30}{$b_4$} & $b_5$ & $b_6$ \\
-\end{block}
-\begin{block}{[*{6}{c}]>{$\footnotesize}l<{$}}
-0 & 0                     & 0 & 0 & 0 & 0 & $b_1$ \\
-1 & \colorbox{red!30}{0}  & 0 & 0 & 0 & 0 & $b_2$ \\
-0 & 0                     & 0 & 0 & 0 & 0 &  $b_3$ \\
-0 & 0                     & 1 & \colorbox{red!30}{1} & 0 & 0 & $b_4$ \\
-0 & \colorbox{green!30}{1}  & 0 & \colorbox{green!30}{0} & 0 & 0 & $b_5$ \\
-0 & 0                     & 0 & 0 & 1 & 0 & $b_6$ \\
-\end{block}
-\end{blockarray} \addtag
-\end{equation*}
-Macierz stanu w momentach $t=1,3,5$ uwzględnia żółte światło zarówno dla $e_1$ jak i $e_2$. Jak zostało już wspomniane, jest ono równoważne czerwonemu światłu.
-\begin{equation*}
-\boldsymbol{A_{yellow}}=
-\begin{blockarray}{*{6}{c} l}
-\begin{block}{*{6}{>{$\footnotesize}c<{$}} l}
-$b_1$ & \colorbox{red!30}{$b_2$} & $b_3$ & \colorbox{red!30}{$b_4$} & $b_5$ & $b_6$ \\
-\end{block}
-\begin{block}{[*{6}{c}]>{$\footnotesize}l<{$}}
-0 & 0                     & 0 & 0 & 0 & 0 & $b_1$ \\
-1 & \colorbox{red!30}{1}  & 0 & 0 & 0 & 0 & $b_2$ \\
-0 & 0                     & 0 & 0 & 0 & 0 &  $b_3$ \\
-0 & 0                     & 1 & \colorbox{red!30}{1} & 0 & 0 & $b_4$ \\
-0 & \colorbox{green!30}{0}  & 0 & \colorbox{green!30}{0} & 0 & 0 & $b_5$ \\
-0 & 0                     & 0 & 0 & 1 & 0 & $b_6$ \\
-\end{block}
-\end{blockarray} \addtag
-\end{equation*} 
-Macierz stanu w momencie $t=2$ uwzględnia zielone światło dla drogi $e_2$ oraz czerwone dla $e_1$.
-\begin{equation*}
-\boldsymbol{A_{e_2}}=
-\begin{blockarray}{*{6}{c} l}
-\begin{block}{*{6}{>{$\footnotesize}c<{$}} l}
-$b_1$ & \colorbox{red!30}{$b_2$} & $b_3$ & \colorbox{green!30}{$b_4$} & $b_5$ & $b_6$ \\
-\end{block}
-\begin{block}{[*{6}{c}]>{$\footnotesize}l<{$}}
-0 & 0                     & 0 & 0 & 0 & 0 & $b_1$ \\
-1 & \colorbox{red!30}{1}  & 0 & 0 & 0 & 0 & $b_2$ \\
-0 & 0                     & 0 & 0 & 0 & 0 &  $b_3$ \\
-0 & 0                     & 1 & \colorbox{red!30}{0} & 0 & 0 & $b_4$ \\
-0 & \colorbox{green!30}{0}  & 0 & \colorbox{green!30}{1} & 0 & 0 & $b_5$ \\
-0 & 0                     & 0 & 0 & 1 & 0 & $b_6$ \\
-\end{block}
-\end{blockarray} \addtag
-\end{equation*}
+\centerline{
+\begin{tabular}{| c | c | Sc |}
+	\hline
+	t   & Równanie stanu & Podgląd środowiska \\
+	\hline
+	0 &
+	$ \textbf{x(0)} = \xzero$  & \cincludegraphics[width=7cm]{images/env_11_lights_0_943015_procenty} \\
+	\hline 
+	1 & $\textbf{x(1)}=\textbf{A(0)x(0)}=\AZero \xzero = \xI$  & \cincludegraphics[width=7cm]{images/env_11_lights_0_0121301_procenty} \\
+	\hline 
+	2 & $\textbf{x(2)}=\textbf{A(1)x(1)}=\AI \xI = \xII$  & \cincludegraphics[width=7cm]{images/env_11_lights_01_093100_procenty} \\
+	\hline 
+	3 &	$\textbf{x(3)}=\textbf{A(2)x(2)}=\AII \xII = \xIII$ & \cincludegraphics[width=7cm]{images/env_11_lights_koncowe_procenty} \\
+	\hline 
+\end{tabular}
+}
 
 
 
-
-
-
-\def \xzero{
-	\begin{bmatrix}
-		4 \\ 5 \\ 4 \\ 2 \\ 7 \\ 1
-	\end{bmatrix}
-}
-
-\def \xzero{
-	\begin{bmatrix} 3 \\ 5 \\ 4 \\ 2 \\ 7 \\ 1 \end{bmatrix}
-}
-\def \xI{
-	\begin{bmatrix} 0 \\ 3 \\ 0 \\ 6 \\ 5 \\ 7 \end{bmatrix}
-}
-\def \xII{
-	\begin{bmatrix} 0 \\ 3 \\ 0 \\ 6 \\ 0 \\ 5 \end{bmatrix}
-}
-\def \xIII{
-	\begin{bmatrix} 0 \\ 3 \\ 0 \\ 0 \\ 6 \\ 0 \end{bmatrix}
-}
-\def \xIV{
-	\begin{bmatrix} 0 \\ 3 \\ 0 \\ 0 \\ 0 \\ 6 \end{bmatrix}
-}
-\def \xV{
-	\begin{bmatrix} 0 \\ 0 \\ 0 \\ 0 \\ 3 \\ 0 \end{bmatrix}
-}
-\def \aeI{
-	\begin{bmatrix}
-		0 & 0                     & 0 & 0 & 0 & 0 \\
-		1 & \colorbox{red!30}{0}  & 0 & 0 & 0 & 0 \\
-		0 & 0                     & 0 & 0 & 0 & 0 \\
-		0 & 0                     & 1 & \colorbox{red!30}{1} & 0 & 0 & \\
-		0 & \colorbox{green!30}{1}  & 0 & \colorbox{green!30}{0} & 0 & 0 \\
-		0 & 0                     & 0 & 0 & 1 & 0 \\
-	\end{bmatrix}	
-}
-\def \aeII{
-	\begin{bmatrix}
-		0 & 0                     & 0 & 0 & 0 & 0 \\
-		1 & \colorbox{red!30}{1}  & 0 & 0 & 0 & 0 \\
-		0 & 0                     & 0 & 0 & 0 & 0 \\
-		0 & 0                     & 1 & \colorbox{red!30}{0} & 0 & 0 & \\
-		0 & \colorbox{green!30}{0}  & 0 & \colorbox{green!30}{1} & 0 & 0 \\
-		0 & 0                     & 0 & 0 & 1 & 0 \\
-	\end{bmatrix}	
-}
-\def \ayellow{
-	\begin{bmatrix}
-		0 & 0                     & 0 & 0 & 0 & 0 \\
-		1 & \colorbox{red!30}{1}  & 0 & 0 & 0 & 0 \\
-		0 & 0                     & 0 & 0 & 0 & 0 \\
-		0 & 0                     & 1 & \colorbox{red!30}{1} & 0 & 0 & \\
-		0 & \colorbox{green!30}{0}  & 0 & \colorbox{green!30}{0} & 0 & 0 \\
-		0 & 0                     & 0 & 0 & 1 & 0 \\
-	\end{bmatrix}
-	
-}
-
-	
-	\begin{tabular}{| c | c | c | Sc |}
-		\hline
-		t & $\textbf{x(t)}$ & $\textbf{A(t)}$ & Rysunek stanu układu \\
-		\hline
-		0 & $\xzero$  & $\aeI$ & \cincludegraphics[height=3cm]{3_drogi_sygnalizacja_0} \\
-		\hline 
-		1 & $\xI$  & $\ayellow$ & \cincludegraphics[height=3cm]{3_drogi_sygnalizacja_1} \\
-		\hline
-		2 & $\xII$  & $\aeII$ & \cincludegraphics[height=3cm]{3_drogi_sygnalizacja_2} \\
-		\hline
-		3 & $\xIII$  & $\ayellow$ & \cincludegraphics[height=3cm]{3_drogi_sygnalizacja_3} \\
-		\hline
-		4 & $\xIV$  & $\aeI$ & \cincludegraphics[height=3cm]{3_drogi_sygnalizacja_4} \\
-		\hline
-		5 & $\xV$  & $\ayellow$ & \cincludegraphics[height=3cm]{3_drogi_sygnalizacja_5} \\
-		\hline
-	\end{tabular}
 
 \section{Wprowadzenie źródeł ruchu }
-Wszystkie poprzednie przykłady układów ruchu drogowego szybko kończyły się stanem w którym nie było już żadnych pojazdów na drogach. W tym rozdziale zostanie przedstawiony sposób napływania nowych pojazdów do układu. Drogi układu, które nie rozpoczynają się na skrzyżowaniu będą nazywane drogami zródłowymi. Niech zbiór wszystkich dróg zródłowych to $E_s={e_1,...,e_k}$. Wektorem zródła w chwili $t$ nazywany bedzie wektor:
-\[\boldsymbol{u(t)}=\begin{bmatrix} u_1 \\ ... \\ u_k \end{bmatrix} \]
+Wszystkie poprzednie przykłady układów ruchu drogowego szybko kończyły się stanem w którym nie było już żadnych pojazdów na drogach. W tej sekcji zostanie przedstawiony sposób napływania nowych pojazdów do układu. 
+Wprowadzony zostanie wektor źródłą $\textbf{u(t)}$ definiujący pojazdy pojawiające się w układzie. Jest on zmienny w czasie, a jego wartości określają ile pojazdów pojawia się w następnej chwili w poszczególnych odcinkach układu.
 Równanie systemu uwzględniające zródła ruchu to:
-\[\textbf{x(t+1)}=\textbf{A(t)x(t)} + \textbf{Bu(t)} \label{eq:stan_u}   \addtag{}\]
-Gdzie $B$ jest macierzą odpowiedzialną za zrzutowanie pojazdów napływających do dróg zródłowych do odpowiednich odcinków.
-
-\subsection{Przykład dla pojedynczej drogi}
-Niech dana będzie droga $e$ podzielona na 4 odcinki $b_1,b_2,b_3,b_4$. Początkowo niech wektor stanu to
-\[\textbf{x(0)}=\begin{bmatrix} 2 \\ 4 \\ 3 \\ 0 \end{bmatrix} \]
-Dane są następujące wektory zrodlowe:
-\[\textbf{u(0)}=[7] \;\;\; \textbf{u(1)}=[3] \;\;\; \textbf{u(2)}=[5]\]
-Są to wektory o wymiarze 1, gdyż w układzie jest tylko 1 droga.
-Spodziewany następny wektor stanu to:\[\textbf{x(1)}=\begin{bmatrix} 7 \\ 2 \\ 4 \\ 3 \end{bmatrix} \addtag \] gdyż na pierwszym odcinku pojawia się 7 pojazdów ze zródła \textbf{u(0)}, a pozostałe pojazdy przejeżdżają jeden odcinek drogi. Oczywiście $\textbf{Ax(0)}=\begin{bmatrix} 0 & 2 & 4 & 3 \end{bmatrix}^T$, zatem koniecznie
-$\textbf{Bu(0)}= \begin{bmatrix} 7 & 0 & 0 & 0 \end{bmatrix}^T$
-Macierz $\boldsymbol{B}$ zatem musi być dla tego układu następująca:
-\[\boldsymbol{B}=\begin{bmatrix}
-1 \\ 0 \\ 0 \\ 0 \addtag
-\end{bmatrix}\]
-Jest ona stała w czasie. Wartości kolejnych wektorów stanu wyznaczone ze wzoru (\ref{eq:stan_u}) to:
-\[\textbf{x(2)}=\begin{bmatrix}
-3 \\ 7 \\ 2 \\ 4 
-\end{bmatrix}\]
-\[\textbf{x(3)}=\begin{bmatrix}
-5 \\ 3 \\ 7 \\ 2 
-\end{bmatrix}\]
-\subsection{Przykład dla złożonej sieci dróg}
-Niech dany będzie układ składający się z 5 dróg, z czego każda jest podzielona na dwa odcinki. Strukturę sieci dróg przedstawia poniższy rysunek.
+\[\textbf{x(t)}=\textbf{A(t-1)x(t-1)} + \textbf{u(t-1)} \label{eq:stan_u}   \addtag{}\]
+\subsection{Przykład}
+Rozważony zostanie prosty przykład, który nie uwzględnia wcześniej wprowadzonych pojęć sygnalizacji świetlnej oraz zatoru. Przedstawione zostanie środowisko składające się z dwóch dróg, które nie są ze sobą w żaden sposób połączony.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=14cm]{5_drog}
-	\caption{Złożona sieć dróg}
-	\label{fig:5_drog}
+	\includegraphics[width=8cm]{images/env_12}
+	\label{fig:env_12}
+	\caption{Numeracja odcinków środowiska}
+\end{figure} \noindent
+Pojazdy wzdłóż dróg kończąc swój bieg po przejechaniu przez odcinki 5 i 2 co przedstawia macierz systemu $A$:
+\def \A{\begin{bmatrix}
+0 & 0 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0
+\end{bmatrix}}
+\[A=\A \]
+Pragnąc by do odcinków 0 i 3  napływało odpowiednio po 4, 8, 20 oraz 3, 7, 5 pojazdów należy zdefiniować ciąg wektorów $\textbf{u(t)}$ w sposób przedstawiony w poniższej tabeli.
+
+\def \xzero{\begin{bmatrix}
+		0 \\ 8 \\ 1 \\ 3 \\ 3 \\ 1
+\end{bmatrix}}
+\def \xI{\begin{bmatrix}
+		4 \\ 0 \\ 8 \\ 3 \\ 3 \\ 3
+\end{bmatrix}}
+\def \xII{\begin{bmatrix}
+		8 \\ 4 \\ 0 \\ 7 \\ 3 \\ 3
+\end{bmatrix}}
+\def \xIII{\begin{bmatrix}
+		20 \\ 8 \\ 4 \\ 5 \\ 7 \\ 3
+\end{bmatrix}}
+\def \uZero{\begin{bmatrix}
+		4 \\ 0 \\ 0 \\ 3 \\ 0 \\ 0
+\end{bmatrix}}
+\def \uI{\begin{bmatrix}
+		8 \\ 0 \\ 0 \\ 7 \\ 0 \\ 0
+\end{bmatrix}}
+\def \uII{\begin{bmatrix}
+		20 \\ 0 \\ 0 \\ 5 \\ 0 \\ 0
+\end{bmatrix}}
+
+\centerline{
+\begin{tabular}{| c | c | Sc | c |}
+	\hline
+	t   & Równanie stanu & Podgląd środowiska & $ \textbf{u(t)} $ \\
+	\hline
+	0 & 
+	$ \textbf{x(0)} = \xzero$  & \cincludegraphics[width=5cm]{images/env_12_t0} & $\uZero$ \\
+	\hline 
+	1 & $\textbf{x(1)}=\textbf{Ax(0)}+\textbf{u(0)}=\A \xzero + \uZero = \xI$  & \cincludegraphics[width=5cm]{images/env_12_t1} & $\uI $ \\
+	\hline 
+	2 & $\textbf{x(2)}=\textbf{Ax(1)}+\textbf{u(1)}=\A \xI + \uI = \xII$  & \cincludegraphics[width=5cm]{images/env_12_t2} & $\uII $ \\
+	\hline 
+	3 &	$\textbf{x(3)}=\textbf{Ax(2)}+\textbf{u(2)}=\A \xII + \uII = \xIII$ & \cincludegraphics[width=5cm]{images/env_12_t3} & \\
+	\hline 
+\end{tabular}
+}
+\subsection{Zatory drogowe}
+Dotychczasowe przedstawienie macierzy systemu $ \textbf{A} $ nie zawiera w sobie jeszcze pojęcia zotoru drogowego. W jednym interwale czasowym moze przejechac przez odcinek astronomiczna wrecz liczba pojazdów. Wprowadzona zostanie zatem funkcja zatoru ograniczająca przejazdy w przypadku zbyt dużej liczby pojazdów. Dziedziną funkcji zatoru $ f $ jest zbiór wszystkich manewrów $ [i,j] $, takich że $ i \neq j $. Funkcja zatoru jest jednak zależna także od wartości stanowych wektora $\textbf{x}$, a przede wszystkim od ilości pojazdów na odcinkach $i$ oraz $j$ czyli $x[i],x[j]$. Wartości funkcji $f$ należą do przedziału $[0,1]$.
+Macierz stanowa $\textbf{A}$ z uwzględnieniem zatorów dla układu z $ n $ odcinkami przedstawia się następująco:
+
+\def \Af {\begin{bmatrix}
+		1-\delta(0) & f(1,0) & ... & f(n,0) \\
+		f(0,1) &1-\delta(1)& ... & f(n,1) \\
+		f(0,2) &f(1,2)& ... & f(n,2) \\
+		...   &...& ... & ... \\
+		f(0,n) &f(1,n)& ... & 1-\delta(n)
+\end{bmatrix}}
+
+\[\textbf{A}=\Af \addtag \label{eq_A_z_korkiem} \]
+Gdzie $\delta$ to suma wszystkich wartości danej kolumny z wyłączeniem tych na głównej przekątnej. W przypadku odcinków zakończonych ujściem, aby wyzerować wartości $\delta$ przyjmuje wartość 1. Formalnie $\delta$ to:
+\begin{numcases}{\delta(i)=}
+\sum_{j\in{\{0,...,n\}},j!=i} f(i,j) & dla odcinka $i$ nie zakończonego ujściem \\
+1 & dla odcinka $i$ zakończonego ujściem
+\end{numcases}
+
+\subsection{Przykład zatoru na pojedynczej drodze} \label{subsec:zator_f10}
+Rozważmy poniższe środowisko składające się z drogi posiadającej 4 odcinki.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{images/env_13}
+	\caption{Droga z numeracją odcinków}
+	\label{fig:env_13}
 \end{figure}
-Dalszy rozwój ruchu-
-Do zrobienia :)
-\section{Wprowadzenie gęstości ruchu}
-Do zrobienia :)
+Należy skonstruować pewną funkcję zatoru. Niech jej celem będzie, aby przez jeden interwał czasowy maksymalnie 10 pojazdów przejeżdżało przez odcinek drogi. Następująca funkcja gwarantuje takie zachowanie:
+
+\begin{numcases}{f(i,j)=}
+\textbf{P}[i,j] & dla $ j=i+1 \wedge x[i]<10$ - przejazd bez zatoru \label{eq:manewr_bez_zatoru_f10} \\
+\frac{10}{x[i]} & dla $ j=i+1  \wedge x[i] \geq 10$ - przejazd z zatorem \label{eq:manewr_zator_f10} \\
+0 & dla pozostałych przypadków - niemożliwe manewry
+\end{numcases} \noindent
+ Macierze stanowe zostały wyliczone na podstawie wzoru \ref{eq_A_z_korkiem}. W tym przypadku jest to:
+\def \A {\begin{bmatrix}
+		1-\delta(0) & f(1,0) &   f(2,0) & f(3,0) & \\
+		f(0,1) & 1-\delta(1) &   f(2,1) & f(3,1) & \\
+		f(0,2) & f(1,2) &   1-\delta(2) & f(3,2) & \\
+		f(0,3) & f(1,3) &   f(2,3) & 1-\delta(3) & \\
+\end{bmatrix}}
+\[A=\A \label{eq:A_1droga_korek}\]
+
+Funkcja $\delta$ dla tego środowiska to:
+\begin{numcases}{\delta(i)=}
+\sum_{j\in{\{0,1,2,3\}},j!=i} f(i,j) & dla $i \in {0,1,2}$ \\
+1 & dla $i = 3 $
+\end{numcases}
+
+\def \xzero {\begin{bmatrix}
+		17 \\ 2 \\ 11 \\ 4
+\end{bmatrix}}
+
+\def \xI {\begin{bmatrix}
+		7 \\ 10 \\ 3 \\ 10
+\end{bmatrix}}
+
+\def \xII {\begin{bmatrix}
+		0 \\ 6 \\ 10 \\ 3
+\end{bmatrix}}
+
+\def \Azero {\begin{bmatrix}
+		\frac{7}{17} & 0 & 0 & 0  \\
+		\frac{10}{17} & 0 & 0 & 0  \\
+		0 & 1 & \frac{1}{11} & 0  \\
+		0 & 0 & \frac{10}{11} & 0  \\
+\end{bmatrix}}
+
+\def \AI {\begin{bmatrix}
+		0 & 0 & 0 & 0  \\
+		1 & 0 & 0 & 0  \\
+		0 & 1 & 0 & 0  \\
+		0 & 0 & 1 & 0  \\
+\end{bmatrix}}
+
+Rozważmy następujący stan początkowy środowiska:
+
+\centerline{
+	\begin{tabular}{| c | c | Sc |}
+		\hline
+		t   & Równanie stanu & Podgląd środowiska  \\
+		\hline
+		0 & 
+		$ \textbf{x(0)} = \xzero$  & \cincludegraphics[width=5cm]{images/env_13_t_0} \\
+		\hline 
+	\end{tabular}
+}
+W celu wyliczenia $\textbf{x(1)}$ należy obliczyć $\textbf{A(0)}$, wedle wzoru \myref{eq:A_1droga_korek}. Wartości 
+zerowej kolumny macierzy $A(0)$ są wyliczane w następującej kolejności:
+\begin{itemize}
+	\item $ f(0,1) $ to przypadek manewru z zatorem \myref{eq:manewr_zator}. Zatem $f(0,1)=\frac{10}{17}$, gdyż $x[0]=17$
+	\item $f(0,2) = 0  \; f(0,3)=0$ to przypadki niemożliwych manewrów \myref{eq:manewr_not_existing}.
+	\item $A[0,0]=1-\delta(0)=1-f(0,1)-f(0,2)-f(0,3)=1-\frac{10}{17}-0-0=\frac{7}{17}$ pozostaje na odcinku 0.
+\end{itemize}
+Analogiczne operacje zostają przeprowadzone dla kolejnych kolumn co daje rezultat w postaci:
+\[A(0)=\Azero\]
+Dalszy rozwój wektora stanowego jest przedstawiony w tabeli poniżej.
+
+\centerline{
+	\begin{tabular}{| c | c | Sc |}
+		\hline
+		t   & Równanie stanu & Podgląd środowiska  \\
+		\hline
+		0 & 
+		$ \textbf{x(0)} = \xzero$  & \cincludegraphics[width=5cm]{images/env_13_t_0} \\
+		\hline 
+		1 & $ \textbf{x(1)} = \textbf{A(0)x(0)} =  \Azero \xzero = \xI$ & \cincludegraphics[width=5cm]{images/env_13_t_1} \\
+		\hline 
+		2 & $ \textbf{x(2)} = \textbf{A(1)x(1)} = \AI \xI = \xII$ & \cincludegraphics[width=5cm]{images/env_13_t_2} \\
+		\hline 
+	\end{tabular}
+}
 
 
+\subsection{Przykład zatoru na skrzyżowaniu}
+Niech funkcją zatoru będzie funkcja przedstawiona w \ref{eq:manewr_bez_zatoru_f10}-\ref{eq:manewr_zator_f10}
+Rozważmy poniższą sytuację na drogach w chwili $t=0$:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{images/env_11_1570137518_procenty.png}
+	\label{fig:env_11_case_0}
+\end{figure}\noindent
+\begin{itemize}
+	\item Zatory są na odcinkach 0,1,2 i 5 (odpowiednio ilości pojazdów to 15,70,13,18). 
+	\item Obecna faza świetlna to 0.
+\end{itemize}
+Najistotniejszym punktem macierzy sygnalizacji świetlnej jest $ S[1,2]=1 $, co odpowiada zielonemu światłu dla lewoskrętu. Cała macierz $ \textbf{S} $ to:
+\def \ScaseZero {\begin{bmatrix}
+		1 & 0 & 0 & 0 & 0 & 0 \\
+		1 & 1 & 0 & 0 & 0 & 0 \\
+		0 & 1 & 1 & 0 & 0 & 0 \\
+		0 & 0 & 1 & 1 & 0 & 0 \\
+		0 & 0 & 0 & 0 & 1 & 0 \\
+		0 & 0 & 0 & 0 & 1 & 1 
+\end{bmatrix}}
+\def \AcaseZero {\begin{bmatrix}
+		\frac{5}{15}  & 0             & 0             & 0 & 0 & 0 \\
+		\frac{10}{15} & \frac{60}{70} & 0             & 0 & 0 & 0 \\
+		0          	  & \frac{10}{70} & \frac{3}{13}  & 0 & 0 & 0 \\
+		0             & 0             & \frac{10}{13} & 0 & 0 & 0 \\
+		0             & 0             & 0             & 0 & 0 & 0 \\
+		0             & 0             & 0             & 0 & 1 & 0 
+\end{bmatrix}}
+
+\[\textbf{S}= \ScaseZero \addtag \]
+Macierz systemu to zatem:
+\[\textbf{A}= \AcaseZero \addtag \]
+\def \utMinusI{\begin{bmatrix} 
+		7 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0 
+\end{bmatrix}}
+\def \xtMinusI{\begin{bmatrix} 
+		15 \\ 70 \\ 13 \\ 7 \\ 5 \\ 18	
+\end{bmatrix}}
+\def \xt{\begin{bmatrix} 
+		12 \\ 70 \\ 13 \\ 10 \\ 0 \\ 5	
+\end{bmatrix}} \noindent
+Dla przykładu szczegółowo zostaną policzone wartości zerowej kolumny macierzy $\textbf{A}$, która dotyczy pojazdów wyjeżdżających z odcinka 0. Pozostałe wartości są liczone analogicznie.
+\begin{itemize}
+	\item Korzystając ze wzoru \ref{eq:manewr_zator_f10} ustalone zostaje $f(0,1)=\frac{10}{15}$. Jest to przypadek zatoru i jedynie 10 pojazdów z 15 przemieszcza się do następnego odcinka.
+	\item Wartości $f(0,2),(0,3),(0,4),(0,5)$ są równe $0$, gdyż są to przypadki \ref{eq:manewr_not_existing_f10} nieistniejących manewrów.
+	\item $A[0,0]=1-\delta(0)=1-f(0,1)-f(0,2)-f(0,3)-f(0,4)-f(0,5)=1- \frac{10}{15} -0-0-0-0= \frac{5}{15}$
+\end{itemize}
+Stan w momencie $t=1$ wyliczony z równania stanu jest następujący:
+\[\textbf{x[1]}=\textbf{A[0]x[0]}=\AcaseZero \cdot \xtMinusI = \xt \]
+Poniższy obraz przedstawia sytuację w środowisku w chwili t-1 oraz przepływ pojazdów, który miał miejsce między momentem $t-1$ a $t$.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{images/env_11_przeplyw_korek}
+	\label{fig:env_11_case_0_przeplyw}
+\end{figure}\noindent
+W rezultacie w chwili t obecny jest następujący stan:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{images/env_11_po_korku}
+	\label{fig:env_11_case_0_po_przeplywie}
+\end{figure}\noindent
 
 
+\chapter {środowiska symulacyjne}
+W tym rozdziale przedstawione zostaną środowiska symulacyjne. Głównym ich elementem jest sieć dróg. Podstawowe informacje na temat działania modelu sieci dróg i ruchu obowiązującego na nich zostały przedstawione w rozdziale \ref{chapter:model_sieci_drog}. Drugim elementem środowiska symulacyjnego są agenci. Są oni odpowiedzialni za dokonywanie decyzji związanych z sygnalizacją świetlną. 
+\section{Srodowisko 1(11 na froncie)}
+Elementy sieci dróg pierwszego środowiska były niejednokrotnie przedstawiane w rozdziale \myref{chapter:model_sieci_drog}, jednak dopiero teraz nastąpi przedstawienie pierwszego pełnego środowiska symulacyjnego. Na model sieci składają się 3 drogi - każda ma po 2 odcinki. Jest jedno skrzyżowanie na którym 75 procent pojazdów skręca w prawo, a pozostałe obierają kierunek w lewo.
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{images/env_11_procenty}
+	\label{fig:env_11}
+	\caption{środowisko 11}
+\end{figure}
+
+\subsection{Sygnalizacje świetlne}	
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=17cm]{images/env_11_fazy_procenty}
+	\label{fig:env_11_fazy}
+	\caption{środowisko 11 - fazy świateł}
+\end{figure}\noindent
+Skrzyżowanie posiada 3 fazy świetlne przedstawione powyżej. Faza 0 umożliwia skręt w lewo (manewr [1,2]) z kolei faza 1 umożliwia skręt w prawo (manewr [1,4]). Faza żółte blokuje przejazd przez skrzyżowanie.
+
+\subsection{Przestrzeń decyzyjna}
+Przestrzeń decyzyjną oraz konsekwencje akcji podjętych przez agenta przedstawia poniższa tabela:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=17cm]{images/env_11_tabela_akcji}
+	\label{fig:env_4_tabela_akcji}
+\end{figure}
+W przypadku zmiany fazy świetlnej następuje okres 2 interwałów żółtych świateł. Agent może także podtrzymać aktualną fazę świetlną.
+
+\subsection{Zatory drogowe}
+Wykorzystana w modelu zostanie funkcja zatoru przedstawiona w rozdziale \myref{subsec:zator_f10}, czyli:
+
+\begin{numcases}{f(i,j)=}
+\textbf{P}[i,j] & dla $ j=i+1 \wedge x[i]<10$ - przejazd bez zatoru \label{eq:manewr_bez_zatoru_f10} \\
+\frac{10}{x[i]} & dla $ j=i+1  \wedge x[i] \geq 10$ - przejazd z zatorem \label{eq:manewr_zator_f10} \\
+0 & dla pozostałych przypadków - manewr [i,j]
+\end{numcases} \noindent
 
 
-
-
-
-
-
-
-\chapter {środowiska symulacyjne qwe}
 \section{Srodowisko 4}
 \begin{figure}[H]
 	\centering
@@ -560,63 +741,43 @@ Fazy świetlne: Każde skrzyżowanie posiada 4 fazy świetlne przedstawione poni
 	\caption{środowisko 4 - fazy świateł}
 \end{figure}
 
-\end{document} 
 
 Uczenie:
 Każdy agent jako stan przyjmuje 10 elementową tablicę. 9 elementów to ilości pojazdów na odcinkach będących przed skrzyżowaniem przypisanym do agenta.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\chapter{Przedstawienie problemu optymalizacyjnego}
-
-\bibliographystyle{IEEEtran}
-
 \chapter{Przegląd metod optymalizacyjnych}
 \section{Kategorie uczenia maszynowego}
 Uczenie maszynowe to dziedzina wchodząca w skład nauk zajmujących się sztuczną inteligencją. Samo uczenie w najprostszym kształcie może być rozumiane jako dobór parametrów na podstawie dostępnych danych. Uczenie maszynowe jest powszechnie dzielone na 3 kategorie nauki \cite{machineLearningClassification}.
 \begin{enumerate}
-\item \textbf{Nadzorowane} \\
-Dane używane do uczenia nazywane są zbiorem treningowym. Każdy pojedynczy element zbioru treningowego ma informacje wejściowe oraz pewną pożądaną wartość wyjściową. W trakcie uczenia algorytm dopasowuje swoje parametry tak aby na podstawie danych wejściowych mógł przewidzieć wartość wyjściową. Przykładami uczenia nadzorowanego jest np. rozpoznawanie tekstu pisanego, detekcja obiektów na zdjęciach.
-\item \textbf{Nienadzorowane}
-Uczenie nienadzorowane różni się od nadzorowanego tym, że nie  są znane pożądane wartości wyjściowe. Celem nauki jest na podstawie podobieństw poszczególnych elementów zgrupowanie ich do odpowiednich klas. Przykładem uczenia nienadzorowanego może być np. klasyfikacja gatunków drzew na podstawie wiedzy o ich wysokościach i szerokości korony drzew.
-\item \textbf{Wzmocnione}
-W środowisku uczenia ze wzmocnieniem istnieje agent, który jest odpowiedzialny za podejmowanie pewnych decyzji. Każda decyzja ma wpływ na stan środowiska, które zwraca agentowi nagrodę. Celem uczenia ze wzmocnieniem jest ustalenie strategii maksymalizującej skumulowaną wartość nagród.
+	\item \textbf{Nadzorowane} \\
+	Dane używane do uczenia nazywane są zbiorem treningowym. Każdy pojedynczy element zbioru treningowego ma informacje wejściowe oraz pewną pożądaną wartość wyjściową. W trakcie uczenia algorytm dopasowuje swoje parametry tak aby na podstawie danych wejściowych mógł przewidzieć wartość wyjściową. Przykładami uczenia nadzorowanego jest np. rozpoznawanie tekstu pisanego, detekcja obiektów na zdjęciach.
+	\item \textbf{Nienadzorowane}
+	Uczenie nienadzorowane różni się od nadzorowanego tym, że nie  są znane pożądane wartości wyjściowe. Celem nauki jest na podstawie podobieństw poszczególnych elementów zgrupowanie ich do odpowiednich klas. Przykładem uczenia nienadzorowanego może być np. klasyfikacja gatunków drzew na podstawie danych o ich wysokościach i szerokości korony drzew.
+	\item \textbf{Wzmocnione}
+	W środowisku uczenia ze wzmocnieniem istnieje agent, który jest odpowiedzialny za podejmowanie pewnych decyzji. Każda decyzja ma wpływ na stan środowiska, które zwraca agentowi nagrodę. Celem uczenia ze wzmocnieniem jest ustalenie strategii maksymalizującej skumulowaną wartość nagród.
 \end{enumerate}
 Ze wszystkich trzech kategorii uczenie ze wzmocnieniem odpowiada problemowi rozważanym w rozdziale Y. Szczegółowy opis uczenia ze wzmocnieniem zostanie przedstawiony w następnej sekcji.
 \section{Uczenie ze wzmocnieniem}
 Schemat uczenia ze wzmocnieniem składa się z następujących elementów:
 \begin{enumerate}
-\item \textbf{Agent} jest odpowiedzialny za podejmowanie pewnych decyzji. Ma on wiedzę na temat obecnego stanu środowiska i otrzymuje w każdym kroku czasowym sygnał nagrody. Jego decyzje wpływają na stan środowiska.
-\item \textbf{Środowisko} jest przestrzenią posiadającą dynamiczny stan widoczny dla agenta. Chociaż to agent podejmuje akcje, to środowisko ma zdefiniowany model zmiany stanu. Model zmiany stanu może być stochastyczny oraz niewidoczny dla agenta. Oznacza to, że dwie te same akcje podjęte w tym samym stanie nie zawsze przyniosą identyczny następny stan. Innymi słowy agent nie może być stuprocentowo pewny rezultatów swoich akcji. Środowisko jest także nadawcą sygnału nagrody.
-\item \textbf{Strategia} definiuje sposób doboru akcji przez agenta w danej chwili. Jest to funkcja, która przyjmuje stan środowiska i zwraca akcje, która ma być przeprowadzona. 
-\item \textbf{Sygnał nagrody} definiuje cel problemu uczenia ze wzmocnieniem. W każdym kroku czasowym środowisko wysyła agentowi liczbę rzeczywistą, która jest nazywana nagrodą(reward). Wartości nagród są czynnikiem wpływającym na zmianę strategii, gdyż zadaniem agenta jest maksymalizacja nagród. Wartość nagród zatem definiuje, które zdarzenia są dobre, a które złe dla agenta. Biologicznym odpowiednikiem dodatniej nagrody jest przyjemność, a ujemnej - ból. 
-\item \textbf{Funkcja wartości} zwraca wartość stanu czyli oczekiwaną sumę nagród jakie agent osiągnie w przyszłości będąc aktualnie w tym stanie. 
+	\item \textbf{Agent} jest odpowiedzialny za podejmowanie pewnych decyzji. Ma on wiedzę na temat obecnego stanu środowiska i otrzymuje w każdym kroku czasowym sygnał nagrody. Jego decyzje niebezpośrednio wpływają na stan środowiska.
+	\item \textbf{Środowisko} jest przestrzenią posiadającą dynamiczny stan widoczny dla agenta. Chociaż to agent podejmuje akcje, to środowisko ma zdefiniowany model zmiany stanu. Model zmiany stanu może być stochastyczny oraz niewidoczny dla agenta. Oznacza to, że dwie te same akcje podjęte w tym samym stanie nie zawsze przyniosą identyczny następny stan. Innymi słowy agent nie może być stuprocentowo pewny rezultatów swoich akcji. Środowisko jest także nadawcą sygnału nagrody.
+	\item \textbf{Strategia} definiuje sposób doboru akcji przez agenta w danej chwili. Jest to funkcja, która przyjmuje stan środowiska i zwraca akcje, która ma być przeprowadzona. 
+	\item \textbf{Sygnał nagrody} definiuje cel problemu uczenia ze wzmocnieniem. W każdym kroku czasowym środowisko wysyła agentowi liczbę rzeczywistą, która jest nazywana nagrodą(reward). Wartości nagród są czynnikiem wpływającym na zmianę strategii, gdyż zadaniem agenta jest maksymalizacja nagród. Wartość nagród zatem definiuje, które zdarzenia są dobre, a które złe dla agenta. Biologicznym odpowiednikiem dodatniej nagrody jest przyjemność, a ujemnej - ból. 
+	\item \textbf{Funkcja wartości} zwraca wartość stanu czyli oczekiwaną sumę nagród jakie agent osiągnie w przyszłości będąc aktualnie w tym stanie. 
 \end{enumerate}
 \begin{figure}[H]
-  \centering
-    \includegraphics[width=14cm]{agent-srodowisko}
- \caption{Interakcje pomiędzy agentem a środowiskiem.}
- \label{fig:agent-srodowisko}
+	\centering
+	\includegraphics[width=14cm]{agent-srodowisko}
+	\caption{Interakcje pomiędzy agentem a środowiskiem.}
+	\label{fig:agent-srodowisko}
 \end{figure}
 \newpage
 Algorytmy uczenia ze wzmocnieniem zazwyczaj stosuje się do rozwiązywania problemu procesu decyzyjnego Markowa. Sam \textbf{proces decyzyjny Markowa} jest zdefiniowany jako uporządkowana czwórka $(S,A,P_a,R_a)$, gdzie:
 \begin{enumerate}
-\item $S$ to zbiór stanów
-\item $A$ to zbiór akcji. Notacją $A_s$ oznaczane są możliwe akcje dla stanu $s$.
-\item $P_a(s,s')=Pr(s_{t+1}=s'|s_t=s,a_t=a)$ to prawdopodobieństwo, że akcja $a$ wykonana w stanie $s$ w chwili $t$ doprowadzi do stanu $s'$ w chwili $t+1$.
-\item $R_a(s,s')$ to oczekiwana nagroda otrzymana w wyniku akcji podjętej w stanie $s$ prowadzącej do stanu $s'$.
+	\item $S$ to zbiór stanów
+	\item $A$ to zbiór akcji. Notacją $A_s$ oznaczane są możliwe akcje dla stanu $s$.
+	\item $P_a(s,s')=Pr(s_{t+1}=s'|s_t=s,a_t=a)$ to prawdopodobieństwo, że akcja $a$ wykonana w stanie $s$ w chwili $t$ doprowadzi do stanu $s'$ w chwili $t+1$.
+	\item $R_a(s,s')$ to oczekiwana nagroda otrzymana w wyniku akcji podjętej w stanie $s$ prowadzącej do stanu $s'$.
 \end{enumerate}
 
 Problemem procesu decyzyjnego Markowa jest odnalezienie optymalnej strategii. Strategia określona jest jako funkcja $\pi(s)$ przyjmująca jako argument stan, a zwracająca podejmowaną akcję. Celem optymalizacji jest odnalezienie strategii maksymalizującej wartość:
@@ -624,17 +785,17 @@ Problemem procesu decyzyjnego Markowa jest odnalezienie optymalnej strategii. St
 G=\sum_{k=0}^{K} \gamma^k R_{k} \addtag \label{eq:Markov_maximize}
 \]
 Chociaż strategii $\pi(s)$ nie ma we wzorcze \ref{eq:Markov_maximize}, to strategia wpływa na otrzymywane nagrody $R_{k}$ w każdej chwili $k$.\\
-$\gamma \in (0,1]$ jest czynnikiem dyskontującym. Idea dyskontowania nagród zaczerpnięta jest z rachunku finansowego. Przykładowo wpływ 1000 złotych po upływie roku czasu jest z pewnością bardziej wartościowy niż za 20 lat. Innymi słowy - pieniądze są liczone w czasie i tak samo należy postępować z nagrodami. Im wartość $\gamma$ jest bliższa 0 tym bardziej istotne są początkowe nagrody. Dla $\gamma=1$ wszystkie nagrody są równie istotne - bez względu na czas ich otrzymania.\\
+$\gamma \in (0,1]$ jest czynnikiem dyskontującym. Idea dyskontowania nagród zaczerpnięta jest z rachunku finansowego. Przykładowo wpływ na konto kapitału 1000 złotych po upływie roku czasu jest z pewnością bardziej wartościowy niż za 20 lat. Innymi słowy - pieniądze są liczone w czasie i tak samo należy postępować z nagrodami. Im wartość $\gamma$ jest bliższa 0 tym bardziej istotne są początkowe nagrody. Dla $\gamma=1$ wszystkie nagrody są równie istotne - bez względu na czas ich otrzymania.\\
 Analogicznie do (\ref{eq:Markov_maximize}) jest ustalona funkcja wartości stanu. Jako wartość stanu $s$ określone jest:
 \[
 G_t=\sum_{k=t}^{K} \gamma^k R_{k}=R_{t}+\gamma R_{t+1}+\gamma^{2} R_{t+2}+...+\gamma^{K}R_K \addtag \label{eq:Markov_state_value_G}
 \]
 Zostanie przedstawiony teraz przykład obliczeniowy. Agent podejmuje decyzje na których podstawie otrzymuje ciąg  nagród $R_0=0, R_1=2,R_2=6,R_3=-1,R_4=2,R_5=1$. Czynnik dyskontujący $\gamma$ jest równy 0,9. Jaka jest wartość $G$ oraz $G_1,G_2,G_3,G_4,G_5$?\\
 \begin{figure}[H]
-  \centering
-    \includegraphics[width=14cm]{rewards-graph}
- \caption{Ciąg nagród i stanów.}
- \label{fig:agent-srodowisko}
+	\centering
+	\includegraphics[width=14cm]{rewards-graph}
+	\caption{Ciąg nagród i stanów.}
+	\label{fig:agent-srodowisko}
 \end{figure}\noindent
 Najłatwiej obliczenia rozpocząć od $G_5$, ponieważ
 \[G_{t}=R_{t}+\gamma G_{t+1} \label{eq:G_reccurential} \addtag \].\\
@@ -650,17 +811,17 @@ Termin programowania dynamicznego odnosi się do algorytmów wyliczających opty
 Przedstawiony algorytm jest podzielony na 2 części. Część predykcji(prediction) oraz kontroli (control). 
 \\\textbf{Proces predykcji} ma za zadanie ustalenie wartości stanów na podstawie ustalonej strategii. Jej algorytm jest następujący:
 \begin{enumerate}
-\item{Przyjmij daną z góry $\pi$ jako strategię podejmowania akcji}
-\item{Zainicjuj tablicę wartości stanów $V(s)$. Dla wszystkich możliwych stanów $s \in S$ przyjmij wartość $0$.}
-\item{$\Delta=0$}
-\item{Dla każdego $s \in S$:}
-  \begin{enumerate}
-    \item $v=V(s)$
-    \item $V(s)=\sum_{s'}Pr(s'|s,\pi(s))[r+\gamma V(s')]$
-    \item $\Delta = max(\Delta,|v-V(s)|)$
-  \end{enumerate}
-\item Jeśli $\Delta< \theta$ to wróć do 3
-\item Zwróć $V(s)$ jako tablicę wartości stanów $V_{\pi}(s)$ dla strategii $\pi$.
+	\item{Przyjmij daną z góry $\pi$ jako strategię podejmowania akcji}
+	\item{Zainicjuj tablicę wartości stanów $V(s)$. Dla wszystkich możliwych stanów $s \in S$ przyjmij wartość $0$.}
+	\item{$\Delta=0$}
+	\item{Dla każdego $s \in S$:}
+	\begin{enumerate}
+		\item $v=V(s)$
+		\item $V(s)=\sum_{s'}Pr(s'|s,\pi(s))[r+\gamma V(s')]$
+		\item $\Delta = max(\Delta,|v-V(s)|)$
+	\end{enumerate}
+	\item Jeśli $\Delta< \theta$ to wróć do 3
+	\item Zwróć $V(s)$ jako tablicę wartości stanów $V_{\pi}(s)$ dla strategii $\pi$.
 \end{enumerate}
 Parametr $\theta \geq 0$ definiuje w kroku 5. moment stopu. \\
 Wartość $Pr(s',s,\pi(s))$ to prawdopodobieństwo, że akcja $\pi(s)$ podjęta w stanie $s$ doprowadzi do stanu $s'$. Z kolei $r$ jest właśnie otrzymaną nagrodą.
@@ -668,22 +829,22 @@ Wartość $Pr(s',s,\pi(s))$ to prawdopodobieństwo, że akcja $\pi(s)$ podjęta 
 \begin{equation}
 \begin{split}
 Q_{\pi}(s,a) &= E[R_{t+1}+\gamma v_{\pi}(S_{t+1}) | S_t=s, A_t=a]  \\
-           &= \sum_{s'}Pr(s'|s,a)[r+\gamma V_{pi}(s')] 
+&= \sum_{s'}Pr(s'|s,a)[r+\gamma V_{pi}(s')] 
 \end{split}
 \end{equation}
 Oczywistym minusem tego algorytmu jest konieczność przeiterowania wszystkich stanów. W przypadku gdy stanów jest bardzo dużo algorytm staje się nieopłacalny.
 Macierz przedstawia wartość akcji $a$ podjętej w stanie $s$. Algorytm kontroli jest następujący:
 \begin{enumerate}
-\item{Przyjmij wyliczoną przez algorytm predykcji macierz wartości stanów $V_{\pi}(s)$}
-\item{Zainicjuj tablicę wartości stanów $V(s)$. Dla wszystkich możliwych stanów $s \in S$ przyjmij wartość $0$.}
-\item{$policy\_stable=false$}
-\item{Dla każdego $s \in S$:}
-  \begin{enumerate}
-    \item $old\_action=\pi(s)$
-    \item $\pi(s)=argmax_{a\in A_s} \sum_{s'}Pr(s'|s,a)[r+\gamma V(s')]$
-    \item Jeśli $old\_action \neq \pi(s)$ to $policy\_stable = true$
-  \end{enumerate}
-\item Jeśli $policy\_stable=true$ to zwróć strategię $\pi(s)$.
+	\item{Przyjmij wyliczoną przez algorytm predykcji macierz wartości stanów $V_{\pi}(s)$}
+	\item{Zainicjuj tablicę wartości stanów $V(s)$. Dla wszystkich możliwych stanów $s \in S$ przyjmij wartość $0$.}
+	\item{$policy\_stable=false$}
+	\item{Dla każdego $s \in S$:}
+	\begin{enumerate}
+		\item $old\_action=\pi(s)$
+		\item $\pi(s)=argmax_{a\in A_s} \sum_{s'}Pr(s'|s,a)[r+\gamma V(s')]$
+		\item Jeśli $old\_action \neq \pi(s)$ to $policy\_stable = true$
+	\end{enumerate}
+	\item Jeśli $policy\_stable=true$ to zwróć strategię $\pi(s)$.
 \end{enumerate}
 \section{Metoda Monte Carlo On-Policy}
 Metody Monte Carlo są szeroką klasą algorytmów, których wyniki oparte są o losowe próbkowanie. Nie potrzebują one żadnej wiedzy na temat środowiska - akceptowalne są zarówno środowiska deterministyczne jak i stochastyczne. Algorytmy Monte Carlo uczenia ze wzmocnieniem są dzielone na dwie kategorie - On-Policy oraz Off-policy. W pracy zostanie przedstawiona metoda on-policy, która różni się od off-policy jedynie sposobem doboru momentu eksploracji. Metoda on-policy zakłada, iż ustalana jest pewna liczba $\epsilon$ bliska zeru. Określa ona prawdopodobieństwo kroku eksploracji, czyli wyboru losowej akcji. Pozostałe akcje są wybierane w sposób zachłanny, czyli podejmowana jest najbardziej wartościowa dostępna akcja. Algorytm przedstawiony jest poniższym pseudokodem.
@@ -691,19 +852,20 @@ Metody Monte Carlo są szeroką klasą algorytmów, których wyniki oparte są o
 	\item Zainicjuj słowniki:
 	\begin{enumerate}
 		\item $Q(s,a)$ - Wartość określa opłacalność wyboru akcji a w stanie s
-		\item $Returns(s,a)$ - Wartość słownika to tablica wartości $G$ wyliczonych na podstawie otrzymanych reward'ów oraz wzoru (\ref{eq:Markov_state_value_G}).
+		\item $Returns(s,a)$ - Wartość słownika to tablica wartości $G$ wyliczonych na podstawie wzoru (\ref{eq:Markov_state_value_G}).
 		\item $\pi(s)$ - Określa jaka akcja ma zostać podjęta dla stanu s. Początkowo wszystkie akcje są wybrane losowo.
 	\end{enumerate}
 	\item Zasymuluj pełny epizod wedle strategii $\pi$
-	\item Dla każdego stanu s i akcji a, które pojawiły się w epizodzie
+	\item Zoptymalizuj strategię $\pi$ - dla każdej pary (s,a) - stanu i akcji, które pojawiły się w epizodzie
 	\begin{enumerate}
-		\item Wylicz $G$ rekurencyjnie wedle wzoru (\ref{eq:G_reccurential})*
+		\item Wylicz $G$ rekurencyjnie wedle wzoru (\ref{eq:G_reccurential}) t.j. $G_{t}=R_{t}+\gamma G_{t+1}$. *
 		\item Do tablicy Returns(s,a) dodaj wartość $G$
 		\item $Q(s,a)=avg(Returns(s,a))$
-		\item $\pi(s)=argmax_{a\in{A}}Q(s,a)$. Chyba, że wylosowany został krok ekspolarcji, wtedy $\pi(s)$ jest losowo wybraną akcją $a \in A$.
+		\item $\pi(s)=a^*$. Gdzie $a^*$ to taka akcja, że $Q(s,a^*)\geq Q(s,a)$ dla każdego $a 
+		\in A$. Jeśli został jednak wylosowany krok ekspolarcji, wtedy $\pi(s)$ jest losowo wybraną akcją $a \in A$.
 	\end{enumerate}
 \end{enumerate}
-*(Rozsądnym jest iterowanie w 3 kroku w kolejności odwrotnej do chronologicznej, gdyż ułatwia wykorzystanie wzoru (\ref{eq:G_reccurential}))
+* - Rozsądnym jest iterowanie w 3 kroku w kolejności odwrotnej do chronologicznej, gdyż ułatwia wykorzystanie wzoru (\ref{eq:G_reccurential})
 \\ Warto zauważyć następujące zalety metody Monte Carlo, których nie zapewniał algorytm programowania dynamicznego:
 \begin{enumerate}
 	\item Brak potrzeby wiedzy na tematu modelu
@@ -711,6 +873,13 @@ Metody Monte Carlo są szeroką klasą algorytmów, których wyniki oparte są o
 	\item Dobre skalowanie dla dużej przestrzeni stanu. Więcej czasu treningowego jest poświęcane dla stanów, które są często odwiedzane. Z kolei te, które nie pojawiają się prawie wcale - nie marnują dużo czasu w procesie nauki.
 \end{enumerate}
 
-\chapter{Optymalizacja sygnalizacji świetlnej}
+
+
+
+
+
+
+
+
 \bibliography{refs}
 \end{document}

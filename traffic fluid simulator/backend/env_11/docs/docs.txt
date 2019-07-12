@@ -1,0 +1,36 @@
+UCZENIE MONTE CARLO JEST NA RAZIE OLANE! JUZ NA SAMYM POCZĄTKU JEST BURDEL TOTALNY Z EXPLOZJOM KOMBINATORYCZNOM
+
+
+Env_11
+       - 2 - 3
+0 - 1
+       - 4 - 5
+
+Uczenie monte carlo on-policy (t.j. epsilon-greedy strategia).
+Wynik powienien być prosty - wszystkie jada w prawo no bo wincej pojazdów tam da rade przejechać!.
+
+Dokładny algorytm:
+
+
+
+1. Inicjacja
+Q(s,a)={} # oplacalnosc wyboru a
+Returns(s,a)={} # wyliczone G (rownanie nizej)
+pi(s,a)={wszystkieStany:losowaAkcja} # strategia - początkowo losowe akcje dla wszystkich stanów
+
+
+2. Symulacja pełnego epizodu wedle strategii pi
+    Zapamiętaj: wszystkie stany,akcje,rewardy
+
+
+3. Popraw strategię, czyli dla każdej pary (s,a), któe pojawiły się w epizodzie:
+    Wylicz G ze wzoru niżej - najlepiej rekurencyjnie od stanu w końcowej chwili
+    Do Returns(s,a) dodaj G dla rozważanego (s,a)
+    Q(s,a)=mean(Returns(s,a))
+    pi(s) = takie a* in A że Q(s,a*) >= Q(s,a) dla każdego a. Chyba że jest epsilon - losowa akcja wlasnie - ale imo to powinno wyc w samej symulacji, nie w zmianie strategii
+
+
+
+
+
+G=Suma k=0,...,K gamma^k * R_k
