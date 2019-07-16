@@ -108,14 +108,12 @@ class SmartAgent(Agent):
         l_rate = Globals().learning_rate
         for memory in self.memories:
             state = memory.state.to_learn_array()
-            # if state[0][-1] == 'orange':
-            #     i += 1
-            #     continue
+            action = 2 if memory.action == 'orange' else memory.action
             y_target = self.model.predict(state)
             new_state_possible_actions_value_predictions = self.model.predict(memory.new_state.to_learn_array())
-            target = (1 - l_rate) * y_target[0][memory.action] + l_rate * (memory.reward + max(new_state_possible_actions_value_predictions))
+            target = (1 - l_rate) * y_target[0][action] + l_rate * (memory.reward + max(new_state_possible_actions_value_predictions[0]))
             i += 1
-            y_target[0][memory.action] = target
+            y_target[0][action] = target
             x_batch.append(state[0])
             y_batch.append(y_target[0])
         return x_batch, y_batch
@@ -186,10 +184,10 @@ class SmartAgent(Agent):
                 future_rewards = [mem.reward for mem in self.memories[i + 1:i + 3]]  # 2 next rewards
                 memory.reward += sum(future_rewards)
                 self.memories[i] = memory
-                if 3 < memory.state.densities[0] < 5 and 9 < memory.state.densities[
-                    1] < 15 and memory.action == 1 and memory.state.starting_actual_phase == 1:
-                    print(f'state {memory.state.densities[0]},{memory.state.densities[1]} a:{memory.action}')
-                    print('reww', memory.reward)
+                # if 3 < memory.state.densities[0] < 5 and 9 < memory.state.densities[
+                #     1] < 15 and memory.action == 1 and memory.state.starting_actual_phase == 1:
+                #     print(f'state {memory.state.densities[0]},{memory.state.densities[1]} a:{memory.action}')
+                #     print('reww', memory.reward)
                 #     rew powinno byc przynajmniej 9!
                 # else:
                 #     print(f'state {memory.state.densities[0]},{memory.state.densities[1]} a:{memory.action}')

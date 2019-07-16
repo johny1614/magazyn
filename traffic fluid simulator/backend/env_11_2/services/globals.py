@@ -14,7 +14,7 @@ class BaseClass:
         self.state_repeats = 0
         self.new_states = 0
         self.epochs_learn = 10
-        self.gamma = 0
+        self.gamma = 0.99
         self.learning_rate = 0.05
         self.batch_size = 60
         self.validation_batch_size=20

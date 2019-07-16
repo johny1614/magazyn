@@ -9,7 +9,7 @@ def run_learnt_greedy(saveJson=False):
     saveJson = True
     model_file_names = ['static_files/model-agent0.h5']
     agents = get_LearnSmartAgents(model_file_names)
-    print('weights!',agents[0].model.weights[0])
+    # print('weights!',agents[0].model.weights[0])
     env = Env(agents)
     epoch_greedy(env)
     env.update_memory_rewards()
@@ -21,7 +21,7 @@ def run_learnt_greedy(saveJson=False):
                                 densityName='learnt_' + str(Globals().greedy_run_no))
         exportData.saveToJson()
     Globals().greedy_run_no += 1
-    print(f'rewards_mean:{rewards_mean} rewards_sum:{rewards_sum} cars_out:{cars_out}')
+    print(f'gready run - rewards_mean:{rewards_mean} rewards_sum:{rewards_sum} cars_out:{cars_out}')
     return rewards_mean, rewards_sum, cars_out
 
 

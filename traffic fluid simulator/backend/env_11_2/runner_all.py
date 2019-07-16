@@ -13,7 +13,7 @@ def draw_predictions(no):
     to_predict = []
     for den0 in range(60):
         for den1 in range(60):
-            to_predict.append([den0*2, den1*2, 1])
+            to_predict.append([den0*2, den1*2, 0])
     predictions = agents[0].model.predict(np.array(to_predict))  # tylko dla stanow z faza 0
     dots_action_0 = []
     dots_action_1 = []
@@ -28,7 +28,7 @@ def draw_predictions(no):
             dots_action_1.append(to_predict_state)
         if best_action_predicted == 2:
             dots_action_orange.append(to_predict_state)
-
+    # os x to zerowe den os y to pierwsze den
     plt.plot([den[0] for den in dots_action_0], [den[1] for den in dots_action_0], 'go')
     plt.plot([den[0] for den in dots_action_1], [den[1] for den in dots_action_1], 'ro')
     # plt.plot([den[0] for den in dots_action_orange], [den[1] for den in dots_action_orange], 'bo')
