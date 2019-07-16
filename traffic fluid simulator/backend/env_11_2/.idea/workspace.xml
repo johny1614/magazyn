@@ -8,7 +8,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3bc62bd-0327-4a90-b067-71b6ea844ee3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../env_11_1/nn_trainer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.pdf" afterDir="false" />
@@ -26,6 +25,7 @@
       <change beforePath="$PROJECT_DIR$/../env_11_1/env_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_11_1/env_settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../env_11_1/model/Agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_11_1/model/Agent.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../env_11_1/model/SmartAgent.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_11_1/model/SmartAgent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_11_1/nn_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_11_1/nn_trainer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../env_11_1/random_epochs_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_11_1/random_epochs_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../env_11_1/res.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../env_11_1/res.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../env_11_1/rewards0.png" beforeDir="false" afterPath="$PROJECT_DIR$/../env_11_1/rewards0.png" afterDir="false" />
@@ -33,20 +33,6 @@
       <change beforePath="$PROJECT_DIR$/../env_11_1/runner_all.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_11_1/runner_all.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../env_11_1/runner_learnt.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_11_1/runner_learnt.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../env_11_1/services/agentFactory.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_11_1/services/agentFactory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_1/static_files/model-agent0.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_1/static_files/model-agent1.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_1/static_files/model-agent2.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_1/static_files/model.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_1/static_files/x_batch.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_1/static_files/x_batch_agent_0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_1/static_files/x_batch_agent_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_1/static_files/x_batch_agent_2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_1/static_files/y_batch.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_1/static_files/y_batch_agent_0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_1/static_files/y_batch_agent_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_1/static_files/y_batch_agent_2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_1/static_files/y_batch_agent_batch_0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_10/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_10/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../front/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_MC_0.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_MC_1.json" beforeDir="false" />
@@ -1517,11 +1503,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/SmartAgent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="114" column="111" selection-start-line="114" selection-start-column="111" selection-end-line="114" selection-end-column="111" />
+            <state relative-caret-position="159">
+              <caret line="109" column="37" selection-start-line="109" selection-start-column="37" selection-end-line="109" selection-end-column="37" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -1550,11 +1536,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/LearningState.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="32" column="16" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+            <state relative-caret-position="193">
+              <caret line="28" column="82" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -1663,9 +1649,9 @@
         <option value="$PROJECT_DIR$/runner_all.py" />
         <option value="$PROJECT_DIR$/docs/docs.txt" />
         <option value="$PROJECT_DIR$/model/Agent.py" />
-        <option value="$PROJECT_DIR$/model/LearningState.py" />
         <option value="$PROJECT_DIR$/services/globals.py" />
         <option value="$PROJECT_DIR$/model/SmartAgent.py" />
+        <option value="$PROJECT_DIR$/model/LearningState.py" />
       </list>
     </option>
   </component>
@@ -1953,11 +1939,6 @@
           <url>file://$PROJECT_DIR$/nn_trainer.py</url>
           <line>49</line>
           <option name="timeStamp" value="69" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/model/SmartAgent.py</url>
-          <line>115</line>
-          <option name="timeStamp" value="70" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -2396,16 +2377,6 @@ model.predict(np.array([x]))</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/LearningState.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="32" column="16" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/globals.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
@@ -2415,10 +2386,20 @@ model.predict(np.array([x]))</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/SmartAgent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="114" column="111" selection-start-line="114" selection-start-column="111" selection-end-line="114" selection-end-column="111" />
+        <state relative-caret-position="159">
+          <caret line="109" column="37" selection-start-line="109" selection-start-column="37" selection-end-line="109" selection-end-column="37" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/LearningState.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="28" column="82" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>

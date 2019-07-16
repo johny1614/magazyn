@@ -108,9 +108,9 @@ class SmartAgent(Agent):
         l_rate = Globals().learning_rate
         for memory in self.memories:
             state = memory.state.to_learn_array()
-            if state[0][-1] == 'orange':
-                i += 1
-                continue
+            # if state[0][-1] == 'orange':
+            #     i += 1
+            #     continue
             y_target = self.model.predict(state)
             new_state_possible_actions_value_predictions = self.model.predict(memory.new_state.to_learn_array())
             target = (1 - l_rate) * y_target[0][memory.action] + l_rate * (memory.reward + max(new_state_possible_actions_value_predictions))
