@@ -1,0 +1,17 @@
+env_11_2
+UCZENIE MONTE CARLO JEST  OLANE! JUZ NA SAMYM POCZĄTKU JEST BURDEL TOTALNY Z EXPLOZJOM KOMBINATORYCZNOM
+W poprzedniej wersji był reward shaping z 3 okresów. Teraz sprobujemy dodać tą część wartości następnego stanu. Czy to coś da? Pewnie nie ale spróbujmy!
+
+Standardowo monte carlo z dqnem z epsilonem = 1 i full greedy epizody jedynie w celu sprawdzenia jak idzie
+
+Env_11
+       - 2 - 3
+0 - 1
+       - 4 - 5
+
+
+
+TODO
+
+W takim razie musi byc uwzgledniony do przewidzenia stan z fazą lub akcją 'orange'.
+Co więcej w tym wzorku jest max po wszystkich akcjach - tam musi byc tylko po orange lub 0,1.
