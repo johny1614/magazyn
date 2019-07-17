@@ -1,0 +1,12 @@
+env_11_3
+
+Probojemy z orange_phase_duration = 0 oraz siecią neuronową
+
+
+Env_11
+       - 2 - 3
+0 - 1
+       - 4 - 5
+
+
+
