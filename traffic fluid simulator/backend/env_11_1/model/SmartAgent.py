@@ -17,7 +17,6 @@ class SmartAgent(Agent):
     memories: List[Memory] = attr.ib(factory=list)
     model = attr.ib(default=0)
 
-
     def __attrs_post_init__(self):
         if self.model == 0:
             l_rate = 0.0001
@@ -37,7 +36,6 @@ class SmartAgent(Agent):
         model.add(Dense(3))
         model.compile(optimizer=Adam(learning_rate=l_rate), loss='mse')
         return model
-
 
     def save_batch(self):
         x_batch = []
@@ -106,15 +104,15 @@ class SmartAgent(Agent):
     def full_batch(self):
         x_batch = []
         y_batch = []
-        i=0
+        i = 0
         for memory in self.memories:
             state = memory.state.to_learn_array()
             if state[0][-1] == 'orange':
-                i+=1
+                i += 1
                 continue
             y_target = self.model.predict(state)
             target = (memory.reward)
-            i+=1
+            i += 1
             y_target[0][memory.action] = target
             x_batch.append(state[0])
             y_batch.append(y_target[0])
@@ -137,18 +135,20 @@ class SmartAgent(Agent):
                              verbose=0)
 
     def get_action(self, state):
-        if state.to_learn_tuple_used()[-1] == 'orange' and Globals().time!=0:
+        if state.actual_phase == 'orange':
             return 'orange'
-        s = state.to_learn_tuple_used()
-        if random.random() < Globals().epsilon:
-            random_action = random.choice([0, 1])
-            return random_action
-        if s not in self.Pi:
-            self.Pi[s] = random.choice([0, 1])
-            # print(f'time {Globals().time} wylosowane a: {self.Pi[s]}')
-        # else:
-        #     print(f'time {Globals().time} mamy a: {self.Pi[s]}')
-        return self.Pi[s]
+        if np.random.rand() <= Globals().epsilon:  # if acting randomly, take random action
+            action = random.choice(self.local_action_space)
+            return action
+        predictions = self.model.predict(
+            state.to_learn_array())  # if not acting randomly, predict reward value based on current state
+        action = np.argmax(predictions[0])
+        if action not in self.local_action_space:
+            sorted_actions = np.argsort(-predictions[0])
+            for a in sorted_actions:
+                if a in self.local_action_space:
+                    return int(a)
+        return int(action)  # sometimes jump to int64
 
     def save_batch(self):
         x_batch = []
@@ -184,3 +184,9 @@ class SmartAgent(Agent):
                 future_rewards = [mem.reward for mem in self.memories[i + 1:i + 3]]  # 2 next rewards
                 memory.reward += sum(future_rewards)
                 self.memories[i] = memory
+                if 3 < memory.state.densities[0] < 5 and 9 < memory.state.densities[1] < 15 and memory.action == 1 and memory.state.starting_actual_phase==1:
+                    print(f'state {memory.state.densities[0]},{memory.state.densities[1]} a:{memory.action}')
+                    print('reww',memory.reward)
+                #     rew powinno byc przynajmniej 9!
+                # else:
+                #     print(f'state {memory.state.densities[0]},{memory.state.densities[1]} a:{memory.action}')

@@ -680,9 +680,10 @@ W rezultacie w chwili t obecny jest następujący stan:
 
 \chapter {środowiska symulacyjne}
 W tym rozdziale przedstawione zostaną środowiska symulacyjne. Głównym ich elementem jest sieć dróg. Podstawowe informacje na temat działania modelu sieci dróg i ruchu obowiązującego na nich zostały przedstawione w rozdziale \ref{chapter:model_sieci_drog}. Drugim elementem środowiska symulacyjnego są agenci. Są oni odpowiedzialni za dokonywanie decyzji związanych z sygnalizacją świetlną. 
+
 \section{Srodowisko 1(11 na froncie)}
 Elementy sieci dróg pierwszego środowiska były niejednokrotnie przedstawiane w rozdziale \myref{chapter:model_sieci_drog}, jednak dopiero teraz nastąpi przedstawienie pierwszego pełnego środowiska symulacyjnego. Na model sieci składają się 3 drogi - każda ma po 2 odcinki. Jest jedno skrzyżowanie na którym 75 procent pojazdów skręca w prawo, a pozostałe obierają kierunek w lewo.
-	\begin{figure}[H]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm]{images/env_11_procenty}
 	\label{fig:env_11}
@@ -692,21 +693,14 @@ Elementy sieci dróg pierwszego środowiska były niejednokrotnie przedstawiane 
 \subsection{Sygnalizacje świetlne}	
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=17cm]{images/env_11_fazy_procenty}
+	\includegraphics[width=17cm]{images/env_11_fazy_procenty_no_yellow}
 	\label{fig:env_11_fazy}
 	\caption{środowisko 11 - fazy świateł}
 \end{figure}\noindent
-Skrzyżowanie posiada 3 fazy świetlne przedstawione powyżej. Faza 0 umożliwia skręt w lewo (manewr [1,2]) z kolei faza 1 umożliwia skręt w prawo (manewr [1,4]). Faza żółte blokuje przejazd przez skrzyżowanie.
+Skrzyżowanie posiada 2 fazy świetlne przedstawione powyżej. Faza 0 umożliwia skręt w lewo (manewr [1,2]) z kolei faza 1 umożliwia skręt w prawo (manewr [1,4]).
 
 \subsection{Przestrzeń decyzyjna}
-Przestrzeń decyzyjną oraz konsekwencje akcji podjętych przez agenta przedstawia poniższa tabela:
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=17cm]{images/env_11_tabela_akcji}
-	\label{fig:env_4_tabela_akcji}
-\end{figure}
-W przypadku zmiany fazy świetlnej następuje okres 2 interwałów żółtych świateł. Agent może także podtrzymać aktualną fazę świetlną.
+Agent ma dwie możliwe akcje do podjęcia - 0 oraz 1. Obydwie powodują aktywacje odpowiadającej im fazy świetlnej.
 
 \subsection{Zatory drogowe}
 Wykorzystana w modelu zostanie funkcja zatoru przedstawiona w rozdziale \myref{subsec:zator_f10}, czyli:
@@ -716,6 +710,75 @@ Wykorzystana w modelu zostanie funkcja zatoru przedstawiona w rozdziale \myref{s
 \frac{10}{x[i]} & dla $ j=i+1  \wedge x[i] \geq 10$ - przejazd z zatorem \label{eq:manewr_zator_f10} \\
 0 & dla pozostałych przypadków - manewr [i,j]
 \end{numcases} \noindent
+
+
+\subsection{Uczenie agenta}
+\subsection{Pożądane zachowanie}
+Pożądanym zachowaniem jest utrzymywanie fazy 1. Jest w każdym przypadku lepsza lub równa fazie 0. Spowodowane jest to tym, że więcej pojazdów skręca w prawo.
+\subsection{Sposób uczenia}
+Zastosowana została metoda uczenia przedstawiona w \myref{learning:DQN_single_agent}. Następujące stałe określające model uczenia to:
+\begin{itemize}
+	\item $\gamma = 0.9$ - stopa dyskontowa
+	\item $\alpha = 0.01$ - stała szybkości uczenia (ang. learning rate)
+	\item Generowanych jest jednorazowo 50 epizodów
+	\item Wygenerowane zbiory danych są dzielone w proporcjach 80 i 20 procent dla odpowiednio treningu i walidacji.
+	\item Warunkiem stopu jest 60 sekund działania algorytmu.
+	\item Sieć neuronowa posiada 1 ukrytą warstwę z 10 neuronami.
+\end{itemize}
+
+\subsection{Wyniki uczenia}
+Za każdym razem już po trzeciej (często po drugiej) iteracji algorytmu osiągane jest pożądane zachowanie agenta. Dla każdego stanu agent wybiera akcję 0.
+
+\section{Srodowisko 2(14 na froncie)}
+Na model sieci składają się 3 drogi - każda ma po 2 odcinki. Istnieje jedno skrzyżowanie z dwiema drogami wlotowymi i jedną wylotową.
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{images/env_14}
+	\label{fig:env_14}
+	\caption{środowisko 2}
+\end{figure}
+
+\subsection{Sygnalizacje świetlne}	
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=17cm]{images/env_14_fazy}
+	\label{fig:env_14_fazy}
+	\caption{środowisko 2 - fazy świateł}
+\end{figure}\noindent
+Skrzyżowanie posiada 3 fazy świetlne przedstawione powyżej. Faza 0 umożliwia przejazd przez skrzyżowanie z górnej drogi (manewr [1,4]) z kolei faza 1 umożliwia wjazd z drogi dolnej (manewr [3,4]). Faza żółte blokuje przejazd przez skrzyżowanie.
+
+\subsection{Przestrzeń decyzyjna}
+Przestrzeń decyzyjną oraz konsekwencje akcji podjętych przez agenta przedstawia poniższa tabela:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=17cm]{images/env_14_akcje}
+	\label{fig:env_14_akcje}
+\end{figure} \noindent
+
+\subsection{Zatory drogowe}
+Wykorzystana w modelu zostanie funkcja zatoru przedstawiona w rozdziale \myref{subsec:zator_f10}, czyli:
+
+\begin{numcases}{f(i,j)=}
+\textbf{P}[i,j] & dla $ j=i+1 \wedge x[i]<10$ - przejazd bez zatoru \label{eq:manewr_bez_zatoru_f10} \\
+\frac{10}{x[i]} & dla $ j=i+1  \wedge x[i] \geq 10$ - przejazd z zatorem \label{eq:manewr_zator_f10} \\
+0 & dla pozostałych przypadków - manewr [i,j]
+\end{numcases} \noindent
+\subsection{Pożądane zachowanie}
+Pożądane zachowanie w tym przypadku jest nieco bardziej skomplikowane. Z pewnością jeśli na drodze na której jest zielone światło jest więcej aut niż na drugiej drodze - warto podtrzymać fazę świetlną. Co w przypadku gdy zielone światło jest dla drogi z mniejszą ilością pojazdów? Wtedy zaczyna się problem - gdyż agent musi odnaleźć złoty środek. Zmiana sygnalizacji powoduje 2 interwały karencji, podczas których żaden pojazd nie przejedzie i może to być czynnikiem decydującym o pozostaniu przy obecnej fazie.
+
+\subsection{Sposób uczenia}
+Zastosowana została metoda uczenia przedstawiona w \myref{learning:DQN_single_agent}. Następujące stałe określające model uczenia to:
+\begin{itemize}
+	\item $\gamma = 0.9$ - stopa dyskontowa
+	\item $\alpha = 0.01$ - stała szybkości uczenia (ang. learning rate)
+	\item Generowanych jest jednorazowo 50 epizodów
+	\item Wygenerowane zbiory danych są dzielone w proporcjach 80 i 20 procent dla odpowiednio treningu i walidacji.
+	\item Warunkiem stopu jest 60 sekund działania algorytmu.
+	\item Sieć neuronowa posiada 1 ukrytą warstwę z 10 neuronami.
+\end{itemize}
+
+\subsection{Wyniki uczenia}
+Za każdym razem już po trzeciej (często po drugiej) iteracji algorytmu osiągane jest pożądane zachowanie agenta. Dla każdego stanu agent wybiera akcję 0.
 
 
 \section{Srodowisko 4}
@@ -874,9 +937,39 @@ Metody Monte Carlo są szeroką klasą algorytmów, których wyniki oparte są o
 \end{enumerate}
 
 
+\section{Mój algorytm który potrzebuje nazwy ale proponuję: Monte Carlo DQN full exploration} \label{learning:DQN_single_agent}
 
+\[Q(s,a) = (1-\alpha)Q(s,a) + \alpha [r + \gamma \max_{a' \in A'} Q(s',a')] \addtag \label{eq:Q_DQN} \]
+\begin{itemize}
+	\item $ s,a $ to para stanu i akcji, które pojawiły się w trakcie symulacji
+	\item $Q(s,a)$ to opłacalność podjęcia akcji $a$ w stanie $s$.
+	\item $\alpha$ to stała szybkości uczenia (ang. learning rate)
+	\item $ r $ to nagroda przydzielona podczas symulacji dla akcji $ a $ podjętej w stanie $ s $
+	\item $\gamma \in [0,1]$  to stopa dyskontowa
+	\item $ s' $ to stan do którego doprowadziła akcja $ a $ podjęta w stanie $ s $ podczas symulacji
+	\item $ A' $ to przestrzeń możliwych akcji do podjęcia w stanie $ s' $
+\end{itemize}
 
-
+Algorytm jest następujący:
+\begin{enumerate}
+	\item Utwórz sieć neuronową, która na wejście przyjmować będzie stany środowiska. Wyjściowym sygnałem jest opłacalność akcji możliwych do podjęcia w stanie danym na wejściu.
+	\item Zasymuluj pewną ilość epizodów wedle losowej strategii. Zapisuj dane wygenerowane podczas tych epizodów: \label{symulacja_50}
+	\begin{enumerate}
+		\item Stany środowiska
+		\item Podjęte akcje
+		\item Przydzielone nagrody
+	\end{enumerate}
+\item Na podstawie zapisanych danych utwórz następujące zbiory wykorzystane w sieci neuronowej:
+	\begin{enumerate}
+	\item Zbiór sygnałów wejściowych (x-batch). Pojedynczym elementem tego zbioru jest tablica przedstawiająca stan środowiska.
+	\item Zbiór oczekiwanych sygnałów wyjściowych (y-batch), czyli opłacalności akcji do podjęcia w stanie zadanym na wejścu.
+	Dla elementu odpowiadającego akcji, która została podjęta w symulacji wylicz wartość wedle równania \myref{eq:Q_DQN}. Dla elementów odpowiadających reszcie akcji, które nie zostały podjęte - sieć neuronowa przewiduje nagrodę. 
+	\end{enumerate}
+\item Podziel powyższe zbiory na segment treningowy i walidacyjny.
+\item Trenuj sieć neuronową do momentu, gdy wyniki dla zbioru walidacyjnego się polepszają.
+\item Jeśli spełniony jest warunek stopu - przerwij algorytm. W przeciwnym razie przejdź do \ref{symulacja_50}.
+	
+\end{enumerate}
 
 
 

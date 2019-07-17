@@ -6,8 +6,10 @@ from services.agentFactory import get_LearnSmartAgents
 from services.globals import Globals
 
 def run_learnt_greedy(saveJson=False):
-    model_file_names = ['static_files/model-agent0.h5', 'static_files/model-agent1.h5', 'static_files/model-agent2.h5']
+    saveJson = True
+    model_file_names = ['static_files/model-agent0.h5']
     agents = get_LearnSmartAgents(model_file_names)
+    print('weights!',agents[0].model.weights[0])
     env = Env(agents)
     epoch_greedy(env)
     env.update_memory_rewards()
@@ -15,8 +17,8 @@ def run_learnt_greedy(saveJson=False):
     cars_out = env.cars_out
     if saveJson:
         exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
-                                netName='net4',
-                                densityName='learnt-' + str(Globals().greedy_run_no))
+                                netName='net11',
+                                densityName='learnt_' + str(Globals().greedy_run_no))
         exportData.saveToJson()
     Globals().greedy_run_no += 1
     print(f'rewards_mean:{rewards_mean} rewards_sum:{rewards_sum} cars_out:{cars_out}')

@@ -36,6 +36,9 @@ u_v1 = np.array([[4, 4, 4, 60, 4, 4, 4, 4, 4, 4, 4, 60, 4, 4, 4, 4, 4, 4, 4, 4, 
 
 u_all_2 = np.array([[2] * 90]).transpose()
 
+u_all_4 = np.array([[4] * 90]).transpose()
+
+
 u_all_9 = np.array([[9] * 90]).transpose()
 
 u = np.array([[20] * 90]).transpose()

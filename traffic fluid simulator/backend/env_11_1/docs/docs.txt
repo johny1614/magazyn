@@ -1,10 +1,19 @@
+env_11_1
 UCZENIE MONTE CARLO JEST NA RAZIE OLANE! JUZ NA SAMYM POCZĄTKU JEST BURDEL TOTALNY Z EXPLOZJOM KOMBINATORYCZNOM
-
+Zamiast tego mamy tutaj standardowo monte carlo z dqnem z epsilonem = 1 i full greedy epizody jedynie w celu sprawdzenia jak idzie
+Wychodzi nie do końca najlepiej, faworyzuje strasznie akcje 1 srkętu w prawo - tą która ma 70% pojazdów.
 
 Env_11
        - 2 - 3
 0 - 1
        - 4 - 5
+
+
+
+
+
+
+VV NIEISTOTNE, ale niech gdzieś będzie zapisane
 
 Uczenie monte carlo on-policy (t.j. epsilon-greedy strategia).
 Wynik powienien być prosty - wszystkie jada w prawo no bo wincej pojazdów tam da rade przejechać!.

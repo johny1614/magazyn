@@ -1,4305 +1,2615 @@
-t:0 a: [0]
-t:1 a: [0]
-t:2 a: [0]
-t:3 a: [1]
-t:4 a: ['orange']
-t:5 a: ['orange']
-t:6 a: [1]
-t:7 a: [1]
-t:8 a: [1]
-t:9 a: [1]
-t:10 a: [1]
-t:11 a: [0]
-t:12 a: ['orange']
-t:13 a: ['orange']
-t:14 a: [1]
-t:15 a: ['orange']
-t:16 a: ['orange']
-t:17 a: [1]
-t:18 a: [1]
-t:19 a: [1]
-t:20 a: [0]
-t:21 a: ['orange']
-t:22 a: ['orange']
-t:23 a: [0]
-t:24 a: [1]
-t:25 a: ['orange']
-t:26 a: ['orange']
-t:27 a: [0]
-t:28 a: ['orange']
-t:29 a: ['orange']
-t:30 a: [0]
-t:31 a: [1]
-t:32 a: ['orange']
-t:33 a: ['orange']
-t:34 a: [0]
-t:35 a: ['orange']
-t:36 a: ['orange']
-t:37 a: [1]
-t:38 a: ['orange']
-t:39 a: ['orange']
-t:40 a: [0]
-t:41 a: ['orange']
-t:42 a: ['orange']
-t:43 a: [1]
-t:44 a: ['orange']
-t:45 a: ['orange']
-t:46 a: [1]
-t:47 a: [1]
-t:48 a: [1]
-t:49 a: [1]
-t:50 a: [1]
-t:51 a: [1]
-t:52 a: [0]
-t:53 a: ['orange']
-t:54 a: ['orange']
-t:55 a: [1]
-t:56 a: ['orange']
-t:57 a: ['orange']
-t:58 a: [0]
-t:59 a: ['orange']
-t:60 a: ['orange']
-t:61 a: [1]
-t:62 a: ['orange']
-t:63 a: ['orange']
-t:64 a: [0]
-t:65 a: ['orange']
-t:66 a: ['orange']
-t:67 a: [0]
-t:68 a: [0]
-t:69 a: [1]
-t:70 a: ['orange']
-t:71 a: ['orange']
-t:72 a: [1]
-t:73 a: [1]
-t:74 a: [1]
-t:75 a: [0]
-t:76 a: ['orange']
-t:77 a: ['orange']
-t:78 a: [0]
-t:79 a: [1]
-t:80 a: ['orange']
-t:81 a: ['orange']
-t:82 a: [1]
-t:83 a: [0]
-t:84 a: ['orange']
-t:85 a: ['orange']
-t:86 a: [0]
-t:87 a: [0]
-t:88 a: [1]
-t:89 a: ['orange']
-456.705883
-t:0 a: [0]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 0 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 1, aktualna faza: orange
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [1]
-t:4 a: ['orange']
-t:5 a: ['orange']
-t:6 a: [1]
-t:7 a: [0]
-t:8 a: ['orange']
-t:9 a: ['orange']
-t:10 a: [0]
-t:11 a: [0]
-t:12 a: [1]
-t:13 a: ['orange']
-t:14 a: ['orange']
-t:15 a: [0]
-t:16 a: ['orange']
-t:17 a: ['orange']
-t:18 a: [1]
-t:19 a: ['orange']
-t:20 a: ['orange']
-t:21 a: [0]
-t:22 a: ['orange']
-t:23 a: ['orange']
-t:24 a: [0]
-t:25 a: [0]
-t:26 a: [1]
-t:27 a: ['orange']
-t:28 a: ['orange']
-t:29 a: [0]
-t:30 a: ['orange']
-t:31 a: ['orange']
-t:32 a: [1]
-t:33 a: ['orange']
-t:34 a: ['orange']
-t:35 a: [1]
-t:36 a: [0]
-t:37 a: ['orange']
-t:38 a: ['orange']
-t:39 a: [1]
-t:40 a: ['orange']
-t:41 a: ['orange']
-t:42 a: [0]
-t:43 a: ['orange']
-t:44 a: ['orange']
-t:45 a: [0]
-t:46 a: [0]
-t:47 a: [0]
-t:48 a: [0]
-t:49 a: [0]
-t:50 a: [0]
-t:51 a: [0]
-t:52 a: [0]
-t:53 a: [0]
-t:54 a: [1]
-t:55 a: ['orange']
-t:56 a: ['orange']
-t:57 a: [1]
-t:58 a: [1]
-t:59 a: [0]
-t:60 a: ['orange']
-t:61 a: ['orange']
-t:62 a: [1]
-t:63 a: ['orange']
-t:64 a: ['orange']
-t:65 a: [1]
-t:66 a: [0]
-t:67 a: ['orange']
-t:68 a: ['orange']
-t:69 a: [0]
-t:70 a: [1]
-t:71 a: ['orange']
-t:72 a: ['orange']
-t:73 a: [0]
-t:74 a: ['orange']
-t:75 a: ['orange']
-t:76 a: [1]
-t:77 a: ['orange']
-t:78 a: ['orange']
-t:79 a: [0]
-t:80 a: ['orange']
-t:81 a: ['orange']
-t:82 a: [0]
-t:83 a: [1]
-t:84 a: ['orange']
-t:85 a: ['orange']
-t:86 a: [0]
-t:87 a: ['orange']
-t:88 a: ['orange']
-t:89 a: [0]
-426.83
-t:0 a: [1]
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [1]
-t:4 a: [1]
-t:5 a: [1]
-t:6 a: [1]
-t:7 a: [1]
-t:8 a: [0]
-t:9 a: ['orange']
-t:10 a: ['orange']
-t:11 a: [0]
-t:12 a: [1]
-t:13 a: ['orange']
-t:14 a: ['orange']
-t:15 a: [1]
-t:16 a: [0]
-t:17 a: ['orange']
-t:18 a: ['orange']
-t:19 a: [1]
-t:20 a: ['orange']
-t:21 a: ['orange']
-t:22 a: [0]
-t:23 a: ['orange']
-t:24 a: ['orange']
-t:25 a: [1]
-t:26 a: ['orange']
-t:27 a: ['orange']
-t:28 a: [0]
-t:29 a: ['orange']
-t:30 a: ['orange']
-t:31 a: [0]
-t:32 a: [0]
-t:33 a: [1]
-t:34 a: ['orange']
-t:35 a: ['orange']
-t:36 a: [0]
-t:37 a: ['orange']
-t:38 a: ['orange']
-t:39 a: [1]
-t:40 a: ['orange']
-t:41 a: ['orange']
-t:42 a: [1]
-t:43 a: [1]
-t:44 a: [1]
-t:45 a: [0]
-t:46 a: ['orange']
-t:47 a: ['orange']
-t:48 a: [0]
-t:49 a: [0]
-t:50 a: [0]
-t:51 a: [0]
-t:52 a: [0]
-t:53 a: [0]
-t:54 a: [0]
-t:55 a: [0]
-t:56 a: [1]
-t:57 a: ['orange']
-t:58 a: ['orange']
-t:59 a: [0]
-t:60 a: ['orange']
-t:61 a: ['orange']
-t:62 a: [0]
-t:63 a: [1]
-t:64 a: ['orange']
-t:65 a: ['orange']
-t:66 a: [1]
-t:67 a: [0]
-t:68 a: ['orange']
-t:69 a: ['orange']
-t:70 a: [1]
-t:71 a: ['orange']
-t:72 a: ['orange']
-t:73 a: [1]
-t:74 a: [0]
-t:75 a: ['orange']
-t:76 a: ['orange']
-t:77 a: [1]
-t:78 a: ['orange']
-t:79 a: ['orange']
-t:80 a: [1]
-t:81 a: [1]
-t:82 a: [0]
-t:83 a: ['orange']
-t:84 a: ['orange']
-t:85 a: [1]
-t:86 a: ['orange']
-t:87 a: ['orange']
-t:88 a: [1]
-t:89 a: [0]
-449.41181
-t:0 a: [0]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 0 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 0, aktualna faza: orange
-t:1 a: ['orange']
-t:2 a: [1]
-t:3 a: ['orange']
-t:4 a: ['orange']
-t:5 a: [0]
-t:6 a: ['orange']
-t:7 a: ['orange']
-t:8 a: [1]
-t:9 a: ['orange']
-t:10 a: ['orange']
-t:11 a: [1]
-t:12 a: [1]
-t:13 a: [1]
-t:14 a: [0]
-t:15 a: ['orange']
-t:16 a: ['orange']
-t:17 a: [1]
-t:18 a: ['orange']
-t:19 a: ['orange']
-t:20 a: [1]
-t:21 a: [0]
-t:22 a: ['orange']
-t:23 a: ['orange']
-t:24 a: [1]
-t:25 a: ['orange']
-t:26 a: ['orange']
-t:27 a: [0]
-t:28 a: ['orange']
-t:29 a: ['orange']
-t:30 a: [0]
-t:31 a: [0]
-t:32 a: [0]
-t:33 a: [0]
-t:34 a: [1]
-t:35 a: ['orange']
-t:36 a: ['orange']
-t:37 a: [1]
-t:38 a: [0]
-t:39 a: ['orange']
-t:40 a: ['orange']
-t:41 a: [1]
-t:42 a: ['orange']
-t:43 a: ['orange']
-t:44 a: [1]
-t:45 a: [1]
-t:46 a: [1]
-t:47 a: [1]
-t:48 a: [1]
-t:49 a: [0]
-t:50 a: ['orange']
-t:51 a: ['orange']
-t:52 a: [0]
-t:53 a: [0]
-t:54 a: [1]
-t:55 a: ['orange']
-t:56 a: ['orange']
-t:57 a: [1]
-t:58 a: [0]
-t:59 a: ['orange']
-t:60 a: ['orange']
-t:61 a: [1]
-t:62 a: ['orange']
-t:63 a: ['orange']
-t:64 a: [0]
-t:65 a: ['orange']
-t:66 a: ['orange']
-t:67 a: [1]
-t:68 a: ['orange']
-t:69 a: ['orange']
-t:70 a: [1]
-t:71 a: [1]
-t:72 a: [0]
-t:73 a: ['orange']
-t:74 a: ['orange']
-t:75 a: [0]
-t:76 a: [1]
-t:77 a: ['orange']
-t:78 a: ['orange']
-t:79 a: [0]
-t:80 a: ['orange']
-t:81 a: ['orange']
-t:82 a: [0]
-t:83 a: [0]
-t:84 a: [0]
-t:85 a: [0]
-t:86 a: [0]
-t:87 a: [1]
-t:88 a: ['orange']
-t:89 a: ['orange']
-449.0
-t:0 a: [0]
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [1]
-t:4 a: ['orange']
-t:5 a: ['orange']
-t:6 a: [0]
-t:7 a: ['orange']
-t:8 a: ['orange']
-t:9 a: [0]
-t:10 a: [0]
-t:11 a: [0]
-t:12 a: [1]
-t:13 a: ['orange']
-t:14 a: ['orange']
-t:15 a: [1]
-t:16 a: [1]
-t:17 a: [0]
-t:18 a: ['orange']
-t:19 a: ['orange']
-t:20 a: [0]
-t:21 a: [1]
-t:22 a: ['orange']
-t:23 a: ['orange']
-t:24 a: [0]
-t:25 a: ['orange']
-t:26 a: ['orange']
-t:27 a: [0]
-t:28 a: [1]
-t:29 a: ['orange']
-t:30 a: ['orange']
-t:31 a: [1]
-t:32 a: [1]
-t:33 a: [0]
-t:34 a: ['orange']
-t:35 a: ['orange']
-t:36 a: [1]
-t:37 a: ['orange']
-t:38 a: ['orange']
-t:39 a: [1]
-t:40 a: [1]
-t:41 a: [0]
-t:42 a: ['orange']
-t:43 a: ['orange']
-t:44 a: [1]
-t:45 a: ['orange']
-t:46 a: ['orange']
-t:47 a: [1]
-t:48 a: [1]
-t:49 a: [0]
-t:50 a: ['orange']
-t:51 a: ['orange']
-t:52 a: [1]
-t:53 a: ['orange']
-t:54 a: ['orange']
-t:55 a: [1]
-t:56 a: [0]
-t:57 a: ['orange']
-t:58 a: ['orange']
-t:59 a: [0]
-t:60 a: [1]
-t:61 a: ['orange']
-t:62 a: ['orange']
-t:63 a: [1]
-t:64 a: [1]
-t:65 a: [1]
-t:66 a: [0]
-t:67 a: ['orange']
-t:68 a: ['orange']
-t:69 a: [0]
-t:70 a: [1]
-t:71 a: ['orange']
-t:72 a: ['orange']
-t:73 a: [0]
-t:74 a: ['orange']
-t:75 a: ['orange']
-t:76 a: [0]
-t:77 a: [0]
-t:78 a: [1]
-t:79 a: ['orange']
-t:80 a: ['orange']
-t:81 a: [1]
-t:82 a: [0]
-t:83 a: ['orange']
-t:84 a: ['orange']
-t:85 a: [1]
-t:86 a: ['orange']
-t:87 a: ['orange']
-t:88 a: [0]
-t:89 a: ['orange']
-436.9
-t:0 a: [0]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 0 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 1, aktualna faza: orange
-t:1 a: [1]
-t:2 a: ['orange']
-t:3 a: ['orange']
-t:4 a: [0]
-t:5 a: ['orange']
-t:6 a: ['orange']
-t:7 a: [0]
-t:8 a: [1]
-t:9 a: ['orange']
-t:10 a: ['orange']
-t:11 a: [0]
-t:12 a: ['orange']
-t:13 a: ['orange']
-t:14 a: [1]
-t:15 a: ['orange']
-t:16 a: ['orange']
-t:17 a: [0]
-t:18 a: ['orange']
-t:19 a: ['orange']
-t:20 a: [0]
-t:21 a: [0]
-t:22 a: [0]
-t:23 a: [1]
-t:24 a: ['orange']
-t:25 a: ['orange']
-t:26 a: [0]
-t:27 a: ['orange']
-t:28 a: ['orange']
-t:29 a: [0]
-t:30 a: [0]
-t:31 a: [1]
-t:32 a: ['orange']
-t:33 a: ['orange']
-t:34 a: [1]
-t:35 a: [1]
-t:36 a: [0]
-t:37 a: ['orange']
-t:38 a: ['orange']
-t:39 a: [0]
-t:40 a: [0]
-t:41 a: [1]
-t:42 a: ['orange']
-t:43 a: ['orange']
-t:44 a: [0]
-t:45 a: ['orange']
-t:46 a: ['orange']
-t:47 a: [1]
-t:48 a: ['orange']
-t:49 a: ['orange']
-t:50 a: [0]
-t:51 a: ['orange']
-t:52 a: ['orange']
-t:53 a: [0]
-t:54 a: [0]
-t:55 a: [0]
-t:56 a: [1]
-t:57 a: ['orange']
-t:58 a: ['orange']
-t:59 a: [0]
-t:60 a: ['orange']
-t:61 a: ['orange']
-t:62 a: [0]
-t:63 a: [0]
-t:64 a: [0]
-t:65 a: [1]
-t:66 a: ['orange']
-t:67 a: ['orange']
-t:68 a: [0]
-t:69 a: ['orange']
-t:70 a: ['orange']
-t:71 a: [1]
-t:72 a: ['orange']
-t:73 a: ['orange']
-t:74 a: [0]
-t:75 a: ['orange']
-t:76 a: ['orange']
-t:77 a: [1]
-t:78 a: ['orange']
-t:79 a: ['orange']
-t:80 a: [1]
-t:81 a: [0]
-t:82 a: ['orange']
-t:83 a: ['orange']
-t:84 a: [0]
-t:85 a: [1]
-t:86 a: ['orange']
-t:87 a: ['orange']
-t:88 a: [1]
-t:89 a: [1]
-416.0
-t:0 a: [1]
-t:1 a: [1]
-t:2 a: [0]
-t:3 a: ['orange']
-t:4 a: ['orange']
-t:5 a: [1]
-t:6 a: ['orange']
-t:7 a: ['orange']
-t:8 a: [1]
-t:9 a: [0]
-t:10 a: ['orange']
-t:11 a: ['orange']
-t:12 a: [0]
-t:13 a: [0]
-t:14 a: [0]
-t:15 a: [0]
-t:16 a: [1]
-t:17 a: ['orange']
-t:18 a: ['orange']
-t:19 a: [0]
-t:20 a: ['orange']
-t:21 a: ['orange']
-t:22 a: [0]
-t:23 a: [0]
-t:24 a: [0]
-t:25 a: [0]
-t:26 a: [0]
-t:27 a: [1]
-t:28 a: ['orange']
-t:29 a: ['orange']
-t:30 a: [1]
-t:31 a: [0]
-t:32 a: ['orange']
-t:33 a: ['orange']
-t:34 a: [1]
-t:35 a: ['orange']
-t:36 a: ['orange']
-t:37 a: [0]
-t:38 a: ['orange']
-t:39 a: ['orange']
-t:40 a: [1]
-t:41 a: ['orange']
-t:42 a: ['orange']
-t:43 a: [1]
-t:44 a: [0]
-t:45 a: ['orange']
-t:46 a: ['orange']
-t:47 a: [1]
-t:48 a: ['orange']
-t:49 a: ['orange']
-t:50 a: [1]
-t:51 a: [1]
-t:52 a: [0]
-t:53 a: ['orange']
-t:54 a: ['orange']
-t:55 a: [0]
-t:56 a: [1]
-t:57 a: ['orange']
-t:58 a: ['orange']
-t:59 a: [0]
-t:60 a: ['orange']
-t:61 a: ['orange']
-t:62 a: [0]
-t:63 a: [0]
-t:64 a: [0]
-t:65 a: [1]
-t:66 a: ['orange']
-t:67 a: ['orange']
-t:68 a: [0]
-t:69 a: ['orange']
-t:70 a: ['orange']
-t:71 a: [1]
-t:72 a: ['orange']
-t:73 a: ['orange']
-t:74 a: [1]
-t:75 a: [1]
-t:76 a: [1]
-t:77 a: [0]
-t:78 a: ['orange']
-t:79 a: ['orange']
-t:80 a: [0]
-t:81 a: [1]
-t:82 a: ['orange']
-t:83 a: ['orange']
-t:84 a: [1]
-t:85 a: [1]
-t:86 a: [0]
-t:87 a: ['orange']
-t:88 a: ['orange']
-t:89 a: [1]
-450.0
-t:0 a: [1]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 1 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 0, aktualna faza: orange
-t:1 a: ['orange']
-t:2 a: [1]
-t:3 a: [1]
-t:4 a: [0]
-t:5 a: ['orange']
-t:6 a: ['orange']
-t:7 a: [0]
-t:8 a: [0]
-t:9 a: [1]
-t:10 a: ['orange']
-t:11 a: ['orange']
-t:12 a: [1]
-t:13 a: [1]
-t:14 a: [1]
-t:15 a: [1]
-t:16 a: [1]
-t:17 a: [0]
-t:18 a: ['orange']
-t:19 a: ['orange']
-t:20 a: [1]
-t:21 a: ['orange']
-t:22 a: ['orange']
-t:23 a: [0]
-t:24 a: ['orange']
-t:25 a: ['orange']
-t:26 a: [0]
-t:27 a: [1]
-t:28 a: ['orange']
-t:29 a: ['orange']
-t:30 a: [0]
-t:31 a: ['orange']
-t:32 a: ['orange']
-t:33 a: [0]
-t:34 a: [1]
-t:35 a: ['orange']
-t:36 a: ['orange']
-t:37 a: [0]
-t:38 a: ['orange']
-t:39 a: ['orange']
-t:40 a: [1]
-t:41 a: ['orange']
-t:42 a: ['orange']
-t:43 a: [1]
-t:44 a: [0]
-t:45 a: ['orange']
-t:46 a: ['orange']
-t:47 a: [0]
-t:48 a: [0]
-t:49 a: [0]
-t:50 a: [0]
-t:51 a: [0]
-t:52 a: [1]
-t:53 a: ['orange']
-t:54 a: ['orange']
-t:55 a: [1]
-t:56 a: [1]
-t:57 a: [1]
-t:58 a: [1]
-t:59 a: [0]
-t:60 a: ['orange']
-t:61 a: ['orange']
-t:62 a: [0]
-t:63 a: [1]
-t:64 a: ['orange']
-t:65 a: ['orange']
-t:66 a: [0]
-t:67 a: ['orange']
-t:68 a: ['orange']
-t:69 a: [0]
-t:70 a: [0]
-t:71 a: [1]
-t:72 a: ['orange']
-t:73 a: ['orange']
-t:74 a: [0]
-t:75 a: ['orange']
-t:76 a: ['orange']
-t:77 a: [0]
-t:78 a: [1]
-t:79 a: ['orange']
-t:80 a: ['orange']
-t:81 a: [0]
-t:82 a: ['orange']
-t:83 a: ['orange']
-t:84 a: [0]
-t:85 a: [1]
-t:86 a: ['orange']
-t:87 a: ['orange']
-t:88 a: [0]
-t:89 a: ['orange']
-448.1
-t:0 a: [0]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 0 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 1, aktualna faza: orange
-t:1 a: [0]
-t:2 a: [0]
-t:3 a: [1]
-t:4 a: ['orange']
-t:5 a: ['orange']
-t:6 a: [1]
-t:7 a: [0]
-t:8 a: ['orange']
-t:9 a: ['orange']
-t:10 a: [0]
-t:11 a: [0]
-t:12 a: [0]
-t:13 a: [0]
-t:14 a: [0]
-t:15 a: [1]
-t:16 a: ['orange']
-t:17 a: ['orange']
-t:18 a: [1]
-t:19 a: [1]
-t:20 a: [0]
-t:21 a: ['orange']
-t:22 a: ['orange']
-t:23 a: [0]
-t:24 a: [0]
-t:25 a: [0]
-t:26 a: [1]
-t:27 a: ['orange']
-t:28 a: ['orange']
-t:29 a: [0]
-t:30 a: ['orange']
-t:31 a: ['orange']
-t:32 a: [1]
-t:33 a: ['orange']
-t:34 a: ['orange']
-t:35 a: [1]
-t:36 a: [1]
-t:37 a: [0]
-t:38 a: ['orange']
-t:39 a: ['orange']
-t:40 a: [0]
-t:41 a: [1]
-t:42 a: ['orange']
-t:43 a: ['orange']
-t:44 a: [1]
-t:45 a: [0]
-t:46 a: ['orange']
-t:47 a: ['orange']
-t:48 a: [0]
-t:49 a: [1]
-t:50 a: ['orange']
-t:51 a: ['orange']
-t:52 a: [0]
-t:53 a: ['orange']
-t:54 a: ['orange']
-t:55 a: [1]
-t:56 a: ['orange']
-t:57 a: ['orange']
-t:58 a: [1]
-t:59 a: [0]
-t:60 a: ['orange']
-t:61 a: ['orange']
-t:62 a: [0]
-t:63 a: [0]
-t:64 a: [0]
-t:65 a: [1]
-t:66 a: ['orange']
-t:67 a: ['orange']
-t:68 a: [0]
-t:69 a: ['orange']
-t:70 a: ['orange']
-t:71 a: [1]
-t:72 a: ['orange']
-t:73 a: ['orange']
-t:74 a: [0]
-t:75 a: ['orange']
-t:76 a: ['orange']
-t:77 a: [0]
-t:78 a: [1]
-t:79 a: ['orange']
-t:80 a: ['orange']
-t:81 a: [1]
-t:82 a: [1]
-t:83 a: [1]
-t:84 a: [1]
-t:85 a: [1]
-t:86 a: [0]
-t:87 a: ['orange']
-t:88 a: ['orange']
-t:89 a: [1]
-466.83
-t:0 a: [0]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 0 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 0, aktualna faza: orange
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [0]
-t:4 a: [0]
-t:5 a: [0]
-t:6 a: [0]
-t:7 a: [0]
-t:8 a: [1]
-t:9 a: ['orange']
-t:10 a: ['orange']
-t:11 a: [0]
-t:12 a: ['orange']
-t:13 a: ['orange']
-t:14 a: [0]
-t:15 a: [1]
-t:16 a: ['orange']
-t:17 a: ['orange']
-t:18 a: [0]
-t:19 a: ['orange']
-t:20 a: ['orange']
-t:21 a: [1]
-t:22 a: ['orange']
-t:23 a: ['orange']
-t:24 a: [0]
-t:25 a: ['orange']
-t:26 a: ['orange']
-t:27 a: [1]
-t:28 a: ['orange']
-t:29 a: ['orange']
-t:30 a: [0]
-t:31 a: ['orange']
-t:32 a: ['orange']
-t:33 a: [0]
-t:34 a: [0]
-t:35 a: [0]
-t:36 a: [0]
-t:37 a: [1]
-t:38 a: ['orange']
-t:39 a: ['orange']
-t:40 a: [0]
-t:41 a: ['orange']
-t:42 a: ['orange']
-t:43 a: [0]
-t:44 a: [1]
-t:45 a: ['orange']
-t:46 a: ['orange']
-t:47 a: [1]
-t:48 a: [1]
-t:49 a: [1]
-t:50 a: [0]
-t:51 a: ['orange']
-t:52 a: ['orange']
-t:53 a: [1]
-t:54 a: ['orange']
-t:55 a: ['orange']
-t:56 a: [1]
-t:57 a: [0]
-t:58 a: ['orange']
-t:59 a: ['orange']
-t:60 a: [0]
-t:61 a: [1]
-t:62 a: ['orange']
-t:63 a: ['orange']
-t:64 a: [1]
-t:65 a: [1]
-t:66 a: [1]
-t:67 a: [1]
-t:68 a: [1]
-t:69 a: [0]
-t:70 a: ['orange']
-t:71 a: ['orange']
-t:72 a: [0]
-t:73 a: [1]
-t:74 a: ['orange']
-t:75 a: ['orange']
-t:76 a: [1]
-t:77 a: [1]
-t:78 a: [0]
-t:79 a: ['orange']
-t:80 a: ['orange']
-t:81 a: [1]
-t:82 a: ['orange']
-t:83 a: ['orange']
-t:84 a: [1]
-t:85 a: [1]
-t:86 a: [0]
-t:87 a: ['orange']
-t:88 a: ['orange']
-t:89 a: [0]
-465.71741
-t:0 a: [1]
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [0]
-t:4 a: ['orange']
-t:5 a: ['orange']
-t:6 a: [0]
-t:7 a: [0]
-t:8 a: [1]
-t:9 a: ['orange']
-t:10 a: ['orange']
-t:11 a: [1]
-t:12 a: [1]
-t:13 a: [0]
-t:14 a: ['orange']
-t:15 a: ['orange']
-t:16 a: [0]
-t:17 a: [0]
-t:18 a: [1]
-t:19 a: ['orange']
-t:20 a: ['orange']
-t:21 a: [0]
-t:22 a: ['orange']
-t:23 a: ['orange']
-t:24 a: [1]
-t:25 a: ['orange']
-t:26 a: ['orange']
-t:27 a: [0]
-t:28 a: ['orange']
-t:29 a: ['orange']
-t:30 a: [1]
-t:31 a: ['orange']
-t:32 a: ['orange']
-t:33 a: [0]
-t:34 a: ['orange']
-t:35 a: ['orange']
-t:36 a: [0]
-t:37 a: [0]
-t:38 a: [0]
-t:39 a: [1]
-t:40 a: ['orange']
-t:41 a: ['orange']
-t:42 a: [0]
-t:43 a: ['orange']
-t:44 a: ['orange']
-t:45 a: [0]
-t:46 a: [1]
-t:47 a: ['orange']
-t:48 a: ['orange']
-t:49 a: [1]
-t:50 a: [0]
-t:51 a: ['orange']
-t:52 a: ['orange']
-t:53 a: [0]
-t:54 a: [0]
-t:55 a: [0]
-t:56 a: [1]
-t:57 a: ['orange']
-t:58 a: ['orange']
-t:59 a: [0]
-t:60 a: ['orange']
-t:61 a: ['orange']
-t:62 a: [0]
-t:63 a: [0]
-t:64 a: [0]
-t:65 a: [0]
-t:66 a: [0]
-t:67 a: [1]
-t:68 a: ['orange']
-t:69 a: ['orange']
-t:70 a: [0]
-t:71 a: ['orange']
-t:72 a: ['orange']
-t:73 a: [0]
-t:74 a: [1]
-t:75 a: ['orange']
-t:76 a: ['orange']
-t:77 a: [0]
-t:78 a: ['orange']
-t:79 a: ['orange']
-t:80 a: [1]
-t:81 a: ['orange']
-t:82 a: ['orange']
-t:83 a: [0]
-t:84 a: ['orange']
-t:85 a: ['orange']
-t:86 a: [0]
-t:87 a: [1]
-t:88 a: ['orange']
-t:89 a: ['orange']
-423.0
-t:0 a: [1]
-t:1 a: [0]
-t:2 a: ['orange']
-t:3 a: ['orange']
-t:4 a: [0]
-t:5 a: [1]
-t:6 a: ['orange']
-t:7 a: ['orange']
-t:8 a: [0]
-t:9 a: ['orange']
-t:10 a: ['orange']
-t:11 a: [1]
-t:12 a: ['orange']
-t:13 a: ['orange']
-t:14 a: [0]
-t:15 a: ['orange']
-t:16 a: ['orange']
-t:17 a: [1]
-t:18 a: ['orange']
-t:19 a: ['orange']
-t:20 a: [0]
-t:21 a: ['orange']
-t:22 a: ['orange']
-t:23 a: [1]
-t:24 a: ['orange']
-t:25 a: ['orange']
-t:26 a: [0]
-t:27 a: ['orange']
-t:28 a: ['orange']
-t:29 a: [0]
-t:30 a: [1]
-t:31 a: ['orange']
-t:32 a: ['orange']
-t:33 a: [1]
-t:34 a: [1]
-t:35 a: [1]
-t:36 a: [0]
-t:37 a: ['orange']
-t:38 a: ['orange']
-t:39 a: [0]
-t:40 a: [0]
-t:41 a: [0]
-t:42 a: [0]
-t:43 a: [1]
-t:44 a: ['orange']
-t:45 a: ['orange']
-t:46 a: [0]
-t:47 a: ['orange']
-t:48 a: ['orange']
-t:49 a: [0]
-t:50 a: [1]
-t:51 a: ['orange']
-t:52 a: ['orange']
-t:53 a: [0]
-t:54 a: ['orange']
-t:55 a: ['orange']
-t:56 a: [1]
-t:57 a: ['orange']
-t:58 a: ['orange']
-t:59 a: [1]
-t:60 a: [1]
-t:61 a: [0]
-t:62 a: ['orange']
-t:63 a: ['orange']
-t:64 a: [1]
-t:65 a: ['orange']
-t:66 a: ['orange']
-t:67 a: [0]
-t:68 a: ['orange']
-t:69 a: ['orange']
-t:70 a: [0]
-t:71 a: [1]
-t:72 a: ['orange']
-t:73 a: ['orange']
-t:74 a: [0]
-t:75 a: ['orange']
-t:76 a: ['orange']
-t:77 a: [1]
-t:78 a: ['orange']
-t:79 a: ['orange']
-t:80 a: [0]
-t:81 a: ['orange']
-t:82 a: ['orange']
-t:83 a: [1]
-t:84 a: ['orange']
-t:85 a: ['orange']
-t:86 a: [0]
-t:87 a: ['orange']
-t:88 a: ['orange']
-t:89 a: [1]
-380.0
-t:0 a: [0]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 0 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 0, aktualna faza: orange
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [1]
-t:4 a: ['orange']
-t:5 a: ['orange']
-t:6 a: [0]
-t:7 a: ['orange']
-t:8 a: ['orange']
-t:9 a: [1]
-t:10 a: ['orange']
-t:11 a: ['orange']
-t:12 a: [0]
-t:13 a: ['orange']
-t:14 a: ['orange']
-t:15 a: [1]
-t:16 a: ['orange']
-t:17 a: ['orange']
-t:18 a: [0]
-t:19 a: ['orange']
-t:20 a: ['orange']
-t:21 a: [0]
-t:22 a: [1]
-t:23 a: ['orange']
-t:24 a: ['orange']
-t:25 a: [0]
-t:26 a: ['orange']
-t:27 a: ['orange']
-t:28 a: [0]
-t:29 a: [0]
-t:30 a: [0]
-t:31 a: [1]
-t:32 a: ['orange']
-t:33 a: ['orange']
-t:34 a: [0]
-t:35 a: ['orange']
-t:36 a: ['orange']
-t:37 a: [0]
-t:38 a: [1]
-t:39 a: ['orange']
-t:40 a: ['orange']
-t:41 a: [1]
-t:42 a: [0]
-t:43 a: ['orange']
-t:44 a: ['orange']
-t:45 a: [1]
-t:46 a: ['orange']
-t:47 a: ['orange']
-t:48 a: [0]
-t:49 a: ['orange']
-t:50 a: ['orange']
-t:51 a: [1]
-t:52 a: ['orange']
-t:53 a: ['orange']
-t:54 a: [0]
-t:55 a: ['orange']
-t:56 a: ['orange']
-t:57 a: [1]
-t:58 a: ['orange']
-t:59 a: ['orange']
-t:60 a: [0]
-t:61 a: ['orange']
-t:62 a: ['orange']
-t:63 a: [1]
-t:64 a: ['orange']
-t:65 a: ['orange']
-t:66 a: [1]
-t:67 a: [1]
-t:68 a: [0]
-t:69 a: ['orange']
-t:70 a: ['orange']
-t:71 a: [0]
-t:72 a: [1]
-t:73 a: ['orange']
-t:74 a: ['orange']
-t:75 a: [1]
-t:76 a: [1]
-t:77 a: [1]
-t:78 a: [1]
-t:79 a: [1]
-t:80 a: [0]
-t:81 a: ['orange']
-t:82 a: ['orange']
-t:83 a: [1]
-t:84 a: ['orange']
-t:85 a: ['orange']
-t:86 a: [0]
-t:87 a: ['orange']
-t:88 a: ['orange']
-t:89 a: [1]
-386.9
-t:0 a: [0]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 0 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 0, aktualna faza: orange
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [0]
-t:4 a: [0]
-t:5 a: [0]
-t:6 a: [0]
-t:7 a: [1]
-t:8 a: ['orange']
-t:9 a: ['orange']
-t:10 a: [1]
-t:11 a: [1]
-t:12 a: [0]
-t:13 a: ['orange']
-t:14 a: ['orange']
-t:15 a: [1]
-t:16 a: ['orange']
-t:17 a: ['orange']
-t:18 a: [0]
-t:19 a: ['orange']
-t:20 a: ['orange']
-t:21 a: [0]
-t:22 a: [1]
-t:23 a: ['orange']
-t:24 a: ['orange']
-t:25 a: [0]
-t:26 a: ['orange']
-t:27 a: ['orange']
-t:28 a: [0]
-t:29 a: [1]
-t:30 a: ['orange']
-t:31 a: ['orange']
-t:32 a: [0]
-t:33 a: ['orange']
-t:34 a: ['orange']
-t:35 a: [1]
-t:36 a: ['orange']
-t:37 a: ['orange']
-t:38 a: [0]
-t:39 a: ['orange']
-t:40 a: ['orange']
-t:41 a: [0]
-t:42 a: [1]
-t:43 a: ['orange']
-t:44 a: ['orange']
-t:45 a: [0]
-t:46 a: ['orange']
-t:47 a: ['orange']
-t:48 a: [1]
-t:49 a: ['orange']
-t:50 a: ['orange']
-t:51 a: [0]
-t:52 a: ['orange']
-t:53 a: ['orange']
-t:54 a: [0]
-t:55 a: [0]
-t:56 a: [1]
-t:57 a: ['orange']
-t:58 a: ['orange']
-t:59 a: [1]
-t:60 a: [1]
-t:61 a: [0]
-t:62 a: ['orange']
-t:63 a: ['orange']
-t:64 a: [0]
-t:65 a: [1]
-t:66 a: ['orange']
-t:67 a: ['orange']
-t:68 a: [0]
-t:69 a: ['orange']
-t:70 a: ['orange']
-t:71 a: [1]
-t:72 a: ['orange']
-t:73 a: ['orange']
-t:74 a: [0]
-t:75 a: ['orange']
-t:76 a: ['orange']
-t:77 a: [1]
-t:78 a: ['orange']
-t:79 a: ['orange']
-t:80 a: [0]
-t:81 a: ['orange']
-t:82 a: ['orange']
-t:83 a: [0]
-t:84 a: [0]
-t:85 a: [0]
-t:86 a: [1]
-t:87 a: ['orange']
-t:88 a: ['orange']
-t:89 a: [1]
-405.7247
-t:0 a: [0]
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [1]
-t:4 a: ['orange']
-t:5 a: ['orange']
-t:6 a: [0]
-t:7 a: ['orange']
-t:8 a: ['orange']
-t:9 a: [1]
-t:10 a: ['orange']
-t:11 a: ['orange']
-t:12 a: [0]
-t:13 a: ['orange']
-t:14 a: ['orange']
-t:15 a: [1]
-t:16 a: ['orange']
-t:17 a: ['orange']
-t:18 a: [1]
-t:19 a: [0]
-t:20 a: ['orange']
-t:21 a: ['orange']
-t:22 a: [0]
-t:23 a: [1]
-t:24 a: ['orange']
-t:25 a: ['orange']
-t:26 a: [1]
-t:27 a: [1]
-t:28 a: [0]
-t:29 a: ['orange']
-t:30 a: ['orange']
-t:31 a: [1]
-t:32 a: ['orange']
-t:33 a: ['orange']
-t:34 a: [1]
-t:35 a: [0]
-t:36 a: ['orange']
-t:37 a: ['orange']
-t:38 a: [0]
-t:39 a: [1]
-t:40 a: ['orange']
-t:41 a: ['orange']
-t:42 a: [1]
-t:43 a: [1]
-t:44 a: [1]
-t:45 a: [1]
-t:46 a: [1]
-t:47 a: [0]
-t:48 a: ['orange']
-t:49 a: ['orange']
-t:50 a: [0]
-t:51 a: [0]
-t:52 a: [1]
-t:53 a: ['orange']
-t:54 a: ['orange']
-t:55 a: [1]
-t:56 a: [0]
-t:57 a: ['orange']
-t:58 a: ['orange']
-t:59 a: [0]
-t:60 a: [1]
-t:61 a: ['orange']
-t:62 a: ['orange']
-t:63 a: [1]
-t:64 a: [0]
-t:65 a: ['orange']
-t:66 a: ['orange']
-t:67 a: [1]
-t:68 a: ['orange']
-t:69 a: ['orange']
-t:70 a: [0]
-t:71 a: ['orange']
-t:72 a: ['orange']
-t:73 a: [1]
-t:74 a: ['orange']
-t:75 a: ['orange']
-t:76 a: [0]
-t:77 a: ['orange']
-t:78 a: ['orange']
-t:79 a: [0]
-t:80 a: [1]
-t:81 a: ['orange']
-t:82 a: ['orange']
-t:83 a: [0]
-t:84 a: ['orange']
-t:85 a: ['orange']
-t:86 a: [0]
-t:87 a: [0]
-t:88 a: [0]
-t:89 a: [1]
-426.9
-t:0 a: [1]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 1 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 0, aktualna faza: orange
-t:1 a: ['orange']
-t:2 a: [1]
-t:3 a: [1]
-t:4 a: [1]
-t:5 a: [1]
-t:6 a: [1]
-t:7 a: [0]
-t:8 a: ['orange']
-t:9 a: ['orange']
-t:10 a: [1]
-t:11 a: ['orange']
-t:12 a: ['orange']
-t:13 a: [1]
-t:14 a: [0]
-t:15 a: ['orange']
-t:16 a: ['orange']
-t:17 a: [1]
-t:18 a: ['orange']
-t:19 a: ['orange']
-t:20 a: [1]
-t:21 a: [0]
-t:22 a: ['orange']
-t:23 a: ['orange']
-t:24 a: [0]
-t:25 a: [1]
-t:26 a: ['orange']
-t:27 a: ['orange']
-t:28 a: [1]
-t:29 a: [0]
-t:30 a: ['orange']
-t:31 a: ['orange']
-t:32 a: [1]
-t:33 a: ['orange']
-t:34 a: ['orange']
-t:35 a: [0]
-t:36 a: ['orange']
-t:37 a: ['orange']
-t:38 a: [1]
-t:39 a: ['orange']
-t:40 a: ['orange']
-t:41 a: [1]
-t:42 a: [0]
-t:43 a: ['orange']
-t:44 a: ['orange']
-t:45 a: [1]
-t:46 a: ['orange']
-t:47 a: ['orange']
-t:48 a: [0]
-t:49 a: ['orange']
-t:50 a: ['orange']
-t:51 a: [1]
-t:52 a: ['orange']
-t:53 a: ['orange']
-t:54 a: [1]
-t:55 a: [1]
-t:56 a: [0]
-t:57 a: ['orange']
-t:58 a: ['orange']
-t:59 a: [1]
-t:60 a: ['orange']
-t:61 a: ['orange']
-t:62 a: [1]
-t:63 a: [1]
-t:64 a: [1]
-t:65 a: [1]
-t:66 a: [1]
-t:67 a: [1]
-t:68 a: [0]
-t:69 a: ['orange']
-t:70 a: ['orange']
-t:71 a: [0]
-t:72 a: [1]
-t:73 a: ['orange']
-t:74 a: ['orange']
-t:75 a: [0]
-t:76 a: ['orange']
-t:77 a: ['orange']
-t:78 a: [1]
-t:79 a: ['orange']
-t:80 a: ['orange']
-t:81 a: [0]
-t:82 a: ['orange']
-t:83 a: ['orange']
-t:84 a: [0]
-t:85 a: [0]
-t:86 a: [0]
-t:87 a: [1]
-t:88 a: ['orange']
-t:89 a: ['orange']
-410.5883
-t:0 a: [0]
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [0]
-t:4 a: [1]
-t:5 a: ['orange']
-t:6 a: ['orange']
-t:7 a: [1]
-t:8 a: [1]
-t:9 a: [1]
-t:10 a: [0]
-t:11 a: ['orange']
-t:12 a: ['orange']
-t:13 a: [0]
-t:14 a: [0]
-t:15 a: [0]
-t:16 a: [1]
-t:17 a: ['orange']
-t:18 a: ['orange']
-t:19 a: [0]
-t:20 a: ['orange']
-t:21 a: ['orange']
-t:22 a: [0]
-t:23 a: [1]
-t:24 a: ['orange']
-t:25 a: ['orange']
-t:26 a: [0]
-t:27 a: ['orange']
-t:28 a: ['orange']
-t:29 a: [1]
-t:30 a: ['orange']
-t:31 a: ['orange']
-t:32 a: [0]
-t:33 a: ['orange']
-t:34 a: ['orange']
-t:35 a: [0]
-t:36 a: [1]
-t:37 a: ['orange']
-t:38 a: ['orange']
-t:39 a: [1]
-t:40 a: [1]
-t:41 a: [1]
-t:42 a: [1]
-t:43 a: [1]
-t:44 a: [1]
-t:45 a: [1]
-t:46 a: [1]
-t:47 a: [0]
-t:48 a: ['orange']
-t:49 a: ['orange']
-t:50 a: [1]
-t:51 a: ['orange']
-t:52 a: ['orange']
-t:53 a: [1]
-t:54 a: [1]
-t:55 a: [1]
-t:56 a: [0]
-t:57 a: ['orange']
-t:58 a: ['orange']
-t:59 a: [0]
-t:60 a: [1]
-t:61 a: ['orange']
-t:62 a: ['orange']
-t:63 a: [1]
-t:64 a: [1]
-t:65 a: [1]
-t:66 a: [0]
-t:67 a: ['orange']
-t:68 a: ['orange']
-t:69 a: [0]
-t:70 a: [0]
-t:71 a: [1]
-t:72 a: ['orange']
-t:73 a: ['orange']
-t:74 a: [1]
-t:75 a: [1]
-t:76 a: [0]
-t:77 a: ['orange']
-t:78 a: ['orange']
-t:79 a: [1]
-t:80 a: ['orange']
-t:81 a: ['orange']
-t:82 a: [1]
-t:83 a: [1]
-t:84 a: [1]
-t:85 a: [0]
-t:86 a: ['orange']
-t:87 a: ['orange']
-t:88 a: [1]
-t:89 a: ['orange']
-496.1
-t:0 a: [0]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 0 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 1, aktualna faza: orange
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [1]
-t:4 a: ['orange']
-t:5 a: ['orange']
-t:6 a: [1]
-t:7 a: [1]
-t:8 a: [0]
-t:9 a: ['orange']
-t:10 a: ['orange']
-t:11 a: [1]
-t:12 a: ['orange']
-t:13 a: ['orange']
-t:14 a: [1]
-t:15 a: [1]
-t:16 a: [1]
-t:17 a: [1]
-t:18 a: [1]
-t:19 a: [0]
-t:20 a: ['orange']
-t:21 a: ['orange']
-t:22 a: [0]
-t:23 a: [0]
-t:24 a: [1]
-t:25 a: ['orange']
-t:26 a: ['orange']
-t:27 a: [1]
-t:28 a: [0]
-t:29 a: ['orange']
-t:30 a: ['orange']
-t:31 a: [1]
-t:32 a: ['orange']
-t:33 a: ['orange']
-t:34 a: [0]
-t:35 a: ['orange']
-t:36 a: ['orange']
-t:37 a: [1]
-t:38 a: ['orange']
-t:39 a: ['orange']
-t:40 a: [1]
-t:41 a: [1]
-t:42 a: [0]
-t:43 a: ['orange']
-t:44 a: ['orange']
-t:45 a: [0]
-t:46 a: [0]
-t:47 a: [0]
-t:48 a: [0]
-t:49 a: [1]
-t:50 a: ['orange']
-t:51 a: ['orange']
-t:52 a: [0]
-t:53 a: ['orange']
-t:54 a: ['orange']
-t:55 a: [0]
-t:56 a: [1]
-t:57 a: ['orange']
-t:58 a: ['orange']
-t:59 a: [0]
-t:60 a: ['orange']
-t:61 a: ['orange']
-t:62 a: [0]
-t:63 a: [1]
-t:64 a: ['orange']
-t:65 a: ['orange']
-t:66 a: [0]
-t:67 a: ['orange']
-t:68 a: ['orange']
-t:69 a: [0]
-t:70 a: [1]
-t:71 a: ['orange']
-t:72 a: ['orange']
-t:73 a: [1]
-t:74 a: [0]
-t:75 a: ['orange']
-t:76 a: ['orange']
-t:77 a: [0]
-t:78 a: [1]
-t:79 a: ['orange']
-t:80 a: ['orange']
-t:81 a: [0]
-t:82 a: ['orange']
-t:83 a: ['orange']
-t:84 a: [1]
-t:85 a: ['orange']
-t:86 a: ['orange']
-t:87 a: [0]
-t:88 a: ['orange']
-t:89 a: ['orange']
-426.781
-t:0 a: [1]
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [0]
-t:4 a: ['orange']
-t:5 a: ['orange']
-t:6 a: [1]
-t:7 a: ['orange']
-t:8 a: ['orange']
-t:9 a: [1]
-t:10 a: [1]
-t:11 a: [0]
-t:12 a: ['orange']
-t:13 a: ['orange']
-t:14 a: [1]
-t:15 a: ['orange']
-t:16 a: ['orange']
-t:17 a: [1]
-t:18 a: [0]
-t:19 a: ['orange']
-t:20 a: ['orange']
-t:21 a: [1]
-t:22 a: ['orange']
-t:23 a: ['orange']
-t:24 a: [0]
-t:25 a: ['orange']
-t:26 a: ['orange']
-t:27 a: [0]
-t:28 a: [0]
-t:29 a: [0]
-t:30 a: [1]
-t:31 a: ['orange']
-t:32 a: ['orange']
-t:33 a: [0]
-t:34 a: ['orange']
-t:35 a: ['orange']
-t:36 a: [1]
-t:37 a: ['orange']
-t:38 a: ['orange']
-t:39 a: [0]
-t:40 a: ['orange']
-t:41 a: ['orange']
-t:42 a: [0]
-t:43 a: [1]
-t:44 a: ['orange']
-t:45 a: ['orange']
-t:46 a: [0]
-t:47 a: ['orange']
-t:48 a: ['orange']
-t:49 a: [0]
-t:50 a: [1]
-t:51 a: ['orange']
-t:52 a: ['orange']
-t:53 a: [1]
-t:54 a: [1]
-t:55 a: [0]
-t:56 a: ['orange']
-t:57 a: ['orange']
-t:58 a: [0]
-t:59 a: [0]
-t:60 a: [0]
-t:61 a: [1]
-t:62 a: ['orange']
-t:63 a: ['orange']
-t:64 a: [0]
-t:65 a: ['orange']
-t:66 a: ['orange']
-t:67 a: [1]
-t:68 a: ['orange']
-t:69 a: ['orange']
-t:70 a: [1]
-t:71 a: [0]
-t:72 a: ['orange']
-t:73 a: ['orange']
-t:74 a: [0]
-t:75 a: [0]
-t:76 a: [1]
-t:77 a: ['orange']
-t:78 a: ['orange']
-t:79 a: [1]
-t:80 a: [0]
-t:81 a: ['orange']
-t:82 a: ['orange']
-t:83 a: [0]
-t:84 a: [1]
-t:85 a: ['orange']
-t:86 a: ['orange']
-t:87 a: [0]
-t:88 a: ['orange']
-t:89 a: ['orange']
-403.0
-t:0 a: [0]
-t:1 a: [1]
-t:2 a: ['orange']
-t:3 a: ['orange']
-t:4 a: [0]
-t:5 a: ['orange']
-t:6 a: ['orange']
-t:7 a: [0]
-t:8 a: [0]
-t:9 a: [0]
-t:10 a: [1]
-t:11 a: ['orange']
-t:12 a: ['orange']
-t:13 a: [1]
-t:14 a: [0]
-t:15 a: ['orange']
-t:16 a: ['orange']
-t:17 a: [0]
-t:18 a: [1]
-t:19 a: ['orange']
-t:20 a: ['orange']
-t:21 a: [1]
-t:22 a: [0]
-t:23 a: ['orange']
-t:24 a: ['orange']
-t:25 a: [1]
-t:26 a: ['orange']
-t:27 a: ['orange']
-t:28 a: [0]
-t:29 a: ['orange']
-t:30 a: ['orange']
-t:31 a: [1]
-t:32 a: ['orange']
-t:33 a: ['orange']
-t:34 a: [1]
-t:35 a: [1]
-t:36 a: [0]
-t:37 a: ['orange']
-t:38 a: ['orange']
-t:39 a: [0]
-t:40 a: [0]
-t:41 a: [1]
-t:42 a: ['orange']
-t:43 a: ['orange']
-t:44 a: [0]
-t:45 a: ['orange']
-t:46 a: ['orange']
-t:47 a: [0]
-t:48 a: [1]
-t:49 a: ['orange']
-t:50 a: ['orange']
-t:51 a: [0]
-t:52 a: ['orange']
-t:53 a: ['orange']
-t:54 a: [0]
-t:55 a: [1]
-t:56 a: ['orange']
-t:57 a: ['orange']
-t:58 a: [1]
-t:59 a: [0]
-t:60 a: ['orange']
-t:61 a: ['orange']
-t:62 a: [0]
-t:63 a: [1]
-t:64 a: ['orange']
-t:65 a: ['orange']
-t:66 a: [1]
-t:67 a: [0]
-t:68 a: ['orange']
-t:69 a: ['orange']
-t:70 a: [0]
-t:71 a: [0]
-t:72 a: [0]
-t:73 a: [1]
-t:74 a: ['orange']
-t:75 a: ['orange']
-t:76 a: [0]
-t:77 a: ['orange']
-t:78 a: ['orange']
-t:79 a: [1]
-t:80 a: ['orange']
-t:81 a: ['orange']
-t:82 a: [1]
-t:83 a: [0]
-t:84 a: ['orange']
-t:85 a: ['orange']
-t:86 a: [0]
-t:87 a: [0]
-t:88 a: [1]
-t:89 a: ['orange']
-426.0
-t:0 a: [1]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 1 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 1, aktualna faza: orange
-t:1 a: [1]
-t:2 a: [1]
-t:3 a: [1]
-t:4 a: [1]
-t:5 a: [1]
-t:6 a: [0]
-t:7 a: ['orange']
-t:8 a: ['orange']
-t:9 a: [0]
-t:10 a: [1]
-t:11 a: ['orange']
-t:12 a: ['orange']
-t:13 a: [0]
-t:14 a: ['orange']
-t:15 a: ['orange']
-t:16 a: [0]
-t:17 a: [0]
-t:18 a: [1]
-t:19 a: ['orange']
-t:20 a: ['orange']
-t:21 a: [1]
-t:22 a: [0]
-t:23 a: ['orange']
-t:24 a: ['orange']
-t:25 a: [1]
-t:26 a: ['orange']
-t:27 a: ['orange']
-t:28 a: [0]
-t:29 a: ['orange']
-t:30 a: ['orange']
-t:31 a: [1]
-t:32 a: ['orange']
-t:33 a: ['orange']
-t:34 a: [1]
-t:35 a: [0]
-t:36 a: ['orange']
-t:37 a: ['orange']
-t:38 a: [1]
-t:39 a: ['orange']
-t:40 a: ['orange']
-t:41 a: [1]
-t:42 a: [1]
-t:43 a: [0]
-t:44 a: ['orange']
-t:45 a: ['orange']
-t:46 a: [1]
-t:47 a: ['orange']
-t:48 a: ['orange']
-t:49 a: [0]
-t:50 a: ['orange']
-t:51 a: ['orange']
-t:52 a: [1]
-t:53 a: ['orange']
-t:54 a: ['orange']
-t:55 a: [1]
-t:56 a: [1]
-t:57 a: [1]
-t:58 a: [0]
-t:59 a: ['orange']
-t:60 a: ['orange']
-t:61 a: [1]
-t:62 a: ['orange']
-t:63 a: ['orange']
-t:64 a: [0]
-t:65 a: ['orange']
-t:66 a: ['orange']
-t:67 a: [1]
-t:68 a: ['orange']
-t:69 a: ['orange']
-t:70 a: [0]
-t:71 a: ['orange']
-t:72 a: ['orange']
-t:73 a: [0]
-t:74 a: [0]
-t:75 a: [0]
-t:76 a: [0]
-t:77 a: [0]
-t:78 a: [0]
-t:79 a: [1]
-t:80 a: ['orange']
-t:81 a: ['orange']
-t:82 a: [1]
-t:83 a: [1]
-t:84 a: [0]
-t:85 a: ['orange']
-t:86 a: ['orange']
-t:87 a: [1]
-t:88 a: ['orange']
-t:89 a: ['orange']
-412.269
-t:0 a: [1]
-t:1 a: [0]
-t:2 a: ['orange']
-t:3 a: ['orange']
-t:4 a: [1]
-t:5 a: ['orange']
-t:6 a: ['orange']
-t:7 a: [1]
-t:8 a: [0]
-t:9 a: ['orange']
-t:10 a: ['orange']
-t:11 a: [0]
-t:12 a: [1]
-t:13 a: ['orange']
-t:14 a: ['orange']
-t:15 a: [1]
-t:16 a: [0]
-t:17 a: ['orange']
-t:18 a: ['orange']
-t:19 a: [0]
-t:20 a: [1]
-t:21 a: ['orange']
-t:22 a: ['orange']
-t:23 a: [1]
-t:24 a: [1]
-t:25 a: [1]
-t:26 a: [1]
-t:27 a: [1]
-t:28 a: [1]
-t:29 a: [0]
-t:30 a: ['orange']
-t:31 a: ['orange']
-t:32 a: [1]
-t:33 a: ['orange']
-t:34 a: ['orange']
-t:35 a: [0]
-t:36 a: ['orange']
-t:37 a: ['orange']
-t:38 a: [0]
-t:39 a: [0]
-t:40 a: [0]
-t:41 a: [0]
-t:42 a: [1]
-t:43 a: ['orange']
-t:44 a: ['orange']
-t:45 a: [1]
-t:46 a: [0]
-t:47 a: ['orange']
-t:48 a: ['orange']
-t:49 a: [0]
-t:50 a: [0]
-t:51 a: [0]
-t:52 a: [1]
-t:53 a: ['orange']
-t:54 a: ['orange']
-t:55 a: [0]
-t:56 a: ['orange']
-t:57 a: ['orange']
-t:58 a: [0]
-t:59 a: [0]
-t:60 a: [0]
-t:61 a: [1]
-t:62 a: ['orange']
-t:63 a: ['orange']
-t:64 a: [0]
-t:65 a: ['orange']
-t:66 a: ['orange']
-t:67 a: [0]
-t:68 a: [1]
-t:69 a: ['orange']
-t:70 a: ['orange']
-t:71 a: [1]
-t:72 a: [1]
-t:73 a: [0]
-t:74 a: ['orange']
-t:75 a: ['orange']
-t:76 a: [1]
-t:77 a: ['orange']
-t:78 a: ['orange']
-t:79 a: [1]
-t:80 a: [1]
-t:81 a: [0]
-t:82 a: ['orange']
-t:83 a: ['orange']
-t:84 a: [1]
-t:85 a: ['orange']
-t:86 a: ['orange']
-t:87 a: [0]
-t:88 a: ['orange']
-t:89 a: ['orange']
-460.0
-t:0 a: [0]
-t:1 a: [0]
-t:2 a: [1]
-t:3 a: ['orange']
-t:4 a: ['orange']
-t:5 a: [0]
-t:6 a: ['orange']
-t:7 a: ['orange']
-t:8 a: [0]
-t:9 a: [0]
-t:10 a: [0]
-t:11 a: [0]
-t:12 a: [1]
-t:13 a: ['orange']
-t:14 a: ['orange']
-t:15 a: [0]
-t:16 a: ['orange']
-t:17 a: ['orange']
-t:18 a: [1]
-t:19 a: ['orange']
-t:20 a: ['orange']
-t:21 a: [0]
-t:22 a: ['orange']
-t:23 a: ['orange']
-t:24 a: [1]
-t:25 a: ['orange']
-t:26 a: ['orange']
-t:27 a: [1]
-t:28 a: [0]
-t:29 a: ['orange']
-t:30 a: ['orange']
-t:31 a: [1]
-t:32 a: ['orange']
-t:33 a: ['orange']
-t:34 a: [0]
-t:35 a: ['orange']
-t:36 a: ['orange']
-t:37 a: [1]
-t:38 a: ['orange']
-t:39 a: ['orange']
-t:40 a: [0]
-t:41 a: ['orange']
-t:42 a: ['orange']
-t:43 a: [1]
-t:44 a: ['orange']
-t:45 a: ['orange']
-t:46 a: [0]
-t:47 a: ['orange']
-t:48 a: ['orange']
-t:49 a: [0]
-t:50 a: [1]
-t:51 a: ['orange']
-t:52 a: ['orange']
-t:53 a: [1]
-t:54 a: [0]
-t:55 a: ['orange']
-t:56 a: ['orange']
-t:57 a: [0]
-t:58 a: [1]
-t:59 a: ['orange']
-t:60 a: ['orange']
-t:61 a: [1]
-t:62 a: [1]
-t:63 a: [1]
-t:64 a: [1]
-t:65 a: [1]
-t:66 a: [1]
-t:67 a: [1]
-t:68 a: [0]
-t:69 a: ['orange']
-t:70 a: ['orange']
-t:71 a: [1]
-t:72 a: ['orange']
-t:73 a: ['orange']
-t:74 a: [0]
-t:75 a: ['orange']
-t:76 a: ['orange']
-t:77 a: [1]
-t:78 a: ['orange']
-t:79 a: ['orange']
-t:80 a: [0]
-t:81 a: ['orange']
-t:82 a: ['orange']
-t:83 a: [1]
-t:84 a: ['orange']
-t:85 a: ['orange']
-t:86 a: [0]
-t:87 a: ['orange']
-t:88 a: ['orange']
-t:89 a: [1]
-389.0
-t:0 a: [0]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 0 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 0, aktualna faza: orange
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [0]
-t:4 a: [0]
-t:5 a: [1]
-t:6 a: ['orange']
-t:7 a: ['orange']
-t:8 a: [0]
-t:9 a: ['orange']
-t:10 a: ['orange']
-t:11 a: [0]
-t:12 a: [1]
-t:13 a: ['orange']
-t:14 a: ['orange']
-t:15 a: [1]
-t:16 a: [1]
-t:17 a: [0]
-t:18 a: ['orange']
-t:19 a: ['orange']
-t:20 a: [0]
-t:21 a: [1]
-t:22 a: ['orange']
-t:23 a: ['orange']
-t:24 a: [0]
-t:25 a: ['orange']
-t:26 a: ['orange']
-t:27 a: [0]
-t:28 a: [1]
-t:29 a: ['orange']
-t:30 a: ['orange']
-t:31 a: [0]
-t:32 a: ['orange']
-t:33 a: ['orange']
-t:34 a: [0]
-t:35 a: [0]
-t:36 a: [0]
-t:37 a: [0]
-t:38 a: [0]
-t:39 a: [0]
-t:40 a: [0]
-t:41 a: [1]
-t:42 a: ['orange']
-t:43 a: ['orange']
-t:44 a: [0]
-t:45 a: ['orange']
-t:46 a: ['orange']
-t:47 a: [1]
-t:48 a: ['orange']
-t:49 a: ['orange']
-t:50 a: [0]
-t:51 a: ['orange']
-t:52 a: ['orange']
-t:53 a: [0]
-t:54 a: [0]
-t:55 a: [1]
-t:56 a: ['orange']
-t:57 a: ['orange']
-t:58 a: [1]
-t:59 a: [1]
-t:60 a: [0]
-t:61 a: ['orange']
-t:62 a: ['orange']
-t:63 a: [1]
-t:64 a: ['orange']
-t:65 a: ['orange']
-t:66 a: [0]
-t:67 a: ['orange']
-t:68 a: ['orange']
-t:69 a: [1]
-t:70 a: ['orange']
-t:71 a: ['orange']
-t:72 a: [1]
-t:73 a: [1]
-t:74 a: [1]
-t:75 a: [0]
-t:76 a: ['orange']
-t:77 a: ['orange']
-t:78 a: [1]
-t:79 a: ['orange']
-t:80 a: ['orange']
-t:81 a: [1]
-t:82 a: [0]
-t:83 a: ['orange']
-t:84 a: ['orange']
-t:85 a: [1]
-t:86 a: ['orange']
-t:87 a: ['orange']
-t:88 a: [0]
-t:89 a: ['orange']
-435.83
-t:0 a: [0]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 0 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 1, aktualna faza: orange
-t:1 a: [0]
-t:2 a: [0]
-t:3 a: [1]
-t:4 a: ['orange']
-t:5 a: ['orange']
-t:6 a: [1]
-t:7 a: [1]
-t:8 a: [0]
-t:9 a: ['orange']
-t:10 a: ['orange']
-t:11 a: [1]
-t:12 a: ['orange']
-t:13 a: ['orange']
-t:14 a: [1]
-t:15 a: [1]
-t:16 a: [1]
-t:17 a: [1]
-t:18 a: [0]
-t:19 a: ['orange']
-t:20 a: ['orange']
-t:21 a: [1]
-t:22 a: ['orange']
-t:23 a: ['orange']
-t:24 a: [1]
-t:25 a: [1]
-t:26 a: [0]
-t:27 a: ['orange']
-t:28 a: ['orange']
-t:29 a: [1]
-t:30 a: ['orange']
-t:31 a: ['orange']
-t:32 a: [0]
-t:33 a: ['orange']
-t:34 a: ['orange']
-t:35 a: [1]
-t:36 a: ['orange']
-t:37 a: ['orange']
-t:38 a: [0]
-t:39 a: ['orange']
-t:40 a: ['orange']
-t:41 a: [1]
-t:42 a: ['orange']
-t:43 a: ['orange']
-t:44 a: [0]
-t:45 a: ['orange']
-t:46 a: ['orange']
-t:47 a: [1]
-t:48 a: ['orange']
-t:49 a: ['orange']
-t:50 a: [0]
-t:51 a: ['orange']
-t:52 a: ['orange']
-t:53 a: [1]
-t:54 a: ['orange']
-t:55 a: ['orange']
-t:56 a: [0]
-t:57 a: ['orange']
-t:58 a: ['orange']
-t:59 a: [0]
-t:60 a: [1]
-t:61 a: ['orange']
-t:62 a: ['orange']
-t:63 a: [1]
-t:64 a: [0]
-t:65 a: ['orange']
-t:66 a: ['orange']
-t:67 a: [1]
-t:68 a: ['orange']
-t:69 a: ['orange']
-t:70 a: [1]
-t:71 a: [0]
-t:72 a: ['orange']
-t:73 a: ['orange']
-t:74 a: [1]
-t:75 a: ['orange']
-t:76 a: ['orange']
-t:77 a: [0]
-t:78 a: ['orange']
-t:79 a: ['orange']
-t:80 a: [0]
-t:81 a: [0]
-t:82 a: [1]
-t:83 a: ['orange']
-t:84 a: ['orange']
-t:85 a: [1]
-t:86 a: [1]
-t:87 a: [1]
-t:88 a: [0]
-t:89 a: ['orange']
-396.781
-t:0 a: [0]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 0 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 1, aktualna faza: orange
-t:1 a: [0]
-t:2 a: [0]
-t:3 a: [0]
-t:4 a: [1]
-t:5 a: ['orange']
-t:6 a: ['orange']
-t:7 a: [0]
-t:8 a: ['orange']
-t:9 a: ['orange']
-t:10 a: [0]
-t:11 a: [1]
-t:12 a: ['orange']
-t:13 a: ['orange']
-t:14 a: [0]
-t:15 a: ['orange']
-t:16 a: ['orange']
-t:17 a: [1]
-t:18 a: ['orange']
-t:19 a: ['orange']
-t:20 a: [1]
-t:21 a: [0]
-t:22 a: ['orange']
-t:23 a: ['orange']
-t:24 a: [0]
-t:25 a: [0]
-t:26 a: [0]
-t:27 a: [1]
-t:28 a: ['orange']
-t:29 a: ['orange']
-t:30 a: [0]
-t:31 a: ['orange']
-t:32 a: ['orange']
-t:33 a: [1]
-t:34 a: ['orange']
-t:35 a: ['orange']
-t:36 a: [0]
-t:37 a: ['orange']
-t:38 a: ['orange']
-t:39 a: [1]
-t:40 a: ['orange']
-t:41 a: ['orange']
-t:42 a: [0]
-t:43 a: ['orange']
-t:44 a: ['orange']
-t:45 a: [0]
-t:46 a: [0]
-t:47 a: [1]
-t:48 a: ['orange']
-t:49 a: ['orange']
-t:50 a: [1]
-t:51 a: [0]
-t:52 a: ['orange']
-t:53 a: ['orange']
-t:54 a: [1]
-t:55 a: ['orange']
-t:56 a: ['orange']
-t:57 a: [0]
-t:58 a: ['orange']
-t:59 a: ['orange']
-t:60 a: [0]
-t:61 a: [1]
-t:62 a: ['orange']
-t:63 a: ['orange']
-t:64 a: [0]
-t:65 a: ['orange']
-t:66 a: ['orange']
-t:67 a: [0]
-t:68 a: [0]
-t:69 a: [0]
-t:70 a: [0]
-t:71 a: [0]
-t:72 a: [1]
-t:73 a: ['orange']
-t:74 a: ['orange']
-t:75 a: [0]
-t:76 a: ['orange']
-t:77 a: ['orange']
-t:78 a: [1]
-t:79 a: ['orange']
-t:80 a: ['orange']
-t:81 a: [0]
-t:82 a: ['orange']
-t:83 a: ['orange']
-t:84 a: [0]
-t:85 a: [1]
-t:86 a: ['orange']
-t:87 a: ['orange']
-t:88 a: [1]
-t:89 a: [0]
-406.1
-t:0 a: [1]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 1 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 0, aktualna faza: orange
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [1]
-t:4 a: [0]
-t:5 a: ['orange']
-t:6 a: ['orange']
-t:7 a: [0]
-t:8 a: [1]
-t:9 a: ['orange']
-t:10 a: ['orange']
-t:11 a: [1]
-t:12 a: [0]
-t:13 a: ['orange']
-t:14 a: ['orange']
-t:15 a: [1]
-t:16 a: ['orange']
-t:17 a: ['orange']
-t:18 a: [0]
-t:19 a: ['orange']
-t:20 a: ['orange']
-t:21 a: [0]
-t:22 a: [0]
-t:23 a: [1]
-t:24 a: ['orange']
-t:25 a: ['orange']
-t:26 a: [0]
-t:27 a: ['orange']
-t:28 a: ['orange']
-t:29 a: [0]
-t:30 a: [0]
-t:31 a: [1]
-t:32 a: ['orange']
-t:33 a: ['orange']
-t:34 a: [1]
-t:35 a: [0]
-t:36 a: ['orange']
-t:37 a: ['orange']
-t:38 a: [0]
-t:39 a: [0]
-t:40 a: [0]
-t:41 a: [0]
-t:42 a: [1]
-t:43 a: ['orange']
-t:44 a: ['orange']
-t:45 a: [0]
-t:46 a: ['orange']
-t:47 a: ['orange']
-t:48 a: [1]
-t:49 a: ['orange']
-t:50 a: ['orange']
-t:51 a: [1]
-t:52 a: [0]
-t:53 a: ['orange']
-t:54 a: ['orange']
-t:55 a: [0]
-t:56 a: [1]
-t:57 a: ['orange']
-t:58 a: ['orange']
-t:59 a: [1]
-t:60 a: [1]
-t:61 a: [1]
-t:62 a: [0]
-t:63 a: ['orange']
-t:64 a: ['orange']
-t:65 a: [0]
-t:66 a: [1]
-t:67 a: ['orange']
-t:68 a: ['orange']
-t:69 a: [1]
-t:70 a: [0]
-t:71 a: ['orange']
-t:72 a: ['orange']
-t:73 a: [1]
-t:74 a: ['orange']
-t:75 a: ['orange']
-t:76 a: [0]
-t:77 a: ['orange']
-t:78 a: ['orange']
-t:79 a: [0]
-t:80 a: [0]
-t:81 a: [0]
-t:82 a: [0]
-t:83 a: [0]
-t:84 a: [1]
-t:85 a: ['orange']
-t:86 a: ['orange']
-t:87 a: [1]
-t:88 a: [1]
-t:89 a: [0]
-458.1
-t:0 a: [0]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 0 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 0, aktualna faza: orange
-t:1 a: ['orange']
-t:2 a: [1]
-t:3 a: ['orange']
-t:4 a: ['orange']
-t:5 a: [1]
-t:6 a: [0]
-t:7 a: ['orange']
-t:8 a: ['orange']
-t:9 a: [0]
-t:10 a: [1]
-t:11 a: ['orange']
-t:12 a: ['orange']
-t:13 a: [0]
-t:14 a: ['orange']
-t:15 a: ['orange']
-t:16 a: [1]
-t:17 a: ['orange']
-t:18 a: ['orange']
-t:19 a: [0]
-t:20 a: ['orange']
-t:21 a: ['orange']
-t:22 a: [0]
-t:23 a: [0]
-t:24 a: [1]
-t:25 a: ['orange']
-t:26 a: ['orange']
-t:27 a: [0]
-t:28 a: ['orange']
-t:29 a: ['orange']
-t:30 a: [1]
-t:31 a: ['orange']
-t:32 a: ['orange']
-t:33 a: [0]
-t:34 a: ['orange']
-t:35 a: ['orange']
-t:36 a: [1]
-t:37 a: ['orange']
-t:38 a: ['orange']
-t:39 a: [0]
-t:40 a: ['orange']
-t:41 a: ['orange']
-t:42 a: [1]
-t:43 a: ['orange']
-t:44 a: ['orange']
-t:45 a: [1]
-t:46 a: [0]
-t:47 a: ['orange']
-t:48 a: ['orange']
-t:49 a: [0]
-t:50 a: [0]
-t:51 a: [0]
-t:52 a: [1]
-t:53 a: ['orange']
-t:54 a: ['orange']
-t:55 a: [0]
-t:56 a: ['orange']
-t:57 a: ['orange']
-t:58 a: [1]
-t:59 a: ['orange']
-t:60 a: ['orange']
-t:61 a: [1]
-t:62 a: [0]
-t:63 a: ['orange']
-t:64 a: ['orange']
-t:65 a: [1]
-t:66 a: ['orange']
-t:67 a: ['orange']
-t:68 a: [1]
-t:69 a: [1]
-t:70 a: [0]
-t:71 a: ['orange']
-t:72 a: ['orange']
-t:73 a: [0]
-t:74 a: [0]
-t:75 a: [0]
-t:76 a: [1]
-t:77 a: ['orange']
-t:78 a: ['orange']
-t:79 a: [1]
-t:80 a: [0]
-t:81 a: ['orange']
-t:82 a: ['orange']
-t:83 a: [0]
-t:84 a: [1]
-t:85 a: ['orange']
-t:86 a: ['orange']
-t:87 a: [0]
-t:88 a: ['orange']
-t:89 a: ['orange']
-388.3
-t:0 a: [0]
-t:1 a: [1]
-t:2 a: ['orange']
-t:3 a: ['orange']
-t:4 a: [0]
-t:5 a: ['orange']
-t:6 a: ['orange']
-t:7 a: [1]
-t:8 a: ['orange']
-t:9 a: ['orange']
-t:10 a: [1]
-t:11 a: [1]
-t:12 a: [1]
-t:13 a: [0]
-t:14 a: ['orange']
-t:15 a: ['orange']
-t:16 a: [1]
-t:17 a: ['orange']
-t:18 a: ['orange']
-t:19 a: [0]
-t:20 a: ['orange']
-t:21 a: ['orange']
-t:22 a: [0]
-t:23 a: [1]
-t:24 a: ['orange']
-t:25 a: ['orange']
-t:26 a: [0]
-t:27 a: ['orange']
-t:28 a: ['orange']
-t:29 a: [1]
-t:30 a: ['orange']
-t:31 a: ['orange']
-t:32 a: [1]
-t:33 a: [0]
-t:34 a: ['orange']
-t:35 a: ['orange']
-t:36 a: [0]
-t:37 a: [1]
-t:38 a: ['orange']
-t:39 a: ['orange']
-t:40 a: [1]
-t:41 a: [0]
-t:42 a: ['orange']
-t:43 a: ['orange']
-t:44 a: [0]
-t:45 a: [1]
-t:46 a: ['orange']
-t:47 a: ['orange']
-t:48 a: [1]
-t:49 a: [1]
-t:50 a: [0]
-t:51 a: ['orange']
-t:52 a: ['orange']
-t:53 a: [1]
-t:54 a: ['orange']
-t:55 a: ['orange']
-t:56 a: [1]
-t:57 a: [0]
-t:58 a: ['orange']
-t:59 a: ['orange']
-t:60 a: [1]
-t:61 a: ['orange']
-t:62 a: ['orange']
-t:63 a: [1]
-t:64 a: [1]
-t:65 a: [1]
-t:66 a: [1]
-t:67 a: [0]
-t:68 a: ['orange']
-t:69 a: ['orange']
-t:70 a: [1]
-t:71 a: ['orange']
-t:72 a: ['orange']
-t:73 a: [0]
-t:74 a: ['orange']
-t:75 a: ['orange']
-t:76 a: [1]
-t:77 a: ['orange']
-t:78 a: ['orange']
-t:79 a: [0]
-t:80 a: ['orange']
-t:81 a: ['orange']
-t:82 a: [1]
-t:83 a: ['orange']
-t:84 a: ['orange']
-t:85 a: [0]
-t:86 a: ['orange']
-t:87 a: ['orange']
-t:88 a: [1]
-t:89 a: ['orange']
-386.0
-t:0 a: [0]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 0 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 1, aktualna faza: orange
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [0]
-t:4 a: [0]
-t:5 a: [0]
-t:6 a: [0]
-t:7 a: [1]
-t:8 a: ['orange']
-t:9 a: ['orange']
-t:10 a: [1]
-t:11 a: [0]
-t:12 a: ['orange']
-t:13 a: ['orange']
-t:14 a: [0]
-t:15 a: [1]
-t:16 a: ['orange']
-t:17 a: ['orange']
-t:18 a: [0]
-t:19 a: ['orange']
-t:20 a: ['orange']
-t:21 a: [0]
-t:22 a: [1]
-t:23 a: ['orange']
-t:24 a: ['orange']
-t:25 a: [1]
-t:26 a: [0]
-t:27 a: ['orange']
-t:28 a: ['orange']
-t:29 a: [1]
-t:30 a: ['orange']
-t:31 a: ['orange']
-t:32 a: [0]
-t:33 a: ['orange']
-t:34 a: ['orange']
-t:35 a: [1]
-t:36 a: ['orange']
-t:37 a: ['orange']
-t:38 a: [1]
-t:39 a: [1]
-t:40 a: [0]
-t:41 a: ['orange']
-t:42 a: ['orange']
-t:43 a: [1]
-t:44 a: ['orange']
-t:45 a: ['orange']
-t:46 a: [1]
-t:47 a: [1]
-t:48 a: [0]
-t:49 a: ['orange']
-t:50 a: ['orange']
-t:51 a: [1]
-t:52 a: ['orange']
-t:53 a: ['orange']
-t:54 a: [0]
-t:55 a: ['orange']
-t:56 a: ['orange']
-t:57 a: [0]
-t:58 a: [1]
-t:59 a: ['orange']
-t:60 a: ['orange']
-t:61 a: [1]
-t:62 a: [0]
-t:63 a: ['orange']
-t:64 a: ['orange']
-t:65 a: [1]
-t:66 a: ['orange']
-t:67 a: ['orange']
-t:68 a: [0]
-t:69 a: ['orange']
-t:70 a: ['orange']
-t:71 a: [1]
-t:72 a: ['orange']
-t:73 a: ['orange']
-t:74 a: [1]
-t:75 a: [0]
-t:76 a: ['orange']
-t:77 a: ['orange']
-t:78 a: [1]
-t:79 a: ['orange']
-t:80 a: ['orange']
-t:81 a: [1]
-t:82 a: [0]
-t:83 a: ['orange']
-t:84 a: ['orange']
-t:85 a: [1]
-t:86 a: ['orange']
-t:87 a: ['orange']
-t:88 a: [1]
-t:89 a: [0]
-405.7247
-t:0 a: [1]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 1 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 0, aktualna faza: orange
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [1]
-t:4 a: [1]
-t:5 a: [0]
-t:6 a: ['orange']
-t:7 a: ['orange']
-t:8 a: [0]
-t:9 a: [0]
-t:10 a: [0]
-t:11 a: [0]
-t:12 a: [1]
-t:13 a: ['orange']
-t:14 a: ['orange']
-t:15 a: [0]
-t:16 a: ['orange']
-t:17 a: ['orange']
-t:18 a: [0]
-t:19 a: [1]
-t:20 a: ['orange']
-t:21 a: ['orange']
-t:22 a: [1]
-t:23 a: [1]
-t:24 a: [0]
-t:25 a: ['orange']
-t:26 a: ['orange']
-t:27 a: [1]
-t:28 a: ['orange']
-t:29 a: ['orange']
-t:30 a: [0]
-t:31 a: ['orange']
-t:32 a: ['orange']
-t:33 a: [1]
-t:34 a: ['orange']
-t:35 a: ['orange']
-t:36 a: [0]
-t:37 a: ['orange']
-t:38 a: ['orange']
-t:39 a: [0]
-t:40 a: [1]
-t:41 a: ['orange']
-t:42 a: ['orange']
-t:43 a: [1]
-t:44 a: [0]
-t:45 a: ['orange']
-t:46 a: ['orange']
-t:47 a: [0]
-t:48 a: [1]
-t:49 a: ['orange']
-t:50 a: ['orange']
-t:51 a: [0]
-t:52 a: ['orange']
-t:53 a: ['orange']
-t:54 a: [1]
-t:55 a: ['orange']
-t:56 a: ['orange']
-t:57 a: [1]
-t:58 a: [1]
-t:59 a: [0]
-t:60 a: ['orange']
-t:61 a: ['orange']
-t:62 a: [1]
-t:63 a: ['orange']
-t:64 a: ['orange']
-t:65 a: [1]
-t:66 a: [1]
-t:67 a: [0]
-t:68 a: ['orange']
-t:69 a: ['orange']
-t:70 a: [0]
-t:71 a: [1]
-t:72 a: ['orange']
-t:73 a: ['orange']
-t:74 a: [1]
-t:75 a: [1]
-t:76 a: [1]
-t:77 a: [1]
-t:78 a: [1]
-t:79 a: [0]
-t:80 a: ['orange']
-t:81 a: ['orange']
-t:82 a: [0]
-t:83 a: [1]
-t:84 a: ['orange']
-t:85 a: ['orange']
-t:86 a: [1]
-t:87 a: [1]
-t:88 a: [0]
-t:89 a: ['orange']
-444.67
-t:0 a: [1]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 1 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 1, aktualna faza: orange
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [0]
-t:4 a: ['orange']
-t:5 a: ['orange']
-t:6 a: [1]
-t:7 a: ['orange']
-t:8 a: ['orange']
-t:9 a: [0]
-t:10 a: ['orange']
-t:11 a: ['orange']
-t:12 a: [1]
-t:13 a: ['orange']
-t:14 a: ['orange']
-t:15 a: [1]
-t:16 a: [1]
-t:17 a: [1]
-t:18 a: [0]
-t:19 a: ['orange']
-t:20 a: ['orange']
-t:21 a: [0]
-t:22 a: [1]
-t:23 a: ['orange']
-t:24 a: ['orange']
-t:25 a: [1]
-t:26 a: [0]
-t:27 a: ['orange']
-t:28 a: ['orange']
-t:29 a: [0]
-t:30 a: [0]
-t:31 a: [0]
-t:32 a: [0]
-t:33 a: [1]
-t:34 a: ['orange']
-t:35 a: ['orange']
-t:36 a: [0]
-t:37 a: ['orange']
-t:38 a: ['orange']
-t:39 a: [1]
-t:40 a: ['orange']
-t:41 a: ['orange']
-t:42 a: [1]
-t:43 a: [0]
-t:44 a: ['orange']
-t:45 a: ['orange']
-t:46 a: [0]
-t:47 a: [1]
-t:48 a: ['orange']
-t:49 a: ['orange']
-t:50 a: [0]
-t:51 a: ['orange']
-t:52 a: ['orange']
-t:53 a: [0]
-t:54 a: [0]
-t:55 a: [1]
-t:56 a: ['orange']
-t:57 a: ['orange']
-t:58 a: [0]
-t:59 a: ['orange']
-t:60 a: ['orange']
-t:61 a: [0]
-t:62 a: [1]
-t:63 a: ['orange']
-t:64 a: ['orange']
-t:65 a: [0]
-t:66 a: ['orange']
-t:67 a: ['orange']
-t:68 a: [1]
-t:69 a: ['orange']
-t:70 a: ['orange']
-t:71 a: [0]
-t:72 a: ['orange']
-t:73 a: ['orange']
-t:74 a: [0]
-t:75 a: [1]
-t:76 a: ['orange']
-t:77 a: ['orange']
-t:78 a: [0]
-t:79 a: ['orange']
-t:80 a: ['orange']
-t:81 a: [0]
-t:82 a: [0]
-t:83 a: [0]
-t:84 a: [1]
-t:85 a: ['orange']
-t:86 a: ['orange']
-t:87 a: [0]
-t:88 a: ['orange']
-t:89 a: ['orange']
-403.0
-t:0 a: [0]
-t:1 a: [0]
-t:2 a: [1]
-t:3 a: ['orange']
-t:4 a: ['orange']
-t:5 a: [0]
-t:6 a: ['orange']
-t:7 a: ['orange']
-t:8 a: [1]
-t:9 a: ['orange']
-t:10 a: ['orange']
-t:11 a: [0]
-t:12 a: ['orange']
-t:13 a: ['orange']
-t:14 a: [0]
-t:15 a: [1]
-t:16 a: ['orange']
-t:17 a: ['orange']
-t:18 a: [0]
-t:19 a: ['orange']
-t:20 a: ['orange']
-t:21 a: [0]
-t:22 a: [0]
-t:23 a: [1]
-t:24 a: ['orange']
-t:25 a: ['orange']
-t:26 a: [0]
-t:27 a: ['orange']
-t:28 a: ['orange']
-t:29 a: [0]
-t:30 a: [1]
-t:31 a: ['orange']
-t:32 a: ['orange']
-t:33 a: [1]
-t:34 a: [1]
-t:35 a: [1]
-t:36 a: [0]
-t:37 a: ['orange']
-t:38 a: ['orange']
-t:39 a: [0]
-t:40 a: [1]
-t:41 a: ['orange']
-t:42 a: ['orange']
-t:43 a: [0]
-t:44 a: ['orange']
-t:45 a: ['orange']
-t:46 a: [1]
-t:47 a: ['orange']
-t:48 a: ['orange']
-t:49 a: [0]
-t:50 a: ['orange']
-t:51 a: ['orange']
-t:52 a: [1]
-t:53 a: ['orange']
-t:54 a: ['orange']
-t:55 a: [0]
-t:56 a: ['orange']
-t:57 a: ['orange']
-t:58 a: [0]
-t:59 a: [0]
-t:60 a: [0]
-t:61 a: [0]
-t:62 a: [1]
-t:63 a: ['orange']
-t:64 a: ['orange']
-t:65 a: [1]
-t:66 a: [0]
-t:67 a: ['orange']
-t:68 a: ['orange']
-t:69 a: [1]
-t:70 a: ['orange']
-t:71 a: ['orange']
-t:72 a: [0]
-t:73 a: ['orange']
-t:74 a: ['orange']
-t:75 a: [1]
-t:76 a: ['orange']
-t:77 a: ['orange']
-t:78 a: [0]
-t:79 a: ['orange']
-t:80 a: ['orange']
-t:81 a: [1]
-t:82 a: ['orange']
-t:83 a: ['orange']
-t:84 a: [0]
-t:85 a: ['orange']
-t:86 a: ['orange']
-t:87 a: [0]
-t:88 a: [1]
-t:89 a: ['orange']
-379.0
-t:0 a: [0]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 0 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 1, aktualna faza: orange
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [1]
-t:4 a: ['orange']
-t:5 a: ['orange']
-t:6 a: [0]
-t:7 a: ['orange']
-t:8 a: ['orange']
-t:9 a: [1]
-t:10 a: ['orange']
-t:11 a: ['orange']
-t:12 a: [1]
-t:13 a: [1]
-t:14 a: [1]
-t:15 a: [0]
-t:16 a: ['orange']
-t:17 a: ['orange']
-t:18 a: [1]
-t:19 a: ['orange']
-t:20 a: ['orange']
-t:21 a: [0]
-t:22 a: ['orange']
-t:23 a: ['orange']
-t:24 a: [1]
-t:25 a: ['orange']
-t:26 a: ['orange']
-t:27 a: [1]
-t:28 a: [1]
-t:29 a: [0]
-t:30 a: ['orange']
-t:31 a: ['orange']
-t:32 a: [0]
-t:33 a: [0]
-t:34 a: [0]
-t:35 a: [1]
-t:36 a: ['orange']
-t:37 a: ['orange']
-t:38 a: [0]
-t:39 a: ['orange']
-t:40 a: ['orange']
-t:41 a: [1]
-t:42 a: ['orange']
-t:43 a: ['orange']
-t:44 a: [0]
-t:45 a: ['orange']
-t:46 a: ['orange']
-t:47 a: [1]
-t:48 a: ['orange']
-t:49 a: ['orange']
-t:50 a: [1]
-t:51 a: [0]
-t:52 a: ['orange']
-t:53 a: ['orange']
-t:54 a: [1]
-t:55 a: ['orange']
-t:56 a: ['orange']
-t:57 a: [1]
-t:58 a: [0]
-t:59 a: ['orange']
-t:60 a: ['orange']
-t:61 a: [1]
-t:62 a: ['orange']
-t:63 a: ['orange']
-t:64 a: [0]
-t:65 a: ['orange']
-t:66 a: ['orange']
-t:67 a: [0]
-t:68 a: [0]
-t:69 a: [1]
-t:70 a: ['orange']
-t:71 a: ['orange']
-t:72 a: [0]
-t:73 a: ['orange']
-t:74 a: ['orange']
-t:75 a: [1]
-t:76 a: ['orange']
-t:77 a: ['orange']
-t:78 a: [0]
-t:79 a: ['orange']
-t:80 a: ['orange']
-t:81 a: [1]
-t:82 a: ['orange']
-t:83 a: ['orange']
-t:84 a: [0]
-t:85 a: ['orange']
-t:86 a: ['orange']
-t:87 a: [1]
-t:88 a: ['orange']
-t:89 a: ['orange']
-366.9
-t:0 a: [0]
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [1]
-t:4 a: ['orange']
-t:5 a: ['orange']
-t:6 a: [1]
-t:7 a: [0]
-t:8 a: ['orange']
-t:9 a: ['orange']
-t:10 a: [1]
-t:11 a: ['orange']
-t:12 a: ['orange']
-t:13 a: [1]
-t:14 a: [0]
-t:15 a: ['orange']
-t:16 a: ['orange']
-t:17 a: [1]
-t:18 a: ['orange']
-t:19 a: ['orange']
-t:20 a: [0]
-t:21 a: ['orange']
-t:22 a: ['orange']
-t:23 a: [1]
-t:24 a: ['orange']
-t:25 a: ['orange']
-t:26 a: [1]
-t:27 a: [0]
-t:28 a: ['orange']
-t:29 a: ['orange']
-t:30 a: [1]
-t:31 a: ['orange']
-t:32 a: ['orange']
-t:33 a: [0]
-t:34 a: ['orange']
-t:35 a: ['orange']
-t:36 a: [0]
-t:37 a: [0]
-t:38 a: [0]
-t:39 a: [1]
-t:40 a: ['orange']
-t:41 a: ['orange']
-t:42 a: [0]
-t:43 a: ['orange']
-t:44 a: ['orange']
-t:45 a: [0]
-t:46 a: [1]
-t:47 a: ['orange']
-t:48 a: ['orange']
-t:49 a: [1]
-t:50 a: [0]
-t:51 a: ['orange']
-t:52 a: ['orange']
-t:53 a: [0]
-t:54 a: [0]
-t:55 a: [1]
-t:56 a: ['orange']
-t:57 a: ['orange']
-t:58 a: [0]
-t:59 a: ['orange']
-t:60 a: ['orange']
-t:61 a: [1]
-t:62 a: ['orange']
-t:63 a: ['orange']
-t:64 a: [1]
-t:65 a: [1]
-t:66 a: [0]
-t:67 a: ['orange']
-t:68 a: ['orange']
-t:69 a: [1]
-t:70 a: ['orange']
-t:71 a: ['orange']
-t:72 a: [0]
-t:73 a: ['orange']
-t:74 a: ['orange']
-t:75 a: [0]
-t:76 a: [1]
-t:77 a: ['orange']
-t:78 a: ['orange']
-t:79 a: [0]
-t:80 a: ['orange']
-t:81 a: ['orange']
-t:82 a: [0]
-t:83 a: [0]
-t:84 a: [1]
-t:85 a: ['orange']
-t:86 a: ['orange']
-t:87 a: [0]
-t:88 a: ['orange']
-t:89 a: ['orange']
-386.83
-t:0 a: [0]
-t:1 a: [1]
-t:2 a: ['orange']
-t:3 a: ['orange']
-t:4 a: [0]
-t:5 a: ['orange']
-t:6 a: ['orange']
-t:7 a: [0]
-t:8 a: [0]
-t:9 a: [0]
-t:10 a: [0]
-t:11 a: [1]
-t:12 a: ['orange']
-t:13 a: ['orange']
-t:14 a: [0]
-t:15 a: ['orange']
-t:16 a: ['orange']
-t:17 a: [0]
-t:18 a: [1]
-t:19 a: ['orange']
-t:20 a: ['orange']
-t:21 a: [1]
-t:22 a: [1]
-t:23 a: [1]
-t:24 a: [0]
-t:25 a: ['orange']
-t:26 a: ['orange']
-t:27 a: [0]
-t:28 a: [1]
-t:29 a: ['orange']
-t:30 a: ['orange']
-t:31 a: [1]
-t:32 a: [0]
-t:33 a: ['orange']
-t:34 a: ['orange']
-t:35 a: [1]
-t:36 a: ['orange']
-t:37 a: ['orange']
-t:38 a: [0]
-t:39 a: ['orange']
-t:40 a: ['orange']
-t:41 a: [0]
-t:42 a: [1]
-t:43 a: ['orange']
-t:44 a: ['orange']
-t:45 a: [1]
-t:46 a: [1]
-t:47 a: [0]
-t:48 a: ['orange']
-t:49 a: ['orange']
-t:50 a: [1]
-t:51 a: ['orange']
-t:52 a: ['orange']
-t:53 a: [1]
-t:54 a: [1]
-t:55 a: [0]
-t:56 a: ['orange']
-t:57 a: ['orange']
-t:58 a: [1]
-t:59 a: ['orange']
-t:60 a: ['orange']
-t:61 a: [0]
-t:62 a: ['orange']
-t:63 a: ['orange']
-t:64 a: [1]
-t:65 a: ['orange']
-t:66 a: ['orange']
-t:67 a: [0]
-t:68 a: ['orange']
-t:69 a: ['orange']
-t:70 a: [1]
-t:71 a: ['orange']
-t:72 a: ['orange']
-t:73 a: [1]
-t:74 a: [1]
-t:75 a: [1]
-t:76 a: [1]
-t:77 a: [0]
-t:78 a: ['orange']
-t:79 a: ['orange']
-t:80 a: [1]
-t:81 a: ['orange']
-t:82 a: ['orange']
-t:83 a: [1]
-t:84 a: [0]
-t:85 a: ['orange']
-t:86 a: ['orange']
-t:87 a: [1]
-t:88 a: ['orange']
-t:89 a: ['orange']
-416.0
-t:0 a: [1]
-t:1 a: [1]
-t:2 a: [0]
-t:3 a: ['orange']
-t:4 a: ['orange']
-t:5 a: [1]
-t:6 a: ['orange']
-t:7 a: ['orange']
-t:8 a: [1]
-t:9 a: [0]
-t:10 a: ['orange']
-t:11 a: ['orange']
-t:12 a: [1]
-t:13 a: ['orange']
-t:14 a: ['orange']
-t:15 a: [0]
-t:16 a: ['orange']
-t:17 a: ['orange']
-t:18 a: [1]
-t:19 a: ['orange']
-t:20 a: ['orange']
-t:21 a: [0]
-t:22 a: ['orange']
-t:23 a: ['orange']
-t:24 a: [1]
-t:25 a: ['orange']
-t:26 a: ['orange']
-t:27 a: [1]
-t:28 a: [0]
-t:29 a: ['orange']
-t:30 a: ['orange']
-t:31 a: [0]
-t:32 a: [0]
-t:33 a: [1]
-t:34 a: ['orange']
-t:35 a: ['orange']
-t:36 a: [0]
-t:37 a: ['orange']
-t:38 a: ['orange']
-t:39 a: [1]
-t:40 a: ['orange']
-t:41 a: ['orange']
-t:42 a: [1]
-t:43 a: [0]
-t:44 a: ['orange']
-t:45 a: ['orange']
-t:46 a: [1]
-t:47 a: ['orange']
-t:48 a: ['orange']
-t:49 a: [0]
-t:50 a: ['orange']
-t:51 a: ['orange']
-t:52 a: [1]
-t:53 a: ['orange']
-t:54 a: ['orange']
-t:55 a: [0]
-t:56 a: ['orange']
-t:57 a: ['orange']
-t:58 a: [0]
-t:59 a: [1]
-t:60 a: ['orange']
-t:61 a: ['orange']
-t:62 a: [1]
-t:63 a: [1]
-t:64 a: [1]
-t:65 a: [1]
-t:66 a: [0]
-t:67 a: ['orange']
-t:68 a: ['orange']
-t:69 a: [0]
-t:70 a: [1]
-t:71 a: ['orange']
-t:72 a: ['orange']
-t:73 a: [1]
-t:74 a: [1]
-t:75 a: [1]
-t:76 a: [0]
-t:77 a: ['orange']
-t:78 a: ['orange']
-t:79 a: [1]
-t:80 a: ['orange']
-t:81 a: ['orange']
-t:82 a: [1]
-t:83 a: [0]
-t:84 a: ['orange']
-t:85 a: ['orange']
-t:86 a: [1]
-t:87 a: ['orange']
-t:88 a: ['orange']
-t:89 a: [0]
-390.0
-t:0 a: [0]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 0 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 0, aktualna faza: orange
-t:1 a: ['orange']
-t:2 a: [1]
-t:3 a: ['orange']
-t:4 a: ['orange']
-t:5 a: [1]
-t:6 a: [0]
-t:7 a: ['orange']
-t:8 a: ['orange']
-t:9 a: [0]
-t:10 a: [0]
-t:11 a: [0]
-t:12 a: [0]
-t:13 a: [1]
-t:14 a: ['orange']
-t:15 a: ['orange']
-t:16 a: [1]
-t:17 a: [0]
-t:18 a: ['orange']
-t:19 a: ['orange']
-t:20 a: [1]
-t:21 a: ['orange']
-t:22 a: ['orange']
-t:23 a: [0]
-t:24 a: ['orange']
-t:25 a: ['orange']
-t:26 a: [1]
-t:27 a: ['orange']
-t:28 a: ['orange']
-t:29 a: [1]
-t:30 a: [1]
-t:31 a: [1]
-t:32 a: [1]
-t:33 a: [0]
-t:34 a: ['orange']
-t:35 a: ['orange']
-t:36 a: [0]
-t:37 a: [0]
-t:38 a: [1]
-t:39 a: ['orange']
-t:40 a: ['orange']
-t:41 a: [0]
-t:42 a: ['orange']
-t:43 a: ['orange']
-t:44 a: [0]
-t:45 a: [1]
-t:46 a: ['orange']
-t:47 a: ['orange']
-t:48 a: [0]
-t:49 a: ['orange']
-t:50 a: ['orange']
-t:51 a: [1]
-t:52 a: ['orange']
-t:53 a: ['orange']
-t:54 a: [0]
-t:55 a: ['orange']
-t:56 a: ['orange']
-t:57 a: [0]
-t:58 a: [0]
-t:59 a: [0]
-t:60 a: [0]
-t:61 a: [1]
-t:62 a: ['orange']
-t:63 a: ['orange']
-t:64 a: [0]
-t:65 a: ['orange']
-t:66 a: ['orange']
-t:67 a: [1]
-t:68 a: ['orange']
-t:69 a: ['orange']
-t:70 a: [0]
-t:71 a: ['orange']
-t:72 a: ['orange']
-t:73 a: [1]
-t:74 a: ['orange']
-t:75 a: ['orange']
-t:76 a: [1]
-t:77 a: [0]
-t:78 a: ['orange']
-t:79 a: ['orange']
-t:80 a: [0]
-t:81 a: [1]
-t:82 a: ['orange']
-t:83 a: ['orange']
-t:84 a: [1]
-t:85 a: [0]
-t:86 a: ['orange']
-t:87 a: ['orange']
-t:88 a: [1]
-t:89 a: ['orange']
-418.3
-t:0 a: [1]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 1 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 1, aktualna faza: orange
-t:1 a: [0]
-t:2 a: ['orange']
-t:3 a: ['orange']
-t:4 a: [0]
-t:5 a: [0]
-t:6 a: [0]
-t:7 a: [1]
-t:8 a: ['orange']
-t:9 a: ['orange']
-t:10 a: [0]
-t:11 a: ['orange']
-t:12 a: ['orange']
-t:13 a: [0]
-t:14 a: [0]
-t:15 a: [0]
-t:16 a: [1]
-t:17 a: ['orange']
-t:18 a: ['orange']
-t:19 a: [0]
-t:20 a: ['orange']
-t:21 a: ['orange']
-t:22 a: [0]
-t:23 a: [0]
-t:24 a: [1]
-t:25 a: ['orange']
-t:26 a: ['orange']
-t:27 a: [1]
-t:28 a: [0]
-t:29 a: ['orange']
-t:30 a: ['orange']
-t:31 a: [0]
-t:32 a: [0]
-t:33 a: [0]
-t:34 a: [0]
-t:35 a: [0]
-t:36 a: [0]
-t:37 a: [1]
-t:38 a: ['orange']
-t:39 a: ['orange']
-t:40 a: [0]
-t:41 a: ['orange']
-t:42 a: ['orange']
-t:43 a: [0]
-t:44 a: [1]
-t:45 a: ['orange']
-t:46 a: ['orange']
-t:47 a: [0]
-t:48 a: ['orange']
-t:49 a: ['orange']
-t:50 a: [1]
-t:51 a: ['orange']
-t:52 a: ['orange']
-t:53 a: [1]
-t:54 a: [1]
-t:55 a: [0]
-t:56 a: ['orange']
-t:57 a: ['orange']
-t:58 a: [1]
-t:59 a: ['orange']
-t:60 a: ['orange']
-t:61 a: [0]
-t:62 a: ['orange']
-t:63 a: ['orange']
-t:64 a: [1]
-t:65 a: ['orange']
-t:66 a: ['orange']
-t:67 a: [1]
-t:68 a: [0]
-t:69 a: ['orange']
-t:70 a: ['orange']
-t:71 a: [1]
-t:72 a: ['orange']
-t:73 a: ['orange']
-t:74 a: [0]
-t:75 a: ['orange']
-t:76 a: ['orange']
-t:77 a: [0]
-t:78 a: [0]
-t:79 a: [1]
-t:80 a: ['orange']
-t:81 a: ['orange']
-t:82 a: [1]
-t:83 a: [1]
-t:84 a: [1]
-t:85 a: [0]
-t:86 a: ['orange']
-t:87 a: ['orange']
-t:88 a: [1]
-t:89 a: ['orange']
-450.0
-t:0 a: [0]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 0 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 1, aktualna faza: orange
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [0]
-t:4 a: [0]
-t:5 a: [0]
-t:6 a: [0]
-t:7 a: [0]
-t:8 a: [1]
-t:9 a: ['orange']
-t:10 a: ['orange']
-t:11 a: [0]
-t:12 a: ['orange']
-t:13 a: ['orange']
-t:14 a: [1]
-t:15 a: ['orange']
-t:16 a: ['orange']
-t:17 a: [0]
-t:18 a: ['orange']
-t:19 a: ['orange']
-t:20 a: [0]
-t:21 a: [1]
-t:22 a: ['orange']
-t:23 a: ['orange']
-t:24 a: [0]
-t:25 a: ['orange']
-t:26 a: ['orange']
-t:27 a: [1]
-t:28 a: ['orange']
-t:29 a: ['orange']
-t:30 a: [0]
-t:31 a: ['orange']
-t:32 a: ['orange']
-t:33 a: [1]
-t:34 a: ['orange']
-t:35 a: ['orange']
-t:36 a: [0]
-t:37 a: ['orange']
-t:38 a: ['orange']
-t:39 a: [1]
-t:40 a: ['orange']
-t:41 a: ['orange']
-t:42 a: [1]
-t:43 a: [1]
-t:44 a: [0]
-t:45 a: ['orange']
-t:46 a: ['orange']
-t:47 a: [1]
-t:48 a: ['orange']
-t:49 a: ['orange']
-t:50 a: [0]
-t:51 a: ['orange']
-t:52 a: ['orange']
-t:53 a: [1]
-t:54 a: ['orange']
-t:55 a: ['orange']
-t:56 a: [1]
-t:57 a: [1]
-t:58 a: [0]
-t:59 a: ['orange']
-t:60 a: ['orange']
-t:61 a: [0]
-t:62 a: [0]
-t:63 a: [0]
-t:64 a: [0]
-t:65 a: [0]
-t:66 a: [0]
-t:67 a: [0]
-t:68 a: [0]
-t:69 a: [1]
-t:70 a: ['orange']
-t:71 a: ['orange']
-t:72 a: [0]
-t:73 a: ['orange']
-t:74 a: ['orange']
-t:75 a: [1]
-t:76 a: ['orange']
-t:77 a: ['orange']
-t:78 a: [1]
-t:79 a: [1]
-t:80 a: [0]
-t:81 a: ['orange']
-t:82 a: ['orange']
-t:83 a: [0]
-t:84 a: [1]
-t:85 a: ['orange']
-t:86 a: ['orange']
-t:87 a: [1]
-t:88 a: [1]
-t:89 a: [0]
-445.71741
-t:0 a: [1]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 1 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 0, aktualna faza: orange
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [0]
-t:4 a: ['orange']
-t:5 a: ['orange']
-t:6 a: [1]
-t:7 a: ['orange']
-t:8 a: ['orange']
-t:9 a: [0]
-t:10 a: ['orange']
-t:11 a: ['orange']
-t:12 a: [1]
-t:13 a: ['orange']
-t:14 a: ['orange']
-t:15 a: [0]
-t:16 a: ['orange']
-t:17 a: ['orange']
-t:18 a: [1]
-t:19 a: ['orange']
-t:20 a: ['orange']
-t:21 a: [1]
-t:22 a: [0]
-t:23 a: ['orange']
-t:24 a: ['orange']
-t:25 a: [0]
-t:26 a: [1]
-t:27 a: ['orange']
-t:28 a: ['orange']
-t:29 a: [0]
-t:30 a: ['orange']
-t:31 a: ['orange']
-t:32 a: [0]
-t:33 a: [0]
-t:34 a: [0]
-t:35 a: [0]
-t:36 a: [1]
-t:37 a: ['orange']
-t:38 a: ['orange']
-t:39 a: [0]
-t:40 a: ['orange']
-t:41 a: ['orange']
-t:42 a: [0]
-t:43 a: [0]
-t:44 a: [0]
-t:45 a: [0]
-t:46 a: [1]
-t:47 a: ['orange']
-t:48 a: ['orange']
-t:49 a: [1]
-t:50 a: [1]
-t:51 a: [0]
-t:52 a: ['orange']
-t:53 a: ['orange']
-t:54 a: [1]
-t:55 a: ['orange']
-t:56 a: ['orange']
-t:57 a: [0]
-t:58 a: ['orange']
-t:59 a: ['orange']
-t:60 a: [1]
-t:61 a: ['orange']
-t:62 a: ['orange']
-t:63 a: [0]
-t:64 a: ['orange']
-t:65 a: ['orange']
-t:66 a: [0]
-t:67 a: [1]
-t:68 a: ['orange']
-t:69 a: ['orange']
-t:70 a: [0]
-t:71 a: ['orange']
-t:72 a: ['orange']
-t:73 a: [1]
-t:74 a: ['orange']
-t:75 a: ['orange']
-t:76 a: [1]
-t:77 a: [0]
-t:78 a: ['orange']
-t:79 a: ['orange']
-t:80 a: [0]
-t:81 a: [0]
-t:82 a: [1]
-t:83 a: ['orange']
-t:84 a: ['orange']
-t:85 a: [0]
-t:86 a: ['orange']
-t:87 a: ['orange']
-t:88 a: [1]
-t:89 a: ['orange']
-393.0
-t:0 a: [1]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 1 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 1, aktualna faza: orange
-t:1 a: [0]
-t:2 a: ['orange']
-t:3 a: ['orange']
-t:4 a: [0]
-t:5 a: [1]
-t:6 a: ['orange']
-t:7 a: ['orange']
-t:8 a: [1]
-t:9 a: [1]
-t:10 a: [1]
-t:11 a: [1]
-t:12 a: [0]
-t:13 a: ['orange']
-t:14 a: ['orange']
-t:15 a: [1]
-t:16 a: ['orange']
-t:17 a: ['orange']
-t:18 a: [1]
-t:19 a: [0]
-t:20 a: ['orange']
-t:21 a: ['orange']
-t:22 a: [0]
-t:23 a: [1]
-t:24 a: ['orange']
-t:25 a: ['orange']
-t:26 a: [1]
-t:27 a: [0]
-t:28 a: ['orange']
-t:29 a: ['orange']
-t:30 a: [1]
-t:31 a: ['orange']
-t:32 a: ['orange']
-t:33 a: [1]
-t:34 a: [0]
-t:35 a: ['orange']
-t:36 a: ['orange']
-t:37 a: [0]
-t:38 a: [1]
-t:39 a: ['orange']
-t:40 a: ['orange']
-t:41 a: [0]
-t:42 a: ['orange']
-t:43 a: ['orange']
-t:44 a: [1]
-t:45 a: ['orange']
-t:46 a: ['orange']
-t:47 a: [0]
-t:48 a: ['orange']
-t:49 a: ['orange']
-t:50 a: [0]
-t:51 a: [0]
-t:52 a: [0]
-t:53 a: [0]
-t:54 a: [1]
-t:55 a: ['orange']
-t:56 a: ['orange']
-t:57 a: [0]
-t:58 a: ['orange']
-t:59 a: ['orange']
-t:60 a: [1]
-t:61 a: ['orange']
-t:62 a: ['orange']
-t:63 a: [1]
-t:64 a: [0]
-t:65 a: ['orange']
-t:66 a: ['orange']
-t:67 a: [1]
-t:68 a: ['orange']
-t:69 a: ['orange']
-t:70 a: [0]
-t:71 a: ['orange']
-t:72 a: ['orange']
-t:73 a: [0]
-t:74 a: [1]
-t:75 a: ['orange']
-t:76 a: ['orange']
-t:77 a: [1]
-t:78 a: [0]
-t:79 a: ['orange']
-t:80 a: ['orange']
-t:81 a: [1]
-t:82 a: ['orange']
-t:83 a: ['orange']
-t:84 a: [0]
-t:85 a: ['orange']
-t:86 a: ['orange']
-t:87 a: [1]
-t:88 a: ['orange']
-t:89 a: ['orange']
-400.0
-t:0 a: [1]
-t:1 a: [0]
-t:2 a: ['orange']
-t:3 a: ['orange']
-t:4 a: [0]
-t:5 a: [1]
-t:6 a: ['orange']
-t:7 a: ['orange']
-t:8 a: [0]
-t:9 a: ['orange']
-t:10 a: ['orange']
-t:11 a: [0]
-t:12 a: [0]
-t:13 a: [0]
-t:14 a: [0]
-t:15 a: [0]
-t:16 a: [0]
-t:17 a: [0]
-t:18 a: [1]
-t:19 a: ['orange']
-t:20 a: ['orange']
-t:21 a: [1]
-t:22 a: [1]
-t:23 a: [1]
-t:24 a: [0]
-t:25 a: ['orange']
-t:26 a: ['orange']
-t:27 a: [0]
-t:28 a: [1]
-t:29 a: ['orange']
-t:30 a: ['orange']
-t:31 a: [0]
-t:32 a: ['orange']
-t:33 a: ['orange']
-t:34 a: [0]
-t:35 a: [0]
-t:36 a: [1]
-t:37 a: ['orange']
-t:38 a: ['orange']
-t:39 a: [1]
-t:40 a: [0]
-t:41 a: ['orange']
-t:42 a: ['orange']
-t:43 a: [0]
-t:44 a: [1]
-t:45 a: ['orange']
-t:46 a: ['orange']
-t:47 a: [1]
-t:48 a: [0]
-t:49 a: ['orange']
-t:50 a: ['orange']
-t:51 a: [1]
-t:52 a: ['orange']
-t:53 a: ['orange']
-t:54 a: [0]
-t:55 a: ['orange']
-t:56 a: ['orange']
-t:57 a: [0]
-t:58 a: [0]
-t:59 a: [1]
-t:60 a: ['orange']
-t:61 a: ['orange']
-t:62 a: [1]
-t:63 a: [0]
-t:64 a: ['orange']
-t:65 a: ['orange']
-t:66 a: [0]
-t:67 a: [0]
-t:68 a: [0]
-t:69 a: [0]
-t:70 a: [0]
-t:71 a: [0]
-t:72 a: [0]
-t:73 a: [0]
-t:74 a: [0]
-t:75 a: [1]
-t:76 a: ['orange']
-t:77 a: ['orange']
-t:78 a: [1]
-t:79 a: [1]
-t:80 a: [1]
-t:81 a: [1]
-t:82 a: [1]
-t:83 a: [1]
-t:84 a: [0]
-t:85 a: ['orange']
-t:86 a: ['orange']
-t:87 a: [0]
-t:88 a: [0]
-t:89 a: [1]
-540.0
-t:0 a: [0]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 0 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 0, aktualna faza: orange
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [1]
-t:4 a: ['orange']
-t:5 a: ['orange']
-t:6 a: [0]
-t:7 a: ['orange']
-t:8 a: ['orange']
-t:9 a: [0]
-t:10 a: [1]
-t:11 a: ['orange']
-t:12 a: ['orange']
-t:13 a: [0]
-t:14 a: ['orange']
-t:15 a: ['orange']
-t:16 a: [1]
-t:17 a: ['orange']
-t:18 a: ['orange']
-t:19 a: [0]
-t:20 a: ['orange']
-t:21 a: ['orange']
-t:22 a: [0]
-t:23 a: [1]
-t:24 a: ['orange']
-t:25 a: ['orange']
-t:26 a: [1]
-t:27 a: [1]
-t:28 a: [1]
-t:29 a: [0]
-t:30 a: ['orange']
-t:31 a: ['orange']
-t:32 a: [1]
-t:33 a: ['orange']
-t:34 a: ['orange']
-t:35 a: [1]
-t:36 a: [0]
-t:37 a: ['orange']
-t:38 a: ['orange']
-t:39 a: [0]
-t:40 a: [0]
-t:41 a: [0]
-t:42 a: [0]
-t:43 a: [1]
-t:44 a: ['orange']
-t:45 a: ['orange']
-t:46 a: [1]
-t:47 a: [0]
-t:48 a: ['orange']
-t:49 a: ['orange']
-t:50 a: [1]
-t:51 a: ['orange']
-t:52 a: ['orange']
-t:53 a: [0]
-t:54 a: ['orange']
-t:55 a: ['orange']
-t:56 a: [1]
-t:57 a: ['orange']
-t:58 a: ['orange']
-t:59 a: [0]
-t:60 a: ['orange']
-t:61 a: ['orange']
-t:62 a: [0]
-t:63 a: [1]
-t:64 a: ['orange']
-t:65 a: ['orange']
-t:66 a: [0]
-t:67 a: ['orange']
-t:68 a: ['orange']
-t:69 a: [0]
-t:70 a: [1]
-t:71 a: ['orange']
-t:72 a: ['orange']
-t:73 a: [0]
-t:74 a: ['orange']
-t:75 a: ['orange']
-t:76 a: [0]
-t:77 a: [1]
-t:78 a: ['orange']
-t:79 a: ['orange']
-t:80 a: [0]
-t:81 a: ['orange']
-t:82 a: ['orange']
-t:83 a: [1]
-t:84 a: ['orange']
-t:85 a: ['orange']
-t:86 a: [0]
-t:87 a: ['orange']
-t:88 a: ['orange']
-t:89 a: [1]
-386.9
-t:0 a: [1]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 1 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 0, aktualna faza: orange
-t:1 a: ['orange']
-t:2 a: [0]
-t:3 a: ['orange']
-t:4 a: ['orange']
-t:5 a: [0]
-t:6 a: [0]
-t:7 a: [0]
-t:8 a: [1]
-t:9 a: ['orange']
-t:10 a: ['orange']
-t:11 a: [1]
-t:12 a: [0]
-t:13 a: ['orange']
-t:14 a: ['orange']
-t:15 a: [0]
-t:16 a: [1]
-t:17 a: ['orange']
-t:18 a: ['orange']
-t:19 a: [0]
-t:20 a: ['orange']
-t:21 a: ['orange']
-t:22 a: [0]
-t:23 a: [1]
-t:24 a: ['orange']
-t:25 a: ['orange']
-t:26 a: [1]
-t:27 a: [1]
-t:28 a: [1]
-t:29 a: [0]
-t:30 a: ['orange']
-t:31 a: ['orange']
-t:32 a: [1]
-t:33 a: ['orange']
-t:34 a: ['orange']
-t:35 a: [0]
-t:36 a: ['orange']
-t:37 a: ['orange']
-t:38 a: [1]
-t:39 a: ['orange']
-t:40 a: ['orange']
-t:41 a: [1]
-t:42 a: [1]
-t:43 a: [1]
-t:44 a: [0]
-t:45 a: ['orange']
-t:46 a: ['orange']
-t:47 a: [1]
-t:48 a: ['orange']
-t:49 a: ['orange']
-t:50 a: [1]
-t:51 a: [1]
-t:52 a: [0]
-t:53 a: ['orange']
-t:54 a: ['orange']
-t:55 a: [0]
-t:56 a: [1]
-t:57 a: ['orange']
-t:58 a: ['orange']
-t:59 a: [0]
-t:60 a: ['orange']
-t:61 a: ['orange']
-t:62 a: [0]
-t:63 a: [1]
-t:64 a: ['orange']
-t:65 a: ['orange']
-t:66 a: [1]
-t:67 a: [1]
-t:68 a: [0]
-t:69 a: ['orange']
-t:70 a: ['orange']
-t:71 a: [1]
-t:72 a: ['orange']
-t:73 a: ['orange']
-t:74 a: [0]
-t:75 a: ['orange']
-t:76 a: ['orange']
-t:77 a: [0]
-t:78 a: [1]
-t:79 a: ['orange']
-t:80 a: ['orange']
-t:81 a: [1]
-t:82 a: [1]
-t:83 a: [0]
-t:84 a: ['orange']
-t:85 a: ['orange']
-t:86 a: [1]
-t:87 a: ['orange']
-t:88 a: ['orange']
-t:89 a: [0]
-430.0
-t:0 a: [0]
-uwagaAAAAAAAAAAAAAAAAAAA akcja 0 nie jest w local_action_space ktory jest rowny ['orange'], w chwili 0, aktualny phase_duration: 0, aktualna faza: orange
-t:1 a: ['orange']
-t:2 a: [0]
-t:3 a: [0]
-t:4 a: [0]
-t:5 a: [0]
-t:6 a: [1]
-t:7 a: ['orange']
-t:8 a: ['orange']
-t:9 a: [1]
-t:10 a: [1]
-t:11 a: [0]
-t:12 a: ['orange']
-t:13 a: ['orange']
-t:14 a: [1]
-t:15 a: ['orange']
-t:16 a: ['orange']
-t:17 a: [1]
-t:18 a: [0]
-t:19 a: ['orange']
-t:20 a: ['orange']
-t:21 a: [0]
-t:22 a: [0]
-t:23 a: [1]
-t:24 a: ['orange']
-t:25 a: ['orange']
-t:26 a: [0]
-t:27 a: ['orange']
-t:28 a: ['orange']
-t:29 a: [1]
-t:30 a: ['orange']
-t:31 a: ['orange']
-t:32 a: [1]
-t:33 a: [1]
-t:34 a: [1]
-t:35 a: [1]
-t:36 a: [1]
-t:37 a: [0]
-t:38 a: ['orange']
-t:39 a: ['orange']
-t:40 a: [0]
-t:41 a: [1]
-t:42 a: ['orange']
-t:43 a: ['orange']
-t:44 a: [0]
-t:45 a: ['orange']
-t:46 a: ['orange']
-t:47 a: [0]
-t:48 a: [1]
-t:49 a: ['orange']
-t:50 a: ['orange']
-t:51 a: [0]
-t:52 a: ['orange']
-t:53 a: ['orange']
-t:54 a: [1]
-t:55 a: ['orange']
-t:56 a: ['orange']
-t:57 a: [0]
-t:58 a: ['orange']
-t:59 a: ['orange']
-t:60 a: [1]
-t:61 a: ['orange']
-t:62 a: ['orange']
-t:63 a: [1]
-t:64 a: [1]
-t:65 a: [1]
-t:66 a: [1]
-t:67 a: [1]
-t:68 a: [1]
-t:69 a: [0]
-t:70 a: ['orange']
-t:71 a: ['orange']
-t:72 a: [0]
-t:73 a: [0]
-t:74 a: [1]
-t:75 a: ['orange']
-t:76 a: ['orange']
-t:77 a: [1]
-t:78 a: [0]
-t:79 a: ['orange']
-t:80 a: ['orange']
-t:81 a: [1]
-t:82 a: ['orange']
-t:83 a: ['orange']
-t:84 a: [1]
-t:85 a: [0]
-t:86 a: ['orange']
-t:87 a: ['orange']
-t:88 a: [0]
-t:89 a: [0]
-465.749
-t:0 a: [1]
-t:1 a: ['orange']
-t:2 a: ['orange']
-t:3 a: [1]
-t:4 a: [0]
-t:5 a: ['orange']
-t:6 a: ['orange']
-t:7 a: [0]
-t:8 a: [0]
-t:9 a: [0]
-t:10 a: [0]
-t:11 a: [1]
-t:12 a: ['orange']
-t:13 a: ['orange']
-t:14 a: [1]
-t:15 a: [0]
-t:16 a: ['orange']
-t:17 a: ['orange']
-t:18 a: [0]
-t:19 a: [0]
-t:20 a: [0]
-t:21 a: [1]
-t:22 a: ['orange']
-t:23 a: ['orange']
-t:24 a: [1]
-t:25 a: [1]
-t:26 a: [0]
-t:27 a: ['orange']
-t:28 a: ['orange']
-t:29 a: [0]
-t:30 a: [1]
-t:31 a: ['orange']
-t:32 a: ['orange']
-t:33 a: [1]
-t:34 a: [0]
-t:35 a: ['orange']
-t:36 a: ['orange']
-t:37 a: [1]
-t:38 a: ['orange']
-t:39 a: ['orange']
-t:40 a: [1]
-t:41 a: [1]
-t:42 a: [0]
-t:43 a: ['orange']
-t:44 a: ['orange']
-t:45 a: [0]
-t:46 a: [1]
-t:47 a: ['orange']
-t:48 a: ['orange']
-t:49 a: [0]
-t:50 a: ['orange']
-t:51 a: ['orange']
-t:52 a: [0]
-t:53 a: [0]
-t:54 a: [1]
-t:55 a: ['orange']
-t:56 a: ['orange']
-t:57 a: [0]
-t:58 a: ['orange']
-t:59 a: ['orange']
-t:60 a: [0]
-t:61 a: [1]
-t:62 a: ['orange']
-t:63 a: ['orange']
-t:64 a: [1]
-t:65 a: [0]
-t:66 a: ['orange']
-t:67 a: ['orange']
-t:68 a: [0]
-t:69 a: [1]
-t:70 a: ['orange']
-t:71 a: ['orange']
-t:72 a: [0]
-t:73 a: ['orange']
-t:74 a: ['orange']
-t:75 a: [0]
-t:76 a: [1]
-t:77 a: ['orange']
-t:78 a: ['orange']
-t:79 a: [0]
-t:80 a: ['orange']
-t:81 a: ['orange']
-t:82 a: [0]
-t:83 a: [1]
-t:84 a: ['orange']
-t:85 a: ['orange']
-t:86 a: [1]
-t:87 a: [1]
-t:88 a: [1]
-t:89 a: [0]
-458.1
+state 4.0,13.503999999999996 a:1
+reww 15.088639999999995
+state 4.0,9.593127935999998 a:1
+reww 6.7151895551999985
+state 4.0,14.399999999999999 a:1
+reww 15.879999999999999
+state 4.0,14.748252 a:1
+reww 10.0
+state 4.0,11.723776399999998 a:1
+reww 8.206643479999999
+state 4.0,13.561642233743484 a:1
+reww 19.63547789343241
+state 4.0,9.748315038217754 a:1
+reww 6.823820526752428
+state 4.0,10.759999999999998 a:1
+reww 16.909479999999995
+state 4.0,9.6286092 a:1
+reww 6.740026439999999
+state 4.0,10.095405552399999 a:1
+reww 16.2628296024852
+state 4.0,9.331314544000003 a:1
+reww 15.519369051312003
+state 4.0,9.567853291417116 a:1
+reww 6.69749730399198
+state 4.0,10.797200000000004 a:1
+reww 7.558040000000002
+state 4.0,11.267188400000002 a:1
+reww 17.4029743132
+state 4.0,14.503999999999998 a:1
+reww 20.538639999999997
+state 4.0,9.775751999999997 a:1
+reww 6.843026399999998
+state 4.0,12.413640316210866 a:1
+reww 18.51847202767317
+state 4.0,11.736480280276357 a:1
+reww 17.859595312708898
+state 4.0,9.425130062039997 a:1
+reww 11.376868356456397
+state 4.0,12.846914311900266 a:1
+reww 14.49069202382924
+state 4.0,13.030978639338258 a:1
+reww 9.12168504753678
+state 4.0,11.726274973974071 a:1
+reww 17.84966554967677
+state 4.0,14.285412623999996 a:1
+reww 9.999788836799997
+state 4.0,9.980922952399993 a:1
+reww 11.882639886683993
+state 4.0,14.503999999999998 a:1
+reww 20.538639999999997
+state 4.0,9.643026399999997 a:1
+reww 11.575154023999996
+state 4.0,11.466575782014814 a:1
+reww 8.02660304741037
+state 4.0,9.239999999999998 a:1
+reww 15.43052
+state 4.0,13.403359303599998 a:1
+reww 14.997056966275997
+state 4.0,11.304667233834046 a:1
+reww 7.913267063683832
+state 4.0,13.503999999999996 a:1
+reww 9.452799999999996
+state 4.0,12.975574486809151 a:1
+reww 19.0652339756653
+state 4.0,12.161018094551952 a:1
+reww 13.866526466042275
+state 4.0,9.248708409882916 a:1
+reww 6.4740958869180405
+state 4.0,10.351894147329002 a:1
+reww 16.512393005351118
+state 4.0,9.650752851719993 a:1
+reww 15.83018252472355
+state 4.0,10.50045562215978 a:1
+reww 16.656943320361464
+state 4.0,11.600000000000001 a:1
+reww 8.120000000000001
+state 4.0,14.748747999999996 a:1
+reww 10.0
+state 4.0,11.724123599999999 a:1
+reww 17.8475722628
+state 4.0,12.19724238827024 a:1
+reww 18.30791684378694
+state 4.0,11.85618568327839 a:1
+reww 13.589128971783335
+state 4.0,12.244399999999999 a:1
+reww 8.571079999999998
+state 4.0,11.143350912808256 a:1
+reww 12.940449330655511
+state 4.0,9.435637168238681 a:1
+reww 15.620874964696236
+state 4.0,13.503999999999996 a:1
+reww 9.452799999999996
+state 4.0,13.465088000000002 a:1
+reww 15.053230079999999
+state 4.0,9.514600960614398 a:1
+reww 11.458286874159102
+state 4.0,9.839419860518706 a:1
+reww 6.887593902363094
+state 4.0,10.466278170708929 a:1
+reww 12.324313135345125
+state 4.0,10.729562867328262 a:1
+reww 16.879864669910397
+state 4.0,11.741519999999998 a:1
+reww 13.484783199999997
+state 4.0,12.515670827783204 a:1
+reww 18.617747715433055
+state 4.0,11.42966888647825 a:1
+reww 17.561067826543336
+state 4.0,10.759999999999998 a:1
+reww 12.591599999999998
+state 4.0,12.333832839999996 a:1
+reww 14.023787884399995
+state 4.0,10.017031468919996 a:1
+reww 16.186571619259155
+state 4.0,12.221919648878217 a:1
+reww 18.331927818358505
+state 4.0,10.920000000000002 a:1
+reww 7.644000000000001
+state 4.0,13.267289200860676 a:1
+reww 9.287102440602473
+state 4.0,13.891995403999992 a:1
+reww 15.441715817639992
+state 4.0,12.666914660138964 a:1
+reww 14.326892340726456
+state 4.0,13.131999999999998 a:1
+reww 14.750119999999997
+state 4.0,14.592984839999996 a:1
+reww 20.619616204399996
+state 4.0,11.600000000000001 a:1
+reww 8.120000000000001
+state 4.0,14.225567353452 a:1
+reww 15.74526629164132
+state 4.0,12.695347520287232 a:1
+reww 8.886743264201062
+state 4.0,10.010239999999996 a:1
+reww 11.909318399999997
+state 4.0,9.5966161088 a:1
+reww 15.7775074738624
+state 4.0,9.470940066399999 a:1
+reww 11.418555460423999
+state 4.0,12.379967919849769 a:1
+reww 8.665977543894837
+state 4.0,13.649898698952537 a:1
+reww 19.721351434080816
+state 4.0,13.444291999999997 a:1
+reww 19.521296115999995
+state 4.0,9.64356733533557 a:1
+reww 11.575646275155368
+state 4.0,10.395596307999995 a:1
+reww 7.276917415599995
+state 4.0,9.633396361445662 a:1
+reww 15.81329465968663
+state 4.0,10.352585738665642 a:1
+reww 16.51306592372167
+state 4.0,9.304674428589282 a:1
+reww 6.513272100012497
+state 4.0,14.217646799999997 a:1
+reww 9.952352759999997
+state 4.0,9.491999999999997 a:1
+reww 6.644399999999997
+state 4.0,10.865035455293196 a:1
+reww 7.605524818705237
+state 4.0,10.68165744561157 a:1
+reww 12.52030827550653
+state 4.0,13.821148568513685 a:1
+reww 15.377245197347452
+state 4.0,9.334409447275585 a:1
+reww 6.534086613092909
+state 4.0,14.467257693828277 a:1
+reww 15.927080385679794
+state 4.0,12.922439599999999 a:1
+reww 9.04570772
+state 4.0,12.781657984961761 a:1
+reww 8.947160589473231
+state 4.0,14.181949767999996 a:1
+reww 9.927364837599995
+wynik sieci 37.81572691687587
+weights! <tf.Variable 'dense_5_1/kernel:0' shape=(3, 15) dtype=float32, numpy=
+array([[ 0.19756094, -0.57454175, -0.53444844, -0.415551  , -0.5771152 ,
+        -0.36484006, -0.31197402, -0.32702777, -0.02004726,  0.189094  ,
+         0.2508118 ,  0.0580487 , -0.11689931, -0.05045885,  0.4971051 ],
+       [-0.34013432,  0.16267961,  0.03453561, -0.4161135 ,  0.40450782,
+        -0.23705737,  0.22429082, -0.05877652, -0.13722382,  0.4423383 ,
+        -0.43450412,  0.11913457,  0.23445852,  0.28073755,  0.16635028],
+       [ 0.3814531 ,  0.1316494 , -0.2556565 ,  0.35316348, -0.30864406,
+        -0.0847602 , -0.17922522, -0.44565088, -0.33561713, -0.25253186,
+        -0.02036889,  0.09719104,  0.11939763, -0.21047989,  0.04366651]],
+      dtype=float32)>
+rewards_mean:8.066666666666666 rewards_sum:726.0 cars_out:716.0
+czas 5.279509600093912
+state 4.0,12.403999999999996 a:1
+reww 14.087639999999997
+state 4.0,9.815016399999998 a:1
+reww 6.870511479999998
+state 4.0,10.759999999999998 a:1
+reww 12.591599999999998
+state 4.0,14.519761199999998 a:1
+reww 20.552982691999997
+state 4.0,10.401179281745556 a:1
+reww 12.265073146388456
+state 4.0,9.89527429474997 a:1
+reww 6.926692006324979
+state 4.0,14.285718737650908 a:1
+reww 15.800003116355636
+state 4.0,10.140000934906691 a:1
+reww 12.027400850765089
+state 4.0,14.764679999999998 a:1
+reww 20.775858799999998
+state 4.0,11.538687326708978 a:1
+reww 8.077081128696284
+state 4.0,14.393772547753478 a:1
+reww 15.875640783427436
+state 4.0,13.57500368394119 a:1
+reww 19.648478584474777
+state 4.0,9.599737560000005 a:1
+reww 11.535761179600005
+state 4.0,9.691348426396 a:1
+reww 11.619127068020362
+state 4.0,12.131999999999998 a:1
+reww 18.244436
+state 4.0,9.610916531999996 a:1
+reww 11.545934044119996
+state 4.0,14.409002295339988 a:1
+reww 10.0
+state 4.0,11.108882711044444 a:1
+reww 7.776217897731111
+state 4.0,11.234559999999998 a:1
+reww 7.864191999999998
+state 4.0,11.032036223999995 a:1
+reww 7.722425356799996
+state 4.0,13.138627599999996 a:1
+reww 9.197039319999996
+state 4.0,10.733551623879038 a:1
+reww 7.513486136715326
+state 4.0,10.555305484499321 a:1
+reww 16.71031223641784
+state 4.0,12.9727700514496 a:1
+reww 9.080939036014719
+state 4.0,14.092399999999998 a:1
+reww 9.864679999999998
+state 4.0,12.707312375386035 a:1
+reww 8.895118662770225
+state 4.0,12.593864290886767 a:1
+reww 18.693829955032825
+state 4.0,14.68 a:1
+reww 10.0
+state 4.0,10.935802839507996 a:1
+reww 12.751580583952276
+state 4.0,9.928955578889003 a:1
+reww 6.950268905222302
+state 4.0,10.920000000000002 a:1
+reww 7.644000000000001
+state 4.0,9.371429199999994 a:1
+reww 6.560000439999996
+state 4.0,13.23613259327076 a:1
+reww 14.844880659876392
+state 4.0,13.592457479098343 a:1
+reww 19.665461127162686
+state 4.0,9.400285515500752 a:1
+reww 11.354259819105684
+state 4.0,10.400471696 a:1
+reww 12.264429243359999
+state 4.0,11.321144780269442 a:1
+reww 7.924801346188609
+state 4.0,10.344208282699608 a:1
+reww 16.504914659066717
+state 4.0,9.418370079323978 a:1
+reww 15.60407408718223
+state 4.0,12.644093302308308 a:1
+reww 14.30612490510056
+state 4.0,10.110799999999998 a:1
+reww 12.000827999999997
+state 4.0,9.599720395999999 a:1
+reww 6.719804277199999
+state 4.0,12.45110107602249 a:1
+reww 8.715770753215741
+state 4.0,11.014731225964724 a:1
+reww 7.710311858175306
+state 4.0,10.759999999999998 a:1
+reww 7.531999999999998
+state 4.0,10.788242799999999 a:1
+reww 7.551769959999999
+state 4.0,13.987235793153161 a:1
+reww 15.528384571769376
+state 4.0,13.790862938333195 a:1
+reww 15.349685273883209
+state 4.0,9.87617705558049 a:1
+reww 6.913323938906342
+state 4.0,10.607206723319422 a:1
+reww 7.425044706323595
+state 4.0,9.363871404400005 a:1
+reww 11.321122978004006
+state 4.0,12.744513662966796 a:1
+reww 8.921159564076756
+state 4.0,10.497320000000002 a:1
+reww 16.653892360000004
+state 4.0,14.847045418418354 a:1
+reww 10.0
+state 4.0,9.239999999999998 a:1
+reww 6.467999999999998
+state 4.0,10.340399999999995 a:1
+reww 7.238279999999996
+state 4.0,14.581907564781197 a:1
+reww 10.0
+state 4.0,10.503147390162258 a:1
+reww 16.659562410627878
+state 4.0,14.815976000000001 a:1
+reww 20.82253816
+state 4.0,9.656784541599999 a:1
+reww 15.8360513589768
+state 4.0,9.67451322783624 a:1
+reww 6.772159259485368
+state 4.0,9.492439599999997 a:1
+reww 15.676143730799998
+state 4.0,10.569984975908 a:1
+reww 16.724595381558483
+state 4.0,14.68 a:1
+reww 10.0
+state 4.0,11.675999999999998 a:1
+reww 8.173199999999998
+state 4.0,14.977460399999998 a:1
+reww 10.0
+state 4.0,11.645801769427997 a:1
+reww 8.152061238599599
+state 4.0,14.621952155797999 a:1
+reww 10.0
+state 4.0,13.125429035902862 a:1
+reww 19.211042451933483
+state 4.0,9.601134571931105 a:1
+reww 6.720794200351773
+state 4.0,11.176116493928 a:1
+reww 7.823281545749599
+state 4.0,10.880354937199996 a:1
+reww 7.616248456039997
+state 4.0,12.678272895902815 a:1
+reww 14.337228335271561
+state 4.0,12.655999999999999 a:1
+reww 18.754287999999995
+state 4.0,13.712515736193893 a:1
+reww 15.278389319936442
+state 4.0,14.573540538746274 a:1
+reww 16.001478377122393
+state 4.0,10.200443513136719 a:1
+reww 7.140310459195702
+state 4.0,10.448123999999993 a:1
+reww 16.606024651999995
+state 4.0,14.09040398416044 a:1
+reww 9.863282788912308
+state 4.0,12.354484581499744 a:1
+reww 8.64813920704982
+state 4.0,12.944680307999995 a:1
+reww 9.061276215599996
+state 4.0,11.085173764417782 a:1
+reww 7.759621635092446
+get learnt!
+wynik sieci 15.178941275083918
+weights! <tf.Variable 'dense_5_4/kernel:0' shape=(3, 15) dtype=float32, numpy=
+array([[ 0.1835114 , -0.589845  , -0.55207664, -0.43203685, -0.57174706,
+        -0.38235354, -0.295351  , -0.34278905, -0.00430927,  0.20429608,
+         0.23536666,  0.07258535, -0.10242058, -0.06657919,  0.50061166],
+       [-0.35150212,  0.14899704,  0.01893555, -0.4306196 ,  0.40976027,
+        -0.25278035,  0.23905109, -0.07352068, -0.12316263,  0.4559144 ,
+        -0.4486774 ,  0.13140658,  0.24585767,  0.26630938,  0.1681679 ],
+       [ 0.36905983,  0.11361975, -0.27779624,  0.33201128, -0.29341525,
+        -0.10404601, -0.15876018, -0.46320307, -0.3202626 , -0.23002294,
+        -0.0380777 ,  0.115228  ,  0.13718922, -0.2303442 ,  0.05515865]],
+      dtype=float32)>
+rewards_mean:9.730158730158731 rewards_sum:875.7142857142858 cars_out:865.7142857142858
+result! (9.730158730158731, 875.7142857142858, 865.7142857142858)
+czas 13.238218387302254
+state 4.0,13.131999999999998 a:1
+reww 9.192399999999997
+state 4.0,14.189559206513774 a:1
+reww 9.93269144455964
+state 4.0,12.822185214607998 a:1
+reww 8.975529650225598
+state 4.0,10.247999999999998 a:1
+reww 16.411303999999998
+state 4.0,9.607711848000001 a:1
+reww 6.7253982936000005
+state 4.0,12.211079999999995 a:1
+reww 8.547755999999996
+state 4.0,11.648890467286797 a:1
+reww 17.774370424670053
+state 4.0,11.1367903808 a:1
+reww 12.934479246528
+state 4.0,9.759132455793278 a:1
+reww 6.8313927190552945
+state 4.0,11.600000000000001 a:1
+reww 17.7268
+state 4.0,9.468905684000001 a:1
+reww 6.6282339788
+state 4.0,14.937676420295059 a:1
+reww 10.0
+state 4.0,11.600000000000001 a:1
+reww 8.120000000000001
+state 4.0,14.692801463451998 a:1
+reww 20.71044933174132
+state 4.0,9.430592647214134 a:1
+reww 6.601414853049893
+state 4.0,14.746407983398331 a:1
+reww 20.75923126489248
+state 4.0,11.759999999999998 a:1
+reww 8.231999999999998
+state 4.0,9.376518359599999 a:1
+reww 6.563562851719999
+state 4.0,12.858348198861197 a:1
+reww 18.951172797491942
+state 4.0,12.90681916544752 a:1
+reww 9.034773415813262
+state 4.0,9.204 a:1
+reww 11.175640000000001
+state 4.0,11.851146465199996 a:1
+reww 8.295802525639997
+state 4.0,9.259389476086833 a:1
+reww 6.481572633260782
+state 4.0,11.511370323571995 a:1
+reww 13.275346994450516
+state 4.0,13.877157430666195 a:1
+reww 9.714010201466335
+state 4.0,11.361380958031994 a:1
+reww 7.952966670622395
+state 4.0,11.370121598167664 a:1
+reww 7.959085118717364
+state 4.0,10.351407874930644 a:1
+reww 7.24598551245145
+state 4.0,10.920000000000002 a:1
+reww 12.737200000000001
+state 4.0,9.448651954998304 a:1
+reww 6.6140563684988125
+state 4.0,11.32452871358679 a:1
+reww 13.105321129363979
+state 4.0,11.506031740971896 a:1
+reww 8.054222218680327
+state 4.0,13.241440277946715 a:1
+reww 14.84971065293151
+state 4.0,14.893227599999987 a:1
+reww 20.89283711599999
+state 4.0,12.875445628645878 a:1
+reww 9.012811940052114
+state 4.0,14.840618348631358 a:1
+reww 10.0
+state 4.0,13.946937571022398 a:1
+reww 15.491713189630381
+state 4.0,10.718141962817455 a:1
+reww 12.553509186163883
+state 4.0,9.53292832967452 a:1
+reww 6.673049830772164
+state 4.0,12.685172700423996 a:1
+reww 18.78267303751255
+state 4.0,12.280016279999998 a:1
+reww 8.596011395999998
+state 4.0,13.981773096499426 a:1
+reww 20.04426522289394
+state 4.0,12.779517150892403 a:1
+reww 18.874470187818307
+state 4.0,9.529431108334412 a:1
+reww 11.471782308584315
+state 4.0,13.624795288705268 a:1
+reww 19.696925815910227
+state 4.0,14.022400000000003 a:1
+reww 9.815680000000002
+state 4.0,10.721919699730606 a:1
+reww 12.55694692675485
+state 4.0,13.40177524 a:1
+reww 19.479927308519997
+state 4.0,9.745293552036 a:1
+reww 11.668217132352758
+state 4.0,12.013806531999997 a:1
+reww 13.732563944119995
+state 4.0,13.225966273522857 a:1
+reww 19.308865184137737
+state 4.0,9.520072447680139 a:1
+reww 11.463265927388926
+state 4.0,12.337693199999997 a:1
+reww 14.027300811999996
+state 4.0,9.679999999999996 a:1
+reww 15.858639999999998
+state 4.0,10.759999999999998 a:1
+reww 7.531999999999998
+state 4.0,13.88665271154359 a:1
+reww 9.720656898080513
+state 4.0,13.286560131999996 a:1
+reww 9.300592092399997
+state 4.0,14.68927104957558 a:1
+reww 20.70723665511378
+state 4.0,14.4997227676 a:1
+reww 10.0
+state 4.0,9.239999999999998 a:1
+reww 6.467999999999998
+state 4.0,12.121210597849064 a:1
+reww 18.233937911707137
+state 4.0,11.11497665283239 a:1
+reww 12.914628754077473
+get learnt!
+wynik sieci 7.504096365765314
+weights! <tf.Variable 'dense_5_8/kernel:0' shape=(3, 15) dtype=float32, numpy=
+array([[ 0.17097345, -0.5973177 , -0.56257606, -0.44395003, -0.5665114 ,
+        -0.39214584, -0.2860374 , -0.349661  ,  0.00229492,  0.21356498,
+         0.22735299,  0.07992614, -0.09233534, -0.0753466 ,  0.49375862],
+       [-0.36132315,  0.14639977,  0.01386256, -0.43745667,  0.4132374 ,
+        -0.25820178,  0.24399552, -0.07592375, -0.11985722,  0.4594584 ,
+        -0.45333216,  0.1346112 ,  0.24956653,  0.26196027,  0.1596405 ],
+       [ 0.35813847,  0.08971965, -0.3059489 ,  0.3104781 , -0.27622753,
+        -0.12543535, -0.14221084, -0.48094028, -0.31131548, -0.20420866,
+        -0.05122804,  0.13527082,  0.16671988, -0.25154856,  0.08101688]],
+      dtype=float32)>
+rewards_mean:9.730158730158731 rewards_sum:875.7142857142858 cars_out:865.7142857142858
+result! (9.730158730158731, 875.7142857142858, 865.7142857142858)
+czas 20.538107860010737
+state 4.0,12.943891244927997 a:1
+reww 9.060723871449596
+state 4.0,11.118217161434877 a:1
+reww 12.917577616905739
+state 4.0,9.875999999999998 a:1
+reww 11.787159999999997
+state 4.0,14.479583989208392 a:1
+reww 15.935708792445872
+state 4.0,13.053984434742677 a:1
+reww 14.679125835615835
+state 4.0,12.942607999999998 a:1
+reww 19.033157583999998
+state 4.0,12.79615293871549 a:1
+reww 14.444499174231096
+state 4.0,12.537832068852705 a:1
+reww 8.776482448196893
+state 4.0,10.990987021520532 a:1
+reww 7.693690915064372
+state 4.0,10.359245279999993 a:1
+reww 16.51954565743999
+state 4.0,11.529979101199999 a:1
+reww 8.070985370839999
+state 4.0,10.808779012829092 a:1
+reww 7.566145308980364
+state 4.0,13.470599410359995 a:1
+reww 15.058245463427594
+state 4.0,12.663437403797811 a:1
+reww 8.864406182658467
+state 4.0,10.759999999999998 a:1
+reww 7.531999999999998
+state 4.0,9.788242799999999 a:1
+reww 6.851769959999999
+state 4.0,10.455530988 a:1
+reww 16.613231651324
+state 4.0,14.364355660247082 a:1
+reww 10.0
+state 4.0,14.671284797389696 a:1
+reww 16.069899358172787
+state 4.0,13.131999999999998 a:1
+reww 9.192399999999997
+state 4.0,14.638267195789053 a:1
+reww 16.046787037052336
+state 4.0,10.859061359999998 a:1
+reww 12.681745837599998
+state 4.0,9.924120865679999 a:1
+reww 16.096169602306638
+state 4.0,9.679565884361352 a:1
+reww 6.775696119052946
+state 4.0,13.140419130650546 a:1
+reww 9.198293391455381
+state 4.0,11.159488017436615 a:1
+reww 7.81164161220563
+state 4.0,10.079999999999998 a:1
+reww 16.247839999999997
+state 4.0,12.976129263999997 a:1
+reww 9.083290484799997
+state 4.0,14.422211999999996 a:1
+reww 10.0
+state 4.0,14.715760144671394 a:1
+reww 10.0
+state 4.0,12.386177557557879 a:1
+reww 8.670324290290514
+state 4.0,14.482267689679997 a:1
+reww 10.0
+state 4.0,10.147584292818152 a:1
+reww 16.313599516912063
+state 4.0,10.505056778135788 a:1
+reww 7.353539744695051
+state 4.0,14.6742258376 a:1
+reww 10.0
+state 4.0,11.671958086319997 a:1
+reww 17.796815217989355
+state 4.0,9.712600007831451 a:1
+reww 6.798820005482016
+state 4.0,12.264104702421136 a:1
+reww 8.584873291694795
+state 4.0,12.937976373879131 a:1
+reww 9.056583461715391
+state 4.0,9.472654383731996 a:1
+reww 11.420115489196116
+state 4.0,9.836777226175117 a:1
+reww 6.885744058322582
+state 4.0,10.114266188399881 a:1
+reww 7.079986331879916
+state 4.0,14.31717047247612 a:1
+reww 15.822019330733283
+state 4.0,10.550427096 a:1
+reww 16.705565564408
+state 4.0,9.397952538695595 a:1
+reww 15.584207820150812
+state 4.0,13.776 a:1
+reww 9.643199999999998
+state 4.0,13.96150698845937 a:1
+reww 9.773054891921557
+state 4.0,13.279443782687125 a:1
+reww 9.295610647880986
+state 4.0,12.636560303107995 a:1
+reww 18.735373174924078
+state 4.0,9.528107184967084 a:1
+reww 15.710848290972972
+state 4.0,14.374595940191993 a:1
+reww 10.0
+state 4.0,11.462217158134393 a:1
+reww 17.592737294864765
+state 4.0,14.387061359999993 a:1
+reww 10.0
+state 4.0,13.614208236787931 a:1
+reww 9.52994576575155
+state 4.0,13.831999999999992 a:1
+reww 15.387119999999992
+state 4.0,14.49741177547751 a:1
+reww 10.0
+state 4.0,10.883731769983978 a:1
+reww 7.618612238988784
+state 4.0,9.599921268 a:1
+reww 6.719944887599999
+state 4.0,14.71629434117767 a:1
+reww 10.0
+state 4.0,11.289440000000003 a:1
+reww 7.902608000000002
+state 4.0,13.13954768 a:1
+reww 9.197683375999999
+state 4.0,13.042185874480555 a:1
+reww 9.129530112136388
+state 4.0,9.464679999999998 a:1
+reww 15.649133639999997
+state 4.0,11.213587133377406 a:1
+reww 7.849510993364183
+state 4.0,10.754853298009252 a:1
+reww 7.5283973086064755
+state 4.0,13.803396037199995 a:1
+reww 9.662377226039997
+state 4.0,9.448124000000002 a:1
+reww 11.397792840000001
+state 4.0,13.388210563951242 a:1
+reww 19.46672887872456
+state 4.0,9.65804 a:1
+reww 15.83727292
+state 4.0,12.60629316835508 a:1
+reww 18.70592325280949
+state 4.0,9.611181258617336 a:1
+reww 6.727826881032135
+state 4.0,10.759999999999998 a:1
+reww 16.909479999999995
+get learnt!
+wynik sieci 4.731145323157644
+weights! <tf.Variable 'dense_5_12/kernel:0' shape=(3, 15) dtype=float32, numpy=
+array([[ 0.16809341, -0.6004093 , -0.56596386, -0.4463343 , -0.5685279 ,
+        -0.39508313, -0.28478456, -0.35216576,  0.00492444,  0.21628533,
+         0.22558509,  0.08135162, -0.08849001, -0.07778411,  0.49559763],
+       [-0.3641898 ,  0.14358464,  0.01083662, -0.43949464,  0.41115496,
+        -0.26095414,  0.24498744, -0.07836033, -0.11734729,  0.46176356,
+        -0.4549303 ,  0.13581179,  0.253307  ,  0.25978914,  0.16133928],
+       [ 0.3543608 ,  0.08562979, -0.3105163 ,  0.30763707, -0.2787386 ,
+        -0.12939258, -0.14145151, -0.48395947, -0.3077054 , -0.20089045,
+        -0.05343169,  0.13709356,  0.17153144, -0.25493598,  0.08406418]],
+      dtype=float32)>
+rewards_mean:9.730158730158731 rewards_sum:875.7142857142858 cars_out:865.7142857142858
+result! (9.730158730158731, 875.7142857142858, 865.7142857142858)
+czas 27.16365544480018
+state 4.0,11.600000000000001 a:1
+reww 8.120000000000001
+state 4.0,14.832116649744794 a:1
+reww 20.837226151267764
+state 4.0,9.605303430421216 a:1
+reww 6.723712401294851
+state 4.0,10.417113720388457 a:1
+reww 7.291979604271919
+state 4.0,11.907921001827972 a:1
+reww 18.026407134778616
+state 4.0,10.5351460599556 a:1
+reww 16.6906971163368
+state 4.0,14.399999999999999 a:1
+reww 15.879999999999999
+state 4.0,12.54036 a:1
+reww 8.778251999999998
+state 4.0,11.617282151723558 a:1
+reww 13.371726758068437
+state 4.0,14.948286828202338 a:1
+reww 20.942941013664125
+state 4.0,10.557412047946713 a:1
+reww 7.390188433562698
+state 4.0,14.399999999999999 a:1
+reww 10.0
+state 4.0,11.479999999999997 a:1
+reww 13.246799999999997
+state 4.0,9.6419876 a:1
+reww 11.574208716000001
+state 4.0,10.41645097743972 a:1
+reww 7.291515684207803
+state 4.0,10.587454705262338 a:1
+reww 7.411218293683636
+state 4.0,9.560628000000001 a:1
+reww 6.6924396
+state 4.0,13.0139074970716 a:1
+reww 9.10973524795012
+state 4.0,13.906052972655822 a:1
+reww 9.734237080859074
+state 4.0,10.973599999999998 a:1
+reww 12.785975999999998
+state 4.0,11.758812205643999 a:1
+reww 8.2311685439508
+state 4.0,10.869350563185243 a:1
+reww 12.691109012498572
+state 4.0,9.363631759582802 a:1
+reww 6.554542231707961
+state 4.0,12.79000044 a:1
+reww 18.88467042812
+state 4.0,12.326740803578158 a:1
+reww 14.017334131256124
+state 4.0,10.016584670625424 a:1
+reww 7.011609269437796
+state 4.0,11.152437946581937 a:1
+reww 7.8067065626073555
+state 4.0,10.326302542673194 a:1
+reww 16.487492374021016
+state 4.0,12.751640552829148 a:1
+reww 8.926148386980403
+state 4.0,11.032 a:1
+reww 12.83912
+state 4.0,10.040351017148566 a:1
+reww 7.028245712003996
+state 4.0,10.508473713601198 a:1
+reww 16.664744923333963
+state 4.0,9.250115497780204 a:1
+reww 6.475080848446142
+state 4.0,11.165571723999996 a:1
+reww 17.304101287451996
+state 4.0,12.719999999999999 a:1
+reww 18.81656
+state 4.0,9.470215943999994 a:1
+reww 6.629151160799996
+state 4.0,10.072121743768001 a:1
+reww 7.0504852206376
+state 4.0,12.237367952808107 a:1
+reww 8.566157566965675
+state 4.0,9.973492155999992 a:1
+reww 16.14420786778799
+state 4.0,14.814499943599996 a:1
+reww 20.821194948675995
+state 4.0,9.492711083977682 a:1
+reww 15.676407884710287
+state 4.0,12.78705881149832 a:1
+reww 14.436223518463471
+state 4.0,14.399999999999999 a:1
+reww 20.444
+state 4.0,9.63844 a:1
+reww 6.7469079999999995
+state 4.0,14.767795475999996 a:1
+reww 10.0
+state 4.0,12.216643783547532 a:1
+reww 13.917145843028253
+state 4.0,9.564727793598111 a:1
+reww 6.695309455518678
+state 4.0,10.08601498565892 a:1
+reww 7.060210489961244
+state 4.0,10.965693199999997 a:1
+reww 7.6759852399999975
+state 4.0,11.600000000000001 a:1
+reww 8.120000000000001
+state 4.0,10.385199999999998 a:1
+reww 16.544799599999997
+state 4.0,14.264603480654797 a:1
+reww 9.985222436458358
+state 4.0,12.303827698159381 a:1
+reww 18.411624350309076
+state 4.0,13.139771269598597 a:1
+reww 9.197839888719017
+state 4.0,10.735892740287508 a:1
+reww 7.515124918201255
+state 4.0,11.44166153486119 a:1
+reww 17.57273667341994
+state 4.0,14.032586797519144 a:1
+reww 9.822810758263401
+state 4.0,14.052799999999998 a:1
+reww 15.588047999999997
+state 4.0,12.719999999999999 a:1
+reww 8.903999999999998
+state 4.0,11.29651736146144 a:1
+reww 17.43151139270198
+state 4.0,12.890987933099144 a:1
+reww 9.0236915531694
+state 4.0,14.970853335515997 a:1
+reww 20.963476535319558
+state 4.0,12.264407937599998 a:1
+reww 13.960611223215999
+state 4.0,10.0126577000688 a:1
+reww 7.008860390048159
+state 4.0,9.239999999999998 a:1
+reww 6.467999999999998
+state 4.0,14.604878275822799 a:1
+reww 10.0
+state 4.0,13.548831274025051 a:1
+reww 19.623012829626376
+state 4.0,13.15404507676 a:1
+reww 9.207831553732
+state 4.0,14.798065801086711 a:1
+reww 20.806239878988904
+state 4.0,9.65804 a:1
+reww 11.588816399999999
+state 4.0,14.43470706112148 a:1
+reww 10.0
+state 4.0,9.415306200679993 a:1
+reww 15.601092933261633
+state 4.0,14.258275150724494 a:1
+reww 20.31330172165493
+state 4.0,9.553911094073225 a:1
+reww 15.735955494533247
+get learnt!
+wynik sieci 5.873870426349425
+weights! <tf.Variable 'dense_5_16/kernel:0' shape=(3, 15) dtype=float32, numpy=
+array([[ 0.162109  , -0.60438967, -0.57095075, -0.4514297 , -0.5691873 ,
+        -0.39959824, -0.28250703, -0.35512158,  0.00705158,  0.21949358,
+         0.2227631 ,  0.08397264, -0.08282741, -0.08139274,  0.49512997],
+       [-0.36558986,  0.14460886,  0.01136777, -0.44123223,  0.41395953,
+        -0.26065853,  0.24622004, -0.07771034, -0.11822545,  0.4616773 ,
+        -0.45535788,  0.13596193,  0.25178495,  0.2598719 ,  0.1573725 ],
+       [ 0.33799663,  0.06813396, -0.3296157 ,  0.29557973, -0.292195  ,
+        -0.14613742, -0.14121258, -0.49669355, -0.2947821 , -0.18773644,
+        -0.06193312,  0.14506751,  0.19210485, -0.26907754,  0.09832837]],
+      dtype=float32)>
+rewards_mean:9.730158730158731 rewards_sum:875.7142857142858 cars_out:865.7142857142858
+result! (9.730158730158731, 875.7142857142858, 865.7142857142858)
+czas 33.54972156488171
+state 4.0,11.600000000000001 a:1
+reww 8.120000000000001
+state 4.0,12.21087110279148 a:1
+reww 8.547609771954034
+state 4.0,13.142183199999995 a:1
+reww 14.759386711999994
+state 4.0,12.843686799999999 a:1
+reww 8.990580759999999
+state 4.0,12.131999999999998 a:1
+reww 18.244436
+state 4.0,11.014981059333195 a:1
+reww 7.710486741533236
+state 4.0,12.427346931999997 a:1
+reww 8.699142852399998
+state 4.0,10.154773999302797 a:1
+reww 7.108341799511957
+state 4.0,10.532502539853589 a:1
+reww 12.384577311266765
+state 4.0,14.325883879999996 a:1
+reww 10.0
+state 4.0,12.242121170839994 a:1
+reww 18.351583899227315
+state 4.0,14.601596695854631 a:1
+reww 10.0
+state 4.0,9.354347666678137 a:1
+reww 6.548043366674696
+state 4.0,11.055089107001685 a:1
+reww 12.860131087371531
+state 4.0,11.02540771999999 a:1
+reww 7.717785403999993
+state 4.0,10.715335621199998 a:1
+reww 7.500734934839998
+state 4.0,13.422517937356524 a:1
+reww 19.500109953047897
+state 4.0,9.745685589016034 a:1
+reww 11.668573886004591
+state 4.0,9.511914519893047 a:1
+reww 11.455842213102672
+state 4.0,14.876 a:1
+reww 10.0
+state 4.0,10.31287342874868 a:1
+reww 16.474425846172466
+state 4.0,10.09628524 a:1
+reww 11.9876195684
+state 4.0,9.00525040759807 a:1
+reww 15.202108646592922
+state 4.0,10.784294035772135 a:1
+reww 12.613707572552642
+state 4.0,10.975062137314389 a:1
+reww 7.682543496120071
+state 4.0,10.293334134185216 a:1
+reww 7.205333893929651
+state 4.0,9.141923999999998 a:1
+reww 6.399346799999998
+state 4.0,10.816030759183015 a:1
+reww 16.963997928685075
+state 4.0,9.600234307844676 a:1
+reww 6.720164015491273
+state 4.0,12.131999999999998 a:1
+reww 18.244436
+state 4.0,14.381830335599995 a:1
+reww 10.0
+state 4.0,12.515277463577554 a:1
+reww 14.188902491855574
+state 4.0,14.530587223487185 a:1
+reww 15.97141105644103
+state 4.0,9.856000000000002 a:1
+reww 6.8992
+state 4.0,14.514183200000002 a:1
+reww 15.95992824
+state 4.0,10.187978472000005 a:1
+reww 7.1315849304000025
+state 4.0,10.583328062536712 a:1
+reww 7.408329643775698
+state 4.0,10.463040409491594 a:1
+reww 16.620538318435322
+state 4.0,14.4997227676 a:1
+reww 10.0
+state 4.0,11.549805937320002 a:1
+reww 13.310323402961203
+state 4.0,9.967637774051163 a:1
+reww 6.977346441835813
+state 4.0,14.812818264205434 a:1
+reww 20.81966462042694
+state 4.0,9.600042691891325 a:1
+reww 6.720029884323927
+state 4.0,12.1855630092 a:1
+reww 13.888862338371998
+state 4.0,10.0076904695796 a:1
+reww 11.906998327317435
+state 4.0,10.165680000000002 a:1
+reww 16.33120664
+state 4.0,9.607571821679997 a:1
+reww 11.542890357728798
+state 4.0,12.454142828398032 a:1
+reww 14.133269973842209
+state 4.0,14.844291999999998 a:1
+reww 10.0
+state 4.0,9.754420156439997 a:1
+reww 11.676522342360396
+state 4.0,11.323779195775522 a:1
+reww 13.104639068155723
+state 4.0,13.554711727606735 a:1
+reww 19.628734510961355
+state 4.0,13.092399999999998 a:1
+reww 19.178905199999996
+state 4.0,9.6208 a:1
+reww 6.734559999999999
+state 4.0,13.313996077373197 a:1
+reww 19.39451818328412
+state 4.0,11.106871999999996 a:1
+reww 7.774810399999996
+state 4.0,14.313989228306186 a:1
+reww 10.0
+state 4.0,11.419792459814328 a:1
+reww 17.55145806339934
+state 4.0,13.719999999999999 a:1
+reww 9.604
+state 4.0,11.527600987141263 a:1
+reww 17.656355760488452
+state 4.0,9.718800000000002 a:1
+reww 6.803160000000001
+state 4.0,13.723853995637434 a:1
+reww 9.606697796946204
+state 4.0,11.600000000000001 a:1
+reww 8.120000000000001
+state 4.0,10.385199999999998 a:1
+reww 7.269639999999998
+state 4.0,11.119095046479995 a:1
+reww 12.918376492296794
+state 4.0,14.412608 a:1
+reww 15.888825599999999
+state 4.0,10.166647679999997 a:1
+reww 16.33214819264
+state 4.0,9.052799999999998 a:1
+reww 6.336959999999998
+state 4.0,9.807533119999995 a:1
+reww 6.865273183999996
+state 4.0,11.231733723240623 a:1
+reww 13.020877688148968
+get learnt!
+wynik sieci 5.279540919456162
+weights! <tf.Variable 'dense_5_20/kernel:0' shape=(3, 15) dtype=float32, numpy=
+array([[ 0.16084746, -0.605871  , -0.5725245 , -0.45232785, -0.570577  ,
+        -0.40093535, -0.282237  , -0.35626572,  0.00813119,  0.22053902,
+         0.22211355,  0.0846004 , -0.08102847, -0.08245771,  0.49641958],
+       [-0.36654553,  0.14362854,  0.01032383, -0.44184572,  0.41301695,
+        -0.26159066,  0.2464665 , -0.07857209, -0.11739697,  0.4623928 ,
+        -0.4558408 ,  0.13635604,  0.2529484 ,  0.25914478,  0.15812421],
+       [ 0.33509225,  0.06447863, -0.33337146,  0.29345667, -0.2957254 ,
+        -0.14944707, -0.14164314, -0.49958166, -0.29176733, -0.18498816,
+        -0.0635265 ,  0.14661811,  0.1960466 , -0.2719653 ,  0.10175893]],
+      dtype=float32)>
+rewards_mean:9.730158730158731 rewards_sum:875.7142857142858 cars_out:865.7142857142858
+result! (9.730158730158731, 875.7142857142858, 865.7142857142858)
+czas 40.217390760482935
+state 4.0,14.876 a:1
+reww 20.87716
+state 4.0,12.459431599999995 a:1
+reww 8.721602119999996
+state 4.0,11.016480635999997 a:1
+reww 12.824997378759997
+state 4.0,10.248684138333196 a:1
+reww 7.174078896833237
+state 4.0,11.877734562440057 a:1
+reww 17.997035729254176
+state 4.0,12.318130337025483 a:1
+reww 8.622691235917838
+state 4.0,10.294871145643995 a:1
+reww 7.206409801950796
+state 4.0,12.978092623999999 a:1
+reww 9.084664836799998
+state 4.0,13.621703080000003 a:1
+reww 19.693917096840003
+state 4.0,14.677945156000002 a:1
+reww 10.0
+state 4.0,9.895462242368918 a:1
+reww 6.926823569658242
+state 4.0,11.975725371205733 a:1
+reww 8.383007759844013
+state 4.0,10.440431629567243 a:1
+reww 12.300792782906191
+state 4.0,9.743999999999998 a:1
+reww 6.820799999999998
+state 4.0,11.918278836799999 a:1
+reww 18.036485308206398
+state 4.0,12.168844896637552 a:1
+reww 8.518191427646286
+state 4.0,14.451577279999997 a:1
+reww 20.490935324799995
+state 4.0,13.043054079999996 a:1
+reww 9.130137855999996
+state 4.0,14.986873076586164 a:1
+reww 10.0
+state 4.0,10.900239999999997 a:1
+reww 12.719218399999995
+state 4.0,13.409492608127188 a:1
+reww 9.38664482568903
+state 4.0,10.759999999999998 a:1
+reww 7.531999999999998
+state 4.0,12.991800311423164 a:1
+reww 14.62253828339508
+state 4.0,14.919951919916357 a:1
+reww 10.0
+state 4.0,13.947120544 a:1
+reww 9.762984380799999
+state 4.0,9.585886882358917 a:1
+reww 11.523157062946614
+state 4.0,9.843910873588609 a:1
+reww 6.890737611512026
+state 4.0,9.241824807999997 a:1
+reww 6.469277365599997
+state 4.0,9.396275999999993 a:1
+reww 6.577393199999995
+state 4.0,10.373217959999998 a:1
+reww 7.261252571999998
+state 4.0,9.943404128083998 a:1
+reww 6.960382889658798
+state 4.0,14.775999999999996 a:1
+reww 16.143199999999997
+state 4.0,9.970071999999998 a:1
+reww 11.872765519999998
+state 4.0,14.568394927671703 a:1
+reww 20.597239384181247
+state 4.0,10.430120279999997 a:1
+reww 16.588507032439995
+state 4.0,9.7349206069748 a:1
+reww 6.8144444248823595
+state 4.0,9.301319999999999 a:1
+reww 15.490184359999997
+state 4.0,13.856378407837248 a:1
+reww 15.409304351131894
+state 4.0,12.430305738416443 a:1
+reww 8.701214016891509
+state 4.0,9.491999999999997 a:1
+reww 6.644399999999997
+state 4.0,13.168366329457918 a:1
+reww 9.217856430620541
+state 4.0,10.231024895301218 a:1
+reww 16.394787223128084
+state 4.0,9.491999999999997 a:1
+reww 6.644399999999997
+state 4.0,11.505087329667951 a:1
+reww 8.053561130767566
+state 4.0,10.176468 a:1
+reww 7.123527599999999
+state 4.0,9.1654652587086 a:1
+reww 15.357997696723467
+state 4.0,13.446414818591997 a:1
+reww 9.412490373014396
+state 4.0,10.656622978333026 a:1
+reww 7.459636084833117
+state 4.0,11.018557587190529 a:1
+reww 17.161056532336385
+state 4.0,11.774803759999998 a:1
+reww 13.515071421599998
+state 4.0,13.486225057625184 a:1
+reww 19.562096981069303
+state 4.0,14.876 a:1
+reww 20.87716
+state 4.0,9.61792692 a:1
+reww 6.732548844
+state 4.0,10.419764653199998 a:1
+reww 7.293835257239998
+state 4.0,11.414550261403129 a:1
+reww 7.99018518298219
+state 4.0,10.571299079999996 a:1
+reww 12.419882162799997
+state 4.0,9.613936002599601 a:1
+reww 11.548681762365636
+state 4.0,9.509067543080171 a:1
+reww 6.656347280156119
+state 4.0,13.977712952399997 a:1
+reww 9.784399066679997
+state 4.0,9.669807185341071 a:1
+reww 11.599524538660374
+state 4.0,9.84919785267649 a:1
+reww 16.023269510654224
+state 4.0,13.77249239305317 a:1
+reww 9.640744675137219
+state 4.0,13.584689767599997 a:1
+reww 9.509282837319997
+state 4.0,13.708635549940512 a:1
+reww 9.596044884958358
+state 4.0,12.131999999999998 a:1
+reww 8.492399999999998
+state 4.0,9.239999999999998 a:1
+reww 15.43052
+state 4.0,10.803051512519996 a:1
+reww 16.951369121681957
+state 4.0,9.696177673586627 a:1
+reww 6.787324371510638
+state 4.0,10.105338118017233 a:1
+reww 16.272493988830767
+state 4.0,9.682990890430528 a:1
+reww 6.778093623301369
+get learnt!
+wynik sieci 5.387966192888292
+weights! <tf.Variable 'dense_5_24/kernel:0' shape=(3, 15) dtype=float32, numpy=
+array([[ 0.15969263, -0.60664976, -0.57352   , -0.4531296 , -0.57089263,
+        -0.4018495 , -0.28144693, -0.35697797,  0.00888869,  0.22122142,
+         0.22148095,  0.08504558, -0.08030154, -0.08313954,  0.49661008],
+       [-0.36670393,  0.14423056,  0.01069628, -0.44178122,  0.41383654,
+        -0.26132226,  0.24714285, -0.07824138, -0.11754356,  0.4621355 ,
+        -0.45588878,  0.1362205 ,  0.25197318,  0.2594365 ,  0.15712366],
+       [ 0.33226517,  0.06072027, -0.33733147,  0.29177254, -0.2998739 ,
+        -0.15281402, -0.14328817, -0.5020804 , -0.28965548, -0.1826581 ,
+        -0.06447939,  0.1481687 ,  0.20057727, -0.2748082 ,  0.10579559]],
+      dtype=float32)>
+rewards_mean:9.730158730158731 rewards_sum:875.7142857142858 cars_out:865.7142857142858
+result! (9.730158730158731, 875.7142857142858, 865.7142857142858)
+czas 46.69132126620784
+state 4.0,14.541310783955744 a:1
+reww 10.0
+state 4.0,12.393669598896821 a:1
+reww 8.675568719227774
+state 4.0,9.411079999999998 a:1
+reww 6.587755999999999
+state 4.0,12.719999999999999 a:1
+reww 18.81656
+state 4.0,9.338424783199994 a:1
+reww 6.536897348239995
+state 4.0,9.013199999999998 a:1
+reww 11.002011999999997
+state 4.0,11.37220924911864 a:1
+reww 7.960546474383047
+state 4.0,14.092399999999998 a:1
+reww 20.151905199999995
+state 4.0,11.952657673518395 a:1
+reww 8.366860371462876
+state 4.0,12.806518359599998 a:1
+reww 18.9007423638908
+state 4.0,9.800430731940871 a:1
+reww 11.718391966066193
+state 4.0,11.600000000000001 a:1
+reww 17.7268
+state 4.0,10.078836378283047 a:1
+reww 7.055185464798132
+state 4.0,10.516555639439439 a:1
+reww 16.672608637174573
+state 4.0,12.277342146533055 a:1
+reww 8.594139502573137
+state 4.0,13.503999999999996 a:1
+reww 19.579391999999995
+state 4.0,10.247999999999998 a:1
+reww 7.173599999999998
+state 4.0,10.186456 a:1
+reww 12.06967496
+state 4.0,10.050777534561725 a:1
+reww 7.035544274193207
+state 4.0,14.910566102002234 a:1
+reww 16.23739627140156
+state 4.0,9.590279999999998 a:1
+reww 11.527154799999998
+state 4.0,9.455989452363998 a:1
+reww 15.640677737150169
+state 4.0,11.691118427911764 a:1
+reww 8.183782899538235
+state 4.0,9.920424239999996 a:1
+reww 6.944296967999996
+state 4.0,14.99943771060504 a:1
+reww 16.299606397423528
+state 4.0,10.00291734345894 a:1
+reww 7.002042140421257
+state 4.0,11.150428849488463 a:1
+reww 17.289367270552273
+state 4.0,9.47285702596387 a:1
+reww 6.630999918174709
+state 4.0,10.351058832058893 a:1
+reww 7.245741182441225
+state 4.0,10.573722354732368 a:1
+reww 7.401605648312657
+state 4.0,13.3063835492 a:1
+reww 19.3871111933716
+state 4.0,9.630471695999994 a:1
+reww 6.7413301871999955
+state 4.0,12.03688287626288 a:1
+reww 8.425818013384015
+state 4.0,9.239999999999998 a:1
+reww 15.43052
+state 4.0,14.305872601774857 a:1
+reww 15.814110821242398
+state 4.0,10.759999999999998 a:1
+reww 16.909479999999995
+state 4.0,9.6286092 a:1
+reww 6.740026439999999
+state 4.0,12.578933367834303 a:1
+reww 8.80525335748401
+state 4.0,10.170372243550148 a:1
+reww 7.119260570485102
+state 4.0,10.175044719801871 a:1
+reww 7.122531303861309
+state 4.0,9.92301210166761 a:1
+reww 11.829941012517523
+state 4.0,12.715976000000005 a:1
+reww 8.901183200000002
+state 4.0,14.650392225895999 a:1
+reww 10.0
+state 4.0,12.409082413732698 a:1
+reww 14.092264996496754
+state 4.0,10.02177219206516 a:1
+reww 7.015240534445612
+state 4.0,10.110799999999998 a:1
+reww 7.077559999999997
+state 4.0,10.433727956931996 a:1
+reww 7.303609569852397
+state 4.0,10.59108287095572 a:1
+reww 16.745123633439917
+state 4.0,13.83298464054343 a:1
+reww 19.899494055248752
+state 4.0,12.01925982519674 a:1
+reww 8.413481877637716
+state 4.0,11.112781836012743 a:1
+reww 7.77894728520892
+state 4.0,12.979421454559999 a:1
+reww 9.085595018191999
+state 4.0,10.759999999999998 a:1
+reww 7.531999999999998
+state 4.0,9.983204 a:1
+reww 16.153657492
+state 4.0,9.624204766680002 a:1
+reww 6.736943336676001
+state 4.0,10.164264195789485 a:1
+reww 7.114984937052639
+state 4.0,14.876 a:1
+reww 20.87716
+state 4.0,13.894646852598115 a:1
+reww 15.444128635864281
+state 4.0,14.883890215599997 a:1
+reww 10.0
+state 4.0,9.768042180584267 a:1
+reww 6.837629526408986
+state 4.0,9.268 a:1
+reww 6.4876000000000005
+state 4.0,12.480996847003993 a:1
+reww 8.736697792902795
+state 4.0,10.698944342022784 a:1
+reww 7.489261039415949
+state 4.0,11.759999999999998 a:1
+reww 8.231999999999998
+state 4.0,10.086103999999999 a:1
+reww 7.060272799999999
+state 4.0,14.724013810394155 a:1
+reww 10.0
+get learnt!
+wynik sieci 3.795591182923049
+weights! <tf.Variable 'dense_5_28/kernel:0' shape=(3, 15) dtype=float32, numpy=
+array([[ 0.15857951, -0.60764176, -0.5747804 , -0.45418304, -0.57139856,
+        -0.40287143, -0.28112915, -0.35770506,  0.00947539,  0.22211686,
+         0.2209115 ,  0.08561178, -0.07909125, -0.08402707,  0.49668732],
+       [-0.36668682,  0.14476904,  0.01089713, -0.44179496,  0.4146249 ,
+        -0.2610782 ,  0.24719554, -0.07772059, -0.11803418,  0.4617801 ,
+        -0.4557299 ,  0.13605084,  0.25158095,  0.25966218,  0.15599167],
+       [ 0.32857507,  0.05554934, -0.3425933 ,  0.2891816 , -0.30562535,
+        -0.15736511, -0.14504124, -0.5061602 , -0.28569233, -0.17889838,
+        -0.06626634,  0.15031782,  0.20616597, -0.27887762,  0.11087883]],
+      dtype=float32)>
+rewards_mean:9.730158730158731 rewards_sum:875.7142857142858 cars_out:865.7142857142858
+result! (9.730158730158731, 875.7142857142858, 865.7142857142858)
+czas 53.20825509929816
+state 4.0,11.606169867599995 a:1
+reww 8.124318907319996
+state 4.0,9.64838428362598 a:1
+reww 6.753868998538185
+state 4.0,10.426160699561457 a:1
+reww 7.29831248969302
+state 4.0,10.212645622835531 a:1
+reww 16.376904191018973
+state 4.0,9.996 a:1
+reww 11.896360000000001
+state 4.0,9.869748000000003 a:1
+reww 11.781470680000002
+state 4.0,14.989027242276357 a:1
+reww 10.0
+state 4.0,12.07503544 a:1
+reww 8.452524808
+state 4.0,11.418075361920234 a:1
+reww 7.992652753344164
+state 4.0,9.340567712777055 a:1
+reww 6.538397398943938
+state 4.0,10.178420535252151 a:1
+reww 7.124894374676505
+state 4.0,12.499200000000002 a:1
+reww 14.174272
+state 4.0,10.515046469859488 a:1
+reww 12.368692287572133
+state 4.0,9.9621056 a:1
+reww 11.865516095999999
+state 4.0,11.261319999999998 a:1
+reww 17.397264359999998
+state 4.0,14.379411325355996 a:1
+reww 10.0
+state 4.0,11.759999999999998 a:1
+reww 8.231999999999998
+state 4.0,14.654213671999997 a:1
+reww 10.0
+state 4.0,11.6579495704 a:1
+reww 8.16056469928
+state 4.0,14.835603010794156 a:1
+reww 16.18492210755591
+state 4.0,12.893439599999994 a:1
+reww 9.025407719999995
+state 4.0,13.00273493484 a:1
+reww 9.101914454387998
+state 4.0,13.379786997356526 a:1
+reww 19.4585327484279
+state 4.0,9.744877974250038 a:1
+reww 6.821414581975026
+state 4.0,14.234641955488286 a:1
+reww 9.964249368841799
+state 4.0,14.402648954538918 a:1
+reww 10.0
+state 4.0,10.59739134645153 a:1
+reww 12.443626125270892
+state 4.0,11.059721358715322 a:1
+reww 7.7418049511007245
+state 4.0,14.187599999999996 a:1
+reww 9.931319999999996
+state 4.0,11.335904039999996 a:1
+reww 7.935132827999996
+state 4.0,13.403999999999996 a:1
+reww 9.382799999999996
+state 4.0,10.2552716 a:1
+reww 7.17869012
+state 4.0,11.123887213347999 a:1
+reww 12.922737364146679
+state 4.0,9.940804894440923 a:1
+reww 6.958563426108646
+state 4.0,10.487569027832592 a:1
+reww 12.343687815327659
+state 4.0,9.387755999999996 a:1
+reww 6.571429199999997
+state 4.0,11.060000131999999 a:1
+reww 12.864600120119999
+state 4.0,9.755746005821202 a:1
+reww 11.677728865297293
+state 4.0,9.588759879199698 a:1
+reww 15.769863362461304
+state 4.0,12.702363310495471 a:1
+reww 8.891654317346829
+state 4.0,14.313686799999996 a:1
+reww 15.819580759999997
+state 4.0,12.058646932000006 a:1
+reww 8.441052852400004
+state 4.0,11.264309512364377 a:1
+reww 7.885016658655064
+state 4.0,9.239999999999998 a:1
+reww 11.208399999999997
+state 4.0,9.743999999999998 a:1
+reww 11.667039999999997
+state 4.0,14.77807026228141 a:1
+reww 16.144649183596986
+state 4.0,12.552621898237192 a:1
+reww 14.222885927395843
+state 4.0,12.131999999999998 a:1
+reww 13.840119999999999
+state 4.0,10.004316 a:1
+reww 7.003021199999999
+state 4.0,10.411079999999998 a:1
+reww 7.287755999999998
+state 4.0,12.131999999999998 a:1
+reww 13.840119999999999
+state 4.0,9.803021199999998 a:1
+reww 6.8621148399999985
+state 4.0,12.34378471161027 a:1
+reww 8.640649298127189
+state 4.0,11.494536352606701 a:1
+reww 17.62418387108632
+state 4.0,13.692518907039997 a:1
+reww 9.584763234927998
+state 4.0,13.607559999999998 a:1
+reww 19.680155879999997
+state 4.0,9.287599999999998 a:1
+reww 15.476834799999997
+state 4.0,9.344418808546138 a:1
+reww 15.532119500715392
+state 4.0,12.0978788392868 a:1
+reww 8.46851518750076
+state 4.0,10.156610212793822 a:1
+reww 7.109627148955675
+state 4.0,13.051346443539273 a:1
+reww 9.135942510477491
+state 4.0,9.522211999999998 a:1
+reww 15.705112275999998
+state 4.0,14.784447092142106 a:1
+reww 20.793846853849317
+state 4.0,9.56061823502904 a:1
+reww 6.692432764520327
+state 4.0,9.591295932028395 a:1
+reww 15.772330941863625
+state 4.0,14.399999999999999 a:1
+reww 10.0
+state 4.0,12.990578176359996 a:1
+reww 14.621426140487596
+state 4.0,10.058406425110679 a:1
+reww 16.22682945163269
+state 4.0,14.280661900912396 a:1
+reww 15.79540232983028
+state 4.0,10.139681699757482 a:1
+reww 7.097777189830237
+state 4.0,12.506044442494034 a:1
+reww 14.180500442669569
+state 4.0,11.600000000000001 a:1
+reww 8.120000000000001
+state 4.0,10.835999999999999 a:1
+reww 16.983427999999996
+state 4.0,9.6968004 a:1
+reww 15.874986789200001
+state 4.0,9.622580858268002 a:1
+reww 6.735806600787601
+state 4.0,10.42074198023628 a:1
+reww 7.294519386165395
+state 4.0,10.211849071094733 a:1
+reww 12.092782654696208
+state 4.0,9.301319999999999 a:1
+reww 15.490184359999997
+state 4.0,9.620338484400001 a:1
+reww 6.7342369390800005
+state 4.0,10.165680000000002 a:1
+reww 16.33120664
+state 4.0,12.366193847737591 a:1
+reww 8.656335693416313
+get learnt!
+wynik sieci 5.492702039805326
+weights! <tf.Variable 'dense_5_32/kernel:0' shape=(3, 15) dtype=float32, numpy=
+array([[ 0.15795901, -0.6085127 , -0.57572836, -0.45484543, -0.5720829 ,
+        -0.40362558, -0.28097463, -0.3583925 ,  0.01011792,  0.22293437,
+         0.22048439,  0.08598755, -0.07818149, -0.08472838,  0.49721807],
+       [-0.36706647,  0.1444075 ,  0.01042451, -0.4421509 ,  0.41443166,
+        -0.26146787,  0.24730761, -0.07802741, -0.11775879,  0.46210745,
+        -0.455957  ,  0.13622011,  0.25202984,  0.2593226 ,  0.15601899],
+       [ 0.32675278,  0.05269746, -0.3454792 ,  0.2878387 , -0.30880687,
+        -0.15982626, -0.14635564, -0.5083782 , -0.28361705, -0.1767645 ,
+        -0.06714474,  0.15152703,  0.2092483 , -0.28113934,  0.11379962]],
+      dtype=float32)>
+rewards_mean:9.730158730158731 rewards_sum:875.7142857142858 cars_out:865.7142857142858
+result! (9.730158730158731, 875.7142857142858, 865.7142857142858)
+czas 59.63862547156921
+state 4.0,14.210923999999997 a:1
+reww 9.947646799999998
+state 4.0,12.615493337378588 a:1
+reww 18.714875017269364
+state 4.0,11.600000000000001 a:1
+reww 8.120000000000001
+state 4.0,9.585886519999999 a:1
+reww 6.710120563999999
+state 4.0,10.089125318439997 a:1
+reww 7.062387722907998
+state 4.0,11.249560000000002 a:1
+reww 7.874692000000001
+state 4.0,9.921619744212677 a:1
+reww 11.828673967233534
+state 4.0,10.705543430719775 a:1
+reww 16.856493758090338
+state 4.0,14.377867211313568 a:1
+reww 15.864507047919497
+state 4.0,11.482799999999997 a:1
+reww 8.037959999999998
+state 4.0,10.0838787119513 a:1
+reww 7.0587150983659095
+state 4.0,13.625276 a:1
+reww 15.199001159999998
+state 4.0,10.759999999999998 a:1
+reww 12.591599999999998
+state 4.0,11.983832839999998 a:1
+reww 13.705287884399997
+state 4.0,14.399999999999999 a:1
+reww 15.879999999999999
+state 4.0,9.640360000000001 a:1
+reww 15.82007028
+state 4.0,13.060058745990906 a:1
+reww 9.142041122193634
+state 4.0,13.503999999999996 a:1
+reww 15.088639999999995
+state 4.0,10.863526399999998 a:1
+reww 12.685809023999997
+state 4.0,13.144292 a:1
+reww 19.229396115999997
+state 4.0,12.19475696448869 a:1
+reww 13.897228837684708
+state 4.0,10.008269688762788 a:1
+reww 7.00578878213395
+state 4.0,12.719999999999999 a:1
+reww 8.903999999999998
+state 4.0,11.071199999999997 a:1
+reww 7.749839999999998
+state 4.0,14.940658536000003 a:1
+reww 16.258460975200002
+state 4.0,12.952799999999996 a:1
+reww 9.066959999999996
+state 4.0,11.96040910455239 a:1
+reww 8.372286373186673
+state 4.0,13.092399999999998 a:1
+reww 9.164679999999997
+state 4.0,14.796618335300225 a:1
+reww 16.157632834710157
+state 4.0,11.209564107769502 a:1
+reww 13.000703338070245
+state 4.0,10.682924 a:1
+reww 7.4780467999999995
+state 4.0,11.37905901839196 a:1
+reww 7.965341312874371
+state 4.0,9.68298353476634 a:1
+reww 6.778088474336437
+state 4.0,10.433426542300932 a:1
+reww 7.3033985796106515
+state 4.0,9.448124000000002 a:1
+reww 6.613686800000001
+state 4.0,11.910936702142795 a:1
+reww 18.029341411184937
+state 4.0,12.424464836196869 a:1
+reww 8.697125385337808
+state 4.0,14.005385759054114 a:1
+reww 9.80377003133788
+state 4.0,9.239999999999998 a:1
+reww 6.467999999999998
+state 4.0,10.340399999999995 a:1
+reww 12.209763999999996
+state 4.0,12.480192058139956 a:1
+reww 8.736134440697969
+state 4.0,11.020840332209389 a:1
+reww 7.714588232546571
+state 4.0,14.910044470184342 a:1
+reww 20.908140467867753
+state 4.0,13.836100005669348 a:1
+reww 15.390851005159105
+state 4.0,14.092399999999998 a:1
+reww 9.864679999999998
+state 4.0,10.979754612066891 a:1
+reww 7.685828228446823
+state 4.0,9.662850207295024 a:1
+reww 6.763995145106517
+state 4.0,9.870307286330656 a:1
+reww 6.909215100431458
+state 4.0,9.239999999999998 a:1
+reww 6.467999999999998
+state 4.0,11.448324299581131 a:1
+reww 17.57921954349244
+state 4.0,14.783923999999999 a:1
+reww 10.0
+state 4.0,14.797179246479992 a:1
+reww 16.158025472535993
+state 4.0,9.448124000000002 a:1
+reww 6.613686800000001
+state 4.0,11.068874227999999 a:1
+reww 7.748211959599998
+state 4.0,12.91090798491112 a:1
+reww 14.548926266269119
+state 4.0,14.399999999999999 a:1
+reww 10.0
+state 4.0,10.385199999999998 a:1
+reww 7.269639999999998
+state 4.0,14.15575189547744 a:1
+reww 15.681734224884469
+state 4.0,9.724588061013385 a:1
+reww 11.649375135522181
+state 4.0,10.759999999999998 a:1
+reww 7.531999999999998
+state 4.0,10.082069967395999 a:1
+reww 16.249854078276307
+state 4.0,10.486073871525058 a:1
+reww 16.64294987699388
+state 4.0,11.936648937199994 a:1
+reww 8.355654256039996
+state 4.0,13.322996822946514 a:1
+reww 19.403275908726958
+state 4.0,9.239999999999998 a:1
+reww 11.208399999999997
+state 4.0,12.335883708399997 a:1
+reww 18.442814848273198
+state 4.0,14.367725833316442 a:1
+reww 20.414630508317963
+state 4.0,9.6150450054749 a:1
+reww 15.79543879032708
+state 4.0,13.237680000000001 a:1
+reww 9.266376
+state 4.0,10.9667100904 a:1
+reww 17.110608917959198
+state 4.0,14.967116446836487 a:1
+reww 10.0
+state 4.0,12.904112656914336 a:1
+reww 18.99570161517765
+state 4.0,9.530584987315684 a:1
+reww 6.671409491120979
+state 4.0,10.443999999999999 a:1
+reww 12.304039999999999
+state 4.0,12.997585467393957 a:1
+reww 9.09830982717577
+state 4.0,11.12949294815273 a:1
+reww 17.268996638552608
+state 4.0,14.052799999999998 a:1
+reww 20.113374399999998
+state 4.0,14.746713212113562 a:1
+reww 20.75950902302334
+state 4.0,12.801449202984877 a:1
+reww 8.961014442089413
+state 4.0,10.756142014799998 a:1
+reww 16.9057261804004
+state 4.0,13.407267572501276 a:1
+reww 9.385087300750893
+state 4.0,9.472159231060122 a:1
+reww 6.630511461742085
+state 4.0,13.977235740589279 a:1
+reww 20.039850375593367
+state 4.0,9.567599999999999 a:1
+reww 6.697319999999999
+state 4.0,11.915153571719998 a:1
+reww 8.340607500203998
+state 4.0,9.65608 a:1
+reww 6.759255999999999
+state 4.0,10.4277768 a:1
+reww 12.289276888
+state 4.0,9.896949938399999 a:1
+reww 6.927864956879999
+state 4.0,13.156077304062947 a:1
+reww 9.209254112844063
+state 4.0,12.786010567218895 a:1
+reww 14.435269616169194
+state 4.0,14.109006109107995 a:1
+reww 9.876304276375595
+state 4.0,11.759999999999998 a:1
+reww 17.882479999999994
+state 4.0,9.714264000000002 a:1
+reww 6.799984800000001
+state 4.0,14.67801471646439 a:1
+reww 10.0
+state 4.0,11.674610301525071 a:1
+reww 13.423895374387815
+state 4.0,13.260517657803954 a:1
+reww 19.342483681043248
+get learnt!
+wynik sieci 6.188459684560587
+weights! <tf.Variable 'dense_5_36/kernel:0' shape=(3, 15) dtype=float32, numpy=
+array([[ 0.15773533, -0.60909116, -0.576412  , -0.4553169 , -0.5725185 ,
+        -0.40405256, -0.28114396, -0.35876772,  0.01046318,  0.22346918,
+         0.2203012 ,  0.08619536, -0.07758624, -0.08524329,  0.49773696],
+       [-0.3670088 ,  0.14454456,  0.01037754, -0.44223306,  0.41478884,
+        -0.2614316 ,  0.2473779 , -0.0779425 , -0.11780056,  0.46203107,
+        -0.4559538 ,  0.13614306,  0.25195193,  0.25931144,  0.1555763 ],
+       [ 0.32219484,  0.0455594 , -0.35266012,  0.28479218, -0.31709936,
+        -0.16599971, -0.15002322, -0.5141066 , -0.27823067, -0.17153737,
+        -0.06921524,  0.15454835,  0.21686655, -0.28679398,  0.12158813]],
+      dtype=float32)>
+rewards_mean:9.730158730158731 rewards_sum:875.7142857142858 cars_out:865.7142857142858
+result! (9.730158730158731, 875.7142857142858, 865.7142857142858)
+czas 66.41091487474108
+state 4.0,10.759999999999998 a:1
+reww 7.531999999999998
+state 4.0,12.05276996 a:1
+reww 13.768020663599998
+state 4.0,9.239999999999998 a:1
+reww 6.467999999999998
+state 4.0,12.838279999999996 a:1
+reww 18.931646439999994
+state 4.0,9.734643491999996 a:1
+reww 15.911808117715996
+state 4.0,11.780862773365584 a:1
+reww 17.902779478484714
+state 4.0,9.600260814491627 a:1
+reww 6.7201825701441384
+state 4.0,9.013199999999998 a:1
+reww 6.309239999999998
+state 4.0,10.292772 a:1
+reww 7.204940399999999
+state 4.0,12.809823809935875 a:1
+reww 18.903958567067605
+state 4.0,12.865827701615828 a:1
+reww 9.00607939113108
+state 4.0,12.719999999999999 a:1
+reww 8.903999999999998
+state 4.0,11.245370231293705 a:1
+reww 7.871759161905593
+state 4.0,10.333069424000172 a:1
+reww 7.2331485968001195
+state 4.0,13.985366968 a:1
+reww 15.526683940879998
+state 4.0,13.033529794811514 a:1
+reww 14.660512113278475
+state 4.0,10.267999999999997 a:1
+reww 7.187599999999997
+state 4.0,12.490106502709011 a:1
+reww 14.165996917465199
+state 4.0,11.600000000000001 a:1
+reww 17.7268
+state 4.0,9.485168000000002 a:1
+reww 6.639617600000001
+state 4.0,14.788129940754317 a:1
+reww 10.0
+state 4.0,11.066112623999999 a:1
+reww 7.746278836799998
+state 4.0,9.914702989009601 a:1
+reww 16.087006008306343
+state 4.0,12.435670019314358 a:1
+reww 18.539906928792867
+state 4.0,9.638110249009511 a:1
+reww 6.746677174306657
+state 4.0,10.920000000000002 a:1
+reww 17.065160000000002
+state 4.0,14.358547083999998 a:1
+reww 10.0
+state 4.0,13.463255064504352 a:1
+reww 9.424278545153046
+state 4.0,13.305863435222292 a:1
+reww 14.908335726052286
+state 4.0,14.055154866122521 a:1
+reww 20.115665684737213
+state 4.0,10.798814095999997 a:1
+reww 16.947246115407996
+state 4.0,9.404281909149425 a:1
+reww 15.590366297602392
+state 4.0,10.426952902449912 a:1
+reww 7.298867031714938
+state 4.0,9.411079999999998 a:1
+reww 11.364082799999998
+state 4.0,12.417953224161238 a:1
+reww 8.692567256912866
+state 4.0,10.759999999999998 a:1
+reww 12.591599999999998
+state 4.0,9.373682987999995 a:1
+reww 6.561578091599996
+state 4.0,11.465310199832096 a:1
+reww 13.233432281847207
+state 4.0,12.349073888108173 a:1
+reww 18.45564889312925
+state 4.0,14.399999999999999 a:1
+reww 10.0
+state 4.0,11.759999999999998 a:1
+reww 17.882479999999994
+state 4.0,9.519989359999997 a:1
+reww 11.463190317599997
+state 4.0,10.687831530775998 a:1
+reww 12.52592669300616
+state 4.0,12.321969759581147 a:1
+reww 14.012992481218845
+state 4.0,11.427073207040003 a:1
+reww 17.558542230449923
+state 4.0,9.632391505083916 a:1
+reww 6.742674053558741
+state 4.0,12.067999999999998 a:1
+reww 13.781879999999997
+state 4.0,13.364749588621194 a:1
+reww 19.44390134972842
+state 4.0,12.719999999999999 a:1
+reww 8.903999999999998
+state 4.0,9.770652670292595 a:1
+reww 11.69129392996626
+state 4.0,12.31245403355235 a:1
+reww 8.618717823486644
+state 4.0,13.612719441646632 a:1
+reww 19.685176016722174
+state 4.0,9.74928039744712 a:1
+reww 15.926049826716046
+state 4.0,12.990814745582956 a:1
+reww 19.080062747452217
+state 4.0,9.470350400000001 a:1
+reww 6.62924528
+state 4.0,11.417504823384014 a:1
+reww 7.99225337636881
+state 4.0,12.09119182628126 a:1
+reww 8.463834278396881
+state 4.0,12.224899018612 a:1
+reww 18.334826745109474
+state 4.0,10.267125425323592 a:1
+reww 16.429913038839853
+state 4.0,9.329245279999995 a:1
+reww 6.530471695999996
+state 4.0,9.301319999999999 a:1
+reww 15.490184359999997
+state 4.0,13.76009662913534 a:1
+reww 9.632067640394737
+state 4.0,11.289620292118421 a:1
+reww 17.42480054423122
+state 4.0,9.468646985617276 a:1
+reww 6.628052889932093
+state 4.0,14.243450988507998 a:1
+reww 9.970415691955598
+state 4.0,10.773787295310676 a:1
+reww 7.541651106717473
+state 4.0,11.600000000000001 a:1
+reww 13.356000000000002
+state 4.0,9.408330649199996 a:1
+reww 6.585831454439997
+state 4.0,14.268532207764315 a:1
+reww 9.987972545435019
+state 4.0,12.131999999999998 a:1
+reww 18.244436
+state 4.0,9.636388439999998 a:1
+reww 6.745471907999998
+state 4.0,9.239999999999998 a:1
+reww 15.43052
+state 4.0,9.60599724 a:1
+reww 6.724198068
+state 4.0,11.824457115995997 a:1
+reww 13.560255975556357
+state 4.0,9.984940798307749 a:1
+reww 16.15534739675344
+state 4.0,9.624214614326403 a:1
+reww 6.736950230028482
+state 4.0,10.600004400000003 a:1
+reww 7.420003080000002
+state 4.0,9.908718316932003 a:1
+reww 16.081182922374836
+state 4.0,14.5646932 a:1
+reww 10.0
+state 4.0,12.931105599999997 a:1
+reww 9.051773919999997
+state 4.0,9.761239275457598 a:1
+reww 6.832867492820318
+state 4.0,10.449860247846097 a:1
+reww 7.314902173492267
+state 4.0,10.216129456433372 a:1
+reww 16.38029396110967
+get learnt!
+wynik sieci 4.617966665235977
+weights! <tf.Variable 'dense_5_40/kernel:0' shape=(3, 15) dtype=float32, numpy=
+array([[ 0.15699399, -0.61047465, -0.57805306, -0.45590436, -0.575193  ,
+        -0.40504485, -0.28195357, -0.35978103,  0.01156021,  0.22475156,
+         0.22012234,  0.08652449, -0.07605312, -0.08637214,  0.49956173],
+       [-0.3669861 ,  0.14482029,  0.01025731, -0.44183525,  0.41384265,
+        -0.2612969 ,  0.24688837, -0.07789232, -0.11748021,  0.46180496,
+        -0.45543414,  0.13529186,  0.25187495,  0.25948477,  0.15538214],
+       [ 0.31571463,  0.03547452, -0.3629138 ,  0.28092855, -0.32982504,
+        -0.17472059, -0.15696698, -0.52231723, -0.27068168, -0.16401993,
+        -0.07158191,  0.15907176,  0.2277275 , -0.29500964,  0.13286225]],
+      dtype=float32)>
+rewards_mean:9.730158730158731 rewards_sum:875.7142857142858 cars_out:865.7142857142858
+result! (9.730158730158731, 875.7142857142858, 865.7142857142858)
+czas 73.1886514195027
+state 4.0,9.444803760000001 a:1
+reww 6.6113626320000005
+state 4.0,12.520493022410236 a:1
+reww 8.764345115687163
+state 4.0,10.943454079999995 a:1
+reww 17.087980819839995
+state 4.0,10.132495645175155 a:1
+reww 7.092746951622607
+state 4.0,14.399999999999999 a:1
+reww 15.879999999999999
+state 4.0,14.452081580464471 a:1
+reww 10.0
+state 4.0,11.494729624539445 a:1
+reww 13.260203958330894
+state 4.0,12.732062774799374 a:1
+reww 8.91244394235956
+state 4.0,11.073733182707869 a:1
+reww 7.751613227895508
+state 4.0,11.139525599999999 a:1
+reww 12.936968295999998
+state 4.0,11.401681424679996 a:1
+reww 7.9811769972759965
+state 4.0,13.4646932 a:1
+reww 19.541146483600002
+state 4.0,10.535776523725197 a:1
+reww 12.387556636589927
+state 4.0,12.412839421287392 a:1
+reww 8.688987594901175
+state 4.0,13.254684967326028 a:1
+reww 9.278279477128219
+state 4.0,12.131999999999998 a:1
+reww 8.492399999999998
+state 4.0,9.88706796 a:1
+reww 6.920947571999999
+state 4.0,11.480978796316428 a:1
+reww 13.247690704647951
+state 4.0,13.721412470809597 a:1
+reww 9.604988729566717
+state 4.0,14.905079123521714 a:1
+reww 20.90362200240476
+state 4.0,9.239999999999998 a:1
+reww 11.208399999999997
+state 4.0,11.851691011999996 a:1
+reww 8.296183708399997
+state 4.0,10.888855112519998 a:1
+reww 12.708858152393198
+state 4.0,11.409614806557357 a:1
+reww 7.98673036459015
+state 4.0,14.503999999999998 a:1
+reww 15.952799999999998
+state 4.0,9.069658746178398 a:1
+reww 15.26477796003158
+state 4.0,9.411079999999998 a:1
+reww 6.587755999999999
+state 4.0,9.136444981790769 a:1
+reww 15.329760967282416
+state 4.0,14.399999999999999 a:1
+reww 20.444
+state 4.0,11.448872399999999 a:1
+reww 8.01421068
+state 4.0,10.3629842428 a:1
+reww 12.230315660947998
+state 4.0,9.560628000000001 a:1
+reww 15.742491044000001
+state 4.0,14.399620975907993 a:1
+reww 15.879734683135595
+state 4.0,12.714744283458472 a:1
+reww 14.37041729794721
+state 4.0,12.131999999999998 a:1
+reww 18.244436
+state 4.0,12.006781595625768 a:1
+reww 18.122598492543872
+state 4.0,11.600000000000001 a:1
+reww 8.120000000000001
+state 4.0,10.835999999999999 a:1
+reww 16.983427999999996
+state 4.0,11.481520000000003 a:1
+reww 13.248183200000003
+state 4.0,12.922861436114722 a:1
+reww 9.046003005280305
+state 4.0,11.316033709243342 a:1
+reww 7.921223596470339
+state 4.0,14.047202867599998 a:1
+reww 20.1079283901748
+state 4.0,14.366083620935434 a:1
+reww 20.413136095051243
+state 4.0,12.94199081028944 a:1
+reww 19.032557058411626
+state 4.0,14.212739378995153 a:1
+reww 15.733592834885588
+state 4.0,9.464171460799996 a:1
+reww 15.648638831358397
+state 4.0,12.19889149121272 a:1
+reww 18.309521420949977
+state 4.0,9.61103031442655 a:1
+reww 11.546037586128161
+state 4.0,11.828303327845113 a:1
+reww 13.563756028339053
+state 4.0,9.98518310965424 a:1
+reww 11.886516629785358
+state 4.0,10.759999999999998 a:1
+reww 7.531999999999998
+state 4.0,14.316238971999999 a:1
+reww 15.821367280399999
+state 4.0,9.902487128883998 a:1
+reww 6.931740990218798
+state 4.0,11.2185588368 a:1
+reww 7.85299118576
+state 4.0,9.645517245977775 a:1
+reww 11.577420693839775
+state 4.0,10.693367310547615 a:1
+reww 7.485357117383329
+state 4.0,10.759999999999998 a:1
+reww 12.591599999999998
+state 4.0,14.302104664119998 a:1
+reww 10.0
+state 4.0,10.351621899793159 a:1
+reww 7.2461353298552105
+state 4.0,14.847275560164483 a:1
+reww 10.0
+state 4.0,9.217646799999997 a:1
+reww 6.4523527599999975
+state 4.0,14.439455036027073 a:1
+reww 10.0
+state 4.0,10.398733077357285 a:1
+reww 7.279113154150099
+state 4.0,11.481504110788578 a:1
+reww 13.248168740817604
+state 4.0,13.721423822330026 a:1
+reww 15.286495678320323
+state 4.0,14.362934861214601 a:1
+reww 10.0
+state 4.0,13.695285239999997 a:1
+reww 9.586699667999998
+state 4.0,13.817414302140513 a:1
+reww 19.88434411598272
+state 4.0,9.753149130310454 a:1
+reww 15.929814103792072
+state 4.0,14.54990619679026 a:1
+reww 10.0
+state 4.0,12.905442852400002 a:1
+reww 9.03380999668
+state 4.0,12.20612472503142 a:1
+reww 18.31655935745557
+state 4.0,12.913608 a:1
+reww 19.004940584
+state 4.0,10.506540138798961 a:1
+reww 16.662863555051388
+state 4.0,13.503999999999996 a:1
+reww 15.088639999999995
+state 4.0,9.704468479999996 a:1
+reww 15.882447831039997
+state 4.0,13.031526907329493 a:1
+reww 9.122068835130644
+state 4.0,14.399999999999999 a:1
+reww 20.444
+state 4.0,13.559261827559993 a:1
+reww 9.491483279291995
+state 4.0,10.696835619840918 a:1
+reww 7.487784933888642
+state 4.0,9.679999999999996 a:1
+reww 15.858639999999998
+get learnt!
+wynik sieci 6.599386259872395
+weights! <tf.Variable 'dense_5_44/kernel:0' shape=(3, 15) dtype=float32, numpy=
+array([[ 0.15660414, -0.6111321 , -0.5788276 , -0.45647743, -0.5758833 ,
+        -0.40556985, -0.28208718, -0.36020544,  0.01180828,  0.22548893,
+         0.2199238 ,  0.08697307, -0.07526038, -0.08702932,  0.49981606],
+       [-0.36704952,  0.14496197,  0.01027362, -0.44210866,  0.41435272,
+        -0.26125067,  0.24723369, -0.07781947, -0.117557  ,  0.46185035,
+        -0.4555717 ,  0.13537207,  0.25167152,  0.2594427 ,  0.15484767],
+       [ 0.31147146,  0.02864191, -0.36973515,  0.2785894 , -0.33834365,
+        -0.18066654, -0.16157342, -0.5282851 , -0.2651562 , -0.15896648,
+        -0.07313023,  0.16215442,  0.23493858, -0.3006443 ,  0.14050305]],
+      dtype=float32)>
+rewards_mean:9.730158730158731 rewards_sum:875.7142857142858 cars_out:865.7142857142858
+result! (9.730158730158731, 875.7142857142858, 865.7142857142858)
+czas 80.8535590365202
+state 4.0,14.123487197965119 a:1
+reww 9.886441038575583
+state 4.0,14.68 a:1
+reww 10.0
+state 4.0,12.296807600000001 a:1
+reww 13.990094916
+state 4.0,11.891634266481432 a:1
+reww 8.324143986537003
+state 4.0,13.753763502673195 a:1
+reww 15.315924787432607
+state 4.0,14.877994100906532 a:1
+reww 16.21459587063457
+state 4.0,9.444399999999996 a:1
+reww 11.394403999999994
+state 4.0,12.58376118244011 a:1
+reww 8.808632827708076
+state 4.0,11.042589848312424 a:1
+reww 17.18443992240799
+state 4.0,11.600000000000001 a:1
+reww 13.356000000000002
+state 4.0,12.314589346675994 a:1
+reww 8.620212542673196
+state 4.0,10.986063762801958 a:1
+reww 7.69024463396137
+state 4.0,12.134526172834622 a:1
+reww 8.494168320984235
+state 4.0,12.458039999999997 a:1
+reww 14.136816399999997
+state 4.0,9.817399563999999 a:1
+reww 6.872179694799999
+state 4.0,10.488821941111684 a:1
+reww 16.64562374870167
+state 4.0,13.482923999999997 a:1
+reww 15.069460839999994
+state 4.0,10.089424211999997 a:1
+reww 16.257009758276
+state 4.0,9.62480703528204 a:1
+reww 15.804937245329423
+state 4.0,10.500215337953748 a:1
+reww 16.656709523828997
+state 4.0,9.052799999999998 a:1
+reww 11.038047999999996
+state 4.0,9.667228479999995 a:1
+reww 6.767059935999996
+state 4.0,10.430117980799999 a:1
+reww 12.291407362527998
+state 4.0,14.454194731109249 a:1
+reww 20.493317205309417
+state 4.0,12.719999999999999 a:1
+reww 8.903999999999998
+state 4.0,10.240416583999995 a:1
+reww 7.168291608799996
+state 4.0,10.550487482640001 a:1
+reww 7.385341237848
+state 4.0,11.321824239999998 a:1
+reww 7.925276967999998
+state 4.0,9.239999999999998 a:1
+reww 15.43052
+state 4.0,10.524198068 a:1
+reww 12.37702024188
+state 4.0,9.631361324065196 a:1
+reww 6.741952926845637
+state 4.0,12.270923999999994 a:1
+reww 8.589646799999995
+state 4.0,14.682630624838367 a:1
+reww 20.701193868602914
+state 4.0,11.600000000000001 a:1
+reww 17.7268
+state 4.0,12.280352279999995 a:1
+reww 18.388782768439995
+state 4.0,9.637229597427599 a:1
+reww 11.569878933659115
+state 4.0,13.337494920040108 a:1
+reww 9.336246444028074
+state 4.0,13.719999999999999 a:1
+reww 9.604
+state 4.0,10.001451599999996 a:1
+reww 11.901320955999996
+state 4.0,12.316002699459638 a:1
+reww 8.621201889621746
+state 4.0,11.143316677774393 a:1
+reww 12.940418176774697
+state 4.0,9.34713559112063 a:1
+reww 6.54299491378444
+state 4.0,11.79782025232631 a:1
+reww 8.258474176628416
+state 4.0,9.310924 a:1
+reww 6.5176468
+state 4.0,14.734094079599997 a:1
+reww 16.113865855719997
+state 4.0,13.310910661217875 a:1
+reww 9.317637462852511
+state 4.0,10.079999999999998 a:1
+reww 7.055999999999998
+state 4.0,10.61748368 a:1
+reww 12.461910148799998
+state 4.0,12.536231030288 a:1
+reww 18.637752792470224
+state 4.0,14.271607527536224 a:1
+reww 9.990125269275357
+state 4.0,12.775999999999996 a:1
+reww 8.943199999999997
+state 4.0,14.383685828909597 a:1
+reww 15.868580080236718
+state 4.0,10.912401816849709 a:1
+reww 7.638681271794796
+state 4.0,10.759999999999998 a:1
+reww 7.531999999999998
+state 4.0,10.070067280399996 a:1
+reww 11.963761225163996
+state 4.0,9.598462976945946 a:1
+reww 15.779304476568406
+state 4.0,11.880620180800001 a:1
+reww 13.611364364528
+state 4.0,9.491999999999997 a:1
+reww 6.644399999999997
+state 4.0,12.875323999999999 a:1
+reww 9.0127268
+state 4.0,11.10381804 a:1
+reww 17.24401495292
+state 4.0,9.6305586482868 a:1
+reww 11.56380836994099
+state 4.0,10.584895345472617 a:1
+reww 12.432254764380081
+state 4.0,11.9367699668 a:1
+reww 8.35573897676
+state 4.0,10.906721693028 a:1
+reww 12.72511674065548
+state 4.0,12.275902344345248 a:1
+reww 8.593131641041673
+state 4.0,14.069433245863188 a:1
+reww 20.12955854822488
+state 4.0,11.600000000000001 a:1
+reww 17.7268
+state 4.0,14.675822582427998 a:1
+reww 20.694998550009476
+state 4.0,12.495948580542127 a:1
+reww 8.747164006379489
+state 4.0,9.887368183466235 a:1
+reww 6.921157728426364
+state 4.0,14.793410186078672 a:1
+reww 10.0
+state 4.0,14.399999999999999 a:1
+reww 10.0
+state 4.0,11.479999999999997 a:1
+reww 8.035999999999998
+state 4.0,11.057291999999997 a:1
+reww 7.740104399999997
+state 4.0,11.17741226276668 a:1
+reww 7.824188583936675
+state 4.0,12.479105400751727 a:1
+reww 14.15598591468407
+state 4.0,9.411079999999998 a:1
+reww 6.587755999999999
+state 4.0,10.376326800000001 a:1
+reww 7.26342876
+state 4.0,11.759999999999998 a:1
+reww 13.501599999999996
+state 4.0,11.586944277034153 a:1
+reww 17.714096781554233
+state 4.0,14.852870683664733 a:1
+reww 20.856112322134905
+state 4.0,12.719999999999999 a:1
+reww 14.3752
+state 4.0,10.041360000000001 a:1
+reww 7.028952
+state 4.0,10.948763761618608 a:1
+reww 17.093147140054906
+state 4.0,14.260485931999996 a:1
+reww 15.777042198119997
+state 4.0,12.33918617906671 a:1
+reww 8.637430325346696
+state 4.0,14.092399999999998 a:1
+reww 15.624083999999996
+state 4.0,10.1278212 a:1
+reww 7.089474839999999
+state 4.0,10.526842451999997 a:1
+reww 7.368789716399998
+state 4.0,14.859212088310798 a:1
+reww 10.0
+get learnt!
+wynik sieci 4.548110477062834
+weights! <tf.Variable 'dense_5_48/kernel:0' shape=(3, 15) dtype=float32, numpy=
+array([[ 0.156637  , -0.61150146, -0.57918704, -0.45646647, -0.57674325,
+        -0.40573487, -0.282436  , -0.36039916,  0.01198037,  0.22591785,
+         0.22001381,  0.08710334, -0.07481403, -0.08732521,  0.50043637],
+       [-0.367304  ,  0.1445522 ,  0.00986841, -0.44226897,  0.41377074,
+        -0.2615825 ,  0.24715932, -0.07818265, -0.11723492,  0.46218783,
+        -0.45569608,  0.13555695,  0.2521176 ,  0.25911465,  0.15529269],
+       [ 0.30948794,  0.02529366, -0.37304968,  0.27746618, -0.34257323,
+        -0.18353593, -0.16380891, -0.53130835, -0.26223558, -0.15624003,
+        -0.07394765,  0.16368221,  0.23836099, -0.30346167,  0.14426327]],
+      dtype=float32)>
+rewards_mean:9.730158730158731 rewards_sum:875.7142857142858 cars_out:865.7142857142858
+result! (9.730158730158731, 875.7142857142858, 865.7142857142858)
+czas 87.69657018996196
+state 4.0,13.092399999999998 a:1
+reww 9.164679999999997
+state 4.0,11.1413719004 a:1
+reww 17.2805548590892
+state 4.0,9.60923147360258 a:1
+reww 6.726462031521806
+state 4.0,14.733910797877282 a:1
+reww 10.0
+state 4.0,13.136866999087097 a:1
+reww 9.195806899360967
+state 4.0,11.15874206980829 a:1
+reww 7.811119448865803
+state 4.0,10.743335834659739 a:1
+reww 16.893265767123925
+state 4.0,13.969152739507997 a:1
+reww 20.03198561554128
+state 4.0,9.62921189074369 a:1
+reww 6.7404483235205825
+state 4.0,10.422134497056177 a:1
+reww 16.58073686563566
+state 4.0,12.136169200679998 a:1
+reww 8.495318440475998
+state 4.0,11.847368267524974 a:1
+reww 13.581105123447728
+state 4.0,9.986384200854076 a:1
+reww 11.887609622777209
+state 4.0,14.417115776196255 a:1
+reww 10.0
+state 4.0,12.351070711235309 a:1
+reww 8.645749497864715
+state 4.0,9.476686136800001 a:1
+reww 15.6608156111064
+state 4.0,9.671109367985524 a:1
+reww 6.769776557589867
+state 4.0,10.101653077093872 a:1
+reww 7.07115715396571
+state 4.0,11.707362196039995 a:1
+reww 8.195153537227997
+state 4.0,10.490888987840648 a:1
+reww 7.343622291488454
+state 4.0,12.131999999999998 a:1
+reww 13.840119999999999
+state 4.0,14.99508164115879 a:1
+reww 20.9855242934545
+state 4.0,12.627935564856669 a:1
+reww 8.839554895399667
+state 4.0,12.523096499199992 a:1
+reww 14.196017814271991
+state 4.0,12.839598239999997 a:1
+reww 8.987718767999997
+state 4.0,10.567420941279998 a:1
+reww 7.397194658895998
+state 4.0,11.233410878368158 a:1
+reww 7.86338761485771
+state 4.0,9.6756398098982 a:1
+reww 6.77294786692874
+state 4.0,11.670136335506967 a:1
+reww 8.169095434854876
+state 4.0,13.092399999999998 a:1
+reww 19.178905199999996
+state 4.0,9.641833908000006 a:1
+reww 6.749283735600004
+state 4.0,11.828144709133198 a:1
+reww 13.56361168531121
+state 4.0,9.98517311667539 a:1
+reww 11.886507536174605
+state 4.0,9.86906590635055 a:1
+reww 16.042601126879084
+state 4.0,9.015047003050967 a:1
+reww 11.003692772776379
+state 4.0,10.824239999999996 a:1
+reww 16.971985519999997
+state 4.0,14.572333026657976 a:1
+reww 10.0
+state 4.0,14.047599999999994 a:1
+reww 9.833319999999995
+state 4.0,9.081498040000007 a:1
+reww 6.357048628000005
+state 4.0,10.014980211880001 a:1
+reww 7.010486148316001
+state 4.0,14.746605317263192 a:1
+reww 16.122623722084235
+state 4.0,14.367056066559998 a:1
+reww 10.0
+state 4.0,12.86173016158105 a:1
+reww 18.95446344721836
+state 4.0,12.328522479830674 a:1
+reww 8.629965735881472
+state 4.0,14.487572 a:1
+reww 15.9413004
+state 4.0,12.080965937223162 a:1
+reww 13.793679002873077
+state 4.0,12.600770597831541 a:1
+reww 8.820539418482078
+state 4.0,14.399999999999999 a:1
+reww 20.444
+state 4.0,9.63844 a:1
+reww 15.818202119999999
+state 4.0,13.789362664244246 a:1
+reww 9.652553864970972
+state 4.0,9.712942951999995 a:1
+reww 6.7990600663999965
+state 4.0,12.512823280832556 a:1
+reww 18.614977052250076
+state 4.0,10.546983395601625 a:1
+reww 7.382888376921137
+state 4.0,12.719999999999999 a:1
+reww 14.3752
+state 4.0,10.041360000000001 a:1
+reww 7.028952
+state 4.0,13.471198426099829 a:1
+reww 9.42983889826988
+state 4.0,11.913607999999996 a:1
+reww 8.339525599999996
+state 4.0,10.901857679999999 a:1
+reww 17.047507522639997
+state 4.0,12.569392865127796 a:1
+reww 8.798575005589456
+state 4.0,9.422399999999996 a:1
+reww 6.595679999999997
+state 4.0,10.378703999999999 a:1
+reww 12.244620639999999
+state 4.0,9.600962279999997 a:1
+reww 11.536875674799997
+state 4.0,11.124796574125796 a:1
+reww 7.787357601888057
+state 4.0,13.764679999999998 a:1
+reww 9.635275999999998
+state 4.0,11.964669900399997 a:1
+reww 18.081623813089195
+state 4.0,10.056704265770229 a:1
+reww 7.039692986039159
+state 4.0,12.067584408263428 a:1
+reww 8.447309085784399
+state 4.0,14.272706532000004 a:1
+reww 20.327343455636004
+state 4.0,9.601310208642985 a:1
+reww 6.720917146050089
+state 4.0,12.817755999999996 a:1
+reww 8.972429199999997
+state 4.0,13.793297977199998 a:1
+reww 9.655308584039998
+state 4.0,10.707614802648393 a:1
+reww 12.543929470410038
+state 4.0,9.91457973256685 a:1
+reww 16.086886079787543
+state 4.0,11.600000000000001 a:1
+reww 8.120000000000001
+state 4.0,12.994371782639348 a:1
+reww 14.624878322201806
+state 4.0,13.131999999999998 a:1
+reww 14.750119999999997
+state 4.0,14.399999999999999 a:1
+reww 10.0
+state 4.0,10.385199999999998 a:1
+reww 7.269639999999998
+state 4.0,9.94463708 a:1
+reww 6.961245955999999
+state 4.0,12.827239897675998 a:1
+reww 14.472788306885157
+state 4.0,11.141157024000982 a:1
+reww 7.798809916800687
+state 4.0,10.739642975040205 a:1
+reww 7.517750082528143
+state 4.0,10.107559999999996 a:1
+reww 11.997879599999996
+state 4.0,14.399999999999999 a:1
+reww 10.0
+state 4.0,12.769147999999998 a:1
+reww 8.938403599999997
+state 4.0,13.397632811736216 a:1
+reww 9.37834296821535
+state 4.0,11.213502890464603 a:1
+reww 7.849452023325222
+state 4.0,12.950108140954203 a:1
+reww 14.584598408268324
+state 4.0,9.3777759524 a:1
+reww 6.56444316668
+state 4.0,12.202195356564513 a:1
+reww 18.31273608193727
+state 4.0,13.375618358227996 a:1
+reww 9.362932850759597
+state 4.0,11.208879855227877 a:1
+reww 17.346240099136722
+get learnt!
+wynik sieci 6.049253849441655
+weights! <tf.Variable 'dense_5_52/kernel:0' shape=(3, 15) dtype=float32, numpy=
+array([[ 0.15718229, -0.6112838 , -0.57889324, -0.45598087, -0.57707006,
+        -0.40536082, -0.28278872, -0.36020482,  0.01193047,  0.22579959,
+         0.22034279,  0.0868939 , -0.07509243, -0.08714761,  0.50085396],
+       [-0.36723706,  0.14440033,  0.00977394, -0.44215518,  0.4135102 ,
+        -0.26167443,  0.24722816, -0.07848144, -0.11681215,  0.46226317,
+        -0.45581025,  0.13558199,  0.25213096,  0.2590052 ,  0.15573372],
+       [ 0.30697483,  0.02103807, -0.3772948 ,  0.27613226, -0.34791452,
+        -0.18724039, -0.16690291, -0.5352052 , -0.25855854, -0.15282175,
+        -0.07494006,  0.1656779 ,  0.24278383, -0.3070686 ,  0.14912684]],
+      dtype=float32)>
+rewards_mean:9.730158730158731 rewards_sum:875.7142857142858 cars_out:865.7142857142858
+result! (9.730158730158731, 875.7142857142858, 865.7142857142858)
+czas 94.71725123821999
+state 4.0,12.719999999999999 a:1
+reww 18.81656
+state 4.0,13.774137574637201 a:1
+reww 19.842235860121995
+state 4.0,9.52086371790491 a:1
+reww 6.664604602533436
+state 4.0,13.821666698345723 a:1
+reww 9.675166688842005
+state 4.0,11.302550006652602 a:1
+reww 7.911785004656821
+state 4.0,10.773535501397042 a:1
+reww 12.603917306271308
+state 4.0,14.399999999999999 a:1
+reww 15.879999999999999
+state 4.0,10.164000000000001 a:1
+reww 16.329572
+state 4.0,10.239420279999994 a:1
+reww 16.402955932439994
+state 4.0,9.327440158086421 a:1
+reww 6.529208110660495
+state 4.0,10.051133703238705 a:1
+reww 16.21975309325126
+state 4.0,10.904227599999999 a:1
+reww 7.6329593199999985
+state 4.0,12.793891268993878 a:1
+reww 8.955723888295713
+state 4.0,12.874035440000002 a:1
+reww 18.96643648312
+state 4.0,9.735319269816001 a:1
+reww 6.8147234888712
+state 4.0,13.053147217191551 a:1
+reww 9.137203052034085
+state 4.0,14.876 a:1
+reww 10.0
+state 4.0,12.087600000000002 a:1
+reww 18.2012348
+state 4.0,10.541579030110938 a:1
+reww 7.379105321077656
+state 4.0,10.752076743254634 a:1
+reww 7.526453720278243
+state 4.0,12.719999999999999 a:1
+reww 8.903999999999998
+state 4.0,9.01030315092 a:1
+reww 6.307212205644
+state 4.0,10.292163661693202 a:1
+reww 16.454275242827485
+state 4.0,10.759999999999998 a:1
+reww 12.591599999999998
+state 4.0,12.963832839999998 a:1
+reww 9.074682987999998
+state 4.0,10.759999999999998 a:1
+reww 12.591599999999998
+state 4.0,14.68 a:1
+reww 10.0
+state 4.0,10.920000000000002 a:1
+reww 7.644000000000001
+state 4.0,14.611736105643999 a:1
+reww 10.0
+state 4.0,11.759999999999998 a:1
+reww 8.231999999999998
+state 4.0,10.086103999999999 a:1
+reww 7.060272799999999
+state 4.0,10.51808184 a:1
+reww 12.3714544744
+state 4.0,12.830951688612792 a:1
+reww 18.924515993020247
+state 4.0,9.996 a:1
+reww 6.9972
+state 4.0,11.209973821199995 a:1
+reww 13.001076177291996
+state 4.0,9.946228350735598 a:1
+reww 6.962359845514919
+state 4.0,10.488707953654476 a:1
+reww 16.645512838905805
+state 4.0,9.690236580324068 a:1
+reww 11.618115288094902
+state 4.0,9.695339433192286 a:1
+reww 11.62275888420498
+state 4.0,9.850806384291111 a:1
+reww 6.895564469003777
+state 4.0,11.600000000000001 a:1
+reww 13.356000000000002
+state 4.0,11.121172355999995 a:1
+reww 17.260900702387996
+state 4.0,9.702190157528399 a:1
+reww 6.791533110269879
+state 4.0,10.191183890952914 a:1
+reww 12.07397734076715
+state 4.0,13.448987719999998 a:1
+reww 9.414291403999998
+state 4.0,12.040125113500206 a:1
+reww 8.428087579450144
+state 4.0,11.759999999999998 a:1
+reww 8.231999999999998
+state 4.0,14.553190959999995 a:1
+reww 20.583403773599997
+state 4.0,9.531267614920239 a:1
+reww 6.671887330444167
+state 4.0,12.816767437575287 a:1
+reww 14.463258368193511
+state 4.0,11.992399999999996 a:1
+reww 13.713083999999997
+state 4.0,10.932463771599998 a:1
+reww 7.652724640119998
+state 4.0,9.94673832736217 a:1
+reww 11.851531877899573
+state 4.0,14.399999999999999 a:1
+reww 10.0
+state 4.0,11.986886519999999 a:1
+reww 13.708066733199999
+state 4.0,11.383799812 a:1
+reww 7.968659868399999
+state 4.0,12.63317510045836 a:1
+reww 8.843222570320851
+state 4.0,11.052966771096258 a:1
+reww 12.858199761697595
+state 4.0,10.759999999999998 a:1
+reww 16.909479999999995
+state 4.0,13.432328994552421 a:1
+reww 9.402630296186693
+state 4.0,10.654552362199205 a:1
+reww 7.4581866535394425
+state 4.0,9.491999999999997 a:1
+reww 6.644399999999997
+state 4.0,13.501485292400004 a:1
+reww 19.576945189505203
+state 4.0,9.536117255292915 a:1
+reww 6.67528207870504
+state 4.0,14.399999999999999 a:1
+reww 10.0
+state 4.0,11.479999999999997 a:1
+reww 17.610039999999998
+state 4.0,10.81603544 a:1
+reww 7.571224807999999
+state 4.0,14.977358337033145 a:1
+reww 10.0
+state 4.0,11.234559999999998 a:1
+reww 7.864191999999998
+state 4.0,11.933984713561514 a:1
+reww 8.35378929949306
+state 4.0,13.477522327225593 a:1
+reww 15.06454531777529
+state 4.0,12.418828239999996 a:1
+reww 18.523519877519995
+state 4.0,10.800711718404827 a:1
+reww 12.628647663748392
+state 4.0,11.600000000000001 a:1
+reww 8.120000000000001
+state 4.0,10.095220044270604 a:1
+reww 11.986650240286249
+state 4.0,9.713199203952337 a:1
+reww 6.799239442766636
+state 4.0,11.600000000000001 a:1
+reww 8.120000000000001
+state 4.0,9.495491594799994 a:1
+reww 11.440897351267994
+state 4.0,9.686751179330678 a:1
+reww 15.865208897488749
+state 4.0,9.675079597289347 a:1
+reww 11.604322433533305
+state 4.0,9.411079999999998 a:1
+reww 11.364082799999998
+state 4.0,11.618149266310429 a:1
+reww 13.37251583234249
+get learnt!
+wynik sieci 4.86801997037001
+weights! <tf.Variable 'dense_5_56/kernel:0' shape=(3, 15) dtype=float32, numpy=
+array([[ 0.1578727 , -0.6104067 , -0.5785701 , -0.45575574, -0.5768524 ,
+        -0.40447256, -0.28369084, -0.35929203,  0.01105626,  0.2255648 ,
+         0.22073208,  0.08680519, -0.07599047, -0.08702785,  0.500094  ],
+       [-0.36655733,  0.14590661,  0.01051473, -0.44142377,  0.41556525,
+        -0.26076227,  0.24728028, -0.07725874, -0.11770665,  0.46060312,
+        -0.45555872,  0.13497774,  0.2508586 ,  0.2598292 ,  0.15402117],
+       [ 0.2925791 , -0.00275332, -0.40137458,  0.26912162, -0.37730557,
+        -0.20854838, -0.18878162, -0.55758536, -0.23815793, -0.1343782 ,
+        -0.08103086,  0.17874523,  0.26773056, -0.32820618,  0.17571273]],
+      dtype=float32)>
+rewards_mean:9.730158730158731 rewards_sum:875.7142857142858 cars_out:865.7142857142858
+result! (9.730158730158731, 875.7142857142858, 865.7142857142858)

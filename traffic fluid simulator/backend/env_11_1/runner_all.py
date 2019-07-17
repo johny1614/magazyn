@@ -1,48 +1,76 @@
 from timeit import default_timer as timer
-from random_epochs_generator import do_epoch
+from nn_trainer import train
+from random_epochs_generator import generate_random_epochs
 from runner_learnt import run_learnt_greedy
 import matplotlib.pyplot as plt
+from services.agentFactory import get_LearnSmartAgents, get_SmartAgents
+import numpy as np
 
-from services.agentFactory import get_SmartAgents
 from services.globals import Globals
 
-agents = get_SmartAgents()
-Globals().pred_plot_memory = []
-results = {'cars_out': []}
-timeToLearn = 100
-startTime = timer()
-while timer() < timeToLearn:
-    env = do_epoch(agents)
-    print(f'cars_out:{env.cars_out} epsilon:{Globals().epsilon}')
-    results['cars_out'].append(env.cars_out)
-    for agent in agents:
-        agent.count_G()
-        agent.count_Q()
-        agent.count_PI()
-        Globals().epsilon = Globals().epsilon * 0.99
-        # Globals().epsilon = Globals().epsilon * 1
-    draw_data_0 = []
-    draw_data_1 = []
-    draw_data_orange = []
-    # plotting for phase 0
-    for sa in agents[0].Pi:
-        if len(sa) == 3 and sa[2] == 0:
-            first_section = sa[0]
-            second_section = sa[1]
-            action = agents[0].Pi
-            if action == 0:
-                draw_data_0.append([first_section, second_section])
-            elif action == 1:
-                draw_data_1.append([first_section, second_section])
-            else:
-                draw_data_orange.append([first_section, second_section])
-plt.plot([data[0] for data in draw_data_0], [data[1] for data in draw_data_0], 'ro')
-plt.plot([data[0] for data in draw_data_1], [data[1] for data in draw_data_1], 'go')
-# plt.plot([data[0] for data in draw_data_orange], [data[1] for data in draw_data_orange], 'bo')
-# plt.axis([0, 6, 0, 20])
-plt.show()
-a=4
-# plt.plot(results['cars_out'])
-# plt.title('Ilość pojazdów opuszczających układ - akcje wedle wyuczonej strategii')
-# plt.savefig('cars_out' + str(0) + '.png')
-# plt.close()
+def draw_predictions(no):
+    agents = get_LearnSmartAgents()
+    to_predict = []
+    for den0 in range(60):
+        for den1 in range(60):
+            to_predict.append([den0*2, den1*2, 1])
+    predictions = agents[0].model.predict(np.array(to_predict))  # tylko dla stanow z faza 0
+    dots_action_0 = []
+    dots_action_1 = []
+    dots_action_orange = []
+    for i in range(len(predictions)):
+        pred = predictions[i]
+        to_predict_state = to_predict[i]
+        best_action_predicted = np.argmax(pred[:-1])
+        if best_action_predicted == 0:
+            dots_action_0.append(to_predict_state)
+        if best_action_predicted == 1:
+            dots_action_1.append(to_predict_state)
+        if best_action_predicted == 2:
+            dots_action_orange.append(to_predict_state)
+
+    plt.plot([den[0] for den in dots_action_0], [den[1] for den in dots_action_0], 'go')
+    plt.plot([den[0] for den in dots_action_1], [den[1] for den in dots_action_1], 'ro')
+    # plt.plot([den[0] for den in dots_action_orange], [den[1] for den in dots_action_orange], 'bo')
+    plt.savefig('predictions' + str(no) + '.png')
+    plt.close()
+
+runs = [0]
+for run in runs:
+    Globals().pred_plot_memory = []
+    Globals().run_no = run
+    results = []
+    timeToLearn = 100
+    startTime = timer()
+    generate_random_epochs(learntAgents=False, epochs=range(40))  # bierze nowych agentow i tu jest 'is'
+    train(learntAgents=False)
+    run_learnt_greedy()
+    lurns=0
+    while timer() - startTime < timeToLearn:
+        print('czas', timer() - startTime)
+        generate_random_epochs(learntAgents=True, epochs=range(40))
+        train(max_time_learn=40)
+        result = run_learnt_greedy()
+        print('result!',result)
+        results.append(result)
+        draw_predictions(lurns)
+        lurns+=1
+
+
+    # rewards_mean
+    plt.plot([res[0] for res in results])
+    plt.title('Średnia wszystkich nagród - akcje wedle wyuczonej strategii')
+    plt.savefig('rewards_mean' + str(run) + '.png')
+    plt.close()
+
+    # rewards
+    plt.plot([res[1] for res in results])
+    plt.title('Suma nagród - akcje wedle wyuczonej strategii')
+    plt.savefig('rewards' + str(run) + '.png')
+    plt.close()
+
+    # cars_out
+    plt.plot([res[2] for res in results])
+    plt.title('Ilość pojazdów opuszczających układ - akcje wedle wyuczonej strategii')
+    plt.savefig('cars_out' + str(run) + '.png')
+    plt.close()

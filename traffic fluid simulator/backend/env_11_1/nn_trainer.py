@@ -6,13 +6,13 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.python.keras.layers import Dense, Activation
 from tensorflow.python.keras.models import Sequential
 
-from services.agentFactory import get_LearnSmartAgents
+from services.agentFactory import get_LearnSmartAgents, get_SmartAgents
 from services.globals import Globals
 
 
 def get_batches():
     batches = []
-    for i in range(3):
+    for i in range(1):
         filename = 'static_files/x_batch_agent_' + str(i) + '.txt'
         x_batch = np.array(np.loadtxt(filename, delimiter=','))
         filename = 'static_files/y_batch_agent_' + str(i) + '.txt'
@@ -35,10 +35,15 @@ def create_model(layers, activation, l_rate):
 
 
 def train(learntAgents=True, max_time_learn=20):
-    agents = get_LearnSmartAgents()
+    if not learntAgents:
+        agents = get_SmartAgents()
+    else:
+        print('get learnt!')
+        agents = get_LearnSmartAgents()
+        a=7
     models = [agent.model for agent in agents]
     batches = get_batches()
-    for i in range(3):
+    for i in range(1):
         start_time = timer()
         x_batch = batches[i]['x_batch']
         y_batch = batches[i]['y_batch']
@@ -54,7 +59,7 @@ def train(learntAgents=True, max_time_learn=20):
             else:
                 val_loss = res.history['val_loss'][-1]
             if i == 0:
-                x = [4, 4, 62] + [10, 10, 49] + [ 0, 10, 10] + [0]
+                x = [4, 40, 0]
                 pred = model.predict(np.array([x]))
                 Globals().pred_plot_memory.append(pred)
         model.save('static_files/model-agent' + str(i) + '.h5')

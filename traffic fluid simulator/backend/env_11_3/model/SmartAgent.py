@@ -20,7 +20,7 @@ class SmartAgent(Agent):
     def __attrs_post_init__(self):
         if self.model == 0:
             l_rate = 0.001
-            layers = [15]
+            layers = [10]
             regularizers_ = [0.2, 0.2, 0.2]
             activation = 'relu'
             self.model = self._build_model(layers=layers, activation=activation, l_rate=l_rate)

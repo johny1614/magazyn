@@ -34,15 +34,10 @@
       <change beforePath="$PROJECT_DIR$/../env_11_1/runner_learnt.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_11_1/runner_learnt.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../env_11_1/services/agentFactory.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_11_1/services/agentFactory.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../env_11_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../env_11_2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_2/predictions0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_2/predictions1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_2/predictions2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_2/predictions3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_2/predictions4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_2/predictions5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_2/predictions6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_2/predictions7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_2/predictions8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/SmartAgent.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/SmartAgent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_4_10/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_10/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_MC_0.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_MC_1.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_MC_10.json" beforeDir="false" />
@@ -1135,6 +1130,57 @@
       <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_MC_997.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_MC_998.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_MC_999.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_0.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_10.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_10.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_11.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_11.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_12.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_12.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_13.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_14.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_14.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_15.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_15.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_16.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_16.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_17.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_17.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_18.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_18.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_19.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_19.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_20.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_20.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_21.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_21.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_22.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_22.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_23.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_23.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_24.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_24.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_25.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_25.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_26.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_26.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_27.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_27.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_28.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_28.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_29.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_29.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_30.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_30.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_31.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_31.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_32.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_32.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_33.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_33.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_34.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_34.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_35.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_35.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_36.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_36.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_37.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_37.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_38.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_38.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_39.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_39.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_40.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_40.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_41.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_41.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_42.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_42.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_43.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_43.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_44.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_44.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_45.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_45.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_46.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_46.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_47.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_47.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_48.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_48.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_49.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_49.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_5.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_6.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_7.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_77.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_77.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_8.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_9.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_9.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net4_learnt-0.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net4_learnt-1.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net4_learnt-10.json" beforeDir="false" />
@@ -1413,11 +1459,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/runner_all.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+            <state>
+              <caret lean-forward="true" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -1428,8 +1474,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/runner_learnt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="50" lean-forward="true" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+            <state relative-caret-position="102">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -1437,11 +1483,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/random_epochs_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="48" column="25" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+            <state relative-caret-position="340">
+              <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -1452,8 +1498,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/SmartAgent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="45" column="24" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+            <state relative-caret-position="283">
+              <caret line="74" column="48" lean-forward="true" selection-start-line="74" selection-start-column="48" selection-end-line="74" selection-end-column="48" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -1472,7 +1518,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>13:</find>
       <find>epoch!</find>
       <find>4:</find>
       <find>10:</find>
@@ -1502,6 +1547,7 @@
       <find>memory_to_minibatch</find>
       <find>full_batch</find>
       <find>'ok</find>
+      <find>build</find>
     </findStrings>
     <replaceStrings>
       <replace>actual_phase</replace>
@@ -1563,8 +1609,8 @@
         <option value="$PROJECT_DIR$/Env.py" />
         <option value="$PROJECT_DIR$/runner_all.py" />
         <option value="$PROJECT_DIR$/services/globals.py" />
-        <option value="$PROJECT_DIR$/model/SmartAgent.py" />
         <option value="$PROJECT_DIR$/random_epochs_generator.py" />
+        <option value="$PROJECT_DIR$/model/SmartAgent.py" />
       </list>
     </option>
   </component>
@@ -2261,41 +2307,11 @@ model.predict(np.array([x]))</expression-string>
     <entry file="file://$PROJECT_DIR$/foo0.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/SmartAgent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="45" column="24" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/predictions5.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/predictions7.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runner_all.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runner_learnt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="50" lean-forward="true" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/predictions6.png">
       <provider selected="true" editor-type-id="images" />
@@ -2318,12 +2334,42 @@ model.predict(np.array([x]))</expression-string>
     <entry file="file://$PROJECT_DIR$/predictions4.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/model/SmartAgent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="74" column="48" lean-forward="true" selection-start-line="74" selection-start-column="48" selection-end-line="74" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/random_epochs_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="48" column="25" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+        <state relative-caret-position="340">
+          <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runner_learnt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runner_all.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>

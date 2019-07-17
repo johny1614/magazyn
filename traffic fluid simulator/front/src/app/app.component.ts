@@ -33,12 +33,12 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.getJSON('assets/nets/net11.json').subscribe(staticData => {
+    this.getJSON('assets/nets/net14.json').subscribe(staticData => {
       console.log('static jest',staticData)
       this.nets = [NetFactory.netFromJson(staticData)];
       // sdfdsfsdfdsf
       // asdsd
-      // let net = 'assets/densities/net_11_korki.json';
+      let net = 'assets/densities/net_14_base.json';
       // let net = 'assets/densities/net4_sequential.json'
       // let net = 'assets/densities/net11_den_843015.json';
       // let net = 'assets/densities/net11_den_081331.json'; // to jest ogarniete
@@ -46,8 +46,18 @@ export class AppComponent {
       // let net = 'assets/densities/net11_den_000602.json';
       // let net = 'assets/densities/net_12_densities_example.json';
       // let net = 'assets/densities/net11_MC_2.json';
-      let net = 'assets/densities/net11_test_no_5.json';
+      // let net = 'assets/densities/net11_test_no_5.json';
       // let net = 'assets/densities/net11_seq.json';
+      // let net = 'assets/densities/net11_random_1.json';
+      // let net = 'assets/densities/net11_random_updated1.json';
+      
+      // let net = 'assets/densities/net11_random_not_reshaped_1.json';
+
+      // let net = 'assets/densities/net11_random_0.json';
+      // let net = 'assets/densities/net11_learnt_6.json';
+
+      // test_no_1
+      // let net = 'assets/densities/net11_test_no_7.json';
 
 
       // let net = 'assets/densities/net11_den_phase_0_1_yellow_purple.json';
