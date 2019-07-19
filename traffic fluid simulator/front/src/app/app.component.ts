@@ -38,7 +38,9 @@ export class AppComponent {
       this.nets = [NetFactory.netFromJson(staticData)];
       // sdfdsfsdfdsf
       // asdsd
-      let net = 'assets/densities/net_14_base.json';
+      let net = 'assets/densities/net14_random_0.json';
+      // let net = 'assets/densities/net14_test_no_5.json';
+      // let net = 'assets/densities/net_14_base.json';
       // let net = 'assets/densities/net4_sequential.json'
       // let net = 'assets/densities/net11_den_843015.json';
       // let net = 'assets/densities/net11_den_081331.json'; // to jest ogarniete

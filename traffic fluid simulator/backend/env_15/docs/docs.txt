@@ -1,0 +1,11 @@
+env_15
+
+Miało być 14, ale nie jest, bo mamy w nim orange_phase_duration = 0 i tyle
+
+
+Env_15
+0 - 1
+        4 - 5
+2 - 3
+
+
