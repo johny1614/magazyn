@@ -49,13 +49,13 @@ def generate_random_epochs(learntAgents=False, save_front_json=False, epochs=ran
         #     print('ok')
         if save_front_json:
             exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
-                                    netName='net14',
+                                    netName='net15',
                                     densityName='random_updated' + str(e))
             exportData.saveToJson()
         env.remember_memory()
         if save_front_json:
             exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
-                                    netName='net14',
+                                    netName='net15',
                                     densityName='random_' + str(e))
 
             exportData.saveToJson()

@@ -18,7 +18,7 @@ class Agent:
     curve_densities: Dict[Tuple[int, int], int]
     local_state: LearningState = None
     phase_duration: int = 2  # na starcie mamy mozliwosc przelaczania - taki bonus
-    orange_phase_duration: int = 0
+    orange_phase_duration: int = 2
     pending_phase: PhaseInt = 0
     rewards: List[float] = []
     actual_phase = 0

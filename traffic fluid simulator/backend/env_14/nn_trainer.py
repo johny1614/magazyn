@@ -59,7 +59,7 @@ def train(learntAgents=True, max_time_learn=20):
             else:
                 val_loss = res.history['val_loss'][-1]
             if i == 0:
-                x = [4, 20, 0, 0]
+                x = [4, 0, 10, 15,10]
                 pred = model.predict(np.array([x]))
                 Globals().pred_plot_memory.append(pred)
         model.save('static_files/model-agent' + str(i) + '.h5')

@@ -29,11 +29,11 @@ class SmartAgent(Agent):
         model = Sequential()
         for i, nodes in enumerate(layers):
             if i == 0:
-                model.add(Dense(nodes, input_dim=4, activation='linear'))
+                model.add(Dense(nodes, input_dim=5, activation='linear'))
             else:
                 model.add(Dense(nodes))
                 model.add(Activation(activation))
-        model.add(Dense(2))
+        model.add(Dense(3))
         model.compile(optimizer=Adam(learning_rate=l_rate), loss='mse')
         return model
 

@@ -25,7 +25,8 @@ class LearningState:
         return self.__hash__() == other.__hash__()
 
     def to_learn_array(self):
-        return np.array([[self.densities[0]] + [self.densities[1]]+[self.densities[2]]+[self.densities[3]]])
+        phase = 2 if self.starting_actual_phase == 'orange' else self.starting_actual_phase
+        return np.array([[self.densities[0]] + [self.densities[1]]+[self.densities[2]]+[self.densities[3]]+[phase]])
 
     def possible_actions(self, orange_phase_duration):
         wait_action = ['orange']
