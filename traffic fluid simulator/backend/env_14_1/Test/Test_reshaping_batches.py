@@ -9,6 +9,7 @@ from tensorflow.python.keras.layers import Dense
 from tensorflow.python.keras.optimizers import Adam
 from tensorflow.python.keras import regularizers
 import matplotlib.pyplot as plt
+
 sys.path.append(os.path.dirname(os.getcwd()))
 
 import unittest
@@ -30,31 +31,99 @@ def get_agents_env():
 
 
 class Testing(unittest.TestCase):
-    def test_no_1_actions_0_1_what_is_terrible_idea(self):
+    def test_no_0_reshape_future_2(self):
+        for vp in Globals().val_params:
+            vp.reshape_future = 2
         agents: List[SmartAgent] = get_SmartAgents()
-        for agent in agents:
-            agent.model = agent._build_model(layers=[20, 50, 30, 18])
         env = Env(agents)
         env.u = env_settings.u_all_2
         max_time = 90
         Globals().time = 0
         for t in range(max_time):
             actions = [0]
-            if t == 60 or t >= 63:
-                actions = [1]
-            if t == 61 or t == 62:
-                actions = [orange]
             env.step(actions)
         for agent in agents:
             agent.reshape_rewards()
+        self.assertEquals(agents[0].memories[0].reward,2)
+        self.assertEquals(agents[0].memories[1].reward,4)
+        for i in range(2,88):
+            self.assertEquals(agents[0].memories[i].reward,6)
         exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
-                                netName='net4',
-                                densityName='test_learn_no_1')
+                                netName='net14',
+                                densityName='test_reshaping_no_0')
         exportData.saveToJson()
-        agents[0].train_full(epochs=15000, learning_rate=0.001)
-        x = [4,4,0]
-        predictions = agents[0].model.predict(np.array([x]))
-        self.assertTrue(predictions[0][0]>predictions[0][1])
+
+    def test_no_1_reshape_future_5(self):
+        for vp in Globals().val_params:
+            vp.reshape_future = 5
+        agents: List[SmartAgent] = get_SmartAgents()
+        env = Env(agents)
+        env.u = env_settings.u_all_2
+        max_time = 90
+        Globals().time = 0
+        for t in range(max_time):
+            actions = [0]
+            env.step(actions)
+        for agent in agents:
+            agent.reshape_rewards()
+        self.assertEquals(agents[0].memories[0].reward, 8)
+        self.assertEquals(agents[0].memories[1].reward, 10)
+        for i in range(2, 85):
+            self.assertEquals(agents[0].memories[i].reward, 12)
+        exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
+                                netName='net14',
+                                densityName='test_reshaping_no_1')
+        exportData.saveToJson()
+
+    def test_no_2_reshape_future_2_times(self):
+        for vp in Globals().val_params:
+            vp.reshape_future = 2
+        agents: List[SmartAgent] = get_SmartAgents()
+        env = Env(agents)
+        env.u = env_settings.u_all_2
+        max_time = 90
+        Globals().time = 0
+        for t in range(max_time):
+            actions = [0]
+            env.step(actions)
+        for agent in agents:
+            agent.reshape_rewards()
+        self.assertEquals(agents[0].memories[0].reward, 2)
+        self.assertEquals(agents[0].memories[1].reward, 4)
+        for i in range(2, 88):
+            self.assertEquals(agents[0].memories[i].reward, 6)
+        for i in range(88, 90):
+            self.assertEquals(agents[0].memories[i].learn_usable, False)
+        exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
+                                netName='net14',
+                                densityName='test_reshaping_no_2')
+        exportData.saveToJson()
+        # nastepny epoch przy tym samym agencie
+        Globals().actual_epoch_index += 1
+        env = Env(agents)
+        env.u = env_settings.u_all_2
+        max_time = 90
+        Globals().time = 0
+        for t in range(max_time):
+            actions = [0]
+            env.step(actions)
+        for agent in agents:
+            agent.reshape_rewards()
+        # sprawdzamy czy starych nie zmienil przypadkiem
+        self.assertEquals(agents[0].memories[0].reward, 2)
+        self.assertEquals(agents[0].memories[1].reward, 4)
+        for i in range(2, 88):
+            self.assertEquals(agents[0].memories[i].reward, 6)
+        for i in range(88, 90):
+            self.assertEquals(agents[0].memories[i].learn_usable, False)
+        # i teraz te nowe
+        self.assertEquals(agents[0].memories[90].reward, 2)
+        self.assertEquals(agents[0].memories[91].reward, 4)
+        for i in range(92, 178):
+            self.assertEquals(agents[0].memories[i].reward, 6)
+        for i in range(178, 180):
+            self.assertEquals(agents[0].memories[i].learn_usable, False)
+
 
 if __name__ == '__main__':
     unittest.main()

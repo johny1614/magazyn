@@ -12,4 +12,6 @@ class Memory:
     reward: any # float, ale to psuje
     new_state: LearningState
     times: any
+    epoch_index: int
+    learn_usable: bool = True
     reshapedReward: bool = False

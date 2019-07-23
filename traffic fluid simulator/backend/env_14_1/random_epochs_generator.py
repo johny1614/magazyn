@@ -64,9 +64,10 @@ def generate_random_epochs(learntAgents=False, save_front_json=False, epochs=ran
             cars_outs.append(env.cars_out)
             rewards.append(env.count_summed_rewards()[0])
             rewards_mean.append(env.count_summed_rewards()[1])
+        Globals().actual_epoch_index += 1
 
-        action_0_rewards = [net.rewards[0] for net in env.global_memories if net.actions == [0]]
-        action_1_rewards = [net.rewards[0] for net in env.global_memories if net.actions == [1]]
+        # action_0_rewards = [net.rewards[0] for net in env.global_memories if net.actions == [0]]
+        # action_1_rewards = [net.rewards[0] for net in env.global_memories if net.actions == [1]]
         # print('mean 0', np.mean(action_0_rewards))
         # print('mean 1', np.mean(action_1_rewards))
         # if np.mean(action_0_rewards)>np.mean(action_1_rewards):

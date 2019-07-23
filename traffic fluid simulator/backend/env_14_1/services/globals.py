@@ -70,6 +70,7 @@ class BaseClass:
         self.pred_plot_memory = []
         self.run_no = 0
         self.greedy_run_no = 0
+        self.actual_epoch_index = 0
     def vp(self) -> ValParamSet:
         return self.val_params[self.run_no]
 

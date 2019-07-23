@@ -65,7 +65,7 @@ class SmartAgent(Agent):
             y_target = self.model.predict(state)
             new_state_possible_actions_value_predictions = self.model.predict(memory.new_state.to_learn_array())
             target = (1 - l_rate) * y_target[0][action] + l_rate * (
-                        memory.reward + gamma * max(new_state_possible_actions_value_predictions[0]))
+                    memory.reward + gamma * max(new_state_possible_actions_value_predictions[0]))
             i += 1
             y_target[0][action] = target
             x_batch.append(state[0])
@@ -124,19 +124,23 @@ class SmartAgent(Agent):
         self.assign_local_state(densities)
         new_state = self.local_state
         times = {'old': Globals().time - 1, 'new': Globals().time}
-        memory = Memory(state=state, action=action, new_state=new_state, reward=reward, times=times)
+        memory = Memory(state=state, action=action, new_state=new_state, reward=reward, times=times,
+                        epoch_index=Globals().actual_epoch_index)
         self.memories.append(memory)
 
     def last_epoch_batch(self):
         return self.memories[-90:]
 
     def reshape_rewards(self):
-        for i in range(len(self.memories) - 3):
+        for i in range(len(self.memories)):  # - Globals().vp().reshape_future
             memory = self.memories[i]
             if not memory.reshapedReward:
                 memory.reshapedReward = True
-                future_rewards = [mem.reward for mem in self.memories[i + 1:i + 1+Globals().vp().reshape_future]]  # +3 is 2 next rewards we take +5 so ist 4 next
-                memory.reward += sum(future_rewards)
+                furute_memories = [mem for mem in self.memories[i + 1:i + 1 + Globals().vp().reshape_future] if mem.epoch_index==memory.epoch_index]
+                if len(furute_memories) < Globals().vp().reshape_future:
+                    memory.learn_usable = False
+                    continue
+                memory.reward += sum([mem.reward for mem in furute_memories])
                 self.memories[i] = memory
                 # if 3 < memory.state.densities[0] < 5 and 9 < memory.state.densities[
                 #     1] < 15 and memory.action == 1 and memory.state.starting_actual_phase == 1:
