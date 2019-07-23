@@ -24,8 +24,9 @@ class ValParamSet:
         self.epochs_range = 100
         self.batch_size = 1000
         self.max_time_learn = 1000
-        self.gamma = 0.95
+        self.gamma = 0.5
         self.reshape_future = 4
+        self.regularization = 0.7
     def __str__(self):
         return f'layers = {self.layers} nn_l_rate = {self.nn_l_rate} first_epochs_range = {self.first_epochs_range} epochs_range = {self.epochs_range} max_time_learn = {self.max_time_learn}'
 def create_vals():
@@ -36,7 +37,7 @@ def create_vals():
     max_time_learns = [15,30,40,70]
     vParams = []
     reshape_future=3
-    gamma = 0.99
+    gamma = 0.9
     batch_size = 1000
     for layers in layerss:
         for nn_l_rate in nn_l_rates:
@@ -71,6 +72,7 @@ class BaseClass:
         self.run_no = 0
         self.greedy_run_no = 0
         self.actual_epoch_index = 0
+        self.last_weights = None
     def vp(self) -> ValParamSet:
         return self.val_params[self.run_no]
 

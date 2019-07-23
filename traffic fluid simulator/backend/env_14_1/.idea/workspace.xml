@@ -4,7 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/runner_all.py" line="106" />
+    <bookmark url="file://$PROJECT_DIR$/runner_all.py" line="109" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3bc62bd-0327-4a90-b067-71b6ea844ee3" name="Default Changelist" comment="">
@@ -14,6 +14,7 @@
       <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../env_14/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../front/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net4_test_learn_no_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net4_test_learn_no_1.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/runner_all.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="80" column="42" lean-forward="true" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+            <state relative-caret-position="-99">
+              <caret line="69" column="35" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -36,19 +37,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Test/Test_reshaping_batches.py">
+        <entry file="file://$PROJECT_DIR$/services/globals.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="75" column="31" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/SmartAgent.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="151" lean-forward="true" selection-start-line="151" selection-end-line="151" />
+            <state relative-caret-position="374">
+              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -57,10 +49,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/Memory.py">
+        <entry file="file://$PROJECT_DIR$/Test/Test_reshaping_batches.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="15" column="16" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="16" />
+            <state relative-caret-position="258">
+              <caret line="136" column="60" selection-start-line="136" selection-start-column="18" selection-end-line="136" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -68,10 +60,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/random_epochs_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="19" column="56" lean-forward="true" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+            <state relative-caret-position="304">
+              <caret line="98" column="17" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/SmartAgent.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="86" column="32" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,36 +92,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>plt.</find>
-      <find>'gre</find>
-      <find>.gamma</find>
-      <find>foo</find>
-      <find>build</find>
-      <find>@a</find>
-      <find>rewards_sum</find>
-      <find>draw_predictions</find>
-      <find>gamm</find>
-      <find>batch</find>
-      <find>fit</find>
-      <find>regu</find>
-      <find>!!!</find>
-      <find>print</find>
-      <find>laye</find>
-      <find>layers</find>
-      <find>train_full</find>
-      <find>tra</find>
-      <find>ver</find>
-      <find>teraz</find>
       <find>'plot</find>
       <find>epoch</find>
       <find>e</find>
       <find>reshap</find>
       <find>reshape</find>
       <find>reshape_rewards</find>
-      <find>resha</find>
       <find>rewards</find>
       <find>epoch_</find>
       <find>resh</find>
+      <find>save_ba</find>
+      <find>save_batch</find>
+      <find>full_batch</find>
+      <find>evaluate_full</find>
+      <find>futu</find>
+      <find>batch</find>
+      <find>eoic</find>
+      <find>reg</find>
+      <find>regulariz</find>
+      <find>regularizers</find>
+      <find>teraz</find>
+      <find>Globals().pred_plot_memory.</find>
+      <find>start</find>
+      <find>model.pre</find>
+      <find>print</find>
+      <find>diff</find>
+      <find>epochs_learn</find>
+      <find>resha</find>
+      <find>gen</find>
+      <find>reshape_future</find>
+      <find>reshsazdfa</find>
     </findStrings>
     <replaceStrings>
       <replace>actual_phase</replace>
@@ -162,32 +166,33 @@
         <option value="$PROJECT_DIR$/services/dryRunnerService.py" />
         <option value="$PROJECT_DIR$/services/parser.py" />
         <option value="$PROJECT_DIR$/sequential_epochs_generator.py" />
-        <option value="$PROJECT_DIR$/Test/Test_learning.py" />
         <option value="$PROJECT_DIR$/res.txt" />
         <option value="$PROJECT_DIR$/Env.py" />
         <option value="$PROJECT_DIR$/Test/Test_Env.py" />
         <option value="$PROJECT_DIR$/services/agentFactory.py" />
-        <option value="$PROJECT_DIR$/env_settings.py" />
         <option value="$PROJECT_DIR$/x.py" />
         <option value="$PROJECT_DIR$/docs/docs.txt" />
         <option value="$PROJECT_DIR$/model/LearningState.py" />
         <option value="$PROJECT_DIR$/runner_learnt.py" />
         <option value="$PROJECT_DIR$/y.py" />
-        <option value="$PROJECT_DIR$/nn_trainer.py" />
         <option value="$PROJECT_DIR$/model/Agent.py" />
-        <option value="$PROJECT_DIR$/runner_all.py" />
-        <option value="$PROJECT_DIR$/services/globals.py" />
-        <option value="$PROJECT_DIR$/random_epochs_generator.py" />
         <option value="$PROJECT_DIR$/model/Memory.py" />
+        <option value="$PROJECT_DIR$/Test/Test_learning.py" />
+        <option value="$PROJECT_DIR$/runner_all.py" />
+        <option value="$PROJECT_DIR$/nn_trainer.py" />
+        <option value="$PROJECT_DIR$/env_settings.py" />
         <option value="$PROJECT_DIR$/model/SmartAgent.py" />
         <option value="$PROJECT_DIR$/Test/Test_reshaping_batches.py" />
+        <option value="$PROJECT_DIR$/random_epochs_generator.py" />
+        <option value="$PROJECT_DIR$/services/globals.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="454" />
+    <option name="y" value="-20" />
     <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="height" value="991" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -263,28 +268,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in Test_reshaping_batches.py">
-    <configuration name="random_epochs_generator" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="promotora_macierzowo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/random_epochs_generator.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.runner_all">
     <configuration name="runner_all" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="promotora_macierzowo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -341,6 +325,20 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for Test_reshaping_batches.Testing" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="promotora_macierzowo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Test_reshaping_batches.Testing&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests in Test_reshaping_batches.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="promotora_macierzowo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -357,11 +355,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests in Test_reshaping_batches.py" />
         <item itemvalue="Python.runner_all" />
+        <item itemvalue="Python tests.Unittests for Test_reshaping_batches.Testing" />
+        <item itemvalue="Python tests.Unittests in Test_reshaping_batches.py" />
         <item itemvalue="Python.y" />
         <item itemvalue="Python tests.Unittests for Test_Env.Testing.test_no_1_pass_action_0_all_time" />
-        <item itemvalue="Python.random_epochs_generator" />
       </list>
     </recent_temporary>
   </component>
@@ -382,35 +380,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_Test_reshaping_batches_py - 2019.07.23 at 18h 15m 01s.xml">
-      <configuration name="Unittests in Test_reshaping_batches.py" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_reshaping_batches_Testing - 2019.07.24 at 00h 06m 55s.xml">
+      <configuration name="Unittests for Test_reshaping_batches.Testing" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Test_reshaping_batches_py - 2019.07.23 at 18h 17m 18s.xml">
-      <configuration name="Unittests in Test_reshaping_batches.py" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_reshaping_batches_Testing - 2019.07.24 at 00h 08m 46s.xml">
+      <configuration name="Unittests for Test_reshaping_batches.Testing" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Test_reshaping_batches_py - 2019.07.23 at 18h 29m 20s.xml">
-      <configuration name="Unittests in Test_reshaping_batches.py" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_reshaping_batches_Testing - 2019.07.24 at 00h 09m 35s.xml">
+      <configuration name="Unittests for Test_reshaping_batches.Testing" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Test_reshaping_batches_py - 2019.07.23 at 18h 35m 03s.xml">
-      <configuration name="Unittests in Test_reshaping_batches.py" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_reshaping_batches_Testing - 2019.07.24 at 00h 11m 39s.xml">
+      <configuration name="Unittests for Test_reshaping_batches.Testing" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Test_reshaping_batches_py - 2019.07.23 at 18h 38m 01s.xml">
-      <configuration name="Unittests in Test_reshaping_batches.py" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_reshaping_batches_Testing - 2019.07.24 at 00h 13m 39s.xml">
+      <configuration name="Unittests for Test_reshaping_batches.Testing" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Test_reshaping_batches_py - 2019.07.23 at 19h 04m 41s.xml">
-      <configuration name="Unittests in Test_reshaping_batches.py" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_reshaping_batches_Testing - 2019.07.24 at 00h 14m 19s.xml">
+      <configuration name="Unittests for Test_reshaping_batches.Testing" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Test_reshaping_batches_py - 2019.07.23 at 19h 14m 36s.xml">
-      <configuration name="Unittests in Test_reshaping_batches.py" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_reshaping_batches_Testing - 2019.07.24 at 00h 18m 49s.xml">
+      <configuration name="Unittests for Test_reshaping_batches.Testing" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Test_reshaping_batches_py - 2019.07.23 at 19h 16m 36s.xml">
-      <configuration name="Unittests in Test_reshaping_batches.py" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_reshaping_batches_Testing - 2019.07.24 at 00h 40m 30s.xml">
+      <configuration name="Unittests for Test_reshaping_batches.Testing" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Test_reshaping_batches_py - 2019.07.23 at 19h 17m 19s.xml">
-      <configuration name="Unittests in Test_reshaping_batches.py" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_reshaping_batches_Testing - 2019.07.24 at 00h 42m 09s.xml">
+      <configuration name="Unittests for Test_reshaping_batches.Testing" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Test_reshaping_batches_py - 2019.07.23 at 19h 20m 02s.xml">
-      <configuration name="Unittests in Test_reshaping_batches.py" configurationId="tests" />
+    <history-entry file="Unittests_for_Test_reshaping_batches_Testing - 2019.07.24 at 00h 48m 17s.xml">
+      <configuration name="Unittests for Test_reshaping_batches.Testing" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
@@ -427,7 +425,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24130663" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -435,12 +432,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.48524764" weight="0.32719395" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6090622" weight="0.46478873" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.50790304" weight="0.37703142" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.50790304" weight="0.55146265" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49947312" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.71443623" visible="true" weight="0.31852654" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.71443623" visible="true" weight="0.39761648" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.49209693" side_tool="true" weight="0.33586133" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49947312" weight="0.5438787" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32936078" />
@@ -468,24 +465,29 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/model/SmartAgent.py</url>
-          <line>107</line>
-          <option name="timeStamp" value="91" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/nn_trainer.py</url>
-          <line>72</line>
-          <option name="timeStamp" value="159" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Test/Test_reshaping_batches.py</url>
-          <line>70</line>
+          <line>72</line>
           <option name="timeStamp" value="165" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Test/Test_reshaping_batches.py</url>
-          <line>96</line>
+          <line>98</line>
           <option name="timeStamp" value="172" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/nn_trainer.py</url>
+          <line>48</line>
+          <option name="timeStamp" value="189" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Test/Test_reshaping_batches.py</url>
+          <line>137</line>
+          <option name="timeStamp" value="192" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/random_epochs_generator.py</url>
+          <line>98</line>
+          <option name="timeStamp" value="195" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -597,54 +599,53 @@ model.predict(np.array([x]))</expression-string>
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>any(x for x in [mem.reward for mem in agents[0].memories] if x&gt;10)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>any(x for x in [mem.reward for mem in agents[0].memories] if x&gt;9)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>any(x for x in [mem.reward for mem in agents[0].memories] if x910)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>any(x for x in [mem.reward for mem in agents[0].memories] if x&gt;10]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>[mem.reward for mem in agents[0].memories]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>[mem.reward for mem in agents[0].memories][777]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>rewards</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>agents[0].memories</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>agents[0]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>agents[0].memories[i].reward</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>self.memories</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>i</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>agent.memories</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>agents[0].me</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>model.get_weights()</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>weights_best</expression-string>
+        <expression-string>agents[0].memories[777]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/predictions6.png" />
     <entry file="file://$PROJECT_DIR$/predictions4.png" />
     <entry file="file://$PROJECT_DIR$/predictions3.png" />
     <entry file="file://$PROJECT_DIR$/predictions2.png" />
@@ -748,28 +749,11 @@ model.predict(np.array([x]))</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="537" column="23" lean-forward="true" selection-start-line="537" selection-start-column="23" selection-end-line="537" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plotteraz1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/plotteraz27.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nn_trainer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="66" column="54" selection-start-line="66" selection-start-column="54" selection-end-line="66" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/Agent.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -791,61 +775,61 @@ model.predict(np.array([x]))</expression-string>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/model/Memory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Test/Test_learning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="102" column="34" lean-forward="true" selection-end-line="225" />
+        <state relative-caret-position="88">
+          <caret line="200" lean-forward="true" selection-start-line="200" selection-end-line="200" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/env_settings.py">
+    <entry file="file://C:/pyt36/Lib/site-packages/tensorflow/python/framework/ops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="303">
+          <caret line="5463" lean-forward="true" selection-start-line="5463" selection-end-line="5463" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/globals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/res.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/runner_all.py">
+    <entry file="file://$PROJECT_DIR$/nn_trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="80" column="42" lean-forward="true" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+        <state relative-caret-position="323">
+          <caret line="71" column="30" lean-forward="true" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/random_epochs_generator.py">
+    <entry file="file://$PROJECT_DIR$/env_settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="19" column="56" lean-forward="true" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="219">
+          <caret line="53" column="1" lean-forward="true" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/Memory.py">
+    <entry file="file://$PROJECT_DIR$/runner_all.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="16" />
+        <state relative-caret-position="-99">
+          <caret line="69" column="35" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/SmartAgent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="151" lean-forward="true" selection-start-line="151" selection-end-line="151" />
+        <state relative-caret-position="177">
+          <caret line="86" column="32" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="32" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -854,8 +838,28 @@ model.predict(np.array([x]))</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/Test_reshaping_batches.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="75" column="31" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
+        <state relative-caret-position="258">
+          <caret line="136" column="60" selection-start-line="136" selection-start-column="18" selection-end-line="136" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/random_epochs_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="98" column="17" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/globals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

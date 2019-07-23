@@ -51,8 +51,20 @@ def train(learntAgents=True, max_time_learn=20):
         val_loss_best = 5000
         escape_flag = False
         escape_val = 0
+        a=0
         while timer() - start_time < max_time_learn and not escape_flag:
-            res = model.fit(x_batch, y_batch, batch_size=Globals().vp().batch_size, epochs=30, verbose=0, validation_split=0.2)
+            if a ==0:
+                x = [0, 0, 10, 15, 0]
+                pred = model.predict(np.array([x]))
+                print('przed',pred)
+                isOk = Globals().last_weights == None or Globals().last_weights == model.get_weights()
+                # print(isOk)
+            res = model.fit(x_batch, y_batch, batch_size=Globals().vp().batch_size, epochs=Globals().epochs_learn, verbose=0, validation_split=0.2)
+            if a ==0:
+                x = [0, 0, 10, 15, 0]
+                pred = model.predict(np.array([x]))
+                print('po', pred)
+                a=4
             if res.history['val_loss'][-1] < val_loss_best:
                 val_loss_best = res.history['val_loss'][-1]
                 weights_best = model.get_weights()
@@ -68,8 +80,17 @@ def train(learntAgents=True, max_time_learn=20):
             if i == 0:
                 x = [0, 0, 10, 15, 0]
                 pred = model.predict(np.array([x]))
+                try:
+                    diff = abs(pred[0][0] - Globals().pred_plot_memory[-1][0][0]) + abs(pred[0][1] - Globals().pred_plot_memory[-1][0][1])
+                    if a == 0:
+                        print('diff', diff)
+                        a+=1
+                except:
+                    a=23
                 Globals().pred_plot_memory.append(pred)
-        print('najlepszy loss',val_loss_best)
+        # print('najlepszy loss',val_loss_best)
+        # print('koniec', model.get_weights())
+        Globals().last_weights == model.get_weights()
         model.set_weights(weights_best)
         model.save('static_files/model-agent' + str(i) + '.h5')
 

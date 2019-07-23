@@ -22,11 +22,10 @@ class SmartAgent(Agent):
         if self.model == 0:
             l_rate = Globals().vp().nn_l_rate
             layers = Globals().vp().layers
-            regularizers_ = [0.2, 0.2, 0.2]
             activation = 'relu'
             self.model = self._build_model(layers=layers, activation=activation, l_rate=l_rate)
 
-    def _build_model(self, layers, activation='relu', l_rate=0.01, reg_val=0.2):
+    def _build_model(self, layers, activation='relu', l_rate=0.01, reg_val=Globals().vp().regularization):
         model = Sequential()
         for i, nodes in enumerate(layers):
             if i == 0:
@@ -53,13 +52,14 @@ class SmartAgent(Agent):
             y_batch.append(y_target[0])
         return x_batch, y_batch
 
-    def full_batch(self):
+    def full_batch(self,only_learn_usable = False):
         x_batch = []
         y_batch = []
         i = 0
         l_rate = Globals().learning_rate
         gamma = Globals().vp().gamma
-        for memory in self.memories:
+        memories = self.memories if not only_learn_usable else [mem for mem in self.memories if mem.learn_usable]
+        for memory in memories:
             state = memory.state.to_learn_array()
             action = 2 if memory.action == 'orange' else memory.action
             y_target = self.model.predict(state)
@@ -73,14 +73,10 @@ class SmartAgent(Agent):
         return x_batch, y_batch
 
     def train_full(self, epochs=20, learning_rate=0.0001):
-        x_batch, y_batch = self.full_batch()
+        x_batch, y_batch = self.full_batch(only_learn_usable=True)
         self.model.learning_rate = learning_rate
         res = self.model.fit(np.array(x_batch), np.array(y_batch), epochs=epochs, batch_size=len(x_batch),
                              verbose=0)
-
-    def evaluate_full(self):
-        x_batch, y_batch = self.full_batch()
-        return self.model.evaluate(np.array(x_batch), np.array(y_batch), verbose=0)
 
     def train(self, batch_size=Globals().batch_size, epochs=20, learning_rate=0.0001):
         x_batch, y_batch = self.random_minibatch(batch_size)
@@ -91,6 +87,7 @@ class SmartAgent(Agent):
     def get_action(self, state):
         if state.actual_phase == 'orange':
             return 'orange'
+        return 0
         if np.random.rand() <= Globals().epsilon:  # if acting randomly, take random action
             action = random.choice(self.local_action_space)
             return action
@@ -103,20 +100,6 @@ class SmartAgent(Agent):
                 if a in self.local_action_space:
                     return int(a)
         return int(action)  # sometimes jump to int64
-
-    def save_batch(self):
-        x_batch = []
-        y_batch = []
-        for memory in self.memories:
-            if memory.action == 'orange':
-                continue
-            state = memory.state.to_learn_array()
-            y = memory.reward
-            x_batch.append(state[0])
-            y_batch.append(y)
-            if self.index == 0:
-                Globals().x_batch.append(state[0])
-                Globals().y_batch.append(y)
 
     def remember(self, densities, reward):
         state = self.local_state

@@ -56,51 +56,51 @@ class Testing(unittest.TestCase):
     #     predictions = agents[0].model.predict(np.array([x]))
     #     self.assertTrue(predictions[0][0]>predictions[0][1])
 
-    def test_no_2_actions_random_no_crashes(self):
-        agents: List[SmartAgent] = get_SmartAgents()
-        for agent in agents:
-            agent.model = agent._build_model(layers=[20, 50, 30, 18])
-        env = Env(agents)
-        env.u = env_settings.u_all_2
-        max_time = 90
-        Globals().time = 0
-        for t in range(max_time):
-            actions=[]
-            actions.append(random.choice(agents[0].local_action_space))
-            # print(f't:{t} actions: {agents[0].local_action_space}, chosen_action:{actions[0]}')
-            env.step(actions)
-        for agent in agents:
-            agent.reshape_rewards()
-        exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
-                                netName='net4',
-                                densityName='test_learn_no_2')
-        exportData.saveToJson()
-        agents[0].train_full(epochs=15000, learning_rate=0.001)
-        x = [4, 4, 0]
-        predictions = agents[0].model.predict(np.array([x]))
-
-        def test_no_3_actions_random_30s_he_predicts_0_phases_well(self):
-            agents: List[SmartAgent] = get_SmartAgents()
-            for agent in agents:
-                agent.model = agent._build_model(layers=[20, 50, 30, 18])
-            env = Env(agents)
-            env.u = env_settings.u_all_2
-            max_time = 90
-            Globals().time = 0
-            for t in range(max_time):
-                actions = []
-                actions.append(random.choice(agents[0].local_action_space))
-                # print(f't:{t} actions: {agents[0].local_action_space}, chosen_action:{actions[0]}')
-                env.step(actions)
-            for agent in agents:
-                agent.reshape_rewards()
-            exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
-                                    netName='net4',
-                                    densityName='test_learn_no_2')
-            exportData.saveToJson()
-            agents[0].train_full(epochs=15000, learning_rate=0.001)
-            x = [4, 4, 0]
-            predictions = agents[0].model.predict(np.array([x]))
+    # def test_no_2_actions_random_no_crashes(self):
+    #     agents: List[SmartAgent] = get_SmartAgents()
+    #     for agent in agents:
+    #         agent.model = agent._build_model(layers=[20, 50, 30, 18])
+    #     env = Env(agents)
+    #     env.u = env_settings.u_all_2
+    #     max_time = 90
+    #     Globals().time = 0
+    #     for t in range(max_time):
+    #         actions=[]
+    #         actions.append(random.choice(agents[0].local_action_space))
+    #         # print(f't:{t} actions: {agents[0].local_action_space}, chosen_action:{actions[0]}')
+    #         env.step(actions)
+    #     for agent in agents:
+    #         agent.reshape_rewards()
+    #     exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
+    #                             netName='net4',
+    #                             densityName='test_learn_no_2')
+    #     exportData.saveToJson()
+    #     agents[0].train_full(epochs=15000, learning_rate=0.001)
+    #     x = [4, 4, 0]
+    #     predictions = agents[0].model.predict(np.array([x]))
+    #
+    #     def test_no_3_actions_random_30s_he_predicts_0_phases_well(self):
+    #         agents: List[SmartAgent] = get_SmartAgents()
+    #         for agent in agents:
+    #             agent.model = agent._build_model(layers=[20, 50, 30, 18])
+    #         env = Env(agents)
+    #         env.u = env_settings.u_all_2
+    #         max_time = 90
+    #         Globals().time = 0
+    #         for t in range(max_time):
+    #             actions = []
+    #             actions.append(random.choice(agents[0].local_action_space))
+    #             # print(f't:{t} actions: {agents[0].local_action_space}, chosen_action:{actions[0]}')
+    #             env.step(actions)
+    #         for agent in agents:
+    #             agent.reshape_rewards()
+    #         exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
+    #                                 netName='net4',
+    #                                 densityName='test_learn_no_2')
+    #         exportData.saveToJson()
+    #         agents[0].train_full(epochs=15000, learning_rate=0.001)
+    #         x = [4, 4, 0]
+    #         predictions = agents[0].model.predict(np.array([x]))
 
         # similar state but predictions ho crazy!!! overfiting as hecc
     # def test_no_2_000_then_111_what_is_brilliant_idea(self):
@@ -197,11 +197,35 @@ class Testing(unittest.TestCase):
         #         a = False
         # plt.plot(close_preds_1,color='yellow')
         # plt.plot(act_preds_1,color='orange')
-        plt.show()
+        # plt.show()
 
 
-
-
+    def test_no_5_actions_0_1_what_is_terrible_idea(self):
+        agents: List[SmartAgent] = get_SmartAgents()
+        for agent in agents:
+            agent.model = agent._build_model(layers=[20, 50, 30, 18])
+        env = Env(agents)
+        env.u = env_settings.u_all_2
+        max_time = 90
+        Globals().time = 0
+        for t in range(max_time):
+            actions = [0]
+            # if t == 60 or t >= 63:
+            #     actions = [1]
+            # if t == 61 or t == 62:
+            #     actions = [orange]
+            # env.step(actions)
+        for agent in agents:
+            agent.reshape_rewards()
+        # exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
+        #                         netName='net4',
+        #                         densityName='test_learn_no_1')
+        # exportData.saveToJson()
+        while True:
+            agents[0].train_full(epochs=15000, learning_rate=0.001)
+        x = [4,4,0]
+        predictions = agents[0].model.predict(np.array([x]))
+        self.assertTrue(predictions[0][0]>predictions[0][1])
 
 
 

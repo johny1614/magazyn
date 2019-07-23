@@ -89,6 +89,9 @@ for run in runs:
         draw_predictions(name)
         plot_pred_memory('teraz'+str(i))
         i+=1
+        for i in range(len(Globals().pred_plot_memory)):
+            mem = Globals().pred_plot_memory[i]
+            # print(f"memory:{i} {mem}")
     #
     #
     # rewards_mean

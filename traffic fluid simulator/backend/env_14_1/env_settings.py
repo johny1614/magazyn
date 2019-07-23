@@ -61,4 +61,5 @@ u_all_9 = np.array([[9] * 90, [9] * 90]).transpose()
 #
 # u_under_15_random = get_u_under_15_random()
 #
-u = np.array([[20] * 90, [20] * 90]).transpose()
+u = np.array([[2] * 90, [2] * 90]).transpose()
+

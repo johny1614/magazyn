@@ -23,7 +23,7 @@ def epoch(agents, u=env_settings.u_all_2):
     return env
 
 
-def generate_random_epochs(learntAgents=False, save_front_json=False, epochs=range(1), plotting=False, reshaping=False):
+def generate_random_epochs(learntAgents=False, save_front_json=False, epochs=range(1), plotting=False, reshaping=False,u=env_settings.u,actions=None):
     # save_front_json = True
     reshaping = True
     cars_outs = []
@@ -36,7 +36,7 @@ def generate_random_epochs(learntAgents=False, save_front_json=False, epochs=ran
     for e in epochs:
         # print('epoch!!!!!',e)
         Globals().epsilon = 1
-        env: Env = epoch(agents, u=env_settings.get_u_under_x_random(8))
+        env: Env = epoch(agents, u=u)
         if reshaping:
             for agent in env.agents:
                 agent.reshape_rewards()
@@ -77,7 +77,7 @@ def generate_random_epochs(learntAgents=False, save_front_json=False, epochs=ran
 
     for i in range(len(agents)):
         filename = 'static_files/x_batch_agent_' + str(i) + '.txt'
-        x_batch, y_batch = agents[i].full_batch()
+        x_batch, y_batch = agents[i].full_batch(only_learn_usable=True)
         np.savetxt(filename, x_batch, delimiter=',')
         filename = 'static_files/y_batch_agent_' + str(i) + '.txt'
         np.savetxt(filename, y_batch, delimiter=',')
@@ -94,6 +94,9 @@ def generate_random_epochs(learntAgents=False, save_front_json=False, epochs=ran
         plt.title('Suma nagród - losowe akcje')
         plt.savefig('img_rewards_random.png')
         plt.close()
+    if any(x for x in [mem.reward for mem in agents[0].memories] if x > 10):
+        print("weeeeeeeeeeee")
+    return agents
 
 
 if __name__ == "__main__":
