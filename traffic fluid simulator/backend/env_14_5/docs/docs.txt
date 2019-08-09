@@ -1,0 +1,13 @@
+env_14
+
+
+orange_phase_duration = 2 i tyle roznicy wzgledem env_15
+
+
+Env_15
+0 - 1
+        4 - 5
+2 - 3
+
+
+Tutaj trzeba bedzie juz pouczyc wedle sztywno generowanych stanwo

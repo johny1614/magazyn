@@ -8,6 +8,7 @@ from Utils import empty_3_list
 from env_settings import start_A, get_x
 from model import GlobalState
 from model.Action import ActionInt
+from model.LearningState import LearningState
 from model.Net import Net, Times
 from model.SmartAgent import SmartAgent
 from services.globals import Globals
@@ -23,6 +24,14 @@ class Env:
     flow_memories: List = attr.Factory(list)
     last_flows: List = attr.Factory(list)
     u = env_settings.u
+
+    def assign_state(self, state: LearningState):
+        for agent in self.agents:
+            agent.orange_phase_duration = state.orange_phase_duration
+            agent.actual_phase = state.actual_phase
+            agent.starting_actual_phase = state.starting_actual_phase
+            agent.phase_duration = state.phase_duration
+            self.x[self.t] = state.densities
 
     def __attrs_post_init__(self):
         Globals().time = 0

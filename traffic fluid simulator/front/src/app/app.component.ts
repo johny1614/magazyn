@@ -38,7 +38,15 @@ export class AppComponent {
       this.nets = [NetFactory.netFromJson(staticData)];
       // sdfdsfsdfdsf
       // asdsd
-      let net = 'assets/densities/net14_test_reshaping_no_0.json';
+      // let net = 'assets/densities/net14_test_fixed_no_4.json';
+      
+      // let net = 'assets/densities/net14_random_1.json';
+      let net = 'assets/densities/net14_learnt_19.json';
+
+
+      // let net = 'assets/densities/net14_test_batching_4.json';
+      // let net = 'assets/densities/net14_test_fixed_4_batch.json';
+      // let net = 'assets/densities/net14_test_reshaping_no_0.json';
       // let net = 'assets/densities/net14_test_no_5.json';
       // let net = 'assets/densities/net_14_base.json';
       // let net = 'assets/densities/net4_sequential.json'
@@ -56,7 +64,7 @@ export class AppComponent {
       // let net = 'assets/densities/net11_random_not_reshaped_1.json';
 
       // let net = 'assets/densities/net11_random_0.json';
-      // let net = 'assets/densities/net11_learnt_6.json';
+      // let net = 'assets/densities/net14_learnt_0.json';
 
       // test_no_1
       // let net = 'assets/densities/net11_test_no_7.json';

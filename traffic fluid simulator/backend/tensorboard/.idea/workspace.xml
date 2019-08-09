@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e274e1be-738e-443e-8046-2a1854130f6a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../env_14_4/states_generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/.mypy_cache/3.6/StateFactory.data.json" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_4/.mypy_cache/3.6/StateFactory.data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/.mypy_cache/3.6/StateFactory.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_4/.mypy_cache/3.6/StateFactory.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/.mypy_cache/3.6/services/StateFactory.data.json" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_4/.mypy_cache/3.6/services/StateFactory.data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/.mypy_cache/3.6/services/StateFactory.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_4/.mypy_cache/3.6/services/StateFactory.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/Env.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_4/Env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/model/Agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_4/model/Agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/model/LearningState.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_4/model/LearningState.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/nn_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_4/nn_trainer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz1021.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz1082.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz1145.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz1230.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz1366.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz140.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz1445.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz1501.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz1558.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz1627.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz1700.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz1771.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz1842.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz1917.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz1999.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz205.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz2086.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz2177.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz2252.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz2339.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz2418.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz2493.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz2563.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz260.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz2633.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz2706.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz2778.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz2868.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz2923.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz3060.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz3139.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz3202.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz3250.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz3355.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz344.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz3440.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz3508.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz3581.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz3668.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz3725.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz3797.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz3869.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz3944.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz405.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz4070.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz4165.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz4289.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz4401.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz4495.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz4572.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz467.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz592.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz640.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz697.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz752.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz814.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz872.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/plotteraz935.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz0time12.332051758639723 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz1021time422.87098379968563 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz1082time450.27452009908336 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz1145time478.85560682780914 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz1230time508.88585913241445 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz1366time536.8148672500521 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz140time42.46286571306048 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz1445time564.4546306842146 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz1501time592.4858913989734 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz1558time620.989292377683 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz1627time650.2717360659624 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz1700time678.4252617007171 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz1771time706.0504628455063 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz1842time734.8200808973311 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz1917time764.4821066534863 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz1999time793.8095567389478 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz205time71.96651719060267 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz2086time825.3241749976505 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz2177time854.031133380525 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz2252time883.9712599898838 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz2339time913.4624779370187 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz2418time943.1213254691882 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz2493time971.940023972193 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz2563time1002.2034101839803 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz260time100.44230845098386 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz2633time1032.3309054297947 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz2706time1062.3924639944012 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz2778time1093.5672820299321 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz2868time1122.7542869459317 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz2923time1155.7597876565337 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz3060time1187.2241820218817 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz3139time1219.924221697561 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz3202time1251.468818027192 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz3250time1286.5811704421642 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz3355time1318.900949040968 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz3440time1350.4127649843044 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz344time129.79235859886157 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz3508time1382.0551241765372 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz3581time1413.8306557328149 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz3668time1445.3686496060177 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz3725time1476.2491193250066 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz3797time1509.184323199303 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz3869time1544.6292796891632 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz3944time1577.977225454402 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz405time158.2734173910338 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz4070time1612.9723174734322 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz4165time1647.204562927648 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz4289time1682.5725312794782 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz4401time1722.3231200800312 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz4495time1759.9330170611836 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz4572time1797.4385480818237 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz467time190.8654106015853 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz592time219.2650078790062 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz640time247.9733929184846 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz697time276.6150971573033 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz752time306.08634415717086 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz814time335.51090728367853 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz872time365.3687047734942 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/predictionsteraz935time395.553309904262 layers = [12, 18, 22, 20, 16] nn_l_rate = 0.01 first_epochs_range = 2 epochs_range = 5 max_time_learn = 1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/services/StateFactory.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/static_files/model-agent0.h5" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_4/static_files/model-agent0.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/static_files/x_batch_agent_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_4/static_files/x_batch_agent_0.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/static_files/y_batch_agent_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_4/static_files/y_batch_agent_0.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/x.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_4/x.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_14_4/y.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_4/y.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/start.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="65" lean-forward="true" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/mnist_with_summaries.py" />
+        <option value="$PROJECT_DIR$/start.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="tensorboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tensorboard" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e274e1be-738e-443e-8046-2a1854130f6a" name="Default Changelist" comment="" />
+      <created>1564150409883</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564150409883</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16491044" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Mypy" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.30552545" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/mnist_with_summaries.py" />
+    <entry file="file://$PROJECT_DIR$/start.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="65" lean-forward="true" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

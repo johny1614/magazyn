@@ -1,6 +1,7 @@
 import random
 from typing import List
 import attr
+from tensorflow.python.keras.callbacks import TensorBoard, LambdaCallback
 
 
 class Singleton(type):
@@ -20,10 +21,10 @@ class ValParamSet:
         # self.max_time_learn = max_time_learn
         self.layers = [12,18,22,20,16]
         self.nn_l_rate = 0.01
-        self.first_epochs_range = 2
-        self.epochs_range = 5
+        self.first_epochs_range = 5
+        self.epochs_range = 25
         self.batch_size = 1000
-        self.max_time_learn = 1000
+        self.max_time_learn = 10
         self.gamma = 0.95
         self.reshape_future = 0
         self.regularization = 0.1
@@ -75,6 +76,10 @@ class BaseClass:
         self.last_weights = None
         self.not_to_learn_last_epochs = 50
         self.global_rewards_mem = []
+        name = "nn_l_rate={} layers={}".format(self.vp().nn_l_rate,self.vp().layers)
+        self.tensorboard = TensorBoard(log_dir="logs\{}".format(name))
+        print('TEEEEEEEEEEEEEEEEnsorboard')
+        self.epochs_done = 0
     def vp(self) -> ValParamSet:
         return self.val_params[self.run_no]
 

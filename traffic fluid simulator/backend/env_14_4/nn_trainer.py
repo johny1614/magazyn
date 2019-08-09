@@ -1,5 +1,4 @@
 from timeit import default_timer as timer
-
 import matplotlib.pyplot as plt
 import numpy as np
 from tensorflow.keras.optimizers import Adam
@@ -53,14 +52,19 @@ def train(learntAgents=True, max_time_learn=20):
         escape_val = 0
         a = 0
         while timer() - start_time < max_time_learn and not escape_flag:
-            res = model.fit(x_batch, y_batch, batch_size=Globals().vp().batch_size, epochs=Globals().epochs_learn,
-                            verbose=0, validation_split=0.2)
+            res = model.fit(x_batch, y_batch, batch_size=Globals().vp().batch_size,
+                            initial_epoch=Globals().epochs_done,
+                            epochs=Globals().epochs_done+Globals().epochs_learn,
+                            verbose=0, validation_split=0.2, callbacks=[Globals().tensorboard,agents[i].weights_history_callback])
+            Globals().epochs_done+=Globals().epochs_learn
             if res.history['val_loss'][-1] < val_loss_best:
                 val_loss_best = res.history['val_loss'][-1]
                 weights_best = model.get_weights()
             if res.history['val_loss'][-1] > val_loss:
                 escape_val += 1
-                if escape_val > 20:
+                print('escape_val',escape_val)
+                print('val loss',res.history['val_loss'][-1])
+                if escape_val > 2:
                     escape_flag = True
                 #     print('przerwalbym!!!!!!')
                 # print('wynik sieci', res.history['val_loss'][-1])
