@@ -125,7 +125,7 @@ for run in runs:
         print('max possible',maximum_possible_cars_out)
         if result[2] >  maximum_possible_cars_out * 0.93:  # cars_out
             print('u przed',Globals().u_value)
-            Globals().u_value=Globals().u_value+1
+            Globals().u_value=Globals().u_value*1.2
             print('u po',Globals().u_value)
         results.append(result)
         lurns += 1

@@ -106,7 +106,8 @@ class BaseClass:
     def vp(self) -> ValParamSet:
         return self.val_params[self.run_no]
     def get_u(self,time):
-        return np.array([[1] * time, [1] * time, [1] * time]).transpose()
+        u = Globals().u_value
+        return np.array([[u] * time, [u] * time, [u] * time]).transpose()
     def get_u_train(self,epoch):
         # if 0<= epoch <3:
         #     return env_settings.generate_u(1)
