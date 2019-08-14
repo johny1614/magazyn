@@ -68,8 +68,8 @@ def train(learntAgents=True, max_time_learn=60, agents=None,shuffle=True,batches
             #                     verbose=0)  # callbacks=[Globals().tensorboard,agents[i].weights_history_callback]
             wagi_przed_uczeniem = model.get_weights()
             res = model.fit(x_batch, y_batch, batch_size=Globals().vp().batch_size,
-                            initial_epoch=Globals().epochs_done,
-                            epochs=Globals().epochs_done + Globals().epochs_learn,
+                            initial_epoch=Globals().epochs_learn_done,
+                            epochs=Globals().epochs_learn_done + Globals().vp().epochs_learn,
                             validation_split=0.2,
                             verbose=0)  # callbacks=[Globals().tensorboard,agents[i].weights_history_callback]
             same = True
@@ -83,7 +83,7 @@ def train(learntAgents=True, max_time_learn=60, agents=None,shuffle=True,batches
             else:
                 inne += 1
             # print('wagi te same - uczenie', same)
-            Globals().epochs_done += Globals().epochs_learn
+            Globals().epochs_learn_done += Globals().vp().epochs_learn
             if start_flag:
                 # print('res history z start_flag to',res.history['val_loss'])
                 start_flag=False

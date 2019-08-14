@@ -29,13 +29,14 @@ class ValParamSet:
         self.nn_l_rate = 0.01
         self.q_formula_l_rate = 1
         self.first_epochs_range = 2
-        self.epochs_range = 3
-        self.batch_size = 1000
+        self.epochs_range = 10
+        self.batch_size = 64
         self.max_time_greedy = 1000
         self.max_time_learn = 1000
         self.gamma = 0.9
         self.reshape_future = 0
         self.regularization = 0.1
+        self.epochs_learn = 5
 
 
 
@@ -69,12 +70,12 @@ class BaseClass:
     def __init__(self):
         self.val_params: List[ValParamSet] = create_vals()
         self.time = 0
-        self.epochs_done = 0
+        self.epochs_learn_done = 0
         self.state_repeats = 0
         # self.max_time_random = 1000
         self.max_time_greedy = 1000
         self.new_states = 0
-        self.epochs_learn = 2
+        # self.epochs_learn = 2
         self.batch_size = 60
         self.validation_batch_size = 20
         self.l1 = 8
@@ -95,7 +96,7 @@ class BaseClass:
         name = "nn_l_rate={} layers={}".format(self.vp().nn_l_rate, self.vp().layers)
         self.tensorboard = TensorBoard(log_dir="logs\{}".format(name))
         print('TEEEEEEEEEEEEEEEEnsorboard')
-        self.epochs_done = 0
+        self.epochs_learn_done = 0
         self.y_batch_check=None
         self.x_batch_check=None
         self.x_batch_history =[]

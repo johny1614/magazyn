@@ -20,7 +20,7 @@ def epoch(agents, time, u=None):
     for t in range(time):
         actions: List[ActionInt] = [agent.get_action(agent.local_state) for agent in agents]
         env.step(actions)
-    Globals().epochs_done += 1
+    Globals().epochs_learn_done += 1
     return env
 
 

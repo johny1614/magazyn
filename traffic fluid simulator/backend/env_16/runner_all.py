@@ -111,7 +111,7 @@ for run in runs:
     lurns = 0
     eps_decay = 0
     while timer() - startTime < timeToLearn:
-        eps_decay += 0.01
+        eps_decay += 0.07
         Globals().epsilon = 1 - eps_decay
         if Globals().epsilon < 0.2:
             Globals().epsilon = 0.2
@@ -130,7 +130,7 @@ for run in runs:
         results.append(result)
         lurns += 1
         name = 'teraz' + str(Globals().greedy_run_no) + "time" + str(timer() - startTime) + " " + str(Globals().vp())
-        # draw_predictions(name)
+        # draw_predictions(name)age
         # plot_pred_memory('teraz' + str(Globals().greedy_run_no))
         # for i in range(len(Globals().pred_plot_memory)):
         #     mem = Globals().pred_plot_memory[i]

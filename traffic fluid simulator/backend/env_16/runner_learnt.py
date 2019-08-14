@@ -9,7 +9,6 @@ from services.globals import Globals
 
 def run_learnt_greedy(saveJson=False):
     saveJson = True
-    print('greedy')
     model_file_names = ['static_files/model-agent0.h5', 'static_files/model-agent1.h5', 'static_files/model-agent2.h5']
     agents = get_LearnSmartAgents(model_file_names)
     # print('weights!',agents[0].model.weights[0])
@@ -24,7 +23,6 @@ def run_learnt_greedy(saveJson=False):
                                 netName='net16',
                                 densityName='learnt_' + str(Globals().greedy_run_no))
         exportData.saveToJson()
-    max_time = Globals().vp().max_time_greedy
     maximum_possible_cars_out=Globals().u_value*Globals().vp().max_time_greedy*3
     print('max greedy',max([max(x) for x in env.x]))
     print(
