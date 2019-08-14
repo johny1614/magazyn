@@ -745,7 +745,7 @@ Na model sieci składają się 3 drogi - każda ma po 2 odcinki. Istnieje jedno 
 	\label{fig:env_14_fazy}
 	\caption{środowisko 2 - fazy świateł}
 \end{figure}\noindent
-Skrzyżowanie posiada 3 fazy świetlne przedstawione powyżej. Faza 0 umożliwia przejazd przez skrzyżowanie z górnej drogi (manewr [1,4]) z kolei faza 1 umożliwia wjazd z drogi dolnej (manewr [3,4]). Faza żółte blokuje przejazd przez skrzyżowanie.
+Skrzyżowanie posiada 3 fazy świetlne przedstawione powyżej. Faza 0 umożliwia przejazd przez skrzyżowanie z górnej drogi (manewr [1,4]) z kolei faza 1 umożliwia wjazd z drogi dolnej (manewr [3,4]). Faza "żółte" blokuje przejazd przez skrzyżowanie.
 
 \subsection{Przestrzeń decyzyjna}
 Przestrzeń decyzyjną oraz konsekwencje akcji podjętych przez agenta przedstawia poniższa tabela:
@@ -763,24 +763,28 @@ Wykorzystana w modelu zostanie funkcja zatoru przedstawiona w rozdziale \myref{s
 \frac{10}{x[i]} & dla $ j=i+1  \wedge x[i] \geq 10$ - przejazd z zatorem \label{eq:manewr_zator_f10} \\
 0 & dla pozostałych przypadków - manewr [i,j]
 \end{numcases} \noindent
-\subsection{Pożądane zachowanie}
-Pożądane zachowanie w tym przypadku jest nieco bardziej skomplikowane. Z pewnością jeśli na drodze na której jest zielone światło jest więcej aut niż na drugiej drodze - warto podtrzymać fazę świetlną. Co w przypadku gdy zielone światło jest dla drogi z mniejszą ilością pojazdów? Wtedy zaczyna się problem - gdyż agent musi odnaleźć złoty środek. Zmiana sygnalizacji powoduje 2 interwały karencji, podczas których żaden pojazd nie przejedzie i może to być czynnikiem decydującym o pozostaniu przy obecnej fazie.
+\subsection{Cel nauki i pożądane zachowanie agenta}
+Początkowo do każdej z dróg wjeżdżają po 2 pojazdy. Agent ma za zadanie wykonywać akcje, które w trakcie symulacji pozwolą na opuszczenie skrzyżowania przez conajmniej 98 procent pojazdów, które wjechały do sieci dróg. W przypadku spełnienia tego warunku następuje zwiększenie ilości wjeżdżających do układu pojazdów. Ten proces jest powtarzany, aż do momentu gdy przez 10 iteracji uczenia nie uzyskany zostanie warunek 98 procent pojazdów opuszczających skrzyżowanie. Moment stopu spodziewany jest na chwilę, gdy na każdą z dróg będzie wjeżdżało około 5 pojazdów. Nie ma możliwości, by przejeżdżało więcej niż 10 pojazdów, a tyle właśnie pojawia się w układzie. Muszą zatem wtedy pojawiać się zatory.
+
+Pożądane zachowanie agenta w tym przypadku nie jest jednoznaczne do określenia. Z pewnością jeśli na drodze na której jest zielone światło jest conajmniej 10 pojazdów, to warto podtrzymać fazę świetlną. Zmiana sygnalizacji powoduje 2 interwały karencji, podczas których żaden pojazd nie przejedzie i może to być czynnikiem decydującym o pozostaniu przy obecnej fazie. Jaka powinna być akcja w przypadku gdy zielone światło jest dla drogi z mniejszą niż 10 ilością pojazdów? Wtedy agent musi odnaleźć złoty środek i jeśli na drugiej drodze jest dużo pojazdów - może zmienić światło. 
 
 \subsection{Sposób uczenia}
-Zastosowana została metoda uczenia przedstawiona w \myref{learning:DQN_single_agent}. Następujące stałe określające model uczenia to:
+Zastosowana została metoda uczenia przedstawiona w \myref{learning:DQN_single_agent}. 
+
+Następujące stałe oraz ustalenia określają szczegóły uczenia:
 \begin{itemize}
 	\item $\gamma = 0.9$ - stopa dyskontowa
-	\item $\alpha = 0.01$ - stała szybkości uczenia (ang. learning rate)
-	\item Generowanych jest jednorazowo 50 epizodów
+	\item Parametr $\epsilon$ jest początkowo równy 1 (w pełni losowe epizody). Z każdą iteracją jest zmniejszany o 0,01 aż do wartości $\epsilon=0,2$.
+	\item Generowanych jest jednorazowo 10 epizodów. Każdy z nich trwa 1000 interwałów czasowych.
 	\item Wygenerowane zbiory danych są dzielone w proporcjach 80 i 20 procent dla odpowiednio treningu i walidacji.
-	\item Warunkiem stopu jest 60 sekund działania algorytmu.
-	\item Sieć neuronowa posiada 1 ukrytą warstwę z 10 neuronami.
+	\item Za uczenie odpowiada sieć neuronowa biblioteki Keras. Posiada ona 3 ukryte warstwy (10,14,10 neuronów) z funkcjami aktywacji relu. Optymalizacja jest przeprowadzana przez metodę Adam z funkcją straty błędu średniokwadratowego i parametrem $learning\_rate = 0,01$. 
 \end{itemize}
 
 \subsection{Wyniki uczenia}
-Jeszcze nie ma 
+Algorytm szybko uzyskuje kolejne warunki 98 procent pojazdów przejeżdżających przez skrzyżowanie. Dopiero przy 4,97 wjeżdzających pojazdach na drogę widoczny jest zastój, który powoduje warunek stopu.
+Najlepszy wynik to średnio 9,48 pojazdów przejeżdżających w jednej chwili przez skrzyżowanie. Jest to dobry wynik zważając na to, iż potencjalnie najwyższy możliwy wynik do osiągnięcia jest w granicy 9,94. Z 9940 pojazdów 450 nie opuściło skrzyżowania. Zatem przy niemalże 5 pojazdach napływających do układu powstają korki, co jest naturalnym zjawiskiem - wynikającym z ograniczeń ruchu, a nie nieoptymalnej sygnalizacji świetlnej.
 
-\section{Srodowisko 4}
+\section{Srodowisko 4 (16 na froncie)}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm]{env_4_agenci}
@@ -967,6 +971,47 @@ Algorytm jest następujący:
 \item Jeśli spełniony jest warunek stopu - przerwij algorytm. W przeciwnym razie przejdź do \ref{symulacja_50}.
 	
 \end{enumerate}
+
+
+
+\section{Mój algorytm który potrzebuje nazwy ale proponuję: Monte Carlo DQN} \label{learning:DQN_single_agent}
+
+\[Q(s,a) = (1-\alpha)Q(s,a) + \alpha [r + \gamma \max_{a' \in A'} Q(s',a')] \addtag \label{eq:Q_DQN} \]
+\begin{itemize}
+	\item $ s,a $ to para stanu i akcji, które pojawiły się w trakcie symulacji
+	\item $Q(s,a)$ to opłacalność podjęcia akcji $a$ w stanie $s$.
+	\item $ r $ to nagroda przydzielona podczas symulacji dla akcji $ a $ podjętej w stanie $ s $
+	\item $ s' $ to stan do którego doprowadziła akcja $ a $ podjęta w stanie $ s $ podczas symulacji
+	\item $ A' $ to przestrzeń możliwych akcji do podjęcia w stanie $ s' $
+	\item $\alpha$ to stała szybkości uczenia (ang. learning rate)
+	\item $\gamma \in [0,1]$  to stopa dyskontowa
+\end{itemize}
+
+Algorytm jest następujący:
+\begin{enumerate}
+	\item Utwórz sieć neuronową, która na wejście przyjmować będzie stan środowiska. Wyjściowym sygnałem jest Q(s,a) - opłacalność akcji możliwych do podjęcia w stanie danym na wejściu.
+	\item Zasymuluj pewną ilość epizodów. Akcje są wybierane w $\epsilon$ - greedy sposób. Zapisuj dane wygenerowane podczas tych epizodów: \label{symulacja_50}
+	\begin{enumerate}
+		\item Stany środowiska
+		\item Podjęte akcje
+		\item Przydzielone nagrody
+	\end{enumerate}
+	\item Na podstawie zapisanych danych utwórz następujące zbiory danych wykorzystane w sieci neuronowej:
+	\begin{enumerate}
+		\item Zbiór sygnałów wejściowych (x-batch). Pojedynczym elementem tego zbioru jest tablica przedstawiająca stan środowiska.
+		\item Zbiór oczekiwanych sygnałów wyjściowych (y-batch), czyli opłacalności akcji do podjęcia w stanie zadanym na wejścu.
+		Dla elementu odpowiadającego akcji, która została podjęta w symulacji wylicz wartość wedle równania \myref{eq:Q_DQN}. Dla elementów odpowiadających reszcie akcji, które nie zostały podjęte - sieć neuronowa przewiduje nagrodę. 
+	\end{enumerate}
+	\item Podziel powyższe zbiory na segment treningowy i walidacyjny.
+	\item Trenuj sieć neuronową do momentu, gdy wyniki dla zbioru walidacyjnego się polepszają.
+	\item Jeśli spełniony jest warunek stopu - przerwij algorytm. W przeciwnym razie przejdź do \ref{symulacja_50}.
+	
+\end{enumerate}
+
+
+
+
+
 
 
 

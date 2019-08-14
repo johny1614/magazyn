@@ -56,8 +56,8 @@ def train(learntAgents=True, max_time_learn=60, agents=None):
             res = model.fit(x_batch, y_batch, batch_size=Globals().vp().batch_size,
                             initial_epoch=Globals().epochs_done,
                             epochs=Globals().epochs_done + Globals().epochs_learn,
-                            verbose=1,
-                            validation_split=0.2)  # callbacks=[Globals().tensorboard,agents[i].weights_history_callback]
+                            validation_split=0.2,
+                            verbose=0)  # callbacks=[Globals().tensorboard,agents[i].weights_history_callback]
             Globals().epochs_done += Globals().epochs_learn
             if res.history['val_loss'][-1] < val_loss_best:
                 val_loss_best = res.history['val_loss'][-1]

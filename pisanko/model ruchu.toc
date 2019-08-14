@@ -40,13 +40,14 @@
 \contentsline {subsection}{\numberline {6.2.1}Sygnalizacje \IeC {\'s}wietlne}{34}% 
 \contentsline {subsection}{\numberline {6.2.2}Przestrze\IeC {\'n} decyzyjna}{34}% 
 \contentsline {subsection}{\numberline {6.2.3}Zatory drogowe}{35}% 
-\contentsline {subsection}{\numberline {6.2.4}Po\IeC {\.z}\IeC {\k a}dane zachowanie}{35}% 
+\contentsline {subsection}{\numberline {6.2.4}Cel nauki i po\IeC {\.z}\IeC {\k a}dane zachowanie agenta}{35}% 
 \contentsline {subsection}{\numberline {6.2.5}Spos\IeC {\'o}b uczenia}{36}% 
 \contentsline {subsection}{\numberline {6.2.6}Wyniki uczenia}{36}% 
-\contentsline {section}{\numberline {6.3}Srodowisko 4}{36}% 
+\contentsline {section}{\numberline {6.3}Srodowisko 4}{37}% 
 \contentsline {chapter}{\numberline {7}Przegl\IeC {\k a}d metod optymalizacyjnych}{39}% 
 \contentsline {section}{\numberline {7.1}Kategorie uczenia maszynowego}{39}% 
 \contentsline {section}{\numberline {7.2}Uczenie ze wzmocnieniem}{39}% 
 \contentsline {section}{\numberline {7.3}Programowanie dynamiczne}{42}% 
 \contentsline {section}{\numberline {7.4}Metoda Monte Carlo On-Policy}{43}% 
 \contentsline {section}{\numberline {7.5}M\IeC {\'o}j algorytm kt\IeC {\'o}ry potrzebuje nazwy ale proponuj\IeC {\k e}: Monte Carlo DQN full exploration}{44}% 
+\contentsline {section}{\numberline {7.6}M\IeC {\'o}j algorytm kt\IeC {\'o}ry potrzebuje nazwy ale proponuj\IeC {\k e}: Monte Carlo DQN}{45}% 

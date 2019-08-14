@@ -1,0 +1,10 @@
+Env_4_10
+Maksymalnie moze wyjechac 10 pojazdow w danym kierunku (czyli 20 w obu).
+Pomaranczowe swiatlo trwa 2 tury.
+Action_space to 'orange' lub [0,1,2]
+Wazne aby dawac akcje z action_space.
+Dalej rewardy to z 3 interwalow czasowych przejazdy.
+
+Wprowadzone zmiany:
+
+Refactoryzacja

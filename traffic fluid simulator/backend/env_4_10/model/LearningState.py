@@ -8,7 +8,7 @@ class LearningState:
     pre_cross_densities: Tuple[int]
     global_aggregated_densities: Tuple[int]
     actual_phase: int
-    starting_actual_phase: int # do learningu jest potrzebny stan ktory jest de facto w t-1 i jest na poczatku t i wlasnie w t jest zmieniany
+    starting_actual_phase: int  # do learningu jest potrzebny stan ktory jest de facto w t-1 i jest na poczatku t i wlasnie w t jest zmieniany
     phase_duration: int
     global_densities: List[int]
     densities_9: List[int]
@@ -24,58 +24,14 @@ class LearningState:
     def __eq__(self, other):
         return self.__hash__() == other.__hash__()
 
-    def den_group(self, den):
-        den_group = None
-        if den == 0:
-            den_group = 0
-        elif 0 < den <= 5:
-            den_group = 1
-        elif 5 < den <= 10:
-            den_group = 2
-        elif 10 < den <= 20:
-            den_group = 3
-        elif 20 < den <= 40:
-            den_group = 4
-        elif 40 < den <= 50:
-            den_group = 5
-        elif 50 < den <= 90:
-            den_group = 6
-        elif 90 < den <= 200:
-            den_group = 7
-        else:
-            den_group = 8
-        return den_group
-
-    def to_learn_nd_array_full(self):
-        return np.array([self.global_densities+[self.actual_phase]])
-
-    def to_learn_nd_array(self):
+    def to_learn_array(self):
+        phase = self.starting_actual_phase
+        if phase == 'orange' and self.actual_phase != 'orange':
+            phase = self.actual_phase
+        is_0_phase = phase == 0
+        is_1_phase = phase == 1
         return np.array([[self.pre_cross_densities[0], self.pre_cross_densities[1], self.pre_cross_densities[2],
-                          self.actual_phase]])
-    def to_9_densities_learn_array(self):
-        return np.array([self.densities_9+[self.starting_actual_phase]])
-
-    def to_learn_nd_array_densities_group(self):
-        den_group0 = self.den_group(self.pre_cross_densities[0])
-        den_group1 = self.den_group(self.pre_cross_densities[1])
-        den_group2 = self.den_group(self.pre_cross_densities[2])
-        actual_phase = self.actual_phase
-        if den_group0 is None or den_group1 is None or den_group2 is None:
-            pass
-        return np.array([[den_group0, den_group1, den_group2, actual_phase]])
-
-    def to_nd_array(self):
-        return np.array([self.to_array()])
-
-    def to_array(self):
-        array = []
-        for den in self.pre_cross_densities:
-            array.append(den)
-        for den in self.global_aggregated_densities:
-            array.append(den)
-        array.append(self.actual_phase)
-        array.append(self.phase_duration)
-        return array
+                          [is_0_phase], [is_1_phase]]])
 
     def possible_actions(self, orange_phase_duration):
         wait_action = [0]

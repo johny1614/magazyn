@@ -29,7 +29,7 @@ class Agent:
     @property
     def local_action_space(self) -> Tuple[ActionInt]:
         wait_action = ['orange']
-        light_Actions = [0, 1, 2]
+        light_Actions = [0, 1]
         if self.phase_duration >= self.orange_phase_duration:
             return light_Actions
         return wait_action
@@ -44,8 +44,10 @@ class Agent:
 
     def pass_action(self, action: ActionInt):
         if action not in self.local_action_space:
-            print(
-                f'uwagaAAAAAAAAAAAAAAAAAAA akcja {action} nie jest w local_action_space ktory jest rowny {self.local_action_space}, w chwili {Globals().time}, aktualny phase_duration: {self.phase_duration}')
+            if self.local_action_space == ['orange']:
+                action = 'orange'
+            # print(
+            #     f'uwagaAAAAAAAAAAAAAAAAAAA akcja {action} nie jest w local_action_space ktory jest rowny {self.local_action_space}, w chwili {Globals().time}, aktualny phase_duration: {self.phase_duration}, aktualna faza: {self.actual_phase}')
         self.action = action
         orange = 'orange'
         if action == orange:
@@ -56,6 +58,7 @@ class Agent:
                 self.phase_duration = 0
             if self.phase_duration >= self.orange_phase_duration:
                 self.actual_phase = self.pending_phase
+                self.starting_actual_phase = self.actual_phase # jak sie zrobi faza z orange na np.1 to juz mamy starting_actual_phase=1 do uczenia a nie orange
         if action != orange:
             if action == self.actual_phase:
                 self.phase_duration += 1
@@ -71,24 +74,14 @@ class Agent:
         self.local_state.actual_phase = self.actual_phase
 
     def assign_local_state(self, densities):
-        pre_cross_densities = ()
-        for sec in self.local_phase_sections:
-            pre_cross_densities = pre_cross_densities + (densities[sec],)
-        global_aggregated_densities = ()
         global_densities = []
-        densities_9 = []
         for road in sections_of_roads:
-            global_aggregated_densities = global_aggregated_densities + (
-                round(np.sum([densities[section] for section in road])),)
             for sec in road:
                 global_densities.append(densities[sec])
-        for sec in self.sections_9_indexes:
-            densities_9.append(densities[sec])
-        local_state = LearningState(pre_cross_densities=pre_cross_densities,
-                                    global_aggregated_densities=global_aggregated_densities,
-                                    global_densities=global_densities,
+        local_state = LearningState(global_densities=global_densities,
                                     actual_phase=self.actual_phase,
                                     phase_duration=self.phase_duration,
-                                    densities_9=densities_9,
-                                    starting_actual_phase=self.actual_phase)
+                                    densities=densities,
+                                    starting_actual_phase=self.actual_phase,
+                                    orange_phase_duration=self.orange_phase_duration)
         self.local_state = local_state

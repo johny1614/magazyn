@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.24)  25 JUL 2019 18:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.24)  9 AUG 2019 20:14
 entering extended mode
 **"./model ruchu.tex"
 ("model ruchu.tex"
@@ -701,6 +701,15 @@ LaTeX Warning: Label `eq:manewr_zator_f10' multiply defined.
 
 LaTeX Warning: Label `fig:agent-srodowisko' multiply defined.
 
+
+LaTeX Warning: Label `learning:DQN_single_agent' multiply defined.
+
+
+LaTeX Warning: Label `eq:Q_DQN' multiply defined.
+
+
+LaTeX Warning: Label `symulacja_50' multiply defined.
+
 )
 \openout1 = `"model ruchu.aux"'.
 
@@ -1205,56 +1214,62 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <env_4_agenci.png, id=189, 411.78844pt x 385.44pt>
 File: env_4_agenci.png Graphic file (type png)
 <use env_4_agenci.png>
-Package pdftex.def Info: env_4_agenci.png  used on input line 786.
+Package pdftex.def Info: env_4_agenci.png  used on input line 790.
 (pdftex.def)             Requested size: 284.52756pt x 266.3244pt.
- [36 <./env_4_agenci.png>]
-<env_4_fazy.png, id=194, 722.7pt x 542.025pt>
+
+Underfull \vbox (badness 1946) has occurred while \output is active []
+
+ [36]
+<env_4_fazy.png, id=193, 722.7pt x 542.025pt>
 File: env_4_fazy.png Graphic file (type png)
 <use env_4_fazy.png>
-Package pdftex.def Info: env_4_fazy.png  used on input line 801.
+Package pdftex.def Info: env_4_fazy.png  used on input line 805.
 (pdftex.def)             Requested size: 398.33858pt x 298.7515pt.
- [37 <./env_4_fazy.png>] [38
 
-]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37 <./env_4_agenci.png>] [38 <./env_4_fazy.png>]
 Rozdzia\l  7.
 
 LaTeX Warning: Citation `machineLearningClassification' on page 39 undefined on
- input line 809.
+ input line 813.
 
-[39]
+[39
+
+]
 <agent-srodowisko.png, id=206, 493.845pt x 289.83281pt>
 File: agent-srodowisko.png Graphic file (type png)
 <use agent-srodowisko.png>
-Package pdftex.def Info: agent-srodowisko.png  used on input line 830.
+Package pdftex.def Info: agent-srodowisko.png  used on input line 834.
 (pdftex.def)             Requested size: 398.33858pt x 233.77707pt.
  [40 <./agent-srodowisko.png>]
 <rewards-graph.png, id=210, 545.03625pt x 93.34875pt>
 File: rewards-graph.png Graphic file (type png)
 <use rewards-graph.png>
-Package pdftex.def Info: rewards-graph.png  used on input line 856.
+Package pdftex.def Info: rewards-graph.png  used on input line 860.
 (pdftex.def)             Requested size: 398.33858pt x 68.22377pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 852--859
+Underfull \hbox (badness 10000) in paragraph at lines 856--863
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 861--868
+Underfull \hbox (badness 10000) in paragraph at lines 865--872
 
  []
 
 [41 <./rewards-graph.png>]
 
 LaTeX Warning: Citation `reinforcementBook' on page 42 undefined on input line 
-870.
+874.
 
-[42] [43] [44] ("model ruchu.bbl")
-Overfull \hbox (195.55856pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/12 7.5.  MÓJ ALGORYTM KTÓRY POTRZEBUJE NAZWY ALE PROPONUJ†: MONTE 
-CARLO DQN FULL EXPLORATION \T1/lmr/m/n/12 45
+[42] [43] [44]
+Overfull \hbox (70.75467pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 7.6.  MÓJ ALGORYTM KTÓRY POTRZEBUJE NAZWY ALE PROPONUJ†: MONTE 
+CARLO DQN \T1/lmr/m/n/12 45
  []
 
-[45] ("model ruchu.aux")
+[45] ("model ruchu.bbl") [46] ("model ruchu.aux")
 
 LaTeX Warning: There were undefined references.
 
@@ -1263,10 +1278,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15708 strings out of 492895
- 292917 string characters out of 3133470
- 385727 words of memory out of 3000000
- 19197 multiletter control sequences out of 15000+200000
+ 15715 strings out of 492895
+ 293007 string characters out of 3133470
+ 386727 words of memory out of 3000000
+ 19204 multiletter control sequences out of 15000+200000
  73524 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,16n,73p,1222b,420s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1284,9 +1299,9 @@ pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Program Files/MiKTeX 2.9/f
 onts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /lm/lmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
-Output written on "model ruchu.pdf" (45 pages, 771828 bytes).
+Output written on "model ruchu.pdf" (46 pages, 776299 bytes).
 PDF statistics:
- 277 PDF objects out of 1000 (max. 8388607)
+ 280 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  188 words of extra memory for PDF output out of 10000 (max. 10000000)
 

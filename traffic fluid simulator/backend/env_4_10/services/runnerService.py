@@ -29,8 +29,7 @@ def epoch_random(env) -> Env:
 
 def epoch_greedy(env) -> Env:
     Globals().time = 0
-    Globals().epsilon = 0
     for t in range(max_time):
-        actions: List[ActionInt] = [agent.get_action(agent.local_state) for agent in env.agents]
+        actions: List[ActionInt] = [agent.get_action(state=agent.local_state,greedy=True) for agent in env.agents]
         env.step(actions)
     return env

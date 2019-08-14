@@ -43,7 +43,6 @@ def generate_random_epochs(learntAgents=False, save_front_json=False, epochs=ran
         agents: List[SmartAgent] = get_SmartAgents()
     if clear_memory:
         for agent in agents:
-            print('len',len(agent.memories))
             agent.memories=[]
     # print(agents[0].orange_phase_duration)
     for e in epochs:

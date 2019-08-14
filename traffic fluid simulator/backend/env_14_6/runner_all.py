@@ -1,4 +1,6 @@
 from timeit import default_timer as timer
+
+from env_settings import generate_u
 from nn_trainer import train, plot_pred_memory
 from random_epochs_generator import generate_random_epochs
 from runner_learnt import run_learnt_greedy
@@ -19,12 +21,12 @@ def draw_weights():
 def draw_predictions(no):
     agents = get_LearnSmartAgents()
     to_predict = []
-    multiplier=4
+    multiplier = 8
     for den0 in range(25):
         for den1 in range(25):
             for den2 in range(25):
                 for den3 in range(25):
-                    to_predict.append([den0*multiplier, den1*multiplier, den2*multiplier, den3*multiplier,
+                    to_predict.append([den0 * multiplier, den1 * multiplier, den2 * multiplier, den3 * multiplier,
                                        1, 0])  # na razie dla fazy 0 spodziewamy sie troche bardziej czerwonego wykresu
     predictions = agents[0].model.predict(np.array(to_predict))
     dots_action_0 = []
@@ -44,8 +46,10 @@ def draw_predictions(no):
     fig, ax = plt.subplots()
     for den1 in range(25):
         for den3 in range(25):
-            actions_0_better = len([den for den in dots_action_0 if den[1] == den1*multiplier and den[3] == den3*multiplier])
-            actions_1_better = len([den for den in dots_action_1 if den[1] == den1*multiplier and den[3] == den3*multiplier])
+            actions_0_better = len(
+                [den for den in dots_action_0 if den[1] == den1 * multiplier and den[3] == den3 * multiplier])
+            actions_1_better = len(
+                [den for den in dots_action_1 if den[1] == den1 * multiplier and den[3] == den3 * multiplier])
             all = actions_0_better + actions_1_better
             if all == 0:
                 ax.plot(den1, den3, 'o', color=(0, 0, 0))
@@ -106,22 +110,26 @@ for run in runs:
     train(learntAgents=False, max_time_learn=Globals().vp().max_time_learn)
     run_learnt_greedy()
     lurns = 0
-    i = 0
+    eps_decay = 0
     while timer() - startTime < timeToLearn:
-        # Globals().epsilon = 1 - 0.001 * i
-        # if Globals().epsilon < 0.2:
-        #     Globals().epsilon = 0.2
+        eps_decay += 0.01
+        Globals().epsilon = 1 - eps_decay
+        if Globals().epsilon < 0.2:
+            Globals().epsilon = 0.2
         print('epsilon', Globals().epsilon)
         print('czas', timer() - startTime)
+        print('U', Globals().u[0][0])
         generate_random_epochs(learntAgents=True, epochs=range(Globals().vp().epochs_range))
         train(max_time_learn=Globals().vp().max_time_learn)
         result = run_learnt_greedy()
+        if result[2] > sum(sum(Globals().u)) * 0.98:  # cars_out
+            new_cars_incoming = Globals().u[0][0] * 1.2
+            Globals().u = generate_u(new_cars_incoming)
         results.append(result)
         lurns += 1
-        name = 'teraz' + str(i) + "time" + str(timer() - startTime) + " " + str(Globals().vp())
+        name = 'teraz' + str(Globals().greedy_run_no) + "time" + str(timer() - startTime) + " " + str(Globals().vp())
         draw_predictions(name)
-        plot_pred_memory('teraz' + str(i))
-        i += 1
+        plot_pred_memory('teraz' + str(Globals().greedy_run_no))
         for i in range(len(Globals().pred_plot_memory)):
             mem = Globals().pred_plot_memory[i]
         draw_weights()

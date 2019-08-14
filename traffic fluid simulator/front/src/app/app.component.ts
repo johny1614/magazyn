@@ -33,16 +33,16 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.getJSON('assets/nets/net14.json').subscribe(staticData => {
+    this.getJSON('assets/nets/net4.json').subscribe(staticData => {
       console.log('static jest',staticData)
       this.nets = [NetFactory.netFromJson(staticData)];
       // sdfdsfsdfdsf
       // asdsd
       // let net = 'assets/densities/net14_test_fixed_no_4.json';
       
-      // let net = 'assets/densities/net14_random_1.json';
-      let net = 'assets/densities/net14_learnt_19.json';
-
+      // let net = 'assets/densities/net16_random_now0.json';
+      let net = 'assets/densities/net16_learnt_1.json';
+// asddfasd
 
       // let net = 'assets/densities/net14_test_batching_4.json';
       // let net = 'assets/densities/net14_test_fixed_4_batch.json';

@@ -26,11 +26,6 @@ def run_learnt_greedy(saveJson=False):
     Globals().greedy_run_no += 1
     print(
         f'gready run {Globals().greedy_run_no} - rewards_mean:{rewards_mean} rewards_sum:{rewards_sum} cars_out:{cars_out}')
-    isPassed = False
-    if cars_out > sum(sum(env.u)) * 0.99:
-        new_cars_incoming = env.u[0][0] * 1.2
-        Globals().u = generate_u(new_cars_incoming)
-        print('zwiekszamy u na ', new_cars_incoming)
     return rewards_mean, rewards_sum, cars_out
 
 
