@@ -99,6 +99,5 @@ def get_u_under_x_random(x):
 #
 # u_under_15_random = get_u_under_15_random()
 #
-u = np.array([[1] * Globals().vp().max_time_learn, [1] * Globals().vp().max_time_learn, [1] * Globals().vp().max_time_learn]).transpose()
 # u=u_all_9
 a = 2

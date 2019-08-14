@@ -8,6 +8,7 @@ from services.globals import Globals
 
 
 def run_learnt_greedy(saveJson=False):
+    saveJson = True
     print('greedy')
     model_file_names = ['static_files/model-agent0.h5', 'static_files/model-agent1.h5', 'static_files/model-agent2.h5']
     agents = get_LearnSmartAgents(model_file_names)
@@ -18,15 +19,16 @@ def run_learnt_greedy(saveJson=False):
     rewards_sum, rewards_mean = count_rewards(env)
     cars_out = env.cars_out
     # print('cars_out',cars_out)
-    saveJson = False
     if saveJson:
         exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
                                 netName='net16',
                                 densityName='learnt_' + str(Globals().greedy_run_no))
         exportData.saveToJson()
+    max_time = Globals().vp().max_time_greedy
+    maximum_possible_cars_out=Globals().u_value*Globals().vp().max_time_greedy*3
     print('max greedy',max([max(x) for x in env.x]))
     print(
-        f'gready run {Globals().greedy_run_no} - rewards_mean:{rewards_mean} rewards_sum:{rewards_sum} cars_out:{cars_out} procentowo:{float(cars_out)/sum(sum(Globals().u))}')
+        f'gready run {Globals().greedy_run_no} - rewards_mean:{rewards_mean} rewards_sum:{rewards_sum} cars_out:{cars_out} procentowo:{float(cars_out)/maximum_possible_cars_out}')
     Globals().greedy_run_no += 1
     # a=2/0
     return rewards_mean, rewards_sum, cars_out

@@ -41,7 +41,7 @@ export class AppComponent {
       // let net = 'assets/densities/net14_test_fixed_no_4.json';
       
       // let net = 'assets/densities/net16_random_now0.json';
-      let net = 'assets/densities/net16_learnt_1.json';
+      let net = 'assets/densities/net16_learnt_3.json';
 // asddfasd
 
       // let net = 'assets/densities/net14_test_batching_4.json';

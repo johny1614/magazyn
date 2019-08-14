@@ -7,259 +7,7 @@
     <bookmark url="file://$PROJECT_DIR$/temp_nn_drawing.py" line="63" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3bc62bd-0327-4a90-b067-71b6ea844ee3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_11_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../env_11_3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_14_6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_6/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_14_6/.mypy_cache/3.6/runner_learnt.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_6/.mypy_cache/3.6/runner_learnt.meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_14_6/nn_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_6/nn_trainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_14_6/random_epochs_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_6/random_epochs_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_14_6/runner_all.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_6/runner_all.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_14_6/runner_learnt.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_6/runner_learnt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_14_6/static_files/model-agent0.h5" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_6/static_files/model-agent0.h5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_14_6/static_files/x_batch_agent_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_6/static_files/x_batch_agent_0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_14_6/static_files/y_batch_agent_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_6/static_files/y_batch_agent_0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_15/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../env_15/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_10/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_10/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_10/.mypy_cache/3.6/runnerService.data.json" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_10/.mypy_cache/3.6/runnerService.data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_10/.mypy_cache/3.6/runnerService.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_10/.mypy_cache/3.6/runnerService.meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_10/model/Agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_10/model/Agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_10/model/LearningState.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_10/model/LearningState.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_10/services/StateFactory.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_10/services/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_10/services/globals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_10/services/runnerService.py" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_10/services/runnerService.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_9/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_9/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_learnt_0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_learnt_1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_learnt_2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_learnt_3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_learnt_4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_10.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_11.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_12.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_13.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_14.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_15.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_16.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_17.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_18.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_19.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_20.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_21.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_22.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_23.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_24.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_25.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_26.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_27.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_28.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_29.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_30.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_31.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_32.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_33.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_34.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_35.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_36.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_37.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_38.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_39.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_40.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_41.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_42.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_43.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_44.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_45.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_46.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_47.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_48.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_49.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_50.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_51.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_52.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_53.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_54.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_55.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_56.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_57.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_58.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_59.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_60.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_61.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_62.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_63.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_64.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_65.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_66.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_67.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_68.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_69.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_7.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_70.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_71.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_72.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_73.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_74.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_75.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_76.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_77.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_78.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_79.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_80.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_81.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_82.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_83.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_84.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_85.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_86.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_87.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_88.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_89.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_9.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_90.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_91.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_92.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_93.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_94.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_95.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_96.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_97.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_98.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_99.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated10.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated11.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated12.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated13.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated14.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated15.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated16.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated17.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated18.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated19.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated20.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated21.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated22.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated23.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated24.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated25.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated26.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated27.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated28.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated29.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated30.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated31.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated32.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated33.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated34.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated35.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated36.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated37.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated38.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated39.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated40.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated41.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated42.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated43.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated44.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated45.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated46.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated47.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated48.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated49.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated7.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_random_updated9.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_test_no_1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_test_no_2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_test_no_3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_test_no_4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_test_no_5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_test_no_6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_test_no_7.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_10.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_11.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_12.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_13.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_14.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_15.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_16.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_17.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_18.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_19.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_20.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_21.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_22.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_23.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_24.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_25.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_26.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_27.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_28.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_29.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_30.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_31.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_32.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_33.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_34.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_35.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_36.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_37.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_38.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_39.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_40.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_41.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_42.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_43.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_44.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_45.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_46.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_47.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_48.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_49.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_7.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_learnt_9.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_random_0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_random_updated0.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net14_random_updated0.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_test_no_1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_test_no_2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_test_no_3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_test_no_4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_test_no_5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_test_no_6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_test_no_7.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_test_reshaping_no_0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_test_reshaping_no_1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net14_test_reshaping_no_2.json" beforeDir="false" />
-    </list>
+    <list default="true" id="e3bc62bd-0327-4a90-b067-71b6ea844ee3" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,7 +15,50 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runner_all.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="122" column="24" selection-start-line="122" selection-start-column="24" selection-end-line="122" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runner_learnt.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Env.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="64102" column="3" lean-forward="true" selection-start-line="64102" selection-start-column="3" selection-end-line="64102" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -278,22 +69,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>gready run</find>
-      <find>run</find>
-      <find>przed</find>
-      <find>porownanko</find>
-      <find>wagi</find>
-      <find>history z start_flag</find>
-      <find>z start_flag</find>
-      <find>te same</find>
-      <find>wagi te same</find>
-      <find>y_batch</find>
-      <find>action random</find>
-      <find>random</find>
-      <find>y_</find>
-      <find>'y_b</find>
-      <find>wagi te same - uczenie</find>
-      <find>save_bat</find>
       <find>check</find>
       <find>cha</find>
       <find>lepsze</find>
@@ -307,6 +82,22 @@
       <find>gree</find>
       <find>max_time_random</find>
       <find>globals</find>
+      <find>max_ti</find>
+      <find>generate_u</find>
+      <find>epoch_in</find>
+      <find>remember</find>
+      <find>build)</find>
+      <find>holded_lights</find>
+      <find>reshape_rewards</find>
+      <find>reshap</find>
+      <find>get_a</find>
+      <find>get_ac</find>
+      <find>run_</find>
+      <find>run_lea</find>
+      <find>'actions</find>
+      <find>epsilon</find>
+      <find>print('t</find>
+      <find>'action</find>
       <find>greed</find>
     </findStrings>
     <replaceStrings>
@@ -356,21 +147,21 @@
         <option value="$PROJECT_DIR$/Test/Test_fixed_env_flow.py" />
         <option value="$PROJECT_DIR$/Test/Test_learning.py" />
         <option value="$PROJECT_DIR$/Test/Test_batching.py" />
-        <option value="$PROJECT_DIR$/Env.py" />
         <option value="$PROJECT_DIR$/services/agentFactory.py" />
         <option value="$PROJECT_DIR$/model/LearningState.py" />
         <option value="$PROJECT_DIR$/model/Agent.py" />
         <option value="$PROJECT_DIR$/res.txt" />
         <option value="$PROJECT_DIR$/x.py" />
-        <option value="$PROJECT_DIR$/runner_learnt.py" />
         <option value="$PROJECT_DIR$/runner_new.py" />
-        <option value="$PROJECT_DIR$/runner_all.py" />
         <option value="$PROJECT_DIR$/nn_trainer.py" />
-        <option value="$PROJECT_DIR$/random_epochs_generator.py" />
         <option value="$PROJECT_DIR$/services/runnerService.py" />
         <option value="$PROJECT_DIR$/env_settings.py" />
         <option value="$PROJECT_DIR$/services/globals.py" />
+        <option value="$PROJECT_DIR$/Env.py" />
         <option value="$PROJECT_DIR$/model/SmartAgent.py" />
+        <option value="$PROJECT_DIR$/random_epochs_generator.py" />
+        <option value="$PROJECT_DIR$/runner_all.py" />
+        <option value="$PROJECT_DIR$/runner_learnt.py" />
       </list>
     </option>
   </component>
@@ -632,8 +423,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28187567" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28187567" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -644,7 +436,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49947312" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.71443623" visible="true" weight="0.29144096" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.71443623" visible="true" weight="0.45503792" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.49209693" side_tool="true" weight="0.33586133" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49947312" weight="0.5438787" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32936078" />
@@ -798,7 +590,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/runner_all.py</url>
-          <line>30</line>
+          <line>29</line>
           <option name="timeStamp" value="389" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -980,25 +772,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/weights_layer_0.png" />
-    <entry file="file://C:/pyt36/Lib/site-packages/tensorflow/python/keras/callbacks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="1996" column="6" selection-start-line="1996" selection-start-column="6" selection-end-line="1996" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old_tb/x.py" />
-    <entry file="file://$PROJECT_DIR$/temp_nn_drawing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="102" column="20" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/temp_nn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
@@ -1054,13 +827,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="162" column="41" selection-start-line="162" selection-start-column="41" selection-end-line="162" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/Memory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1148,16 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/ExportData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/docs.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1187,13 +943,6 @@
     <entry file="file://$PROJECT_DIR$/docs/fazy-akcje.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/Agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test/Test_batching.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="445">
@@ -1208,13 +957,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
           <caret line="39" column="55" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -1265,50 +1007,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/random_epochs_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="57" column="32" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runner_learnt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/runnerService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="31" column="41" lean-forward="true" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runner_all.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env_settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/agentFactory.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1319,37 +1017,147 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/globals.py">
+    <entry file="file://$PROJECT_DIR$/model/SaveData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="96" column="28" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="96" column="5" lean-forward="true" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/Action.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/SmartAgent.py">
+    <entry file="file://$PROJECT_DIR$/model/ExportData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="97" lean-forward="true" selection-start-line="8" selection-start-column="97" selection-end-line="8" selection-end-column="97" />
+        <state relative-caret-position="354">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/SaveData.py">
+    <entry file="file://$PROJECT_DIR$/model/Memory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="204">
+          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/GlobalState.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="60" column="4" lean-forward="true" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/pyt36/Lib/site-packages/tensorflow/python/autograph/core/config_lib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Phase.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/SmartAgent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="102" column="25" selection-start-line="102" selection-start-column="25" selection-end-line="102" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/prettyPrinter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/random_epochs_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1218">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/globals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="92" column="13" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runner_all.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="122" column="24" selection-start-line="122" selection-start-column="24" selection-end-line="122" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/runnerService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runner_learnt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="64102" column="3" lean-forward="true" selection-start-line="64102" selection-start-column="3" selection-end-line="64102" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
         </state>
       </provider>
     </entry>

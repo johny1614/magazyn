@@ -3,9 +3,8 @@ from timeit import default_timer as timer
 from env_settings import generate_u
 from nn_trainer import train, plot_pred_memory
 from random_epochs_generator import generate_random_epochs
-from runner_learnt import run_learnt_greedy
 import matplotlib.pyplot as plt
-import matplotlib.colors as colors
+from runner_learnt import run_learnt_greedy
 from services.agentFactory import get_LearnSmartAgents, get_SmartAgents
 import numpy as np
 
@@ -118,13 +117,16 @@ for run in runs:
             Globals().epsilon = 0.2
         print('epsilon', Globals().epsilon)
         print('czas', timer() - startTime)
-        print('U', Globals().u[0][0])
+        print('U', Globals().u_value)
         generate_random_epochs(learntAgents=True, epochs=range(Globals().vp().epochs_range))
         train(max_time_learn=Globals().vp().max_time_learn)
         result = run_learnt_greedy()
-        if result[2] > sum(sum(Globals().u)) * 0.93:  # cars_out
-            new_cars_incoming = Globals().u[0][0] * 1.2
-            Globals().u = generate_u(new_cars_incoming)
+        maximum_possible_cars_out = Globals().u_value*Globals().vp().max_time_greedy*3
+        print('max possible',maximum_possible_cars_out)
+        if result[2] >  maximum_possible_cars_out * 0.93:  # cars_out
+            print('u przed',Globals().u_value)
+            Globals().u_value=Globals().u_value+1
+            print('u po',Globals().u_value)
         results.append(result)
         lurns += 1
         name = 'teraz' + str(Globals().greedy_run_no) + "time" + str(timer() - startTime) + " " + str(Globals().vp())

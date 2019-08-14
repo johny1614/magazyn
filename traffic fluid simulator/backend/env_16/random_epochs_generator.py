@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import env_settings
 from Env import Env
-from env_settings import max_time
 from model.ExportData import ExportData
 from model.SmartAgent import SmartAgent
 from services.agentFactory import get_SmartAgents, get_LearnSmartAgents
@@ -12,7 +11,9 @@ from services.globals import Globals
 ActionInt = int
 
 
-def epoch(agents, time, u=Globals().u):
+def epoch(agents, time, u=None):
+    if u is None:
+        u = Globals().get_u(time)
     Globals().time = 0
     env = Env(agents)
     env.u = u
@@ -34,6 +35,7 @@ def save_batches(agents):
 
 def generate_random_epochs(learntAgents=False, save_front_json=False, epochs=range(1), plotting=False, reshaping=False,
                            actions=None, clear_memory=True):
+    # save_front_json = True
     reshaping = True
     cars_outs = []
     rewards = []
@@ -48,7 +50,7 @@ def generate_random_epochs(learntAgents=False, save_front_json=False, epochs=ran
     # print(agents[0].orange_phase_duration)
     for e in epochs:
         Globals().epsilon = 1
-        env: Env = epoch(agents, u=Globals().get_u_train(e+1), time=env_settings.random_max_time)
+        env: Env = epoch(agents, u=Globals().get_u(Globals().vp().max_time_learn), time=Globals().vp().max_time_learn)
         if reshaping:
             for agent in env.agents:
                 agent.reshape_rewards()
@@ -65,7 +67,6 @@ def generate_random_epochs(learntAgents=False, save_front_json=False, epochs=ran
         #                             netName='net16',
         #                             densityName='random_updated' + str(e))
         #     exportData.saveToJson()
-        save_front_json = False
         if save_front_json:
             exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
                                     netName='net16',
@@ -113,4 +114,4 @@ def generate_random_epochs(learntAgents=False, save_front_json=False, epochs=ran
 
 if __name__ == "__main__":
     # while True:
-    generate_random_epochs(save_front_json=True, epochs=range(10))
+    generate_random_epochs(save_front_json=True)

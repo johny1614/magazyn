@@ -34,7 +34,8 @@ class Env:
 
     def __attrs_post_init__(self):
         Globals().time = 0
-        self.u = Globals().u
+        max_time = Globals().vp().max_time_greedy
+        self.u = Globals().get_u(max_time)
         self.A = []
         self.cars_out = 0
         self.assign_local_states_to_agents()

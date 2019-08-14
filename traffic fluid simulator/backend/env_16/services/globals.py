@@ -1,6 +1,7 @@
 import random
 from typing import List
 import attr
+import numpy as np
 from tensorflow.python.keras.callbacks import TensorBoard, LambdaCallback
 
 import env_settings
@@ -101,9 +102,11 @@ class BaseClass:
         self.y_batch_history =[]
         self.nn_x_batch_history =[]
         self.nn_y_batch_history =[]
-
+        self.u_value = 1
     def vp(self) -> ValParamSet:
         return self.val_params[self.run_no]
+    def get_u(self,time):
+        return np.array([[1] * time, [1] * time, [1] * time]).transpose()
     def get_u_train(self,epoch):
         # if 0<= epoch <3:
         #     return env_settings.generate_u(1)
@@ -115,7 +118,7 @@ class BaseClass:
         #     return env_settings.generate_u(3)
         # else:
         #     return env_settings.generate_u(4)
-        return env_settings.generate_u(Globals().u[0][0])
+        return env_settings.generate_u(self.u_value)
 
 
     # def epsilon(self):
