@@ -23,7 +23,7 @@ def get_SmartAgents() -> List[SmartAgent]:
                                 ((27, 17), (9, 17), (21, 20))],
                          local_phase_sections=[0, 1, 2, 18, 19, 20, 15, 16, 17],
                          curve_densities={(9, 2): 0.7, (21, 2): 0.3,
-                                          (21, 20): 0.7, (27, 20): 0.3,
+                                          (21, 20): 0.3, (27, 20): 0.7,
                                           (27, 17): 0.7, (9, 17): 0.3}, )
     agent_1 = SmartAgent(index=1,
                          moves=[((12, 11), (30, 11), (18, 26)),
@@ -32,7 +32,7 @@ def get_SmartAgents() -> List[SmartAgent]:
                          local_phase_sections=[3, 4, 5, 24, 25, 26, 9, 10, 11],
                          curve_densities={(12, 5): 0.7, (18, 5): 0.3,
                                           (30, 11): 0.7, (12, 11): 0.3,
-                                          (18, 26): 0.7, (30, 26): 0.3})
+                                          (18, 26): 0.3, (30, 26): 0.7})
     agent_2 = SmartAgent(index=2,
                          moves=[((33, 14), (15, 14), (24, 23)),
                                 ((24, 8), (15, 8), (33, 14)),
@@ -40,7 +40,7 @@ def get_SmartAgents() -> List[SmartAgent]:
                          local_phase_sections=[6, 7, 8, 12, 13, 14, 21, 22, 23],
                          curve_densities={(15, 8): 0.7, (24, 8): 0.3,
                                           (33, 14): 0.7, (15, 14): 0.3,
-                                          (24, 23): 0.7, (33, 23): 0.3})
+                                          (24, 23): 0.3, (33, 23): 0.7})
     agents.append(agent_0)
     agents.append(agent_1)
     agents.append(agent_2)

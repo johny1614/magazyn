@@ -35,7 +35,7 @@ def save_batches(agents):
 
 def generate_random_epochs(learntAgents=False, save_front_json=False, epochs=range(1), plotting=False, reshaping=False,
                            actions=None, clear_memory=True):
-    # save_front_json = True
+    save_front_json = True
     reshaping = True
     cars_outs = []
     rewards = []
@@ -65,15 +65,14 @@ def generate_random_epochs(learntAgents=False, save_front_json=False, epochs=ran
         # if save_front_json and e == 1:
         #     exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
         #                             netName='net16',
-        #                             densityName='random_updated' + str(e))
+        #                             densityName='random_updated' + str(Globals().greedy_run_no))
         #     exportData.saveToJson()
-        if save_front_json:
-            exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
-                                    netName='net16',
-                                    densityName='random_now' + str(e))
-
-            exportData.saveToJson()
-            print('doneeeeeee',e)
+        # if save_front_json and e == 1:
+        #     exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
+        #                             netName='net16',
+        #                             densityName='random_now' + str(Globals().greedy_run_no))
+        #     exportData.saveToJson()
+        #     print('doneeeeeee',e)
         env.remember_memory()
         if plotting:
             cars_outs.append(env.cars_out)

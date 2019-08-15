@@ -96,7 +96,7 @@ def train(learntAgents=True, max_time_learn=60, agents=None,shuffle=True,batches
                 escape_val += 1
                 # print('escape_val',escape_val)
                 # print('val loss',res.history['val_loss'][-1])
-                if escape_val > 2:
+                if escape_val > 10:
                     escape_flag = True
                 #     print('przerwalbym!!!!!!')
                 # print('wynik sieci', res.history['val_loss'][-1])

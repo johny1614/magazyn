@@ -27,12 +27,12 @@ class ValParamSet:
         self.layers = [18,22,30,20,16,10]
         # self.layers = [10, 14, 10] # u =2,98 maksymalnie
         self.nn_l_rate = 0.01
-        self.q_formula_l_rate = 1
+        self.q_formula_l_rate = 0.2
         self.first_epochs_range = 2
-        self.epochs_range = 10
+        self.epochs_range = 20
         self.batch_size = 64
         self.max_time_greedy = 1000
-        self.max_time_learn = 1000
+        self.max_time_learn = 300
         self.gamma = 0.9
         self.reshape_future = 0
         self.regularization = 0.1
@@ -73,7 +73,6 @@ class BaseClass:
         self.epochs_learn_done = 0
         self.state_repeats = 0
         # self.max_time_random = 1000
-        self.max_time_greedy = 1000
         self.new_states = 0
         # self.epochs_learn = 2
         self.batch_size = 60
@@ -85,7 +84,7 @@ class BaseClass:
         self.y_batch = []
         self.max_epsilon = 1
         self.min_epsilon = 0.01
-        self.epsilon = 1
+        self.epsilon = 0.2
         self.pred_plot_memory = []
         self.run_no = 0
         self.greedy_run_no = 0

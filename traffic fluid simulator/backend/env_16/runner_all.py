@@ -124,9 +124,9 @@ for run in runs:
         maximum_possible_cars_out = Globals().u_value*Globals().vp().max_time_greedy*3
         print('max possible',maximum_possible_cars_out)
         if result[2] >  maximum_possible_cars_out * 0.93:  # cars_out
-            print('u przed',Globals().u_value)
+            # print('u przed',Globals().u_value)
             Globals().u_value=Globals().u_value*1.2
-            print('u po',Globals().u_value)
+            # print('u po',Globals().u_value)
         results.append(result)
         lurns += 1
         name = 'teraz' + str(Globals().greedy_run_no) + "time" + str(timer() - startTime) + " " + str(Globals().vp())
