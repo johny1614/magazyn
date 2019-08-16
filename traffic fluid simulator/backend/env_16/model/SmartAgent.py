@@ -27,7 +27,7 @@ class SmartAgent(Agent):
         model = Sequential()
         for i, nodes in enumerate(layers):
             if i == 0:
-                model.add(Dense(nodes, input_dim=12, activation='relu'))
+                model.add(Dense(nodes, input_dim=6, activation='relu'))
             else:
                 model.add(Dense(nodes))
                 model.add(Activation('relu'))

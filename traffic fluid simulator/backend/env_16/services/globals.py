@@ -24,15 +24,15 @@ class ValParamSet:
         # self.first_epochs_range = first_epochs_range
         # self.epochs_range = epochs_range
         # self.max_time_learn = max_time_learn
-        self.layers = [18,22,30,20,16,10]
-        # self.layers = [10, 14, 10] # u =2,98 maksymalnie
+        # self.layers = [18,22,30,20,16,10]
+        self.layers = [10, 12, 10] # u =2,98 maksymalnie
         self.nn_l_rate = 0.01
         self.q_formula_l_rate = 0.2
         self.first_epochs_range = 2
         self.epochs_range = 20
         self.batch_size = 64
         self.max_time_greedy = 1000
-        self.max_time_learn = 300
+        self.max_time_learn = 50
         self.gamma = 0.9
         self.reshape_future = 0
         self.regularization = 0.1

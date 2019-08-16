@@ -10,12 +10,12 @@ from services.agentFactory import get_LearnSmartAgents, get_SmartAgents
 from services.globals import Globals
 
 
-def get_batches(agents):
+def get_batches(agents,actual_number=''):
     batches = []
     for i in range(len(agents)):
-        filename = 'static_files/x_batch_agent_' + str(i) + '.txt'
+        filename = 'static_files/x_batch_agent_' + str(i)+'_'+str(actual_number) + '.txt'
         x_batch = np.array(np.loadtxt(filename, delimiter=','))
-        filename = 'static_files/y_batch_agent_' + str(i) + '.txt'
+        filename = 'static_files/y_batch_agent_' + str(i)+'_'+str(actual_number) + '.txt'
         y_batch = np.array(np.loadtxt(filename, delimiter=','))
         batches.append({'x_batch': x_batch, 'y_batch': y_batch})
     return batches
@@ -34,14 +34,14 @@ def create_model(layers, activation, l_rate):
     return model
 
 
-def train(learntAgents=True, max_time_learn=60, agents=None,shuffle=True,batches=None):
+def train(learntAgents=True, max_time_learn=60, agents=None,shuffle=True,batches=None,actual_number=''):
     if agents is None:
         if not learntAgents:
             agents = get_SmartAgents()
         else:
             agents = get_LearnSmartAgents()
     if batches is None:
-        batches = get_batches(agents)
+        batches = get_batches(agents,actual_number)
     models = [agent.model for agent in agents]
     for i in range(len(agents)):
         start_time = timer()

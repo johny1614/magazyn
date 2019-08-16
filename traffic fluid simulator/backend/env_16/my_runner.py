@@ -1,12 +1,10 @@
-import random
 from timeit import default_timer as timer
 
 from env_settings import generate_u
 from nn_trainer import train, plot_pred_memory, get_batches
-from random_epochs_generator import generate_random_epochs
-from runner_learnt import run_learnt_greedy
+from random_epochs_generator import generate_random_epochs, generate_my_epochs
 import matplotlib.pyplot as plt
-import matplotlib.colors as colors
+from runner_learnt import run_learnt_greedy
 from services.agentFactory import get_LearnSmartAgents, get_SmartAgents
 import numpy as np
 
@@ -83,6 +81,23 @@ def draw_rewards_mean(results):
     plt.title('Średnia wszystkich nagród - akcje wedle wyuczonej strategii')
     plt.savefig('plot_rewards_mean' + str(run) + '.png')
     plt.close()
+def draw_my_pred(pred_history):
+    plt.plot([h[0] for h in pred_history],label='0')
+    plt.plot([h[1] for h in pred_history],label='1')
+    plt.plot([h[2] for h in pred_history],label='2')
+    plt.legend()
+    plt.title('Pred')
+    plt.savefig('pred.png')
+    plt.close()
+
+def draw_y_history(y_hist):
+    plt.plot([h[0] for h in y_hist],label='0')
+    plt.plot([h[1] for h in y_hist],label='1')
+    plt.plot([h[2] for h in y_hist],label='2')
+    plt.title('y history')
+    plt.legend()
+    plt.savefig('y.png')
+    plt.close()
 
 
 def draw_rewards(results):
@@ -98,15 +113,9 @@ def draw_cars_out(results):
     plt.savefig('plot_cars_out' + str(run) + '.png')
     plt.close()
 
-def random_predictions(number=10):
-    agents = get_LearnSmartAgents()
-    for i in range(number):
-        pred=agents[0].model.predict(np.array([[random.randint(0,40) for x in range(12)]]))
-        print('pred',pred)
-
-print('start')
-x_batch_history=[]
+pred_history=[]
 y_batch_history=[]
+Globals().u_value = 5
 runs = range(len(Globals().val_params))
 for run in runs:
     Globals().pred_plot_memory = []
@@ -114,23 +123,56 @@ for run in runs:
     results = []
     timeToLearn = 500000
     startTime = timer()
-    generate_random_epochs(learntAgents=False,
-                           epochs=range(Globals().vp().first_epochs_range))  # bierze nowych agentow i tu jest 'is'
-    batches = get_batches(agents=get_SmartAgents())
-    train(learntAgents=False, max_time_learn=Globals().vp().max_time_learn, batches=batches)
-    Globals().x_batch_history.append(batches[0]['x_batch'])
-    Globals().y_batch_history.append(batches[0]['y_batch'])
-    run_learnt_greedy()
+    generate_my_epochs(learntAgents=False,
+                       epochs=range(Globals().vp().first_epochs_range))  # bierze nowych agentow i tu jest 'is'
+    train(learntAgents=False, max_time_learn=Globals().vp().max_time_learn)
+    # run_learnt_greedy()
     lurns = 0
     eps_decay = 0
+    actual_number=0
     while timer() - startTime < timeToLearn:
-        generate_random_epochs(learntAgents=True, epochs=range(Globals().vp().epochs_range))
-        batches = get_batches(agents=get_LearnSmartAgents())
-        print('x_batch porownanie runner',Globals().x_batch_history[-1]==batches[0]['x_batch']) # tu jest dobrze - false
-        print('y_batch porownanie runner',Globals().y_batch_history[-1]==batches[0]['y_batch']) # tu jest dobrze - false
-        Globals().x_batch_history.append(batches[0]['x_batch'])
-        Globals().y_batch_history.append(batches[0]['y_batch'])
-        train(max_time_learn=Globals().vp().max_time_learn,batches=batches)
-        result = run_learnt_greedy()
-        results.append(result)
-        random_predictions()
+        actual_number+=1
+        eps_decay += 0.07
+        Globals().epsilon = 1 - eps_decay
+        if Globals().epsilon < 0.2:
+            Globals().epsilon = 0.2
+        # print('epsilon', Globals().epsilon)
+        # print('czas', timer() - startTime)
+        # print('U', Globals().u_value)
+        generate_my_epochs(learntAgents=True, epochs=range(2),actual_number=actual_number)
+        train(max_time_learn=Globals().vp().max_time_learn,actual_number=actual_number)
+        # result = run_learnt_greedy()
+        maximum_possible_cars_out = Globals().u_value * Globals().vp().max_time_greedy * 3
+        # print('max possible', maximum_possible_cars_out)
+        pred_array = np.array([[90, 0, 0, 0, 0, 1, ]])
+        agent_0=get_LearnSmartAgents()[0]
+        pred_history.append(agent_0.model.predict(pred_array)[0])
+        print(f'{actual_number} pred {pred_history[-1]}')
+        batches = get_batches(get_LearnSmartAgents(),actual_number)
+        x_batch = batches[0]['x_batch']
+        y_batch = batches[0]['y_batch']
+        y_batch_history.append(y_batch[19])
+        # print(f'x_batch {x_batch} y_batch {y_batch}')
+        draw_y_history(y_batch_history)
+        indexes = [i for i in range(len(x_batch)) if x_batch[i][-1] == 0]
+
+        # if result[2] >  maximum_possible_cars_out * 0.93:  # cars_out
+        # print('u przed',Globals().u_value)
+        # Globals().u_value=Globals().u_value*1.2
+        # print('u po',Globals().u_value)
+        # results.append(result)
+        lurns += 1
+        indexes=[18,19,20,21,22]
+        y_batch_interesting_moments = [(i,y_batch[i]) for i in indexes]
+        print(y_batch_interesting_moments)
+
+        name = 'teraz' + str(Globals().greedy_run_no) + "time" + str(timer() - startTime) + " " + str(Globals().vp())
+        # draw_predictions(name)age
+        # plot_pred_memory('teraz' + str(Globals().greedy_run_no))
+        # for i in range(len(Globals().pred_plot_memory)):
+        #     mem = Globals().pred_plot_memory[i]
+        # draw_weights()
+        # draw_rewards_mean(results)
+        # draw_rewards(results)
+        # draw_cars_out(results)
+        draw_my_pred(pred_history)
