@@ -3,6 +3,7 @@ from statistics import mean
 from typing import List
 import attr
 import numpy as np
+from tensorflow.keras.initializers import Constant
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.optimizers import Adam
@@ -16,12 +17,14 @@ from services.globals import Globals
 class SmartAgent(Agent):
     memories: List[Memory] = attr.ib(factory=list)
     model = attr.ib(default=0)
+    randomed_actions = [0, 0, 0]
 
     def __attrs_post_init__(self):
         if self.model == 0:
             layers = Globals().vp().layers
             l_rate = Globals().vp().nn_l_rate
             self.model = self._build_model(layers=layers, l_rate=l_rate)
+            a = 34
 
     def _build_model(self, layers, l_rate=0.01):
         model = Sequential()
@@ -29,9 +32,9 @@ class SmartAgent(Agent):
             if i == 0:
                 model.add(Dense(nodes, input_dim=6, activation='relu'))
             else:
-                model.add(Dense(nodes))
+                model.add(Dense(nodes, bias_initializer='zeros'))
                 model.add(Activation('relu'))
-        model.add(Dense(3))
+        model.add(Dense(3, bias_initializer=Constant(value=15)))
         model.compile(optimizer=Adam(learning_rate=l_rate), loss='mse')
         return model
 
@@ -61,7 +64,8 @@ class SmartAgent(Agent):
             action = 2 if memory.action == 'orange' else memory.action
             y_target = self.model.predict(state)
             new_state_possible_actions_value_predictions = self.model.predict(memory.new_state.to_learn_array())
-            target = (1 - l_rate) * y_target[0][action] + l_rate * (memory.reward + gamma * max(new_state_possible_actions_value_predictions[0]))
+            target = (1 - l_rate) * y_target[0][action] + l_rate * (
+                        memory.reward + gamma * max(new_state_possible_actions_value_predictions[0]))
             i += 1
             y_target[0][action] = target
             x_batch.append(state[0])
@@ -84,7 +88,7 @@ class SmartAgent(Agent):
         res = self.model.fit(np.array(x_batch), np.array(y_batch), epochs=epochs, batch_size=len(x_batch),
                              verbose=0)
 
-    def get_action(self, state,greedy=False):
+    def get_action(self, state, greedy=False):
         if state.actual_phase == 'orange':
             return 'orange'
         if np.random.rand() <= Globals().epsilon and not greedy:  # if acting randomly, take random action
@@ -120,7 +124,8 @@ class SmartAgent(Agent):
         self.assign_local_state(densities)
         new_state = self.local_state
         times = {'old': Globals().time - 1, 'new': Globals().time}
-        memory = Memory(state=state, action=action, new_state=new_state, reward=reward, times=times,epoch_index=Globals().actual_epoch_index)
+        memory = Memory(state=state, action=action, new_state=new_state, reward=reward, times=times,
+                        epoch_index=Globals().actual_epoch_index)
         self.memories.append(memory)
 
     def full_batch_no_orange(self, only_learn_usable=True):
@@ -146,12 +151,12 @@ class SmartAgent(Agent):
                 max_next_action_value = max(new_state_possible_actions_value_predictions[0])
                 target = (1 - l_rate) * y_target[0][action] + l_rate * (
                         memory.reward + new_light_reward * gamma ** self.orange_phase_duration + max_next_action_value * gamma ** (
-                            self.orange_phase_duration + 1))
+                        self.orange_phase_duration + 1))
             else:
                 new_state_possible_actions_value_predictions = self.model.predict(memory.new_state.to_learn_array(self))
                 max_next_action_value = max(new_state_possible_actions_value_predictions[
                                                 0]) if memory.state.starting_actual_phase != 'orange' else \
-                new_state_possible_actions_value_predictions[0][-1]
+                    new_state_possible_actions_value_predictions[0][-1]
                 # print('maxcaxc',max_next_action_value)
                 target = (1 - l_rate) * y_target[0][action] + l_rate * (
                         memory.reward + gamma * max_next_action_value)

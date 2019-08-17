@@ -24,6 +24,7 @@ def run_learnt_greedy(saveJson=False):
                                 densityName='learnt_' + str(Globals().greedy_run_no))
         exportData.saveToJson()
     maximum_possible_cars_out=Globals().u_value*Globals().vp().max_time_greedy*3
+    print('memory losowych',Globals().actions_memory)
     print('max greedy',max([max(x) for x in env.x]))
     print(
         f'gready run {Globals().greedy_run_no} - rewards_mean:{rewards_mean} rewards_sum:{rewards_sum} cars_out:{cars_out} procentowo:{float(cars_out)/maximum_possible_cars_out}')

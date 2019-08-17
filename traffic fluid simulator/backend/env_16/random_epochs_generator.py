@@ -18,8 +18,11 @@ def epoch(agents, time, u=None):
     Globals().time = 0
     env = Env(agents)
     env.u = u
+    actions_memory=[0,0,0]
     for t in range(time):
         actions: List[ActionInt] = [agent.get_action(agent.local_state) for agent in agents]
+        if actions[0]!='orange':
+            Globals().actions_memory[int(actions[0])]+=1
         env.step(actions)
     Globals().epochs_learn_done += 1
     return env

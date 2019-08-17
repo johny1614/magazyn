@@ -58,6 +58,7 @@ class Env:
         Globals().time += 1
         self._execute_phase()
         self.save_motions()
+        # rewards = self.count_rewards_negative()
         rewards = self.count_rewards()
         for agent in self.agents:
             agent.remember(densities=self.x[self.t], reward=rewards[agent.index])
@@ -73,6 +74,16 @@ class Env:
                 i += 1
                 memsum += mem.reward
         return memsum, memsum / i
+
+    def count_rewards_negative(self):
+        rewards = [0] * len(self.agents)
+        for i in range(len(self.agents)):
+            agent=self.agents[i]
+            for sec in agent.local_phase_sections:
+                rewards[i]-=self.global_state[0].densities[sec]
+        # for flow in self.last_flows:
+        #     rewards[flow['agent_index']] += flow['value']
+        return rewards
 
     def count_rewards(self):
         # TODO to na pewno jest ok?

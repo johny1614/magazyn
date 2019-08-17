@@ -25,20 +25,18 @@ class ValParamSet:
         # self.epochs_range = epochs_range
         # self.max_time_learn = max_time_learn
         # self.layers = [18,22,30,20,16,10]
-        self.layers = [10, 12, 10] # u =2,98 maksymalnie
+        self.layers = [10, 12, 10]  # u =2,98 maksymalnie
         self.nn_l_rate = 0.01
         self.q_formula_l_rate = 0.2
         self.first_epochs_range = 2
         self.epochs_range = 20
         self.batch_size = 64
         self.max_time_greedy = 1000
-        self.max_time_learn = 50
+        self.max_time_learn = 300
         self.gamma = 0.9
         self.reshape_future = 0
         self.regularization = 0.1
         self.epochs_learn = 5
-
-
 
     def __str__(self):
         return f'layers = {self.layers} nn_l_rate = {self.nn_l_rate} first_epochs_range = {self.first_epochs_range} epochs_range = {self.epochs_range} max_time_learn = {self.max_time_learn}'
@@ -77,6 +75,7 @@ class BaseClass:
         # self.epochs_learn = 2
         self.batch_size = 60
         self.validation_batch_size = 20
+        self.actions_memory = [0, 0, 0]
         self.l1 = 8
         self.l2 = 168
         self.l3 = 54
@@ -96,19 +95,22 @@ class BaseClass:
         self.tensorboard = TensorBoard(log_dir="logs\{}".format(name))
         print('TEEEEEEEEEEEEEEEEnsorboard')
         self.epochs_learn_done = 0
-        self.y_batch_check=None
-        self.x_batch_check=None
-        self.x_batch_history =[]
-        self.y_batch_history =[]
-        self.nn_x_batch_history =[]
-        self.nn_y_batch_history =[]
+        self.y_batch_check = None
+        self.x_batch_check = None
+        self.x_batch_history = []
+        self.y_batch_history = []
+        self.nn_x_batch_history = []
+        self.nn_y_batch_history = []
         self.u_value = 1
+
     def vp(self) -> ValParamSet:
         return self.val_params[self.run_no]
-    def get_u(self,time):
+
+    def get_u(self, time):
         u = Globals().u_value
         return np.array([[u] * time, [u] * time, [u] * time]).transpose()
-    def get_u_train(self,epoch):
+
+    def get_u_train(self, epoch):
         # if 0<= epoch <3:
         #     return env_settings.generate_u(1)
         # if 3<= epoch <6:
@@ -120,7 +122,6 @@ class BaseClass:
         # else:
         #     return env_settings.generate_u(4)
         return env_settings.generate_u(self.u_value)
-
 
     # def epsilon(self):
     #     epsilon_decay = 0.96
