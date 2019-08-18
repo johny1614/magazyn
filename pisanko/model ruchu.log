@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.24)  9 AUG 2019 20:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.24)  19 AUG 2019 00:47
 entering extended mode
 **"./model ruchu.tex"
 ("model ruchu.tex"
@@ -693,22 +693,16 @@ LaTeX Warning: Label `eq:manewr_bez_zatoru_f10' multiply defined.
 LaTeX Warning: Label `eq:manewr_zator_f10' multiply defined.
 
 
-LaTeX Warning: Label `eq:manewr_bez_zatoru_f10' multiply defined.
-
-
-LaTeX Warning: Label `eq:manewr_zator_f10' multiply defined.
-
-
 LaTeX Warning: Label `fig:agent-srodowisko' multiply defined.
 
 
 LaTeX Warning: Label `learning:DQN_single_agent' multiply defined.
 
 
-LaTeX Warning: Label `eq:Q_DQN' multiply defined.
-
-
 LaTeX Warning: Label `symulacja_50' multiply defined.
+
+
+LaTeX Warning: Label `eq:Q_DQN' multiply defined.
 
 )
 \openout1 = `"model ruchu.aux"'.
@@ -1109,70 +1103,66 @@ Package pdftex.def Info: images/env_13.png  used on input line 526.
 <images/env_13_t_0.png, id=135, 319.1925pt x 79.04532pt>
 File: images/env_13_t_0.png Graphic file (type png)
 <use images/env_13_t_0.png>
-Package pdftex.def Info: images/env_13_t_0.png  used on input line 589.
+Package pdftex.def Info: images/env_13_t_0.png  used on input line 594.
 (pdftex.def)             Requested size: 142.26378pt x 35.22992pt.
-
-
-LaTeX Warning: Reference `eq:manewr_zator' on page 26 undefined on input line 5
-93.
-
-[26 <./images/env_13.png> <./images/env_13_t_0.png>]
+ [26 <./images/env_13.png> <./images/env_13_t_0.png>]
 File: images/env_13_t_0.png Graphic file (type png)
 <use images/env_13_t_0.png>
-Package pdftex.def Info: images/env_13_t_0.png  used on input line 614.
+Package pdftex.def Info: images/env_13_t_0.png  used on input line 619.
 (pdftex.def)             Requested size: 142.26378pt x 35.22992pt.
 <images/env_13_t_1.png, id=141, 321.45094pt x 79.79813pt>
 File: images/env_13_t_1.png Graphic file (type png)
 <use images/env_13_t_1.png>
-Package pdftex.def Info: images/env_13_t_1.png  used on input line 614.
+Package pdftex.def Info: images/env_13_t_1.png  used on input line 619.
 (pdftex.def)             Requested size: 142.26378pt x 35.31705pt.
 <images/env_13_t_2.png, id=142, 297.36093pt x 79.79813pt>
 File: images/env_13_t_2.png Graphic file (type png)
 <use images/env_13_t_2.png>
-Package pdftex.def Info: images/env_13_t_2.png  used on input line 614.
+Package pdftex.def Info: images/env_13_t_2.png  used on input line 619.
 (pdftex.def)             Requested size: 142.26378pt x 38.17601pt.
 <images/env_11_1570137518_procenty.png, id=143, 297.36093pt x 195.73125pt>
 File: images/env_11_1570137518_procenty.png Graphic file (type png)
 <use images/env_11_1570137518_procenty.png>
 Package pdftex.def Info: images/env_11_1570137518_procenty.png  used on input l
-ine 622.
+ine 627.
 (pdftex.def)             Requested size: 284.52756pt x 187.29356pt.
- [27 <./images/env_13_t_1.png> <./images/env_13_t_2.png> <./images/env_11_15701
-37518_procenty.png>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27 <./images/env_13_t_1.png> <./images/env_13_t_2.png>]
 
 LaTeX Warning: Reference `eq:manewr_not_existing_f10' on page 28 undefined on i
-nput line 662.
+nput line 667.
 
-<images/env_11_przeplyw_korek.png, id=150, 459.21562pt x 329.73187pt>
+[28 <./images/env_11_1570137518_procenty.png>]
+<images/env_11_przeplyw_korek.png, id=153, 459.21562pt x 329.73187pt>
 File: images/env_11_przeplyw_korek.png Graphic file (type png)
 <use images/env_11_przeplyw_korek.png>
 Package pdftex.def Info: images/env_11_przeplyw_korek.png  used on input line 6
-70.
+75.
 (pdftex.def)             Requested size: 284.52756pt x 204.31088pt.
-[28]
 <images/env_11_po_korku.png, id=154, 287.57437pt x 192.72pt>
 File: images/env_11_po_korku.png Graphic file (type png)
 <use images/env_11_po_korku.png>
-Package pdftex.def Info: images/env_11_po_korku.png  used on input line 676.
+Package pdftex.def Info: images/env_11_po_korku.png  used on input line 681.
 (pdftex.def)             Requested size: 284.52756pt x 190.68457pt.
- [29 <./images/env_11_przeplyw_korek.png> <./images/env_11_po_korku.png>]
-[30
+ [29 <./images/env_11_przeplyw_korek.png> <./images/env_11_po_korku.png>] [30
 
 ]
 Rozdzia\l  6.
 <images/env_11_procenty.png, id=163, 250.68657pt x 170.88844pt>
 File: images/env_11_procenty.png Graphic file (type png)
 <use images/env_11_procenty.png>
-Package pdftex.def Info: images/env_11_procenty.png  used on input line 688.
+Package pdftex.def Info: images/env_11_procenty.png  used on input line 693.
 (pdftex.def)             Requested size: 284.52756pt x 193.97781pt.
 <images/env_11_fazy_procenty_no_yellow.png, id=164, 495.35063pt x 191.21437pt>
 File: images/env_11_fazy_procenty_no_yellow.png Graphic file (type png)
 <use images/env_11_fazy_procenty_no_yellow.png>
 Package pdftex.def Info: images/env_11_fazy_procenty_no_yellow.png  used on inp
-ut line 696.
+ut line 701.
 (pdftex.def)             Requested size: 483.69684pt x 186.71773pt.
 
-Overfull \hbox (11.6656pt too wide) in paragraph at lines 696--698
+Overfull \hbox (11.6656pt too wide) in paragraph at lines 701--703
  [][] 
  []
 
@@ -1184,92 +1174,92 @@ ow.png>]
 <images/env_14.png, id=174, 274.77657pt x 134.75343pt>
 File: images/env_14.png Graphic file (type png)
 <use images/env_14.png>
-Package pdftex.def Info: images/env_14.png  used on input line 736.
+Package pdftex.def Info: images/env_14.png  used on input line 740.
 (pdftex.def)             Requested size: 284.52756pt x 139.54808pt.
 <images/env_14_fazy.png, id=175, 767.86874pt x 167.87718pt>
 File: images/env_14_fazy.png Graphic file (type png)
 <use images/env_14_fazy.png>
-Package pdftex.def Info: images/env_14_fazy.png  used on input line 744.
+Package pdftex.def Info: images/env_14_fazy.png  used on input line 748.
 (pdftex.def)             Requested size: 483.69684pt x 105.75037pt.
 
-Overfull \hbox (11.6656pt too wide) in paragraph at lines 744--746
+Overfull \hbox (11.6656pt too wide) in paragraph at lines 748--750
  [][] 
  []
 
-[33 <./images/env_14.png>]
+
+Underfull \vbox (badness 5008) has occurred while \output is active []
+
+ [33 <./images/env_14.png>]
 <images/env_14_akcje.png, id=180, 654.94687pt x 438.8897pt>
 File: images/env_14_akcje.png Graphic file (type png)
 <use images/env_14_akcje.png>
-Package pdftex.def Info: images/env_14_akcje.png  used on input line 754.
+Package pdftex.def Info: images/env_14_akcje.png  used on input line 758.
 (pdftex.def)             Requested size: 483.69684pt x 324.13039pt.
 
-Overfull \hbox (11.6656pt too wide) in paragraph at lines 754--756
+Overfull \hbox (11.6656pt too wide) in paragraph at lines 758--760
  [][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [34 <./images/env_14_fazy.png>] [35 <./images/env_14_akcje.png>]
-<env_4_agenci.png, id=189, 411.78844pt x 385.44pt>
+ [34 <./images/env_14_fazy.png>] [35 <./images/env_14_akcje.png>] [36]
+<env_4_agenci.png, id=192, 411.78844pt x 385.44pt>
 File: env_4_agenci.png Graphic file (type png)
 <use env_4_agenci.png>
-Package pdftex.def Info: env_4_agenci.png  used on input line 790.
+Package pdftex.def Info: env_4_agenci.png  used on input line 801.
 (pdftex.def)             Requested size: 284.52756pt x 266.3244pt.
-
-Underfull \vbox (badness 1946) has occurred while \output is active []
-
- [36]
-<env_4_fazy.png, id=193, 722.7pt x 542.025pt>
+ [37 <./env_4_agenci.png>]
+<env_4_fazy.png, id=198, 722.7pt x 542.025pt>
 File: env_4_fazy.png Graphic file (type png)
 <use env_4_fazy.png>
-Package pdftex.def Info: env_4_fazy.png  used on input line 805.
+Package pdftex.def Info: env_4_fazy.png  used on input line 815.
 (pdftex.def)             Requested size: 398.33858pt x 298.7515pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2698) has occurred while \output is active []
 
- [37 <./env_4_agenci.png>] [38 <./env_4_fazy.png>]
-Rozdzia\l  7.
-
-LaTeX Warning: Citation `machineLearningClassification' on page 39 undefined on
- input line 813.
-
-[39
+ [38 <./env_4_fazy.png>] [39] [40
 
 ]
-<agent-srodowisko.png, id=206, 493.845pt x 289.83281pt>
+Rozdzia\l  7.
+
+LaTeX Warning: Citation `machineLearningClassification' on page 41 undefined on
+ input line 848.
+
+[41]
+<agent-srodowisko.png, id=212, 493.845pt x 289.83281pt>
 File: agent-srodowisko.png Graphic file (type png)
 <use agent-srodowisko.png>
-Package pdftex.def Info: agent-srodowisko.png  used on input line 834.
+Package pdftex.def Info: agent-srodowisko.png  used on input line 869.
 (pdftex.def)             Requested size: 398.33858pt x 233.77707pt.
- [40 <./agent-srodowisko.png>]
-<rewards-graph.png, id=210, 545.03625pt x 93.34875pt>
+ [42 <./agent-srodowisko.png>]
+<rewards-graph.png, id=216, 545.03625pt x 93.34875pt>
 File: rewards-graph.png Graphic file (type png)
 <use rewards-graph.png>
-Package pdftex.def Info: rewards-graph.png  used on input line 860.
+Package pdftex.def Info: rewards-graph.png  used on input line 895.
 (pdftex.def)             Requested size: 398.33858pt x 68.22377pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 856--863
+Underfull \hbox (badness 10000) in paragraph at lines 891--898
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 865--872
+Underfull \hbox (badness 10000) in paragraph at lines 900--907
 
  []
 
-[41 <./rewards-graph.png>]
+[43 <./rewards-graph.png>]
 
-LaTeX Warning: Citation `reinforcementBook' on page 42 undefined on input line 
-874.
+LaTeX Warning: Citation `reinforcementBook' on page 44 undefined on input line 
+909.
 
-[42] [43] [44]
+[44] [45] [46]
 Overfull \hbox (70.75467pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/12 7.6.  MÓJ ALGORYTM KTÓRY POTRZEBUJE NAZWY ALE PROPONUJ†: MONTE 
-CARLO DQN \T1/lmr/m/n/12 45
+CARLO DQN \T1/lmr/m/n/12 47
  []
 
-[45] ("model ruchu.bbl") [46] ("model ruchu.aux")
+[47] ("model ruchu.bbl") [48] ("model ruchu.aux")
 
 LaTeX Warning: There were undefined references.
 
@@ -1278,10 +1268,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15715 strings out of 492895
- 293007 string characters out of 3133470
- 386727 words of memory out of 3000000
- 19204 multiletter control sequences out of 15000+200000
+ 15718 strings out of 492895
+ 293075 string characters out of 3133470
+ 386777 words of memory out of 3000000
+ 19207 multiletter control sequences out of 15000+200000
  73524 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,16n,73p,1222b,420s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1299,9 +1289,9 @@ pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Program Files/MiKTeX 2.9/f
 onts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /lm/lmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
-Output written on "model ruchu.pdf" (46 pages, 776299 bytes).
+Output written on "model ruchu.pdf" (48 pages, 781733 bytes).
 PDF statistics:
- 280 PDF objects out of 1000 (max. 8388607)
+ 286 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  188 words of extra memory for PDF output out of 10000 (max. 10000000)
 

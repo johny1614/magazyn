@@ -530,9 +530,9 @@ Rozważmy poniższe środowisko składające się z drogi posiadającej 4 odcink
 Należy skonstruować pewną funkcję zatoru. Niech jej celem będzie, aby przez jeden interwał czasowy maksymalnie 10 pojazdów przejeżdżało przez odcinek drogi. Następująca funkcja gwarantuje takie zachowanie:
 
 \begin{numcases}{f(i,j)=}
-\textbf{P}[i,j] & dla $ j=i+1 \wedge x[i]<10$ - przejazd bez zatoru \label{eq:manewr_bez_zatoru_f10} \\
-\frac{10}{x[i]} & dla $ j=i+1  \wedge x[i] \geq 10$ - przejazd z zatorem \label{eq:manewr_zator_f10} \\
-0 & dla pozostałych przypadków - niemożliwe manewry
+\textbf{P}[i,j] & dla $ j=i+1 \wedge x[i]<10$ - przejazd bez zatoru \label{eq:fmanewr_bez_zatoru_fX} \\
+\frac{10}{x[i]} & dla $ j=i+1  \wedge x[i] \geq 10$ - przejazd z zatorem \label{eq:fmanewr_zator_fX} \\
+0 & dla pozostałych przypadków - niemożliwe manewry \label{eq:fmanewr_not_existing}
 \end{numcases} \noindent
  Macierze stanowe zostały wyliczone na podstawie wzoru \ref{eq_A_z_korkiem}. W tym przypadku jest to:
 \def \A {\begin{bmatrix}
@@ -541,11 +541,16 @@ Należy skonstruować pewną funkcję zatoru. Niech jej celem będzie, aby przez
 		f(0,2) & f(1,2) &   1-\delta(2) & f(3,2) & \\
 		f(0,3) & f(1,3) &   f(2,3) & 1-\delta(3) & \\
 \end{bmatrix}}
-\[A=\A \label{eq:A_1droga_korek}\]
+\[A=\A \addtag  \label{eq:A_Idroga_korek}\]
 
 Funkcja $\delta$ dla tego środowiska to:
 \begin{numcases}{\delta(i)=}
-\sum_{j\in{\{0,1,2,3\}},j!=i} f(i,j) & dla $i \in {0,1,2}$ \\
+f(0,1)+f(0,2)+f(0,3) & dla $i = 0 $
+\\
+f(1,0)+f(1,2)+f(1,3) & dla $i = 1 $
+\\
+f(2,0)+f(2,1)+f(2,3) & dla $i = 2 $
+\\
 1 & dla $i = 3 $
 \end{numcases}
 
@@ -587,11 +592,11 @@ Rozważmy następujący stan początkowy środowiska:
 		\hline 
 	\end{tabular}
 }
-W celu wyliczenia $\textbf{x(1)}$ należy obliczyć $\textbf{A(0)}$, wedle wzoru \myref{eq:A_1droga_korek}. Wartości 
+W celu wyliczenia $\textbf{x(1)}$ należy obliczyć $\textbf{A(0)}$, wedle wzoru \myref{eq:A_Idroga_korek}. Wartości 
 zerowej kolumny macierzy $A(0)$ są wyliczane w następującej kolejności:
 \begin{itemize}
-	\item $ f(0,1) $ to przypadek manewru z zatorem \myref{eq:manewr_zator}. Zatem $f(0,1)=\frac{10}{17}$, gdyż $x[0]=17$
-	\item $f(0,2) = 0  \; f(0,3)=0$ to przypadki niemożliwych manewrów \myref{eq:manewr_not_existing}.
+	\item $ A[0,1]=f(0,1) $ to przypadek manewru z zatorem \myref{eq:fmanewr_zator_fX}. Zatem $f(0,1)=\frac{10}{17}$, gdyż $x[0]=17$
+	\item $A[0,2]=f(0,2) = 0  \; f(0,3)=0$ to przypadki niemożliwych manewrów \myref{eq:fmanewr_not_existing}.
 	\item $A[0,0]=1-\delta(0)=1-f(0,1)-f(0,2)-f(0,3)=1-\frac{10}{17}-0-0=\frac{7}{17}$ pozostaje na odcinku 0.
 \end{itemize}
 Analogiczne operacje zostają przeprowadzone dla kolejnych kolumn co daje rezultat w postaci:
@@ -615,7 +620,7 @@ Dalszy rozwój wektora stanowego jest przedstawiony w tabeli poniżej.
 
 
 \subsection{Przykład zatoru na skrzyżowaniu}
-Niech funkcją zatoru będzie funkcja przedstawiona w \ref{eq:manewr_bez_zatoru_f10}-\ref{eq:manewr_zator_f10}
+Niech funkcją zatoru będzie funkcja przedstawiona w (\ref{eq:fmanewr_bez_zatoru_fX}-\ref{eq:fmanewr_not_existing})
 Rozważmy poniższą sytuację na drogach w chwili $t=0$:
 \begin{figure}[H]
 	\centering
@@ -712,9 +717,8 @@ Wykorzystana w modelu zostanie funkcja zatoru przedstawiona w rozdziale \myref{s
 \end{numcases} \noindent
 
 
-\subsection{Uczenie agenta}
 \subsection{Pożądane zachowanie}
-Pożądanym zachowaniem jest utrzymywanie fazy 1. Jest w każdym przypadku lepsza lub równa fazie 0. Spowodowane jest to tym, że więcej pojazdów skręca w prawo.
+Pożądanym zachowaniem jest utrzymywanie fazy 1. Jest ona w każdym przypadku lepsza lub równa fazie 0. Spowodowane jest to tym, że więcej pojazdów skręca w prawo.
 \subsection{Sposób uczenia}
 Zastosowana została metoda uczenia przedstawiona w \myref{learning:DQN_single_agent}. Następujące stałe określające model uczenia to:
 \begin{itemize}
@@ -727,7 +731,7 @@ Zastosowana została metoda uczenia przedstawiona w \myref{learning:DQN_single_a
 \end{itemize}
 
 \subsection{Wyniki uczenia}
-Za każdym razem już po trzeciej (często po drugiej) iteracji algorytmu osiągane jest pożądane zachowanie agenta. Dla każdego stanu agent wybiera akcję 0.
+Za każdym razem już po trzeciej iteracji algorytmu osiągane jest pożądane zachowanie agenta. Dla każdego stanu agent wybiera akcję 0.
 
 \section{Srodowisko 2(14 na froncie)}
 Na model sieci składają się 3 drogi - każda ma po 2 odcinki. Istnieje jedno skrzyżowanie z dwiema drogami wlotowymi i jedną wylotową.
@@ -763,12 +767,19 @@ Wykorzystana w modelu zostanie funkcja zatoru przedstawiona w rozdziale \myref{s
 \frac{10}{x[i]} & dla $ j=i+1  \wedge x[i] \geq 10$ - przejazd z zatorem \label{eq:manewr_zator_f10} \\
 0 & dla pozostałych przypadków - manewr [i,j]
 \end{numcases} \noindent
-\subsection{Cel nauki i pożądane zachowanie agenta}
-Początkowo do każdej z dróg wjeżdżają po 2 pojazdy. Agent ma za zadanie wykonywać akcje, które w trakcie symulacji pozwolą na opuszczenie skrzyżowania przez conajmniej 98 procent pojazdów, które wjechały do sieci dróg. W przypadku spełnienia tego warunku następuje zwiększenie ilości wjeżdżających do układu pojazdów. Ten proces jest powtarzany, aż do momentu gdy przez 10 iteracji uczenia nie uzyskany zostanie warunek 98 procent pojazdów opuszczających skrzyżowanie. Moment stopu spodziewany jest na chwilę, gdy na każdą z dróg będzie wjeżdżało około 5 pojazdów. Nie ma możliwości, by przejeżdżało więcej niż 10 pojazdów, a tyle właśnie pojawia się w układzie. Muszą zatem wtedy pojawiać się zatory.
 
-Pożądane zachowanie agenta w tym przypadku nie jest jednoznaczne do określenia. Z pewnością jeśli na drodze na której jest zielone światło jest conajmniej 10 pojazdów, to warto podtrzymać fazę świetlną. Zmiana sygnalizacji powoduje 2 interwały karencji, podczas których żaden pojazd nie przejedzie i może to być czynnikiem decydującym o pozostaniu przy obecnej fazie. Jaka powinna być akcja w przypadku gdy zielone światło jest dla drogi z mniejszą niż 10 ilością pojazdów? Wtedy agent musi odnaleźć złoty środek i jeśli na drugiej drodze jest dużo pojazdów - może zmienić światło. 
+\subsection{Uczenie}
+\subsubsection{Ogólny zarys}
+Początkowo do każdej z dróg wjeżdżają po 2 pojazdy w jednym interwale czasowym. Na koniec każdej iteracji nauki przeprowadzane są symulacje w pełni zachłanne. Agent ma za zadanie wykonywać akcje, które w trakcie symulacji pozwolą na opuszczenie skrzyżowania przez conajmniej 98 procent pojazdów. W przypadku spełnienia tego warunku następuje zwiększenie ilości wjeżdżających do układu pojazdów. Ten proces jest powtarzany, aż do momentu gdy przez 10 iteracji uczenia nie uzyskany zostanie warunek 98 procent pojazdów opuszczających skrzyżowanie. Moment stopu spodziewany jest na chwilę, gdy na każdą z dróg będzie wjeżdżało około 5 pojazdów. Nie ma możliwości, by przejeżdżało więcej niż 10 pojazdów, a tyle właśnie pojawia się w układzie. Muszą zatem wtedy pojawiać się zatory.
 
-\subsection{Sposób uczenia}
+\subsubsection{Cel nauki}
+Bezpośrednim celem nauki jest uzyskanie jak największej ilości pojazdów wjeżdżających do sieci. Aby to się stało agenci muszą podejmować decyzje, które pozwalają na opuszczenie sieci jak największej ilości pojazdów. 
+\subsubsection{Spodziewany wynik}
+Moment stopu spodziewany jest na chwilę, gdy na każdą z dróg będzie wjeżdżało około 5 pojazdów (w sumie 10 pojazdów). Zgodnie z opisem modelu ruchu - maksymalnie 10 pojazdów może przejechać w jednej chwili przez skrzyżowanie, zatem muszą się tworzyć zatory przy większej ilości pojazdów.
+\subsubsection{Pożądane zachowanie agenta}
+Pożądane zachowanie agenta w tym przypadku nie jest jednoznaczne do określenia. Z pewnością jeśli na drodze na której jest zielone światło jest conajmniej 10 pojazdów, to warto podtrzymać fazę świetlną. Zmiana sygnalizacji powoduje 2 interwały karencji, podczas których żaden pojazd nie przejedzie i może to być czynnikiem decydującym o pozostaniu przy obecnej fazie. Jaka powinna być akcja w przypadku gdy zielone światło jest dla drogi z mniejszą niż 10 ilością pojazdów? Wtedy agent powinien odnaleźć złoty środek i jeśli na drugiej drodze jest dużo pojazdów - może zmienić światło. 
+
+\subsubsection{Sposób uczenia}
 Zastosowana została metoda uczenia przedstawiona w \myref{learning:DQN_single_agent}. 
 
 Następujące stałe oraz ustalenia określają szczegóły uczenia:
@@ -792,11 +803,10 @@ Najlepszy wynik to średnio 9,48 pojazdów przejeżdżających w jednej chwili p
 	\caption{środowisko 4}
 \end{figure}
 
-środowisko posiada 12 jednokierunkowych dróg. Każda droga ma 3 odcinki co daje w sumie 36 odcinków (są numerowane od 0 co widać na rysunku \ref{fig:env_4_agenci}).
+Środowisko posiada 12 jednokierunkowych dróg. Każda droga ma 3 odcinki co daje w sumie 36 odcinków (są numerowane od 0 co widać na rysunku \ref{fig:env_4_agenci}).
 W sieci dróg znajdują się 3 skrzyżowania. Do każdego z nich jest przypisany agent, który odpowiada za sterowanie sygnalizacją świetlną.
-
-Model ruchu:
-Pojazdy w jednym interwale czasowym pokonują jeden odcinek. Na skrzyżowaniach w przypadku zielonego światła przejeżdża maksymalnie 10 pojazdów w jedną stronę.
+\subsection{Model ruchu}
+Maksymalnie 10 pojazdów w jednej chwili może wjechać na jeden odcinek. Zatem na skrzyżowaniach w przypadku zielonego światła przejeżdża maksymalnie 10 pojazdów w jedną stronę.
 Fazy świetlne: Każde skrzyżowanie posiada 4 fazy świetlne przedstawione poniżej. Fazy 0,1 i 2 są fazami, które posiadają pewne zielone światła. Agent podejmuje decyzję o zmianie tych faz. Zmiana ta nie jest natychmiastowa i następuje dopiero po 2 interwałach fazy żółtych 
 świateł.
 
@@ -806,8 +816,33 @@ Fazy świetlne: Każde skrzyżowanie posiada 4 fazy świetlne przedstawione poni
 	\label{fig:env_4_fazy}
 	\caption{środowisko 4 - fazy świateł}
 \end{figure}
-Uczenie:
-Każdy agent jako stan przyjmuje 10 elementową tablicę. 9 elementów to ilości pojazdów na odcinkach będących przed skrzyżowaniem przypisanym do agenta.
+\section{Uczenie}
+\subsection{Wektor stanowy}
+Każdy agent jako stan przyjmuje 6 elementową tablicę. Pierwsze 3 elementy to ilości pojazdów na odcinkach będących przed skrzyżowaniem przypisanym do agenta. Pozostałe 3 elementy mają wartości z zakresu $\{0,1\}$. Określają one aktualną fazę świetlną. 
+\subsubsection*{Przykład wektora stanowego}
+Wektor $x=[5,17,2,0,0,1]$ przedstawia stan w którym przez skrzyżowaniem są kolejki odpowiednio 5,17 i 2 pojazdów. Aktualna faza świetlna to 2.
+
+\subsection{Uczenie}
+\subsubsection{Ogólny zarys}
+Początkowo do każdej z dróg wjeżdża po jednym pojeździe. Na koniec każdej iteracji nauki przeprowadzane są symulacje w pełni zachłanne. Agent ma za zadanie wybierać akcje, które pozwolą na opuszczenie sieci dróg przez conajmniej 95 procent pojazdów. Jeśli ten warunek zostanie spełniony następuje zwiększenie ilości wjeżdżających pojazdów o 20 procent dotychczasowej wartości. W przypadku gdy ten warunek nie zostanie spełniony przez 15 kolejnych symulacji następuje koniec nauki. 
+\subsubsection{Cel nauki i spodziewany wynik}
+Bezpośrednim celem nauki jest uzyskanie jak największej ilości pojazdów wjeżdżających do sieci. Aby to się stało agenci muszą podejmować decyzje, które pozwalają na opuszczenie sieci jak największej ilości pojazdów. Moment stopu spodziewany jest na chwilę, gdy na każdą z dróg będzie wjeżdżało około 10 pojazdów. Zgodnie z opisem modelu ruchu - maksymalnie 10 pojazdów może wjechać w jednej chwili na dany odcinek, zatem muszą się tworzyć zatory przy większej ilości pojazdów.
+
+\subsection{Sposób uczenia}
+Zastosowana została metoda uczenia przedstawiona w \myref{learning:DQN_single_agent}. 
+
+Następujące stałe oraz ustalenia określają szczegóły uczenia:
+\begin{itemize}
+	\item $\gamma = 0.9$ - stopa dyskontowa
+	\item Parametr zachłanności $\epsilon$ jest początkowo równy 1 (w pełni losowe epizody). Z każdą iteracją jest zmniejszany o 0,01 aż do wartości $\epsilon=0,2$.
+	\item Generowanych jest jednorazowo 20 epizodów. Każdy z nich trwa 300 interwałów czasowych.
+	\item Wygenerowane zbiory danych są dzielone w proporcjach 80 i 20 procent dla odpowiednio treningu i walidacji.
+	\item Za uczenie odpowiada sieć neuronowa biblioteki Keras. Posiada ona 3 ukryte warstwy (10,14,10 neuronów) z funkcjami aktywacji relu. Optymalizacja jest przeprowadzana przez metodę Adam z funkcją straty błędu średniokwadratowego i parametrem $learning\_rate = 0,01$. 
+	\item Epizod zachłanny trwa 1000 interwałów czasowych.
+\end{itemize}
+
+
+
 \chapter{Przegląd metod optymalizacyjnych}
 \section{Kategorie uczenia maszynowego}
 Uczenie maszynowe to dziedzina wchodząca w skład nauk zajmujących się sztuczną inteligencją. Samo uczenie w najprostszym kształcie może być rozumiane jako dobór parametrów na podstawie dostępnych danych. Uczenie maszynowe jest powszechnie dzielone na 3 kategorie nauki \cite{machineLearningClassification}.
@@ -975,19 +1010,7 @@ Algorytm jest następujący:
 
 
 \section{Mój algorytm który potrzebuje nazwy ale proponuję: Monte Carlo DQN} \label{learning:DQN_single_agent}
-
-\[Q(s,a) = (1-\alpha)Q(s,a) + \alpha [r + \gamma \max_{a' \in A'} Q(s',a')] \addtag \label{eq:Q_DQN} \]
-\begin{itemize}
-	\item $ s,a $ to para stanu i akcji, które pojawiły się w trakcie symulacji
-	\item $Q(s,a)$ to opłacalność podjęcia akcji $a$ w stanie $s$.
-	\item $ r $ to nagroda przydzielona podczas symulacji dla akcji $ a $ podjętej w stanie $ s $
-	\item $ s' $ to stan do którego doprowadziła akcja $ a $ podjęta w stanie $ s $ podczas symulacji
-	\item $ A' $ to przestrzeń możliwych akcji do podjęcia w stanie $ s' $
-	\item $\alpha$ to stała szybkości uczenia (ang. learning rate)
-	\item $\gamma \in [0,1]$  to stopa dyskontowa
-\end{itemize}
-
-Algorytm jest następujący:
+Poniższy algorytm jest oparty o funkcję Q określającą opłacalność akcji a w stanie s. Wartości funkcji Q są zmieniane w czasie wraz z dalszymi symulacjami i coraz większą wiedzą o środowisku. Algorytm jest następujący:
 \begin{enumerate}
 	\item Utwórz sieć neuronową, która na wejście przyjmować będzie stan środowiska. Wyjściowym sygnałem jest Q(s,a) - opłacalność akcji możliwych do podjęcia w stanie danym na wejściu.
 	\item Zasymuluj pewną ilość epizodów. Akcje są wybierane w $\epsilon$ - greedy sposób. Zapisuj dane wygenerowane podczas tych epizodów: \label{symulacja_50}
@@ -1007,7 +1030,21 @@ Algorytm jest następujący:
 	\item Jeśli spełniony jest warunek stopu - przerwij algorytm. W przeciwnym razie przejdź do \ref{symulacja_50}.
 	
 \end{enumerate}
-
+Zmiana wartości funkcji Q w trakcie algorytmu jest opisana poniższymi wzorami.
+Dla akcji a utrzymania obecnej fazy:
+\[Q(s,a) \leftarrow (1-\alpha)Q(s,a) + \alpha [r + \gamma \max_{a' \in A'} Q(s',a')] \addtag \label{eq:Q_DQN} \]
+Dla akcji a zmiany obecnej fazy:
+\[Q(s,a) \leftarrow  (1-\alpha)Q(s,a) + \alpha [\gamma^{k} r + \gamma^{k+1} \max_{a' \in A'} Q(s',a')] \addtag \label{eq:Q_DQN_II} \]
+\begin{itemize}
+	\item $ s,a $ to para stanu i akcji, które pojawiły się w trakcie symulacji
+	\item $Q(s,a)$ to opłacalność podjęcia akcji $a$ w stanie $s$.
+	\item $ r $ to nagroda przydzielona podczas symulacji dla akcji $ a $ podjętej w stanie $ s $
+	\item $ s' $ to stan do którego doprowadziła akcja $ a $ podjęta w stanie $ s $ podczas symulacji
+	\item $ A' $ to przestrzeń możliwych akcji do podjęcia w stanie $ s' $
+	\item $\alpha$ to stała szybkości uczenia (ang. learning rate)
+	\item $\gamma \in [0,1]$  to stopa dyskontowa
+	\item k to długość fazy żółtych świateł
+\end{itemize}
 
 
 
