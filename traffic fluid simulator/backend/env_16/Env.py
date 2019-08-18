@@ -85,8 +85,16 @@ class Env:
         #     rewards[flow['agent_index']] += flow['value']
         return rewards
 
+    def count_rewards_outflow(self):
+        rewards = [0] * len(self.agents)
+        for flow in self.last_flows:
+            rewards[flow['agent_index']] += flow['value']
+        # for agent in self.agents:
+        #     rewards[agent.index] += flow[agent.outflow_section]
+        return rewards
+
+
     def count_rewards(self):
-        # TODO to na pewno jest ok?
         rewards = [0] * len(self.agents)
         for flow in self.last_flows:
             rewards[flow['agent_index']] += flow['value']

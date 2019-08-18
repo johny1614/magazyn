@@ -15,6 +15,7 @@ from services.globals import Globals
 
 @attr.s
 class SmartAgent(Agent):
+    outflow_section: int = attr.ib(default=0)
     memories: List[Memory] = attr.ib(factory=list)
     model = attr.ib(default=0)
     randomed_actions = [0, 0, 0]
@@ -38,39 +39,6 @@ class SmartAgent(Agent):
         model.compile(optimizer=Adam(learning_rate=l_rate), loss='mse')
         return model
 
-    def random_minibatch(self, batch_size):
-        minibatch = random.sample(self.memories, min(len(self.memories), batch_size))
-        x_batch = []
-        y_batch = []
-        for memory in minibatch:
-            if memory.action == 'orange':
-                continue
-            state = memory.state.to_learn_array()
-            y_target = self.model.predict(state)
-            target = (memory.reward)
-            y_target[0][memory.action] = target
-            x_batch.append(state[0])
-            y_batch.append(y_target[0])
-        return x_batch, y_batch
-
-    def full_batch(self):
-        x_batch = []
-        y_batch = []
-        i = 0
-        l_rate = Globals().learning_rate
-        gamma = Globals().gamma
-        for memory in self.memories:
-            state = memory.state.to_learn_array()
-            action = 2 if memory.action == 'orange' else memory.action
-            y_target = self.model.predict(state)
-            new_state_possible_actions_value_predictions = self.model.predict(memory.new_state.to_learn_array())
-            target = (1 - l_rate) * y_target[0][action] + l_rate * (
-                        memory.reward + gamma * max(new_state_possible_actions_value_predictions[0]))
-            i += 1
-            y_target[0][action] = target
-            x_batch.append(state[0])
-            y_batch.append(y_target[0])
-        return x_batch, y_batch
 
     def train_full(self, epochs=20, learning_rate=0.0001):
         x_batch, y_batch = self.full_batch()

@@ -51,6 +51,7 @@ def my_epoch(agents, time, u=None):
 
 
 def save_batches(agents,actual_number=''):
+    print('savebatches',actual_number)
     for i in range(len(agents)):
         filename = 'static_files/x_batch_agent_' + str(i)+'_'+str(actual_number) + '.txt'
         x_batch, y_batch = agents[i].full_batch_no_orange(only_learn_usable=True)
@@ -194,4 +195,4 @@ def generate_random_epochs(learntAgents=False, save_front_json=False, epochs=ran
 
 if __name__ == "__main__":
     # while True:
-    generate_random_epochs(save_front_json=True)
+    generate_random_epochs(save_front_json=False)

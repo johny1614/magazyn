@@ -1,5 +1,6 @@
 from timeit import default_timer as timer
 
+from draw_batches import draw_batches, draw_colored_batches, draw_batches_from_agent
 from env_settings import generate_u
 from nn_trainer import train, plot_pred_memory
 from random_epochs_generator import generate_random_epochs
@@ -104,14 +105,15 @@ for run in runs:
     results = []
     timeToLearn = 500000
     startTime = timer()
-    generate_random_epochs(learntAgents=False,
+    agents=generate_random_epochs(learntAgents=False,
                            epochs=range(Globals().vp().first_epochs_range))  # bierze nowych agentow i tu jest 'is'
+    # draw_colored_batches(agents)
     train(learntAgents=False, max_time_learn=Globals().vp().max_time_learn)
-    run_learnt_greedy()
+    result=run_learnt_greedy()
     lurns = 0
     eps_decay = 0
     while timer() - startTime < timeToLearn:
-        eps_decay += 0.07
+        eps_decay += 0.04
         Globals().epsilon = 1 - eps_decay
         if Globals().epsilon < 0.2:
             Globals().epsilon = 0.2
@@ -119,8 +121,10 @@ for run in runs:
         print('czas', timer() - startTime)
         print('U', Globals().u_value)
         generate_random_epochs(learntAgents=True, epochs=range(Globals().vp().epochs_range))
+        draw_batches('static_files/x_batch'+str(Globals().greedy_run_no))
         train(max_time_learn=Globals().vp().max_time_learn)
         result = run_learnt_greedy()
+        draw_batches_from_agent(result[3], file_name='static_files/x_batch_greedy'+str(Globals().greedy_run_no))
         maximum_possible_cars_out = Globals().u_value*Globals().vp().max_time_greedy*3
         print('max possible',maximum_possible_cars_out)
         if result[2] >  maximum_possible_cars_out * 0.93:  # cars_out

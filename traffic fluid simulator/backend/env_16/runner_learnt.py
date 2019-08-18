@@ -29,7 +29,7 @@ def run_learnt_greedy(saveJson=False):
     print(
         f'gready run {Globals().greedy_run_no} - rewards_mean:{rewards_mean} rewards_sum:{rewards_sum} cars_out:{cars_out} procentowo:{float(cars_out)/maximum_possible_cars_out}')
     Globals().greedy_run_no += 1
-    return rewards_mean, rewards_sum, cars_out
+    return rewards_mean, rewards_sum, cars_out,agents
 
 
 if __name__ == "__main__":
