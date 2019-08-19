@@ -27,15 +27,14 @@
 \contentsline {subsection}{\numberline {5.7.2}Zatory drogowe}{25}% 
 \contentsline {subsection}{\numberline {5.7.3}Przyk\IeC {\l }ad zatoru na pojedynczej drodze}{26}% 
 \contentsline {subsection}{\numberline {5.7.4}Przyk\IeC {\l }ad zatoru na skrzy\IeC {\.z}owaniu}{27}% 
-\contentsline {chapter}{\numberline {6}\IeC {\'s}rodowiska symulacyjne}{31}% 
+\contentsline {chapter}{\numberline {6}\IeC {\'S}rodowiska symulacyjne i ich nauka}{31}% 
 \contentsline {section}{\numberline {6.1}Srodowisko 1(11 na froncie)}{31}% 
 \contentsline {subsection}{\numberline {6.1.1}Sygnalizacje \IeC {\'s}wietlne}{32}% 
 \contentsline {subsection}{\numberline {6.1.2}Przestrze\IeC {\'n} decyzyjna}{32}% 
 \contentsline {subsection}{\numberline {6.1.3}Zatory drogowe}{32}% 
-\contentsline {subsection}{\numberline {6.1.4}Po\IeC {\.z}\IeC {\k a}dane zachowanie}{32}% 
-\contentsline {subsection}{\numberline {6.1.5}Spos\IeC {\'o}b uczenia}{32}% 
-\contentsline {subsection}{\numberline {6.1.6}Wyniki uczenia}{33}% 
-\contentsline {section}{\numberline {6.2}Srodowisko 2(14 na froncie)}{33}% 
+\contentsline {subsection}{\numberline {6.1.4}Uczenie}{32}% 
+\contentsline {subsubsection}{Wyniki uczenia}{33}% 
+\contentsline {section}{\numberline {6.2}Srodowisko 2(14 na froncie)}{34}% 
 \contentsline {subsection}{\numberline {6.2.1}Sygnalizacje \IeC {\'s}wietlne}{34}% 
 \contentsline {subsection}{\numberline {6.2.2}Przestrze\IeC {\'n} decyzyjna}{34}% 
 \contentsline {subsection}{\numberline {6.2.3}Zatory drogowe}{35}% 
@@ -45,19 +44,20 @@
 \contentsline {subsubsection}{Spodziewany wynik}{36}% 
 \contentsline {subsubsection}{Po\IeC {\.z}\IeC {\k a}dane zachowanie agenta}{36}% 
 \contentsline {subsubsection}{Spos\IeC {\'o}b uczenia}{36}% 
-\contentsline {subsection}{\numberline {6.2.5}Wyniki uczenia}{37}% 
-\contentsline {section}{\numberline {6.3}Srodowisko 4 (16 na froncie)}{37}% 
-\contentsline {subsection}{\numberline {6.3.1}Model ruchu}{37}% 
-\contentsline {section}{\numberline {6.4}Uczenie}{38}% 
-\contentsline {subsection}{\numberline {6.4.1}Wektor stanowy}{38}% 
-\contentsline {subsection}{\numberline {6.4.2}Uczenie}{39}% 
-\contentsline {subsubsection}{Og\IeC {\'o}lny zarys}{39}% 
-\contentsline {subsubsection}{Cel nauki i spodziewany wynik}{39}% 
-\contentsline {subsection}{\numberline {6.4.3}Spos\IeC {\'o}b uczenia}{39}% 
-\contentsline {chapter}{\numberline {7}Przegl\IeC {\k a}d metod optymalizacyjnych}{41}% 
-\contentsline {section}{\numberline {7.1}Kategorie uczenia maszynowego}{41}% 
-\contentsline {section}{\numberline {7.2}Uczenie ze wzmocnieniem}{41}% 
-\contentsline {section}{\numberline {7.3}Programowanie dynamiczne}{44}% 
-\contentsline {section}{\numberline {7.4}Metoda Monte Carlo On-Policy}{45}% 
-\contentsline {section}{\numberline {7.5}M\IeC {\'o}j algorytm kt\IeC {\'o}ry potrzebuje nazwy ale proponuj\IeC {\k e}: Monte Carlo DQN full exploration}{46}% 
-\contentsline {section}{\numberline {7.6}M\IeC {\'o}j algorytm kt\IeC {\'o}ry potrzebuje nazwy ale proponuj\IeC {\k e}: Monte Carlo DQN}{47}% 
+\contentsline {section}{\numberline {6.3}Srodowisko 4 (16 na froncie)}{38}% 
+\contentsline {subsection}{\numberline {6.3.1}Sygnalizacje \IeC {\'s}wietlne}{38}% 
+\contentsline {subsection}{\numberline {6.3.2}Przestrze\IeC {\'n} decyzyjna}{39}% 
+\contentsline {subsection}{\numberline {6.3.3}Zatory drogowe}{40}% 
+\contentsline {section}{\numberline {6.4}Uczenie}{41}% 
+\contentsline {subsection}{\numberline {6.4.1}Sygna\IeC {\l } wej\IeC {\'s}ciowy}{41}% 
+\contentsline {subsection}{\numberline {6.4.2}Uczenie}{41}% 
+\contentsline {subsubsection}{Og\IeC {\'o}lny zarys}{41}% 
+\contentsline {subsubsection}{Cel nauki i spodziewany wynik}{41}% 
+\contentsline {subsection}{\numberline {6.4.3}Spos\IeC {\'o}b uczenia}{41}% 
+\contentsline {chapter}{\numberline {7}Przegl\IeC {\k a}d metod optymalizacyjnych}{43}% 
+\contentsline {section}{\numberline {7.1}Kategorie uczenia maszynowego}{43}% 
+\contentsline {section}{\numberline {7.2}Uczenie ze wzmocnieniem}{43}% 
+\contentsline {section}{\numberline {7.3}Programowanie dynamiczne}{46}% 
+\contentsline {section}{\numberline {7.4}Metoda Monte Carlo On-Policy}{47}% 
+\contentsline {section}{\numberline {7.5}M\IeC {\'o}j algorytm kt\IeC {\'o}ry potrzebuje nazwy ale proponuj\IeC {\k e}: Monte Carlo DQN full exploration}{48}% 
+\contentsline {section}{\numberline {7.6}M\IeC {\'o}j algorytm kt\IeC {\'o}ry potrzebuje nazwy ale proponuj\IeC {\k e}: Monte Carlo DQN}{49}% 

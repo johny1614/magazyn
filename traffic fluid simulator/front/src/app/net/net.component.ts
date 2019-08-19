@@ -26,7 +26,6 @@ export class NetComponent implements AfterViewInit {
   mousePosition;
   constructor(private cs: CanvasService) { }
   ngAfterViewInit() {
-    // this._net.lines[0].densities[0]=17
     this.ctx = this.netCanvas.nativeElement.getContext("2d");
     this.cs.ctx = this.ctx;
     this.cs.netCanvas = this.netCanvas;

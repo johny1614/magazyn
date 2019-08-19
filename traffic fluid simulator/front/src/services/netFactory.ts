@@ -16,6 +16,10 @@ export class NetFactory {
     }
   }
 
+  static drawImage(fileName) {
+    console.log('filename',fileName)
+  }
+
   static netFromJson(staticData, dynamicData?): Net {
     const lines = [];
     const staticLinesCopy = JSON.parse(JSON.stringify(staticData.lines));
@@ -80,22 +84,22 @@ export class NetFactory {
           line.lights.straight.imageName = this.removeLightsFromName(line.lights.straight.imageName);
           let actual_light = net.A[line.lights.straight.to][line.lights.straight.from] > 0 ? 'green' : 'red';
           line.lights.straight.imageName = line.lights.straight.imageName + '_' + actual_light
-          if (actual_light=='green'){
-            console.log('linia zielona!',line)
+          if (actual_light == 'green') {
+            console.log('linia zielona!', line)
           }
         }
         if (line.lights.right) {
           line.lights.right.imageName = this.removeLightsFromName(line.lights.right.imageName);
           let actual_light = net.A[line.lights.right.to][line.lights.right.from] > 0 ? 'green' : 'red';
           line.lights.right.imageName = line.lights.right.imageName + '_' + actual_light
-          console.log('linia zielona!',line)
+          console.log('linia zielona!', line)
 
         }
         if (line.lights.left) {
           line.lights.left.imageName = this.removeLightsFromName(line.lights.left.imageName);
           let actual_light = net.A[line.lights.left.to][line.lights.left.from] > 0 ? 'green' : 'red';
           line.lights.left.imageName = line.lights.left.imageName + '_' + actual_light
-          console.log('linia zielona!',line)
+          console.log('linia zielona!', line)
 
           // line.lights.left.imageName = line.lights.left.imageName + '_' + NetFactory.getLight(line.lights.left, dynamicNet);
         }
@@ -106,7 +110,7 @@ export class NetFactory {
 
   static attachLights(nets, dynamicData) {
     console.log('nets', nets);
-    console.log('nets lenf',nets.length)
+    console.log('nets lenf', nets.length)
     for (let net_index = 0; net_index < nets.length; net_index++) {
       console.log('net_index', net_index);
       console.log('A', dynamicData.nets[net_index].lights)

@@ -33,7 +33,7 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.getJSON('assets/nets/net4.json').subscribe(staticData => {
+    this.getJSON('assets/nets/net_polibuda.json').subscribe(staticData => {
       console.log('static jest',staticData)
       this.nets = [NetFactory.netFromJson(staticData)];
       // sdfdsfsdfdsf
@@ -41,14 +41,14 @@ export class AppComponent {
       // let net = 'assets/densities/net14_test_fixed_no_4.json';
       
       // let net = 'assets/densities/net16_random_now0.json';
-      let net = 'assets/densities/net16_learnt_3.json';
+      // let net = 'assets/densities/net16_learnt_77.json';
 // asddfasd
 
       // let net = 'assets/densities/net14_test_batching_4.json';
       // let net = 'assets/densities/net14_test_fixed_4_batch.json';
       // let net = 'assets/densities/net14_test_reshaping_no_0.json';
       // let net = 'assets/densities/net14_test_no_5.json';
-      // let net = 'assets/densities/net_14_base.json';
+      // let net = 'assets/densities/net4_base2.json';
       // let net = 'assets/densities/net4_sequential.json'
       // let net = 'assets/densities/net11_den_843015.json';
       // let net = 'assets/densities/net11_den_081331.json'; // to jest ogarniete
@@ -87,8 +87,8 @@ export class AppComponent {
       // let net = 'assets/densities/net4_random_3.json';
       // let net = 'assets/densities/net4_stan_monitorowany_3.json';
       // let net = 'assets/densities/net4_learnt-3.json';
+      NetFactory.drawImage('env_polibuda.png');
       this.getJSON(net).subscribe(dynamicData => {
-        // asdsa
         console.log('jest dynamicData', dynamicData);
         this.nets = NetFactory.getNetsWithDensity(staticData, dynamicData);
         NetFactory.attachLights(this.nets, dynamicData);

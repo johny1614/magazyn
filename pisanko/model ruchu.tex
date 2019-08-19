@@ -683,9 +683,8 @@ W rezultacie w chwili t obecny jest następujący stan:
 \end{figure}\noindent
 
 
-\chapter {środowiska symulacyjne}
-W tym rozdziale przedstawione zostaną środowiska symulacyjne. Głównym ich elementem jest sieć dróg. Podstawowe informacje na temat działania modelu sieci dróg i ruchu obowiązującego na nich zostały przedstawione w rozdziale \ref{chapter:model_sieci_drog}. Drugim elementem środowiska symulacyjnego są agenci. Są oni odpowiedzialni za dokonywanie decyzji związanych z sygnalizacją świetlną. 
-
+\chapter {Środowiska symulacyjne i ich nauka}
+W tym rozdziale przedstawione zostaną środowiska symulacyjne. Głównym ich elementem jest sieć dróg. Podstawowe informacje na temat działania modelu sieci dróg i ruchu obowiązującego na nich zostały przedstawione w rozdziale \ref{chapter:model_sieci_drog}. Każde środowisko posiada dokładną specyfikacje możliwych faz świetlnych. Do każdego ze skrzyżowań jest przyporządkowany agent, który ma za zadanie podejmować akcje prowadzące do dobrej przepustowości ruchu. Dokładnie zostaną przedstawione przestrzenie decyzyjne i bezpośrednie konsekwencje każdej z akcji. Każde środowisko będzie posiadało swój problem optymalizacyjny i przedstawiony zostanie sposób uczenia, który prowadzi do rozwiązania tego problemu. 
 \section{Srodowisko 1(11 na froncie)}
 Elementy sieci dróg pierwszego środowiska były niejednokrotnie przedstawiane w rozdziale \myref{chapter:model_sieci_drog}, jednak dopiero teraz nastąpi przedstawienie pierwszego pełnego środowiska symulacyjnego. Na model sieci składają się 3 drogi - każda ma po 2 odcinki. Jest jedno skrzyżowanie na którym 75 procent pojazdów skręca w prawo, a pozostałe obierają kierunek w lewo.
 \begin{figure}[H]
@@ -716,22 +715,32 @@ Wykorzystana w modelu zostanie funkcja zatoru przedstawiona w rozdziale \myref{s
 0 & dla pozostałych przypadków - manewr [i,j]
 \end{numcases} \noindent
 
-
-\subsection{Pożądane zachowanie}
-Pożądanym zachowaniem jest utrzymywanie fazy 1. Jest ona w każdym przypadku lepsza lub równa fazie 0. Spowodowane jest to tym, że więcej pojazdów skręca w prawo.
-\subsection{Sposób uczenia}
+\subsection{Uczenie}
+\subsubsection*{Ogólny zarys}
+W trakcie symulacji treningowych do drogi wjeżdża 9 pojazdów w czasie jednego interwału. Po jednej iteracji algorytmu uczenia następuje symulacja w pełni zachłanna.
+\subsubsection*{Cel nauki}
+Celem nauki jest uzyskanie jak największej liczby pojazdów, które opuszczą rozwidlenie dróg.
+\subsubsection*{Pożądane zachowanie}
+Pożądanym zachowaniem jest utrzymywanie fazy 1. Jest ona w każdym przypadku lepsza lub równa fazie 0. Spowodowane jest to tym, że więcej pojazdów skręca w prawo. W przypadku gdy przed rozwidleniem drogi jest conajmniej 40 pojazdów poprawną akcją jest także wybór fazy 0. Nie powinno jednak dojść do aż takiego zatoru.
+\subsubsection*{Sygnał wejściowy}
+Sygnał wejściowy to ilości pojazdów przed skrzyżowaniem.
+\subsubsection*{Przykład sygnału wejściowego}
+Sygnał wejściowy $ \textbf{x}=[4,7] $ zawiera w sobie informację, iż na odcinku zerowym są 4 pojazdy oraz na pierwszym - jest ich 7. 
+\subsubsection*{Sposób uczenia}
 Zastosowana została metoda uczenia przedstawiona w \myref{learning:DQN_single_agent}. Następujące stałe określające model uczenia to:
 \begin{itemize}
 	\item $\gamma = 0.9$ - stopa dyskontowa
 	\item $\alpha = 0.01$ - stała szybkości uczenia (ang. learning rate)
-	\item Generowanych jest jednorazowo 50 epizodów
+	\item Generowanych jest jednorazowo 50 epizodów. Każdy ma 200 interwałów czasowych.
 	\item Wygenerowane zbiory danych są dzielone w proporcjach 80 i 20 procent dla odpowiednio treningu i walidacji.
 	\item Warunkiem stopu jest 60 sekund działania algorytmu.
 	\item Sieć neuronowa posiada 1 ukrytą warstwę z 10 neuronami.
+	\item Za uczenie odpowiada sieć neuronowa biblioteki Keras. Posiada ukrytą warstwę z 10 neuronami i funkcją aktywacji relu. Optymalizacja jest przeprowadzana przez metodę Adam z funkcją straty błędu średniokwadratowego i parametrem $learning\_rate = 0,01$. 
+	\item Epizod zachłanny trwa 200 interwałów czasowych.
 \end{itemize}
 
-\subsection{Wyniki uczenia}
-Za każdym razem już po trzeciej iteracji algorytmu osiągane jest pożądane zachowanie agenta. Dla każdego stanu agent wybiera akcję 0.
+\subsubsection{Wyniki uczenia}
+Za każdym razem już po trzeciej iteracji algorytmu osiągane jest pożądane zachowanie agenta. Dla każdego stanu agent wybiera akcję 1. Nie tworzą się zatory i wszystkie pojazdy opuszczają układ (oczywiście z wyjątkiem tych, które pojawiły się w dwóch ostatnich interwałach czasowych).
 
 \section{Srodowisko 2(14 na froncie)}
 Na model sieci składają się 3 drogi - każda ma po 2 odcinki. Istnieje jedno skrzyżowanie z dwiema drogami wlotowymi i jedną wylotową.
@@ -767,7 +776,7 @@ Wykorzystana w modelu zostanie funkcja zatoru przedstawiona w rozdziale \myref{s
 \frac{10}{x[i]} & dla $ j=i+1  \wedge x[i] \geq 10$ - przejazd z zatorem \label{eq:manewr_zator_f10} \\
 0 & dla pozostałych przypadków - manewr [i,j]
 \end{numcases} \noindent
-
+Zezwala ona na jednoczesny wjazd maksymalnie 10 pojazdów na dowolny odcinek drogi.
 \subsection{Uczenie}
 \subsubsection{Ogólny zarys}
 Początkowo do każdej z dróg wjeżdżają po 2 pojazdy w jednym interwale czasowym. Na koniec każdej iteracji nauki przeprowadzane są symulacje w pełni zachłanne. Agent ma za zadanie wykonywać akcje, które w trakcie symulacji pozwolą na opuszczenie skrzyżowania przez conajmniej 98 procent pojazdów. W przypadku spełnienia tego warunku następuje zwiększenie ilości wjeżdżających do układu pojazdów. Ten proces jest powtarzany, aż do momentu gdy przez 10 iteracji uczenia nie uzyskany zostanie warunek 98 procent pojazdów opuszczających skrzyżowanie. Moment stopu spodziewany jest na chwilę, gdy na każdą z dróg będzie wjeżdżało około 5 pojazdów. Nie ma możliwości, by przejeżdżało więcej niż 10 pojazdów, a tyle właśnie pojawia się w układzie. Muszą zatem wtedy pojawiać się zatory.
@@ -778,7 +787,13 @@ Bezpośrednim celem nauki jest uzyskanie jak największej ilości pojazdów wje�
 Moment stopu spodziewany jest na chwilę, gdy na każdą z dróg będzie wjeżdżało około 5 pojazdów (w sumie 10 pojazdów). Zgodnie z opisem modelu ruchu - maksymalnie 10 pojazdów może przejechać w jednej chwili przez skrzyżowanie, zatem muszą się tworzyć zatory przy większej ilości pojazdów.
 \subsubsection{Pożądane zachowanie agenta}
 Pożądane zachowanie agenta w tym przypadku nie jest jednoznaczne do określenia. Z pewnością jeśli na drodze na której jest zielone światło jest conajmniej 10 pojazdów, to warto podtrzymać fazę świetlną. Zmiana sygnalizacji powoduje 2 interwały karencji, podczas których żaden pojazd nie przejedzie i może to być czynnikiem decydującym o pozostaniu przy obecnej fazie. Jaka powinna być akcja w przypadku gdy zielone światło jest dla drogi z mniejszą niż 10 ilością pojazdów? Wtedy agent powinien odnaleźć złoty środek i jeśli na drugiej drodze jest dużo pojazdów - może zmienić światło. 
-
+\subsubsection*{Sygnał wejściowy}
+Wektor stanowy posiada 4 wartości. Pierwsze dwie z nich to ilości pojazdów przed skrzyżowaniem. Kolejne określają aktualną fazę świetlną.
+\subsubsection*{Przykłady sygnałów wejściowych}
+\begin{itemize}
+	\item Sygnał wejściowy $ \textbf{x}=[8,2,0,1] $ zawiera w sobie informację, iż na odcinku zerowym jest 8 pojazdów oraz na pierwszym - jest ich 2. Aktywna jest faza 1.
+		\item Sygnał wejściowy $ \textbf{x}=[7,5,1,0] $ zawiera w sobie informację, iż na odcinku zerowym jest 7 pojazdów oraz na pierwszym - jest ich 5. Aktywna jest faza 0.
+\end{itemize}
 \subsubsection{Sposób uczenia}
 Zastosowana została metoda uczenia przedstawiona w \myref{learning:DQN_single_agent}. 
 
@@ -791,7 +806,7 @@ Następujące stałe oraz ustalenia określają szczegóły uczenia:
 	\item Za uczenie odpowiada sieć neuronowa biblioteki Keras. Posiada ona 3 ukryte warstwy (10,14,10 neuronów) z funkcjami aktywacji relu. Optymalizacja jest przeprowadzana przez metodę Adam z funkcją straty błędu średniokwadratowego i parametrem $learning\_rate = 0,01$. 
 \end{itemize}
 
-\subsection{Wyniki uczenia}
+\subsubsection*{Wyniki uczenia}
 Algorytm szybko uzyskuje kolejne warunki 98 procent pojazdów przejeżdżających przez skrzyżowanie. Dopiero przy 4,97 wjeżdzających pojazdach na drogę widoczny jest zastój, który powoduje warunek stopu.
 Najlepszy wynik to średnio 9,48 pojazdów przejeżdżających w jednej chwili przez skrzyżowanie. Jest to dobry wynik zważając na to, iż potencjalnie najwyższy możliwy wynik do osiągnięcia jest w granicy 9,94. Z 9940 pojazdów 450 nie opuściło skrzyżowania. Zatem przy niemalże 5 pojazdach napływających do układu powstają korki, co jest naturalnym zjawiskiem - wynikającym z ograniczeń ruchu, a nie nieoptymalnej sygnalizacji świetlnej.
 
@@ -805,22 +820,35 @@ Najlepszy wynik to średnio 9,48 pojazdów przejeżdżających w jednej chwili p
 
 Środowisko posiada 12 jednokierunkowych dróg. Każda droga ma 3 odcinki co daje w sumie 36 odcinków (są numerowane od 0 co widać na rysunku \ref{fig:env_4_agenci}).
 W sieci dróg znajdują się 3 skrzyżowania. Do każdego z nich jest przypisany agent, który odpowiada za sterowanie sygnalizacją świetlną.
-\subsection{Model ruchu}
-Maksymalnie 10 pojazdów w jednej chwili może wjechać na jeden odcinek. Zatem na skrzyżowaniach w przypadku zielonego światła przejeżdża maksymalnie 10 pojazdów w jedną stronę.
-Fazy świetlne: Każde skrzyżowanie posiada 4 fazy świetlne przedstawione poniżej. Fazy 0,1 i 2 są fazami, które posiadają pewne zielone światła. Agent podejmuje decyzję o zmianie tych faz. Zmiana ta nie jest natychmiastowa i następuje dopiero po 2 interwałach fazy żółtych 
-świateł.
-
+\subsection{Sygnalizacje świetlne}
+Każde skrzyżowanie posiada 4 fazy świetlne przedstawione poniżej. Fazy 0,1 i 2 są fazami, które posiadają pewne zielone światła. Zmiana pomiędzy tymi fazami nie jest natychmiastowa i następuje dopiero po 2 interwałach fazy żółtych świateł.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{env_4_fazy}
 	\label{fig:env_4_fazy}
 	\caption{środowisko 4 - fazy świateł}
 \end{figure}
+\subsection{Przestrzeń decyzyjna}
+Przedstawiona zostanie przestrzeń decyzyjna jedynie dla agenta 0, jednak dla pozostałych dwóch przestrzenie decyzyjne są analogiczne. Schemat zmiany faz jest identyczny, jedynie manewry danych faz są inne.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{images/env_14_akcje_agent0_tabela}
+	\label{fig:env_4_akcje_agent_0}
+	\caption{środowisko 4 - fazy świateł}
+\end{figure}
+\subsection{Zatory drogowe}
+Wykorzystana w modelu zostanie funkcja zatoru przedstawiona w rozdziale \myref{subsec:zator_f10}, czyli:
+\begin{numcases}{f(i,j)=}
+\textbf{P}[i,j] & dla $ j=i+1 \wedge x[i]<10$ - przejazd bez zatoru \label{eq:manewr_bez_zatoru_f10} \\
+\frac{10}{x[i]} & dla $ j=i+1  \wedge x[i] \geq 10$ - przejazd z zatorem \label{eq:manewr_zator_f10} \\
+0 & dla pozostałych przypadków - manewr [i,j]
+\end{numcases} \noindent
+Zezwala ona na jednoczesny wjazd 10 pojazdów na dowolny odcinek drogi.
 \section{Uczenie}
-\subsection{Wektor stanowy}
-Każdy agent jako stan przyjmuje 6 elementową tablicę. Pierwsze 3 elementy to ilości pojazdów na odcinkach będących przed skrzyżowaniem przypisanym do agenta. Pozostałe 3 elementy mają wartości z zakresu $\{0,1\}$. Określają one aktualną fazę świetlną. 
-\subsubsection*{Przykład wektora stanowego}
-Wektor $x=[5,17,2,0,0,1]$ przedstawia stan w którym przez skrzyżowaniem są kolejki odpowiednio 5,17 i 2 pojazdów. Aktualna faza świetlna to 2.
+\subsection{Sygnał wejściowy}
+Sieć neuronowa przypisana do każdego z agentów przyjmuje jako sygnał wejściowy 6 elementową tablicę. Pierwsze 3 elementy to ilości pojazdów na odcinkach będących przed skrzyżowaniem przypisanym do agenta. Pozostałe 3 elementy mają wartości z zakresu $\{0,1\}$. Określają one aktualną fazę świetlną. 
+\subsubsection*{Przykład sygnału wejściowego}
+Sygnał wejściowy $x=[5,17,2,0,0,1]$ przedstawia informację, iż przed skrzyżowaniem są kolejki odpowiednio 5,17 i 2 pojazdów. Ostatnie 3 elementy oznaczają, że aktualna faza świetlna to 2.
 
 \subsection{Uczenie}
 \subsubsection{Ogólny zarys}
