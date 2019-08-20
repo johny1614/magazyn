@@ -16,8 +16,8 @@
             "y": 740
           },
           "imageName": "arrow_right",
-          "from": 2,
-          "to": 9,
+          "from": 30,
+          "to": 32,
           "arrowWidth": 20,
           "rotation": 352
         },
@@ -27,8 +27,8 @@
             "y": 725
           },
           "imageName": "arrow_straight",
-          "from": 2,
-          "to": 9,
+          "from": 30,
+          "to": 33,
           "arrowWidth": 16,
           "rotation": 352
         },
@@ -38,8 +38,8 @@
             "y": 745
           },
           "imageName": "arrow_left",
-          "from": 2,
-          "to": 21,
+          "from": 30,
+          "to": 20,
           "arrowWidth": 21,
           "rotation": 352
         }
@@ -77,8 +77,8 @@
             "y": 730
           },
           "imageName": "arrow_straight",
-          "from": 8,
-          "to": 15,
+          "from": 3,
+          "to": 32,
           "arrowWidth": 17,
           "rotation": 83
         },
@@ -88,8 +88,8 @@
             "y": 728
           },
           "imageName": "arrow_left",
-          "from": 8,
-          "to": 24,
+          "from": 3,
+          "to": 33,
           "arrowWidth": 22,
           "rotation": 83
         },
@@ -99,8 +99,8 @@
             "y": 768
           },
           "imageName": "arrow_right",
-          "from": 8,
-          "to": 24,
+          "from": 3,
+          "to": 19,
           "arrowWidth": 22,
           "rotation": 83
         }
@@ -126,8 +126,8 @@
             "y": 684
           },
           "imageName": "arrow_left",
-          "from": 11,
-          "to": 12,
+          "from": 21,
+          "to": 29,
           "arrowWidth": 22,
           "rotation": 264
         },
@@ -137,8 +137,8 @@
             "y": 683
           },
           "imageName": "arrow_straight",
-          "from": 11,
-          "to": 30,
+          "from": 21,
+          "to": 1,
           "arrowWidth": 17,
           "rotation": 264
         },
@@ -148,8 +148,8 @@
             "y": 645
           },
           "imageName": "arrow_right",
-          "from": 11,
-          "to": 12,
+          "from": 21,
+          "to": 4,
           "arrowWidth": 22,
           "rotation": 264
         }
@@ -176,8 +176,8 @@
           },
           "rotation":352,
           "imageName": "arrow_right",
-          "from": 14,
-          "to": 33,
+          "from": 0,
+          "to": 2,
           "arrowWidth": 21
         },
         "straight": {
@@ -187,8 +187,8 @@
           },
           "rotation":352,
           "imageName": "arrow_straight",
-          "from": 14,
-          "to": 33,
+          "from": 0,
+          "to": 4,
           "arrowWidth": 18
         },
         "left": {
@@ -198,8 +198,8 @@
           },
           "rotation":352,
           "imageName": "arrow_left",
-          "from": 14,
-          "to": 15,
+          "from": 0,
+          "to": 1,
           "arrowWidth": 21
         }
       },
@@ -236,8 +236,8 @@
             "y": 215
           },
           "imageName": "arrow_right",
-          "from": 20,
-          "to": 21,
+          "from": 7,
+          "to": 10,
           "arrowWidth": 20,
           "rotation": 352
         },
@@ -247,8 +247,8 @@
             "y": 220
           },
           "imageName": "arrow_left",
-          "from": 20,
-          "to": 27,
+          "from": 7,
+          "to": 8,
           "arrowWidth": 20,
           "rotation": 352
         },
@@ -258,8 +258,8 @@
             "y": 197
           },
           "imageName": "arrow_straight",
-          "from": 20,
-          "to": 27,
+          "from": 7,
+          "to": 9,
           "arrowWidth": 17,
           "rotation": 352
         }
@@ -287,8 +287,8 @@
             "y": 669
           },
           "imageName": "arrow_right",
-          "from": 23,
-          "to": 24,
+          "from": 28,
+          "to": 1,
           "arrowWidth": "20",
           "rotation": 175
         },
@@ -298,8 +298,8 @@
             "y": 689
           },
           "imageName": "arrow_straight",
-          "from": 23,
-          "to": 33,
+          "from": 28,
+          "to": 29,
           "arrowWidth": "17",
           "rotation": 175
         },
@@ -309,8 +309,8 @@
             "y": 665
           },
           "imageName": "arrow_left",
-          "from": 23,
-          "to": 24,
+          "from": 28,
+          "to": 2,
           "arrowWidth": "20",
           "rotation": 175
         }
@@ -338,8 +338,8 @@
             "y": 225
           },
           "imageName": "arrow_right",
-          "from": 26,
-          "to": 18,
+          "from": 30,
+          "to": 32,
           "arrowWidth": 21,
           "rotation": 84
         },
@@ -349,8 +349,8 @@
             "y": 192
           },
           "imageName": "arrow_left",
-          "from": 26,
-          "to": 30,
+          "from": 30,
+          "to": 20,
           "arrowWidth": 21,
           "rotation": 84
         },
@@ -360,8 +360,8 @@
             "y": 190
           },
           "imageName": "arrow_straight",
-          "from": 26,
-          "to": 30,
+          "from": 30,
+          "to": 33,
           "arrowWidth": 19,
           "rotation": 84
         }
@@ -401,8 +401,8 @@
             "y": 85
           },
           "imageName": "arrow_right",
-          "from": 20,
-          "to": 21,
+          "from": 24,
+          "to": 8,
           "arrowWidth": 20,
           "rotation": 172
         },
@@ -412,8 +412,8 @@
             "y": 80
           },
           "imageName": "arrow_left",
-          "from": 20,
-          "to": 27,
+          "from": 24,
+          "to": 10,
           "arrowWidth": 20,
           "rotation": 172
         },
@@ -423,8 +423,8 @@
             "y": 103
           },
           "imageName": "arrow_straight",
-          "from": 20,
-          "to": 27,
+          "from": 24,
+          "to": 25,
           "arrowWidth": 17,
           "rotation": 172
         }
@@ -463,8 +463,8 @@
             "y": 203
           },
           "imageName": "arrow_right",
-          "from": 26,
-          "to": 18,
+          "from": 11,
+          "to": 14,
           "arrowWidth": 21,
           "rotation": 84
         },
@@ -474,8 +474,8 @@
             "y": 170
           },
           "imageName": "arrow_left",
-          "from": 26,
-          "to": 30,
+          "from": 11,
+          "to": 12,
           "arrowWidth": 21,
           "rotation": 84
         },
@@ -485,8 +485,8 @@
             "y": 167
           },
           "imageName": "arrow_straight",
-          "from": 26,
-          "to": 30,
+          "from": 11,
+          "to": 13,
           "arrowWidth": 19,
           "rotation": 84
         }
@@ -512,8 +512,8 @@
             "y": 87
           },
           "imageName": "arrow_right",
-          "from": 20,
-          "to": 21,
+          "from": 23,
+          "to": 9,
           "arrowWidth": 20,
           "rotation": 265
         },
@@ -523,8 +523,8 @@
             "y": 120
           },
           "imageName": "arrow_left",
-          "from": 20,
-          "to": 27,
+          "from": 23,
+          "to": 25,
           "arrowWidth": 20,
           "rotation": 265
         },
@@ -534,8 +534,8 @@
             "y": 122
           },
           "imageName": "arrow_straight",
-          "from": 20,
-          "to": 27,
+          "from": 23,
+          "to": 8,
           "arrowWidth": 17,
           "rotation": 265
         }
@@ -560,8 +560,8 @@
             "y": 81
           },
           "imageName": "arrow_right",
-          "from": 20,
-          "to": 21,
+          "from": 38,
+          "to": 22,
           "arrowWidth": 20,
           "rotation": 172
         },
@@ -571,8 +571,8 @@
             "y": 75
           },
           "imageName": "arrow_left",
-          "from": 20,
-          "to": 27,
+          "from": 38,
+          "to": 13,
           "arrowWidth": 20,
           "rotation": 172
         },
@@ -582,8 +582,8 @@
             "y": 99
           },
           "imageName": "arrow_straight",
-          "from": 20,
-          "to": 27,
+          "from": 38,
+          "to": 14,
           "arrowWidth": 17,
           "rotation": 172
         }
@@ -620,8 +620,8 @@
             "y": 55
           },
           "imageName": "arrow_right",
-          "from": 20,
-          "to": 21,
+          "from": 39,
+          "to": 12,
           "arrowWidth": 19,
           "rotation": 265
         },
@@ -631,8 +631,8 @@
             "y": 85
           },
           "imageName": "arrow_left",
-          "from": 20,
-          "to": 27,
+          "from": 39,
+          "to": 14,
           "arrowWidth": 20,
           "rotation": 265
         },
@@ -642,8 +642,8 @@
             "y": 88
           },
           "imageName": "arrow_straight",
-          "from": 20,
-          "to": 27,
+          "from": 39,
+          "to": 22,
           "arrowWidth": 17,
           "rotation": 265
         }
@@ -682,8 +682,8 @@
             "y": 611
           },
           "imageName": "arrow_right",
-          "from": 20,
-          "to": 21,
+          "from": 17,
+          "to": 20,
           "arrowWidth": 20,
           "rotation": 171
         }, "straight": {
@@ -692,8 +692,8 @@
             "y": 627
           },
           "imageName": "arrow_straight",
-          "from": 20,
-          "to": 21,
+          "from": 17,
+          "to": 19,
           "arrowWidth": 16,
           "rotation": 171
         },
@@ -703,8 +703,8 @@
             "y": 606
           },
           "imageName": "arrow_left",
-          "from": 20,
-          "to": 27,
+          "from": 17,
+          "to": 32,
           "arrowWidth": 21,
           "rotation": 171
         }
@@ -731,8 +731,8 @@
             "y": 195
           },
           "imageName": "arrow_right",
-          "from": 20,
-          "to": 21,
+          "from": 36,
+          "to": 13,
           "arrowWidth": 20,
           "rotation": 352
         },
@@ -742,8 +742,8 @@
             "y": 201
           },
           "imageName": "arrow_left",
-          "from": 20,
-          "to": 27,
+          "from": 36,
+          "to": 22,
           "arrowWidth": 20,
           "rotation": 352
         },
@@ -753,8 +753,8 @@
             "y": 177
           },
           "imageName": "arrow_straight",
-          "from": 20,
-          "to": 27,
+          "from": 36,
+          "to": 12,
           "arrowWidth": 17,
           "rotation": 352
         }
@@ -770,7 +770,42 @@
       },
       "densities": [
         "18"
-      ]
+      ],
+      "ligths": {
+        "right": {
+          "position": {
+            "x": 738,
+            "y": 605
+          },
+          "imageName": "arrow_right",
+          "from": 18,
+          "to": 33,
+          "rotation":270,
+          "arrowWidth": 21
+        },
+        "straight": {
+          "position": {
+            "x": 729,
+            "y": 640
+          },
+          "rotation":265,
+          "imageName": "arrow_straight",
+          "from": 18,
+          "to": 20,
+          "arrowWidth": 19
+        },
+        "left": {
+          "position": {
+            "x": 737,
+            "y": 638
+          },
+          "rotation":266,
+          "imageName": "arrow_left",
+          "from": 18,
+          "to": 19,
+          "arrowWidth": 21
+        }
+      }
     },{
       "startPoint": {
         "x": 883,
@@ -802,8 +837,8 @@
             "y": 770
           },
           "imageName": "arrow_left",
-          "from": 11,
-          "to": 12,
+          "from": 37,
+          "to": 29,
           "arrowWidth": 22,
           "rotation": 80
         },
@@ -813,8 +848,8 @@
             "y": 770
           },
           "imageName": "arrow_straight",
-          "from": 11,
-          "to": 30,
+          "from": 37,
+          "to": 2,
           "arrowWidth": 17,
           "rotation": 80
         },
@@ -824,8 +859,8 @@
             "y": 806
           },
           "imageName": "arrow_right",
-          "from": 11,
-          "to": 12,
+          "from": 37,
+          "to": 29,
           "arrowWidth": 22,
           "rotation": 80
         }
@@ -841,42 +876,7 @@
       },
       "densities": [
         "1"
-      ],
-      "ligths": {
-        "right": {
-          "position": {
-            "x": 738,
-            "y": 605
-          },
-          "imageName": "arrow_right",
-          "from": 14,
-          "to": 33,
-          "rotation":270,
-          "arrowWidth": 21
-        },
-        "straight": {
-          "position": {
-            "x": 729,
-            "y": 640
-          },
-          "rotation":265,
-          "imageName": "arrow_straight",
-          "from": 14,
-          "to": 15,
-          "arrowWidth": 19
-        },
-        "left": {
-          "position": {
-            "x": 737,
-            "y": 638
-          },
-          "rotation":266,
-          "imageName": "arrow_left",
-          "from": 14,
-          "to": 15,
-          "arrowWidth": 21
-        }
-      }
+      ]
     }
   ]
 }
