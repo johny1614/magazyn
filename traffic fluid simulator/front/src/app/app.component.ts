@@ -34,15 +34,19 @@ export class AppComponent {
 
   ngOnInit() {
     this.getJSON('assets/nets/net_polibuda.json').subscribe(staticData => {
-      console.log('static jest',staticData)
+      console.log('static jest', staticData)
       this.nets = [NetFactory.netFromJson(staticData)];
       // sdfdsfsdfdsf
       // asdsd
       // let net = 'assets/densities/net14_test_fixed_no_4.json';
-      
+
       // let net = 'assets/densities/net16_random_now0.json';
       // let net = 'assets/densities/net16_learnt_77.json';
-// asddfasd
+      // asddfasd
+      // let net = 'nic'
+      // let net = 'assets/densities/polibuda_learnt_2.json'
+      let net = 'assets/densities/politechnika_random_now0.json'
+
 
       // let net = 'assets/densities/net14_test_batching_4.json';
       // let net = 'assets/densities/net14_test_fixed_4_batch.json';
@@ -60,7 +64,7 @@ export class AppComponent {
       // let net = 'assets/densities/net11_seq.json';
       // let net = 'assets/densities/net11_random_1.json';
       // let net = 'assets/densities/net11_random_updated1.json';
-      
+
       // let net = 'assets/densities/net11_random_not_reshaped_1.json';
 
       // let net = 'assets/densities/net11_random_0.json';
@@ -95,7 +99,7 @@ export class AppComponent {
         NetFactory.attachRewards(this.nets, dynamicData)
         NetFactory.attachActions(this.nets, dynamicData)
         NetFactory.attachA(this.nets, dynamicData);
-        console.log('this.nets',this.nets)
+        // console.log('this.nets', this.nets)
       });
     });
 

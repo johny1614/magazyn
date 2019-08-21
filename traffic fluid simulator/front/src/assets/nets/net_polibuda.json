@@ -338,8 +338,8 @@
             "y": 225
           },
           "imageName": "arrow_right",
-          "from": 30,
-          "to": 32,
+          "from": 31,
+          "to": 25,
           "arrowWidth": 21,
           "rotation": 84
         },
@@ -349,8 +349,8 @@
             "y": 192
           },
           "imageName": "arrow_left",
-          "from": 30,
-          "to": 20,
+          "from": 31,
+          "to": 9,
           "arrowWidth": 21,
           "rotation": 84
         },
@@ -360,14 +360,14 @@
             "y": 190
           },
           "imageName": "arrow_straight",
-          "from": 30,
-          "to": 33,
+          "from": 31,
+          "to": 10,
           "arrowWidth": 19,
           "rotation": 84
         }
       },
       "densities": [
-        "30"
+        "31"
       ]
     },
     {
@@ -838,7 +838,7 @@
           },
           "imageName": "arrow_left",
           "from": 37,
-          "to": 29,
+          "to": 4,
           "arrowWidth": 22,
           "rotation": 80
         },

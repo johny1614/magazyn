@@ -51,7 +51,7 @@ export class NetComponent implements AfterViewInit {
     this.net.A[27][17] = 1
     this.net.A[9][17] = 1
     this.net = NetFactory.changeLights(this.net)
-    console.log('po zmianie',this.net)
+    // console.log('po zmianie',this.net)
     // this.net.lines[6].lights.left=1
     // this.net.lines[6].lights.straight=1
     // this.net.lines[6].lights.right=1
