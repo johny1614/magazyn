@@ -47,7 +47,7 @@ export class AppComponent {
       // let net = 'assets/densities/polibuda_learnt_70.json'
       // let net = 'assets/densities/politechnika_random_now0.json'
       // let net = 'assets/densities/politechnika_base.json'
-      let net = 'assets/densities/politechnika_base_from_backend.json'
+      // let net = 'assets/densities/politechnika_base_from_backend.json'
 
 
       // let net = 'assets/densities/net14_test_batching_4.json';
@@ -93,7 +93,9 @@ export class AppComponent {
       // let net = 'assets/densities/net4_random_3.json';
       // let net = 'assets/densities/net4_stan_monitorowany_3.json';
       // let net = 'assets/densities/net4_learnt-3.json';
-      NetFactory.drawImage('env_polibuda.png');
+      // NetFactory.drawImage('env_polibuda.png');
+      // NetFactory.drawImage('open_street_base_wroblewskiego.png');
+
       this.getJSON(net).subscribe(dynamicData => {
         console.log('jest dynamicData', dynamicData);
         this.nets = NetFactory.getNetsWithDensity(staticData, dynamicData);

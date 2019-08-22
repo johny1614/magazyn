@@ -1,7 +1,9 @@
 <div>
     <input type="range" min="0" [max]="nets.length" [(ngModel)]="timeDisplay"> {{timeDisplay}}
 </div>
-Rewards za obecna akcje:{{roundedRewards()}}
-Actions:{{nets[timeDisplay]?.actions}}
+<div style="font-size:35px">
+    Rewards za obecna akcje:{{roundedRewards()}}
+    Actions:{{nets[timeDisplay]?.actions}}
+</div>
 <app-net [net]="nets[timeDisplay]"></app-net>
 <button (click)="logNets()">logNets displayer</button>
