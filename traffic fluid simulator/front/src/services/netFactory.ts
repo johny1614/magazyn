@@ -4,8 +4,8 @@ import { SingleLight } from 'src/model/light';
 
 export class NetFactory {
   static getLine(line: ILine): Line {
-    if (line.densities || line.ligths) {
-      return new Line(line.startPoint, line.endPoint, line.densities, line.ligths);
+    if (line.densities || line.ligths || line.x_move) {
+      return new Line(line.startPoint, line.endPoint, line.densities, line.ligths,line.x_move);
     }
     return new Line(line.startPoint, line.endPoint);
   }
@@ -25,14 +25,15 @@ export class NetFactory {
     const staticLinesCopy = JSON.parse(JSON.stringify(staticData.lines));
     staticLinesCopy.forEach(iline => lines.push(NetFactory.getLine(iline)));
     let i = 0;
-    if (dynamicData) {
-      lines.forEach(line => {
-        line.sections.forEach(section => {
+    lines.forEach(line => {
+      line.sections.forEach(section => {
+        if (dynamicData){
           section.density = dynamicData.densities[i];
-          i++;
-        });
+        }
+        i++;
+        section.x_move = line.x_move
       });
-    }
+    });
     const time = dynamicData ? dynamicData.time : 0;
     return new Net(time, lines);
   }

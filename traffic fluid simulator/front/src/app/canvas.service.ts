@@ -41,10 +41,17 @@ export class CanvasService {
   }
 
   writeDensity(section) {
-    this.ctx.font = "20px Arial";
+    this.ctx.font = "32px Arial";
     let densityRounded = Math.round(section.density).toString();
-    if (section.a < -0.5 || section.a > 0.5) {
-      this.ctx.fillText(densityRounded, section.middlePoint.x - 10, section.middlePoint.y);
+    // console.log('sec',section)
+    console.log('sec',section)
+    if(section.x_move){
+      console.log('jest x move')
+      this.ctx.fillText(densityRounded, section.middlePoint.x+section.x_move, section.middlePoint.y);
+
+    }
+    else if (section.a < -0.5 || section.a > 0.5) {
+      this.ctx.fillText(densityRounded, section.middlePoint.x, section.middlePoint.y);
     }
     else {
       this.ctx.fillText(densityRounded, section.middlePoint.x - 5, section.middlePoint.y - 10);

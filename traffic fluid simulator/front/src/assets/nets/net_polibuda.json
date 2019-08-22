@@ -159,7 +159,8 @@
         "5",
         "6",
         "7"
-      ]
+      ],
+      "x_move":5
     },    
     {
       "startPoint": {
@@ -371,7 +372,8 @@
       },
       "densities": [
         "19"
-      ]
+      ],
+      "x_move":0
     },
     {
       "startPoint": {
@@ -568,7 +570,8 @@
         "26",
         "27",
         "28"
-      ]
+      ],
+      "x_move":5
     },
     {
       "startPoint": {
@@ -581,7 +584,8 @@
       },
       "densities": [
         "29"
-      ]
+      ],
+      "x_move":5
     },
     {
       "startPoint": {
@@ -629,7 +633,8 @@
       },
       "densities": [
         "30"
-      ]
+      ],
+      "x_move":4
     },
     {
       "startPoint": {
@@ -707,6 +712,7 @@
         "35",
         "36"
       ],
+      "x_move":5,
       "ligths": {
         "right": {
           "position": {

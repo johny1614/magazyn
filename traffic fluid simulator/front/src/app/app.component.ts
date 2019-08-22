@@ -36,6 +36,7 @@ export class AppComponent {
     this.getJSON('assets/nets/net_polibuda.json').subscribe(staticData => {
       console.log('static jest', staticData)
       this.nets = [NetFactory.netFromJson(staticData)];
+      console.log('sa nets',this.nets)
       // sdfdsfsdfdsf
       // asdsd
       // let net = 'assets/densities/net14_test_fixed_no_4.json';
@@ -97,13 +98,13 @@ export class AppComponent {
       // NetFactory.drawImage('open_street_base_wroblewskiego.png');
 
       this.getJSON(net).subscribe(dynamicData => {
-        console.log('jest dynamicData', dynamicData);
+        // console.log('jest dynamicData', dynamicData);
         this.nets = NetFactory.getNetsWithDensity(staticData, dynamicData);
+        // console.log('this.nets', this.nets)
         NetFactory.attachLights(this.nets, dynamicData);
         NetFactory.attachRewards(this.nets, dynamicData)
         NetFactory.attachActions(this.nets, dynamicData)
         NetFactory.attachA(this.nets, dynamicData);
-        // console.log('this.nets', this.nets)
       });
     });
 
