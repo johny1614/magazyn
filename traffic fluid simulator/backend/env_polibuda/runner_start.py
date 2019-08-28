@@ -106,8 +106,8 @@ for run in runs:
     results = []
     timeToLearn = 500000
     startTime = timer()
-   #  agents=generate_random_epochs(learntAgents=False,
-   #                         epochs=range(Globals().vp().first_epochs_range))  # bierze nowych agentow i tu jest 'is'
+    # agents=generate_random_epochs(learntAgents=False,
+    #                        epochs=range(Globals().vp().first_epochs_range))  # bierze nowych agentow i tu jest 'is'
    # # draw_colored_batches(agents)
    #  train(learntAgents=False, max_time_learn=Globals().vp().max_time_learn)
    #  result=run_learnt_greedy()

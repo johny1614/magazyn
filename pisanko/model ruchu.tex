@@ -58,18 +58,18 @@ oparciu o przepływowy model ruchu pojazdów.}
 \maketitle
 \tableofcontents
 \chapter{Wprowadzenie}
-Problem zatłoczonych ulic staje się coraz bardziej powszechny na całym świecie. W ogromnym tempie wzrasta ilość pojazdów na drogach.
+Problem zatłoczonych ulic staje się coraz bardziej powszechny na całym świecie. W ostatnich latach obserwowany jest ogromny wzrost ilość pojazdów na drogach.
 %Problem zatłoczonych ulic staje się coraz bardziej powszechny na całym świecie, głównie ze względu na wzrost ekonomiczny. Według banku światowego w roku 1990 suma produktów krajowych brutto wszystkich państw świata wynosiła 22,6 biliona dolarów \cite{worldBank}. Najbardziej aktualne dane banku światowego dotyczą lat 2012-2017. W czasie ich trwania analogiczna wartość oscylowała wokół 75 bilionów dolarów. Nawet przy uwzględnieniu inflacji dolara, która od w okresie 1990 do 2015 wyniosła $80\%$ światowy produkt brutto jest obecnie prawie dwukrotnie większy w porównaniu do roku 1990. Bezpośrednim skutkiem ogólnoświatowego wzrostu stopy życiowej jest zwiększenie ilości samochodów na drogach.
-Według danych firmy gromadzącej dane statystyczne \textit{Statista} liczba zarejestrowanych pojazdów na świecie w roku 2006 wynosiła 947 tysięcy \cite{liczbaPojazdowSwiat}. W 2015 roku na świecie jeździło już 1282 tysięcy pojazdów. Wzrost przez te 9 lat był niemalże liniowy. Co roku rejestrowano około 39,4 tysięcy nowych samochodów rocznie, co wyznacza stopę wzrostu liczby pojazdów na poziomie 3,7$\%$.
+Według danych statystycznych firmy \textit{Statista} liczba zarejestrowanych pojazdów na świecie w roku 2006 wynosiła 947 tysięcy \cite{liczbaPojazdowSwiat}. W 2015 roku na świecie jeździło już 1282 tysięcy pojazdów. Wzrost przez te 9 lat był niemalże liniowy. Co roku rejestrowano około 40 tysięcy nowych samochodów rocznie, co wyznacza stopę wzrostu liczby pojazdów na poziomie 3,7$\%$ w skali roku.
 \begin{figure}[H]
   \centering
     \includegraphics[width=14cm]{liczbaPojazdowSwiat}
  \caption{Liczba pojazdów na świecie}
  \label{fig:liczbaPojazdowSwiat}
 \end{figure} \noindent
-W Polsce wzrost ilości pojazdów w latach 2006 - 2015 był jeszcze większy \cite{liczbaPojazdowPolska}. W 2006 roku według GUS w Polsce było zarejestrowanych 13,4 miliona samochodów osobowych. W 2015 roku ich liczba wynosiła już 20,7 miliona, co oznacza 5 procentowy roczny wzrost.
-Najbardziej zatłoczonym polskim miastem jest Łódź. Według rankingu firmy \textit{TomTom } Łódź zajmuje bardzo wysokie 5 miejsce na świecie i 1 w Europie pod względem zatłoczenia dróg \cite{rankingTomTom}. Oprócz Łodzi w pierwszej setce najbardziej zatłoczonych miast świata są inne polskie miasta: Lublin(34), Kraków(48), Warszawa(50), Wrocław(63), Poznań(69), Bydgoszcz(83). Problem całej Europy. Spośród 100 najbardziej zatłoczonych miast świata aż 45 znajduje się w Europie. W 2008 roku Unia Europejska oszacowała, iż koszty zatłoczenia dróg kształtują się na poziomie $0,9\%-1,5\%$ PKB unijnego \cite{ue2008}. Następny raport z 2017 roku może napawać optymizmem, gdyż przedstawione w nim wyliczenia określiły jedynie $0,77\%$ straty całkowitego PKB wspólnoty \cite{ue2017}. Ten sam raport ocenia koszty zatorów komunikacyjnych w Polsce na poziomie $1,2\%$ polskiego PKB.
-Problemy zatorów komunikacyjnych w miastach są o tyle trudniejsze do rozwiązania niż poza miastem, ponieważ na terenach zurbanizowanych brakuje często miejsca na wybudowanie dróg o większej przepustowości. Rozwiązaniem może być wprowadzenie większej ilości sygnalizacji świetlnych. Istotną kwestią jest optymalizacja ustawień sygnalizacji świetlnej. Praca moja jest poświęcona temu problemowi. 
+W Polsce wzrost ilości pojazdów w latach 2006 - 2015 był jeszcze większy \cite{liczbaPojazdowPolska}. W 2006 roku według GUS w Polsce było zarejestrowanych 13,4 miliona samochodów osobowych. W 2015 roku ich liczba wynosiła już 20,7 miliona, co wyznacza 5 procentowy roczny wzrost ilości pojazdów.
+Najbardziej zatłoczonym polskim miastem jest Łódź. Według rankingu firmy \textit{TomTom } Łódź zajmuje bardzo wysokie 5 miejsce na świecie i 1 w Europie pod względem zatłoczenia dróg \cite{rankingTomTom}. Oprócz Łodzi w pierwszej setce najbardziej zatłoczonych miast świata są inne polskie miasta: Lublin(34), Kraków(48), Warszawa(50), Wrocław(63), Poznań(69), Bydgoszcz(83). Zatory drogowe są jednak problem całej Europy. Spośród 100 najbardziej zatłoczonych miast świata aż 45 znajduje się w Europie. W 2008 roku Unia Europejska oszacowała, iż koszty zatłoczenia dróg kształtują się na poziomie $0,9\%-1,5\%$ PKB unijnego \cite{ue2008}. Następny raport z 2017 roku może napawać optymizmem, gdyż przedstawione w nim wyliczenia określiły jedynie $0,77\%$ straty całkowitego PKB wspólnoty \cite{ue2017}. Ten sam raport ocenia koszty zatorów komunikacyjnych w Polsce na poziomie $1,2\%$ polskiego PKB.
+Problemy zatorów komunikacyjnych w miastach są o tyle trudniejsze do rozwiązania niż poza miastem, ponieważ na terenach zurbanizowanych często brakuje miejsca na wybudowanie dróg o większej przepustowości. Rozwiązaniem może być wprowadzenie większej ilości sygnalizacji świetlnych. Istotną kwestią jest optymalizacja ustawień sygnalizacji świetlnej. Praca jest poświęcona przede wszystkim temu aspektowi. Zostaną w niej także przedstawione matematyczne modele sieci drogowej oraz ich komputerowe symulacje. 
 %W celu uzyskania danych potrzebnych do tego procesu rozstawiane są na drogach detektory ruchu. 
 %\begin{figure}[H]
 %  \centering
@@ -81,32 +81,21 @@ Problemy zatorów komunikacyjnych w miastach są o tyle trudniejsze do rozwiąza
 %
 %Czytaj więcej: https://dzienniklodzki.pl/masz-uwagi-do-sygnalizacji-swietlnej-w-lodzi-wyslij-email-do-zdit/ar/9253440
 \chapter{Cel i zakres pracy}
-Celem pracy jest stworzenie programu, który zoptymalizuje fazy sygnalizacji świetlnej, co przyczyni się do zwiększenia przepustowości sieci dróg.\\ Jako środowisko zostanie stworzony symulator ruchu drogowego. Symulacje ruchu będą w pełni zgodne z makroskopowym modelem ruchu. Sam makroskopowy model ruchu zostanie przedstawiony w rozdziale X. Jest to model ciągły. Pożądanym jest dyskretny model ruchu drogowego ze względu na łatwość implementacji komputerowej. Zostanie zatem przedstawiona w sekcji X.Y dyskretyzacja makroskopowego modelu ruchu. W rozdziale X zostanie zdefiniowany model sieci dróg. Początkowy model zaplanowano jako podstawowy z pominięciem większości aspektów. W każdej kolejnej sekcji model będzie stopniowo rozwijany. Sieci dróg zdefiniowane według końcowego modelu będą środowiskiem treningowym dla algorytmów uczenia maszynowego. Rozdział X opisuje uczenie ze wzmocnieniem - algorytm treningowy procesu optymalizacji sygnalizacji świetlnej. Rozdział X przedstawia cztery modele sieci dróg, dla których został stworzony program symulacyjny. Rozdział X opisuje optymalizację sygnalizacji świetlnej dla wspomnianych sieci dróg.
+W rozdziale \ref{chapter:model_sieci_drog} przedstawiony zostanie model sieci dróg. Stworzony przez autora pracy został program symulujący ruch drogowy. Jest on napisany w języku Python (wersja 3.6). Oddzielna warstwa wizualizacyjna utworzona w typescriptowym frameworku Angular w wersji 6. Grafiki przedstawiające środowiska drogowe są narysowane przy pomocy tagów canvas. Kroki potrzebne do uruchomienia programu zostały przedstawione w TODO rozdział do napisania na sam koniec.
+Bezpośrednim celem pracy jest uzyskanie płynnego ruchu przy możliwie dużej ilości pojazdów wjeżdżających do rozważanego środowiska. Ostatnie środowisko testowe w pracy przedstawia sieć dróg wokół kampusu B Politechniki Łódzkiej i to głównie na optymalizacji tego środowiska będzie skupiona uwaga. Wszystkie poprzednie sieci dróg są mniej skomplikowane i służą głównie przy przedstawieniu modelu i procesu optymalizacji.
+Środowiska będą skonstruowane w pełni zgodne z makroskopowym modelem ruchu, który nie rozróżnia indywidualnych pojazdów, a traktuje je jako ilościowo. Sam makroskopowy model ruchu zostanie przedstawiony w rozdziale \ref{chapter:makroskopowy_model_ruchu}. Początkowy model będzie bardzo prosty z pominięciem większości aspektów. W każdej kolejnej sekcji model będzie stopniowo rozwijany.
 
-
-   
-\chapter{Siatka czasowa i przestrzenna}
-Dyskretny charakter modelu przedstawianego w pracy obliguje do określenia siatki czasowej i przestrzennej. Dla par czasu i miejsc należących do tych dwóch siatek będą określane zmienne stanu. \\ \\ \textbf{Siatka czasowa} jest zdefiniowana jako skończony ciąg liczb naturalnych:
-\[(0,1,...,K). \addtag \]
-Niech będzie ustalona droga $e$, która jest odcinkiem $[0,L_e]$. Droga zostaje podzielona na $L+1$ odcinków o równej długości $\Delta x=\frac{L_e}{L+1}$. \textbf{Siatka przestrzenna} drogi to ciąg odcinków:
-\[(b_l)_{l=0}^{L}=[l\Delta x,(l+1)\Delta x]\]
-\begin{figure}[H]
-  \centering
-    \includegraphics[width=14cm]{siatka_przestrzenna}
- \caption{Siatka przestrzenna}
- \label{fig:siatka_przestrzenna}
-\end{figure}
-
-
-\chapter{Makroskopowy model ruchu}
+\chapter{Makroskopowy model ruchu} \label{chapter:makroskopowy_model_ruchu}
 \section{Klasyfikacja modeli ruchu drogowego}
-Modele ruchu drogowego mają na celu ukazanie rzeczywistego przepływu pojazdów w sposób czysto matematyczny. Ważnym kryterium doboru modelu jest przystępność jego implementacji informatycznej. Powszechnie klasyfikuje się 3 podejścia modelowe dla omawianego problemu \cite{CompareModels} - makroskopowy, mezoskopowy oraz mikroskopowy. Czasem \cite{multilevel} wyróżnia się także czwarte podejście - submikroskopowe. Jest to podział ze względu na poziom modelu. Najniższy poziom i najbardziej dokładny model gwarantuje podejście mikroskopowe. Rozważa ono pojazdy indywidualnie w czasoprzestrzeni. Przyspieszenie pojazdu jest wyliczane na podstawie dynamiki(prędkości, przyspieszenia) i pozycji pojazdu bezpośrednio przed nim. Model mezoskopowy zapewnia indywidualne rozróżnienie pojazdów, jednak ich zachowanie jest wyliczane na danych zagregowanych \cite{mesoscopic}. Przykładowo pojazdy są zgrupowane w grupę podróżującą z pewnego punktu startowego do celu. Inne modele \cite{mesoscopic2} mezoskopowe wyliczają dynamikę ruchu na podstawie aktualnego zatłoczenia drogi. Poziom mezoskopowy jest obliczeniowo bardziej opłacalny od mikroskopowego.
-Wiele symulatorów stosujących model mezoskopowy oferuje symulację w czasie rzeczywistym dla sieci dróg całego miasta\cite{vu2017high}. Ideą modelu makroskopowego jest traktowanie ruchu ulicznego identycznie jak ruchu cieczy lub gazów. Po raz pierwszy w roku 1956 M. J. Lighthill i G. B. Whitham \cite{lwr} przedstawili pomysł przyrównania ruchu ulicznego na zatłoczonych drogach do przepływu wody w rzekach. Z tego powodu nie rozróżniamy w nim indywidualnie pojazdów, ani też nawet grupowo. Rozważamy natomiast gęstość ruchu w danym punkcie na drodze i czasie - czyli ilość pojazdów na danym odcinku drogi. Sposób w jaki poruszają się pojazdy jest wyliczany jedynie na podstawie gęstości ruchu. Jest to najmniej kosztowny obliczeniowo model. Właśnie w modelu makroskopowym zostało stworzone środowisko symulacyjne. Szczegóły modelu są przedstawione w następnym podrozdziale.
+Modele ruchu drogowego mają na celu ukazanie rzeczywistego przepływu pojazdów w sposób czysto matematyczny. Ważnym kryterium doboru modelu jest przystępność jego implementacji informatycznej. Powszechnie klasyfikuje się 3 podejścia modelowe dla omawianego problemu \cite{CompareModels} - makroskopowy, mezoskopowy oraz mikroskopowy. Czasem \cite{multilevel} wyróżnia się także czwarte podejście - submikroskopowe. Jest to podział ze względu na poziom modelu. Najniższy poziom i najbardziej dokładny model gwarantuje podejście mikroskopowe. Rozważa ono pojazdy indywidualnie w czasoprzestrzeni. Przyspieszenie pojazdu jest wyliczane na podstawie dynamiki(prędkości, przyspieszenia) i pozycji pojazdu bezpośrednio przed nim. Model mezoskopowy zapewnia indywidualne rozróżnienie pojazdów, jednak ich zachowanie jest wyliczane na danych zagregowanych \cite{mesoscopic}. Przykładowo pojazdy są podzielone na grupy podróżujące od pewnego punktu startowego do punktu końcowego. Inne modele \cite{mesoscopic2} mezoskopowe wyliczają dynamikę ruchu na podstawie aktualnego zatłoczenia drogi. Poziom mezoskopowy jest obliczeniowo bardziej opłacalny od mikroskopowego.
+Wiele symulatorów stosujących model mezoskopowy oferuje symulację w czasie rzeczywistym dla sieci dróg całego miasta\cite{vu2017high}. Ideą modelu makroskopowego jest traktowanie ruchu ulicznego identycznie jak ruchu cieczy lub gazów. Po raz pierwszy w roku 1956 M. J. Lighthill i G. B. Whitham \cite{lwr} przedstawili pomysł przyrównania ruchu ulicznego na zatłoczonych drogach do przepływu wody w rzekach. Z tego powodu nie uznajemy w nim pojazdów jako niepodzielne jednostki. Pojazd można przyrównać do pewnej ilości wody w rzece.
+Jest to najmniej kosztowny obliczeniowo model. Właśnie w modelu makroskopowym zostało stworzone środowisko symulacyjne. Szczegóły modelu są przedstawione w następnym podrozdziale.
 
 \section{Wstęp}
-Istotą makroskopowego modelu ruchu jest pojęcie gęstości ruchu. Jest to zmienna stanowa określona dla każdego punktu drogi w czasie. Formalnie gęstość można rozumieć jako czynnik definiujący dynamikę ruchu. Im większa gęstość tym mniejsza prędkość ruchu. W niektórych artykułach gęstość ruchu \cite{helbing2001master} jest przedstawiona jako iloraz ilości pojazdów znajdujących się na pewnym odcinku i długości tego odcinka drogi. Nie są to jednak czysto matematyczne formalne definicje. W makroskopowym modelu nie rozróżniamy pojedynczych pojazdów, ani nawet grup, więc taka definicja gęstości ruchu może być odebrana jako nieścisła z ideą modelu. 
+Jako zmienną stanową makroskopowego modelu ruchu zazwyczaj wybierana jest gęstość ruchu \cite{gottlich,CompareModels}. Formalnie gęstość można rozumieć jako czynnik definiujący dynamikę ruchu. Im większa jest gęstość tym mniejsza prędkość ruchu. Gęstość ruchu \cite{helbing2001master} jest przedstawiona jako iloraz ilości pojazdów znajdujących się na pewnym odcinku i długości tego odcinka drogi. Prawidłowe jest także uznanie ilości pojazdów na pojedynczym odcinku drogi jako zmienną stanową. Należy jednak pamiętać, że pojazdy w ruchu makroskopowym nie są nierozłączną jednostką. Pojazd w analogii do przepływu wody w rzece jest pewną jednostką wody. Wielokrotnie w symulacjach zdarza się, że na odcinku jest zatem niecałkowita liczba pojazdów.
+
 \section{Rozwój gęstości ruchu na drodze}
-Makroskopowy model ruchu jest oparty o równanie różniczkowe (\ref{eq:main_diff_eq}) wraz z warunkiem początkowym (\ref{eq:p_init_eq}). Model makroskopowy traktuje ruch uliczny na drogach podobnie do przepływu wody w rzece[ref]. Gęstość ruchu można utożsamiać z polem powierzchni przekroju poprzecznego rzeki, co dla ustalonej szerokości rzeki - upraszcza się do wysokości wody w rzece. Istotną uwagą w tym miejscu jest zaznaczenie, iż rzeka zazwyczaj posiada pewien spadek, który zapewnia ruch cieczy ze źródła do ujścia. Ruch makroskopowy zdefiniowany przez równanie (\ref{eq:main_diff_eq}) z kolei odnosi się do rzeki która jest na całym swoim odcinku pozioma. W takim przypadku de facto nie ma zdefiniowanego zwrotu ruchu. \\Dla ustalonej drogi $e$ zmianę gęstości ruchu definiuje następujący układ równań:\\
+Makroskopowy model ruchu jest oparty o równanie różniczkowe (\ref{eq:main_diff_eq}) wraz z warunkiem początkowym (\ref{eq:p_init_eq}) \cite{gottlich}. W analogii do przepływu wody w rzece gęstość ruchu można utożsamiać z polem powierzchni przekroju poprzecznego rzeki, co dla stałej szerokości rzeki - upraszcza się do wysokości wody w rzece.   \\Dla ustalonej pojedynczej drogi zmianę gęstości ruchu definiuje następujący układ równań:\\
 \begin{numcases}{}
    p(x,0)=p_{0}(x) \label{eq:p_init_eq}
    \\
@@ -115,14 +104,110 @@ Makroskopowy model ruchu jest oparty o równanie różniczkowe (\ref{eq:main_dif
 Gdzie $p(x,t)$ to gęstość ruchu w punkcie $x$ i czasie $t$. Wartość funkcji gęstości należy do przedziału $[0,p^{max}]$.\\
 Równanie (\ref{eq:p_init_eq}) zakłada istnienie pewnej z góry nałożonej początkowej gęstości drogi $p_0(x)$.
 Równianie (\ref{eq:main_diff_eq}) określa
-wedle założeń modelu makroskopowego \cite{lwr} rozwój gęstości ruchu na drodze. Funkcja płynności ruchu $f$ powinna być wklęsła [ref]. W przedstawionym w tej pracy modelu funkcja ma następującą definicję:
-\begin{numcases}{f(p)=}
-   \lambda p & \text{dla } $p\in[0,p^{*}]$\\
-   \lambda \cdot (2p^{*}-p) & \text{dla } $p\in(p^{*},p^{max}]$ 
-\end{numcases}
-Gdzie $\lambda$ jest stałym parametrem funkcji trójkątnej oraz $p^*=\frac{1}{2}p^{max}$.
+wedle założeń modelu makroskopowego \cite{lwr} rozwój gęstości ruchu na drodze. Funkcja płynności ruchu $f$ powinna być wklęsła \cite{gottlich}. 
+%W przedstawionym w tej pracy modelu funkcja ma następującą definicję:
+%\begin{numcases}{f(p)=}
+%   \lambda p & \text{dla } $p\in[0,p^{*}]$\\
+%   \lambda \cdot (2p^{*}-p) & \text{dla } $p\in(p^{*},p^{max}]$ 
+%\end{numcases}
+%Gdzie $\lambda$ jest stałym parametrem funkcji trójkątnej oraz $p^*=\frac{1}{2}p^{max}$.
+\section{CTM - Cell Transmission Model}
+\subsection{Wprowadzenie}
+W tym rozdziale zostanie przedstawiony model CTM będący dyskretyzacją pierwotnego modelu makroskopowego przepływu \cite{lwr}. Jego zmienną stanową jest ilość pojazdów. Model został opisany w artykule Carslosa Daganzo \cite{CTM} w 1992. Ta pozycja jest podstawą wszelkich wyliczeń w tym rozdziale.
+\subsection{Przedstawienie modelu}
+\subsection*{Siatka czasowa i przestrzenna drogi}
+Dyskretny charakter modelu CTM obliguje do określenia siatki czasowej i przestrzennej drogi. Dla par czasu i miejsc należących do tych dwóch siatek będą określane zmienne stanu. \\ \\ \textbf{Siatka czasowa} jest zdefiniowana jako skończony ciąg liczb naturalnych:
+\[(0,1,...,T). \addtag \]
+Następnie zdefiniowana zostanie siatka przestrzenna drogi e. Ustalona droga e to odcinek $[0,L]$. Zostaje ona podzielona na $L$ odcinków o równej długości. \textbf{Siatka przestrzenna} drogi to ciąg odcinków:
+\[([0,1),[1,2),...,[L-1,L] )\]
 
-\section{Dyskretyzacja makroskopowego modelu ruchu}
+\subsection*{Przepływ pojazdów na drodze}
+Niech dana będzie droga $e$ i pewien odcinek $i$ na tej drodze. Zmienna stanowa w modelu CMT jest oznaczana jako $n_i(t)$ i określa ona ilość pojazdów na odcinku $i$ w chwili t.
+Przepływ pojazdów opiera się o założeniu, iż przy braku zatorów pojazdy pokonują w jednym interwale czasowym jeden odcinek drogi. Przykładowy przepływ jest następujący:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{images/CTM_flow_example}
+	\caption{Przykładowy przepływ bez zatorów w modelu CTM}
+	\label{fig:CTM_flow_example}
+\end{figure} \noindent
+Łatwo zauważyć, że w tym przypadku
+\[ n_{i+1}(t+1)=n_i(t) \addtag \]
+\subsubsection*{Wprowadzenie zatorów}
+W celu wprowadzenia pojęcia zatoru zostaną zdefiniowane następujące zmienne:
+
+\begin{itemize}
+	\item $N_i(t)$ - maksymalna ilość pojazdów, które mogą znajdować się na odcinku $i$ w chwili $t$.
+	\item $Q_i(t)$ - maksymalna ilość pojazdów, które mogą napłynąć do odcinka $i$ w momencie $t+1$.
+\end{itemize}
+Rozwój zmiennej stanowej jest zadany poprzez następujące równanie:
+\[n_i(t+1)=n_i(t)+y_i(t)-y_{i+1}(t) \addtag \]
+Gdzie:
+\begin{itemize}
+	\item $y_i(t)$ to ilość pojazdów napływających do odcinka $i$ w chwili $t+1$.
+	\item $y_{i+1}(t)$ to ilość pojazdów napływających do odcinka $i+1$ w chwili $t+1$. Jest to zatem także ilość pojazdów opuszczających odcinek $i$ w interwale $[t,t+1)$.
+\end{itemize}
+Przepływ pojazdów $y_i(t)$ jest zdefiniowany jako minimum z następujących trzech wartości:
+\begin{itemize}
+	\item $ n_{i-1}(t) $ - ilość pojazdów na poprzedzającym odcinku (t.j. $i-1$)
+	\item $ Q_i(t) $ - maksymalna ilość pojazdów, które mogą napłynąć do odcinka $i$ w chwili $t+1$.
+	\item $ N_i(t)-n_i(t) $ - ilość wolnych miejsc na odcinku $i$ w chwili $t$
+\end{itemize}
+Co wyraża się wzorem:
+\[
+y_i(t)=Min\{n_{i-1}(t),Q_i(t),N_i(t)-n_i(t)\} \addtag \label{eq_y_CTM}
+\]
+\subsection*{Źródło i ujście ruchu}
+Powyższe wzory potrzebują ustaleń odnośnie źródła i ujścia ruchu. Bez nich wzór \myref{eq_y_CTM} nie ma sensu dla krańcowych odcinków $i=0$ oraz $i=L$. Dla ułatwienia pogrubione zostały ustalone w tym rozdziale wartości zmiennych źródła i ujścia ruchu. \\ Źródło ruchu może być traktowane jako odcinek o indeksie $i=-1$. Jedyną wartością, która musi być ustalona dla źródła jest ilość pojazdów w nim, czyli $n_{i-1}(t)$. Przyjęte zostaje, że $\mathbf{n_{i-1}(t)=\infty}$ - wtedy napływ pojazdów do odcinka $i=0$ jest ograniczony z dołu już tylko przez $Q_0(t)$ oraz $N_0(t)-n_0(t)$.
+\\
+Ujście ruchu z kolei może być traktowane jako odcinek $i=L+1$. Istotne w kontekście wzoru \myref{eq_y_CTM} są następujące wartości:
+\begin{itemize}
+	\item $Q_{L+1}(t)$ - ilość pojazdów, które mogą opuścić odcinek $L$ w chwili $t$. Ustalone jest, że jest to dowolna ilość, wtedy $\mathbf{Q_{L+1}(t)=\infty}$
+	\item $N_{L+1}(t)$ - ilość pojazdów, które może pomieścić ujście. Ustalone jest, że $\mathbf{N_{i}(t)=\infty}$, gdyż ujście może zawierać nieograniczoną ilość pojazdów.
+	\item $n_{L+1}(t)$ - ilość pojazdów w ujściu. Służy jako licznik pojazdów, które opuściły układ.
+\end{itemize}
+\subsubsection*{Przykład przepływu na pojedynczej drodze}
+Zostają ustalone następujące parametry implementacji przykładowego modelu
+	 \[L=8\]
+	 \[N=15\]
+%	  \begin{numcases}{N_i(t)=}
+%	  15 & \text{dla} $i \neq 9$ \\
+%	 \infty & \text{dla} $i=9$ 
+%	 \end{numcases}
+	 
+	 \begin{numcases}{Q_i(t)=}
+	1 & \text{dla } $i=5, t\in \{0,...,7\}$ \\ 
+    5 & \text{dla } $i=5, t\in \{7,...,20\}$ \\ 	
+	4 & \text{dla pozostałych przypadków}
+	\end{numcases}
+Przeprowadzona zostanie symulacja przy warunku początkowym określającym liczebność pojazdów na poszczególnych odcinkach. Niech zatem $n_i(0)=3$ dla $i \in \{0,...,8\}$. Wtedy wyniki symulacji przestawia poniższa tabela.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{images/ctm_przyklad}
+	\caption{Tabela ilości pojazdów}
+	\label{fig:ctm_przyklad}\end{figure}
+
+\subsection{Przepływ pojazdów na skrzyżowaniu}
+
+\subsubsection{Przykład}
+
+\section{Gottlich dyskretyzacja - to jest bardzo źle}
+Początek drogi (k=0)
+\[p_0^{t+1}=\frac{1}{4}(3p_0^{t}+p_1^{t})  -\frac{\Delta t}{2 \Delta x}  (f(p_1^t)+f(p^t_0)-2\overline{\gamma}^t) \addtag \]
+Centralny odcinek drogi (k=1,...,n-1)
+\[p_k^{t+1}=\frac{1}{4}(p_{k-1}^{t}+2p_{k}^{t}+p_{k+1}^t)  -\frac{\Delta t}{2 \Delta x}  (f(p_{k+1}^t)-f(p_{k-1}^t)) \addtag \]
+Końcowy odcinek drogi (k=n)
+\[p_n^{t+1}=\frac{1}{4}(3p_n^{t}+p_{n-1}^{t})  -\frac{\Delta t}{2 \Delta x}  (2\hat{\gamma}^t -f(p_n^t)-f(p^t_{n-1})) \addtag \]
+
+\[\hat{\gamma}^t_i:=f(p_{0,i}^t)\]
+\[\overline{\gamma}^t_i:=f(p_{n,i}^t)\]
+Dla dróg $i$ nie będących drogami źródłowymi:
+\[\overline{\gamma}^t_i:=\sum_{i \in 
+	\delta_{v}^{in}}d_{ij}\hat{\gamma}_{i}(t)\]
+Dla dróg źródłowych $\overline{\gamma}^t_i $
+jest odgórnie ustalone i ustala jak dużo pojazdów wjeżdża do układu z rozważanej drogi.
+
+STAREEEEEEEEEE
+
 Niech będzie ustalona droga $e$ oraz jej siatka przestrzenna $b_l$. Celem jest przedstawienie wartości gęstości dla odcinków siatki przestrzennej w chwilach $k=0,1,...,K$.
 Gęstość w odcinku $b_l$ i czasie $k$ jest zdefiniowana jako:
 \[p_{l}^{k}=\int\limits_{{b_{l}}}{\frac{p(x,k)}{\Delta x}dx}. \addtag\]
@@ -136,13 +221,18 @@ Rezultatem jest końcowy rekurencyjny wzór na gęstość ruchu:
 \[p_l^{k+1}=p_l^{k}  -\frac{1}{\Delta x}  (f(b_{l+1},k)-f(b_l,k)) \addtag \]
 
 
+
+
+
+
+
 \chapter{Model sieci dróg} \label{chapter:model_sieci_drog}
 \section{Wstęp}
 Ze względu na dużą złożoność końcowego modelu zostanie przedstawiony najpierw bardzo prosty, podstawowy model. W każdej kolejnej sekcji dodawane będą zmiany przybliżające do ostatecznej postaci. Jest to podejście pozwalające na proste przedstawienie modelu, który zawiera bardzo wiele aspektów m.in:
 sygnalizacji świetlnej, wielu dróg, zatoru drogowego, źródła i ujścia ruchu. Zestawienie w jednej sekcji wszystkich tych kwestii byłoby bardzo przytłaczające.
 
 \section{Wektor stanu drogi} \label{sec:wektor_stanu_drogi}
-Wektor stanu jest strukturą przedstawiającą stan środowiska. Dla każdego odcinka drogi składuje on wartości zmiennych stanowych. Początkowo zmienna stanowa jest identyfikowana jako ilość pojazdów na danym odcinku drogi. 
+Wektor stanu jest strukturą przedstawiającą stan środowiska. Dla każdego odcinka drogi składuje on wartości zmiennych stanowych. Początkowo zmienną stanu jest identyfikowana jako ilość pojazdów na danym odcinku drogi. 
 \subsection{Przykład} \label{subsec:example-single-road}
 Niech będzie dana droga z wydzielonymi czterema odcinkami. Przykładowy wektor stanu takiego środowiska to
 \[\textbf{x(t)}=\begin{bmatrix}
@@ -162,7 +252,7 @@ Zawiera on w sobie następujące informacje dla chwili t:
 	\caption{Droga z ilością pojazdów na poszczególnych odcinkach}
 	\label{fig:single_road}
 \end{figure}
-\section{Rozwój wektora stanu jednej drogi}
+\section{Rozwój wektora stanu drogi i wprowadzenie macierzy systemu}
 Początkowy model przepływu pojazdów zakłada, iż wszystkie pojazdy w chwili t+1 są o jeden odcinek dalej w swojej podróży niż w momencie $t$. Założone jest, iż żadne nowe pojazdy nie pojawiają się w sieci dróg. Ujście pojazdów znajduje się na końcu ostatniego odcinka. Wszystkie pojazdy będące w chwili $t$ na ostatnim odcinku w chwili $t+1$ opuszczają układ. Formalnym wzorem definiującym rozwój wektora stanu jest:
 \[\textbf{x(t+1)}=\textbf{Ax(t)} \addtag \label{eq:single_road} \]
 Gdzie $\textbf{A}$ jest macierzą systemu. Definiuje ona sposób przepływu pojazdów. $\textbf{A}$ jest rzadką, kwadratową macierzą o wartościach równych 1 jedynie bezpośrednio 1 wiersz pod główną przekątną macierzy. Takie wartości gwarantują przepływ pojazdów o jeden odcinek w jednym interwale czasowym.
@@ -210,7 +300,7 @@ Wedle wzoru (\ref{eq:single_road}) wyliczone zostają kolejne wartości wektora 
 \]
 
 \section {Wektor stanu sieci dróg}
-W rozdziale (\ref{sec:wektor_stanu_drogi}) przedstawiony został wektor stanu dla pojedynczej drogi. W tym rozdziale zostanie sformułowany wektor stanu dla bardziej ogólnego przypadku - sieci dróg. Sposób przedstawienia wartości stanuch jednak jest bardzo podobny. Każda z dróg $e_1,...,e_n$ ma $k$ wydzielonych odcinków oznaczanych jako $b_1,...,b_{nk}$. Dla każdego z odcinków definiowana jest wartość stanowa.
+W rozdziale (\ref{sec:wektor_stanu_drogi}) przedstawiony został wektor stanu dla pojedynczej drogi. W tym rozdziale zostanie sformułowany wektor stanu dla bardziej ogólnego przypadku - sieci dróg. Sposób przedstawienia wartości stanuch jednak jest bardzo podobny. Dla środowiska zawierającego drogi $e_1,...,e_n$ wektor stanu jest utworzony z wartości stanu kolejnych odcinków tych dróg. 
 
 \subsection{Przykład} \label{subsec:wektor_stanu_siec_przyklad}
 Niech będzie dana sieć składająca się z trzech dróg. Dla każdej drogi zostaną wydzielone 2 odcinki. W sumie środowisko posiada 6 odcinków. Odcinki są ponumerowane od 0 co przedstawia poniższy rysunek.
@@ -238,7 +328,7 @@ Zawiera on w sobie informacje dotyczące ilości pojazdów na poszczególnych od
 \section{Rozwój wektora stanu sieci dróg}
 Przepływ pojazdów niezmiennie jest oparty o założenie, iż w trakcie trwania jednego interwału czasowego pojazdy pokonują 1 odcinek drogi. Nie pojawiają się nowe pojazdy w trakcie trwania symulacji, a ujścia ruchu znajdują się na końcu odcinków 3 i 5.
 %Równaniem systemu pozostaje $\textbf{x(t+1)=Ax(t)}$, gdyż do układu nie wpływają nowe pojazdy.\\ \\
-Macierz systemu $\textbf{A}$ powinna uwzględnić przepływy pojazdów na skrzyżowaniach. Do tej pory wszystkie pojazdy poruszały się do przodu. W przypadku sieci dróg trzeba uwzględnić przypadek skrzyżowania, gdzie pojazdy mogą obrać różne kierunki ruchu.
+Macierz systemu $\textbf{A}$ powinna uwzględnić przepływy pojazdów na skrzyżowaniach. Do tej pory wszystkie pojazdy poruszały się jedynie prosto po odcinkach jednej drogi. W przypadku sieci dróg trzeba uwzględnić przypadek skrzyżowania, gdzie pojazdy mogą obrać różne kierunki ruchu.
 %W tym momencie należy przedstawić następującą definicję macierzy $\textbf{A}$:\\
 %Wartości macierzy \textbf{A} określają jaka część pojazdów z odcinka zadanego przez indeks kolumny przejeżdża do odcinka zadanego przez indeks wiersza. 
 Zdefiniowana zostanie zatem macierz $ \textbf{P} $ prawdopodobieństwa manerwów. Jest to niezmienna w czasie rzadka macierz. Wartości macierzy $ \textbf{P} $ w kolumnie i oraz wierszu j to prawdopodobieństwo przejazdu pojazdu będącego na odcinku i do odcinka j.
@@ -255,7 +345,7 @@ Srodowisko przedstawiają poniższe obrazki.
 	\cincludegraphics[width=7cm]{images/env_11}  & \cincludegraphics[width=7cm]{images/env_11_843015_procenty} \\
 	\hline 
 \end{tabular}
-
+\noindent
 Taki sposób przepływu definiuje rzadką macierz prawdopodobieństwa $ \textbf{P} $ o wymiarach 6 na 6.
 \begin{itemize}
 	\item $\textbf{P}[1,2]=0.25$ wyznacza manewr skrętu w lewo
@@ -328,7 +418,7 @@ Niech wektor $ [i,j] $ będzie manewrem polegającym na bezpośrednim przejeźdz
 0 & dla manewru wstrzymanego przez czerwone światło \label{eq:stopped_by_light} \\
 0 & dla niemożliwego manewru \label{eq:manewr_not_existing}
 \end{numcases}
-Sygnalizacja świetlna zawsze posiada pewną fazę, która określa dozwolone \myref{eq:allowed_by_light} oraz niedozwolone \myref{eq:stopped_by_light} manewry. Fazy świetlne będą oczywiście zmieniane w trakcie symulacji zatem macierz $\textbf{S}$ też jest zmienna w czasie. Wartości macierzy $\textbf{S}$ obejmujące przypadki \ref{eq:manewr_not_existing} oraz \ref{eq:manewr_existing} są z kolei niezmienne dla ustalonego środowiska.
+Sygnalizacja świetlna zwykle posiada pewną fazę, która określa dozwolone \myref{eq:allowed_by_light} oraz niedozwolone \myref{eq:stopped_by_light} manewry. Fazy świetlne będą oczywiście zmieniane w trakcie symulacji zatem macierz $\textbf{S}$ też jest zmienna w czasie. Wartości macierzy $\textbf{S}$ obejmujące przypadki niemożliwych manewrów \myref{eq:manewr_not_existing} oraz nie wymagających sygnalizacji świetlnej \myref{eq:manewr_existing} są z kolei niezmienne dla ustalonego środowiska.
 \subsection{Przykład macierzy sygnalizacji świetlnej} \label{subsec:macierz_sygnalizacji}
 Rozważone będzie znane z poprzednich przykładów skrzyżowanie - tym razem mające sygnalizację świetlną z aktywną fazą zezwalającą na manewr [1,2]. Ta sama faza zabrania przejazdu z 1 odcinka do 4. 
 
@@ -345,7 +435,7 @@ Poszczególne manewry są następujące:
 	\item \myref{eq:allowed_by_light} - Manewrem zezwolonym przez zielone światło  dla fazy $ 0 $ jest $ [1,2] $.
 	\item \myref{eq:manewr_existing} - Prawidłowym manewrem bez sygnalizacji świetlnej są manewry $ [0,1] $, $ [2,3] $, $ [4,5] $.
 	\item \myref{eq:stopped_by_light} - Dla fazy świetlnej $ 0 $ manewrem zatrzymanym przez czerwone światło  jest $ [1,4] $.
-	\item \myref{eq:manewr_not_existing} - Pozostałe manewry są niemożliwe. Przykładem niech będzie $ [0,2] $, gdyż nie ma możliwości bezpośredniego przejazdu z odcinka $ 0 $ do $ 2 $. Teoretycznie możliwy mógłby się wydawać manewr [1,1] jednak jest on uznany za niemożliwy.
+	\item \myref{eq:manewr_not_existing} - Pozostałe manewry są niemożliwe. Przykładem jest $ [0,2] $, gdyż nie ma możliwości bezpośredniego przejazdu z odcinka $ 0 $ do $ 2 $.
 \end{itemize}
 Macierz sygnalizacji świetlnej dla tego przykładu jest następująca:
 \def \S{\begin{bmatrix}
@@ -369,8 +459,8 @@ P[i,j] & dla $ S[i,j]=1$ \\
 Równanie systemu jest następujące:
 \[\textbf{x(t+1)}=\textbf{A(t)x(t)} \addtag \]
 Macierz systemu jest teraz zmienna w czasie, zatem w miejse $\textbf{A}$ dotychczasowego równania pojawiło się $\textbf{A(t)}$. \\ \\
-\subsection{Przykład rozwoju wektora stanowego}
-Niech dla chwili t=0 będzie dany układ z przykładu \myref{subsec:macierz_sygnalizacji}. W chwili t=2 zostanie zmieniona faza świetlna. Od tego momentu obydwa manewry na skrzyżowaniu są dozwolone.  W chwili t=3 wartości stanowe nie są całkowite, co nie przeszkadza modelowi matematycznemu. Wartości stanowe były identyfikowane do tej pory jako ilość pojazdów na odcinku i dalej jest to dobra interpretacja o ile przyjmiemy, że pojazdy są możliwe do podzielenia na części. Rozwój wektora stanu został przedstawiony w poniższej tabeli.
+\subsection{Przykład rozwoju wektora stanu}
+Niech będzie dany układ z przykładu \myref{subsec:macierz_sygnalizacji} z zielonym światłem dla lewoskrętu. W chwili t=2 zostanie zmieniona faza świetlna. Od tego momentu obydwa manewry na skrzyżowaniu są dozwolone.  W chwili t=3 wartości stanu nie są całkowite, co nie jest sprzeczne z modelem matematycznym. Rozwój wektora stanu został przedstawiony w poniższej tabeli.
 
 \def \xzero{\begin{bmatrix}
 		9 \\ 4 \\ 3 \\ 0 \\ 1 \\ 5
@@ -500,7 +590,7 @@ Pragnąc by do odcinków 0 i 3  napływało odpowiednio po 4, 8, 20 oraz 3, 7, 5
 	\hline 
 \end{tabular}
 }
-\subsection{Zatory drogowe}
+\section{Zatory drogowe}
 Dotychczasowe przedstawienie macierzy systemu $ \textbf{A} $ nie zawiera w sobie jeszcze pojęcia zotoru drogowego. W jednym interwale czasowym moze przejechac przez odcinek astronomiczna wrecz liczba pojazdów. Wprowadzona zostanie zatem funkcja zatoru ograniczająca przejazdy w przypadku zbyt dużej liczby pojazdów. Dziedziną funkcji zatoru $ f $ jest zbiór wszystkich manewrów $ [i,j] $, takich że $ i \neq j $. Funkcja zatoru jest jednak zależna także od wartości stanowych wektora $\textbf{x}$, a przede wszystkim od ilości pojazdów na odcinkach $i$ oraz $j$ czyli $x[i],x[j]$. Wartości funkcji $f$ należą do przedziału $[0,1]$.
 Macierz stanowa $\textbf{A}$ z uwzględnieniem zatorów dla układu z $ n $ odcinkami przedstawia się następująco:
 
@@ -534,7 +624,7 @@ Należy skonstruować pewną funkcję zatoru. Niech jej celem będzie, aby przez
 \frac{10}{x[i]} & dla $ j=i+1  \wedge x[i] \geq 10$ - przejazd z zatorem \label{eq:fmanewr_zator_fX} \\
 0 & dla pozostałych przypadków - niemożliwe manewry \label{eq:fmanewr_not_existing}
 \end{numcases} \noindent
- Macierze stanowe zostały wyliczone na podstawie wzoru \ref{eq_A_z_korkiem}. W tym przypadku jest to:
+ Macierze stanu zostały wyliczone na podstawie wzoru \ref{eq_A_z_korkiem}. W tym przypadku jest to:
 \def \A {\begin{bmatrix}
 		1-\delta(0) & f(1,0) &   f(2,0) & f(3,0) & \\
 		f(0,1) & 1-\delta(1) &   f(2,1) & f(3,1) & \\
@@ -601,7 +691,7 @@ zerowej kolumny macierzy $A(0)$ są wyliczane w następującej kolejności:
 \end{itemize}
 Analogiczne operacje zostają przeprowadzone dla kolejnych kolumn co daje rezultat w postaci:
 \[A(0)=\Azero\]
-Dalszy rozwój wektora stanowego jest przedstawiony w tabeli poniżej.
+Dalszy rozwój wektora stanu jest przedstawiony w tabeli poniżej.
 
 \centerline{
 	\begin{tabular}{| c | c | Sc |}
@@ -635,7 +725,7 @@ Najistotniejszym punktem macierzy sygnalizacji świetlnej jest $ S[1,2]=1 $, co 
 \def \ScaseZero {\begin{bmatrix}
 		1 & 0 & 0 & 0 & 0 & 0 \\
 		1 & 1 & 0 & 0 & 0 & 0 \\
-		0 & 1 & 1 & 0 & 0 & 0 \\
+		0 & {1} & 1 & 0 & 0 & 0 \\
 		0 & 0 & 1 & 1 & 0 & 0 \\
 		0 & 0 & 0 & 0 & 1 & 0 \\
 		0 & 0 & 0 & 0 & 1 & 1 
@@ -649,9 +739,23 @@ Najistotniejszym punktem macierzy sygnalizacji świetlnej jest $ S[1,2]=1 $, co 
 		0             & 0             & 0             & 0 & 1 & 0 
 \end{bmatrix}}
 
-\[\textbf{S}= \ScaseZero \addtag \]
+\[\textbf{S}= \begin{bmatrix}
+1 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+0 & \mathbf{1} & 1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 1 & 1 
+\end{bmatrix} \addtag \]
 Macierz systemu to zatem:
-\[\textbf{A}= \AcaseZero \addtag \]
+\[\textbf{A}= \begin{bmatrix}
+\frac{5}{15}  & 0             & 0             & 0 & 0 & 0 \\
+\frac{10}{15} & \frac{60}{70} & 0             & 0 & 0 & 0 \\
+0          	  & \mathbf{\frac{10}{70}} & \frac{3}{13}  & 0 & 0 & 0 \\
+0             & 0             & \frac{10}{13} & 0 & 0 & 0 \\
+0             & 0             & 0             & 0 & 0 & 0 \\
+0             & 0             & 0             & 0 & 1 & 0 
+\end{bmatrix} \addtag \]
 \def \utMinusI{\begin{bmatrix} 
 		7 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0 
 \end{bmatrix}}
@@ -660,11 +764,11 @@ Macierz systemu to zatem:
 \end{bmatrix}}
 \def \xt{\begin{bmatrix} 
 		12 \\ 70 \\ 13 \\ 10 \\ 0 \\ 5	
-\end{bmatrix}} \noindent
+\end{bmatrix}}\noindent
 Dla przykładu szczegółowo zostaną policzone wartości zerowej kolumny macierzy $\textbf{A}$, która dotyczy pojazdów wyjeżdżających z odcinka 0. Pozostałe wartości są liczone analogicznie.
 \begin{itemize}
 	\item Korzystając ze wzoru \ref{eq:manewr_zator_f10} ustalone zostaje $f(0,1)=\frac{10}{15}$. Jest to przypadek zatoru i jedynie 10 pojazdów z 15 przemieszcza się do następnego odcinka.
-	\item Wartości $f(0,2),(0,3),(0,4),(0,5)$ są równe $0$, gdyż są to przypadki \ref{eq:manewr_not_existing_f10} nieistniejących manewrów.
+	\item Wartości $f(0,2),(0,3),(0,4),(0,5)$ są równe $0$, gdyż są to przypadki \ref{eq:manewr_not_existing} nieistniejących manewrów.
 	\item $A[0,0]=1-\delta(0)=1-f(0,1)-f(0,2)-f(0,3)-f(0,4)-f(0,5)=1- \frac{10}{15} -0-0-0-0= \frac{5}{15}$
 \end{itemize}
 Stan w momencie $t=1$ wyliczony z równania stanu jest następujący:
@@ -685,7 +789,8 @@ W rezultacie w chwili t obecny jest następujący stan:
 
 \chapter {Środowiska symulacyjne i ich nauka}
 W tym rozdziale przedstawione zostaną środowiska symulacyjne. Głównym ich elementem jest sieć dróg. Podstawowe informacje na temat działania modelu sieci dróg i ruchu obowiązującego na nich zostały przedstawione w rozdziale \ref{chapter:model_sieci_drog}. Każde środowisko posiada dokładną specyfikacje możliwych faz świetlnych. Do każdego ze skrzyżowań jest przyporządkowany agent, który ma za zadanie podejmować akcje prowadzące do dobrej przepustowości ruchu. Dokładnie zostaną przedstawione przestrzenie decyzyjne i bezpośrednie konsekwencje każdej z akcji. Każde środowisko będzie posiadało swój problem optymalizacyjny i przedstawiony zostanie sposób uczenia, który prowadzi do rozwiązania tego problemu. 
-\section{Srodowisko 1(11 na froncie)}
+\section{Srodowisko 1}
+%(11 na froncie)
 Elementy sieci dróg pierwszego środowiska były niejednokrotnie przedstawiane w rozdziale \myref{chapter:model_sieci_drog}, jednak dopiero teraz nastąpi przedstawienie pierwszego pełnego środowiska symulacyjnego. Na model sieci składają się 3 drogi - każda ma po 2 odcinki. Jest jedno skrzyżowanie na którym 75 procent pojazdów skręca w prawo, a pozostałe obierają kierunek w lewo.
 \begin{figure}[H]
 	\centering
@@ -742,7 +847,8 @@ Zastosowana została metoda uczenia przedstawiona w \myref{learning:DQN_single_a
 \subsubsection{Wyniki uczenia}
 Za każdym razem już po trzeciej iteracji algorytmu osiągane jest pożądane zachowanie agenta. Dla każdego stanu agent wybiera akcję 1. Nie tworzą się zatory i wszystkie pojazdy opuszczają układ (oczywiście z wyjątkiem tych, które pojawiły się w dwóch ostatnich interwałach czasowych).
 
-\section{Srodowisko 2(14 na froncie)}
+\section{Srodowisko 2}
+%(14 na froncie)
 Na model sieci składają się 3 drogi - każda ma po 2 odcinki. Istnieje jedno skrzyżowanie z dwiema drogami wlotowymi i jedną wylotową.
 	\begin{figure}[H]
 	\centering
@@ -788,7 +894,7 @@ Moment stopu spodziewany jest na chwilę, gdy na każdą z dróg będzie wjeżd�
 \subsubsection{Pożądane zachowanie agenta}
 Pożądane zachowanie agenta w tym przypadku nie jest jednoznaczne do określenia. Z pewnością jeśli na drodze na której jest zielone światło jest conajmniej 10 pojazdów, to warto podtrzymać fazę świetlną. Zmiana sygnalizacji powoduje 2 interwały karencji, podczas których żaden pojazd nie przejedzie i może to być czynnikiem decydującym o pozostaniu przy obecnej fazie. Jaka powinna być akcja w przypadku gdy zielone światło jest dla drogi z mniejszą niż 10 ilością pojazdów? Wtedy agent powinien odnaleźć złoty środek i jeśli na drugiej drodze jest dużo pojazdów - może zmienić światło. 
 \subsubsection*{Sygnał wejściowy}
-Wektor stanowy posiada 4 wartości. Pierwsze dwie z nich to ilości pojazdów przed skrzyżowaniem. Kolejne określają aktualną fazę świetlną.
+Wektor stanu posiada 4 wartości. Pierwsze dwie z nich to ilości pojazdów przed skrzyżowaniem. Kolejne określają aktualną fazę świetlną.
 \subsubsection*{Przykłady sygnałów wejściowych}
 \begin{itemize}
 	\item Sygnał wejściowy $ \textbf{x}=[8,2,0,1] $ zawiera w sobie informację, iż na odcinku zerowym jest 8 pojazdów oraz na pierwszym - jest ich 2. Aktywna jest faza 1.
@@ -810,7 +916,8 @@ Następujące stałe oraz ustalenia określają szczegóły uczenia:
 Algorytm szybko uzyskuje kolejne warunki 98 procent pojazdów przejeżdżających przez skrzyżowanie. Dopiero przy 4,97 wjeżdzających pojazdach na drogę widoczny jest zastój, który powoduje warunek stopu.
 Najlepszy wynik to średnio 9,48 pojazdów przejeżdżających w jednej chwili przez skrzyżowanie. Jest to dobry wynik zważając na to, iż potencjalnie najwyższy możliwy wynik do osiągnięcia jest w granicy 9,94. Z 9940 pojazdów 450 nie opuściło skrzyżowania. Zatem przy niemalże 5 pojazdach napływających do układu powstają korki, co jest naturalnym zjawiskiem - wynikającym z ograniczeń ruchu, a nie nieoptymalnej sygnalizacji świetlnej.
 
-\section{Srodowisko 4 (16 na froncie)}
+\section{Srodowisko 3}
+%(16 na froncie)
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm]{env_4_agenci}
@@ -828,7 +935,7 @@ Każde skrzyżowanie posiada 4 fazy świetlne przedstawione poniżej. Fazy 0,1 i
 	\label{fig:env_4_fazy}
 	\caption{środowisko 4 - fazy świateł}
 \end{figure}
-\subsection{Przestrzeń decyzyjna}
+\subsection{Przestrzeń decyzyjna} \label{subsec_pn_dec}
 Przedstawiona zostanie przestrzeń decyzyjna jedynie dla agenta 0, jednak dla pozostałych dwóch przestrzenie decyzyjne są analogiczne. Schemat zmiany faz jest identyczny, jedynie manewry danych faz są inne.
 \begin{figure}[H]
 	\centering
@@ -844,19 +951,19 @@ Wykorzystana w modelu zostanie funkcja zatoru przedstawiona w rozdziale \myref{s
 0 & dla pozostałych przypadków - manewr [i,j]
 \end{numcases} \noindent
 Zezwala ona na jednoczesny wjazd 10 pojazdów na dowolny odcinek drogi.
-\section{Uczenie}
-\subsection{Sygnał wejściowy}
+\subsection{Uczenie}
+\subsubsection*{Sygnał wejściowy}
 Sieć neuronowa przypisana do każdego z agentów przyjmuje jako sygnał wejściowy 6 elementową tablicę. Pierwsze 3 elementy to ilości pojazdów na odcinkach będących przed skrzyżowaniem przypisanym do agenta. Pozostałe 3 elementy mają wartości z zakresu $\{0,1\}$. Określają one aktualną fazę świetlną. 
 \subsubsection*{Przykład sygnału wejściowego}
 Sygnał wejściowy $x=[5,17,2,0,0,1]$ przedstawia informację, iż przed skrzyżowaniem są kolejki odpowiednio 5,17 i 2 pojazdów. Ostatnie 3 elementy oznaczają, że aktualna faza świetlna to 2.
 
-\subsection{Uczenie}
+\subsection*{Uczenie}
 \subsubsection{Ogólny zarys}
 Początkowo do każdej z dróg wjeżdża po jednym pojeździe. Na koniec każdej iteracji nauki przeprowadzane są symulacje w pełni zachłanne. Agent ma za zadanie wybierać akcje, które pozwolą na opuszczenie sieci dróg przez conajmniej 95 procent pojazdów. Jeśli ten warunek zostanie spełniony następuje zwiększenie ilości wjeżdżających pojazdów o 20 procent dotychczasowej wartości. W przypadku gdy ten warunek nie zostanie spełniony przez 15 kolejnych symulacji następuje koniec nauki. 
-\subsubsection{Cel nauki i spodziewany wynik}
-Bezpośrednim celem nauki jest uzyskanie jak największej ilości pojazdów wjeżdżających do sieci. Aby to się stało agenci muszą podejmować decyzje, które pozwalają na opuszczenie sieci jak największej ilości pojazdów. Moment stopu spodziewany jest na chwilę, gdy na każdą z dróg będzie wjeżdżało około 10 pojazdów. Zgodnie z opisem modelu ruchu - maksymalnie 10 pojazdów może wjechać w jednej chwili na dany odcinek, zatem muszą się tworzyć zatory przy większej ilości pojazdów.
+\subsubsection*{Cel nauki i spodziewany wynik}
+Bezpośrednim celem nauki jest uzyskanie jak największej ilości pojazdów wjeżdżających do sieci. Aby to się stało agenci muszą podejmować decyzje, które pozwalają na opuszczenie sieci jak największej ilości pojazdów. Moment stopu spodziewany jest na chwilę, gdy na każdą z dróg będzie wjeżdżało niecałe 10 pojazdów. Zgodnie z opisem modelu ruchu - maksymalnie 10 pojazdów może wjechać w jednej chwili na dany odcinek, zatem muszą się tworzyć zatory przy większej ilości pojazdów.
 
-\subsection{Sposób uczenia}
+\subsubsection*{Sposób uczenia}
 Zastosowana została metoda uczenia przedstawiona w \myref{learning:DQN_single_agent}. 
 
 Następujące stałe oraz ustalenia określają szczegóły uczenia:
@@ -868,8 +975,65 @@ Następujące stałe oraz ustalenia określają szczegóły uczenia:
 	\item Za uczenie odpowiada sieć neuronowa biblioteki Keras. Posiada ona 3 ukryte warstwy (10,14,10 neuronów) z funkcjami aktywacji relu. Optymalizacja jest przeprowadzana przez metodę Adam z funkcją straty błędu średniokwadratowego i parametrem $learning\_rate = 0,01$. 
 	\item Epizod zachłanny trwa 1000 interwałów czasowych.
 \end{itemize}
+\subsubsection{Wyniki uczenia}
+Moment stopu jest osiągnięty przy 8.9 pojazdów napływających do sieci ruchu. Najwyższy osiągnięty wyniki 20 epizodów z takim napływem ruchu to 90 procent. Żadna z akcji nie jest zaniechana - agenci conajmniej kilkadziesiąt razy podejmują każdą z dostępnych akcji w zachłannym epizodzie.
+
+\section{Srodowisko 4 - kampus B Politechniki Łódzkiej}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{images/env_poli}
+	\label{fig:env_poli}
+	\centering
+	\caption{Środowisko 5 - Skrzyżowania wokół kampusu B Politechniki Łódzkiej. Mapy Open Street Map}
+\end{figure}
+Struktura środowiska bazuje na rzeczywistej sieci dróg znajdującej się w Łodzi. Sieć wyznaczają ulice Wróblewskiego, Wólczańska, Radwańska i aleja Politechniki Łódzkiej. Środowisko posiada 40 odcinków w tym 4 odcinki źródłowe (0,8,30,39) i 4 odcinki wylotowe (1,8,13,19). Drogi krzyżują się w 4 miejscach. Na dowolnym skrzyżowaniu kierowcy mogą wykonać manewry skrętu w lewo, w prawo oraz jazdy prosto. 
 
 
+\subsection{Sygnalizacje świetlne}
+Każde skrzyżowanie posiada 5 faz świetlnych. Fazy 0,1,2 i 3 są fazami, które posiadają pewne zielone światła. Zmiana pomiędzy tymi fazami nie jest natychmiastowa i następuje dopiero po 2 interwałach fazy żółtych świateł. Skrzyżowanie ulic Wróblewskiego, Wólczańskiej i Czerwonej posiada inne od pozostałych trzech skrzyżowań fazy świetlne. Wynika to z kolizyjności lewoskrętów z ulic Wróblewskiego i Czerwonej. Poniższa tabela przedstawia możliwe fazy świetlne.
+
+\begin{tabular}{| Sc  | Sc | Sc|}
+	\hline
+	Faza   & \specialcell{Wólczańska/\\Wróblewskiego/\\Czerwona} & Pozostałe 3 skrzyżowania \\
+	\hline
+	0  & 
+	\cincludegraphics[height=4cm]{images/env_poli_faza_0_wol} & 	\cincludegraphics[height=4cm]{images/env_poli_faza_0_pozostale} \\
+	\hline 
+	1  & 
+	\cincludegraphics[height=4cm]{images/env_poli_faza_1_wol} & 	\cincludegraphics[height=4cm]{images/env_poli_faza_1_pozostale} \\
+	\hline 
+	2  & 
+	\cincludegraphics[height=4cm]{images/env_poli_faza_2_wol} & 	\cincludegraphics[height=4cm]{images/env_poli_faza_2_pozostale} \\
+	\hline 
+	3  & 
+	\cincludegraphics[height=4cm]{images/env_poli_faza_3_wol} & 	\cincludegraphics[height=4cm]{images/env_poli_faza_3_pozostale} \\
+	\hline 
+	Żółte  & 
+	\cincludegraphics[height=4cm]{images/env_poli_faza_zolte_wol} & 	\cincludegraphics[height=4cm]{images/env_poli_faza_zolte_pozostale} \\
+	\hline 
+\end{tabular}
+
+\subsection{Przestrzeń decyzyjna}
+Analogicznie do poprzednich przestrzeni decyzyjnych z fazą żółtych świateł - przykładowo \myref{subsec_pn_dec}.
+\subsection{Zatory drogowe}
+Wykorzystana w modelu zostanie funkcja zatoru przedstawiona w rozdziale \myref{subsec:zator_f10}, czyli:
+\begin{numcases}{f(i,j)=}
+\textbf{P}[i,j] & dla $ j=i+1 \wedge x[i]<10$ - przejazd bez zatoru \label{eq:manewr_bez_zatoru_f10} \\
+\frac{10}{x[i]} & dla $ j=i+1  \wedge x[i] \geq 10$ - przejazd z zatorem \label{eq:manewr_zator_f10} \\
+0 & dla pozostałych przypadków - manewr [i,j]
+\end{numcases} \noindent
+Zezwala ona na jednoczesny wjazd maksymalnie 10 pojazdów na dowolny odcinek drogi.
+\subsection{Uczenie}
+\subsubsection*{Ogólny zarys}
+Do każdej z dróg źródłowych wjeżdża pewna ilość pojazdów co interwał. Początkowo ilość ta jest zadana przez zmienną losową o rozkłądzie lognormalnym o parametrach $\delta=1, \mu=1$. Na koniec każdej iteracji nauki przeprowadzane są symulacje w pełni zachłanne. Agent ma za zadanie wykonywać akcje, które w trakcie symulacji pozwolą na opuszczenie skrzyżowania przez conajmniej 95 procent pojazdów. W przypadku spełnienia tego warunku następuje zwiększenie parametru $\mu$ o 20 procent dotychczasowej wartości. Konsekwencją zwiększenia $\mu$ jest większa ilość wjeżdżających do układu pojazdów. Ten proces jest powtarzany, aż do momentu gdy przez 15 kolejnych iteracji uczenia nie uzyskany zostanie warunek 95 procent pojazdów opuszczających skrzyżowanie.
+\subsubsection*{Cel nauki}
+Bezpośrednim celem nauki jest uzyskanie jak największej wartości parametru $\mu$. Aby to się stało agenci muszą podejmować decyzje, które pozwalają na opuszczenie sieci możliwie jak największej ilości pojazdów.
+\subsubsection*{Wyniki uczenia}
+Moment stopu przypadł na $\mu=7,43$ pojazdu wjeżdżającego na drogę. Okazuje się, że proces uczenia doprowadził do zaniechania przez agentów manewrów lewoskrętów (akcje 0 i 1). Jest to z pewnością niepożądane zachowanie, jednak można było się go spodziewać, gdyż nagrody zostały wymodelowane tak, by gratyfikować jedynie przepływ - nieistotne z jakiego manewru. 
+\subsection{Modyfikacja środowiska}
+Zostaje nałożona dodatkowa restrykcja związana z przestrzenią akcji. Spośród 100 kolejno podjętych akcji powinna znaleźć się każda możlwa akcja.
+\subsubsection*{Wyniki uczenia zmodyfikowanego środowiska}
+Wyniki uczenia są identyczne do wariantu bez restrykcji wystąpienia wszystkich faz. Wyeliminowany został jednak niepożądany efekt zaniechania lewosrkętów.
 
 \chapter{Przegląd metod optymalizacyjnych}
 \section{Kategorie uczenia maszynowego}
@@ -887,9 +1051,9 @@ Ze wszystkich trzech kategorii uczenie ze wzmocnieniem odpowiada problemowi rozw
 Schemat uczenia ze wzmocnieniem składa się z następujących elementów:
 \begin{enumerate}
 	\item \textbf{Agent} jest odpowiedzialny za podejmowanie pewnych decyzji. Ma on wiedzę na temat obecnego stanu środowiska i otrzymuje w każdym kroku czasowym sygnał nagrody. Jego decyzje niebezpośrednio wpływają na stan środowiska.
-	\item \textbf{Środowisko} jest przestrzenią posiadającą dynamiczny stan widoczny dla agenta. Chociaż to agent podejmuje akcje, to środowisko ma zdefiniowany model zmiany stanu. Model zmiany stanu może być stochastyczny oraz niewidoczny dla agenta. Oznacza to, że dwie te same akcje podjęte w tym samym stanie nie zawsze przyniosą identyczny następny stan. Innymi słowy agent nie może być stuprocentowo pewny rezultatów swoich akcji. Środowisko jest także nadawcą sygnału nagrody.
-	\item \textbf{Strategia} definiuje sposób doboru akcji przez agenta w danej chwili. Jest to funkcja, która przyjmuje stan środowiska i zwraca akcje, która ma być przeprowadzona. 
-	\item \textbf{Sygnał nagrody} definiuje cel problemu uczenia ze wzmocnieniem. W każdym kroku czasowym środowisko wysyła agentowi liczbę rzeczywistą, która jest nazywana nagrodą(reward). Wartości nagród są czynnikiem wpływającym na zmianę strategii, gdyż zadaniem agenta jest maksymalizacja nagród. Wartość nagród zatem definiuje, które zdarzenia są dobre, a które złe dla agenta. Biologicznym odpowiednikiem dodatniej nagrody jest przyjemność, a ujemnej - ból. 
+	\item \textbf{Środowisko} jest przestrzenią posiadającą dynamiczny stan widoczny dla agenta. Chociaż to agent podejmuje akcje, to środowisko ma zdefiniowany model zmiany stanu. Model zmiany stanu może być stochastyczny oraz niewidoczny dla agenta. Oznacza to, że dwie te same akcje podjęte w tym samym stanie nie zawsze przyniosą identyczny następny stan. Innymi słowy agent nie może być stuprocentowo pewny rezultatów swoich akcji. Środowiska rozważane w rozdziale x są jednak w pełni deterministyczne. Środowisko jest także nadawcą sygnału nagrody.
+	\item \textbf{Strategia} definiuje sposób doboru akcji przez agenta w danej chwili. Jest to funkcja, która przyjmuje stan środowiska i zwraca akcje, która powinna być przeprowadzona. 
+	\item \textbf{Sygnał nagrody} definiuje cel problemu uczenia ze wzmocnieniem. W każdym kroku czasowym środowisko wysyła agentowi liczbę rzeczywistą, która jest nazywana nagrodą(reward). Wartości nagród są czynnikiem wpływającym na zmianę strategii, gdyż zadaniem agenta jest maksymalizacja nagród. Wartość nagród zatem definiuje, które zdarzenia są dobre, a które złe dla agenta. Biologicznym odpowiednikiem dodatniej nagrody jest przyjemność, a ujemnej - ból \cite{berridge2000reward}. 
 	\item \textbf{Funkcja wartości} zwraca wartość stanu czyli oczekiwaną sumę nagród jakie agent osiągnie w przyszłości będąc aktualnie w tym stanie. 
 \end{enumerate}
 \begin{figure}[H]
@@ -911,8 +1075,8 @@ Problemem procesu decyzyjnego Markowa jest odnalezienie optymalnej strategii. St
 \[
 G=\sum_{k=0}^{K} \gamma^k R_{k} \addtag \label{eq:Markov_maximize}
 \]
-Chociaż strategii $\pi(s)$ nie ma we wzorcze \ref{eq:Markov_maximize}, to strategia wpływa na otrzymywane nagrody $R_{k}$ w każdej chwili $k$.\\
-$\gamma \in (0,1]$ jest czynnikiem dyskontującym. Idea dyskontowania nagród zaczerpnięta jest z rachunku finansowego. Przykładowo wpływ na konto kapitału 1000 złotych po upływie roku czasu jest z pewnością bardziej wartościowy niż za 20 lat. Innymi słowy - pieniądze są liczone w czasie i tak samo należy postępować z nagrodami. Im wartość $\gamma$ jest bliższa 0 tym bardziej istotne są początkowe nagrody. Dla $\gamma=1$ wszystkie nagrody są równie istotne - bez względu na czas ich otrzymania.\\
+Chociaż we wzorze \myref{eq:Markov_maximize} nie ma strategii $\pi(s)$, to wpływa ona na otrzymywane nagrody $R_{k}$ w każdej chwili $k$.\\
+$\gamma \in (0,1]$ jest czynnikiem dyskontującym. Idea dyskontowania nagród zaczerpnięta jest z rachunku finansowego. Przykładowo wpływ na konto kapitału 1000 złotych po upływie roku czasu jest z pewnością bardziej wartościowy niż za 20 lat. Pieniądze w matematyce finansowej są prawie zawsze liczone w czasie i tak samo należy postępować z nagrodami. Im wartość $\gamma$ jest bliższa 0 tym bardziej istotne są początkowe nagrody. Dla $\gamma=1$ wszystkie nagrody są równie istotne - bez względu na czas ich otrzymania.\\
 Analogicznie do (\ref{eq:Markov_maximize}) jest ustalona funkcja wartości stanu. Jako wartość stanu $s$ określone jest:
 \[
 G_t=\sum_{k=t}^{K} \gamma^k R_{k}=R_{t}+\gamma R_{t+1}+\gamma^{2} R_{t+2}+...+\gamma^{K}R_K \addtag \label{eq:Markov_state_value_G}
@@ -924,55 +1088,17 @@ Zostanie przedstawiony teraz przykład obliczeniowy. Agent podejmuje decyzje na 
 	\caption{Ciąg nagród i stanów.}
 	\label{fig:agent-srodowisko}
 \end{figure}\noindent
-Najłatwiej obliczenia rozpocząć od $G_5$, ponieważ
-\[G_{t}=R_{t}+\gamma G_{t+1} \label{eq:G_reccurential} \addtag \].\\
-$G_5=R_5=1$.\\
-$G_4=R_4+\gamma G_{5}=\;\;2+0,9\cdot 1=2,9$\\
-$G_3=R_3+\gamma G_{4}=\!-1+0,9\cdot2.9=1,61$\\
-$G_2=R_2+\gamma G_{3}=\;\;6+0,9\cdot1,61 \approx 7,45$\\
-$G_1=R_1+\gamma G_{2}=\;\;2+0,9\cdot 7,45 \approx 8,70$\\
-$G\;\,=R_0+\gamma G_{1}=\;\;0+0,9\cdot 8,70 \approx 7,83$\\
+Najłatwiej obliczenia rozpocząć od $G_5$ i skończyć na $G_1$.
+\[G_5=R_5.  \addtag\]
+Dla pozostałych t:
+\[G_{t}=R_{t}+\gamma G_{t+1} \label{eq:G_reccurential}. \addtag \]\\
+$G_5=R_5=1.$\\
+$G_4=R_4+\gamma G_{5}=\;\;2+0,9\cdot 1=2,9.$\\
+$G_3=R_3+\gamma G_{4}=\!-1+0,9\cdot2.9=1,61.$\\
+$G_2=R_2+\gamma G_{3}=\;\;6+0,9\cdot1,61 \approx 7,45.$\\
+$G_1=R_1+\gamma G_{2}=\;\;2+0,9\cdot 7,45 \approx 8,70.$\\
+$G\;\,=R_0+\gamma G_{1}=\;\;0+0,9\cdot 8,70 \approx 7,83.$\\
 
-\section{Programowanie dynamiczne}
-Termin programowania dynamicznego odnosi się do algorytmów wyliczających optymalne strategie procesu decyzyjnego Markowa w przypadku posiadanej całkowitej wiedzy na temat modelu środowiska\cite{reinforcementBook}. Środowisko nie musi być w pełni deterministyczne tzn. nie za każdym razem akcja przeprowadzana ze stanu $s_k$ musi w efekcie doprowadzić do tego samego stanu $s_{k+1}$. Jednak w takim przypadku musi być znany rozkład prawdopodobieństwa przydzielania nowego stanu na podstawie poprzedniego i właśnie podjętej przez agenta akcji. Dodatkowo wymagana jest możliwość ustalenia dowolnego stanu w trakcie uczenia. \\ Początkowa strategia $\pi(s)$ jest dowolna, najczęściej losowa.
-Przedstawiony algorytm jest podzielony na 2 części. Część predykcji(prediction) oraz kontroli (control). 
-\\\textbf{Proces predykcji} ma za zadanie ustalenie wartości stanów na podstawie ustalonej strategii. Jej algorytm jest następujący:
-\begin{enumerate}
-	\item{Przyjmij daną z góry $\pi$ jako strategię podejmowania akcji}
-	\item{Zainicjuj tablicę wartości stanów $V(s)$. Dla wszystkich możliwych stanów $s \in S$ przyjmij wartość $0$.}
-	\item{$\Delta=0$}
-	\item{Dla każdego $s \in S$:}
-	\begin{enumerate}
-		\item $v=V(s)$
-		\item $V(s)=\sum_{s'}Pr(s'|s,\pi(s))[r+\gamma V(s')]$
-		\item $\Delta = max(\Delta,|v-V(s)|)$
-	\end{enumerate}
-	\item Jeśli $\Delta< \theta$ to wróć do 3
-	\item Zwróć $V(s)$ jako tablicę wartości stanów $V_{\pi}(s)$ dla strategii $\pi$.
-\end{enumerate}
-Parametr $\theta \geq 0$ definiuje w kroku 5. moment stopu. \\
-Wartość $Pr(s',s,\pi(s))$ to prawdopodobieństwo, że akcja $\pi(s)$ podjęta w stanie $s$ doprowadzi do stanu $s'$. Z kolei $r$ jest właśnie otrzymaną nagrodą.
-\\ Algorytm \textbf{kontroli} ma za zadanie odnaleźć bardziej optymalną strategię niż dotychczas. Jako argument przyjmuje on wyliczoną właśnie tablicę wartości stanów $V_{\pi}(s)$. Wprowadzona zostaje macierz $Q_{\pi}(s,a)$. Jest ona zdefiniowana następująco:
-\begin{equation}
-\begin{split}
-Q_{\pi}(s,a) &= E[R_{t+1}+\gamma v_{\pi}(S_{t+1}) | S_t=s, A_t=a]  \\
-&= \sum_{s'}Pr(s'|s,a)[r+\gamma V_{pi}(s')] 
-\end{split}
-\end{equation}
-Oczywistym minusem tego algorytmu jest konieczność przeiterowania wszystkich stanów. W przypadku gdy stanów jest bardzo dużo algorytm staje się nieopłacalny.
-Macierz przedstawia wartość akcji $a$ podjętej w stanie $s$. Algorytm kontroli jest następujący:
-\begin{enumerate}
-	\item{Przyjmij wyliczoną przez algorytm predykcji macierz wartości stanów $V_{\pi}(s)$}
-	\item{Zainicjuj tablicę wartości stanów $V(s)$. Dla wszystkich możliwych stanów $s \in S$ przyjmij wartość $0$.}
-	\item{$policy\_stable=false$}
-	\item{Dla każdego $s \in S$:}
-	\begin{enumerate}
-		\item $old\_action=\pi(s)$
-		\item $\pi(s)=argmax_{a\in A_s} \sum_{s'}Pr(s'|s,a)[r+\gamma V(s')]$
-		\item Jeśli $old\_action \neq \pi(s)$ to $policy\_stable = true$
-	\end{enumerate}
-	\item Jeśli $policy\_stable=true$ to zwróć strategię $\pi(s)$.
-\end{enumerate}
 \section{Metoda Monte Carlo On-Policy}
 Metody Monte Carlo są szeroką klasą algorytmów, których wyniki oparte są o losowe próbkowanie. Nie potrzebują one żadnej wiedzy na temat środowiska - akceptowalne są zarówno środowiska deterministyczne jak i stochastyczne. Algorytmy Monte Carlo uczenia ze wzmocnieniem są dzielone na dwie kategorie - On-Policy oraz Off-policy. W pracy zostanie przedstawiona metoda on-policy, która różni się od off-policy jedynie sposobem doboru momentu eksploracji. Metoda on-policy zakłada, iż ustalana jest pewna liczba $\epsilon$ bliska zeru. Określa ona prawdopodobieństwo kroku eksploracji, czyli wyboru losowej akcji. Pozostałe akcje są wybierane w sposób zachłanny, czyli podejmowana jest najbardziej wartościowa dostępna akcja. Algorytm przedstawiony jest poniższym pseudokodem.
 \begin{enumerate}
@@ -985,101 +1111,65 @@ Metody Monte Carlo są szeroką klasą algorytmów, których wyniki oparte są o
 	\item Zasymuluj pełny epizod wedle strategii $\pi$
 	\item Zoptymalizuj strategię $\pi$ - dla każdej pary (s,a) - stanu i akcji, które pojawiły się w epizodzie
 	\begin{enumerate}
-		\item Wylicz $G$ rekurencyjnie wedle wzoru (\ref{eq:G_reccurential}) t.j. $G_{t}=R_{t}+\gamma G_{t+1}$. *
+		\item Wylicz $G$ rekurencyjnie wedle wzoru (\ref{eq:G_reccurential}) t.j. $G_{t}=R_{t}+\gamma G_{t+1}$.aa
 		\item Do tablicy Returns(s,a) dodaj wartość $G$
 		\item $Q(s,a)=avg(Returns(s,a))$
 		\item $\pi(s)=a^*$. Gdzie $a^*$ to taka akcja, że $Q(s,a^*)\geq Q(s,a)$ dla każdego $a 
 		\in A$. Jeśli został jednak wylosowany krok ekspolarcji, wtedy $\pi(s)$ jest losowo wybraną akcją $a \in A$.
 	\end{enumerate}
 \end{enumerate}
-* - Rozsądnym jest iterowanie w 3 kroku w kolejności odwrotnej do chronologicznej, gdyż ułatwia wykorzystanie wzoru (\ref{eq:G_reccurential})
-\\ Warto zauważyć następujące zalety metody Monte Carlo, których nie zapewniał algorytm programowania dynamicznego:
+\subsubsection{Uwagi}
+Rozsądnym jest iterowanie w kroku 3a) w kolejności odwrotnej do chronologicznej, gdyż ułatwia wykorzystanie wzoru (\ref{eq:G_reccurential})
+\\ Warto zauważyć następujące zalety metody Monte Carlo:
 \begin{enumerate}
-	\item Brak potrzeby wiedzy na tematu modelu
+	\item Brak potrzeby wiedzy na tematu modelu środowiska - t.j. rozkładu prawdopodobieństwa konsekwencji akcji.
 	\item Nie wymaga często nierealnego założenia, iż stan środowiska może zostać sztywno ustalony przez programistę. Wymagana jest jedynie możliwość przeprowadznia pełnych epizodów, co jest nieporównywalnie słabszym założeniem.
-	\item Dobre skalowanie dla dużej przestrzeni stanu. Więcej czasu treningowego jest poświęcane dla stanów, które są często odwiedzane. Z kolei te, które nie pojawiają się prawie wcale - nie marnują dużo czasu w procesie nauki.
+	\item Adekwatne dane - czasu treningowy jest poświęcony dla stanów, które są często odwiedzane. Z kolei te, które nie pojawiają się prawie wcale - nie marnują dużo czasu w procesie nauki.
 \end{enumerate}
+Jak się okazało dla bardziej złożonych środowisk (3 i 4 dodaj refa) - z dużą przestrzanią stanu i akcji powyższy algorytm jest niewystarczający. Należy zauważyć, że bardzo podobne stany nie mają ze sobą w tym algorytmie żadnej korelacji. Gdy przestrzeń jest bardzo duża, ograniczenia czasowe mogą nie pozwolić na eksplorację każdego stanu. Jako przykład problemu niech stanem środowiska będzie kolejka przed skrzyżowaniem. Wtedy dwa bardzo podobne stany $[3,22,72]$ oraz $[3,22,73]$ są od siebie różne i symulacje muszą prześledzić każdy z tych stanów. Zakładając, że wartości każdej zmiennej są ze zbioru $\{0,1,...,100\}$ liczność przestrzeni stanu jest równa aż 1 000 000. Lepiej skalującym rozwiązaniem jest zastosowanie sieci neuronowych zamiast tablic. Zostanie ono przedstawione w następnej sekcji.
 
-
-\section{Mój algorytm który potrzebuje nazwy ale proponuję: Monte Carlo DQN full exploration} \label{learning:DQN_single_agent}
-
-\[Q(s,a) = (1-\alpha)Q(s,a) + \alpha [r + \gamma \max_{a' \in A'} Q(s',a')] \addtag \label{eq:Q_DQN} \]
+\section{Metoda Monte Carlo On-Policy z użyciem sieci neuronowej} \label{learning:DQN_single_agent}
+Podstawową różnicą względem algorytmu Monte Carlo opartego na tablicach jest inny wzór rozwoju wartości. Formuła jest następująca:
+\[Q(s,a) \leftarrow (1-\alpha)Q(s,a) + \alpha [r + \gamma \max_{a' \in A'} Q(s',a')] \addtag \label{eq:Q_DQN} \]
 \begin{itemize}
 	\item $ s,a $ to para stanu i akcji, które pojawiły się w trakcie symulacji
-	\item $Q(s,a)$ to opłacalność podjęcia akcji $a$ w stanie $s$.
 	\item $\alpha$ to stała szybkości uczenia (ang. learning rate)
 	\item $ r $ to nagroda przydzielona podczas symulacji dla akcji $ a $ podjętej w stanie $ s $
 	\item $\gamma \in [0,1]$  to stopa dyskontowa
 	\item $ s' $ to stan do którego doprowadziła akcja $ a $ podjęta w stanie $ s $ podczas symulacji
 	\item $ A' $ to przestrzeń możliwych akcji do podjęcia w stanie $ s' $
 \end{itemize}
-
-Algorytm jest następujący:
+Nie jest ten wzór jednak używany do składowania wartości Q w tablicach, a do generowania danych do sieci neuronowej. Całkowity algorytm jest następujący:
 \begin{enumerate}
-	\item Utwórz sieć neuronową, która na wejście przyjmować będzie stany środowiska. Wyjściowym sygnałem jest opłacalność akcji możliwych do podjęcia w stanie danym na wejściu.
-	\item Zasymuluj pewną ilość epizodów wedle losowej strategii. Zapisuj dane wygenerowane podczas tych epizodów: \label{symulacja_50}
+	\item Dla każdego agenta utwórz sieć neuronową. Będzie ona na wejście przyjmować stany środowiska. Wyjściowym sygnałem jest opłacalność akcji możliwych do podjęcia w stanie danym na wejściu - czyli Q.
+	\item Zasymuluj pewną ilość epizodów wedle losowej strategii. Akcje są wybierane w $\epsilon$ - greedy sposób. Zapisuj dane wygenerowane podczas tych epizodów: \label{symulacja_50}
 	\begin{enumerate}
 		\item Stany środowiska
 		\item Podjęte akcje
 		\item Przydzielone nagrody
 	\end{enumerate}
 \item Na podstawie zapisanych danych utwórz następujące zbiory wykorzystane w sieci neuronowej:
-	\begin{enumerate}
-	\item Zbiór sygnałów wejściowych (x-batch). Pojedynczym elementem tego zbioru jest tablica przedstawiająca stan środowiska.
-	\item Zbiór oczekiwanych sygnałów wyjściowych (y-batch), czyli opłacalności akcji do podjęcia w stanie zadanym na wejścu.
-	Dla elementu odpowiadającego akcji, która została podjęta w symulacji wylicz wartość wedle równania \myref{eq:Q_DQN}. Dla elementów odpowiadających reszcie akcji, które nie zostały podjęte - sieć neuronowa przewiduje nagrodę. 
-	\end{enumerate}
+\begin{enumerate}
+\item Zbiór sygnałów wejściowych (x-batch). Pojedynczym elementem tego zbioru jest tablica przedstawiająca stan środowiska.
+\item Zbiór oczekiwanych sygnałów wyjściowych (y-batch), czyli opłacalności akcji do podjęcia w stanie zadanym na wejścu.
+Dla elementu odpowiadającego akcji, która została podjęta w symulacji wylicz wartość wedle równania \myref{eq:Q_DQN}. Dla elementów odpowiadających pozostałym akcją, które nie zostały podjęte - sieć neuronowa przewiduje nagrodę. 
+\end{enumerate}
 \item Podziel powyższe zbiory na segment treningowy i walidacyjny.
 \item Trenuj sieć neuronową do momentu, gdy wyniki dla zbioru walidacyjnego się polepszają.
 \item Jeśli spełniony jest warunek stopu - przerwij algorytm. W przeciwnym razie przejdź do \ref{symulacja_50}.
-	
+
+\subsection{Wariant z fazą żółtych świateł}
+W momencie fazy żółtych świateł agent podejmuje zawsze akcję "żółte". Nie potrzebne jest zatem wyliczanie wartości Q dla tej wymuszonej akcji. Aby nie obligować sieci neuronowej do aproksymacji nieistotnych wartości zostaną podjęte następujące kroki.
+Jeśli dana jest wiedza na temat długości fazy żółtych świateł należy zastąpić wzór \myref{eq:Q_DQN} poniższymi formułami. Niech faza żółtych świateł trwa $k$ interwałów czasowych, wted: \\
+dla akcji a utrzymania obecnej fazy:
+\[Q(s,a) \leftarrow (1-\alpha)Q(s,a) + \alpha [r + \gamma \max_{a' \in A'} Q(s',a')], \addtag \label{eq:Q_DQN_I} \]
+dla akcji a zmiany obecnej fazy:
+\[Q(s,a) \leftarrow  (1-\alpha)Q(s,a) + \alpha [\gamma^{k} r + \gamma^{k+1} \max_{a' \in A'} Q(s',a')]. \addtag \label{eq:Q_DQN_II} \]
+
 \end{enumerate}
 
 
-
-\section{Mój algorytm który potrzebuje nazwy ale proponuję: Monte Carlo DQN} \label{learning:DQN_single_agent}
-Poniższy algorytm jest oparty o funkcję Q określającą opłacalność akcji a w stanie s. Wartości funkcji Q są zmieniane w czasie wraz z dalszymi symulacjami i coraz większą wiedzą o środowisku. Algorytm jest następujący:
-\begin{enumerate}
-	\item Utwórz sieć neuronową, która na wejście przyjmować będzie stan środowiska. Wyjściowym sygnałem jest Q(s,a) - opłacalność akcji możliwych do podjęcia w stanie danym na wejściu.
-	\item Zasymuluj pewną ilość epizodów. Akcje są wybierane w $\epsilon$ - greedy sposób. Zapisuj dane wygenerowane podczas tych epizodów: \label{symulacja_50}
-	\begin{enumerate}
-		\item Stany środowiska
-		\item Podjęte akcje
-		\item Przydzielone nagrody
-	\end{enumerate}
-	\item Na podstawie zapisanych danych utwórz następujące zbiory danych wykorzystane w sieci neuronowej:
-	\begin{enumerate}
-		\item Zbiór sygnałów wejściowych (x-batch). Pojedynczym elementem tego zbioru jest tablica przedstawiająca stan środowiska.
-		\item Zbiór oczekiwanych sygnałów wyjściowych (y-batch), czyli opłacalności akcji do podjęcia w stanie zadanym na wejścu.
-		Dla elementu odpowiadającego akcji, która została podjęta w symulacji wylicz wartość wedle równania \myref{eq:Q_DQN}. Dla elementów odpowiadających reszcie akcji, które nie zostały podjęte - sieć neuronowa przewiduje nagrodę. 
-	\end{enumerate}
-	\item Podziel powyższe zbiory na segment treningowy i walidacyjny.
-	\item Trenuj sieć neuronową do momentu, gdy wyniki dla zbioru walidacyjnego się polepszają.
-	\item Jeśli spełniony jest warunek stopu - przerwij algorytm. W przeciwnym razie przejdź do \ref{symulacja_50}.
-	
-\end{enumerate}
-Zmiana wartości funkcji Q w trakcie algorytmu jest opisana poniższymi wzorami.
-Dla akcji a utrzymania obecnej fazy:
-\[Q(s,a) \leftarrow (1-\alpha)Q(s,a) + \alpha [r + \gamma \max_{a' \in A'} Q(s',a')] \addtag \label{eq:Q_DQN} \]
-Dla akcji a zmiany obecnej fazy:
-\[Q(s,a) \leftarrow  (1-\alpha)Q(s,a) + \alpha [\gamma^{k} r + \gamma^{k+1} \max_{a' \in A'} Q(s',a')] \addtag \label{eq:Q_DQN_II} \]
-\begin{itemize}
-	\item $ s,a $ to para stanu i akcji, które pojawiły się w trakcie symulacji
-	\item $Q(s,a)$ to opłacalność podjęcia akcji $a$ w stanie $s$.
-	\item $ r $ to nagroda przydzielona podczas symulacji dla akcji $ a $ podjętej w stanie $ s $
-	\item $ s' $ to stan do którego doprowadziła akcja $ a $ podjęta w stanie $ s $ podczas symulacji
-	\item $ A' $ to przestrzeń możliwych akcji do podjęcia w stanie $ s' $
-	\item $\alpha$ to stała szybkości uczenia (ang. learning rate)
-	\item $\gamma \in [0,1]$  to stopa dyskontowa
-	\item k to długość fazy żółtych świateł
-\end{itemize}
-
-
-
-
-
-
-
+\bibliographystyle{plain}
 
 \bibliography{refs}
 \end{document}

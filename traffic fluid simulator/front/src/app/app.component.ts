@@ -48,7 +48,7 @@ export class AppComponent {
       // let net = 'assets/densities/polibuda_learnt_70.json'
       // let net = 'assets/densities/politechnika_random_now0.json'
       // let net = 'assets/densities/politechnika_base.json'
-      // let net = 'assets/densities/politechnika_base_from_backend.json'
+      let net = 'assets/densities/politechnika_base_from_backend.json'
 
 
       // let net = 'assets/densities/net14_test_batching_4.json';

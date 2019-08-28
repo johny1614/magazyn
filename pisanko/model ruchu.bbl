@@ -1,0 +1,104 @@
+\begin{thebibliography}{10}
+
+\bibitem{ue2008}
+Plan działania na rzecz wdrażania inteligentnych systemów transportowych w
+  europie.
+\newblock {\em Komisja Wspólnot Europejskich, KOM}, 886, 2008.
+
+\bibitem{ue2017}
+Study on urban mobility – assessing and improving the accessibility of urban
+  areas.
+\newblock {\em Komisja Wspólnot Europejskich, KOM}, 886, 2017.
+
+\bibitem{mesoscopic2}
+Moshe Ben-Akiva, Michel Bierlaire, Didier Burton, Haris~N Koutsopoulos, and
+  Rabi Mishalani.
+\newblock Network state estimation and prediction for real-time traffic
+  management.
+\newblock {\em Networks and spatial economics}, 1(3-4):293--318, 2001.
+
+\bibitem{CompareModels}
+Samia Boubaker, Ferid Rehimi, and Adel Kalboussi.
+\newblock Comparative analysis of microscopic models of road traffic data.
+\newblock In {\em Logistics (LOGISTIQUA), 2011 4th International Conference
+  on}, pages 474--478. IEEE, 2011.
+
+\bibitem{mesoscopic}
+Wilco Burghout, Haris~N Koutsopoulos, and Ingmar Andreasson.
+\newblock A discrete-event mesoscopic traffic simulation model for hybrid
+  traffic simulation.
+\newblock In {\em Intelligent Transportation Systems Conference, 2006. ITSC'06.
+  IEEE}, pages 1102--1107. IEEE, 2006.
+
+\bibitem{CTM}
+Carlos~F Daganzo.
+\newblock The cell transmission model, part ii: network traffic.
+\newblock {\em Transportation Research Part B: Methodological}, 29(2):79--93,
+  1995.
+
+\bibitem{gottlich}
+Simone G{\"o}ttlich, Michael Herty, and Ute Ziegler.
+\newblock Modeling and optimizing traffic light settings in road networks.
+\newblock {\em Computers \& operations research}, 55:36--51, 2015.
+
+\bibitem{machineLearningClassification}
+Zhenyu Guan, Liangxu Bian, Tao Shang, and Jianwei Liu.
+\newblock When machine learning meets security issues: A survey.
+\newblock In {\em 2018 IEEE International Conference on Intelligence and Safety
+  for Robotics (ISR)}, pages 158--165. IEEE, 2018.
+
+\bibitem{helbing2001master}
+Dirk Helbing, Ansgar Hennecke, Vladimir Shvetsov, and Martin Treiber.
+\newblock Master: macroscopic traffic simulation based on a gas-kinetic,
+  non-local traffic model.
+\newblock {\em Transportation Research Part B: Methodological}, 35(2):183--211,
+  2001.
+
+\bibitem{multilevel}
+Pushpendra Kumar, Rochdi Merzouki, Blaise Conrard, Vincent Coelen, and
+  Belkacem~Ould Bouamama.
+\newblock Multilevel modeling of the traffic dynamic.
+\newblock {\em IEEE Transactions on Intelligent Transportation Systems},
+  15(3):1066--1082, 2014.
+
+\bibitem{lwr}
+Michael~James Lighthill and Gerald~Beresford Whitham.
+\newblock On kinematic waves ii. a theory of traffic flow on long crowded
+  roads.
+\newblock {\em Proc. R. Soc. Lond. A}, 229(1178):317--345, 1955.
+
+\bibitem{liczbaPojazdowPolska}
+polskawliczbach.pl.
+\newblock Samochody osobowe w polsce w latach 2003-2016 (źródło: Gus).
+\newblock \url{http://www.polskawliczbach.pl/#transport-i-komunikacja}, 2019
+  (accessed March 3, 2019).
+
+\bibitem{liczbaPojazdowSwiat}
+Statista.
+\newblock Number of passenger cars and commercial vehicles in use worldwide
+  from 2006 to 2015 in (1,000 units).
+\newblock
+  \url{https://www.statista.com/statistics/281134/number-of-vehicles-in-use-worldwide/},
+  2019 (accessed March 3, 2019).
+
+\bibitem{reinforcementBook}
+Richard~S Sutton, Andrew~G Barto, and Ronald~J Williams.
+\newblock Reinforcement learning is direct adaptive optimal control.
+\newblock {\em IEEE Control Systems Magazine}, 12(2):19--22, 1992.
+
+\bibitem{rankingTomTom}
+TomTom.
+\newblock Tomtom traffic index measuring congestion worldwide).
+\newblock
+  \url{https://www.tomtom.com/en_gb/trafficindex/list?citySize=ALL&continent=ALL&country=ALL},
+  2019 (accessed March 3, 2019).
+
+\bibitem{vu2017high}
+Vinh~An Vu and Gary Tan.
+\newblock High-performance mesoscopic traffic simulation with gpu for large
+  scale networks.
+\newblock In {\em Proceedings of the 21st International Symposium on
+  Distributed Simulation and Real Time Applications}, pages 127--135. IEEE
+  Press, 2017.
+
+\end{thebibliography}

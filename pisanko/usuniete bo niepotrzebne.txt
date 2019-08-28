@@ -1,0 +1,83 @@
+ Sam makroskopowy model ruchu zostanie przedstawiony w rozdziale X. Jest to model ciągły.
+ Pożądanym jest dyskretny model ruchu drogowego ze względu na łatwość implementacji komputerowej.
+ Zostanie zatem przedstawiona w sekcji X.Y 
+ 
+ 
+ 
+ Chociaż gęstość ruchu jest często uznawana za zmienną stanową \ref{gottlich}, 
+ to używanie ilości pojazdów jako zmiennej stanowej nie jest błędem i taki pomysł 
+ został przedstawiony w TODOCYTAT CMT. Należy jednak zwrócić uwagę, że ilość pojazdów 
+ na jednym odcinku wcale nie musi być całkowita.  
+
+
+ Istotną uwagą w tym miejscu jest zaznaczenie, iż rzeka zazwyczaj
+ posiada pewien spadek, który zapewnia ruch cieczy ze źródła do ujścia.
+ 
+ Ruch makroskopowy zdefiniowany przez równanie (\ref{eq:main_diff_eq}) z kolei
+ odnosi się do rzeki która jest na całym rozważanym odcinku pozioma. 
+ W takim przypadku de facto nie ma zdefiniowanego zwrotu ruchu.
+ 
+ 
+ 
+ Dyskretny charakter modelu CTM obliguje do określenia siatki czasowej i przestrzennej. 
+ Dla par czasu i miejsc należących do tych dwóch siatek będą określane zmienne stanu. 
+ \\ \\ \textbf{Siatka czasowa} jest zdefiniowana jako skończony ciąg liczb naturalnych:
+\[(0,1,...,K). \addtag \]
+Niech będzie ustalona droga $e$, która jest odcinkiem $[0,L_e]$. Droga zostaje podzielona na $L+1$ odcinków o równej długości $\Delta x=\frac{L_e}{L+1}$. \textbf{Siatka przestrzenna} drogi to ciąg odcinków:
+\[(b_l)_{l=0}^{L}=[l\Delta x,(l+1)\Delta x]\]
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{siatka_przestrzenna}
+	\caption{Siatka przestrzenna}
+	\label{fig:siatka_przestrzenna}
+\end{figure}
+
+
+
+
+\section{Programowanie dynamiczne}
+Termin programowania dynamicznego odnosi się do algorytmów wyliczających optymalne strategie procesu decyzyjnego Markowa w przypadku posiadanej całkowitej wiedzy na temat modelu środowiska\cite{reinforcementBook}. Środowisko nie musi być w pełni deterministyczne tzn. nie za każdym razem akcja przeprowadzana ze stanu $s_k$ musi w efekcie doprowadzić do tego samego stanu $s_{k+1}$. Jednak w takim przypadku musi być znany rozkład prawdopodobieństwa przydzielania nowego stanu na podstawie poprzedniego i właśnie podjętej przez agenta akcji. Dodatkowo wymagana jest możliwość ustalenia dowolnego stanu w trakcie uczenia. \\ Początkowa strategia $\pi(s)$ jest dowolna, najczęściej losowa.
+Przedstawiony algorytm jest podzielony na 2 części. Część predykcji(prediction) oraz kontroli (control). 
+\\\textbf{Proces predykcji} ma za zadanie ustalenie wartości stanów na podstawie ustalonej strategii. Jej algorytm jest następujący:
+\begin{enumerate}
+	\item{Przyjmij daną z góry $\pi$ jako strategię podejmowania akcji}
+	\item{Zainicjuj tablicę wartości stanów $V(s)$. Dla wszystkich możliwych stanów $s \in S$ przyjmij wartość $0$.}
+	\item{$\Delta=0$}
+	\item{Dla każdego $s \in S$:}
+	\begin{enumerate}
+		\item $v=V(s)$
+		\item $V(s)=\sum_{s'}Pr(s'|s,\pi(s))[r+\gamma V(s')]$
+		\item $\Delta = max(\Delta,|v-V(s)|)$
+	\end{enumerate}
+	\item Jeśli $\Delta< \theta$ to wróć do 3
+	\item Zwróć $V(s)$ jako tablicę wartości stanów $V_{\pi}(s)$ dla strategii $\pi$.
+\end{enumerate}
+Parametr $\theta \geq 0$ definiuje w kroku 5. moment stopu. \\
+Wartość $Pr(s',s,\pi(s))$ to prawdopodobieństwo, że akcja $\pi(s)$ podjęta w stanie $s$ doprowadzi do stanu $s'$. Z kolei $r$ jest właśnie otrzymaną nagrodą.
+\\ Algorytm \textbf{kontroli} ma za zadanie odnaleźć bardziej optymalną strategię niż dotychczas. Jako argument przyjmuje on wyliczoną właśnie tablicę wartości stanów $V_{\pi}(s)$. Wprowadzona zostaje macierz $Q_{\pi}(s,a)$. Jest ona zdefiniowana następująco:
+\begin{equation}
+\begin{split}
+Q_{\pi}(s,a) &= E[R_{t+1}+\gamma v_{\pi}(S_{t+1}) | S_t=s, A_t=a]  \\
+&= \sum_{s'}Pr(s'|s,a)[r+\gamma V_{pi}(s')] 
+\end{split}
+\end{equation}
+Oczywistym minusem tego algorytmu jest konieczność przeiterowania wszystkich stanów. W przypadku gdy stanów jest bardzo dużo algorytm staje się nieopłacalny.
+Macierz przedstawia wartość akcji $a$ podjętej w stanie $s$. Algorytm kontroli jest następujący:
+\begin{enumerate}
+	\item{Przyjmij wyliczoną przez algorytm predykcji macierz wartości stanów $V_{\pi}(s)$}
+	\item{Zainicjuj tablicę wartości stanów $V(s)$. Dla wszystkich możliwych stanów $s \in S$ przyjmij wartość $0$.}
+	\item{$policy\_stable=false$}
+	\item{Dla każdego $s \in S$:}
+	\begin{enumerate}
+		\item $old\_action=\pi(s)$
+		\item $\pi(s)=argmax_{a\in A_s} \sum_{s'}Pr(s'|s,a)[r+\gamma V(s')]$
+		\item Jeśli $old\_action \neq \pi(s)$ to $policy\_stable = true$
+	\end{enumerate}
+	\item Jeśli $policy\_stable=true$ to zwróć strategię $\pi(s)$.
+\end{enumerate}
+
+
+
+
+
+

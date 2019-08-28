@@ -52,11 +52,13 @@ class Env:
         for agent in self.agents:
             agent.starting_actual_phase = agent.actual_phase
         self.A.append(start_A())
+        # self.x[0] = [i for i in range(40)] # w envie dodac!
         self._pass_actions_to_agents(actions)
         self._modify_A()
         # self.update_global_memory_lights()
         Globals().time += 1
         self._execute_phase()
+        # self.x[self.t] = [i for i in range(40)] # w envie dodac!
         self.save_motions()
         # rewards = self.count_rewards_negative()
         rewards = self.count_rewards()

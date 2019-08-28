@@ -101,8 +101,8 @@ class BaseClass:
         self.y_batch_history = []
         self.nn_x_batch_history = []
         self.nn_y_batch_history = []
-        # self.u_value = 1
-        self.u_value = 5.159780351999999
+        self.u_value = 1
+        # self.u_value = 5.159780351999999
         self.cars_out_memory = []
         self.cars_in_memory = []
 

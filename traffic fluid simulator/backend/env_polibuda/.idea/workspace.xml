@@ -5,23 +5,52 @@
   </component>
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/temp_nn_drawing.py" line="63" />
-    <bookmark url="file://$PROJECT_DIR$/Env.py" line="86" />
+    <bookmark url="file://$PROJECT_DIR$/Env.py" line="88" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3bc62bd-0327-4a90-b067-71b6ea844ee3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../obrazy.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../obrazy.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/density.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/density2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Wyliczenia.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Wyliczenia.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../env_16/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../env_16/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/runnerService.data.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/runnerService.data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/runnerService.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/runnerService.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/runner_seq.data.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/runner_seq.data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/runner_seq.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/runner_seq.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/services/runnerService.data.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/services/runnerService.data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/services/runnerService.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/services/runnerService.meta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Env.py" beforeDir="false" afterPath="$PROJECT_DIR$/Env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_cars_out0.png" beforeDir="false" afterPath="$PROJECT_DIR$/plot_cars_out0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_rewards0.png" beforeDir="false" afterPath="$PROJECT_DIR$/plot_rewards0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_rewards_mean0.png" beforeDir="false" afterPath="$PROJECT_DIR$/plot_rewards_mean0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runner_seq.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner_seq.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runner_start.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner_start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/agentFactory.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/agentFactory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/globals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/runnerService.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/runnerService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_files/model-agent0.h5" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/model-agent0.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_files/model-agent1.h5" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/model-agent1.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_files/model-agent2.h5" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/model-agent2.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_files/model-agent3.h5" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/model-agent3.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_files/x_batch_agent_0_.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/x_batch_agent_0_.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_files/x_batch_agent_1_.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/x_batch_agent_1_.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_files/x_batch_agent_2_.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/x_batch_agent_2_.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_files/x_batch_agent_3_.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/x_batch_agent_3_.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_files/y_batch_agent_0_.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/y_batch_agent_0_.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_files/y_batch_agent_1_.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/y_batch_agent_1_.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_files/y_batch_agent_2_.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/y_batch_agent_2_.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_files/y_batch_agent_3_.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/y_batch_agent_3_.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../front/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/polibuda_learnt_0.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/polibuda_learnt_0.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/polibuda_learnt_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/polibuda_learnt_1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/polibuda_learnt_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/polibuda_learnt_2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/polibuda_learnt_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/polibuda_learnt_3.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/polibuda_learnt_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/polibuda_learnt_4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/polibuda_learnt_5.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/polibuda_learnt_5.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/polibuda_learnt_6.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/polibuda_learnt_6.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/polibuda_learnt_7.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/polibuda_learnt_7.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/polibuda_learnt_8.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/polibuda_learnt_8.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/polibuda_learnt_9.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/polibuda_learnt_9.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/politechnika_random_now0.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/politechnika_random_now0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/app/canvas.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/canvas.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/politechnika_base_from_backend.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/politechnika_base_from_backend.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../front/src/assets/nets/net_polibuda.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/nets/net_polibuda.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,63 +65,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/services/agentFactory.py">
+        <entry file="file://$PROJECT_DIR$/density.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="377">
+              <caret line="31" column="10" lean-forward="true" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/open_street_base_wroblewskiego.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/runner_seq.py">
+        <entry file="file://$PROJECT_DIR$/density2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res_nocka_mamy_7i4.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="403" column="11" lean-forward="true" selection-start-line="403" selection-start-column="11" selection-end-line="403" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Env.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="66" selection-start-line="66" selection-end-line="66" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/ExportData.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="15" column="103" lean-forward="true" selection-start-line="15" selection-start-column="103" selection-end-line="15" selection-end-column="103" />
             </state>
           </provider>
         </entry>
@@ -108,8 +93,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>u_va</find>
-      <find>33, 30</find>
       <find>(2, 0</find>
       <find>(43,</find>
       <find>save</find>
@@ -133,11 +116,13 @@
       <find>count_ca</find>
       <find>get</find>
       <find>include</find>
-      <find>, 3</find>
       <find>10, 3)</find>
       <find>, 3)</find>
       <find>u_v</find>
       <find>przed</find>
+      <find>, 3</find>
+      <find>32</find>
+      <find>akcje pod</find>
     </findStrings>
     <replaceStrings>
       <replace>actual_phase</replace>
@@ -150,8 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/model/Phase.py" />
-        <option value="$PROJECT_DIR$/model/SaveData.py" />
         <option value="$PROJECT_DIR$/Utils.py" />
         <option value="$PROJECT_DIR$/services/dryRunnerService.py" />
         <option value="$PROJECT_DIR$/services/parser.py" />
@@ -183,7 +166,6 @@
         <option value="$PROJECT_DIR$/Test/Test_batching.py" />
         <option value="$PROJECT_DIR$/res.txt" />
         <option value="$PROJECT_DIR$/x.py" />
-        <option value="$PROJECT_DIR$/services/runnerService.py" />
         <option value="$PROJECT_DIR$/runner_new.py" />
         <option value="$PROJECT_DIR$/nn_trainer.py" />
         <option value="$PROJECT_DIR$/my_runner.py" />
@@ -195,20 +177,23 @@
         <option value="$PROJECT_DIR$/env_settings.py" />
         <option value="$PROJECT_DIR$/runner_learnt.py" />
         <option value="$PROJECT_DIR$/model/Agent.py" />
-        <option value="$PROJECT_DIR$/services/agentFactory.py" />
         <option value="$PROJECT_DIR$/random_epochs_generator.py" />
-        <option value="$PROJECT_DIR$/services/globals.py" />
-        <option value="$PROJECT_DIR$/runner_start.py" />
-        <option value="$PROJECT_DIR$/Env.py" />
+        <option value="$PROJECT_DIR$/services/agentFactory.py" />
         <option value="$PROJECT_DIR$/runner_seq.py" />
+        <option value="$PROJECT_DIR$/services/globals.py" />
+        <option value="$PROJECT_DIR$/Env.py" />
+        <option value="$PROJECT_DIR$/services/runnerService.py" />
+        <option value="$PROJECT_DIR$/runner_start.py" />
+        <option value="$PROJECT_DIR$/density.py" />
+        <option value="$PROJECT_DIR$/density2.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1000" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -216,22 +201,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="env_4_7" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="env_4_7" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="static_files" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -248,6 +217,22 @@
               <item name="env_polibuda" type="b2602c69:ProjectViewProjectNode" />
               <item name="env_polibuda" type="462c0819:PsiDirectoryNode" />
               <item name="Test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="env_4_7" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="env_4_7" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="static_files" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -466,9 +451,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.75581396" visible="true" weight="0.21860096" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.75581396" visible="true" weight="0.14488935" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.24418604" side_tool="true" weight="0.14383562" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -479,7 +464,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49947312" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.71443623" visible="true" weight="0.33333334" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.71443623" visible="true" weight="0.35536295" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.49209693" side_tool="true" weight="0.33586133" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49947312" weight="0.5438787" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32936078" />
@@ -643,7 +628,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Env.py</url>
-          <line>93</line>
+          <line>95</line>
           <option name="timeStamp" value="510" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -668,12 +653,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/runner_seq.py</url>
-          <line>31</line>
+          <line>39</line>
           <option name="timeStamp" value="534" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/runner_seq.py</url>
-          <line>24</line>
+          <line>32</line>
           <option name="timeStamp" value="535" />
         </line-breakpoint>
       </breakpoints>
@@ -857,16 +842,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/model/SaveData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/Action.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/Memory.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -978,16 +953,6 @@
     <entry file="file://$PROJECT_DIR$/docs/akcje.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/runner_all.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="127" column="33" selection-end-line="144" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/LearningState.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -1005,19 +970,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/runnerService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/siec z agentami.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/siec z agentami.png" />
     <entry file="file://$PROJECT_DIR$/Utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1072,26 +1025,6 @@
     <entry file="file://$PROJECT_DIR$/docs/siec.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/runner_start.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2108">
-          <caret line="124" column="71" selection-start-line="124" selection-start-column="71" selection-end-line="124" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/globals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="104" column="40" selection-start-line="104" selection-start-column="40" selection-end-line="104" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/random_epochs_generator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1119,9 +1052,12 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/open_street_base.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/ExportData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="153">
           <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
@@ -1129,40 +1065,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/runner_all.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="109" column="16" lean-forward="true" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Env.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        <state relative-caret-position="113">
+          <caret line="57" column="44" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/runner_seq.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/open_street_base.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res_nocka_mamy_7i4.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="403" column="11" lean-forward="true" selection-start-line="403" selection-start-column="11" selection-end-line="403" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/agentFactory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+        <state relative-caret-position="493">
+          <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
@@ -1171,6 +1097,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/open_street_base_wroblewskiego.png">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runner_seq.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/globals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1649">
+          <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/runnerService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res_nocka_mamy_7i4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="36" selection-start-line="12" selection-end-line="12" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runner_start.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="113" column="13" selection-start-line="113" selection-start-column="13" selection-end-line="113" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/density.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="31" column="10" lean-forward="true" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/density2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" column="103" lean-forward="true" selection-start-line="15" selection-start-column="103" selection-end-line="15" selection-end-column="103" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

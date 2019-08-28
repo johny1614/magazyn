@@ -91,6 +91,7 @@ export class CanvasService {
 
   drawLine(line: Line) {
     this.ctx.moveTo(line.startPoint.x, line.startPoint.y);
+    this.ctx.lineWidth=3
     for (let i = 0; i < line.sections.length; i++) {
       const section = line.sections[i];
       this.ctx.moveTo(section.startPoint.x, section.startPoint.y);
