@@ -1,5 +1,4 @@
 import random
-from statistics import mean
 from typing import List
 import attr
 import numpy as np
@@ -19,17 +18,16 @@ class SmartAgent(Agent):
 
     def __attrs_post_init__(self):
         if self.model == 0:
-            l_rate = 0.001
+            l_rate = 0.01
             layers = [10]
-            regularizers_ = [0.2, 0.2, 0.2]
             activation = 'relu'
             self.model = self._build_model(layers=layers, activation=activation, l_rate=l_rate)
 
-    def _build_model(self, layers, activation='relu', l_rate=0.01):
+    def _build_model(self, layers, activation, l_rate):
         model = Sequential()
         for i, nodes in enumerate(layers):
             if i == 0:
-                model.add(Dense(nodes, input_dim=2, activation='linear'))
+                model.add(Dense(nodes, input_dim=2, activation=activation))
             else:
                 model.add(Dense(nodes))
                 model.add(Activation(activation))
@@ -102,20 +100,6 @@ class SmartAgent(Agent):
                     return int(a)
         return int(action)  # sometimes jump to int64
 
-    def save_batch(self):
-        x_batch = []
-        y_batch = []
-        for memory in self.memories:
-            if memory.action == 'orange':
-                continue
-            state = memory.state.to_learn_array()
-            y = memory.reward
-            x_batch.append(state[0])
-            y_batch.append(y)
-            if self.index == 0:
-                Globals().x_batch.append(state[0])
-                Globals().y_batch.append(y)
-
     def remember(self, densities, reward):
         state = self.local_state
         action = self.action
@@ -124,22 +108,3 @@ class SmartAgent(Agent):
         times = {'old': Globals().time - 1, 'new': Globals().time}
         memory = Memory(state=state, action=action, new_state=new_state, reward=reward, times=times)
         self.memories.append(memory)
-
-    def last_epoch_batch(self):
-        return self.memories[-90:]
-
-    def reshape_rewards(self):
-        for i in range(len(self.memories) - 3):
-            memory = self.memories[i]
-            if not memory.reshapedReward:
-                memory.reshapedReward = True
-                future_rewards = [mem.reward for mem in self.memories[i + 1:i + 3]]  # 2 next rewards
-                memory.reward += sum(future_rewards)
-                self.memories[i] = memory
-                # if 3 < memory.state.densities[0] < 5 and 9 < memory.state.densities[
-                #     1] < 15 and memory.action == 1 and memory.state.starting_actual_phase == 1:
-                #     print(f'state {memory.state.densities[0]},{memory.state.densities[1]} a:{memory.action}')
-                #     print('reww', memory.reward)
-                #     rew powinno byc przynajmniej 9!
-                # else:
-                #     print(f'state {memory.state.densities[0]},{memory.state.densities[1]} a:{memory.action}')

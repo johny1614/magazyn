@@ -31,47 +31,22 @@ def draw_predictions(no):
     # os x to zerowe den os y to pierwsze den
     plt.plot([den[0] for den in dots_action_0], [den[1] for den in dots_action_0], 'ro')
     plt.plot([den[0] for den in dots_action_1], [den[1] for den in dots_action_1], 'go')
-    # plt.plot([den[0] for den in dots_action_orange], [den[1] for den in dots_action_orange], 'bo')
-    print("draw pred!")
     plt.savefig('predictions' + str(no) + '.png')
     plt.close()
 
-runs = [0]
-for run in runs:
-    Globals().pred_plot_memory = []
-    Globals().run_no = run
-    results = []
-    timeToLearn = 100
-    startTime = timer()
-    generate_random_epochs(learntAgents=False, epochs=range(10))  # bierze nowych agentow i tu jest 'is'
-    train(learntAgents=False)
-    run_learnt_greedy()
-    lurns=0
-    while timer() - startTime < timeToLearn:
-        print('czas', timer() - startTime)
-        generate_random_epochs(learntAgents=True, epochs=range(50))
-        train(max_time_learn=30)
-        result = run_learnt_greedy()
-        print('result!',result)
-        results.append(result)
-        draw_predictions(lurns)
-        lurns+=1
-    #
-    #
-    # # rewards_mean
-    # plt.plot([res[0] for res in results])
-    # plt.title('Średnia wszystkich nagród - akcje wedle wyuczonej strategii')
-    # plt.savefig('rewards_mean' + str(run) + '.png')
-    # plt.close()
-    #
-    # # rewards
-    # plt.plot([res[1] for res in results])
-    # plt.title('Suma nagród - akcje wedle wyuczonej strategii')
-    # plt.savefig('rewards' + str(run) + '.png')
-    # plt.close()
-    #
-    # # cars_out
-    # plt.plot([res[2] for res in results])
-    # plt.title('Ilość pojazdów opuszczających układ - akcje wedle wyuczonej strategii')
-    # plt.savefig('cars_out' + str(run) + '.png')
-    # plt.close()
+Globals().pred_plot_memory = []
+results = []
+timeToLearn = 60
+startTime = timer()
+generate_random_epochs(learntAgents=False, epochs=range(10))  # bierze nowych agentow i tu jest 'is'
+train(learntAgents=False)
+run_learnt_greedy()
+lurns=0
+while timer() - startTime < timeToLearn:
+    print('czas', timer() - startTime)
+    generate_random_epochs(learntAgents=True, epochs=range(50))
+    train(max_time_learn=30)
+    result = run_learnt_greedy()
+    results.append(result)
+    draw_predictions(lurns)
+    lurns+=1

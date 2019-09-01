@@ -6,7 +6,7 @@ from services.agentFactory import get_LearnSmartAgents
 from services.globals import Globals
 
 def run_learnt_greedy(saveJson=False):
-    # saveJson = True
+    saveJson = True
     model_file_names = ['static_files/model-agent0.h5']
     agents = get_LearnSmartAgents(model_file_names)
     # print('weights!',agents[0].model.weights[0])

@@ -4,12 +4,11 @@ import numpy as np
 import env_settings
 from Env import Env
 from env_settings import max_time
+from model.Action import ActionInt
 from model.ExportData import ExportData
 from model.SmartAgent import SmartAgent
 from services.agentFactory import get_SmartAgents, get_LearnSmartAgents
 from services.globals import Globals
-
-ActionInt = int
 
 
 def epoch(agents, u=env_settings.u_all_2):
@@ -23,8 +22,7 @@ def epoch(agents, u=env_settings.u_all_2):
     return env
 
 
-def generate_random_epochs(learntAgents=False, save_front_json=False, epochs=range(1), plotting=False, reshaping=False):
-    # save_front_json = True
+def generate_random_epochs(learntAgents=False, save_front_json=False, epochs=range(1), plotting=False):
     cars_outs = []
     rewards = []
     rewards_mean = []
@@ -33,20 +31,8 @@ def generate_random_epochs(learntAgents=False, save_front_json=False, epochs=ran
     else:
         agents: List[SmartAgent] = get_SmartAgents()
     for e in epochs:
-        # print('epoch!!!!!',e)
         Globals().epsilon = 1
-        env: Env = epoch(agents, u=env_settings.u_all_4)
-        if reshaping:
-            for agent in env.agents:
-                agent.reshape_rewards()
-        action_0_rewards = [net.rewards[0] for net in env.global_memories if net.actions == [0]]
-        action_1_rewards = [net.rewards[0] for net in env.global_memories if net.actions == [1]]
-        # print('mean 0', np.mean(action_0_rewards))
-        # print('mean 1', np.mean(action_1_rewards))
-        # if np.mean(action_0_rewards) > np.mean(action_1_rewards):
-        #     print('kupa')
-        # else:
-        #     print('ok')
+        env: Env = epoch(agents, u=env_settings.u_all_5)
         if save_front_json:
             exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
                                     netName='net11',
@@ -63,15 +49,6 @@ def generate_random_epochs(learntAgents=False, save_front_json=False, epochs=ran
             cars_outs.append(env.cars_out)
             rewards.append(env.count_summed_rewards()[0])
             rewards_mean.append(env.count_summed_rewards()[1])
-
-        action_0_rewards = [net.rewards[0] for net in env.global_memories if net.actions == [0]]
-        action_1_rewards = [net.rewards[0] for net in env.global_memories if net.actions == [1]]
-        # print('mean 0', np.mean(action_0_rewards))
-        # print('mean 1', np.mean(action_1_rewards))
-        # if np.mean(action_0_rewards)>np.mean(action_1_rewards):
-        #     print('kupa')
-        # else:
-        #     print('ok')
 
     for i in range(len(agents)):
         filename = 'static_files/x_batch_agent_' + str(i) + '.txt'

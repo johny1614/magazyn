@@ -26,7 +26,7 @@ class Agent:
     action = None
 
     @property
-    def local_action_space(self) -> Tuple[ActionInt]:
+    def local_action_space(self) -> List[ActionInt]:
         wait_action = ['orange']
         light_Actions = [0, 1]
         if self.phase_duration >= self.orange_phase_duration:

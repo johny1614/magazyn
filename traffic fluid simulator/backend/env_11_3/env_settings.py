@@ -7,45 +7,24 @@ sections_of_roads = [
 ]
 not_last_sections = [0,1,2,4]
 
-
 def start_A():
     # it is a red light everywhere A matrix
     A = np.zeros((6, 6))
     for cord in freeMovementCoordinates + stayCoordinates:
         A[cord] = 1
     return A
-
-
 max_time = 90
-
-
 def get_x():
     x_size = 6
     x = [x_size * [0]]
     return x
-def get_u_under_15_random():
-    random_numbers=[]
-    for i in range(90):
-        random_numbers.append(np.random.random()*15)
-    return np.array([random_numbers]).transpose()
-
-
-env_settings_A_storage = [[]] * max_time
-
 u_v1 = np.array([[4, 4, 4, 60, 4, 4, 4, 4, 4, 4, 4, 60, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 60, 4, 4, 4, 4, 4, 4, 4,
                   4, 4, 4, 60, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 60, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 60, 4, 4,
                   4, 4, 4, 4, 60, 4, 4,
                   4, 4, 4, 4, 60, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 60, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
                   60, 4, 4, 4, 4, 4, 4,
                   4, 4, 4, 4, 4, 4, 4]]).transpose()
-
 u_all_2 = np.array([[2] * 90]).transpose()
-
-u_all_4 = np.array([[4] * 90]).transpose()
-
-
 u_all_9 = np.array([[9] * 90]).transpose()
-
-u_under_15_random = get_u_under_15_random()
-
-u = np.array([[20] * 90]).transpose()
+u_all_5 = np.array([[7] * 90]).transpose()
+u = np.array([[7] * 90]).transpose()
