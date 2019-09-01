@@ -17,6 +17,12 @@ Moshe Ben-Akiva, Michel Bierlaire, Didier Burton, Haris~N Koutsopoulos, and
   management.
 \newblock {\em Networks and spatial economics}, 1(3-4):293--318, 2001.
 
+\bibitem{berridge2000reward}
+Kent~C Berridge.
+\newblock Reward learning: Reinforcement, incentives, and expectations.
+\newblock In {\em Psychology of learning and motivation}, volume~40, pages
+  223--278. Elsevier, 2000.
+
 \bibitem{CompareModels}
 Samia Boubaker, Ferid Rehimi, and Adel Kalboussi.
 \newblock Comparative analysis of microscopic models of road traffic data.
@@ -80,11 +86,6 @@ Statista.
 \newblock
   \url{https://www.statista.com/statistics/281134/number-of-vehicles-in-use-worldwide/},
   2019 (accessed March 3, 2019).
-
-\bibitem{reinforcementBook}
-Richard~S Sutton, Andrew~G Barto, and Ronald~J Williams.
-\newblock Reinforcement learning is direct adaptive optimal control.
-\newblock {\em IEEE Control Systems Magazine}, 12(2):19--22, 1992.
 
 \bibitem{rankingTomTom}
 TomTom.
