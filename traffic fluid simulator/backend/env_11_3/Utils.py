@@ -6,8 +6,7 @@ def nested_sum(L):
         else:
             total += i
     return total
-def empty_3_list():
-    return [[], [], []]
+
 
 def count_rewards(env):
     memsum = 0
@@ -17,6 +16,7 @@ def count_rewards(env):
             i += 1
             memsum += mem.reward
     return memsum, memsum / i
+
 
 def empty_dic():
     return {}

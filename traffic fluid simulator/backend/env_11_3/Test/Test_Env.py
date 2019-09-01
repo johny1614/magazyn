@@ -3,10 +3,8 @@ import sys
 
 sys.path.append(os.path.dirname(os.getcwd()))
 import unittest
-from typing import List
 import env_settings
 from Env import Env
-from model import SmartAgent
 from model.ExportData import ExportData
 from services.agentFactory import get_SmartAgents
 from services.globals import Globals
@@ -64,12 +62,12 @@ class Testing(unittest.TestCase):
             else:
                 actions = [0]
             env.step(actions)
-            if t<20:
-                self.assertEqual(agents[0].actual_phase,0)
+            if t < 20:
+                self.assertEqual(agents[0].actual_phase, 0)
             elif t < 40:
-                self.assertEqual(agents[0].actual_phase,1)
+                self.assertEqual(agents[0].actual_phase, 1)
             else:
-                self.assertEqual(agents[0].actual_phase,0)
+                self.assertEqual(agents[0].actual_phase, 0)
         exportData = ExportData(learningMethod='None', learningEpochs=0, nets=env.global_memories,
                                 netName='net11',
                                 densityName='test_no_2')

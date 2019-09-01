@@ -36,7 +36,7 @@ class Agent:
     def modify_A(self, A):
         actual_moves = () if self.actual_phase == 'orange' else self.moves[self.actual_phase]
         for move in actual_moves:
-            if move[0]==404:
+            if move[0] == 404:
                 continue
             A[move] = self.curve_densities[move]
             fromSection = move[1]
@@ -47,8 +47,6 @@ class Agent:
         if action not in self.local_action_space:
             if self.local_action_space == ['orange']:
                 action = 'orange'
-            # print(
-            #     f'uwagaAAAAAAAAAAAAAAAAAAA akcja {action} nie jest w local_action_space ktory jest rowny {self.local_action_space}, w chwili {Globals().time}, aktualny phase_duration: {self.phase_duration}, aktualna faza: {self.actual_phase}')
         self.action = action
         orange = 'orange'
         if action == orange:

@@ -1,10 +1,7 @@
 from typing import List, Tuple
-
 import attr
 import numpy as np
-
 import env_settings
-from Utils import empty_3_list
 from env_settings import start_A, get_x
 from model import GlobalState
 from model.Action import ActionInt
@@ -18,7 +15,6 @@ class Env:
     agents: List[SmartAgent]
     x: List[List[Tuple[int, int]]] = attr.Factory(get_x)
     global_rewards: List[float] = attr.Factory(list)
-    local_awards: List[List[float]] = attr.Factory(empty_3_list)
     global_memories: List[Net] = attr.Factory(list)
     flow_memories: List = attr.Factory(list)
     last_flows: List = attr.Factory(list)
@@ -44,7 +40,6 @@ class Env:
         self.A.append(start_A())
         self._pass_actions_to_agents(actions)
         self._modify_A()
-        # self.update_global_memory_lights()
         Globals().time += 1
         self._execute_phase()
         self.save_motions()
@@ -55,7 +50,7 @@ class Env:
         self._count_cars_out()
         self.remember_memory()
 
-    def count_summed_rewards(self) -> Tuple[int, int]:
+    def count_summed_rewards(self) -> Tuple[float, float]:
         memsum = 0
         i = 0
         for agent in self.agents:
@@ -92,7 +87,6 @@ class Env:
         t = self.t
         x_t = np.dot(self.A[t - 1], self.x[t - 1])
         self.x.append(x_t)
-        # self.x = np.dot(self.A[t-1], self.x[t - 1])
         self.__include_source_cars()
 
     def _pass_actions_to_agents(self, actions: List[ActionInt]):
@@ -102,8 +96,6 @@ class Env:
 
     def _modify_A(self):
         t = self.t
-        # print('modify A t',t)
-        # print('x',self.x[t])
         for agent in self.agents:
             self.A[t] = agent.modify_A(self.A[t])
         if self.t > 0:
@@ -118,7 +110,6 @@ class Env:
                             self.A[t][i][i] += change
                             A_cell = new_value
                             self.A[t][j][i] = A_cell
-        # print(self.A[t])
 
     def __include_source_cars(self):
         t = self.t
@@ -144,19 +135,3 @@ class Env:
                   lights=lights)
         self.global_memories.append(net)
 
-    # def update_memory_rewards(self):
-    # we dont need it. It makes a mistake that from 0th episode it s only taken. Not deleted yet couse always it was here!
-    #     i=0
-    #     for mem in self.agents[0].memories:
-    #         print(f'{i} mem agent {mem}')
-    #         i+=1
-    #     for i in range(len(self.global_memories)):
-    #         net = self.global_memories[i]
-    #         net.rewards = [agent.memories[i].reward for agent in self.agents]
-
-    def deepCopy(self):
-        copied_agents = [agent.deep_copy() for agent in self.agents]
-        new_env = Env(copied_agents)
-        new_env.__dict__ = self.__dict__.copy()  # just a shallow copy
-        new_env.agents = copied_agents
-        return new_env

@@ -5,14 +5,13 @@ from services.runnerService import epoch_greedy
 from services.agentFactory import get_LearnSmartAgents
 from services.globals import Globals
 
+
 def run_learnt_greedy(saveJson=False):
     saveJson = True
     model_file_names = ['static_files/model-agent0.h5']
     agents = get_LearnSmartAgents(model_file_names)
-    # print('weights!',agents[0].model.weights[0])
     env = Env(agents)
     epoch_greedy(env)
-    # env.update_memory_rewards() # TODO czy to mozna odkomentowac?
     rewards_sum, rewards_mean = count_rewards(env)
     cars_out = env.cars_out
     if saveJson:

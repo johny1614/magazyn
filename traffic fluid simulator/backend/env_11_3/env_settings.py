@@ -5,7 +5,8 @@ freeMovementCoordinates = [(1, 0), (3, 2), (5, 4)]
 sections_of_roads = [
     [0, 1], [2, 3], [4, 5]
 ]
-not_last_sections = [0,1,2,4]
+not_last_sections = [0, 1, 2, 4]
+
 
 def start_A():
     # it is a red light everywhere A matrix
@@ -13,11 +14,17 @@ def start_A():
     for cord in freeMovementCoordinates + stayCoordinates:
         A[cord] = 1
     return A
+
+
 max_time = 90
+
+
 def get_x():
     x_size = 6
     x = [x_size * [0]]
     return x
+
+
 u_v1 = np.array([[4, 4, 4, 60, 4, 4, 4, 4, 4, 4, 4, 60, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 60, 4, 4, 4, 4, 4, 4, 4,
                   4, 4, 4, 60, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 60, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 60, 4, 4,
                   4, 4, 4, 4, 60, 4, 4,

@@ -1,4 +1,3 @@
-
 import attr
 
 from model.Action import ActionInt
@@ -9,7 +8,7 @@ from model.LearningState import LearningState
 class Memory:
     state: LearningState
     action: ActionInt
-    reward: any # float, ale to psuje
+    reward: any  # float, ale to psuje
     new_state: LearningState
     times: any
     reshapedReward: bool = False
