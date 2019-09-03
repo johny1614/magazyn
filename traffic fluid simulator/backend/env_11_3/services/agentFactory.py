@@ -16,11 +16,11 @@ def get_LearnSmartAgents(file_names=None) -> List[SmartAgent]:
 def get_SmartAgents() -> List[SmartAgent]:
     agents: SmartAgent = []
     agent_0 = SmartAgent(index=0,
-                         moves=[((2, 1), (404, 404)),
+                         moves=[((2, 1), (404, 404)), # (404,404) musi byc, bo ((2,1)) python parsuje na (2,1)
                                 ((4, 1), (404, 404)),
                                 ],
                          local_phase_sections=[1],
-                         curve_densities={(2, 1): 0.3, (4, 1): 0.7})
+                         curve_densities={(2, 1): 0.25, (4, 1): 0.75})
     agents.append(agent_0)
     return agents
 
@@ -32,7 +32,7 @@ def get_SmartAgents_with_model(models) -> List[SmartAgent]:
                                 ((4, 1), (404, 404)),
                                 ],
                          local_phase_sections=[1],
-                         curve_densities={(2, 1): 0.3, (4, 1): 0.7},
+                         curve_densities={(2, 1): 0.25, (4, 1): 0.75},
                          model=models[0])
     agents.append(agent_0)
     return agents

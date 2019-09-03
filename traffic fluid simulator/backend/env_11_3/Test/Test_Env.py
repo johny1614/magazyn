@@ -9,31 +9,13 @@ from model.ExportData import ExportData
 from services.agentFactory import get_SmartAgents
 from services.globals import Globals
 
-
-def get_agents_env():
-    agents = get_SmartAgents()
-    env = Env(agents)
-    return agents, env
-
-
-def get_seq_actions(t):
-    if t in [3, 9, 12, 17, 20]:
-        return [0]
-    if t in [0, 6, 13, 16]:
-        return [1]
-    return [orange]
-
-
-orange = 'orange'
+yellow = 'yellow'
 
 
 class Testing(unittest.TestCase):
     def test_no_0_pass_action_0_all_time(self):
-        # TESTUJEMY: caly czas powinna byc aktualna faza = [0]
         max_time = 90
         agents = get_SmartAgents()
-        for agent in agents:
-            agent.orange_phase_duration = 2
         Globals().time = 0
         env = Env(agents)
         env.u = env_settings.u_all_2
@@ -48,7 +30,6 @@ class Testing(unittest.TestCase):
         exportData.saveToJson()
 
     def test_no_2_pass_action_0_then_1_then_0(self):
-        # TESTUJEMY: caly czas powinna byc aktualna faza = [0]
         max_time = 90
         agents = get_SmartAgents()
         Globals().time = 0

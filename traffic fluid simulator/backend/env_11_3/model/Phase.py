@@ -1,1 +1,1 @@
-PhaseInt = int
+PhaseInt = int # 0 lub 1

@@ -1,7 +1,6 @@
 from typing import List
 import matplotlib.pyplot as plt
 import numpy as np
-import env_settings
 from Env import Env
 from env_settings import max_time
 from model.Action import ActionInt
@@ -11,12 +10,12 @@ from services.agentFactory import get_SmartAgents, get_LearnSmartAgents
 from services.globals import Globals
 
 
-def epoch(agents, u=env_settings.u_all_2):
+def epoch_random(agents, u=Globals().u):
     Globals().time = 0
     env = Env(agents)
     env.u = u
     for t in range(max_time):
-        actions: List[ActionInt] = [agent.get_action(agent.local_state) for agent in agents]
+        actions: List[ActionInt] = [agent.get_action(state=agent.local_state,full_random=True) for agent in agents]
         env.step(actions)
     Globals().epochs_done += 1
     return env
@@ -32,7 +31,7 @@ def generate_random_epochs(learntAgents=False, save_front_json=False, epochs=ran
         agents: List[SmartAgent] = get_SmartAgents()
     for e in epochs:
         Globals().epsilon = 1
-        env: Env = epoch(agents, u=env_settings.u_all_5)
+        env: Env = epoch_random(agents, u=Globals().u)
         if save_front_json:
             exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
                                     netName='net11',

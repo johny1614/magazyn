@@ -10,6 +10,8 @@ from model.Agent import Agent
 from model.Memory import Memory
 from services.globals import Globals
 
+yellow = 'yellow'
+
 
 @attr.s
 class SmartAgent(Agent):
@@ -18,9 +20,9 @@ class SmartAgent(Agent):
 
     def __attrs_post_init__(self):
         if self.model == 0:
-            l_rate = 0.01
-            layers = [10]
-            activation = 'relu'
+            l_rate = Globals().nn_l_rate
+            layers = Globals().layers
+            activation = Globals().activation
             self.model = self._build_model(layers=layers, activation=activation, l_rate=l_rate)
 
     def _build_model(self, layers, activation, l_rate):
@@ -40,7 +42,7 @@ class SmartAgent(Agent):
         x_batch = []
         y_batch = []
         for memory in minibatch:
-            if memory.action == 'orange':
+            if memory.action == yellow:
                 continue
             state = memory.state.to_learn_array()
             y_target = self.model.predict(state)
@@ -58,10 +60,12 @@ class SmartAgent(Agent):
         gamma = Globals().gamma
         for memory in self.memories:
             state = memory.state.to_learn_array()
-            action = 2 if memory.action == 'orange' else memory.action
+            action = memory.action
             y_target = self.model.predict(state)
             new_state_possible_actions_value_predictions = self.model.predict(memory.new_state.to_learn_array())
-            target = (1 - l_rate) * y_target[0][action] + l_rate * (memory.reward + gamma * max(new_state_possible_actions_value_predictions[0]))
+            target = (1 - l_rate) * y_target[0][action] + l_rate * (
+                        memory.reward + gamma * max(new_state_possible_actions_value_predictions[0]))
+            # print('rew',memory.reward)
             i += 1
             y_target[0][action] = target
             x_batch.append(state[0])
@@ -84,10 +88,8 @@ class SmartAgent(Agent):
         res = self.model.fit(np.array(x_batch), np.array(y_batch), epochs=epochs, batch_size=len(x_batch),
                              verbose=0)
 
-    def get_action(self, state):
-        if state.actual_phase == 'orange':
-            return 'orange'
-        if np.random.rand() <= Globals().epsilon:  # if acting randomly, take random action
+    def get_action(self, state,full_random):
+        if full_random:  # if acting randomly, take random action
             action = random.choice(self.local_action_space)
             return action
         predictions = self.model.predict(

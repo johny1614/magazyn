@@ -1,13 +1,11 @@
 from typing import List, Dict, Tuple
-
 import attr
-import numpy as np
-
 from env_settings import sections_of_roads
 from model.Action import ActionInt
 from model.LearningState import LearningState
 from model.Phase import PhaseInt
-from services.globals import Globals
+
+yellow = 'yellow'
 
 
 @attr.s(auto_attribs=True)
@@ -17,8 +15,8 @@ class Agent:
     local_phase_sections: List[int]
     curve_densities: Dict[Tuple[int, int], int]
     local_state: LearningState = None
-    phase_duration: int = 2  # na starcie mamy mozliwosc przelaczania - taki bonus
-    orange_phase_duration: int = 0
+    phase_duration: int = 0
+    yellow_phase_duration: int = 0
     pending_phase: PhaseInt = 1
     rewards: List[float] = []
     actual_phase = 1
@@ -27,14 +25,14 @@ class Agent:
 
     @property
     def local_action_space(self) -> List[ActionInt]:
-        wait_action = ['orange']
+        wait_action = [yellow]
         light_Actions = [0, 1]
-        if self.phase_duration >= self.orange_phase_duration:
+        if self.phase_duration >= self.yellow_phase_duration:
             return light_Actions
         return wait_action
 
     def modify_A(self, A):
-        actual_moves = () if self.actual_phase == 'orange' else self.moves[self.actual_phase]
+        actual_moves = () if self.actual_phase == yellow else self.moves[self.actual_phase]
         for move in actual_moves:
             if move[0] == 404:
                 continue
@@ -45,19 +43,18 @@ class Agent:
 
     def pass_action(self, action: ActionInt):
         if action not in self.local_action_space:
-            if self.local_action_space == ['orange']:
-                action = 'orange'
+            if self.local_action_space == [yellow]:
+                action = yellow
         self.action = action
-        orange = 'orange'
-        if action == orange:
-            if self.actual_phase == orange:
+        if action == yellow:
+            if self.actual_phase == yellow:
                 self.phase_duration += 1
             else:
-                self.actual_phase = orange
+                self.actual_phase = yellow
                 self.phase_duration = 0
-            if self.phase_duration >= self.orange_phase_duration:
+            if self.phase_duration >= self.yellow_phase_duration:
                 self.actual_phase = self.pending_phase
-        if action != orange:
+        if action != yellow:
             if action == self.actual_phase:
                 self.phase_duration += 1
             else:
@@ -66,8 +63,8 @@ class Agent:
                 else:
                     self.phase_duration = 0
                     self.pending_phase = action
-                    self.actual_phase = orange
-                if self.phase_duration >= self.orange_phase_duration:
+                    self.actual_phase = yellow
+                if self.phase_duration >= self.yellow_phase_duration:
                     self.actual_phase = self.pending_phase
         self.local_state.actual_phase = self.actual_phase
 

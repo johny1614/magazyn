@@ -3,11 +3,12 @@ import attr
 import numpy as np
 import env_settings
 from env_settings import start_A, get_x
-from model import GlobalState
 from model.Action import ActionInt
 from model.Net import Net, Times
 from model.SmartAgent import SmartAgent
 from services.globals import Globals
+
+yellow = 'yellow'
 
 
 @attr.s(auto_attribs=True)
@@ -18,17 +19,13 @@ class Env:
     global_memories: List[Net] = attr.Factory(list)
     flow_memories: List = attr.Factory(list)
     last_flows: List = attr.Factory(list)
-    u = env_settings.u
+    u = Globals().u
 
     def __attrs_post_init__(self):
         Globals().time = 0
         self.A = []
         self.cars_out = 0
         self.__assign_local_states_to_agents()
-
-    @property
-    def global_state(self) -> GlobalState:
-        return tuple(agent.local_state for agent in self.agents)
 
     @property
     def t(self):
@@ -70,7 +67,7 @@ class Env:
         new_time = Globals().time
         self.last_flows = []
         for agent in self.agents:
-            actual_moves = () if agent.actual_phase == 'orange' else agent.moves[agent.actual_phase]
+            actual_moves = () if agent.actual_phase == yellow else agent.moves[agent.actual_phase]
             for move in actual_moves:
                 if move[0] == 404:
                     continue
@@ -134,4 +131,3 @@ class Env:
                   actions=actions,
                   lights=lights)
         self.global_memories.append(net)
-

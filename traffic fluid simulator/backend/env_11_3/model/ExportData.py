@@ -1,9 +1,7 @@
 import json
 from typing import List
-
 import attr
 from numpy.core.multiarray import ndarray
-
 from model.Net import Net
 
 
