@@ -89,7 +89,7 @@ Bezpośrednim celem pracy jest uzyskanie płynnego ruchu przy możliwie dużej i
 \section{Klasyfikacja modeli ruchu drogowego}
 Modele ruchu drogowego mają na celu ukazanie rzeczywistego przepływu pojazdów w sposób czysto matematyczny. Ważnym kryterium doboru modelu jest przystępność jego implementacji informatycznej. Powszechnie klasyfikuje się 3 podejścia modelowe dla omawianego problemu \cite{CompareModels} - makroskopowy, mezoskopowy oraz mikroskopowy. Czasem \cite{multilevel} wyróżnia się także czwarte podejście - submikroskopowe. Jest to podział ze względu na poziom modelu. Najniższy poziom i najbardziej dokładny model gwarantuje podejście mikroskopowe. Rozważa ono pojazdy indywidualnie w czasoprzestrzeni. Przyspieszenie pojazdu jest wyliczane na podstawie dynamiki(prędkości, przyspieszenia) i pozycji pojazdu bezpośrednio przed nim. Model mezoskopowy zapewnia indywidualne rozróżnienie pojazdów, jednak ich zachowanie jest wyliczane na danych zagregowanych \cite{mesoscopic}. Przykładowo pojazdy są podzielone na grupy podróżujące od pewnego punktu startowego do punktu końcowego. Inne modele \cite{mesoscopic2} mezoskopowe wyliczają dynamikę ruchu na podstawie aktualnego zatłoczenia drogi. Poziom mezoskopowy jest obliczeniowo bardziej opłacalny od mikroskopowego.
 Wiele symulatorów stosujących model mezoskopowy oferuje symulację w czasie rzeczywistym dla sieci dróg całego miasta\cite{vu2017high}. Ideą modelu makroskopowego jest traktowanie ruchu ulicznego identycznie jak ruchu cieczy lub gazów. Po raz pierwszy w roku 1956 M. J. Lighthill i G. B. Whitham \cite{lwr} przedstawili pomysł przyrównania ruchu ulicznego na zatłoczonych drogach do przepływu wody w rzekach. Z tego powodu nie uznajemy w nim pojazdów jako niepodzielne jednostki. Pojazd można przyrównać do pewnej ilości wody w rzece.
-Jest to najmniej kosztowny obliczeniowo model. Właśnie w modelu makroskopowym zostało stworzone środowisko symulacyjne i dlatego zostanie on dokładnie przedstawiony w tym rozdziale.
+Jest to najmniej kosztowny obliczeniowo model. Właśnie w modelu makroskopowym zostało stworzone środowisko symulacyjne. Szczegóły modelu są przedstawione w następnym podrozdziale.
 
 \section{Wstęp}
 Jako zmienną stanową makroskopowego modelu ruchu zazwyczaj wybierana jest gęstość ruchu \cite{gottlich,CompareModels}. Formalnie gęstość można rozumieć jako czynnik definiujący dynamikę ruchu. Im większa jest gęstość tym mniejsza prędkość ruchu. Gęstość ruchu \cite{helbing2001master} jest przedstawiona jako iloraz ilości pojazdów znajdujących się na pewnym odcinku i długości tego odcinka drogi. Prawidłowe jest także uznanie ilości pojazdów na pojedynczym odcinku drogi jako zmienną stanową. Należy jednak pamiętać, że pojazdy w ruchu makroskopowym nie są nierozłączną jednostką. Pojazd w analogii do przepływu wody w rzece jest pewną jednostką wody. Wielokrotnie w symulacjach zdarza się, że na odcinku jest zatem niecałkowita liczba pojazdów.
@@ -111,18 +111,18 @@ wedle założeń modelu makroskopowego \cite{lwr} rozwój gęstości ruchu na dr
 %   \lambda \cdot (2p^{*}-p) & \text{dla } $p\in(p^{*},p^{max}]$ 
 %\end{numcases}
 %Gdzie $\lambda$ jest stałym parametrem funkcji trójkątnej oraz $p^*=\frac{1}{2}p^{max}$.
-\section{CTM - Cell Transmission Model} \label{sec:CTM}
+\section{CTM - Cell Transmission Model}
 \subsection{Wprowadzenie}
-W tym rozdziale zostanie przedstawiony model CTM będący dyskretyzacją pierwotnego modelu makroskopowego przepływu \cite{lwr}. Jego zmienną stanową jest ilość pojazdów. Model został opisany w artykule Carslosa Daganzo \cite{CTM} w 1992. Ta pozycja jest podstawą wyliczeń w tym rozdziale.
-\subsubsection*{Siatka czasowa i przestrzenna drogi}
+W tym rozdziale zostanie przedstawiony model CTM będący dyskretyzacją pierwotnego modelu makroskopowego przepływu \cite{lwr}. Jego zmienną stanową jest ilość pojazdów. Model został opisany w artykule Carslosa Daganzo \cite{CTM} w 1992. Ta pozycja jest podstawą wszelkich wyliczeń w tym rozdziale.
+\subsection{Przedstawienie modelu}
+\subsection*{Siatka czasowa i przestrzenna drogi}
 Dyskretny charakter modelu CTM obliguje do określenia siatki czasowej i przestrzennej drogi. Dla par czasu i miejsc należących do tych dwóch siatek będą określane zmienne stanu. \\ \\ \textbf{Siatka czasowa} jest zdefiniowana jako skończony ciąg liczb naturalnych:
 \[(0,1,...,T). \addtag \]
 Następnie zdefiniowana zostanie siatka przestrzenna drogi e. Ustalona droga e to odcinek $[0,L]$. Zostaje ona podzielona na $L$ odcinków o równej długości. \textbf{Siatka przestrzenna} drogi to ciąg odcinków:
 \[([0,1),[1,2),...,[L-1,L] )\]
 
-\subsection{Model CTM dla pojedynczej drogi}
 \subsection*{Przepływ pojazdów na drodze}
-Niech dana będzie droga $e$ i pewien odcinek $j$ na tej drodze. Zmienna stanowa w modelu CMT jest oznaczana jako $x_j(t)$ i określa ona ilość pojazdów na odcinku $j$ w chwili t.
+Niech dana będzie droga $e$ i pewien odcinek $i$ na tej drodze. Zmienna stanowa w modelu CMT jest oznaczana jako $n_i(t)$ i określa ona ilość pojazdów na odcinku $i$ w chwili t.
 Przepływ pojazdów opiera się o założeniu, iż przy braku zatorów pojazdy pokonują w jednym interwale czasowym jeden odcinek drogi. Przykładowy przepływ jest następujący:
 \begin{figure}[H]
 	\centering
@@ -131,134 +131,99 @@ Przepływ pojazdów opiera się o założeniu, iż przy braku zatorów pojazdy p
 	\label{fig:CTM_flow_example}
 \end{figure} \noindent
 Łatwo zauważyć, że w tym przypadku
-\[ x_{j+1}(t+1)=x_j(t) \addtag \]
+\[ n_{i+1}(t+1)=n_i(t) \addtag \]
 \subsubsection*{Wprowadzenie zatorów}
-Poprzedni przykład ruchu pojazdów opierał się o założenie, iż wszystkie pojazdy przemieszczają się o jeden odcinek w jednym interwale czasowym. Często jednak część pojazdów będzie musiała pozostać na dotychczasowym odcinku z powodu zbyt dużego natężenia ruchu. Taka sytuacja będzie nazywana \textbf{zatorem}. Model CMT opiera się o następujące parametry definiujące sposób formowania się zatorów:
+W celu wprowadzenia pojęcia zatoru zostaną zdefiniowane następujące zmienne:
+
 \begin{itemize}
-	\item $N_j(t)$ - maksymalna ilość pojazdów, które mogą znajdować się na odcinku $j$ w chwili $t$.
-	\item $Q_j(t)$ - maksymalna ilość pojazdów, które mogą napłynąć do odcinka $j$ w momencie $t+1$.
+	\item $N_i(t)$ - maksymalna ilość pojazdów, które mogą znajdować się na odcinku $i$ w chwili $t$.
+	\item $Q_i(t)$ - maksymalna ilość pojazdów, które mogą napłynąć do odcinka $i$ w momencie $t+1$.
 \end{itemize}
 Rozwój zmiennej stanowej jest zadany poprzez następujące równanie:
-\[x_j(t+1)=x_j(t)+y_j(t)-y_{j+1}(t) \addtag \]
+\[n_i(t+1)=n_i(t)+y_i(t)-y_{i+1}(t) \addtag \]
 Gdzie:
 \begin{itemize}
-	\item $x_j(t+1)$ to ilość pojazdów na odcinku $j$ w chwili $t+1$
-	\item $x_j(t)$ to ilość pojazdów na odcinku $j$ w chwili $t$
-	\item $y_j(t)$ to ilość pojazdów napływających do odcinka $j$ w chwili $t+1$.
-	\item $y_{j+1}(t)$ to ilość pojazdów napływających do odcinka $j+1$ w chwili $t+1$. Jest to zatem także ilość pojazdów opuszczających odcinek $j$ w interwale $[t,t+1)$.
+	\item $y_i(t)$ to ilość pojazdów napływających do odcinka $i$ w chwili $t+1$.
+	\item $y_{i+1}(t)$ to ilość pojazdów napływających do odcinka $i+1$ w chwili $t+1$. Jest to zatem także ilość pojazdów opuszczających odcinek $i$ w interwale $[t,t+1)$.
 \end{itemize}
-\textbf{Przepływ pojazdów} $y_j(t)$ jest zdefiniowany jako minimum z następujących trzech wartości:
+Przepływ pojazdów $y_i(t)$ jest zdefiniowany jako minimum z następujących trzech wartości:
 \begin{itemize}
-	\item $ x_{j-1}(t) $ - ilość pojazdów na poprzedzającym odcinku (t.j. $j-1$)
+	\item $ n_{i-1}(t) $ - ilość pojazdów na poprzedzającym odcinku (t.j. $i-1$)
 	\item $ Q_i(t) $ - maksymalna ilość pojazdów, które mogą napłynąć do odcinka $i$ w chwili $t+1$.
-	\item $ N_i(t)-x_j(t) $ - ilość wolnych miejsc na odcinku $j$ w chwili $t$
+	\item $ N_i(t)-n_i(t) $ - ilość wolnych miejsc na odcinku $i$ w chwili $t$
 \end{itemize}
 Co wyraża się wzorem:
 \[
-y_j(t)=Min\{x_{j-1}(t),Q_i(t),N_i(t)-x_i(t)\} \addtag \label{eq_y_CTM}
+y_i(t)=Min\{n_{i-1}(t),Q_i(t),N_i(t)-n_i(t)\} \addtag \label{eq_y_CTM}
 \]
-
 \subsection*{Źródło i ujście ruchu}
-Powyższe wzory potrzebują ustaleń odnośnie źródła i ujścia ruchu. Bez nich wzór \myref{eq_y_CTM} nie ma sensu dla krańcowych odcinków $j=0$ oraz $j=L-1$. Dla ułatwienia pogrubione zostały ustalone w tej sekcji wartości zmiennych źródła i ujścia ruchu. \\ Źródło ruchu może być traktowane jako odcinek o indeksie $j=-1$. Jedyną wartością, która musi być ustalona dla źródła jest ilość pojazdów w nim, czyli $x_{j-1}(t)$. Przyjęte zostaje, że $\mathbf{x_{j-1}(t)=\infty}$ - wtedy napływ pojazdów do odcinka $j=0$ jest ograniczony z dołu już tylko przez $Q_0(t)$ oraz $N_0(t)-x_0(t)$.
+Powyższe wzory potrzebują ustaleń odnośnie źródła i ujścia ruchu. Bez nich wzór \myref{eq_y_CTM} nie ma sensu dla krańcowych odcinków $i=0$ oraz $i=L$. Dla ułatwienia pogrubione zostały ustalone w tym rozdziale wartości zmiennych źródła i ujścia ruchu. \\ Źródło ruchu może być traktowane jako odcinek o indeksie $i=-1$. Jedyną wartością, która musi być ustalona dla źródła jest ilość pojazdów w nim, czyli $n_{i-1}(t)$. Przyjęte zostaje, że $\mathbf{n_{i-1}(t)=\infty}$ - wtedy napływ pojazdów do odcinka $i=0$ jest ograniczony z dołu już tylko przez $Q_0(t)$ oraz $N_0(t)-n_0(t)$.
 \\
-Ujście ruchu z kolei może być traktowane jako odcinek $i=L$. Istotne w kontekście wzoru \myref{eq_y_CTM} są następujące wartości:
+Ujście ruchu z kolei może być traktowane jako odcinek $i=L+1$. Istotne w kontekście wzoru \myref{eq_y_CTM} są następujące wartości:
 \begin{itemize}
-	\item $Q_{L}(t)$ - ilość pojazdów, które mogą opuścić odcinek $L-1$ w chwili $t$. Ustalone jest, że jest to dowolna ilość, wtedy $\mathbf{Q_{L}(t)=\infty}$
-	\item $N_{L}(t)$ - ilość pojazdów, które może pomieścić ujście. Ustalone jest, że $\mathbf{N_{L}(t)=\infty}$, gdyż ujście może zawierać nieograniczoną ilość pojazdów.
-	\item $x_{L}(t)$ - ilość pojazdów w ujściu. Służy jako licznik pojazdów, które opuściły układ.
+	\item $Q_{L+1}(t)$ - ilość pojazdów, które mogą opuścić odcinek $L$ w chwili $t$. Ustalone jest, że jest to dowolna ilość, wtedy $\mathbf{Q_{L+1}(t)=\infty}$
+	\item $N_{L+1}(t)$ - ilość pojazdów, które może pomieścić ujście. Ustalone jest, że $\mathbf{N_{i}(t)=\infty}$, gdyż ujście może zawierać nieograniczoną ilość pojazdów.
+	\item $n_{L+1}(t)$ - ilość pojazdów w ujściu. Służy jako licznik pojazdów, które opuściły układ.
 \end{itemize}
 \subsubsection*{Przykład przepływu na pojedynczej drodze}
 Zostają ustalone następujące parametry implementacji przykładowego modelu
-	 \[L=9\]
-	 \[N_i(t)=15 \text{ dla dowolnego $i,t$} \]
+	 \[L=8\]
+	 \[N=15\]
+%	  \begin{numcases}{N_i(t)=}
+%	  15 & \text{dla} $i \neq 9$ \\
+%	 \infty & \text{dla} $i=9$ 
+%	 \end{numcases}
 	 
 	 \begin{numcases}{Q_i(t)=}
 	1 & \text{dla } $i=5, t\in \{0,...,7\}$ \\ 
     5 & \text{dla } $i=5, t\in \{7,...,20\}$ \\ 	
 	4 & \text{dla pozostałych przypadków}
 	\end{numcases}
-Podsumowując powyższe parametry - droga posiada 9 odcinków (ponumerowanych od 0 do 8). Każdy odcinek może pomieścić maksymalnie 15 pojazdów. Maksymalny przepływ z jednego odcinka na drugi to 4. Jedynym wyjątkiem od tej zasady jest odcinek nr. 5. Początkowo może napływać na niego tylko po 1 pojeździe. Zmienia się to dopiero w chwili $t=7$ - by rozładować powstałe zatory ustalone zostaje, że może co interwał wjeżdżać 5 pojazdów na odcinek 5. Przeprowadzona zostanie symulacja przy warunku początkowym określającym liczebność pojazdów na poszczególnych odcinkach. Niech zatem $x_i(0)=3$ dla $i \in \{0,...,8\}$. Wtedy wyniki symulacji przestawia poniższa tabela.
+Przeprowadzona zostanie symulacja przy warunku początkowym określającym liczebność pojazdów na poszczególnych odcinkach. Niech zatem $n_i(0)=3$ dla $i \in \{0,...,8\}$. Wtedy wyniki symulacji przestawia poniższa tabela.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{images/ctm_przyklad}
 	\caption{Tabela ilości pojazdów}
 	\label{fig:ctm_przyklad}\end{figure}
-\subsection{Model CTM dla sieci dróg}
-Poprzednio przedstawiony wariant modelu CTM określał przepływ jedynie dla jednej drogi. W tej sekcji zostanie rozważony przypadek modelu CTM dla sieci dróg. \textbf{Zbiór wszystkich odcinków} w środowisku będzie oznaczany jako $\Omega$. 
-\subsubsection{Źródła ruchu}
-W przypadku większej ilości dróg niz jedna należy rozważyć inne podejście do ustalenia źródeł ruchu. 
-Dla każdego odcinka $j \in \Omega$ zostanie ustalona wartość $u_j(t)$ \textbf{napływu ze źródeł}. Określa ona ile pojazdów ze źródła może maksymalnie napłynąć do odcinka $j$ w chwili $t+1$. Dla odcinków $j$ do których nie wjeżdżają żadne pojazdy ze źródła ruchu wartość $u_j(t)$ jest równa 0. Wartości $u_j(t)$ tworzą \textbf{wektor źródła} ruchu:
-\[\textbf{u(t)}=[u_0(t),...,u_{|\Omega-1|}(t)]\]
-Źródła ruchu są uwzględnione we wzorze ilości napływających pojazdów \myref{eq:y_with_zrodla}
-\subsubsection{Ujścia ruchu}
-Niech zbiór odcinków znajdujących się bezpośrednio przed punktami ujścia ruchu będzie oznaczony jako $\Omega_{out}$.
-Zgodnie z poprzednimi założeniami pojazdy będące w chwili $t$ na odcinku bezpośrednio przed ujściem ruchu opuszczają układ w chwili $t+1$. Zostanie to uwzględnione we wzorze \myref{eq:ctm_rozwoj_x_ujscie}.
 
-\subsection{Przepływ pojazdów na skrzyżowaniu} \label{sec:CTM_skrz_przeplyw}
-Wprowadzona zostanie modyfikacja funkcji $y_j(t)$ określającej ilość pojazdów wjeżdżających na odcinek $j$ w chwili $t+1$. Do tej pory dotyczyła ona jedynie ilości pojazdów które napływają do odcinka $j$ z odcinka $j-1$. W przypadku sieci dróg należy rozważyć możliwość wjazdu z innych odcinków niż $j-1$. Niech zatem:
-\[ y_{ij}(t)= Min\{p_{ij} x_{i}(t),Q_j(t),N_j(t)-n_j(t)\} \addtag \label{eq:y_skrz_no_lights}\]
-określa ilość pojazdów, które wjeżdżają z odcinka $i$ do odcinka $j$ w chwili $t+1$. Wartości $p_{ij}$ określają jaka część pojazdów z odcinka $i$ ma zamiar wjechać na odcinek $j$. Tworzą one macierz prawdopodobieństwa $\textbf{P}$, która została szczegółowo opisana w sekcji \myref{sec:macierz_prawd}. \\
-Suma pojazdów opuszczających odcinek $i$ w chwili $t+1$ jest następująca:
-\[y_{i*}(t)= \sum_{j\in \Omega / \{i\}} y_{ij}(t) \addtag \]
-Z kolei napływ pojazdów do odcinka $j$ w chwili $t+1$ jest równy:
-\[y_{*j}(t)= \sum_{i\in \Omega / \{j\}} y_{ij}(t)+u_j(t) \addtag \label{eq:y_with_zrodla}\]
-Rozwój zmiennej stanu jest zdefiniowany przez równanie:
-\begin{numcases}{x_j(t+1)=}
-y_{*j}(t) &  dla $j \in \Omega_{out}$ \label{eq:ctm_rozwoj_x} \\
-x_j(t)+y_{*j}(t)-y_{j*}(t) & dla $j \notin \Omega_{out}$ \label{eq:ctm_rozwoj_x_ujscie}
-\end{numcases}
-Dla przypomnienia wartości z powyższego równania oznaczają:
-\begin{itemize}
-	\item $x_j(t+1)$ - ilość pojazdów na odcinku $j$ w chwili $t+1$
-	\item $x_j(t)$ - ilość pojazdów na odcinku $j$ w chwili $t$
-	\item  $y_{*j}(t)$ - ilość pojazdów napływających do odcinka $j$ w chwili $t+1$
-	\item  $y_{j*}$ ilość pojazdów opuszczających odcinek $j$ w chwili $t+1$
-\end{itemize}
+\subsection{Przepływ pojazdów na skrzyżowaniu}
 
 \subsubsection{Przykład}
-Przykład przepływu pojazdów na skrzyżowaniu został zaprezentowany w sekcji \myref{sec:przyklad_CTM_skrz} z zastosowaniem macierzy systemu. Wszelkie warunki początkowe i parametry środowiska z \myref{sec:przyklad_CTM_skrz} zostaną wykorzystane w tej sekcji. Jako przykład wykorzystania wzoru (\ref{eq:ctm_rozwoj_x} - \ref{eq:ctm_rozwoj_x_ujscie}) zostanie wyliczona wartość wektora $\textbf{x(1)}$. 
-\[
-x_0(1)=x_0(0)+y_{*0}(0)-y_{0*}(0)=7+0-3=4
-\]
-\[
-x_1(1)=x_1(0)+y_{*1}(0)-y_{1*}(0)=4+3-4=3
-\]
-\[
-x_2(1)=x_2(0)+y_{*2}(0)-y_{2*}(0)=3+1-3=1
-\]
-\[
-x_3(1)=y_{*3}(0)=3
-\]
-\[
-x_4(1)=x_4(0)+y_{*4}(0)-y_{4*}(0)=3+3-3=3
-\]
-\[
-x_5(1)=y_{*5}(0)=1
-\]
 
-\def \xI{\begin{bmatrix}
-		4 \\ 3 \\ 1 \\ 3 \\ 3 \\ 1
-\end{bmatrix}}
-\def \xzero{\begin{bmatrix}
-		7 \\ 4 \\ 3 \\ 0 \\ 1 \\ 5
-\end{bmatrix}}
-	\begin{tabular}{| c |  Sc |}
-		\hline
-		t   &  Podgląd środowiska \\
-		\hline
-		0 &
-		\cincludegraphics[width=10cm]{images/env_11_743015_przeplyw} \\
-		\hline 
-		1 & \cincludegraphics[width=10cm]{images/env_11_431331_procenty} \\
-		\hline 
-	\end{tabular}
+\section{Gottlich dyskretyzacja - to jest bardzo źle}
+Początek drogi (k=0)
+\[p_0^{t+1}=\frac{1}{4}(3p_0^{t}+p_1^{t})  -\frac{\Delta t}{2 \Delta x}  (f(p_1^t)+f(p^t_0)-2\overline{\gamma}^t) \addtag \]
+Centralny odcinek drogi (k=1,...,n-1)
+\[p_k^{t+1}=\frac{1}{4}(p_{k-1}^{t}+2p_{k}^{t}+p_{k+1}^t)  -\frac{\Delta t}{2 \Delta x}  (f(p_{k+1}^t)-f(p_{k-1}^t)) \addtag \]
+Końcowy odcinek drogi (k=n)
+\[p_n^{t+1}=\frac{1}{4}(3p_n^{t}+p_{n-1}^{t})  -\frac{\Delta t}{2 \Delta x}  (2\hat{\gamma}^t -f(p_n^t)-f(p^t_{n-1})) \addtag \]
 
-%aaaaaaaaaaaa
+\[\hat{\gamma}^t_i:=f(p_{0,i}^t)\]
+\[\overline{\gamma}^t_i:=f(p_{n,i}^t)\]
+Dla dróg $i$ nie będących drogami źródłowymi:
+\[\overline{\gamma}^t_i:=\sum_{i \in 
+	\delta_{v}^{in}}d_{ij}\hat{\gamma}_{i}(t)\]
+Dla dróg źródłowych $\overline{\gamma}^t_i $
+jest odgórnie ustalone i ustala jak dużo pojazdów wjeżdża do układu z rozważanej drogi.
 
-\subsection{Przepływ pojazdów na skrzyżowaniu z sygnalizacją świetlną} \label{sec:CTM_sygnalizacja}
-W tej sekcji przedstawiony zostanie przypadek przepływu na skrzyżowaniu posiadającym sygnalizację świetlną. Nie różni się on mocno od poprzednio omawianego modelu ruchu na skrzyżowaniu bez sygnalizacji świetlnej \myref{sec:CTM_skrz_przeplyw}. Jedyną różnicą jest zmiana wzoru \myref{eq:y_skrz_no_lights}. Zostanie on zastąpiony następującą formułą:
-\[ y_{ij}(t)= Min\{p_{ij}s_{ij}(t) x_{i}(t),Q_j(t),N_j(t)-n_j(t)\} \addtag \label{eq:y_skrz_lights}\]
-Gdzie: $s_{ij}(t)$ jest wartością określoną przez macierz sygnalizacji świetlnej $\textbf{S[j,i]}$, która została opisana w sekcji \myref{sec:sygnalizacja}.
+STAREEEEEEEEEE
+
+Niech będzie ustalona droga $e$ oraz jej siatka przestrzenna $b_l$. Celem jest przedstawienie wartości gęstości dla odcinków siatki przestrzennej w chwilach $k=0,1,...,K$.
+Gęstość w odcinku $b_l$ i czasie $k$ jest zdefiniowana jako:
+\[p_{l}^{k}=\int\limits_{{b_{l}}}{\frac{p(x,k)}{\Delta x}dx}. \addtag\]
+Na podstawie (\ref{eq:main_diff_eq}) można wywnioskować, że:
+\[\int\limits_{b_{l}} {p(x,k+1)- p(x,k)dx} +\int\limits_{k}^{k+1} f(b_{l+1},k)-f(b_{l},k))dk=0 \addtag \label{eq:calki-LWR} \]
+Upraszczając otrzymujemy:
+\[\Delta x(p_l^{k+1}-p_l^{k}) +\int\limits_{k}^{k+1} f(b_{l+1},k)-f(b_{l},k))dk=0=0 \addtag \]
+Wartości gęstości zmieniają się w tylko w chwilach $k$. Wtedy wartości $f(b_{l+1},k)$ i $f(b_l,k)$ są stałe na całym przedziale całkowania $[k,k+1)$. Otrzymujemy równanie:
+\[\Delta x(p_l^{k+1}-p_l^{k})  + (f(b_{l+1},k)-f(b_l,k))=0 \addtag \]
+Rezultatem jest końcowy rekurencyjny wzór na gęstość ruchu:
+\[p_l^{k+1}=p_l^{k}  -\frac{1}{\Delta x}  (f(b_{l+1},k)-f(b_l,k)) \addtag \]
+
+
+
+
+
 
 
 \chapter{Model sieci dróg} \label{chapter:model_sieci_drog}
@@ -267,7 +232,7 @@ Ze względu na dużą złożoność końcowego modelu zostanie przedstawiony naj
 sygnalizacji świetlnej, wielu dróg, zatoru drogowego, źródła i ujścia ruchu. Zestawienie w jednej sekcji wszystkich tych kwestii byłoby bardzo przytłaczające.
 
 \section{Wektor stanu drogi} \label{sec:wektor_stanu_drogi}
-\textbf{Wektor stanu} jest strukturą przedstawiającą stan środowiska. Dla każdego odcinka drogi składuje on wartości zmiennych stanowych. Początkowo zmienną stanu jest identyfikowana jako ilość pojazdów na danym odcinku drogi. 
+Wektor stanu jest strukturą przedstawiającą stan środowiska. Dla każdego odcinka drogi składuje on wartości zmiennych stanowych. Początkowo zmienną stanu jest identyfikowana jako ilość pojazdów na danym odcinku drogi. 
 \subsection{Przykład} \label{subsec:example-single-road}
 Niech będzie dana droga z wydzielonymi czterema odcinkami. Przykładowy wektor stanu takiego środowiska to
 \[\textbf{x(t)}=\begin{bmatrix}
@@ -287,45 +252,27 @@ Zawiera on w sobie następujące informacje dla chwili t:
 	\caption{Droga z ilością pojazdów na poszczególnych odcinkach}
 	\label{fig:single_road}
 \end{figure}
-\section{Rozwój wektora stanu drogi i wprowadzenie macierzy systemu} \label{sec:macierz_systemu_def}
-Formalnym wzorem definiującym rozwój wektora stanu jest:
+\section{Rozwój wektora stanu drogi i wprowadzenie macierzy systemu}
+Początkowy model przepływu pojazdów zakłada, iż wszystkie pojazdy w chwili t+1 są o jeden odcinek dalej w swojej podróży niż w momencie $t$. Założone jest, iż żadne nowe pojazdy nie pojawiają się w sieci dróg. Ujście pojazdów znajduje się na końcu ostatniego odcinka. Wszystkie pojazdy będące w chwili $t$ na ostatnim odcinku w chwili $t+1$ opuszczają układ. Formalnym wzorem definiującym rozwój wektora stanu jest:
 \[\textbf{x(t+1)}=\textbf{Ax(t)} \addtag \label{eq:single_road} \]
-Gdzie $\textbf{A}$ jest \textbf{macierzą systemu}. Wartość macierzy $\textbf{A}$ na przecięciu kolumny $i$ i wiersza $j$  określa jaka część pojazdów z odcinka $i$ przejeżdża do odcinka $j$. W dalszych rozważaniach \textbf{manewr} przejazdu z odcinka $i$ do $j$ będzie oznaczany jako $[j,i]$.
-% Używając jako modelu przepływu opisany w sekcji \myref{sec:CTM} model CTM macierz systemu ma następujące wartości:
-
-%\begin{numcases}{A[i,j]=}
-%0 & dla $S[i,j]=0 \vee i \in {Q}$ \\
-%P[i,j] & dla $ S[i,j]=1$ \\
-%1-\delta(i) & dla $i=j \wedge  i \not\in {Q}$
-%\end{numcases}
-
-
-%$\textbf{A}$ jest rzadką, kwadratową macierzą o wartościach równych 1 jedynie bezpośrednio 1 wiersz pod główną przekątną macierzy. Takie wartości gwarantują przepływ pojazdów o jeden odcinek w jednym interwale czasowym.
-
-%
-%Początkowy model przepływu pojazdów zakłada, iż wszystkie pojazdy w chwili t+1 są o jeden odcinek dalej w swojej podróży niż w momencie $t$. Założone jest, iż żadne nowe pojazdy nie pojawiają się w sieci dróg. Ujście pojazdów znajduje się na końcu ostatniego odcinka. Wszystkie pojazdy będące w chwili $t$ na ostatnim odcinku w chwili $t+1$ opuszczają układ. 
-
-\subsection{Przykład ruchu bez zatorów}
+Gdzie $\textbf{A}$ jest macierzą systemu. Definiuje ona sposób przepływu pojazdów. $\textbf{A}$ jest rzadką, kwadratową macierzą o wartościach równych 1 jedynie bezpośrednio 1 wiersz pod główną przekątną macierzy. Takie wartości gwarantują przepływ pojazdów o jeden odcinek w jednym interwale czasowym.
+\subsection{Przykład}
 Dla przykładu przedstawionego w (\ref{subsec:example-single-road}) zostanie przedstawiony rozwój wektora stanu. Niech zatem
 \def \xZero {\begin{bmatrix}
 	2 \\ 4 \\ 3 \\ 0
 	\end{bmatrix}}
 \[\textbf{x(0)}=\xZero \addtag \]
-Macierzą systemu zapewniająca przejazd bez zatorów jest:
+Macierzą systemu jest:
 \def \A {\begin{bmatrix}
 		0 & 0 & 0 & 0 \\
 		1 & 0 & 0 & 0 \\
 		0 & 1 & 0 & 0 \\
 		0 & 0 & 1 & 0 \\
 \end{bmatrix}}
+
 \[
 \textbf{A}=\A \addtag
 \]
-Co można zdefiniować także jako:
-\begin{numcases}{A[j,i]=} 
-1 & dla manewrów $[j,i]=\{[1,0],[2,1],[3,2]\}$ \\
-0 & dla pozostałych manewrów
-\end{numcases}
 Wedle wzoru (\ref{eq:single_road}) wyliczone zostają kolejne wartości wektora stanu.
 \def \xI {\begin{bmatrix}
 		0 \\ 2 \\ 4 \\ 3
@@ -351,74 +298,62 @@ Wedle wzoru (\ref{eq:single_road}) wyliczone zostają kolejne wartości wektora 
 \[
 \textbf{x(4)}=\textbf{Ax(3)}=\A \xIII = \xIV \addtag
 \]
-%\subsection{Macierz systemu w modelu CTM}
-%Przedstawiony zostanie wzór macierzy systemu dla rozwoju wektora stanu pojedynczej drogi z uwzględnieniem modelu ruchu CTM. Macierz systemu jest zmienna w czasie, zatem będzie określona jako $\textbf{A(t)}$:
-%\begin{numcases}{A[i,j](t)=}
-%\frac{y_j(t)}{n_i(t)} & dla $j=i+1$ \\
-%1-\delta(i) & dla $i=j$ \\
-%0 & w pozostałych przypadkach
-%\end{numcases}
-%Gdzie 
-%
-%\begin{numcases}{\delta(i)=}
-%\sum_{j\in{\{0,...,n\}},j!=i} f(i,j) & dla  \\
-%1 & dla odcinka $i$ zakończonego ujściem
-%\end{numcases}
 
-% DOTAD BYLO
-
-%\subsection{Przykład z zatorem}
-%W powyższym przykładzie macierz $\textbf{A}$ była niezmienna. Można dojść jednak do wniosku, że $\textbf{A}$ jest zależne od ilości pojazdów na odcinku i lepszą notacją byłoby $\textbf{A(x)}$. Poniższy przykład z zatorem przedstawi sytuację zmiennej macierzy systemu spowodowanej zatorem.
-
-%Przedstawiony zostanie przykład rozwoju wektora stanu z poprzedniego przykładu, czyli:
-% \[\textbf{x(0)}=\xZero \addtag \]
-%W tym przypadku jednak ustalone będą ograniczenia odnośnie maksymalnego przepływu $Q_i(t)=2$ dla dowolnego odcinka i czasu. Dodatkowo każdy odcinek może pomieścić maksymalnie $N_i(t)=4$ pojazdów.
-% \def \A_korek {\begin{bmatrix}
-% 		b & 0 & 0 & 0 \\
-% 		a & b & 0 & 0 \\
-% 		0 & a & b & 0 \\
-% 		0 & 0 & a & 0 \\
-% \end{bmatrix}}
-% \def \xI_korek {\begin{bmatrix}
-% 		0 \\ 0 \\ 0 \\ 2
-% \end{bmatrix}}
-% 
-%  \[\textbf{x(0)}=\xZero \addtag \]
- 
 \section {Wektor stanu sieci dróg}
-W rozdziale (\ref{sec:wektor_stanu_drogi}) przedstawiony został wektor stanu dla pojedynczej drogi. W tym rozdziale zostanie sformułowany wektor stanu dla bardziej ogólnego przypadku - sieci dróg. Zbiór wszystkich odcinków w układzie jest oznaczany jako $\Omega$. Niejednokrotnie dwa odcinki $i,j \in \Omega$ będą leżały na innych drogach. Sposób przedstawienia wartości stanu jednak jest bardzo podobny do tego z poprzedniej sekcji. Wektor stanu jest utworzony z wartości stanowych wszystkich odcinków należących do układu.
+W rozdziale (\ref{sec:wektor_stanu_drogi}) przedstawiony został wektor stanu dla pojedynczej drogi. W tym rozdziale zostanie sformułowany wektor stanu dla bardziej ogólnego przypadku - sieci dróg. Sposób przedstawienia wartości stanuch jednak jest bardzo podobny. Dla środowiska zawierającego drogi $e_1,...,e_n$ wektor stanu jest utworzony z wartości stanu kolejnych odcinków tych dróg. 
+
 \subsection{Przykład} \label{subsec:wektor_stanu_siec_przyklad}
 Niech będzie dana sieć składająca się z trzech dróg. Dla każdej drogi zostaną wydzielone 2 odcinki. W sumie środowisko posiada 6 odcinków. Odcinki są ponumerowane od 0 co przedstawia poniższy rysunek.
-\def \xzero {\begin{bmatrix}
-		7 \\ 4 \\ 3 \\ 0 \\ 1 \\ 5
-\end{bmatrix}}
 	\begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm]{images/env_11}
 	\label{fig:env_11}
 	\caption{Numeracja odcinków środowiska}
-\end{figure}Niech przykładowym wektorem stanu będzie:
+\end{figure}
+
+Niech przykładowym wektorem stanu będzie:
+\def \xzero {\begin{bmatrix}
+		8 \\ 4 \\ 3 \\ 0 \\ 1 \\ 5
+\end{bmatrix}}
+
 \[\textbf{x(t)}=\xzero \addtag \]
 Zawiera on w sobie informacje dotyczące ilości pojazdów na poszczególnych odcinkach w chwili t. Poniższy obraz przedstawia ilości pojazdów na poszczególnych odcinkach dla stanu zadanego przez wektor $\textbf{x(t)}$
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=10cm]{images/env_11_743015}
+	\includegraphics[width=10cm]{images/env_11_843015}
 	\caption{Sieć dróg z ilościami pojazdów na poszczególnych odcinkach}
 	\label{fig:3_single_road}
 \end{figure}
 
-\section{Rozwój wektora stanu sieci dróg w oparciu o CTM}
-Przedstawiony zostanie rozwój stanu środowiska sieci dróg. Jako model ruchu wykorzystany zostanie model CTM opisany w sekcji \myref{sec:CTM}. W przypadku sieci dróg należy uwzględnić przypadek  gdy pojazdy mogą obrać różne kierunki ruchu (np. na skrzyżowaniu). W tym celu przedstawiona zostanie macierz prawdopodobieństwa. 
-\subsection{Macierz prawdopodobieństwa} \label{sec:macierz_prawd}
-\textbf{Macierz prawdopodobieństwa} \textbf{P} jest niezmienną w czasie rzadką macierz. Wartości macierzy $P[j,i]$ określają jaka część pojazdów na odcinku $i$ ma zamiar przejazdu do odcinka $j$. Dla niemożliwych manewrów $[j,i]$ wartości macierzy $P$ są równe 0.
-\subsection{Przykład macierzy prawdopodobieństwa}
-Rozważmy poprzednią sieć dróg z dodatkowym założeniem, że 25 procent pojazdów ma zamiar dokonać manweru skrętu w lewo. Pozostałe 75 procent pojazdów z tego odcinka wybiera jazdę w prawo.
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=10cm]{images/env_11_743015_procenty}
-	\caption{Sieć dróg z ilościami pojazdów na poszczególnych odcinkach}
-	\label{fig:3_single_road}
-\end{figure}Wtedy macierz prawdopodobieństwa jest następująca:
+\section{Rozwój wektora stanu sieci dróg}
+Przepływ pojazdów niezmiennie jest oparty o założenie, iż w trakcie trwania jednego interwału czasowego pojazdy pokonują 1 odcinek drogi. Nie pojawiają się nowe pojazdy w trakcie trwania symulacji, a ujścia ruchu znajdują się na końcu odcinków 3 i 5.
+%Równaniem systemu pozostaje $\textbf{x(t+1)=Ax(t)}$, gdyż do układu nie wpływają nowe pojazdy.\\ \\
+Macierz systemu $\textbf{A}$ powinna uwzględnić przepływy pojazdów na skrzyżowaniach. Do tej pory wszystkie pojazdy poruszały się jedynie prosto po odcinkach jednej drogi. W przypadku sieci dróg trzeba uwzględnić przypadek skrzyżowania, gdzie pojazdy mogą obrać różne kierunki ruchu.
+%W tym momencie należy przedstawić następującą definicję macierzy $\textbf{A}$:\\
+%Wartości macierzy \textbf{A} określają jaka część pojazdów z odcinka zadanego przez indeks kolumny przejeżdża do odcinka zadanego przez indeks wiersza. 
+Zdefiniowana zostanie zatem macierz $ \textbf{P} $ prawdopodobieństwa manerwów. Jest to niezmienna w czasie rzadka macierz. Wartości macierzy $ \textbf{P} $ w kolumnie i oraz wierszu j to prawdopodobieństwo przejazdu pojazdu będącego na odcinku i do odcinka j.
+
+
+\subsection{Przykład}
+Rozważone zostanie środowisko (\ref{subsec:wektor_stanu_siec_przyklad}) z dodatkowym założeniem, że 75 procent pojazdów ma zamiar skręcić w prawo. Pozostałe 25 procent wybiera skręt w lewo. 
+Srodowisko przedstawiają poniższe obrazki.
+
+\begin{tabular}{| c  | Sc |}
+	\hline
+	Numeracja odcinków   & Ilości pojazdów \\
+	\hline
+	\cincludegraphics[width=7cm]{images/env_11}  & \cincludegraphics[width=7cm]{images/env_11_843015_procenty} \\
+	\hline 
+\end{tabular}
+\noindent
+Taki sposób przepływu definiuje rzadką macierz prawdopodobieństwa $ \textbf{P} $ o wymiarach 6 na 6.
+\begin{itemize}
+	\item $\textbf{P}[1,2]=0.25$ wyznacza manewr skrętu w lewo
+	\item $\textbf{P}[1,4]=0.75$ wyznacza manewr skrętu w prawo
+	\item $\textbf{P}[0,1]=1 \;\; \textbf{P}[2,3]=1 \;\; \textbf{P}[4,5]=1$ co wynika z przepływu pojazdów pomiędzy sekcjami na jednej drodze
+	\item Pozostałe wartości macierzy $\textbf{P}$ to zera.
+\end{itemize}
+
 \def \P {\begin{bmatrix}
 		0 & 0 & 0 & 0 & 0 & 0 \\
 		1 & 0 & 0 & 0 & 0 & 0 \\
@@ -427,44 +362,12 @@ Rozważmy poprzednią sieć dróg z dodatkowym założeniem, że 25 procent poja
 		0 & 0.75 & 0 & 0 & 0 & 0 \\
 		0 & 0 & 0 & 0 & 1 & 0 
 \end{bmatrix}}
-\[\textbf{P}=\P \addtag \label{eq:p_example} \]
-Dodatnie wartości macierzy $P$ są następujące:
-\begin{itemize}
-	\item $P[1,0]=1$ - manewr jazdy prosto z odcinka 0 do 1
-	\item $P[3,2]=1$ - manewr jazdy prosto z odcinka 2 do 3
-	\item $P[5,4]=1$ - manewr jazdy prosto z odcinka 4 do 5
-	\item $P[2,1]=0.25$ - manewr jazdy w lewo z odcinka 1 do 2
-	\item $P[4,1]=0.75$ - manewr jazdy w prawo z odcinka 1 do 4
-\end{itemize}
-Wartości macierzy prawdopodobieństwa dla pierwszych trzech manewrów są równe 1, gdyż każdy pojazd na odcinku 0 ma zamiar przejechać na odcinek 1 (analogicznie z 2 na 3 oraz z 4 na 5). 25 procent pojazdów z odcinka 1 ma zamiar jazdy w lewo do odcinka 2. Z kolei pozostałe 75 procent chce obrać kierunek jazdy w prawo do odcinka 4. Kolumny odpowiadające odcinkom 3 i 5 mają wartości zerowe. Jest to uzasadnione tym, że pojazdy będące na tych odcinkach opuszczają układ.
+\[P=\P\]
 
 
-\subsection{Macierz systemu}
-%Przepływ pojazdów niezmiennie jest oparty o założenie, iż w trakcie trwania jednego interwału czasowego pojazdy pokonują 1 odcinek drogi. Nie pojawiają się nowe pojazdy w trakcie trwania symulacji, a ujścia ruchu znajdują się na końcu odcinków 3 i 5.
-Przedstawiona w tej sekcji macierz systemu $\textbf{A}$ powinna uwzględnić przepływy pojazdów na skrzyżowaniach oraz model ruchu CTM. Opisy modelu ruchu CTM oraz oznaczeń użytych w poniższej definicji są zawarte w rozdziale \myref{sec:CTM}. Macierz systemu z następującymi wartościami gwarantuje przepływ zgodny z modelem ruchu CTM:
-\begin{numcases}{A[j,i](t)=}
-\frac{y_{ij}(t)}{x_i(t)} & dla $i \neq j$, $i \notin \Omega_{out}$ \label{eq:i_rozne_od_j} \\ 
-\frac{y_{ij}(t)-y_{i*}(t)}{x_i(t)} & dla $i=j$, $i \notin \Omega_{out}$ \label{eq:i_rowne_j} \\
-0 & dla $i \in \Omega_{out} \label{eq:i_w_omega_out}$
-\end{numcases}
-Powyższy wzór potrzebuje dokładnego omówienia. Jest on zgodny z początkową definicją macierzy systemu \myref{sec:macierz_systemu_def}. Dla przypomnienia wartości macierzy systemu są określone jako część pojazdów będących na odcinku $i$ dokonujących manewru $[j,i]$. Zgodność wszystkich 3 przypadków jest omówiona poniżej:
-\begin{itemize}
-	\item \myref{eq:i_rozne_od_j} - Wartość $\frac{y_{ij}(t)}{x_i(t)}$ to stosunek pojazdów, które przejechały z odcinka $i$ do odcinka $j$ (t.j. $y_{ij}(t)$) do całkowitej liczby pojazdów na odcinku $i$ (t.j. $x_i(t)$).
-	\item \myref{eq:i_rowne_j} - Licznik $x_{ij}(t) - y_{i*}(t)$ określa ilość pojazdów, które pozostały na odcinku $i$.
-	\item \myref{eq:i_w_omega_out} - Wszystkie pojazdy z odcinka $i$ bezpośrednio przed ujściem przejeżdżają do ujścia. Zatem nie wjeżdżają do żadnego innego odcinka $j \in \Omega$,
-\end{itemize}
 
 
-\subsection{Przykład} \label{sec:przyklad_CTM_skrz}
-Rozważone zostanie środowisko (\ref{subsec:wektor_stanu_siec_przyklad}) z założeniem, że 75 procent pojazdów ma zamiar skręcić w prawo. Pozostałe 25 procent wybiera skręt w lewo. 
-Srodowisko przedstawiają poniższe obrazki.
 
-\begin{tabular}{| c  | Sc |}
-	\hline
-	Numeracja odcinków   & Ilości pojazdów \\
-	\hline
-	\cincludegraphics[width=7cm]{images/env_11}  & \cincludegraphics[width=7cm]{images/env_11_743015_procenty} \\
-	\hline\end{tabular} \newline \newline
 \def \A{
 \begin{bmatrix}
 	0 & 0    & 0 & 0 & 0 & 0 \\
@@ -475,63 +378,49 @@ Srodowisko przedstawiają poniższe obrazki.
 	0 & 0    & 0 & 0 & 1 & 0 
 \end{bmatrix}
 }
-\def \Azero{
-	\begin{bmatrix}
-		\frac{4}{7} & 0    & 0 & 0 & 0 & 0 \\
-		\frac{3}{7} & 0    & 0 & 0 & 0 & 0 \\
-		0 & 0.25 & 0 & 0 & 0 & 0 \\
-		0 & 0    & 1 & 0 & 0 & 0 \\
-		0 & 0.75 & 0 & 0 & 0 & 0 \\
-		0 & 0    & 0 & 0 & 1 & 0 
-	\end{bmatrix}
-} 
-Powyższy sposób przepływu przez skrzyżowanie definiuje macierz prawdopodobieństwa $ \textbf{P} $ określoną w przykładzie \myref{eq:p_example}. Ustalone zostaje, że do sieci nie napływają żadne pojazdy, zatem wartości wektora źródła są równe 0 co jest zapisane jako $\textbf{u(t)}=\theta$ dla dowolnego $t$. \newline
-Ustalone zostaje, iż maksymalna ilość pojazdów będąca na odcinku to $N_j(t)=7$ dla dowolnego $i,t$. Przepływ pojazdów w jednym interwale jest ograniczony przez $Q_j(t)=4$. Wtedy następująca tabela przedstawia rozwój środowiska:
-%bbbbbbbbb
+\begin{flushleft}
+W sytuacji gdy nie ma uwzględnionej sygnalizacji świetlnej oraz pojęcia zatoru macierz systemu jest macierzą prawdopodobieństwa, czyli $A=P$. \linebreak Wartości wektora stanu zmieniają się zgodnie równaniem stanu $\textbf{x(t)}=\textbf{Ax(t-1)}$. Poniżej zapisane są obliczenia.
+\end{flushleft}
 
 \def \xI{\begin{bmatrix}
-		4 \\ 3 \\ 1 \\ 3 \\ 3 \\ 1
+		0 \\ 8 \\ 1 \\ 3 \\ 3 \\ 1
 \end{bmatrix}}
 \def \xII{\begin{bmatrix}
-		0 \\ 4 \\ \frac{3}{4} \\ 1 \\ 2\frac{3}{4} \\ 3
+		0 \\ 0 \\ 2 \\ 1 \\ 6 \\ 3
 \end{bmatrix}}
 \def \xIII{\begin{bmatrix}
 		0 \\ 0 \\ 0 \\ 6 \\ 0 \\ 2
 \end{bmatrix}}
-\begin{flushleft}
 \begin{tabular}{| c | c | Sc |}
 	\hline
 	t   & Równanie stanu & Podgląd środowiska \\
 	\hline
 	0 & 
-	$ \textbf{x(0)} = \xzero$  & \cincludegraphics[width=7cm]{images/env_11_743015_procenty} \\
+	$ \textbf{x(0)} = \xzero$  & \cincludegraphics[width=7cm]{images/env_11_843015_procenty} \\
 	\hline 
-	1 & $\textbf{x(1)}=\textbf{A(0)x(0)}=\Azero \xzero = \xI$  & \cincludegraphics[width=7cm]{images/env_11_431331_procenty} \\
+	1 & $\textbf{x(1)}=\textbf{Ax(0)}=\A \xzero = \xI$  & \cincludegraphics[width=7cm]{images/env_11_081331_procenty} \\
 	\hline 
-	2 & $\textbf{x(2)}=\textbf{A(1)x(1)}=\A \xI = \xII$  & \cincludegraphics[width=7cm]{images/env_11_04u1u3_procenty} \\
+	2 & $\textbf{x(2)}=\textbf{Ax(1)}=\A \xI = \xII$  & \cincludegraphics[width=7cm]{images/env_11_002163_procenty} \\
 	\hline 
-	3 &	$\textbf{x(3)}=\textbf{A(2)x(2)}=\A \xII = \xIII$ & \cincludegraphics[width=7cm]{images/env_11_000602_procenty} \\
-	\hline 
+	3 &	$\textbf{x(3)}=\textbf{Ax(2)}=\A \xII = \xIII$ & \cincludegraphics[width=7cm]{images/env_11_000602_procenty} \\
+\hline 
 \end{tabular}
-\end{flushleft}
-
-
-
-
 
 
 \newpage
-\section{Wprowadzenie sygnalizacji świetlnej} \label{sec:sygnalizacja}
-Kolejnym etapem rozwoju modelu jest wprowadzenie sygnalizacji świetlnej. Warto zauważyć, że do tej pory rozważane układy były pozbawione jakiegokolwiek sterowania. Zostanie teraz zdefiniowana macierz sygnalizacji świetlnej $\textbf{S(t)}$. Jest ona zmienna w czasie, gdyż odpowiada za sterowanie sygnalizacją świetlną. Wartości macierzy sygnalizacji $S[j,i](t)$ określają, czy manewr $[j,i]$ jest wykonalny w chwili $t$.
-\begin{numcases}{S_{ij}(t)=}
+\section{Wprowadzenie sygnalizacji świetlnej}
+Kolejnym etapem rozwoju modelu jest wprowadzenie sygnalizacji świetlnej. Warto zauważyć, że do tej pory rozważane układy były pozbawione jakiegokolwiek sterowania, czego bezpośrednim skutkiem była niezmienność macierzy $\textbf{A}$ w czasie. 
+Niech wektor $ [i,j] $ będzie manewrem polegającym na bezpośrednim przejeździe z odcinka $ i $ na odcinek $ j $. Zostanie teraz zdefiniowana macierz sygnalizacji świetlnej $\textbf{S}$. Określa ona wykonalność dowolnego manewru.
+
+\begin{numcases}{S_{ij}=}
 1 & dla manewru zezwolonego przez zielone światło \label{eq:allowed_by_light} \\
 1 & dla manewru nie wymagającego sygnalizacji świetlnej \label{eq:manewr_existing} \\
 0 & dla manewru wstrzymanego przez czerwone światło \label{eq:stopped_by_light} \\
 0 & dla niemożliwego manewru \label{eq:manewr_not_existing}
 \end{numcases}
-Sygnalizacja świetlna zwykle posiada pewną fazę, która określa dozwolone \myref{eq:allowed_by_light} oraz niedozwolone \myref{eq:stopped_by_light} manewry. Chociaż macierz sygnalizacji świetlnej jest zmienna w czasie to wartości macierzy $\textbf{S}$ dla manewrów niemożliwych \myref{eq:manewr_not_existing} oraz nie wymagających sygnalizacji świetlnej \myref{eq:manewr_existing} są niezmienne dla ustalonego środowiska.
+Sygnalizacja świetlna zwykle posiada pewną fazę, która określa dozwolone \myref{eq:allowed_by_light} oraz niedozwolone \myref{eq:stopped_by_light} manewry. Fazy świetlne będą oczywiście zmieniane w trakcie symulacji zatem macierz $\textbf{S}$ też jest zmienna w czasie. Wartości macierzy $\textbf{S}$ obejmujące przypadki niemożliwych manewrów \myref{eq:manewr_not_existing} oraz nie wymagających sygnalizacji świetlnej \myref{eq:manewr_existing} są z kolei niezmienne dla ustalonego środowiska.
 \subsection{Przykład macierzy sygnalizacji świetlnej} \label{subsec:macierz_sygnalizacji}
-Rozważone będzie znane z poprzednich przykładów skrzyżowanie - tym razem mające sygnalizację świetlną z aktywną fazą zezwalającą na manewr [2,1]. Ta sama faza zabrania przejazdu z 1 odcinka do 4. 
+Rozważone będzie znane z poprzednich przykładów skrzyżowanie - tym razem mające sygnalizację świetlną z aktywną fazą zezwalającą na manewr [1,2]. Ta sama faza zabrania przejazdu z 1 odcinka do 4. 
 
 \begin{tabular}{| Sc  | Sc |}
 	\hline
@@ -539,12 +428,14 @@ Rozważone będzie znane z poprzednich przykładów skrzyżowanie - tym razem ma
 	\hline
 	\cincludegraphics[width=7cm]{images/env_11_faza_0_procenty}  & \cincludegraphics[width=7cm]{images/env_11_lights_0_943015_procenty} \\
 	\hline 
-\end{tabular} \newline \newline Poszczególne manewry są następujące:
+\end{tabular}
+
+Poszczególne manewry są następujące:
 \begin{itemize}
-	\item \myref{eq:allowed_by_light} - Manewrem zezwolonym przez zielone światło  dla fazy $ 0 $ jest $ [2,1] $.
-	\item \myref{eq:manewr_existing} - Prawidłowym manewrem bez sygnalizacji świetlnej są manewry $ [1,0] $, $ [3,2] $, $ [5,4] $.
-	\item \myref{eq:stopped_by_light} - Dla fazy świetlnej $ 0 $ manewrem zatrzymanym przez czerwone światło  jest $ [4,1] $.
-	\item \myref{eq:manewr_not_existing} - Pozostałe manewry są niemożliwe. Przykładem jest $ [2,0] $, gdyż nie ma możliwości bezpośredniego przejazdu z odcinka $ 0 $ do $ 2 $.
+	\item \myref{eq:allowed_by_light} - Manewrem zezwolonym przez zielone światło  dla fazy $ 0 $ jest $ [1,2] $.
+	\item \myref{eq:manewr_existing} - Prawidłowym manewrem bez sygnalizacji świetlnej są manewry $ [0,1] $, $ [2,3] $, $ [4,5] $.
+	\item \myref{eq:stopped_by_light} - Dla fazy świetlnej $ 0 $ manewrem zatrzymanym przez czerwone światło  jest $ [1,4] $.
+	\item \myref{eq:manewr_not_existing} - Pozostałe manewry są niemożliwe. Przykładem jest $ [0,2] $, gdyż nie ma możliwości bezpośredniego przejazdu z odcinka $ 0 $ do $ 2 $.
 \end{itemize}
 Macierz sygnalizacji świetlnej dla tego przykładu jest następująca:
 \def \S{\begin{bmatrix}
@@ -555,26 +446,22 @@ Macierz sygnalizacji świetlnej dla tego przykładu jest następująca:
 		0 & 0 & 0 & 0 & 0 & 0 \\
 		0 & 0 & 0 & 0 & 1 & 0 \\
 \end{bmatrix}}
-\def \S_zero_one{
-	\begin{bmatrix}
-		0 & 0            & 0 & 0 & 0 & 0 \\
-		1 & 0            & 0 & 0 & 0 & 0 \\
-		0 & {\color[rgb]{0,.70,0} \textbf{1}}  & 0 & 0 & 0 & 0 \\
-		0 & 0            & 1 & 0 & 0 & 0 & \\
-		0 & {\color[rgb]{.70,0,0} \textbf{0}}  & 0 & 0 & 0 & 0 \\
-		0 & 0            & 0 & 0 & 1 & 0 \\
-	\end{bmatrix}
-}
-\[\textbf{S}= \S_zero_one \]
-W dalszych rozważaniach {\color[rgb]{0,.70,0} \textbf{zielony kolor}} wartości macierzy sygnalizacji świetlnej odnosi się do zielonego światła dla manewru zadanego przez wiersz $j$ i kolumnę $i$. Analogicznie 
-{\color[rgb]{.70,0,0} \textbf{czerwony kolor}} oznacza czerwone światło.
-%\subsection{Rozwój wektora stanu sieci z sygnalizacją świetlną}
-%Przepływ ruchu odbywa się zgodnie z opisanym w \myref{sec:CTM_sygnalizacja} przypadku modelu CTM z sygnalizacją świetlną. Jako parametry $s_{ij}(t)$ przypisane są wartości macierzy sygnalizacji świetlnej $\textbf{S(t)}$. Formuła macierzy systemu przedstawiona w 
-%(\ref{eq:i_rozne_od_j}-\ref{eq:i_w_omega_out}) pozostaje niezmienna.
-\subsection{Przykład rozwoju wektora stanu} \label{sec:rozwoj_sieci_sygnalizcja_przypadek}
-Przepływ ruchu odbywa się zgodnie z opisanym w \myref{sec:CTM_sygnalizacja} przypadku modelu CTM z sygnalizacją świetlną. Jako parametry $s_{ij}(t)$ przypisane są wartości macierzy sygnalizacji świetlnej $\textbf{S(t)}$. Formuła macierzy systemu przedstawiona w 
-(\ref{eq:i_rozne_od_j}-\ref{eq:i_w_omega_out}) pozostaje niezmienna. \newline
-Niech będzie dany układ z przykładu \myref{subsec:macierz_sygnalizacji} z zielonym światłem dla lewoskrętu. W chwili t=2 zostanie zmieniona faza świetlna. Od tego momentu obydwa manewry na skrzyżowaniu są dozwolone.  
+\[\textbf{S}=\S\]
+
+
+\subsection{Macierz systemu uwzględniająca sygnalizację świetlną}
+Mając zdefiniowaną zarówno macierz prawdopodobieństwa przejazdów $\textbf{P}$ jak i macierz sygnalizacji świetlnej $ \textbf{S} $ można ustalić macierz systemu $\textbf{A}$ uwzględniającą już sygnalizacje świetlne. Niech $Q$ będzie zbiorem odcinków, które znajdują się bezpośrednio przed ujściem ruchu. Wtedy macierz systemu zdefiniowana jest jako: 
+\begin{numcases}{A[i,j]=}
+0 & dla $S[i,j]=0 \vee i \in {Q}$ \\
+P[i,j] & dla $ S[i,j]=1$ \\
+1-\delta(i) & dla $i=j \wedge  i \not\in {Q}$
+\end{numcases}
+Równanie systemu jest następujące:
+\[\textbf{x(t+1)}=\textbf{A(t)x(t)} \addtag \]
+Macierz systemu jest teraz zmienna w czasie, zatem w miejse $\textbf{A}$ dotychczasowego równania pojawiło się $\textbf{A(t)}$. \\ \\
+\subsection{Przykład rozwoju wektora stanu}
+Niech będzie dany układ z przykładu \myref{subsec:macierz_sygnalizacji} z zielonym światłem dla lewoskrętu. W chwili t=2 zostanie zmieniona faza świetlna. Od tego momentu obydwa manewry na skrzyżowaniu są dozwolone.  W chwili t=3 wartości stanu nie są całkowite, co nie jest sprzeczne z modelem matematycznym. Rozwój wektora stanu został przedstawiony w poniższej tabeli.
+
 \def \xzero{\begin{bmatrix}
 		9 \\ 4 \\ 3 \\ 0 \\ 1 \\ 5
 \end{bmatrix}}
@@ -636,36 +523,24 @@ Niech będzie dany układ z przykładu \myref{subsec:macierz_sygnalizacji} z zie
 	\hline 
 \end{tabular}
 }
-W chwili t=3 wartości stanu nie są całkowite, co nie jest sprzeczne z modelem makroskopowym. Rozwój wektora stanu został przedstawiony w poniższej tabeli.
-%\color{blue!240}{cooo}
-%{\color[rgb]{1,0,0} This text will appear red-colored}
-Macierz sygnalizacji świetlnej dla $t=0,1$ jest następująca:
-\[\textbf{S(t)}= \S_zero_one \]
-Z kolei dla $t=2,3$:
-\def \S_II_III{
-	\begin{bmatrix}
-		0 & 0            & 0 & 0 & 0 & 0 \\
-		1 & 0            & 0 & 0 & 0 & 0 \\
-		0 & {\color[rgb]{0,.70,0} \textbf{1}}  & 0 & 0 & 0 & 0 \\
-		0 & 0            & 1 & 0 & 0 & 0 & \\
-		0 & {\color[rgb]{0,.70,0} \textbf{1}}  & 0 & 0 & 0 & 0 \\
-		0 & 0            & 0 & 0 & 1 & 0 \\
-	\end{bmatrix}
-}
-\[\textbf{S(t)}=\S_II_III \]
+
+
+
+
 \section{Wprowadzenie źródeł ruchu }
 Wszystkie poprzednie przykłady układów ruchu drogowego szybko kończyły się stanem w którym nie było już żadnych pojazdów na drogach. W tej sekcji zostanie przedstawiony sposób napływania nowych pojazdów do układu. 
-Wprowadzony zostanie wektor źródła $\textbf{u(t)}$. Jest on zmienny w czasie, a jego wartości określają ile pojazdów pojawia się w chwili $t+1$ na poszczególnych odcinkach układu. Równanie systemu uwzględniające zródła ruchu to:
+Wprowadzony zostanie wektor źródłą $\textbf{u(t)}$ definiujący pojazdy pojawiające się w układzie. Jest on zmienny w czasie, a jego wartości określają ile pojazdów pojawia się w następnej chwili w poszczególnych odcinkach układu.
+Równanie systemu uwzględniające zródła ruchu to:
 \[\textbf{x(t)}=\textbf{A(t-1)x(t-1)} + \textbf{u(t-1)} \label{eq:stan_u}   \addtag{}\]
 \subsection{Przykład}
-Rozważony zostanie prosty przykład, który dla ułatwienia nie uwzględnia wcześniej wprowadzonych pojęć sygnalizacji świetlnej oraz zatoru. Przedstawione zostanie środowisko składające się z dwóch dróg, które nie są ze sobą w żaden sposób połączony.
+Rozważony zostanie prosty przykład, który nie uwzględnia wcześniej wprowadzonych pojęć sygnalizacji świetlnej oraz zatoru. Przedstawione zostanie środowisko składające się z dwóch dróg, które nie są ze sobą w żaden sposób połączony.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=8cm]{images/env_12}
 	\label{fig:env_12}
 	\caption{Numeracja odcinków środowiska}
 \end{figure} \noindent
-Pojazdy poruszają się z odcinków 0 (3) kończąc swój bieg po przejechaniu przez odcinki 5 (2) co przedstawia macierz systemu $A$:
+Pojazdy wzdłóż dróg kończąc swój bieg po przejechaniu przez odcinki 5 i 2 co przedstawia macierz systemu $A$:
 \def \A{\begin{bmatrix}
 0 & 0 & 0 & 0 & 0 & 0 \\
 1 & 0 & 0 & 0 & 0 & 0 \\
@@ -675,7 +550,6 @@ Pojazdy poruszają się z odcinków 0 (3) kończąc swój bieg po przejechaniu p
 0 & 0 & 0 & 0 & 1 & 0
 \end{bmatrix}}
 \[A=\A \]
-Dla ułatwienia powyższa macierz przedstawia środowisko bez zatorów.
 Pragnąc by do odcinków 0 i 3  napływało odpowiednio po 4, 8, 20 oraz 3, 7, 5 pojazdów należy zdefiniować ciąg wektorów $\textbf{u(t)}$ w sposób przedstawiony w poniższej tabeli.
 
 \def \xzero{\begin{bmatrix}
@@ -716,17 +590,213 @@ Pragnąc by do odcinków 0 i 3  napływało odpowiednio po 4, 8, 20 oraz 3, 7, 5
 	\hline 
 \end{tabular}
 }
+\section{Zatory drogowe}
+Dotychczasowe przedstawienie macierzy systemu $ \textbf{A} $ nie zawiera w sobie jeszcze pojęcia zotoru drogowego. W jednym interwale czasowym moze przejechac przez odcinek astronomiczna wrecz liczba pojazdów. Wprowadzona zostanie zatem funkcja zatoru ograniczająca przejazdy w przypadku zbyt dużej liczby pojazdów. Dziedziną funkcji zatoru $ f $ jest zbiór wszystkich manewrów $ [i,j] $, takich że $ i \neq j $. Funkcja zatoru jest jednak zależna także od wartości stanowych wektora $\textbf{x}$, a przede wszystkim od ilości pojazdów na odcinkach $i$ oraz $j$ czyli $x[i],x[j]$. Wartości funkcji $f$ należą do przedziału $[0,1]$.
+Macierz stanowa $\textbf{A}$ z uwzględnieniem zatorów dla układu z $ n $ odcinkami przedstawia się następująco:
+
+\def \Af {\begin{bmatrix}
+		1-\delta(0) & f(1,0) & ... & f(n,0) \\
+		f(0,1) &1-\delta(1)& ... & f(n,1) \\
+		f(0,2) &f(1,2)& ... & f(n,2) \\
+		...   &...& ... & ... \\
+		f(0,n) &f(1,n)& ... & 1-\delta(n)
+\end{bmatrix}}
+
+\[\textbf{A}=\Af \addtag \label{eq_A_z_korkiem} \]
+Gdzie $\delta$ to suma wszystkich wartości danej kolumny z wyłączeniem tych na głównej przekątnej. W przypadku odcinków zakończonych ujściem, aby wyzerować wartości $\delta$ przyjmuje wartość 1. Formalnie $\delta$ to:
+\begin{numcases}{\delta(i)=}
+\sum_{j\in{\{0,...,n\}},j!=i} f(i,j) & dla odcinka $i$ nie zakończonego ujściem \\
+1 & dla odcinka $i$ zakończonego ujściem
+\end{numcases}
+
+\subsection{Przykład zatoru na pojedynczej drodze} \label{subsec:zator_f10}
+Rozważmy poniższe środowisko składające się z drogi posiadającej 4 odcinki.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{images/env_13}
+	\caption{Droga z numeracją odcinków}
+	\label{fig:env_13}
+\end{figure}
+Należy skonstruować pewną funkcję zatoru. Niech jej celem będzie, aby przez jeden interwał czasowy maksymalnie 10 pojazdów przejeżdżało przez odcinek drogi. Następująca funkcja gwarantuje takie zachowanie:
+
+\begin{numcases}{f(i,j)=}
+\textbf{P}[i,j] & dla $ j=i+1 \wedge x[i]<10$ - przejazd bez zatoru \label{eq:fmanewr_bez_zatoru_fX} \\
+\frac{10}{x[i]} & dla $ j=i+1  \wedge x[i] \geq 10$ - przejazd z zatorem \label{eq:fmanewr_zator_fX} \\
+0 & dla pozostałych przypadków - niemożliwe manewry \label{eq:fmanewr_not_existing}
+\end{numcases} \noindent
+ Macierze stanu zostały wyliczone na podstawie wzoru \ref{eq_A_z_korkiem}. W tym przypadku jest to:
+\def \A {\begin{bmatrix}
+		1-\delta(0) & f(1,0) &   f(2,0) & f(3,0) & \\
+		f(0,1) & 1-\delta(1) &   f(2,1) & f(3,1) & \\
+		f(0,2) & f(1,2) &   1-\delta(2) & f(3,2) & \\
+		f(0,3) & f(1,3) &   f(2,3) & 1-\delta(3) & \\
+\end{bmatrix}}
+\[A=\A \addtag  \label{eq:A_Idroga_korek}\]
+
+Funkcja $\delta$ dla tego środowiska to:
+\begin{numcases}{\delta(i)=}
+f(0,1)+f(0,2)+f(0,3) & dla $i = 0 $
+\\
+f(1,0)+f(1,2)+f(1,3) & dla $i = 1 $
+\\
+f(2,0)+f(2,1)+f(2,3) & dla $i = 2 $
+\\
+1 & dla $i = 3 $
+\end{numcases}
+
+\def \xzero {\begin{bmatrix}
+		17 \\ 2 \\ 11 \\ 4
+\end{bmatrix}}
+
+\def \xI {\begin{bmatrix}
+		7 \\ 10 \\ 3 \\ 10
+\end{bmatrix}}
+
+\def \xII {\begin{bmatrix}
+		0 \\ 6 \\ 10 \\ 3
+\end{bmatrix}}
+
+\def \Azero {\begin{bmatrix}
+		\frac{7}{17} & 0 & 0 & 0  \\
+		\frac{10}{17} & 0 & 0 & 0  \\
+		0 & 1 & \frac{1}{11} & 0  \\
+		0 & 0 & \frac{10}{11} & 0  \\
+\end{bmatrix}}
+
+\def \AI {\begin{bmatrix}
+		0 & 0 & 0 & 0  \\
+		1 & 0 & 0 & 0  \\
+		0 & 1 & 0 & 0  \\
+		0 & 0 & 1 & 0  \\
+\end{bmatrix}}
+
+Rozważmy następujący stan początkowy środowiska:
+
+\centerline{
+	\begin{tabular}{| c | c | Sc |}
+		\hline
+		t   & Równanie stanu & Podgląd środowiska  \\
+		\hline
+		0 & 
+		$ \textbf{x(0)} = \xzero$  & \cincludegraphics[width=5cm]{images/env_13_t_0} \\
+		\hline 
+	\end{tabular}
+}
+W celu wyliczenia $\textbf{x(1)}$ należy obliczyć $\textbf{A(0)}$, wedle wzoru \myref{eq:A_Idroga_korek}. Wartości 
+zerowej kolumny macierzy $A(0)$ są wyliczane w następującej kolejności:
+\begin{itemize}
+	\item $ A[0,1]=f(0,1) $ to przypadek manewru z zatorem \myref{eq:fmanewr_zator_fX}. Zatem $f(0,1)=\frac{10}{17}$, gdyż $x[0]=17$
+	\item $A[0,2]=f(0,2) = 0  \; f(0,3)=0$ to przypadki niemożliwych manewrów \myref{eq:fmanewr_not_existing}.
+	\item $A[0,0]=1-\delta(0)=1-f(0,1)-f(0,2)-f(0,3)=1-\frac{10}{17}-0-0=\frac{7}{17}$ pozostaje na odcinku 0.
+\end{itemize}
+Analogiczne operacje zostają przeprowadzone dla kolejnych kolumn co daje rezultat w postaci:
+\[A(0)=\Azero\]
+Dalszy rozwój wektora stanu jest przedstawiony w tabeli poniżej.
+
+\centerline{
+	\begin{tabular}{| c | c | Sc |}
+		\hline
+		t   & Równanie stanu & Podgląd środowiska  \\
+		\hline
+		0 & 
+		$ \textbf{x(0)} = \xzero$  & \cincludegraphics[width=5cm]{images/env_13_t_0} \\
+		\hline 
+		1 & $ \textbf{x(1)} = \textbf{A(0)x(0)} =  \Azero \xzero = \xI$ & \cincludegraphics[width=5cm]{images/env_13_t_1} \\
+		\hline 
+		2 & $ \textbf{x(2)} = \textbf{A(1)x(1)} = \AI \xI = \xII$ & \cincludegraphics[width=5cm]{images/env_13_t_2} \\
+		\hline 
+	\end{tabular}
+}
+
+
+\subsection{Przykład zatoru na skrzyżowaniu}
+Niech funkcją zatoru będzie funkcja przedstawiona w (\ref{eq:fmanewr_bez_zatoru_fX}-\ref{eq:fmanewr_not_existing})
+Rozważmy poniższą sytuację na drogach w chwili $t=0$:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{images/env_11_1570137518_procenty.png}
+	\label{fig:env_11_case_0}
+\end{figure}\noindent
+\begin{itemize}
+	\item Zatory są na odcinkach 0,1,2 i 5 (odpowiednio ilości pojazdów to 15,70,13,18). 
+	\item Obecna faza świetlna to 0.
+\end{itemize}
+Najistotniejszym punktem macierzy sygnalizacji świetlnej jest $ S[1,2]=1 $, co odpowiada zielonemu światłu dla lewoskrętu. Cała macierz $ \textbf{S} $ to:
+\def \ScaseZero {\begin{bmatrix}
+		1 & 0 & 0 & 0 & 0 & 0 \\
+		1 & 1 & 0 & 0 & 0 & 0 \\
+		0 & {1} & 1 & 0 & 0 & 0 \\
+		0 & 0 & 1 & 1 & 0 & 0 \\
+		0 & 0 & 0 & 0 & 1 & 0 \\
+		0 & 0 & 0 & 0 & 1 & 1 
+\end{bmatrix}}
+\def \AcaseZero {\begin{bmatrix}
+		\frac{5}{15}  & 0             & 0             & 0 & 0 & 0 \\
+		\frac{10}{15} & \frac{60}{70} & 0             & 0 & 0 & 0 \\
+		0          	  & \frac{10}{70} & \frac{3}{13}  & 0 & 0 & 0 \\
+		0             & 0             & \frac{10}{13} & 0 & 0 & 0 \\
+		0             & 0             & 0             & 0 & 0 & 0 \\
+		0             & 0             & 0             & 0 & 1 & 0 
+\end{bmatrix}}
+
+\[\textbf{S}= \begin{bmatrix}
+1 & 0 & 0 & 0 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 & 0 \\
+0 & \mathbf{1} & 1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 1 & 1 
+\end{bmatrix} \addtag \]
+Macierz systemu to zatem:
+\[\textbf{A}= \begin{bmatrix}
+\frac{5}{15}  & 0             & 0             & 0 & 0 & 0 \\
+\frac{10}{15} & \frac{60}{70} & 0             & 0 & 0 & 0 \\
+0          	  & \mathbf{\frac{10}{70}} & \frac{3}{13}  & 0 & 0 & 0 \\
+0             & 0             & \frac{10}{13} & 0 & 0 & 0 \\
+0             & 0             & 0             & 0 & 0 & 0 \\
+0             & 0             & 0             & 0 & 1 & 0 
+\end{bmatrix} \addtag \]
+\def \utMinusI{\begin{bmatrix} 
+		7 \\ 0 \\ 0 \\ 0 \\ 0 \\ 0 
+\end{bmatrix}}
+\def \xtMinusI{\begin{bmatrix} 
+		15 \\ 70 \\ 13 \\ 7 \\ 5 \\ 18	
+\end{bmatrix}}
+\def \xt{\begin{bmatrix} 
+		12 \\ 70 \\ 13 \\ 10 \\ 0 \\ 5	
+\end{bmatrix}}\noindent
+Dla przykładu szczegółowo zostaną policzone wartości zerowej kolumny macierzy $\textbf{A}$, która dotyczy pojazdów wyjeżdżających z odcinka 0. Pozostałe wartości są liczone analogicznie.
+\begin{itemize}
+	\item Korzystając ze wzoru \ref{eq:manewr_zator_f10} ustalone zostaje $f(0,1)=\frac{10}{15}$. Jest to przypadek zatoru i jedynie 10 pojazdów z 15 przemieszcza się do następnego odcinka.
+	\item Wartości $f(0,2),(0,3),(0,4),(0,5)$ są równe $0$, gdyż są to przypadki \ref{eq:manewr_not_existing} nieistniejących manewrów.
+	\item $A[0,0]=1-\delta(0)=1-f(0,1)-f(0,2)-f(0,3)-f(0,4)-f(0,5)=1- \frac{10}{15} -0-0-0-0= \frac{5}{15}$
+\end{itemize}
+Stan w momencie $t=1$ wyliczony z równania stanu jest następujący:
+\[\textbf{x[1]}=\textbf{A[0]x[0]}=\AcaseZero \cdot \xtMinusI = \xt \]
+Poniższy obraz przedstawia sytuację w środowisku w chwili t-1 oraz przepływ pojazdów, który miał miejsce między momentem $t-1$ a $t$.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{images/env_11_przeplyw_korek}
+	\label{fig:env_11_case_0_przeplyw}
+\end{figure}\noindent
+W rezultacie w chwili t obecny jest następujący stan:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{images/env_11_po_korku}
+	\label{fig:env_11_case_0_po_przeplywie}
+\end{figure}\noindent
+
 
 \chapter {Środowiska symulacyjne i ich nauka}
 W tym rozdziale przedstawione zostaną środowiska symulacyjne. Głównym ich elementem jest sieć dróg. Podstawowe informacje na temat działania modelu sieci dróg i ruchu obowiązującego na nich zostały przedstawione w rozdziale \ref{chapter:model_sieci_drog}. Każde środowisko posiada dokładną specyfikacje możliwych faz świetlnych. Do każdego ze skrzyżowań jest przyporządkowany agent, który ma za zadanie podejmować akcje prowadzące do dobrej przepustowości ruchu. Dokładnie zostaną przedstawione przestrzenie decyzyjne i bezpośrednie konsekwencje każdej z akcji. Każde środowisko będzie posiadało swój problem optymalizacyjny i przedstawiony zostanie sposób uczenia, który prowadzi do rozwiązania tego problemu. 
-\section{Środowisko 1}
+\section{Srodowisko 1}
 %(11 na froncie)
 Elementy sieci dróg pierwszego środowiska były niejednokrotnie przedstawiane w rozdziale \myref{chapter:model_sieci_drog}, jednak dopiero teraz nastąpi przedstawienie pierwszego pełnego środowiska symulacyjnego. Na model sieci składają się 3 drogi - każda ma po 2 odcinki. Jest jedno skrzyżowanie na którym 75 procent pojazdów skręca w prawo, a pozostałe obierają kierunek w lewo.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm]{images/env_11_procenty}
 	\label{fig:env_11}
-	\caption{Środowisko 1}
+	\caption{środowisko 11}
 \end{figure}
 
 \subsection{Sygnalizacje świetlne}	
@@ -741,21 +811,22 @@ Skrzyżowanie posiada 2 fazy świetlne przedstawione powyżej. Faza 0 umożliwia
 \subsection{Przestrzeń decyzyjna}
 Agent ma dwie możliwe akcje do podjęcia - 0 oraz 1. Obydwie powodują aktywacje odpowiadającej im fazy świetlnej.
 
-\subsection{Model ruchu}
-Jako model ruchu zostanie wykorzystany przepływ CTM z następującymi parametrami:
-\begin{itemize}
-	\item Ilość pojazdów na odcinku jest nieograniczona t.j. $N_j(t)=\infty$ dla dowolnych $j,t$.
-	\item Maksymalna ilość pojazdów, które mogą napłynąć do odcinka to $Q_j(t)=10$ dla dowolnego $j,t$.
-	\item Ze źródła ruchu napływa w każdym interwale po 7 pojazdów do odcinka 0.
-\end{itemize}
+\subsection{Zatory drogowe}
+Wykorzystana w modelu zostanie funkcja zatoru przedstawiona w rozdziale \myref{subsec:zator_f10}, czyli:
+
+\begin{numcases}{f(i,j)=}
+\textbf{P}[i,j] & dla $ j=i+1 \wedge x[i]<10$ - przejazd bez zatoru \label{eq:manewr_bez_zatoru_f10} \\
+\frac{10}{x[i]} & dla $ j=i+1  \wedge x[i] \geq 10$ - przejazd z zatorem \label{eq:manewr_zator_f10} \\
+0 & dla pozostałych przypadków - manewr [i,j]
+\end{numcases} \noindent
 
 \subsection{Uczenie}
 \subsubsection*{Ogólny zarys}
-W trakcie symulacji treningowych do drogi wjeżdża 7 pojazdów w czasie jednego interwału. Po każdej iteracji algorytmu uczenia następuje symulacja w pełni zachłanna jedynie w celu analizy postępów nauki.
+W trakcie symulacji treningowych do drogi wjeżdża 9 pojazdów w czasie jednego interwału. Po jednej iteracji algorytmu uczenia następuje symulacja w pełni zachłanna.
 \subsubsection*{Cel nauki}
 Celem nauki jest uzyskanie jak największej liczby pojazdów, które opuszczą rozwidlenie dróg.
 \subsubsection*{Pożądane zachowanie}
-Pożądanym zachowaniem jest utrzymywanie fazy 1. Jest ona w każdym przypadku lepsza lub równa fazie 0. Spowodowane jest to tym, że więcej pojazdów skręca w prawo. W przypadku gdy przed rozwidleniem drogi nie ma pojazdów lub jest ich conajmniej 40 poprawną akcją jest także wybór fazy 0.
+Pożądanym zachowaniem jest utrzymywanie fazy 1. Jest ona w każdym przypadku lepsza lub równa fazie 0. Spowodowane jest to tym, że więcej pojazdów skręca w prawo. W przypadku gdy przed rozwidleniem drogi jest conajmniej 40 pojazdów poprawną akcją jest także wybór fazy 0. Nie powinno jednak dojść do aż takiego zatoru.
 \subsubsection*{Sygnał wejściowy}
 Sygnał wejściowy to ilości pojazdów przed skrzyżowaniem.
 \subsubsection*{Przykład sygnału wejściowego}
@@ -764,14 +835,13 @@ Sygnał wejściowy $ \textbf{x}=[4,7] $ zawiera w sobie informację, iż na odci
 Zastosowana została metoda uczenia przedstawiona w \myref{learning:DQN_single_agent}. Następujące stałe określające model uczenia to:
 \begin{itemize}
 	\item $\gamma = 0.9$ - stopa dyskontowa
-	\item $\alpha = 0.2$ - stała szybkości uczenia (ang. learning rate)
-	\item $\epsilon = 1$ - akcje są wybierane w pełni losowy sposób podczas epizodów treningowych.
-	\item Dla pierwszej generowanych jest jednorazowo 50 epizodów. Każdy ma 90 interwałów czasowych.
+	\item $\alpha = 0.01$ - stała szybkości uczenia (ang. learning rate)
+	\item Generowanych jest jednorazowo 50 epizodów. Każdy ma 200 interwałów czasowych.
 	\item Wygenerowane zbiory danych są dzielone w proporcjach 80 i 20 procent dla odpowiednio treningu i walidacji.
 	\item Warunkiem stopu jest 60 sekund działania algorytmu.
-	\item Sieć neuronowa posiada 2 ukryte warstwy, każda z 5 neuronami.
+	\item Sieć neuronowa posiada 1 ukrytą warstwę z 10 neuronami.
 	\item Za uczenie odpowiada sieć neuronowa biblioteki Keras. Posiada ukrytą warstwę z 10 neuronami i funkcją aktywacji relu. Optymalizacja jest przeprowadzana przez metodę Adam z funkcją straty błędu średniokwadratowego i parametrem $learning\_rate = 0,01$. 
-	\item Epizod zachłanny trwa 90 interwałów czasowych.
+	\item Epizod zachłanny trwa 200 interwałów czasowych.
 \end{itemize}
 
 \subsubsection{Wyniki uczenia}

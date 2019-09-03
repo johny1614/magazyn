@@ -1,0 +1,70 @@
+\babel@toc {polish}{}
+\babel@toc {polish}{}
+\contentsline {chapter}{\numberline {1}Wprowadzenie}{5}% 
+\contentsline {chapter}{\numberline {2}Cel i zakres pracy}{7}% 
+\contentsline {chapter}{\numberline {3}Makroskopowy model ruchu}{9}% 
+\contentsline {section}{\numberline {3.1}Klasyfikacja modeli ruchu drogowego}{9}% 
+\contentsline {section}{\numberline {3.2}Wst\IeC {\k e}p}{9}% 
+\contentsline {section}{\numberline {3.3}Rozw\IeC {\'o}j g\IeC {\k e}sto\IeC {\'s}ci ruchu na drodze}{10}% 
+\contentsline {section}{\numberline {3.4}CTM - Cell Transmission Model}{10}% 
+\contentsline {subsection}{\numberline {3.4.1}Wprowadzenie}{10}% 
+\contentsline {subsection}{\numberline {3.4.2}Przedstawienie modelu}{10}% 
+\contentsline {subsection}{\numberline {3.4.3}Przep\IeC {\l }yw pojazd\IeC {\'o}w na skrzy\IeC {\.z}owaniu}{13}% 
+\contentsline {subsubsection}{Przyk\IeC {\l }ad}{13}% 
+\contentsline {section}{\numberline {3.5}Gottlich dyskretyzacja - to jest bardzo \IeC {\'z}le}{13}% 
+\contentsline {chapter}{\numberline {4}Model sieci dr\IeC {\'o}g}{15}% 
+\contentsline {section}{\numberline {4.1}Wst\IeC {\k e}p}{15}% 
+\contentsline {section}{\numberline {4.2}Wektor stanu drogi}{15}% 
+\contentsline {subsection}{\numberline {4.2.1}Przyk\IeC {\l }ad}{15}% 
+\contentsline {section}{\numberline {4.3}Rozw\IeC {\'o}j wektora stanu drogi i wprowadzenie macierzy systemu}{16}% 
+\contentsline {subsection}{\numberline {4.3.1}Przyk\IeC {\l }ad}{16}% 
+\contentsline {section}{\numberline {4.4}Wektor stanu sieci dr\IeC {\'o}g}{17}% 
+\contentsline {subsection}{\numberline {4.4.1}Przyk\IeC {\l }ad}{17}% 
+\contentsline {section}{\numberline {4.5}Rozw\IeC {\'o}j wektora stanu sieci dr\IeC {\'o}g}{18}% 
+\contentsline {subsection}{\numberline {4.5.1}Przyk\IeC {\l }ad}{18}% 
+\contentsline {section}{\numberline {4.6}Wprowadzenie sygnalizacji \IeC {\'s}wietlnej}{21}% 
+\contentsline {subsection}{\numberline {4.6.1}Przyk\IeC {\l }ad macierzy sygnalizacji \IeC {\'s}wietlnej}{21}% 
+\contentsline {subsection}{\numberline {4.6.2}Macierz systemu uwzgl\IeC {\k e}dniaj\IeC {\k a}ca sygnalizacj\IeC {\k e} \IeC {\'s}wietln\IeC {\k a}}{22}% 
+\contentsline {subsection}{\numberline {4.6.3}Przyk\IeC {\l }ad rozwoju wektora stanu}{22}% 
+\contentsline {section}{\numberline {4.7}Wprowadzenie \IeC {\'z}r\IeC {\'o}de\IeC {\l } ruchu }{23}% 
+\contentsline {subsection}{\numberline {4.7.1}Przyk\IeC {\l }ad}{24}% 
+\contentsline {section}{\numberline {4.8}Zatory drogowe}{25}% 
+\contentsline {subsection}{\numberline {4.8.1}Przyk\IeC {\l }ad zatoru na pojedynczej drodze}{26}% 
+\contentsline {subsection}{\numberline {4.8.2}Przyk\IeC {\l }ad zatoru na skrzy\IeC {\.z}owaniu}{27}% 
+\contentsline {chapter}{\numberline {5}\IeC {\'S}rodowiska symulacyjne i ich nauka}{31}% 
+\contentsline {section}{\numberline {5.1}Srodowisko 1}{31}% 
+\contentsline {subsection}{\numberline {5.1.1}Sygnalizacje \IeC {\'s}wietlne}{32}% 
+\contentsline {subsection}{\numberline {5.1.2}Przestrze\IeC {\'n} decyzyjna}{32}% 
+\contentsline {subsection}{\numberline {5.1.3}Zatory drogowe}{32}% 
+\contentsline {subsection}{\numberline {5.1.4}Uczenie}{32}% 
+\contentsline {subsubsection}{Wyniki uczenia}{33}% 
+\contentsline {section}{\numberline {5.2}Srodowisko 2}{34}% 
+\contentsline {subsection}{\numberline {5.2.1}Sygnalizacje \IeC {\'s}wietlne}{34}% 
+\contentsline {subsection}{\numberline {5.2.2}Przestrze\IeC {\'n} decyzyjna}{34}% 
+\contentsline {subsection}{\numberline {5.2.3}Zatory drogowe}{35}% 
+\contentsline {subsection}{\numberline {5.2.4}Uczenie}{35}% 
+\contentsline {subsubsection}{Og\IeC {\'o}lny zarys}{35}% 
+\contentsline {subsubsection}{Cel nauki}{36}% 
+\contentsline {subsubsection}{Spodziewany wynik}{36}% 
+\contentsline {subsubsection}{Po\IeC {\.z}\IeC {\k a}dane zachowanie agenta}{36}% 
+\contentsline {subsubsection}{Spos\IeC {\'o}b uczenia}{36}% 
+\contentsline {section}{\numberline {5.3}Srodowisko 3}{38}% 
+\contentsline {subsection}{\numberline {5.3.1}Sygnalizacje \IeC {\'s}wietlne}{38}% 
+\contentsline {subsection}{\numberline {5.3.2}Przestrze\IeC {\'n} decyzyjna}{39}% 
+\contentsline {subsection}{\numberline {5.3.3}Zatory drogowe}{40}% 
+\contentsline {subsection}{\numberline {5.3.4}Uczenie}{41}% 
+\contentsline {subsubsection}{Og\IeC {\'o}lny zarys}{41}% 
+\contentsline {subsubsection}{Wyniki uczenia}{42}% 
+\contentsline {section}{\numberline {5.4}Srodowisko 4 - kampus B Politechniki \IeC {\L }\IeC {\'o}dzkiej}{43}% 
+\contentsline {subsection}{\numberline {5.4.1}Sygnalizacje \IeC {\'s}wietlne}{43}% 
+\contentsline {subsection}{\numberline {5.4.2}Przestrze\IeC {\'n} decyzyjna}{45}% 
+\contentsline {subsection}{\numberline {5.4.3}Zatory drogowe}{45}% 
+\contentsline {subsection}{\numberline {5.4.4}Uczenie}{45}% 
+\contentsline {subsection}{\numberline {5.4.5}Modyfikacja \IeC {\'s}rodowiska}{45}% 
+\contentsline {chapter}{\numberline {6}Przegl\IeC {\k a}d metod optymalizacyjnych}{47}% 
+\contentsline {section}{\numberline {6.1}Kategorie uczenia maszynowego}{47}% 
+\contentsline {section}{\numberline {6.2}Uczenie ze wzmocnieniem}{47}% 
+\contentsline {section}{\numberline {6.3}Metoda Monte Carlo On-Policy}{50}% 
+\contentsline {subsubsection}{Uwagi}{51}% 
+\contentsline {section}{\numberline {6.4}Metoda Monte Carlo On-Policy z u\IeC {\.z}yciem sieci neuronowej}{51}% 
+\contentsline {subsection}{\numberline {6.4.1}Wariant z faz\IeC {\k a} \IeC {\.z}\IeC {\'o}\IeC {\l }tych \IeC {\'s}wiate\IeC {\l }}{52}% 
