@@ -1,0 +1,11 @@
+
+        2  - 3
+0 - 1
+        4  - 5
+
+
+75 procent pojazdów ma zamiar jazdy w prawo (manewr (4,1))
+25 procent pojazdów ma zamiar jazdy w lewo (manewr (2,1))
+
+Agent może momentalnie zmienić fazy świetlne (yellow_phase_duration=0)
+
