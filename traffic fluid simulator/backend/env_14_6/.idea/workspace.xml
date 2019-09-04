@@ -5,166 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3bc62bd-0327-4a90-b067-71b6ea844ee3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.mypy_cache/3.6/@plugins_snapshot.json.3a9af7ed6549d2f4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mypy_cache/3.6/@plugins_snapshot.json.e5097472a8f33401" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mypy_cache/3.6/random_epochs_generator.data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mypy_cache/3.6/random_epochs_generator.meta.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mypy_cache/3.6/run_learnt.data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mypy_cache/3.6/run_learnt.meta.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mypy_cache/3.6/runner_learnt.meta.json.259209aa2c4b3a86" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/fazy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_learnt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/drawerService.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../obrazy.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../obrazy.pptx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/Action.data.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/Action.data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/Action.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/Action.meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/Test_Env.data.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/Test_Env.data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/Test_Env.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/Test_Env.meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/Utils.data.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/Utils.data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/Utils.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/Utils.meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/model/Action.data.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/model/Action.data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/model/Action.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/model/Action.meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/runnerService.data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/runnerService.meta.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/runner_learnt.data.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/runner_learnt.data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/runner_learnt.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/runner_learnt.meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/services/__init__.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/services/__init__.meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/services/dryRunnerService.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/services/dryRunnerService.meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/services/prettyPrinter.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/services/prettyPrinter.meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/services/runnerService.data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/services/runnerService.meta.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Env.py" beforeDir="false" afterPath="$PROJECT_DIR$/Env.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Test_DryRunner.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Test_Env.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Test_Env.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Test_batching.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Test_fixed_env_flow.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Test_learning.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Test_random_batching.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Test_reshaping_batches.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/cd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/pred.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/python" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/static_files/model-agent0.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/static_files/x_batch_agent_0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/static_files/y_batch_agent_0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arch/nowe_niestabilne.rar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/env_5_fazy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/siec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/env_settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixed_env_flow.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mnist.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Action.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Action.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/LearningState.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/LearningState.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/SmartAgent.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/SmartAgent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nn_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/nn_trainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_cars_out0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_rewards0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_rewards_mean0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz26.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz27.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz28.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz29.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz31.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz35.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotteraz9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz10time373.6140272155013 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz11time416.1005596286078 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz12time458.7973832038289 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz13time501.58112209256456 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz14time544.2423408692462 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz15time587.5984199665019 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz16time630.7820312645335 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz17time674.0135006231994 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz18time717.5210794083744 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz19time761.5771096247269 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz20time808.8492351293323 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz21time852.7223676960095 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz22time897.3532790297718 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz23time942.2424540907607 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz24time987.2392011372187 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz25time1032.1144172363558 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz26time1076.500633142407 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz27time1119.920890876912 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz28time1163.3061670123184 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz29time1207.5677019753145 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz30time1250.8534329853724 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz31time1294.9329045456034 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz32time1338.802531414961 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz33time1383.8782746837335 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz34time1427.5217888871 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz35time1470.9721632237276 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz3time66.46761351499238 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz4time111.55061354514203 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz5time155.81146308497514 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz6time200.2221572900222 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz7time243.12257014762417 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz8time287.1311130797471 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/predictionsteraz9time330.5496971885783 layers = [10, 14, 10] nn_l_rate = 0.01 first_epochs_range = 5 epochs_range = 10 max_time_learn = 70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/random_epochs_generator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runner_all.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runner_learnt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sequential_epochs_generator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/agentFactory.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/agentFactory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/dryRunnerService.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/globals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/hashable_decorator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/prettyPrinter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/runnerService.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/runnerService.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/model-agent0.h5" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/model-agent0.h5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/model-agent49.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/x_batch_agent_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/x_batch_agent_0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/y_batch_agent_0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static_files/y_batch_agent_0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp_nn.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp_nn_drawing.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/events.out.tfevents.1564173359.DESKTOP-1BUHOLE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/graph.pbtxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/model.ckpt-0.data-00000-of-00002" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/model.ckpt-0.data-00001-of-00002" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/model.ckpt-0.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/model.ckpt-0.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/model.ckpt-3000.data-00000-of-00002" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/model.ckpt-3000.data-00001-of-00002" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/model.ckpt-3000.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/model.ckpt-3000.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../front/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../front/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../front/src/app/canvas.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/canvas.service.ts" afterDir="false" />
@@ -215,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/services/globals.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -223,8 +68,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Test/Test_Env.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state relative-caret-position="221">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -236,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/env_settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
-              <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -367,11 +212,6 @@
             <path>
               <item name="env_14_6" type="b2602c69:ProjectViewProjectNode" />
               <item name="env_14_6" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="env_14_6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="env_14_6" type="462c0819:PsiDirectoryNode" />
-              <item name="images_generated" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -594,6 +434,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14752372" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1033,21 +874,21 @@
     <entry file="file://$PROJECT_DIR$/env_settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
-          <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/services/globals.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/Test_Env.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
