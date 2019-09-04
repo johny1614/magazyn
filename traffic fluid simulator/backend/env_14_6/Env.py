@@ -1,17 +1,17 @@
 from typing import List, Tuple
-
 import attr
 import numpy as np
-
 import env_settings
-from Utils import empty_3_list
 from env_settings import start_A, get_x
-from model import GlobalState
-from model.Action import ActionInt
+from model.Action import ActionInt, yellow
 from model.LearningState import LearningState
 from model.Net import Net, Times
 from model.SmartAgent import SmartAgent
 from services.globals import Globals
+
+
+def empty_3_list():
+    return [[], [], []]
 
 
 @attr.s(auto_attribs=True)
@@ -26,7 +26,7 @@ class Env:
 
     def assign_state(self, state: LearningState):
         for agent in self.agents:
-            agent.orange_phase_duration = state.orange_phase_duration
+            agent.yellow_phase_duration = state.yellow_phase_duration
             agent.actual_phase = state.actual_phase
             agent.starting_actual_phase = state.starting_actual_phase
             agent.phase_duration = state.phase_duration
@@ -40,10 +40,6 @@ class Env:
         self.assign_local_states_to_agents()
 
     @property
-    def global_state(self) -> GlobalState:
-        return tuple(agent.local_state for agent in self.agents)
-
-    @property
     def t(self):
         return Globals().time
 
@@ -53,7 +49,6 @@ class Env:
         self.A.append(start_A())
         self._pass_actions_to_agents(actions)
         self._modify_A()
-        # self.update_global_memory_lights()
         Globals().time += 1
         self._execute_phase()
         self.save_motions()
@@ -74,7 +69,6 @@ class Env:
         return memsum, memsum / i
 
     def count_rewards(self):
-        # TODO to na pewno jest ok?
         rewards = [0] * len(self.agents)
         for flow in self.last_flows:
             rewards[flow['agent_index']] += flow['value']
@@ -85,7 +79,7 @@ class Env:
         new_time = Globals().time
         self.last_flows = []
         for agent in self.agents:
-            actual_moves = () if agent.actual_phase == 'orange' else agent.moves[agent.actual_phase]
+            actual_moves = () if agent.actual_phase == yellow else agent.moves[agent.actual_phase]
             for move in actual_moves:
                 if move[0] == 404:
                     continue
@@ -102,7 +96,6 @@ class Env:
         t = self.t
         x_t = np.dot(self.A[t - 1], self.x[t - 1])
         self.x.append(x_t)
-        # self.x = np.dot(self.A[t-1], self.x[t - 1])
         self.__include_source_cars()
 
     def _pass_actions_to_agents(self, actions: List[ActionInt]):
@@ -112,8 +105,6 @@ class Env:
 
     def _modify_A(self):
         t = self.t
-        # print('modify A t',t)
-        # print('x',self.x[t])
         for agent in self.agents:
             self.A[t] = agent.modify_A(self.A[t])
         if self.t > 0:
@@ -128,7 +119,6 @@ class Env:
                             self.A[t][i][i] += change
                             A_cell = new_value
                             self.A[t][j][i] = A_cell
-        # print(self.A[t])
 
     def __include_source_cars(self):
         t = self.t
@@ -153,16 +143,6 @@ class Env:
                   actions=actions,
                   lights=lights)
         self.global_memories.append(net)
-
-    # def update_memory_rewards(self):
-    # we dont need it. It makes a mistake that from 0th episode it s only taken. Not deleted yet couse always it was here!
-    #     i=0
-    #     for mem in self.agents[0].memories:
-    #         print(f'{i} mem agent {mem}')
-    #         i+=1
-    #     for i in range(len(self.global_memories)):
-    #         net = self.global_memories[i]
-    #         net.rewards = [agent.memories[i].reward for agent in self.agents]
 
     def deepCopy(self):
         copied_agents = [agent.deep_copy() for agent in self.agents]

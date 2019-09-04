@@ -2,6 +2,8 @@ from typing import Tuple, List
 import attr
 import numpy as np
 
+from model.Action import yellow
+
 
 @attr.s(auto_attribs=True, cmp=False)
 class LearningState:
@@ -10,7 +12,7 @@ class LearningState:
     phase_duration: int
     global_densities: List[int]
     densities: List[int]
-    orange_phase_duration: int
+    yellow_phase_duration: int
 
     def __attrs_post_init__(self):
         self.cluster_index: int = 0
@@ -25,17 +27,17 @@ class LearningState:
 
     def to_learn_array(self):
         phase = self.starting_actual_phase
-        if phase == 'orange' and self.actual_phase != 'orange':
+        if phase == yellow and self.actual_phase != yellow:
             phase = self.actual_phase
         is_0_phase = phase == 0
         is_1_phase = phase == 1
-        # gdy zaczynamy z orange to de facto mamy juz nowa faze do decyzji - ale decydujemy zawsze podtrzymanie tego swiatla na chociaz 1 ture
+        # gdy zaczynamy z yellow to de facto mamy juz nowa faze do decyzji - ale decydujemy zawsze podtrzymanie tego swiatla na chociaz 1 ture
         return np.array([[self.densities[0]] + [self.densities[1]] + [self.densities[2]] + [self.densities[3]] + [
             is_0_phase] + [is_1_phase]])
 
-    def possible_actions(self, orange_phase_duration):
-        wait_action = ['orange']
+    def possible_actions(self, yellow_phase_duration):
+        wait_action = [yellow]
         light_Actions = [0, 1]
-        if self.phase_duration >= orange_phase_duration:
+        if self.phase_duration >= yellow_phase_duration:
             return light_Actions
         return wait_action
