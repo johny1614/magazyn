@@ -1,0 +1,15 @@
+
+0 - 1
+        4 - 5
+2 - 3
+
+Możliwe fazy: 0,1, zolte
+
+Faza 0 - umożliwia manewr [4,1]
+Faza 1 - umożliwia manewr [4,3]
+Faza zolte - nie omożliwia zadnego manewru przejazdu przez skrzyżowanie
+
+Możliwe akcje: 0,1, zolte
+
+Akcja 0 (1) podtrzymuje obecną fazę jeśli ta jest równa 0 (1).
+Jeśli obecna faza to 1 (0), to po 2 interwałach fazy zolte następuje faza 1 (0)
