@@ -49,6 +49,9 @@
 \newcommand{\myref}[1]{(\ref{#1})} 
 \newcommand{\specialcell}[2][c]{%
 	\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 \begin{document}
 \title{Optymalizacja  systemu sygnalizacji świetlnej w 
@@ -81,9 +84,36 @@ Problemy zatorów komunikacyjnych w miastach są o tyle trudniejsze do rozwiąza
 %
 %Czytaj więcej: https://dzienniklodzki.pl/masz-uwagi-do-sygnalizacji-swietlnej-w-lodzi-wyslij-email-do-zdit/ar/9253440
 \chapter{Cel i zakres pracy}
-W rozdziale \ref{chapter:model_sieci_drog} przedstawiony zostanie model sieci dróg. Stworzony przez autora pracy został program symulujący ruch drogowy. Jest on napisany w języku Python (wersja 3.6). Oddzielna warstwa wizualizacyjna utworzona w typescriptowym frameworku Angular w wersji 6. Grafiki przedstawiające środowiska drogowe są narysowane przy pomocy tagów canvas. Kroki potrzebne do uruchomienia programu zostały przedstawione w TODO rozdział do napisania na sam koniec.
+W rozdziale \ref{chapter:model_sieci_drog} przedstawiony zostanie model sieci dróg. Stworzony przez autora pracy został program symulujący ruch drogowy. Jest on napisany w języku Python (wersja 3.6.7). Oddzielna warstwa wizualizacyjna utworzona w typescriptowym frameworku Angular w wersji 6. Grafiki przedstawiające środowiska drogowe są narysowane przy pomocy tagów canvas. Kroki potrzebne do uruchomienia programu zostały przedstawione w TODO rozdział do napisania na sam koniec.
 Bezpośrednim celem pracy jest uzyskanie płynnego ruchu przy możliwie dużej ilości pojazdów wjeżdżających do rozważanego środowiska. Ostatnie środowisko testowe w pracy przedstawia sieć dróg wokół kampusu B Politechniki Łódzkiej i to głównie na optymalizacji tego środowiska będzie skupiona uwaga. Wszystkie poprzednie sieci dróg są mniej skomplikowane i służą głównie przy przedstawieniu modelu i procesu optymalizacji.
 Środowiska będą skonstruowane w pełni zgodne z makroskopowym modelem ruchu, który nie rozróżnia indywidualnych pojazdów, a traktuje je jako ilościowo. Sam makroskopowy model ruchu zostanie przedstawiony w rozdziale \ref{chapter:makroskopowy_model_ruchu}. Początkowy model będzie bardzo prosty z pominięciem większości aspektów. W każdej kolejnej sekcji model będzie stopniowo rozwijany.
+
+\chapter{Dokumentacja programu}
+\section{Wstęp}
+Utworzony program jest podzielony na dwie warstwy - prezentacyjną oraz logiki. Jest to podejście powszechnie spotykane przy tworzeniu aplikacji internetowych \cite{frontend_backend}. Warstwy te są zwyczajowo określane jako front-end i back-end. Warstwa prezentacyjna przedstawianego programu ma za zadanie przedstawić dane wygenerowane w trakcie symulacji. Innymi słowy cała logika symulacji jest przeprowadzana w warstwie logiki, ale obraz przedstawiający te symulacje jest widoczny w warstwie prezentacyjnej. 
+\section{Warstwa logiki}
+\subsection{Wymagania}
+Aby w pełni korzystać z warstwy logiki programu należy mieć zainstalowany interpreter pythona w wersji 3.6.7. W programie zostały wykorzystane następujące biblioteki, które także są niezbędne do uruchomienia programu: \newline
+
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{| c | c | L{5cm} |}
+	\hline
+	Biblioteka   &  Wersja & Opis \\	\hline
+	Mypy & 0.701 & Umożliwia statyczne typowanie w pythonie \\ \hline
+    Numpy & 1.16.4 & Struktury obliczeniowe \\ \hline
+	Tensorflow & 2.0.0b1 &  Biblioteka wykorzystywana w uczeniu maszynowym odpowiedzialna za działanie sieci neuronowych \\ \hline
+	Attrs & 19.1.0 & Umożliwia zwięzłe pisanie kodu bez tzw. boilerplate'u \\ \hline
+	Matplotlib & 3.0.3 & Tworzenie wykresów \\ \hline
+\end{tabular}\newline \newline
+Interpreter z powyższymi bibliotekami jest załączony w dodatku do pracy w folderze python\_interpreter.
+\subsection{Instrukcje uruchomienia}
+W folderze warstwa\_logiki znajduje się 6 folderów odpowiadających czterem przedstawionym środowiskom. Każde ze środowisk można uruchomić za pomocą skryptu run.py. Następuje wtedy proces nauki w trakcie którego są wyświetlane komunikaty odnośnie zachłannych epizodów. Zostają zapisane epizody zachłanne w formacie JSON dostępne do odtworzenia w warstwie prezentacyjnej.
+
+\section{Warstwa prezentacyjna}
+\subsection{Wymagania}
+Do uruchomienia warstwy prezentacyjnej niezbędny jest zainstalowany Angular. W tym celu należy pierw zainstalować środowisko node.js. Wraz z nim dostępny  jest domyślny system zarządzania pakietami - node package manager skrótowo nazywany jako npm. Warto podczas instalacji zaznaczyć opcję dodania npm do zmiennych środowiskowych. Po zainstalowaniu npm należy wykonać komendę: "npm install -g @angular/cli@6.1.10", aby zainstalować wiersz polecenia angulara (zbiór angularowych komend dostępnych pod nazwą ng). Operacja ta wymaga dostępu do internetu. Końcowym etapem jest instalacja pakietów wykorzystanych w samej aplikacji. Należy z poziomu folderu warstwa\_prezentacyjna wpisać komendę "npm install". Wywołanie tego polecenia może zająć do kilku minut w zależności od szybkości łącza internetowego. 
+\subsection{Instrukcje uruchomienia}
+Należy z poziomu folderu warstwa\_prezentacyjna wpisać komendę "ng serve". Uruchamia ona aplikację Angulara na domyślnym hoście. Jeśli nie było żadnych komunikatów o błędach w konsoli strona powinna wyświetlić się po wejściu na adres http://localhost:4200. Aby wyświetlić symulacje należy wpisać w lewym górnym rogu jej nazwę i kliknąć przycisk "Wczytaj sieć". Jeśli wczytywanie się powiodło zostanie wyświetlony zielony napis potwierdzający powodzenie operacji. Czas dla którego ma zostać wyświetlony stan sieci dróg można zmieniać na dwa sposoby - suwakiem lub przyciskami "+"/"-".
 
 \chapter{Makroskopowy model ruchu} \label{chapter:makroskopowy_model_ruchu}
 \section{Klasyfikacja modeli ruchu drogowego}
@@ -253,7 +283,7 @@ x_5(1)=y_{*5}(0)=1
 		\hline 
 	\end{tabular}
 
-%aaaaaaaaaaaa
+
 
 \subsection{Przepływ pojazdów na skrzyżowaniu z sygnalizacją świetlną} \label{sec:CTM_sygnalizacja}
 W tej sekcji przedstawiony zostanie przypadek przepływu na skrzyżowaniu posiadającym sygnalizację świetlną. Nie różni się on mocno od poprzednio omawianego modelu ruchu na skrzyżowaniu bez sygnalizacji świetlnej \myref{sec:CTM_skrz_przeplyw}. Jedyną różnicą jest zmiana wzoru \myref{eq:y_skrz_no_lights}. Zostanie on zastąpiony następującą formułą:
@@ -750,21 +780,19 @@ Jako model ruchu zostanie wykorzystany przepływ CTM z następującymi parametra
 \end{itemize}
 
 \subsection{Uczenie}
-\subsubsection*{Ogólny zarys}
-W trakcie symulacji treningowych do drogi wjeżdża 7 pojazdów w czasie jednego interwału. Po każdej iteracji algorytmu uczenia następuje symulacja w pełni zachłanna jedynie w celu analizy postępów nauki.
 \subsubsection*{Cel nauki}
 Celem nauki jest uzyskanie jak największej liczby pojazdów, które opuszczą rozwidlenie dróg.
 \subsubsection*{Pożądane zachowanie}
 Pożądanym zachowaniem jest utrzymywanie fazy 1. Jest ona w każdym przypadku lepsza lub równa fazie 0. Spowodowane jest to tym, że więcej pojazdów skręca w prawo. W przypadku gdy przed rozwidleniem drogi nie ma pojazdów lub jest ich conajmniej 40 poprawną akcją jest także wybór fazy 0.
 \subsubsection*{Sygnał wejściowy}
-Sygnał wejściowy to ilości pojazdów przed skrzyżowaniem.
+Sygnał wejściowy to ilości pojazdów na odcinkach przed skrzyżowaniem.
 \subsubsection*{Przykład sygnału wejściowego}
 Sygnał wejściowy $ \textbf{x}=[4,7] $ zawiera w sobie informację, iż na odcinku zerowym są 4 pojazdy oraz na pierwszym - jest ich 7. 
 \subsubsection*{Sposób uczenia}
 Zastosowana została metoda uczenia przedstawiona w \myref{learning:DQN_single_agent}. Następujące stałe określające model uczenia to:
 \begin{itemize}
 	\item $\gamma = 0.9$ - stopa dyskontowa
-	\item $\alpha = 0.2$ - stała szybkości uczenia (ang. learning rate)
+	\item $\alpha = 1$ - stała szybkości uczenia (ang. learning rate)
 	\item $\epsilon = 1$ - akcje są wybierane w pełni losowy sposób podczas epizodów treningowych.
 	\item Dla pierwszej generowanych jest jednorazowo 50 epizodów. Każdy ma 90 interwałów czasowych.
 	\item Wygenerowane zbiory danych są dzielone w proporcjach 80 i 20 procent dla odpowiednio treningu i walidacji.
@@ -775,7 +803,7 @@ Zastosowana została metoda uczenia przedstawiona w \myref{learning:DQN_single_a
 \end{itemize}
 
 \subsubsection{Wyniki uczenia}
-Za każdym razem już po trzeciej iteracji algorytmu osiągane jest pożądane zachowanie agenta. Dla każdego stanu agent wybiera akcję 1. Nie tworzą się zatory i wszystkie pojazdy opuszczają układ (oczywiście z wyjątkiem tych, które pojawiły się w dwóch ostatnich interwałach czasowych).
+Algorytm osiąga pożądane zachowanie. Dla każdego stanu agent wybiera akcję 1. Zdarza się, że agent wybiera akcję 0 na samym początku epizodu, gdy nie ma żadnych pojazdów, co nie sprawia istotnej różnicy. Nie tworzą się zatory i wszystkie pojazdy opuszczają skrzyżowanie (oczywiście z wyjątkiem tych, które pojawiły się w dwóch ostatnich interwałach czasowych).
 
 \section{Srodowisko 2}
 %(14 na froncie)
@@ -804,15 +832,13 @@ Przestrzeń decyzyjną oraz konsekwencje akcji podjętych przez agenta przedstaw
 	\label{fig:env_14_akcje}
 \end{figure} \noindent
 
-\subsection{Zatory drogowe}
-Wykorzystana w modelu zostanie funkcja zatoru przedstawiona w rozdziale \myref{subsec:zator_f10}, czyli:
+\subsection{Model ruchu}
+Jako model ruchu zostanie wykorzystany przepływ CTM z następującymi parametrami:
+\begin{itemize}
+	\item Ilość pojazdów na odcinku jest nieograniczona t.j. $N_j(t)=\infty$ dla dowolnych $j,t$.
+	\item Maksymalna ilość pojazdów, które mogą napłynąć do odcinka to $Q_j(t)=10$ dla dowolnego $j,t$.
+\end{itemize}
 
-\begin{numcases}{f(i,j)=}
-\textbf{P}[i,j] & dla $ j=i+1 \wedge x[i]<10$ - przejazd bez zatoru \label{eq:manewr_bez_zatoru_f10} \\
-\frac{10}{x[i]} & dla $ j=i+1  \wedge x[i] \geq 10$ - przejazd z zatorem \label{eq:manewr_zator_f10} \\
-0 & dla pozostałych przypadków - manewr [i,j]
-\end{numcases} \noindent
-Zezwala ona na jednoczesny wjazd maksymalnie 10 pojazdów na dowolny odcinek drogi.
 \subsection{Uczenie}
 \subsubsection{Ogólny zarys}
 Początkowo do każdej z dróg wjeżdżają po 2 pojazdy w jednym interwale czasowym. Na koniec każdej iteracji nauki przeprowadzane są symulacje w pełni zachłanne. Agent ma za zadanie wykonywać akcje, które w trakcie symulacji pozwolą na opuszczenie skrzyżowania przez conajmniej 98 procent pojazdów. W przypadku spełnienia tego warunku następuje zwiększenie ilości wjeżdżających do układu pojazdów. Ten proces jest powtarzany, aż do momentu gdy przez 10 iteracji uczenia nie uzyskany zostanie warunek 98 procent pojazdów opuszczających skrzyżowanie. Moment stopu spodziewany jest na chwilę, gdy na każdą z dróg będzie wjeżdżało około 5 pojazdów. Nie ma możliwości, by przejeżdżało więcej niż 10 pojazdów, a tyle właśnie pojawia się w układzie. Muszą zatem wtedy pojawiać się zatory.
@@ -836,6 +862,7 @@ Zastosowana została metoda uczenia przedstawiona w \myref{learning:DQN_single_a
 Następujące stałe oraz ustalenia określają szczegóły uczenia:
 \begin{itemize}
 	\item $\gamma = 0.9$ - stopa dyskontowa
+	\item $\alpha = 1$ - stała szybkości uczenia (ang. learning rate)
 	\item Parametr $\epsilon$ jest początkowo równy 1 (w pełni losowe epizody). Z każdą iteracją jest zmniejszany o 0,01 aż do wartości $\epsilon=0,2$.
 	\item Generowanych jest jednorazowo 10 epizodów. Każdy z nich trwa 1000 interwałów czasowych.
 	\item Wygenerowane zbiory danych są dzielone w proporcjach 80 i 20 procent dla odpowiednio treningu i walidacji.
@@ -889,7 +916,7 @@ Sygnał wejściowy $x=[5,17,2,0,0,1]$ przedstawia informację, iż przed skrzyż
 
 \subsection*{Uczenie}
 \subsubsection{Ogólny zarys}
-Początkowo do każdej z dróg wjeżdża po jednym pojeździe. Na koniec każdej iteracji nauki przeprowadzane są symulacje w pełni zachłanne. Agent ma za zadanie wybierać akcje, które pozwolą na opuszczenie sieci dróg przez conajmniej 95 procent pojazdów. Jeśli ten warunek zostanie spełniony następuje zwiększenie ilości wjeżdżających pojazdów o 20 procent dotychczasowej wartości. W przypadku gdy ten warunek nie zostanie spełniony przez 15 kolejnych symulacji następuje koniec nauki. 
+Początkowo do każdej z dróg wjeżdża po jednym pojeździe. Na koniec każdej iteracji nauki przeprowadzane są symulacje w pełni zachłanne. Agent ma za zadanie wybierać akcje, które pozwolą na opuszczenie sieci dróg przez conajmniej 93 procent pojazdów. Jeśli ten warunek zostanie spełniony następuje zwiększenie ilości wjeżdżających pojazdów o 20 procent dotychczasowej wartości. W przypadku gdy ten warunek nie zostanie spełniony przez 15 kolejnych symulacji następuje koniec nauki. 
 \subsubsection*{Cel nauki i spodziewany wynik}
 Bezpośrednim celem nauki jest uzyskanie jak największej ilości pojazdów wjeżdżających do sieci. Aby to się stało agenci muszą podejmować decyzje, które pozwalają na opuszczenie sieci jak największej ilości pojazdów. Moment stopu spodziewany jest na chwilę, gdy na każdą z dróg będzie wjeżdżało niecałe 10 pojazdów. Zgodnie z opisem modelu ruchu - maksymalnie 10 pojazdów może wjechać w jednej chwili na dany odcinek, zatem muszą się tworzyć zatory przy większej ilości pojazdów.
 
@@ -899,10 +926,10 @@ Zastosowana została metoda uczenia przedstawiona w \myref{learning:DQN_single_a
 Następujące stałe oraz ustalenia określają szczegóły uczenia:
 \begin{itemize}
 	\item $\gamma = 0.9$ - stopa dyskontowa
-	\item Parametr zachłanności $\epsilon$ jest początkowo równy 1 (w pełni losowe epizody). Z każdą iteracją jest zmniejszany o 0,01 aż do wartości $\epsilon=0,2$.
+	\item Parametr zachłanności $\epsilon$ jest początkowo równy 1 (w pełni losowe epizody). Z każdą iteracją jest zmniejszany o 0,04 aż do wartości $\epsilon=0,2$.
 	\item Generowanych jest jednorazowo 20 epizodów. Każdy z nich trwa 300 interwałów czasowych.
 	\item Wygenerowane zbiory danych są dzielone w proporcjach 80 i 20 procent dla odpowiednio treningu i walidacji.
-	\item Za uczenie odpowiada sieć neuronowa biblioteki Keras. Posiada ona 3 ukryte warstwy (10,14,10 neuronów) z funkcjami aktywacji relu. Optymalizacja jest przeprowadzana przez metodę Adam z funkcją straty błędu średniokwadratowego i parametrem $learning\_rate = 0,01$. 
+	\item Za uczenie odpowiada sieć neuronowa biblioteki Keras. Posiada ona 3 ukryte warstwy (10,14,10 neuronów) z funkcjami aktywacji relu. Optymalizacja jest przeprowadzana przez metodę Adam z funkcją straty błędu średniokwadratowego, parametrem $learning\_rate = 0,01$ oraz $bias\_initializer=15$ dla wartwy wyjściowej. 
 	\item Epizod zachłanny trwa 1000 interwałów czasowych.
 \end{itemize}
 \subsubsection{Wyniki uczenia}
@@ -945,25 +972,27 @@ Każde skrzyżowanie posiada 5 faz świetlnych. Fazy 0,1,2 i 3 są fazami, któr
 
 \subsection{Przestrzeń decyzyjna}
 Analogicznie do poprzednich przestrzeni decyzyjnych z fazą żółtych świateł - przykładowo \myref{subsec_pn_dec}.
-\subsection{Zatory drogowe}
-Wykorzystana w modelu zostanie funkcja zatoru przedstawiona w rozdziale \myref{subsec:zator_f10}, czyli:
-\begin{numcases}{f(i,j)=}
-\textbf{P}[i,j] & dla $ j=i+1 \wedge x[i]<10$ - przejazd bez zatoru \label{eq:manewr_bez_zatoru_f10} \\
-\frac{10}{x[i]} & dla $ j=i+1  \wedge x[i] \geq 10$ - przejazd z zatorem \label{eq:manewr_zator_f10} \\
-0 & dla pozostałych przypadków - manewr [i,j]
-\end{numcases} \noindent
-Zezwala ona na jednoczesny wjazd maksymalnie 10 pojazdów na dowolny odcinek drogi.
+\subsection{Model ruchu}
+
+
+
 \subsection{Uczenie}
-\subsubsection*{Ogólny zarys}
-Do każdej z dróg źródłowych wjeżdża pewna ilość pojazdów co interwał. Początkowo ilość ta jest zadana przez zmienną losową o rozkłądzie lognormalnym o parametrach $\delta=1, \mu=1$. Na koniec każdej iteracji nauki przeprowadzane są symulacje w pełni zachłanne. Agent ma za zadanie wykonywać akcje, które w trakcie symulacji pozwolą na opuszczenie skrzyżowania przez conajmniej 95 procent pojazdów. W przypadku spełnienia tego warunku następuje zwiększenie parametru $\mu$ o 20 procent dotychczasowej wartości. Konsekwencją zwiększenia $\mu$ jest większa ilość wjeżdżających do układu pojazdów. Ten proces jest powtarzany, aż do momentu gdy przez 15 kolejnych iteracji uczenia nie uzyskany zostanie warunek 95 procent pojazdów opuszczających skrzyżowanie.
+\subsection*{Ogólny zarys}
+Do każdej z dróg źródłowych wjeżdża pewna ilość pojazdów co interwał. Ilość pojazdów będzie zadana przez zmienną losową X o rozkładzie lognormalnym. Jest to rozkład o podobnych właściwościach i kształcie wykresu gęstości do rozkładu normalnego. Wykorzystywany jest on zamiast rozkładu normalnego przeważnie gdy realizacje zmiennej losowej nie mogą mieć wartości ujemnych. Przykładem mogą być chociażby wyniki zawodów skoku w dal albo zarobki pracowników pewnej firmy.
+Funkcja gęstości rozkładu jest zadana wzorem:
+\[ f(x)=\frac{1}{x\delta\sqrt{2\pi}}e^{-\frac{ln(x-\mu)^2}{2\delta^2}} \addtag \]
+Wartość oczekiwana tej zmiennej losowej to \[EX=e^{\mu+\frac{\delta^2}{2}} \addtag \label{eq:EX}\] Parametr $\delta$ w obliczeniach zostaje ustalony jako wartość $\delta=0,4$. Początkowo do układu ma napływać średnio po 1 pojeździe w trakcie interwału czasowego, czyli należy dobrać taki parametr $\mu$ aby $EX=1$. Parametr\footnote{Dla rozkładu lognormalnego powszechnie przyjmuje się oznaczenie $\mu$ dla tego parametru. Może to być mylące, gdyż często $\mu$ jest utożsamiane z wartością oczekiwaną zmiennej losowej, a tak nie jest w tym przypadku. }  $\mu$ rozkładu będzie, więc ustalany na podstawie wartości oczekiwanej $\mu=ln(EX)-\frac{\delta^2}{2}$. Początkowo zatem $\mu=ln(1)-\frac{0,4^2}{2}=0,08$. \newline
+Na koniec każdej iteracji nauki przeprowadzane są symulacje w pełni zachłanne. Agent ma za zadanie wykonywać akcje, które w trakcie symulacji pozwolą na opuszczenie skrzyżowania przez conajmniej 93 procent pojazdów. W przypadku spełnienia tego warunku następuje zwiększenie średniej ilości napływających pojazdów $EX$ o 20 procent dotychczasowej wartości. Parametr $\mu$ jest zwiększany wedle przedstawionego wyżej wzoru \myref{eq:EX}. Ten proces jest powtarzany, aż do momentu gdy przez 15 kolejnych iteracji uczenia nie uzyskany zostanie warunek 95 procent pojazdów opuszczających skrzyżowanie.
 \subsubsection*{Cel nauki}
-Bezpośrednim celem nauki jest uzyskanie jak największej wartości parametru $\mu$. Aby to się stało agenci muszą podejmować decyzje, które pozwalają na opuszczenie sieci możliwie jak największej ilości pojazdów.
+Bezpośrednim celem nauki jest uzyskanie jak największej wartości ilości napływających pojazdów wedle powyższego schematu. Aby to się stało agenci muszą podejmować decyzje, które pozwalają na opuszczenie sieci możliwie jak największej ilości pojazdów.
 \subsubsection*{Wyniki uczenia}
-Moment stopu przypadł na $\mu=7,43$ pojazdu wjeżdżającego na drogę. Okazuje się, że proces uczenia doprowadził do zaniechania przez agentów manewrów lewoskrętów (akcje 0 i 1). Jest to z pewnością niepożądane zachowanie, jednak można było się go spodziewać, gdyż nagrody zostały wymodelowane tak, by gratyfikować jedynie przepływ - nieistotne z jakiego manewru. 
+Moment stopu przypadł na $EX=7,43$. Okazuje się, że proces uczenia doprowadził do zaniechania przez agentów manewrów lewoskrętów (akcje 0 i 1). Jest to z pewnością niepożądane zachowanie, jednak można było się go spodziewać, gdyż nagrody zostały wymodelowane tak, by gratyfikować jedynie przepływ - nieistotne z jakiego manewru. 
 \subsection{Modyfikacja środowiska}
-Zostaje nałożona dodatkowa restrykcja związana z przestrzenią akcji. Spośród 100 kolejno podjętych akcji powinna znaleźć się każda możlwa akcja.
+Zostaje nałożona dodatkowa restrykcja związana z przestrzenią akcji. W przypadku nie pojawienia się pewnej fazy przez 100 interwałów czasowych zostaje podjęta akcja mająca na celu włączenie tej fazy.
+\subsubsection*{Sposób nauki}
+Oprócz powyżej przedstawionej metody uczenia zostanie przeprowadzony drugi wariant nauki. Poza wymiaranu sygnału opisanego w \ref{sec:sygnal} zostaną wprowadzone 4 wartości określające jak długo nie została wybrana dana akcja. Wartości te zostaną znormalizowane dzieląc rzeczywistą ilość interwałów bez danej akcji przez 100. Jest to częsty zabieg, gdy dane mogą przyjmować bardzo rozległe wartości.
 \subsubsection*{Wyniki uczenia zmodyfikowanego środowiska}
-Wyniki uczenia są identyczne do wariantu bez restrykcji wystąpienia wszystkich faz. Wyeliminowany został jednak niepożądany efekt zaniechania lewosrkętów.
+Wyniki uczenia obydwu sposobów są identyczne do wariantu bez restrykcji wystąpienia wszystkich faz. Jedynie wariant nauki z sygnałem zawierającym informację odnośnie ilości interwałów bez akcji potrzebuje więcej czasu do nauki. Warunekt stopu jednak w obydwu przypadkach jest osiągany przy tej samej wartości $EX=7,43$. Wyeliminowany został zatem niepożądany efekt zaniechania lewoskrętów.
 
 \chapter{Przegląd metod optymalizacyjnych}
 \section{Kategorie uczenia maszynowego}

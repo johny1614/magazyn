@@ -73,6 +73,13 @@ Michael~James Lighthill and Gerald~Beresford Whitham.
   roads.
 \newblock {\em Proc. R. Soc. Lond. A}, 229(1178):317--345, 1955.
 
+\bibitem{frontend_backend}
+Kun Liu, Jinmin Jiang, Xiaohan Ding, and Hui Sun.
+\newblock Design and development of management information system for research
+  project process based on front-end and back-end separation.
+\newblock In {\em 2017 International Conference on Computing Intelligence and
+  Information System (CIIS)}, pages 338--342. IEEE, 2017.
+
 \bibitem{liczbaPojazdowPolska}
 polskawliczbach.pl.
 \newblock Samochody osobowe w polsce w latach 2003-2016 (źródło: Gus).

@@ -41,7 +41,8 @@ export class CanvasService {
   }
 
   writeDensity(section) {
-    this.ctx.font = "32px Arial";
+    this.ctx.font = "20px Arial";
+    // this.ctx.font = "32px Arial"; # dla polibudy
     let densityRounded = Math.round(section.density).toString();
     // console.log('sec',section)
     console.log('sec',section)
@@ -91,7 +92,8 @@ export class CanvasService {
 
   drawLine(line: Line) {
     this.ctx.moveTo(line.startPoint.x, line.startPoint.y);
-    this.ctx.lineWidth=3
+    this.ctx.lineWidth=1
+    // this.ctx.lineWidth=3 // dla poli
     for (let i = 0; i < line.sections.length; i++) {
       const section = line.sections[i];
       this.ctx.moveTo(section.startPoint.x, section.startPoint.y);

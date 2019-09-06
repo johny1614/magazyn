@@ -13,8 +13,11 @@ import { GlobalService } from 'src/services/global.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title: string = 'app';
   nets: Net[] = [];
+  load_name: string;
+  load_text: string;
+  is_loaded_right: boolean;
 
   constructor(private http: HttpClient, private globaclService: GlobalService) {
   }
@@ -32,81 +35,35 @@ export class AppComponent {
     this.globaclService.timeChanger.next(-1);
   }
 
-  ngOnInit() {
-    this.getJSON('assets/nets/net_polibuda.json').subscribe(staticData => {
-      console.log('static jest', staticData)
+
+
+  load() {
+    // 'net11_learnt_0'
+    console.log(this.load_name)
+    const first_occurance = this.load_name.indexOf('_');
+    const net_name = this.load_name.substring(0, first_occurance);
+    const den_name = this.load_name.substring(first_occurance + 1, 999);
+    this.getJSON('assets/nets/' + net_name + '.json').subscribe(staticData => {
       this.nets = [NetFactory.netFromJson(staticData)];
-      console.log('sa nets',this.nets)
-      // sdfdsfsdfdsf
-      // asdsd
-      // let net = 'assets/densities/net14_test_fixed_no_4.json';
-
-      // let net = 'assets/densities/net16_random_now0.json';
-      // let net = 'assets/densities/net16_learnt_77.json';
-      // asddfasd
-      // let net = 'nic'
-      // let net = 'assets/densities/polibuda_learnt_70.json'
-      // let net = 'assets/densities/politechnika_random_now0.json'
-      // let net = 'assets/densities/politechnika_base.json'
-      let net = 'assets/densities/politechnika_base_from_backend.json'
-
-
-      // let net = 'assets/densities/net14_test_batching_4.json';
-      // let net = 'assets/densities/net14_test_fixed_4_batch.json';
-      // let net = 'assets/densities/net14_test_reshaping_no_0.json';
-      // let net = 'assets/densities/net14_test_no_5.json';
-      // let net = 'assets/densities/net4_base2.json';
-      // let net = 'assets/densities/net4_sequential.json'
-      // let net = 'assets/densities/net11_den_843015.json';
-      // let net = 'assets/densities/net11_den_081331.json'; // to jest ogarniete
-      // let net = 'assets/densities/net11_den_002163.json';
-      // let net = 'assets/densities/net11_den_000602.json';
-      // let net = 'assets/densities/net_12_densities_example.json';
-      // let net = 'assets/densities/net11_MC_2.json';
-      // let net = 'assets/densities/net11_test_no_5.json';
-      // let net = 'assets/densities/net11_seq.json';
-      // let net = 'assets/densities/net11_random_1.json';
-      // let net = 'assets/densities/net11_random_updated1.json';
-
-      // let net = 'assets/densities/net11_random_not_reshaped_1.json';
-
-      // let net = 'assets/densities/net11_random_0.json';
-      // let net = 'assets/densities/net14_learnt_0.json';
-
-      // test_no_1
-      // let net = 'assets/densities/net11_test_no_7.json';
-
-
-      // let net = 'assets/densities/net11_den_phase_0_1_yellow_purple.json';
-      // let net = 'assets/densities/net4_0_1_2_yellow_phase.json';
-      // let net = 'assets/densities/net4_0_1_2_yellow_phase.json';
-
-      // let net = 'assets/densities/net4_cross.json'
-      // let net = 'assets/densities/net4_base_zeros.json';
-      // let net = 'assets/densities/net4_last_epoch.json'
-      // let net = 'assets/densities/net4_learnt-10.json';
-      // waaat
-      // let net = 'assets/densities/net1_den1.json';
-      // let net = 'assets/densities/net4_test_no_5.json';
-      // let net = 'assets/densities/net4_test_no_2.json';
-      // let net = 'assets/densities/net4_seq.json';
-      // let net = 'assets/densities/net5_random_0.json';
-      // let net = 'assets/densities/net4_random_3.json';
-      // let net = 'assets/densities/net4_stan_monitorowany_3.json';
-      // let net = 'assets/densities/net4_learnt-3.json';
-      // NetFactory.drawImage('env_polibuda.png');
-      // NetFactory.drawImage('open_street_base_wroblewskiego.png');
-
+      let net = 'assets/densities/' + net_name + '_' + den_name + '.json';
       this.getJSON(net).subscribe(dynamicData => {
-        // console.log('jest dynamicData', dynamicData);
         this.nets = NetFactory.getNetsWithDensity(staticData, dynamicData);
-        // console.log('this.nets', this.nets)
         NetFactory.attachLights(this.nets, dynamicData);
         NetFactory.attachRewards(this.nets, dynamicData)
         NetFactory.attachActions(this.nets, dynamicData)
         NetFactory.attachA(this.nets, dynamicData);
+        this.load_text = 'Wczytanie się powiodło'
+        this.is_loaded_right = true;
+      },
+        error => {
+          this.load_text = 'Wczytanie się nie powiodło'
+          this.is_loaded_right = false;
+        });
+    },
+      error => {
+        this.load_text = 'Wczytanie się nie powiodło'
+        this.is_loaded_right = false;
       });
-    });
 
   }
 }

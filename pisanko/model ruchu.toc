@@ -2,71 +2,79 @@
 \babel@toc {polish}{}
 \contentsline {chapter}{\numberline {1}Wprowadzenie}{5}% 
 \contentsline {chapter}{\numberline {2}Cel i zakres pracy}{7}% 
-\contentsline {chapter}{\numberline {3}Makroskopowy model ruchu}{9}% 
-\contentsline {section}{\numberline {3.1}Klasyfikacja modeli ruchu drogowego}{9}% 
-\contentsline {section}{\numberline {3.2}Wst\IeC {\k e}p}{9}% 
-\contentsline {section}{\numberline {3.3}Rozw\IeC {\'o}j g\IeC {\k e}sto\IeC {\'s}ci ruchu na drodze}{10}% 
-\contentsline {section}{\numberline {3.4}CTM - Cell Transmission Model}{10}% 
-\contentsline {subsection}{\numberline {3.4.1}Wprowadzenie}{10}% 
-\contentsline {subsection}{\numberline {3.4.2}Model CTM dla pojedynczej drogi}{11}% 
-\contentsline {subsection}{\numberline {3.4.3}Model CTM dla sieci dr\IeC {\'o}g}{13}% 
-\contentsline {subsubsection}{\IeC {\'Z}r\IeC {\'o}d\IeC {\l }a ruchu}{13}% 
-\contentsline {subsubsection}{Uj\IeC {\'s}cia ruchu}{14}% 
-\contentsline {subsection}{\numberline {3.4.4}Przep\IeC {\l }yw pojazd\IeC {\'o}w na skrzy\IeC {\.z}owaniu}{14}% 
-\contentsline {subsubsection}{Przyk\IeC {\l }ad}{14}% 
-\contentsline {subsection}{\numberline {3.4.5}Przep\IeC {\l }yw pojazd\IeC {\'o}w na skrzy\IeC {\.z}owaniu z sygnalizacj\IeC {\k a} \IeC {\'s}wietln\IeC {\k a}}{16}% 
-\contentsline {chapter}{\numberline {4}Model sieci dr\IeC {\'o}g}{17}% 
-\contentsline {section}{\numberline {4.1}Wst\IeC {\k e}p}{17}% 
-\contentsline {section}{\numberline {4.2}Wektor stanu drogi}{17}% 
-\contentsline {subsection}{\numberline {4.2.1}Przyk\IeC {\l }ad}{17}% 
-\contentsline {section}{\numberline {4.3}Rozw\IeC {\'o}j wektora stanu drogi i wprowadzenie macierzy systemu}{18}% 
-\contentsline {subsection}{\numberline {4.3.1}Przyk\IeC {\l }ad ruchu bez zator\IeC {\'o}w}{18}% 
-\contentsline {section}{\numberline {4.4}Wektor stanu sieci dr\IeC {\'o}g}{19}% 
-\contentsline {subsection}{\numberline {4.4.1}Przyk\IeC {\l }ad}{19}% 
-\contentsline {section}{\numberline {4.5}Rozw\IeC {\'o}j wektora stanu sieci dr\IeC {\'o}g w oparciu o CTM}{20}% 
-\contentsline {subsection}{\numberline {4.5.1}Macierz prawdopodobie\IeC {\'n}stwa}{20}% 
-\contentsline {subsection}{\numberline {4.5.2}Przyk\IeC {\l }ad macierzy prawdopodobie\IeC {\'n}stwa}{20}% 
-\contentsline {subsection}{\numberline {4.5.3}Macierz systemu}{22}% 
-\contentsline {subsection}{\numberline {4.5.4}Przyk\IeC {\l }ad}{22}% 
-\contentsline {section}{\numberline {4.6}Wprowadzenie sygnalizacji \IeC {\'s}wietlnej}{24}% 
-\contentsline {subsection}{\numberline {4.6.1}Przyk\IeC {\l }ad macierzy sygnalizacji \IeC {\'s}wietlnej}{24}% 
-\contentsline {subsection}{\numberline {4.6.2}Przyk\IeC {\l }ad rozwoju wektora stanu}{25}% 
-\contentsline {section}{\numberline {4.7}Wprowadzenie \IeC {\'z}r\IeC {\'o}de\IeC {\l } ruchu }{27}% 
-\contentsline {subsection}{\numberline {4.7.1}Przyk\IeC {\l }ad}{27}% 
-\contentsline {chapter}{\numberline {5}\IeC {\'S}rodowiska symulacyjne i ich nauka}{29}% 
-\contentsline {section}{\numberline {5.1}\IeC {\'S}rodowisko 1}{29}% 
-\contentsline {subsection}{\numberline {5.1.1}Sygnalizacje \IeC {\'s}wietlne}{30}% 
-\contentsline {subsection}{\numberline {5.1.2}Przestrze\IeC {\'n} decyzyjna}{30}% 
-\contentsline {subsection}{\numberline {5.1.3}Model ruchu}{30}% 
-\contentsline {subsection}{\numberline {5.1.4}Uczenie}{30}% 
-\contentsline {subsubsection}{Wyniki uczenia}{31}% 
-\contentsline {section}{\numberline {5.2}Srodowisko 2}{32}% 
-\contentsline {subsection}{\numberline {5.2.1}Sygnalizacje \IeC {\'s}wietlne}{32}% 
-\contentsline {subsection}{\numberline {5.2.2}Przestrze\IeC {\'n} decyzyjna}{32}% 
-\contentsline {subsection}{\numberline {5.2.3}Zatory drogowe}{33}% 
-\contentsline {subsection}{\numberline {5.2.4}Uczenie}{33}% 
-\contentsline {subsubsection}{Og\IeC {\'o}lny zarys}{33}% 
-\contentsline {subsubsection}{Cel nauki}{34}% 
-\contentsline {subsubsection}{Spodziewany wynik}{34}% 
-\contentsline {subsubsection}{Po\IeC {\.z}\IeC {\k a}dane zachowanie agenta}{34}% 
-\contentsline {subsubsection}{Spos\IeC {\'o}b uczenia}{34}% 
-\contentsline {section}{\numberline {5.3}Srodowisko 3}{36}% 
-\contentsline {subsection}{\numberline {5.3.1}Sygnalizacje \IeC {\'s}wietlne}{36}% 
-\contentsline {subsection}{\numberline {5.3.2}Przestrze\IeC {\'n} decyzyjna}{37}% 
-\contentsline {subsection}{\numberline {5.3.3}Zatory drogowe}{38}% 
-\contentsline {subsection}{\numberline {5.3.4}Uczenie}{39}% 
-\contentsline {subsubsection}{Og\IeC {\'o}lny zarys}{39}% 
-\contentsline {subsubsection}{Wyniki uczenia}{40}% 
-\contentsline {section}{\numberline {5.4}Srodowisko 4 - kampus B Politechniki \IeC {\L }\IeC {\'o}dzkiej}{41}% 
-\contentsline {subsection}{\numberline {5.4.1}Sygnalizacje \IeC {\'s}wietlne}{41}% 
-\contentsline {subsection}{\numberline {5.4.2}Przestrze\IeC {\'n} decyzyjna}{43}% 
-\contentsline {subsection}{\numberline {5.4.3}Zatory drogowe}{43}% 
-\contentsline {subsection}{\numberline {5.4.4}Uczenie}{43}% 
-\contentsline {subsection}{\numberline {5.4.5}Modyfikacja \IeC {\'s}rodowiska}{43}% 
-\contentsline {chapter}{\numberline {6}Przegl\IeC {\k a}d metod optymalizacyjnych}{45}% 
-\contentsline {section}{\numberline {6.1}Kategorie uczenia maszynowego}{45}% 
-\contentsline {section}{\numberline {6.2}Uczenie ze wzmocnieniem}{45}% 
-\contentsline {section}{\numberline {6.3}Metoda Monte Carlo On-Policy}{48}% 
-\contentsline {subsubsection}{Uwagi}{49}% 
-\contentsline {section}{\numberline {6.4}Metoda Monte Carlo On-Policy z u\IeC {\.z}yciem sieci neuronowej}{49}% 
-\contentsline {subsection}{\numberline {6.4.1}Wariant z faz\IeC {\k a} \IeC {\.z}\IeC {\'o}\IeC {\l }tych \IeC {\'s}wiate\IeC {\l }}{50}% 
+\contentsline {chapter}{\numberline {3}Dokumentacja programu}{9}% 
+\contentsline {section}{\numberline {3.1}Wst\IeC {\k e}p}{9}% 
+\contentsline {section}{\numberline {3.2}Warstwa logiki}{9}% 
+\contentsline {subsection}{\numberline {3.2.1}Wymagania}{9}% 
+\contentsline {subsection}{\numberline {3.2.2}Instrukcje uruchomienia}{10}% 
+\contentsline {section}{\numberline {3.3}Warstwa prezentacyjna}{10}% 
+\contentsline {subsection}{\numberline {3.3.1}Wymagania}{10}% 
+\contentsline {subsection}{\numberline {3.3.2}Instrukcje uruchomienia}{10}% 
+\contentsline {chapter}{\numberline {4}Makroskopowy model ruchu}{11}% 
+\contentsline {section}{\numberline {4.1}Klasyfikacja modeli ruchu drogowego}{11}% 
+\contentsline {section}{\numberline {4.2}Wst\IeC {\k e}p}{11}% 
+\contentsline {section}{\numberline {4.3}Rozw\IeC {\'o}j g\IeC {\k e}sto\IeC {\'s}ci ruchu na drodze}{12}% 
+\contentsline {section}{\numberline {4.4}CTM - Cell Transmission Model}{12}% 
+\contentsline {subsection}{\numberline {4.4.1}Wprowadzenie}{12}% 
+\contentsline {subsection}{\numberline {4.4.2}Model CTM dla pojedynczej drogi}{13}% 
+\contentsline {subsection}{\numberline {4.4.3}Model CTM dla sieci dr\IeC {\'o}g}{15}% 
+\contentsline {subsubsection}{\IeC {\'Z}r\IeC {\'o}d\IeC {\l }a ruchu}{15}% 
+\contentsline {subsubsection}{Uj\IeC {\'s}cia ruchu}{16}% 
+\contentsline {subsection}{\numberline {4.4.4}Przep\IeC {\l }yw pojazd\IeC {\'o}w na skrzy\IeC {\.z}owaniu}{16}% 
+\contentsline {subsubsection}{Przyk\IeC {\l }ad}{16}% 
+\contentsline {subsection}{\numberline {4.4.5}Przep\IeC {\l }yw pojazd\IeC {\'o}w na skrzy\IeC {\.z}owaniu z sygnalizacj\IeC {\k a} \IeC {\'s}wietln\IeC {\k a}}{18}% 
+\contentsline {chapter}{\numberline {5}Model sieci dr\IeC {\'o}g}{19}% 
+\contentsline {section}{\numberline {5.1}Wst\IeC {\k e}p}{19}% 
+\contentsline {section}{\numberline {5.2}Wektor stanu drogi}{19}% 
+\contentsline {subsection}{\numberline {5.2.1}Przyk\IeC {\l }ad}{19}% 
+\contentsline {section}{\numberline {5.3}Rozw\IeC {\'o}j wektora stanu drogi i wprowadzenie macierzy systemu}{20}% 
+\contentsline {subsection}{\numberline {5.3.1}Przyk\IeC {\l }ad ruchu bez zator\IeC {\'o}w}{20}% 
+\contentsline {section}{\numberline {5.4}Wektor stanu sieci dr\IeC {\'o}g}{21}% 
+\contentsline {subsection}{\numberline {5.4.1}Przyk\IeC {\l }ad}{21}% 
+\contentsline {section}{\numberline {5.5}Rozw\IeC {\'o}j wektora stanu sieci dr\IeC {\'o}g w oparciu o CTM}{23}% 
+\contentsline {subsection}{\numberline {5.5.1}Macierz prawdopodobie\IeC {\'n}stwa}{23}% 
+\contentsline {subsection}{\numberline {5.5.2}Przyk\IeC {\l }ad macierzy prawdopodobie\IeC {\'n}stwa}{23}% 
+\contentsline {subsection}{\numberline {5.5.3}Macierz systemu}{24}% 
+\contentsline {subsection}{\numberline {5.5.4}Przyk\IeC {\l }ad}{24}% 
+\contentsline {section}{\numberline {5.6}Wprowadzenie sygnalizacji \IeC {\'s}wietlnej}{27}% 
+\contentsline {subsection}{\numberline {5.6.1}Przyk\IeC {\l }ad macierzy sygnalizacji \IeC {\'s}wietlnej}{27}% 
+\contentsline {subsection}{\numberline {5.6.2}Przyk\IeC {\l }ad rozwoju wektora stanu}{28}% 
+\contentsline {section}{\numberline {5.7}Wprowadzenie \IeC {\'z}r\IeC {\'o}de\IeC {\l } ruchu }{30}% 
+\contentsline {subsection}{\numberline {5.7.1}Przyk\IeC {\l }ad}{30}% 
+\contentsline {chapter}{\numberline {6}\IeC {\'S}rodowiska symulacyjne i ich nauka}{33}% 
+\contentsline {section}{\numberline {6.1}\IeC {\'S}rodowisko 1}{33}% 
+\contentsline {subsection}{\numberline {6.1.1}Sygnalizacje \IeC {\'s}wietlne}{34}% 
+\contentsline {subsection}{\numberline {6.1.2}Przestrze\IeC {\'n} decyzyjna}{34}% 
+\contentsline {subsection}{\numberline {6.1.3}Model ruchu}{34}% 
+\contentsline {subsection}{\numberline {6.1.4}Uczenie}{34}% 
+\contentsline {subsubsection}{Wyniki uczenia}{35}% 
+\contentsline {section}{\numberline {6.2}Srodowisko 2}{36}% 
+\contentsline {subsection}{\numberline {6.2.1}Sygnalizacje \IeC {\'s}wietlne}{36}% 
+\contentsline {subsection}{\numberline {6.2.2}Przestrze\IeC {\'n} decyzyjna}{36}% 
+\contentsline {subsection}{\numberline {6.2.3}Model ruchu}{37}% 
+\contentsline {subsection}{\numberline {6.2.4}Uczenie}{37}% 
+\contentsline {subsubsection}{Og\IeC {\'o}lny zarys}{37}% 
+\contentsline {subsubsection}{Cel nauki}{38}% 
+\contentsline {subsubsection}{Spodziewany wynik}{38}% 
+\contentsline {subsubsection}{Po\IeC {\.z}\IeC {\k a}dane zachowanie agenta}{38}% 
+\contentsline {subsubsection}{Spos\IeC {\'o}b uczenia}{38}% 
+\contentsline {section}{\numberline {6.3}Srodowisko 3}{40}% 
+\contentsline {subsection}{\numberline {6.3.1}Sygnalizacje \IeC {\'s}wietlne}{40}% 
+\contentsline {subsection}{\numberline {6.3.2}Przestrze\IeC {\'n} decyzyjna}{41}% 
+\contentsline {subsection}{\numberline {6.3.3}Zatory drogowe}{42}% 
+\contentsline {subsection}{\numberline {6.3.4}Uczenie}{43}% 
+\contentsline {subsubsection}{Og\IeC {\'o}lny zarys}{43}% 
+\contentsline {subsubsection}{Wyniki uczenia}{44}% 
+\contentsline {section}{\numberline {6.4}Srodowisko 4 - kampus B Politechniki \IeC {\L }\IeC {\'o}dzkiej}{45}% 
+\contentsline {subsection}{\numberline {6.4.1}Sygnalizacje \IeC {\'s}wietlne}{45}% 
+\contentsline {subsection}{\numberline {6.4.2}Przestrze\IeC {\'n} decyzyjna}{48}% 
+\contentsline {subsection}{\numberline {6.4.3}Model ruchu}{48}% 
+\contentsline {subsection}{\numberline {6.4.4}Uczenie}{48}% 
+\contentsline {subsection}{\numberline {6.4.5}Modyfikacja \IeC {\'s}rodowiska}{49}% 
+\contentsline {chapter}{\numberline {7}Przegl\IeC {\k a}d metod optymalizacyjnych}{51}% 
+\contentsline {section}{\numberline {7.1}Kategorie uczenia maszynowego}{51}% 
+\contentsline {section}{\numberline {7.2}Uczenie ze wzmocnieniem}{51}% 
+\contentsline {section}{\numberline {7.3}Metoda Monte Carlo On-Policy}{54}% 
+\contentsline {subsubsection}{Uwagi}{55}% 
+\contentsline {section}{\numberline {7.4}Metoda Monte Carlo On-Policy z u\IeC {\.z}yciem sieci neuronowej}{55}% 
+\contentsline {subsection}{\numberline {7.4.1}Wariant z faz\IeC {\k a} \IeC {\.z}\IeC {\'o}\IeC {\l }tych \IeC {\'s}wiate\IeC {\l }}{56}% 

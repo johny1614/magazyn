@@ -2,7 +2,6 @@ from typing import List, Tuple
 import attr
 import numpy as np
 import env_settings
-from Utils import empty_3_list
 from env_settings import start_A, get_x
 from model import GlobalState
 from model.Action import ActionInt, yellow
@@ -10,6 +9,10 @@ from model.LearningState import LearningState
 from model.Net import Net, Times
 from model.SmartAgent import SmartAgent
 from services.globals import Globals
+
+
+def empty_3_list():
+    return [[], [], []]
 
 
 @attr.s(auto_attribs=True)
@@ -74,9 +77,9 @@ class Env:
     def count_rewards_negative(self):
         rewards = [0] * len(self.agents)
         for i in range(len(self.agents)):
-            agent=self.agents[i]
+            agent = self.agents[i]
             for sec in agent.local_phase_sections:
-                rewards[i]-=self.global_state[0].densities[sec]
+                rewards[i] -= self.global_state[0].densities[sec]
         return rewards
 
     def count_rewards(self):

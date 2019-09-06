@@ -1,2 +1,5 @@
 *.pickle
 traffic fluid simulator/backend/env_4/.idea/workspace.xml
+traffic fluid simulator/backend/env_polibuda_2/.mypy_cache/
+traffic fluid simulator/backend/srodowisko_4_politechnika_zdodyfikowane/.mypy_cache/
+traffic fluid simulator/backend/env_polibuda_2/.idea/
