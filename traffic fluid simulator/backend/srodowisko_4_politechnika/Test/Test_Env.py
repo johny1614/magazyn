@@ -1,6 +1,8 @@
 import os
 import sys
 
+from model.Action import yellow
+
 sys.path.append(os.path.dirname(os.getcwd()))
 import unittest
 from typing import List
@@ -23,10 +25,9 @@ def get_seq_actions(t):
         return [0]
     if t in [0, 6, 13, 16]:
         return [1]
-    return [orange]
+    return [yellow]
 
 
-orange = 'orange'
 
 
 class Testing(unittest.TestCase):
@@ -35,7 +36,7 @@ class Testing(unittest.TestCase):
     #     max_time = 90
     #     agents = get_SmartAgents()
     #     for agent in agents:
-    #         agent.orange_phase_duration = 2
+    #         agent.yellow_phase_duration = 2
     #     Globals().time = 0
     #     env = Env(agents)
     #     env.u = env_settings.u_all_2
@@ -54,24 +55,24 @@ class Testing(unittest.TestCase):
     #     max_time = 90
     #     agents = get_SmartAgents()
     #     for agent in agents:
-    #         agent.orange_phase_duration = 2
+    #         agent.yellow_phase_duration = 2
     #     Globals().time = 0
     #     env = Env(agents)
     #     env.u = env_settings.u_all_2
-    #     env.orange_phase_duration = 2
+    #     env.yellow_phase_duration = 2
     #     for t in range(max_time):
     #         actions = [0]
     #         if t == 60 or t > 62:
     #             actions = [1]
     #         if t == 61 or t == 62:
-    #             actions = ['orange']
+    #             actions = [yellow]
     #         time = Globals().time # time = t
     #         env.step(actions)
     #         time = Globals().time # time = t + 1
     #         if t in range(3, 60):
     #             self.assertEqual([agent.actual_phase for agent in agents], [0])
     #         if t == 60 or t == 61:
-    #             self.assertEqual([agent.actual_phase for agent in agents], ['orange'])
+    #             self.assertEqual([agent.actual_phase for agent in agents], [yellow])
     #         if t >= 62:
     #             self.assertEqual([agent.actual_phase for agent in agents], [1])
     #         exportData = ExportData(learningMethod='Nothing', learningEpochs=0, nets=env.global_memories,
@@ -84,30 +85,30 @@ class Testing(unittest.TestCase):
     #     max_time = 90
     #     agents = get_SmartAgents()
     #     for agent in agents:
-    #         agent.orange_phase_duration = 2
+    #         agent.yellow_phase_duration = 2
     #     Globals().time = 0
     #     env = Env(agents)
     #     env.u = env_settings.u_all_2
-    #     orange = 'orange'
-    #     env.orange_phase_duration = 2
+    #     yellow = yellow
+    #     env.yellow_phase_duration = 2
     #     for t in range(max_time):
     #         # actions = [1] if t < 60 elif 60 == t [2]
     #         actions = [0, 0, 0]
     #         if t == 60 or 63 <= t < 70:
     #             actions = [1]
     #         if t == 61 or t == 62:
-    #             actions = [orange]
+    #             actions = [yellow]
     #         if t == 70 or t >= 73:
     #             actions = [0]
     #         if t == 71 or t == 72:
-    #             actions = [orange]
+    #             actions = [yellow]
     #         env.step(actions)
     #         if t == 60 or t == 61:
-    #             self.assertEqual([agent.actual_phase for agent in agents], [orange])
+    #             self.assertEqual([agent.actual_phase for agent in agents], [yellow])
     #         if 63 >= t >= 69:
     #             self.assertEqual([agent.actual_phase for agent in agents], [1])
     #         if t == 70 or t == 71:
-    #             self.assertEqual([agent.actual_phase for agent in agents], [orange])
+    #             self.assertEqual([agent.actual_phase for agent in agents], [yellow])
     #         if t >= 73:
     #             self.assertEqual([agent.actual_phase for agent in agents], [0])
     #         #
@@ -140,22 +141,22 @@ class Testing(unittest.TestCase):
     #     max_time = 90
     #     agents = get_SmartAgents()
     #     for agent in agents:
-    #         agent.orange_phase_duration = 2
+    #         agent.yellow_phase_duration = 2
     #     Globals().time = 0
     #     env = Env(agents)
     #     env.u = env_settings.u_all_2
-    #     env.orange_phase_duration = 2
+    #     env.yellow_phase_duration = 2
     #     for t in range(max_time):
     #         # actions = [0, 0, 0] if t < 60 elif 60 == t [1, 1, 1]
     #         actions = [0]
     #         if t == 60 or 63 <= t < 70:
     #             actions = [1]
     #         if t == 61 or t == 62:
-    #             actions = [orange]
+    #             actions = [yellow]
     #         if t == 70 or t >= 73:
     #             actions = [0]
     #         if t == 71 or t == 72:
-    #             actions = [orange]
+    #             actions = [yellow]
     #         env.step(actions)
     #         # print(f't:{t}, {agents[0].actual_phase}')
     #         if t in range(3, 60):
@@ -164,14 +165,14 @@ class Testing(unittest.TestCase):
     #             self.assertEqual([agent.memories[t].state.actual_phase for agent in agents],
     #                              [0])  # Po operacji w chwili 60 mamy taka faze dla stanu w chwili 60
     #         if t == 60 or t == 61:
-    #             self.assertEqual([agent.actual_phase for agent in agents], [orange])
-    #             self.assertEqual([agent.memories[t].state.actual_phase for agent in agents], [orange])
+    #             self.assertEqual([agent.actual_phase for agent in agents], [yellow])
+    #             self.assertEqual([agent.memories[t].state.actual_phase for agent in agents], [yellow])
     #         if 62 <= t <= 69:
     #             self.assertEqual([agent.actual_phase for agent in agents], [1])
     #             self.assertEqual([agent.memories[t].state.actual_phase for agent in agents], [1])
     #         if t == 70 or t == 71:
-    #             self.assertEqual([agent.actual_phase for agent in agents], [orange])
-    #             self.assertEqual([agent.memories[t].state.actual_phase for agent in agents], [orange])
+    #             self.assertEqual([agent.actual_phase for agent in agents], [yellow])
+    #             self.assertEqual([agent.memories[t].state.actual_phase for agent in agents], [yellow])
     #         if t >= 72:
     #             self.assertEqual([agent.actual_phase for agent in agents], [0])
     #             self.assertEqual([agent.memories[t].state.actual_phase for agent in agents], [0])
@@ -186,22 +187,22 @@ class Testing(unittest.TestCase):
     #     max_time = 90
     #     agents = get_SmartAgents()
     #     for agent in agents:
-    #         agent.orange_phase_duration = 2
+    #         agent.yellow_phase_duration = 2
     #     Globals().time = 0
     #     Globals().gamma = 0
     #     env = Env(agents)
-    #     env.orange_phase_duration = 2
+    #     env.yellow_phase_duration = 2
     #     env.u = env_settings.u_all_2
     #     for t in range(max_time):
     #         actions = [0]
     #         if t == 60 or 63 <= t < 70:
     #             actions = [1]
     #         if t == 61 or t == 62:
-    #             actions = [orange]
+    #             actions = [yellow]
     #         if t == 70 or t >= 73:
     #             actions = [0]
     #         if t == 71 or t == 72:
-    #             actions = [orange]
+    #             actions = [yellow]
     #         env.step(actions)
     #         # print(f't:{t}, actual_phase:{agents[0].actual_phase}')
     #         if 3 <= t < 60:
@@ -209,24 +210,24 @@ class Testing(unittest.TestCase):
     #             self.assertEquals([agent.actual_phase for agent in agents], [0])
     #         if t == 60:
     #             self.assertEquals([agent.starting_actual_phase for agent in agents], [0])
-    #             self.assertEquals([agent.actual_phase for agent in agents], [orange])
+    #             self.assertEquals([agent.actual_phase for agent in agents], [yellow])
     #         if t == 61:
-    #             self.assertEquals([agent.starting_actual_phase for agent in agents], [orange])
-    #             self.assertEquals([agent.actual_phase for agent in agents], [orange])
+    #             self.assertEquals([agent.starting_actual_phase for agent in agents], [yellow])
+    #             self.assertEquals([agent.actual_phase for agent in agents], [yellow])
     #         if t == 62:
-    #             self.assertEquals([agent.starting_actual_phase for agent in agents], [orange])
+    #             self.assertEquals([agent.starting_actual_phase for agent in agents], [yellow])
     #             self.assertEquals([agent.actual_phase for agent in agents], [1])
     #         if 63 <= t <= 69:
     #             self.assertEquals([agent.starting_actual_phase for agent in agents], [1])
     #             self.assertEquals([agent.actual_phase for agent in agents], [1])
     #         if t == 70:
     #             self.assertEquals([agent.starting_actual_phase for agent in agents], [1])
-    #             self.assertEquals([agent.actual_phase for agent in agents], [orange])
+    #             self.assertEquals([agent.actual_phase for agent in agents], [yellow])
     #         if t == 71:
-    #             self.assertEquals([agent.starting_actual_phase for agent in agents], [orange])
-    #             self.assertEquals([agent.actual_phase for agent in agents], [orange, ])
+    #             self.assertEquals([agent.starting_actual_phase for agent in agents], [yellow])
+    #             self.assertEquals([agent.actual_phase for agent in agents], [yellow, ])
     #         if t == 72:
-    #             self.assertEquals([agent.starting_actual_phase for agent in agents], [orange, ])
+    #             self.assertEquals([agent.starting_actual_phase for agent in agents], [yellow, ])
     #             self.assertEquals([agent.actual_phase for agent in agents], [0])
 
     # def test_no_5_reshaping_pass_action_0_1_0(self):
@@ -234,25 +235,25 @@ class Testing(unittest.TestCase):
     #     max_time = 90
     #     agents = get_SmartAgents()
     #     for agent in agents:
-    #         agent.orange_phase_duration = 2
+    #         agent.yellow_phase_duration = 2
     #     Globals().time = 0
     #     Globals().gamma = 0
     #     env = Env(agents)
     #     env.u = env_settings.u_all_2
-    #     env.orange_phase_duration = 2
+    #     env.yellow_phase_duration = 2
     #     for t in range(max_time):
     #         # actions = [0,0,0] if t < 60 elif 60 == t [1,1,1]
     #         actions = [0]
     #         if t == 1 or t == 2:
-    #             actions = [orange]
+    #             actions = [yellow]
     #         if t == 60 or 63 <= t < 70:
     #             actions = [1]
     #         if t == 61 or t == 62:
-    #             actions = [orange]
+    #             actions = [yellow]
     #         if t == 70 or t >= 73:
     #             actions = [0]
     #         if t == 71 or t == 72:
-    #             actions = [orange]
+    #             actions = [yellow]
     #         env.step(actions)
     #     env.agents[0].save_batch()
     #     env.agents[0].reshape_rewards()
@@ -268,25 +269,25 @@ class Testing(unittest.TestCase):
     #     max_time = 90
     #     agents = get_SmartAgents()
     #     for agent in agents:
-    #         agent.orange_phase_duration = 2
+    #         agent.yellow_phase_duration = 2
     #     Globals().time = 0
     #     Globals().gamma = 0
     #     env = Env(agents)
     #     env.u = env_settings.u_all_9
-    #     env.orange_phase_duration = 2
+    #     env.yellow_phase_duration = 2
     #     for t in range(max_time):
     #         # actions = [0,0,0] if t < 60 elif 60 == t [1,1,1]
     #         actions = [0]
     #         if t == 1 or t == 2:
-    #             actions = [orange]
+    #             actions = [yellow]
     #         if t == 60 or 63 <= t < 70:
     #             actions = [1]
     #         if t == 61 or t == 62:
-    #             actions = [orange]
+    #             actions = [yellow]
     #         if t == 70 or t >= 73:
     #             actions = [0]
     #         if t == 71 or t == 72:
-    #             actions = [orange]
+    #             actions = [yellow]
     #         env.step(actions)
     #     env.agents[0].save_batch()
     #     env.agents[0].reshape_rewards()
@@ -303,36 +304,36 @@ class Testing(unittest.TestCase):
     #     # Testujemy stargin_actual_phase - jest potrzebne do learningState
     #     agents: List[SmartAgent] = get_SmartAgents()
     #     for agent in agents:
-    #         agent.orange_phase_duration = 2
+    #         agent.yellow_phase_duration = 2
     #     # for agent in agents:
     #     #     agent.model = agent._build_model(layers=[20, 50, 30, 18])
     #     env = Env(agents)
     #     env.u = env_settings.u_all_2
-    #     env.orange_phase_duration = 2
+    #     env.yellow_phase_duration = 2
     #     max_time = 90
     #     Globals().time = 0
     #     for t in range(max_time):
     #         # actions = [0] if t < 60 elif 60 == t [1]
     #         actions = [0]
     #         if t == 1 or t == 2:
-    #             actions = [orange]
+    #             actions = [yellow]
     #         if t == 60 or t >= 63:
     #             actions = [1]
     #         if t == 61 or t == 62 or t == 71 or t == 72:
-    #             actions = [orange]
+    #             actions = [yellow]
     #         if t == 70 or t >= 72:
     #             actions = [0]
     #         env.step(actions)
     #     for agent in agents:
     #         agent.reshape_rewards()
     #     self.assertEqual(agents[0].memories[60].state.starting_actual_phase, 0)
-    #     self.assertEqual(agents[0].memories[61].state.starting_actual_phase, orange)
-    #     self.assertEqual(agents[0].memories[62].state.starting_actual_phase, orange)
+    #     self.assertEqual(agents[0].memories[61].state.starting_actual_phase, yellow)
+    #     self.assertEqual(agents[0].memories[62].state.starting_actual_phase, yellow)
     #     self.assertEqual(agents[0].memories[63].state.starting_actual_phase, 1)
     #
     #     self.assertEqual(agents[0].memories[70].state.starting_actual_phase, 1)
-    #     self.assertEqual(agents[0].memories[71].state.starting_actual_phase, orange)
-    #     self.assertEqual(agents[0].memories[72].state.starting_actual_phase, orange)
+    #     self.assertEqual(agents[0].memories[71].state.starting_actual_phase, yellow)
+    #     self.assertEqual(agents[0].memories[72].state.starting_actual_phase, yellow)
     #     self.assertEqual(agents[0].memories[73].state.starting_actual_phase, 0)
     #
     #     exportData = ExportData(learningMethod='Monte Carlo TODO', learningEpochs=0, nets=env.global_memories,
@@ -345,7 +346,7 @@ class Testing(unittest.TestCase):
     #     max_time = 90
     #     agents = get_SmartAgents()
     #     for agent in agents:
-    #         agent.orange_phase_duration = 2
+    #         agent.yellow_phase_duration = 2
     #     Globals().time = 0
     #     env = Env(agents)
     #     env.u = env_settings.u_all_2

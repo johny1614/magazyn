@@ -1,5 +1,4 @@
 import numpy as np
-from services.globals import Globals
 
 last_sections = [1, 8, 9, 12, 13, 19, 29, 32]
 not_last_sections = [i for i in range(40) if i not in [1, 8, 9, 12, 13, 19, 29, 32]]
@@ -64,48 +63,3 @@ def start_A():
 def get_x():
     x = [x_size * [0]]
     return x
-
-
-def generate_u(cars_incoming, max_time):
-    return np.array([[cars_incoming] * max_time] * 3).transpose()
-
-
-def get_u_under_15_random():
-    random_numbers_road_0 = []
-    random_numbers_road_1 = []
-    for i in range(90):
-        random_numbers_road_0.append(np.random.random() * 15)
-        random_numbers_road_1.append(np.random.random() * 15)
-    return np.array([random_numbers_road_0, random_numbers_road_1]).transpose()
-
-
-def get_u_under_x_random(x):
-    random_numbers_road_0 = []
-    random_numbers_road_1 = []
-    for i in range(90):
-        random_numbers_road_0.append(np.random.random() * x)
-        random_numbers_road_1.append(np.random.random() * x)
-    return np.array([random_numbers_road_0, random_numbers_road_1]).transpose()
-
-
-#
-# env_settings_A_storage = [[]] * max_time
-#
-# u_v1 = np.array([[4, 4, 4, 60, 4, 4, 4, 4, 4, 4, 4, 60, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 60, 4, 4, 4, 4, 4, 4, 4,
-#                   4, 4, 4, 60, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 60, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 60, 4, 4,
-#                   4, 4, 4, 4, 60, 4, 4,
-#                   4, 4, 4, 4, 60, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 60, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-#                   60, 4, 4, 4, 4, 4, 4,
-#                   4, 4, 4, 4, 4, 4, 4]]).transpose()
-#
-# u_all_2 = np.array([[2] * max_time, [2] * max_time]).transpose()
-# #
-# u_all_4 = np.array([[4] * max_time,[4] * max_time]).transpose()
-# #
-# #
-# u_all_9 = np.array([[9] * max_time, [9] * max_time]).transpose()
-#
-# u_under_15_random = get_u_under_15_random()
-#
-# u=u_all_9
-a = 2

@@ -1,4 +1,3 @@
-
 import attr
 
 from model.Action import ActionInt
@@ -9,7 +8,7 @@ from model.LearningState import LearningState
 class Memory:
     state: LearningState
     action: ActionInt
-    reward: any # float, ale to psuje
+    reward: any  # float, ale to psuje
     new_state: LearningState
     times: any
     epoch_index: int
@@ -19,4 +18,3 @@ class Memory:
 
     def __attrs_post_init__(self):
         self.holded_lights = self.action == self.state.starting_actual_phase
-

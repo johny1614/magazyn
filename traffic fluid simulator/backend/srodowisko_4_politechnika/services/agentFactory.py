@@ -1,21 +1,17 @@
 from typing import List
-
 from tensorflow.python.keras.models import load_model
-
 from model.SmartAgent import SmartAgent
 
 
 def get_LearnSmartAgents(file_names=None) -> List[SmartAgent]:
     models = []
-    if file_names == None:
+    if file_names is None:
         file_names = ['static_files/model-agent0.h5', 'static_files/model-agent1.h5', 'static_files/model-agent2.h5','static_files/model-agent3.h5']
     for i in range(len(file_names)):
         model = load_model(file_names[i])
         models.append(model)
     return get_SmartAgents_with_model(models)
 
-
-# w prawo 0.3 w lewo 0.2 prosto 0.5
 def get_SmartAgents() -> List[SmartAgent]:
     agents: SmartAgent = []
     agent_0 = SmartAgent(index=0,
