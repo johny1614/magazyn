@@ -69,7 +69,7 @@ def run_learnt_greedy(saveJson=True):
     cars_out = env.cars_out
     if saveJson:
         exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
-                                netName='net16',
+                                netName='env3',
                                 densityName='learnt_' + str(Globals().greedy_run_no))
         exportData.saveToJson()
     maximum_possible_cars_out=Globals().u_value*Globals().vp().max_time_greedy*3

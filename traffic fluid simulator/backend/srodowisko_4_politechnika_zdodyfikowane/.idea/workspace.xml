@@ -8,24 +8,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3bc62bd-0327-4a90-b067-71b6ea844ee3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../obrazy.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../obrazy.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../srodowisko_4_politechnika/.mypy_cache/3.6/runner_learnt.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/../srodowisko_4_politechnika/.mypy_cache/3.6/runner_learnt.meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../srodowisko_4_politechnika/.mypy_cache/3.6/services/runnerService.data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../srodowisko_4_politechnika/.mypy_cache/3.6/services/runnerService.meta.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../srodowisko_4_politechnika/Env.py" beforeDir="false" afterPath="$PROJECT_DIR$/../srodowisko_4_politechnika/Env.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../srodowisko_4_politechnika/random_epochs_generator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../srodowisko_4_politechnika/runner_all.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../srodowisko_4_politechnika/runner_learnt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/app/canvas.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/canvas.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_den_843015.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_den_843015.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net16_learnt_0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net16_learnt_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srodowisko_1/services/runnerService.py" beforeDir="false" afterPath="$PROJECT_DIR$/../srodowisko_1/services/runnerService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srodowisko_2/services/runnerService.py" beforeDir="false" afterPath="$PROJECT_DIR$/../srodowisko_2/services/runnerService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srodowisko_3/services/runnerService.py" beforeDir="false" afterPath="$PROJECT_DIR$/../srodowisko_3/services/runnerService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../srodowisko_4_politechnika/services/runnerService.py" beforeDir="false" afterPath="$PROJECT_DIR$/../srodowisko_4_politechnika/services/runnerService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/runnerService.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/runnerService.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

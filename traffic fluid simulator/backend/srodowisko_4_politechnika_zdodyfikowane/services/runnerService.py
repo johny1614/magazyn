@@ -69,7 +69,7 @@ def generate_random_epochs(learntAgents=False, save_front_json=False, epochs=ran
             agent.reshape_rewards()
         if save_front_json:
             exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
-                                    netName='politechnika',
+                                    netName='env4',
                                     densityName='random_now' + str(Globals().greedy_run_no))
             exportData.saveToJson()
         env.remember_memory()
@@ -88,7 +88,7 @@ def run_learnt_greedy(saveJson=True):
     cars_out = env.cars_out
     if saveJson:
         exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
-                                netName='polibuda',
+                                netName='env4',
                                 densityName='learnt_' + str(Globals().greedy_run_no))
         exportData.saveToJson()
     maximum_possible_cars_out = Globals().u_value * Globals().vp.max_time_greedy * 8

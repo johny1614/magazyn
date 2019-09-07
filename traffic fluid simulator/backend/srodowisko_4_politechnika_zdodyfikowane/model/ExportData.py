@@ -25,6 +25,7 @@ class ExportData:
         try:
             jsonData = json.dumps(dicSelf)
             outfile = open('../../front/src/assets/densities/' + self.netName + '_' + self.densityName + '.json', 'w')
+            print(f'Zapisano epizod zachłanny {self.netName}_{self.densityName}')
         except:
             outfile = open('../../../front/src/assets/densities/' + self.netName + '_' + self.densityName + '.json',
                            'w')

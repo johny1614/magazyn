@@ -27,7 +27,7 @@ def run_learnt_greedy(saveJson=True):
     cars_out = env.cars_out
     if saveJson:
         exportData = ExportData(learningMethod='DQN', learningEpochs=0, nets=env.global_memories,
-                                netName='net14',
+                                netName='env2',
                                 densityName='learnt_' + str(Globals().greedy_run_no))
         exportData.saveToJson()
     Globals().greedy_run_no += 1
