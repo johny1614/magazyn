@@ -5,103 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3bc62bd-0327-4a90-b067-71b6ea844ee3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_learnt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../obrazy.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../obrazy.pptx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.bbl" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.bbl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.blg" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.blg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../pisanko/model ruchu.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/model ruchu.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_14_6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../env_14_6/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/Action.data.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/Action.data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/Action.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/Action.meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/Test_Env.data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/Test_Env.meta.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/Utils.data.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/Utils.data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/Utils.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/Utils.meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/fixed_env_flow.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/fixed_env_flow.meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/model/Action.data.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/model/Action.data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/model/Action.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/model/Action.meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/model/__init__.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/model/__init__.meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/runnerService.data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/runnerService.meta.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/runner_learnt.data.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/runner_learnt.data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/runner_learnt.meta.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mypy_cache/3.6/runner_learnt.meta.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/services/runnerService.data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mypy_cache/3.6/services/runnerService.meta.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Env.py" beforeDir="false" afterPath="$PROJECT_DIR$/Env.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Test_DryRunner.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Test_Env.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Test_Env.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Test_batching.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Test_fixed_env_flow.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Test_learning.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Test_random_batching.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Test_reshaping_batches.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/cd" beforeDir="false" afterPath="$PROJECT_DIR$/services/drawerService.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/pred.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/python" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/batches.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/batches_greedy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/akcje.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/fazy-akcje.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/draw_batches.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/env_settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixed_env_flow.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mnist.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Action.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Action.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/LearningState.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/LearningState.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/SmartAgent.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/SmartAgent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_runner.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nn_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/nn_trainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_cars_out0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_rewards0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_rewards_mean0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pred.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/random_epochs_generator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res_nocka.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runner_all.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runner_learnt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sequential_epochs_generator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/globals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/runnerService.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/runnerService.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/arch.rar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/model-agent0.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/model-agent1.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/model-agent2.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/x_batch_agent_0_.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/x_batch_agent_1_.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/x_batch_agent_2_.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/y_batch_agent_0_.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/y_batch_agent_1_.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_files/y_batch_agent_2_.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp_nn.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp_nn_drawing.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/events.out.tfevents.1564173359.DESKTOP-1BUHOLE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/graph.pbtxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/model.ckpt-0.data-00000-of-00002" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/model.ckpt-0.data-00001-of-00002" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/model.ckpt-0.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/model.ckpt-0.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/model.ckpt-3000.data-00000-of-00002" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/model.ckpt-3000.data-00001-of-00002" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/model.ckpt-3000.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train/linreg/model.ckpt-3000.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/x.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/y.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../env_4_10/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../env_4_10/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/app/canvas.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/app/canvas.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net11_den_843015.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net11_den_843015.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net16_learnt_0.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net16_learnt_0.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front/src/assets/densities/net16_learnt_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../front/src/assets/densities/net16_learnt_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../pisanko/refs.bib" beforeDir="false" afterPath="$PROJECT_DIR$/../../../pisanko/refs.bib" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/Env.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="257">
-              <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+              <caret line="140" selection-start-line="140" selection-end-line="140" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -126,11 +38,35 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/env_settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/services/agentFactory.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="25" column="62" lean-forward="true" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+            <state relative-caret-position="212">
+              <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -142,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/model/SmartAgent.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -260,10 +196,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1296" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -271,22 +207,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="env_16" type="b2602c69:ProjectViewProjectNode" />
-              <item name="env_16" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="env_16" type="b2602c69:ProjectViewProjectNode" />
-              <item name="env_16" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -298,6 +218,22 @@
               <item name="env_4_7" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="static_files" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="srodowisko_3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="srodowisko_3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="srodowisko_3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="srodowisko_3" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -509,9 +445,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1296" height="1000" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.75581396" visible="true" weight="0.14488935" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.75581396" visible="true" weight="0.14467409" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.24418604" side_tool="true" weight="0.14383562" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -522,7 +458,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49947312" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.71443623" visible="true" weight="0.41170096" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.71443623" visible="true" weight="0.4106113" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.49209693" side_tool="true" weight="0.33586133" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49947312" weight="0.5438787" />
       <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32936078" />
@@ -853,16 +789,6 @@
     <entry file="file://$PROJECT_DIR$/static_files/x_batch4.png" />
     <entry file="file://$PROJECT_DIR$/batches_greedy.png" />
     <entry file="file://$PROJECT_DIR$/static_files/x_batch1.png" />
-    <entry file="file://$PROJECT_DIR$/services/agentFactory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="71" column="39" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -872,9 +798,7 @@
     <entry file="file://$PROJECT_DIR$/draw_batches.py" />
     <entry file="file://$PROJECT_DIR$/fixed_env_flow.py" />
     <entry file="file://$PROJECT_DIR$/my_runner.py" />
-    <entry file="file://$PROJECT_DIR$/docs/akcje.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/akcje.png" />
     <entry file="file://$PROJECT_DIR$/docs/docs.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -952,16 +876,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utils.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/random_epochs_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="33" column="19" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils.py" />
+    <entry file="file://$PROJECT_DIR$/random_epochs_generator.py" />
     <entry file="file://$PROJECT_DIR$/services/runnerService.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -996,22 +912,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/env_settings.py">
+    <entry file="file://$PROJECT_DIR$/model/SmartAgent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="216">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/SmartAgent.py">
+    <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+        <state relative-caret-position="212">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1019,19 +935,29 @@
     <entry file="file://$PROJECT_DIR$/Env.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
-          <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+          <caret line="140" selection-start-line="140" selection-end-line="140" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run.py">
+    <entry file="file://$PROJECT_DIR$/env_settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        <state relative-caret-position="276">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/agentFactory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="25" column="62" lean-forward="true" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>

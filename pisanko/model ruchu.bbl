@@ -29,6 +29,11 @@ Samia Boubaker, Ferid Rehimi, and Adel Kalboussi.
 \newblock In {\em Logistics (LOGISTIQUA), 2011 4th International Conference
   on}, pages 474--478. IEEE, 2011.
 
+\bibitem{openai}
+Greg Brockman, Vicki Cheung, Ludwig Pettersson, Jonas Schneider, John Schulman,
+  Jie Tang, and Wojciech Zaremba.
+\newblock Openai gym, 2016.
+
 \bibitem{mesoscopic}
 Wilco Burghout, Haris~N Koutsopoulos, and Ingmar Andreasson.
 \newblock A discrete-event mesoscopic traffic simulation model for hybrid
@@ -41,6 +46,24 @@ Carlos~F Daganzo.
 \newblock The cell transmission model, part ii: network traffic.
 \newblock {\em Transportation Research Part B: Methodological}, 29(2):79--93,
   1995.
+
+\bibitem{mobility_raport2019_col}
+Tim~Lomax David~Schrank, Bill~Eisele.
+\newblock 2019 urban mobility report.
+\newblock 2019.
+
+\bibitem{canvas}
+Alexis Deveria.
+\newblock Can i use... support tables for html5, css3, etc.
+\newblock \url{https://caniuse.com/#feat=canvas}, 2019 (accessed April 4,
+  2019).
+
+\bibitem{q_zlozony_env}
+Gabriel Dulac-Arnold, Richard Evans, Hado van Hasselt, Peter Sunehag, Timothy
+  Lillicrap, Jonathan Hunt, Timothy Mann, Theophane Weber, Thomas Degris, and
+  Ben Coppin.
+\newblock Deep reinforcement learning in large discrete action spaces.
+\newblock {\em arXiv preprint arXiv:1512.07679}, 2015.
 
 \bibitem{gottlich}
 Simone G{\"o}ttlich, Michael Herty, and Ute Ziegler.
@@ -67,6 +90,11 @@ Pushpendra Kumar, Rochdi Merzouki, Blaise Conrard, Vincent Coelen, and
 \newblock {\em IEEE Transactions on Intelligent Transportation Systems},
   15(3):1066--1082, 2014.
 
+\bibitem{ml_ai}
+Ted~G Lewis and Peter~J Denning.
+\newblock Learning machine learning.
+\newblock {\em Communications of the ACM}, 61(12):24--27, 2018.
+
 \bibitem{lwr}
 Michael~James Lighthill and Gerald~Beresford Whitham.
 \newblock On kinematic waves ii. a theory of traffic flow on long crowded
@@ -80,11 +108,41 @@ Kun Liu, Jinmin Jiang, Xiaohan Ding, and Hui Sun.
 \newblock In {\em 2017 International Conference on Computing Intelligence and
   Information System (CIIS)}, pages 338--342. IEEE, 2017.
 
+\bibitem{nazwa_q}
+Tambet Matiisen.
+\newblock https://neuro.cs.ut.ee/demystifying-deep-reinforcement-learning/.
+\newblock
+  \url{https://neuro.cs.ut.ee/demystifying-deep-reinforcement-learning/}, 2019
+  (accessed September 1, 2019).
+
+\bibitem{q_zbieznosc}
+Francisco~S Melo.
+\newblock Convergence of q-learning: A simple proof.
+\newblock {\em Institute Of Systems and Robotics, Tech. Rep}, pages 1--4, 2001.
+
+\bibitem{epsilon_decay}
+Thijs Nieuwdorp.
+\newblock Dare to discover: The effect of the exploration strategy on an
+  agent’s performance.
+\newblock 2017.
+
 \bibitem{liczbaPojazdowPolska}
 polskawliczbach.pl.
 \newblock Samochody osobowe w polsce w latach 2003-2016 (źródło: Gus).
 \newblock \url{http://www.polskawliczbach.pl/#transport-i-komunikacja}, 2019
   (accessed March 3, 2019).
+
+\bibitem{overview_optimizers}
+Sebastian Ruder.
+\newblock An overview of gradient descent optimization algorithms.
+\newblock {\em arXiv preprint arXiv:1609.04747}, 2016.
+
+\bibitem{exploration_or_exploitation}
+Isaac~J Sledge and Jos{\'e}~C Pr{\'\i}ncipe.
+\newblock Balancing exploration and exploitation in reinforcement learning
+  using a value of information criterion.
+\newblock In {\em 2017 IEEE International Conference on Acoustics, Speech and
+  Signal Processing (ICASSP)}, pages 2816--2820. IEEE, 2017.
 
 \bibitem{liczbaPojazdowSwiat}
 Statista.
@@ -93,6 +151,11 @@ Statista.
 \newblock
   \url{https://www.statista.com/statistics/281134/number-of-vehicles-in-use-worldwide/},
   2019 (accessed March 3, 2019).
+
+\bibitem{reinforcementBook}
+Richard~S Sutton, Andrew~G Barto, and Ronald~J Williams.
+\newblock Reinforcement learning is direct adaptive optimal control.
+\newblock {\em IEEE Control Systems Magazine}, 12(2):19--22, 1992.
 
 \bibitem{rankingTomTom}
 TomTom.
@@ -108,5 +171,17 @@ Vinh~An Vu and Gary Tan.
 \newblock In {\em Proceedings of the 21st International Symposium on
   Distributed Simulation and Real Time Applications}, pages 127--135. IEEE
   Press, 2017.
+
+\bibitem{wang2018cooperative}
+Bohui Wang, Xinpeng Fang, and Bin Zhang.
+\newblock Cooperative control for industrial multi-agent systems: Framework and
+  problems.
+\newblock In {\em 2018 37th Chinese Control Conference (CCC)}, pages
+  6971--6976. IEEE, 2018.
+
+\bibitem{watkins}
+Christopher~JCH Watkins and Peter Dayan.
+\newblock Q-learning.
+\newblock {\em Machine learning}, 8(3-4):279--292, 1992.
 
 \end{thebibliography}

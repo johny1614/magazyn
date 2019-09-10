@@ -25,7 +25,6 @@ export class AppComponent {
   public getJSON(url): Observable<any> {
     return this.http.get(url);
   }
-  // asdsad
 
   increaseTime() {
     this.globaclService.timeChanger.next(1);
@@ -35,6 +34,10 @@ export class AppComponent {
     this.globaclService.timeChanger.next(-1);
   }
 
+  ngOnInit(){
+    this.load_name='net4szerokie_cokolwiek'
+    this.load();
+  }
 
 
   load() {
