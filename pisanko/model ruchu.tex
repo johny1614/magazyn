@@ -117,7 +117,7 @@ Algorytmy uczenia ze wzmocnieniem zazwyczaj stosuje się do rozwiązywania probl
 \subsection*{Problem procesu Markowa}
 Problemem procesu decyzyjnego Markowa jest odnalezienie optymalnej strategii. Strategia określona jest jako funkcja $\pi(s)$ przyjmująca jako argument stan, a zwracająca podejmowaną akcję. Celem optymalizacji jest odnalezienie strategii maksymalizującej następującą wartość:
 \[
-G=\sum_{k=0}^{K} \gamma^k R_{k} \addtag \label{eq:Markov_maximize}
+G=\sum_{k=0}^{K} \gamma^k R_{k}. \addtag \label{eq:Markov_maximize}
 \]
 Chociaż we wzorze \myref{eq:Markov_maximize} nie ma strategii $\pi(s)$, to wpływa ona na otrzymywane nagrody $R_{k}$, gdyż określa podejmowane akcje. Parametr $\gamma \in (0,1]$ jest czynnikiem dyskontującym. 
 \subsubsection*{Idea dyskonta}
@@ -125,7 +125,7 @@ Idea dyskontowania nagród została zaczerpnięta z rachunku finansowego. Przyk�
 \subsubsection*{Wartość stanu}
 Analogicznie do (\ref{eq:Markov_maximize}) jest ustalona funkcja wartości stanu. Wartość stanu $s$, który miał miejsce w chwili $t$ jest określona jako:
 \[
-G_t=\sum_{k=t}^{K} \gamma^k R_{k}=R_{t}+\gamma R_{t+1}+\gamma^{2} R_{t+2}+...+\gamma^{K}R_K \addtag \label{eq:Markov_state_value_G}
+G_t=\sum_{k=t}^{K} \gamma^k R_{k}=R_{t}+\gamma R_{t+1}+\gamma^{2} R_{t+2}+...+\gamma^{K}R_K. \addtag \label{eq:Markov_state_value_G}
 \]
 \subsubsection*{Przykład obliczeniowy}
 Zostanie przedstawiony teraz przykład obliczeniowy. Agent podejmuje decyzje na których podstawie otrzymuje ciąg  nagród $R_0=0, R_1=2,R_2=6,R_3=-1,R_4=2,R_5=1$. Czynnik dyskontujący $\gamma$ jest równy 0,9. Jaka jest wartość sumy zdyskontowanych nagród $G$ oraz kolejnych stanów t.j. $G_1,G_2,G_3,G_4,G_5$?\\
@@ -171,7 +171,7 @@ Q learning jest prostym algorytmem uczenia ze wzmocnieniem rozwiązujący proble
 	$Q(s,a)$ przypisany do jednego agenta. Jego wartości określają opłacalność wyboru akcji $a$ w stanie $s$.
 	\item Zasymuluj $\epsilon$ - zachłanny epizod treningowy. Obserwuj jakie zostałe podjęte akcje $a$ w stanie $s$ i do jakiego stanu $s'$ one doprowadziły oraz jaka została przyznana nagroda $r$.
 	\item Dla każdej obserwacji $(s,a,s',r)$, która pojawiła się w epizodzie przypisz nowe wartości $Q(s,a)$:
-	\[Q(s,a) \leftarrow (1-\alpha)Q(s,a) + \alpha [r + \gamma \max_{a' \in A_{s'}} Q(s',a')] \addtag \label{eq:q_rozwoj} \]
+	\[Q(s,a) \leftarrow (1-\alpha)Q(s,a) + \alpha [r + \gamma \max_{a' \in A_{s'}} Q(s',a').] \addtag \label{eq:q_rozwoj} \]
 \end{enumerate}
 \subsubsection{Zalety} 
 Warto zauważyć następujące zalety metody Q-learningu:
@@ -195,7 +195,7 @@ Rozwiązaniem problemu skalowalności Q-learningu jest zastosowanie sieci neuron
 Krok 3 powyższego algorytmu wymaga dokładnego wyjaśnienia.
 \subsection{Wygenerowane dane podczas symulacji treningowych}
 Dla każdej z obserwacji $(s,a^*,s',r)$ wygenerowany zostaje element $(\textbf{x},\textbf{y})$, gdzie $\textbf{x}$ jest wektorem utworzonym na podstawie stanu $s$ i nazywany będzie \textbf{sygnałem wejściowym}. Powinien on zawierać jedynie istotne dla agenta informacje na temat stanu środowiska. Z kolei $\textbf{y}$ jest wektorem przedstawiającym wartość $Q$ dla rozważanego stanu $s$ i wszystkich możliwych akcji $a$. Nazywany on będzie \textbf{sygnałem wyjściowym}. Dla akcji z obserwacji, czyli $a=a^*$ wartość $y[a]$ jest wyliczana ze znanego już wcześniej wzoru \myref{eq:q_rozwoj}:
-\[ y[a]=(1-\alpha)Q(s,a) + \alpha [r + \gamma \max_{a' \in A'} Q(s',a')] \addtag \]
+\[ y[a]=(1-\alpha)Q(s,a) + \alpha [r + \gamma \max_{a' \in A'} Q(s',a')]. \addtag \]
 Gdzie wartości $Q(s,a)$,$Q(s',a')$ są aproksymacjami uzyskanymi przez sieć neuronową. \newline \newline Dla pozostałych akcji $a \neq a^*$ wartość $y[a]$ jest uzyskana z dotychczasowej aproksymacji sieci neuronowej dla stanu $s$ i akcji $a$. Tak utworzone elementy $(x,y)$ ze wszystkich obserwacji tworzą zbiór na podstawie których przebiega trening.
 
 
@@ -255,7 +255,7 @@ Przepływ pojazdów opiera się o założeniu, iż przy braku zatorów pojazdy p
 	\label{fig:CTM_flow_example}
 \end{figure} \noindent
 Łatwo zauważyć, że w tym przypadku
-\[ x_{j+1}(t+1)=x_j(t) \addtag \]
+\[ x_{j+1}(t+1)=x_j(t). \addtag \]
 \subsubsection*{Wprowadzenie zatorów}
 Poprzedni przykład ruchu pojazdów opierał się o założenie, iż wszystkie pojazdy przemieszczają się o jeden odcinek w jednym interwale czasowym. Często jednak część pojazdów będzie musiała pozostać na dotychczasowym odcinku z powodu zbyt dużego natężenia ruchu. Taka sytuacja będzie nazywana \textbf{zatorem}. Model CMT opiera się o następujące parametry definiujące sposób formowania się zatorów:
 \begin{itemize}
@@ -279,7 +279,7 @@ Gdzie:
 \end{itemize}
 Co wyraża się wzorem:
 \[
-y_j(t)=Min\{x_{j-1}(t),Q_i(t),N_i(t)-x_i(t)\} \addtag \label{eq_y_CTM}
+y_j(t)=Min\{x_{j-1}(t),Q_i(t),N_i(t)-x_i(t)\}. \addtag \label{eq_y_CTM}
 \]
 
 \subsection*{Źródło i ujście ruchu}
@@ -313,7 +313,7 @@ Poprzednio przedstawiony wariant modelu CTM określał przepływ jedynie dla jed
 \subsubsection{Źródła ruchu}
 W przypadku większej ilości dróg niz jedna należy rozważyć inne podejście do ustalenia źródeł ruchu. 
 Dla każdego odcinka $j \in \Omega$ zostanie ustalona wartość $u_j(t)$ \textbf{napływu ze źródeł}. Określa ona ile pojazdów ze źródła może maksymalnie napłynąć do odcinka $j$ w chwili $t+1$. Dla odcinków $j$ do których nie wjeżdżają żadne pojazdy ze źródła ruchu wartość $u_j(t)$ jest równa 0. Wartości $u_j(t)$ tworzą \textbf{wektor źródła} ruchu:
-\[\textbf{u(t)}=[u_0(t),...,u_{|\Omega-1|}(t)]\]
+\[\textbf{u(t)}=[u_0(t),...,u_{|\Omega-1|}(t)].\]
 Źródła ruchu są uwzględnione we wzorze ilości napływających pojazdów \myref{eq:y_with_zrodla}
 \subsubsection{Ujścia ruchu}
 Niech zbiór odcinków znajdujących się bezpośrednio przed punktami ujścia ruchu będzie oznaczony jako $\Omega_{out}$.
@@ -321,12 +321,12 @@ Zgodnie z poprzednimi założeniami pojazdy będące w chwili $t$ na odcinku bez
 
 \subsection{Przepływ pojazdów na skrzyżowaniu} \label{sec:CTM_skrz_przeplyw}
 Wprowadzona zostanie modyfikacja funkcji $y_j(t)$ określającej ilość pojazdów wjeżdżających na odcinek $j$ w chwili $t+1$. Do tej pory dotyczyła ona jedynie ilości pojazdów które napływają do odcinka $j$ z odcinka $j-1$. W przypadku sieci dróg należy rozważyć możliwość wjazdu z innych odcinków niż $j-1$. Niech zatem:
-\[ y_{ij}(t)= Min\{p_{ij} x_{i}(t),Q_j(t),N_j(t)-n_j(t)\} \addtag \label{eq:y_skrz_no_lights}\]
+\[ y_{ij}(t)= Min\{p_{ij} x_{i}(t),Q_j(t),N_j(t)-n_j(t)\}. \addtag \label{eq:y_skrz_no_lights}\]
 określa ilość pojazdów, które wjeżdżają z odcinka $i$ do odcinka $j$ w chwili $t+1$. Wartości $p_{ij}$ określają jaka część pojazdów z odcinka $i$ ma zamiar wjechać na odcinek $j$. Tworzą one macierz prawdopodobieństwa $\textbf{P}$, która została szczegółowo opisana w sekcji \myref{sec:macierz_prawd}. \\
 Suma pojazdów opuszczających odcinek $i$ w chwili $t+1$ jest następująca:
 \[y_{i*}(t)= \sum_{j\in \Omega / \{i\}} y_{ij}(t) \addtag \]
 Z kolei napływ pojazdów do odcinka $j$ w chwili $t+1$ jest równy:
-\[y_{*j}(t)= \sum_{i\in \Omega / \{j\}} y_{ij}(t)+u_j(t) \addtag \label{eq:y_with_zrodla}\]
+\[y_{*j}(t)= \sum_{i\in \Omega / \{j\}} y_{ij}(t)+u_j(t). \addtag \label{eq:y_with_zrodla}\]
 Rozwój zmiennej stanu jest zdefiniowany przez równanie:
 \begin{numcases}{x_j(t+1)=}
 y_{*j}(t) &  dla $j \in \Omega_{out}$ \label{eq:ctm_rozwoj_x} \\
@@ -343,22 +343,22 @@ Dla przypomnienia wartości z powyższego równania oznaczają:
 \subsubsection{Przykład}
 Przykład przepływu pojazdów na skrzyżowaniu został zaprezentowany w sekcji \myref{sec:przyklad_CTM_skrz} z zastosowaniem macierzy systemu. Wszelkie warunki początkowe i parametry środowiska z \myref{sec:przyklad_CTM_skrz} zostaną wykorzystane w tej sekcji. Jako przykład wykorzystania wzoru (\ref{eq:ctm_rozwoj_x} - \ref{eq:ctm_rozwoj_x_ujscie}) zostanie wyliczona wartość wektora $\textbf{x(1)}$. 
 \[
-x_0(1)=x_0(0)+y_{*0}(0)-y_{0*}(0)=7+0-3=4
+x_0(1)=x_0(0)+y_{*0}(0)-y_{0*}(0)=7+0-3=4.
 \]
 \[
-x_1(1)=x_1(0)+y_{*1}(0)-y_{1*}(0)=4+3-4=3
+x_1(1)=x_1(0)+y_{*1}(0)-y_{1*}(0)=4+3-4=3.
 \]
 \[
-x_2(1)=x_2(0)+y_{*2}(0)-y_{2*}(0)=3+1-3=1
+x_2(1)=x_2(0)+y_{*2}(0)-y_{2*}(0)=3+1-3=1.
 \]
 \[
-x_3(1)=y_{*3}(0)=3
+x_3(1)=y_{*3}(0)=3.
 \]
 \[
-x_4(1)=x_4(0)+y_{*4}(0)-y_{4*}(0)=3+3-3=3
+x_4(1)=x_4(0)+y_{*4}(0)-y_{4*}(0)=3+3-3=3.
 \]
 \[
-x_5(1)=y_{*5}(0)=1
+x_5(1)=y_{*5}(0)=1.
 \]
 
 \def \xI{\begin{bmatrix}
@@ -382,7 +382,7 @@ x_5(1)=y_{*5}(0)=1
 
 \subsection{Przepływ pojazdów na skrzyżowaniu z sygnalizacją świetlną} \label{sec:CTM_sygnalizacja}
 W tej sekcji przedstawiony zostanie przypadek przepływu na skrzyżowaniu posiadającym sygnalizację świetlną. Nie różni się on mocno od poprzednio omawianego modelu ruchu na skrzyżowaniu bez sygnalizacji świetlnej \myref{sec:CTM_skrz_przeplyw}. Jedyną różnicą jest zmiana wzoru \myref{eq:y_skrz_no_lights}. Zostanie on zastąpiony następującą formułą:
-\[ y_{ij}(t)= Min\{p_{ij}s_{ij}(t) x_{i}(t),Q_j(t),N_j(t)-n_j(t)\} \addtag \label{eq:y_skrz_lights}\]
+\[ y_{ij}(t)= Min\{p_{ij}s_{ij}(t) x_{i}(t),Q_j(t),N_j(t)-n_j(t)\}. \addtag \label{eq:y_skrz_lights}\]
 Gdzie: $s_{ij}(t)$ jest wartością określoną przez macierz sygnalizacji świetlnej $\textbf{S[j,i]}$, która została opisana w sekcji \myref{sec:sygnalizacja}.
 
 
@@ -414,7 +414,7 @@ Zawiera on w sobie następujące informacje dla chwili t:
 \end{figure}
 \section{Rozwój wektora stanu drogi i wprowadzenie macierzy systemu} \label{sec:macierz_systemu_def}
 Formalnym wzorem definiującym rozwój wektora stanu jest:
-\[\textbf{x(t+1)}=\textbf{Ax(t)} \addtag \label{eq:single_road} \]
+\[\textbf{x(t+1)}=\textbf{Ax(t)}. \addtag \label{eq:single_road} \]
 Gdzie $\textbf{A}$ jest \textbf{macierzą systemu}. Wartość macierzy $\textbf{A}$ na przecięciu kolumny $i$ i wiersza $j$  określa jaka część pojazdów z odcinka $i$ przejeżdża do odcinka $j$. W dalszych rozważaniach \textbf{manewr} przejazdu z odcinka $i$ do $j$ będzie oznaczany jako $[j,i]$.
 % Używając jako modelu przepływu opisany w sekcji \myref{sec:CTM} model CTM macierz systemu ma następujące wartości:
 
@@ -781,7 +781,7 @@ Z kolei dla $t=2,3$:
 \section{Wprowadzenie źródeł ruchu }
 Wszystkie poprzednie przykłady układów ruchu drogowego szybko kończyły się stanem w którym nie było już żadnych pojazdów na drogach. W tej sekcji zostanie przedstawiony sposób napływania nowych pojazdów do układu. 
 Wprowadzony zostanie wektor źródła $\textbf{u(t)}$. Jest on zmienny w czasie, a jego wartości określają ile pojazdów pojawia się w chwili $t+1$ na poszczególnych odcinkach układu. Równanie systemu uwzględniające zródła ruchu to:
-\[\textbf{x(t)}=\textbf{A(t-1)x(t-1)} + \textbf{u(t-1)} \label{eq:stan_u}   \addtag{}\]
+\[\textbf{x(t)}=\textbf{A(t-1)x(t-1)} + \textbf{u(t-1)}. \label{eq:stan_u}   \addtag{}\]
 \subsection*{Przykład}
 Rozważony zostanie prosty przykład, który dla ułatwienia nie uwzględnia wcześniej wprowadzonych pojęć sygnalizacji świetlnej oraz zatoru. Przedstawione zostanie środowisko składające się z dwóch dróg, które nie są ze sobą w żaden sposób połączony.
 \begin{figure}[H]
@@ -1112,7 +1112,7 @@ Wyniki uczenia obydwu sposobów są identyczne do wariantu bez restrykcji wystą
 
 \chapter{Dokumentacja programu} \label{chapter:docs}
 \section{Wstęp}
-Utworzony program jest podzielony na dwie warstwy - prezentacyjną oraz logiki. Jest to podejście powszechnie spotykane przy tworzeniu aplikacji internetowych \cite{frontend_backend}. Warstwy te są zwyczajowo określane jako front-end i back-end. Warstwa prezentacyjna programu ma za zadanie przedstawić dane wygenerowane w trakcie symulacji. Innymi słowy cała logika symulacji jest przeprowadzana w warstwie logiki, ale obraz przedstawiający te symulacje jest widoczny w warstwie prezentacyjnej. 
+Utworzony program jest podzielony na dwie warstwy - prezentacyjną oraz logiki. Jest to podejście powszechnie spotykane przy tworzeniu aplikacji internetowych \cite{frontend_backend}. Warstwy te są zwyczajowo określane jako front-end i back-end. Warstwa logiki ma za zadanie przeprowadzić uczenie i symulacje środowisk opisane w rozdziale \ref{chapter:envs}. Jest to warstwa czysto obliczeniowa, nie posiadająca żadnego interfejsu wizualnego i jest uruchomiana z konsoli. Warstwa prezentacyjna odpowiada za wizualizacje symulacji przeprowadzonych w warstwie logiki.
 \section{Warstwa logiki}
 \subsection{Wymagania}
 Warstwa logiki została napisana w języku Python (wersja 3.6.7). Aby w pełni korzystać z programu należy mieć zainstalowany interpreter pythona dla tej wersji. W programie zostały wykorzystane następujące biblioteki, które także są niezbędne do uruchomienia programu: \newline \newline
@@ -1136,7 +1136,7 @@ Warstwa wizualizacyjna została napisana w typescriptowym frameworku Angular w w
 \subsection{Instrukcje uruchomienia}
 Należy z poziomu folderu warstwa\_prezentacyjna wpisać komendę `ng serve`. Uruchamia ona aplikację Angulara na domyślnym hoście. Jeśli nie było żadnych komunikatów o błędach w konsoli strona powinna wyświetlić się po wejściu na adres http://localhost:4200. Aby wyświetlić symulacje należy wpisać w lewym górnym rogu jej nazwę i kliknąć przycisk `Wczytaj sieć`. Jeśli wczytywanie się powiodło zostanie wyświetlony zielony komunikat potwierdzający powodzenie operacji. Czas dla którego ma zostać wyświetlony stan sieci dróg można zmieniać na dwa sposoby - suwakiem lub przyciskami `+`/`-`.
 
-\bibliographystyle{plain}
+\bibliographystyle{ieeetr}
 
 \bibliography{refs}
 \end{document}

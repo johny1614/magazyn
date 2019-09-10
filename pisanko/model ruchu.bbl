@@ -1,187 +1,149 @@
 \begin{thebibliography}{10}
 
-\bibitem{ue2008}
-Plan działania na rzecz wdrażania inteligentnych systemów transportowych w
-  europie.
-\newblock {\em Komisja Wspólnot Europejskich, KOM}, 886, 2008.
-
-\bibitem{ue2017}
-Study on urban mobility – assessing and improving the accessibility of urban
-  areas.
-\newblock {\em Komisja Wspólnot Europejskich, KOM}, 886, 2017.
-
-\bibitem{mesoscopic2}
-Moshe Ben-Akiva, Michel Bierlaire, Didier Burton, Haris~N Koutsopoulos, and
-  Rabi Mishalani.
-\newblock Network state estimation and prediction for real-time traffic
-  management.
-\newblock {\em Networks and spatial economics}, 1(3-4):293--318, 2001.
-
-\bibitem{berridge2000reward}
-Kent~C Berridge.
-\newblock Reward learning: Reinforcement, incentives, and expectations.
-\newblock In {\em Psychology of learning and motivation}, volume~40, pages
-  223--278. Elsevier, 2000.
-
-\bibitem{CompareModels}
-Samia Boubaker, Ferid Rehimi, and Adel Kalboussi.
-\newblock Comparative analysis of microscopic models of road traffic data.
-\newblock In {\em Logistics (LOGISTIQUA), 2011 4th International Conference
-  on}, pages 474--478. IEEE, 2011.
-
-\bibitem{openai}
-Greg Brockman, Vicki Cheung, Ludwig Pettersson, Jonas Schneider, John Schulman,
-  Jie Tang, and Wojciech Zaremba.
-\newblock Openai gym, 2016.
-
-\bibitem{mesoscopic}
-Wilco Burghout, Haris~N Koutsopoulos, and Ingmar Andreasson.
-\newblock A discrete-event mesoscopic traffic simulation model for hybrid
-  traffic simulation.
-\newblock In {\em Intelligent Transportation Systems Conference, 2006. ITSC'06.
-  IEEE}, pages 1102--1107. IEEE, 2006.
-
-\bibitem{CTM}
-Carlos~F Daganzo.
-\newblock The cell transmission model, part ii: network traffic.
-\newblock {\em Transportation Research Part B: Methodological}, 29(2):79--93,
-  1995.
-
 \bibitem{mobility_raport2019_col}
-Tim~Lomax David~Schrank, Bill~Eisele.
-\newblock 2019 urban mobility report.
-\newblock 2019.
-
-\bibitem{canvas}
-Alexis Deveria.
-\newblock Can i use... support tables for html5, css3, etc.
-\newblock \url{https://caniuse.com/#feat=canvas}, 2019 (accessed April 4,
-  2019).
-
-\bibitem{q_zlozony_env}
-Gabriel Dulac-Arnold, Richard Evans, Hado van Hasselt, Peter Sunehag, Timothy
-  Lillicrap, Jonathan Hunt, Timothy Mann, Theophane Weber, Thomas Degris, and
-  Ben Coppin.
-\newblock Deep reinforcement learning in large discrete action spaces.
-\newblock {\em arXiv preprint arXiv:1512.07679}, 2015.
-
-\bibitem{gottlich}
-Simone G{\"o}ttlich, Michael Herty, and Ute Ziegler.
-\newblock Modeling and optimizing traffic light settings in road networks.
-\newblock {\em Computers \& operations research}, 55:36--51, 2015.
-
-\bibitem{machineLearningClassification}
-Zhenyu Guan, Liangxu Bian, Tao Shang, and Jianwei Liu.
-\newblock When machine learning meets security issues: A survey.
-\newblock In {\em 2018 IEEE International Conference on Intelligence and Safety
-  for Robotics (ISR)}, pages 158--165. IEEE, 2018.
-
-\bibitem{helbing2001master}
-Dirk Helbing, Ansgar Hennecke, Vladimir Shvetsov, and Martin Treiber.
-\newblock Master: macroscopic traffic simulation based on a gas-kinetic,
-  non-local traffic model.
-\newblock {\em Transportation Research Part B: Methodological}, 35(2):183--211,
-  2001.
-
-\bibitem{multilevel}
-Pushpendra Kumar, Rochdi Merzouki, Blaise Conrard, Vincent Coelen, and
-  Belkacem~Ould Bouamama.
-\newblock Multilevel modeling of the traffic dynamic.
-\newblock {\em IEEE Transactions on Intelligent Transportation Systems},
-  15(3):1066--1082, 2014.
-
-\bibitem{ml_ai}
-Ted~G Lewis and Peter~J Denning.
-\newblock Learning machine learning.
-\newblock {\em Communications of the ACM}, 61(12):24--27, 2018.
-
-\bibitem{lwr}
-Michael~James Lighthill and Gerald~Beresford Whitham.
-\newblock On kinematic waves ii. a theory of traffic flow on long crowded
-  roads.
-\newblock {\em Proc. R. Soc. Lond. A}, 229(1178):317--345, 1955.
-
-\bibitem{frontend_backend}
-Kun Liu, Jinmin Jiang, Xiaohan Ding, and Hui Sun.
-\newblock Design and development of management information system for research
-  project process based on front-end and back-end separation.
-\newblock In {\em 2017 International Conference on Computing Intelligence and
-  Information System (CIIS)}, pages 338--342. IEEE, 2017.
-
-\bibitem{nazwa_q}
-Tambet Matiisen.
-\newblock https://neuro.cs.ut.ee/demystifying-deep-reinforcement-learning/.
-\newblock
-  \url{https://neuro.cs.ut.ee/demystifying-deep-reinforcement-learning/}, 2019
-  (accessed September 1, 2019).
-
-\bibitem{q_zbieznosc}
-Francisco~S Melo.
-\newblock Convergence of q-learning: A simple proof.
-\newblock {\em Institute Of Systems and Robotics, Tech. Rep}, pages 1--4, 2001.
-
-\bibitem{epsilon_decay}
-Thijs Nieuwdorp.
-\newblock Dare to discover: The effect of the exploration strategy on an
-  agent’s performance.
-\newblock 2017.
-
-\bibitem{liczbaPojazdowPolska}
-polskawliczbach.pl.
-\newblock Samochody osobowe w polsce w latach 2003-2016 (źródło: Gus).
-\newblock \url{http://www.polskawliczbach.pl/#transport-i-komunikacja}, 2019
-  (accessed March 3, 2019).
-
-\bibitem{overview_optimizers}
-Sebastian Ruder.
-\newblock An overview of gradient descent optimization algorithms.
-\newblock {\em arXiv preprint arXiv:1609.04747}, 2016.
-
-\bibitem{exploration_or_exploitation}
-Isaac~J Sledge and Jos{\'e}~C Pr{\'\i}ncipe.
-\newblock Balancing exploration and exploitation in reinforcement learning
-  using a value of information criterion.
-\newblock In {\em 2017 IEEE International Conference on Acoustics, Speech and
-  Signal Processing (ICASSP)}, pages 2816--2820. IEEE, 2017.
+T.~L. David~Schrank, Bill~Eisele, ``2019 urban mobility report.,'' 2019.
 
 \bibitem{liczbaPojazdowSwiat}
-Statista.
-\newblock Number of passenger cars and commercial vehicles in use worldwide
-  from 2006 to 2015 in (1,000 units).
-\newblock
+Statista, ``Number of passenger cars and commercial vehicles in use worldwide
+  from 2006 to 2015 in (1,000 units).''
   \url{https://www.statista.com/statistics/281134/number-of-vehicles-in-use-worldwide/},
   2019 (accessed March 3, 2019).
 
-\bibitem{reinforcementBook}
-Richard~S Sutton, Andrew~G Barto, and Ronald~J Williams.
-\newblock Reinforcement learning is direct adaptive optimal control.
-\newblock {\em IEEE Control Systems Magazine}, 12(2):19--22, 1992.
+\bibitem{liczbaPojazdowPolska}
+polskawliczbach.pl, ``Samochody osobowe w polsce w latach 2003-2016 (źródło:
+  Gus).'' \url{http://www.polskawliczbach.pl/#transport-i-komunikacja}, 2019
+  (accessed March 3, 2019).
 
 \bibitem{rankingTomTom}
-TomTom.
-\newblock Tomtom traffic index measuring congestion worldwide).
-\newblock
+TomTom, ``Tomtom traffic index measuring congestion worldwide).''
   \url{https://www.tomtom.com/en_gb/trafficindex/list?citySize=ALL&continent=ALL&country=ALL},
   2019 (accessed March 3, 2019).
 
-\bibitem{vu2017high}
-Vinh~An Vu and Gary Tan.
-\newblock High-performance mesoscopic traffic simulation with gpu for large
-  scale networks.
-\newblock In {\em Proceedings of the 21st International Symposium on
-  Distributed Simulation and Real Time Applications}, pages 127--135. IEEE
-  Press, 2017.
+\bibitem{ue2008}
+``Plan działania na rzecz wdrażania inteligentnych systemów transportowych w
+  europie,'' {\em Komisja Wspólnot Europejskich, KOM}, vol.~886, 2008.
 
-\bibitem{wang2018cooperative}
-Bohui Wang, Xinpeng Fang, and Bin Zhang.
-\newblock Cooperative control for industrial multi-agent systems: Framework and
-  problems.
-\newblock In {\em 2018 37th Chinese Control Conference (CCC)}, pages
-  6971--6976. IEEE, 2018.
+\bibitem{ue2017}
+``Study on urban mobility – assessing and improving the accessibility of
+  urban areas,'' {\em Komisja Wspólnot Europejskich, KOM}, vol.~886, 2017.
+
+\bibitem{ml_ai}
+T.~G. Lewis and P.~J. Denning, ``Learning machine learning,'' {\em
+  Communications of the ACM}, vol.~61, no.~12, pp.~24--27, 2018.
+
+\bibitem{machineLearningClassification}
+Z.~Guan, L.~Bian, T.~Shang, and J.~Liu, ``When machine learning meets security
+  issues: A survey,'' in {\em 2018 IEEE International Conference on
+  Intelligence and Safety for Robotics (ISR)}, pp.~158--165, IEEE, 2018.
+
+\bibitem{berridge2000reward}
+K.~C. Berridge, ``Reward learning: Reinforcement, incentives, and
+  expectations,'' in {\em Psychology of learning and motivation}, vol.~40,
+  pp.~223--278, Elsevier, 2000.
+
+\bibitem{reinforcementBook}
+R.~S. Sutton, A.~G. Barto, and R.~J. Williams, ``Reinforcement learning is
+  direct adaptive optimal control,'' {\em IEEE Control Systems Magazine},
+  vol.~12, no.~2, pp.~19--22, 1992.
+
+\bibitem{exploration_or_exploitation}
+I.~J. Sledge and J.~C. Pr{\'\i}ncipe, ``Balancing exploration and exploitation
+  in reinforcement learning using a value of information criterion,'' in {\em
+  2017 IEEE International Conference on Acoustics, Speech and Signal Processing
+  (ICASSP)}, pp.~2816--2820, IEEE, 2017.
+
+\bibitem{openai}
+G.~Brockman, V.~Cheung, L.~Pettersson, J.~Schneider, J.~Schulman, J.~Tang, and
+  W.~Zaremba, ``Openai gym,'' 2016.
+
+\bibitem{epsilon_decay}
+T.~Nieuwdorp, ``Dare to discover: The effect of the exploration strategy on an
+  agent’s performance,'' 2017.
 
 \bibitem{watkins}
-Christopher~JCH Watkins and Peter Dayan.
-\newblock Q-learning.
-\newblock {\em Machine learning}, 8(3-4):279--292, 1992.
+C.~J. Watkins and P.~Dayan, ``Q-learning,'' {\em Machine learning}, vol.~8,
+  no.~3-4, pp.~279--292, 1992.
+
+\bibitem{q_zbieznosc}
+F.~S. Melo, ``Convergence of q-learning: A simple proof,'' {\em Institute Of
+  Systems and Robotics, Tech. Rep}, pp.~1--4, 2001.
+
+\bibitem{nazwa_q}
+T.~Matiisen,
+  ``https://neuro.cs.ut.ee/demystifying-deep-reinforcement-learning/.''
+  \url{https://neuro.cs.ut.ee/demystifying-deep-reinforcement-learning/}, 2019
+  (accessed September 1, 2019).
+
+\bibitem{q_zlozony_env}
+G.~Dulac-Arnold, R.~Evans, H.~van Hasselt, P.~Sunehag, T.~Lillicrap, J.~Hunt,
+  T.~Mann, T.~Weber, T.~Degris, and B.~Coppin, ``Deep reinforcement learning in
+  large discrete action spaces,'' {\em arXiv preprint arXiv:1512.07679}, 2015.
+
+\bibitem{overview_optimizers}
+S.~Ruder, ``An overview of gradient descent optimization algorithms,'' {\em
+  arXiv preprint arXiv:1609.04747}, 2016.
+
+\bibitem{CompareModels}
+S.~Boubaker, F.~Rehimi, and A.~Kalboussi, ``Comparative analysis of microscopic
+  models of road traffic data,'' in {\em Logistics (LOGISTIQUA), 2011 4th
+  International Conference on}, pp.~474--478, IEEE, 2011.
+
+\bibitem{multilevel}
+P.~Kumar, R.~Merzouki, B.~Conrard, V.~Coelen, and B.~O. Bouamama, ``Multilevel
+  modeling of the traffic dynamic,'' {\em IEEE Transactions on Intelligent
+  Transportation Systems}, vol.~15, no.~3, pp.~1066--1082, 2014.
+
+\bibitem{mesoscopic}
+W.~Burghout, H.~N. Koutsopoulos, and I.~Andreasson, ``A discrete-event
+  mesoscopic traffic simulation model for hybrid traffic simulation,'' in {\em
+  Intelligent Transportation Systems Conference, 2006. ITSC'06. IEEE},
+  pp.~1102--1107, IEEE, 2006.
+
+\bibitem{mesoscopic2}
+M.~Ben-Akiva, M.~Bierlaire, D.~Burton, H.~N. Koutsopoulos, and R.~Mishalani,
+  ``Network state estimation and prediction for real-time traffic management,''
+  {\em Networks and spatial economics}, vol.~1, no.~3-4, pp.~293--318, 2001.
+
+\bibitem{vu2017high}
+V.~A. Vu and G.~Tan, ``High-performance mesoscopic traffic simulation with gpu
+  for large scale networks,'' in {\em Proceedings of the 21st International
+  Symposium on Distributed Simulation and Real Time Applications},
+  pp.~127--135, IEEE Press, 2017.
+
+\bibitem{lwr}
+M.~J. Lighthill and G.~B. Whitham, ``On kinematic waves ii. a theory of traffic
+  flow on long crowded roads,'' {\em Proc. R. Soc. Lond. A}, vol.~229,
+  no.~1178, pp.~317--345, 1955.
+
+\bibitem{gottlich}
+S.~G{\"o}ttlich, M.~Herty, and U.~Ziegler, ``Modeling and optimizing traffic
+  light settings in road networks,'' {\em Computers \& operations research},
+  vol.~55, pp.~36--51, 2015.
+
+\bibitem{helbing2001master}
+D.~Helbing, A.~Hennecke, V.~Shvetsov, and M.~Treiber, ``Master: macroscopic
+  traffic simulation based on a gas-kinetic, non-local traffic model,'' {\em
+  Transportation Research Part B: Methodological}, vol.~35, no.~2,
+  pp.~183--211, 2001.
+
+\bibitem{CTM}
+C.~F. Daganzo, ``The cell transmission model, part ii: network traffic,'' {\em
+  Transportation Research Part B: Methodological}, vol.~29, no.~2, pp.~79--93,
+  1995.
+
+\bibitem{wang2018cooperative}
+B.~Wang, X.~Fang, and B.~Zhang, ``Cooperative control for industrial
+  multi-agent systems: Framework and problems,'' in {\em 2018 37th Chinese
+  Control Conference (CCC)}, pp.~6971--6976, IEEE, 2018.
+
+\bibitem{frontend_backend}
+K.~Liu, J.~Jiang, X.~Ding, and H.~Sun, ``Design and development of management
+  information system for research project process based on front-end and
+  back-end separation,'' in {\em 2017 International Conference on Computing
+  Intelligence and Information System (CIIS)}, pp.~338--342, IEEE, 2017.
+
+\bibitem{canvas}
+A.~Deveria, ``Can i use... support tables for html5, css3, etc.''
+  \url{https://caniuse.com/#feat=canvas}, 2019 (accessed April 4, 2019).
 
 \end{thebibliography}
