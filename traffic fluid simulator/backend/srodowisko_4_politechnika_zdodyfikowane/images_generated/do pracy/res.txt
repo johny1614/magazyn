@@ -1,0 +1,239 @@
+Zapisano epizod zachłanny env4_learnt_0
+gready run 0 - rewards_mean:3.42 rewards_sum:13673.0. Do układu wjechało 8006.0 pojazdów. Wyjechało 6491.0. Układ opuściło procentowo pojazdów:81.14
+Czas:14.0 Epsilon:0.96 Średnia liczba wjeżdżających pojazdów::1
+Zapisano epizod zachłanny env4_learnt_1
+gready run 1 - rewards_mean:4.03 rewards_sum:16117.0. Do układu wjechało 8012.0 pojazdów. Wyjechało 7882.0. Układ opuściło procentowo pojazdów:98.53
+Czas:59.0 Epsilon:0.92 Średnia liczba wjeżdżających pojazdów::1.2
+Zapisano epizod zachłanny env4_learnt_2
+gready run 2 - rewards_mean:4.8 rewards_sum:19189.0. Do układu wjechało 9536.0 pojazdów. Wyjechało 9385.0. Układ opuściło procentowo pojazdów:97.76
+Czas:107.0 Epsilon:0.88 Średnia liczba wjeżdżających pojazdów::1.44
+Zapisano epizod zachłanny env4_learnt_3
+gready run 3 - rewards_mean:5.7 rewards_sum:22803.0. Do układu wjechało 11490.0 pojazdów. Wyjechało 11346.0. Układ opuściło procentowo pojazdów:98.49
+Czas:156.0 Epsilon:0.84 Średnia liczba wjeżdżających pojazdów::1.73
+Zapisano epizod zachłanny env4_learnt_4
+gready run 4 - rewards_mean:6.77 rewards_sum:27094.0. Do układu wjechało 13683.0 pojazdów. Wyjechało 13515.0. Układ opuściło procentowo pojazdów:97.77
+Czas:203.0 Epsilon:0.8 Średnia liczba wjeżdżających pojazdów::2.07
+Zapisano epizod zachłanny env4_learnt_5
+gready run 5 - rewards_mean:8.25 rewards_sum:32982.0. Do układu wjechało 16658.0 pojazdów. Wyjechało 16451.0. Układ opuściło procentowo pojazdów:99.17
+Czas:251.0 Epsilon:0.76 Średnia liczba wjeżdżających pojazdów::2.49
+Zapisano epizod zachłanny env4_learnt_6
+gready run 6 - rewards_mean:9.83 rewards_sum:39304.0. Do układu wjechało 19815.0 pojazdów. Wyjechało 19566.0. Układ opuściło procentowo pojazdów:98.29
+Czas:299.0 Epsilon:0.72 Średnia liczba wjeżdżających pojazdów::2.99
+Zapisano epizod zachłanny env4_learnt_7
+gready run 7 - rewards_mean:11.95 rewards_sum:47813.0. Do układu wjechało 24012.0 pojazdów. Wyjechało 23585.0. Układ opuściło procentowo pojazdów:98.73
+Czas:347.0 Epsilon:0.68 Średnia liczba wjeżdżających pojazdów::3.58
+Zapisano epizod zachłanny env4_learnt_8
+gready run 8 - rewards_mean:13.94 rewards_sum:55748.0. Do układu wjechało 28862.0 pojazdów. Wyjechało 27863.0. Układ opuściło procentowo pojazdów:97.2
+Czas:397.0 Epsilon:0.64 Średnia liczba wjeżdżających pojazdów::4.3
+Zapisano epizod zachłanny env4_learnt_9
+gready run 9 - rewards_mean:14.98 rewards_sum:59923.0. Do układu wjechało 34256.0 pojazdów. Wyjechało 29875.0. Układ opuściło procentowo pojazdów:86.85
+Czas:447.0 Epsilon:0.6 Średnia liczba wjeżdżających pojazdów::4.3
+Zapisano epizod zachłanny env4_learnt_10
+gready run 10 - rewards_mean:15.45 rewards_sum:61807.0. Do układu wjechało 34345.0 pojazdów. Wyjechało 30745.0. Układ opuściło procentowo pojazdów:89.38
+Czas:498.0 Epsilon:0.56 Średnia liczba wjeżdżających pojazdów::4.3
+Zapisano epizod zachłanny env4_learnt_11
+gready run 11 - rewards_mean:15.37 rewards_sum:61480.0. Do układu wjechało 34457.0 pojazdów. Wyjechało 30523.0. Układ opuściło procentowo pojazdów:88.73
+Czas:548.0 Epsilon:0.52 Średnia liczba wjeżdżających pojazdów::4.3
+Zapisano epizod zachłanny env4_learnt_12
+gready run 12 - rewards_mean:15.76 rewards_sum:63020.0. Do układu wjechało 34639.0 pojazdów. Wyjechało 31308.0. Układ opuściło procentowo pojazdów:91.02
+Czas:602.0 Epsilon:0.48 Średnia liczba wjeżdżających pojazdów::4.3
+Zapisano epizod zachłanny env4_learnt_13
+gready run 13 - rewards_mean:15.78 rewards_sum:63126.0. Do układu wjechało 34560.0 pojazdów. Wyjechało 31320.0. Układ opuściło procentowo pojazdów:91.05
+Czas:654.0 Epsilon:0.44 Średnia liczba wjeżdżających pojazdów::4.3
+Zapisano epizod zachłanny env4_learnt_14
+gready run 14 - rewards_mean:16.1 rewards_sum:64407.0. Do układu wjechało 34430.0 pojazdów. Wyjechało 32077.0. Układ opuściło procentowo pojazdów:93.25
+Czas:712.0 Epsilon:0.4 Średnia liczba wjeżdżających pojazdów::5.16
+Zapisano epizod zachłanny env4_learnt_15
+gready run 15 - rewards_mean:16.92 rewards_sum:67662.0. Do układu wjechało 41354.0 pojazdów. Wyjechało 33524.0. Układ opuściło procentowo pojazdów:81.22
+Czas:768.0 Epsilon:0.36 Średnia liczba wjeżdżających pojazdów::5.16
+Zapisano epizod zachłanny env4_learnt_16
+gready run 16 - rewards_mean:17.27 rewards_sum:69088.0. Do układu wjechało 41180.0 pojazdów. Wyjechało 34259.0. Układ opuściło procentowo pojazdów:83.0
+Czas:826.0 Epsilon:0.32 Średnia liczba wjeżdżających pojazdów::5.16
+Zapisano epizod zachłanny env4_learnt_17
+gready run 17 - rewards_mean:17.5 rewards_sum:69986.0. Do układu wjechało 41187.0 pojazdów. Wyjechało 34748.0. Układ opuściło procentowo pojazdów:84.18
+Czas:883.0 Epsilon:0.28 Średnia liczba wjeżdżających pojazdów::5.16
+Zapisano epizod zachłanny env4_learnt_18
+gready run 18 - rewards_mean:17.66 rewards_sum:70644.0. Do układu wjechało 41579.0 pojazdów. Wyjechało 35007.0. Układ opuściło procentowo pojazdów:84.81
+Czas:939.0 Epsilon:0.24 Średnia liczba wjeżdżających pojazdów::5.16
+Zapisano epizod zachłanny env4_learnt_19
+gready run 19 - rewards_mean:17.89 rewards_sum:71551.0. Do układu wjechało 41040.0 pojazdów. Wyjechało 35540.0. Układ opuściło procentowo pojazdów:86.1
+Czas:996.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::5.16
+Zapisano epizod zachłanny env4_learnt_20
+gready run 20 - rewards_mean:18.46 rewards_sum:73845.0. Do układu wjechało 41150.0 pojazdów. Wyjechało 36730.0. Układ opuściło procentowo pojazdów:88.98
+Czas:1051.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::5.16
+Zapisano epizod zachłanny env4_learnt_21
+gready run 21 - rewards_mean:18.4 rewards_sum:73589.0. Do układu wjechało 40981.0 pojazdów. Wyjechało 36558.0. Układ opuściło procentowo pojazdów:88.57
+Czas:1110.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::5.16
+Zapisano epizod zachłanny env4_learnt_22
+gready run 22 - rewards_mean:18.44 rewards_sum:73742.0. Do układu wjechało 41584.0 pojazdów. Wyjechało 36727.0. Układ opuściło procentowo pojazdów:88.97
+Czas:1168.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::5.16
+Zapisano epizod zachłanny env4_learnt_23
+gready run 23 - rewards_mean:18.75 rewards_sum:74997.0. Do układu wjechało 41558.0 pojazdów. Wyjechało 37459.0. Układ opuściło procentowo pojazdów:90.75
+Czas:1227.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::5.16
+Zapisano epizod zachłanny env4_learnt_24
+gready run 24 - rewards_mean:18.71 rewards_sum:74832.0. Do układu wjechało 41320.0 pojazdów. Wyjechało 37196.0. Układ opuściło procentowo pojazdów:90.11
+Czas:1284.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::5.16
+Zapisano epizod zachłanny env4_learnt_25
+gready run 25 - rewards_mean:18.85 rewards_sum:75410.0. Do układu wjechało 41224.0 pojazdów. Wyjechało 37564.0. Układ opuściło procentowo pojazdów:91.0
+Czas:1343.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::5.16
+Zapisano epizod zachłanny env4_learnt_26
+gready run 26 - rewards_mean:18.95 rewards_sum:75801.0. Do układu wjechało 41066.0 pojazdów. Wyjechało 37704.0. Układ opuściło procentowo pojazdów:91.34
+Czas:1397.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::5.16
+Zapisano epizod zachłanny env4_learnt_27
+gready run 27 - rewards_mean:19.44 rewards_sum:77772.0. Do układu wjechało 41287.0 pojazdów. Wyjechało 38845.0. Układ opuściło procentowo pojazdów:94.11
+Czas:1451.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::6.19
+Zapisano epizod zachłanny env4_learnt_28
+gready run 28 - rewards_mean:20.89 rewards_sum:83575.0. Do układu wjechało 49692.0 pojazdów. Wyjechało 41365.0. Układ opuściło procentowo pojazdów:83.51
+Czas:1505.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::6.19
+Zapisano epizod zachłanny env4_learnt_29
+gready run 29 - rewards_mean:20.82 rewards_sum:83296.0. Do układu wjechało 49278.0 pojazdów. Wyjechało 41302.0. Układ opuściło procentowo pojazdów:83.38
+Czas:1559.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::6.19
+Zapisano epizod zachłanny env4_learnt_30
+gready run 30 - rewards_mean:20.85 rewards_sum:83398.0. Do układu wjechało 49694.0 pojazdów. Wyjechało 41294.0. Układ opuściło procentowo pojazdów:83.36
+Czas:1613.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::6.19
+Zapisano epizod zachłanny env4_learnt_31
+gready run 31 - rewards_mean:21.35 rewards_sum:85404.0. Do układu wjechało 49657.0 pojazdów. Wyjechało 42391.0. Układ opuściło procentowo pojazdów:85.58
+Czas:1668.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::6.19
+Zapisano epizod zachłanny env4_learnt_32
+gready run 32 - rewards_mean:19.16 rewards_sum:76623.0. Do układu wjechało 49272.0 pojazdów. Wyjechało 37495.0. Układ opuściło procentowo pojazdów:75.7
+Czas:1726.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::6.19
+Zapisano epizod zachłanny env4_learnt_33
+gready run 33 - rewards_mean:20.38 rewards_sum:81536.0. Do układu wjechało 49195.0 pojazdów. Wyjechało 40279.0. Układ opuściło procentowo pojazdów:81.32
+Czas:1784.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::6.19
+Zapisano epizod zachłanny env4_learnt_34
+gready run 34 - rewards_mean:20.21 rewards_sum:80821.0. Do układu wjechało 49758.0 pojazdów. Wyjechało 39874.0. Układ opuściło procentowo pojazdów:80.5
+Czas:1843.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::6.19
+Zapisano epizod zachłanny env4_learnt_35
+gready run 35 - rewards_mean:20.75 rewards_sum:82999.0. Do układu wjechało 49309.0 pojazdów. Wyjechało 41018.0. Układ opuściło procentowo pojazdów:82.81
+Czas:1906.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::6.19
+Zapisano epizod zachłanny env4_learnt_36
+gready run 36 - rewards_mean:20.4 rewards_sum:81609.0. Do układu wjechało 49192.0 pojazdów. Wyjechało 40361.0. Układ opuściło procentowo pojazdów:81.48
+Czas:1968.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::6.19
+Zapisano epizod zachłanny env4_learnt_37
+gready run 37 - rewards_mean:19.58 rewards_sum:78340.0. Do układu wjechało 49600.0 pojazdów. Wyjechało 38447.0. Układ opuściło procentowo pojazdów:77.62
+Czas:2028.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::6.19
+Zapisano epizod zachłanny env4_learnt_38
+gready run 38 - rewards_mean:19.42 rewards_sum:77677.0. Do układu wjechało 49447.0 pojazdów. Wyjechało 38012.0. Układ opuściło procentowo pojazdów:76.74
+Czas:2086.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::6.19
+Zapisano epizod zachłanny env4_learnt_39
+gready run 39 - rewards_mean:20.74 rewards_sum:82945.0. Do układu wjechało 49390.0 pojazdów. Wyjechało 40849.0. Układ opuściło procentowo pojazdów:82.47
+Czas:2146.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::6.19
+Zapisano epizod zachłanny env4_learnt_40
+gready run 40 - rewards_mean:21.88 rewards_sum:87524.0. Do układu wjechało 49385.0 pojazdów. Wyjechało 43543.0. Układ opuściło procentowo pojazdów:87.91
+Czas:2207.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::6.19
+Zapisano epizod zachłanny env4_learnt_41
+gready run 41 - rewards_mean:21.17 rewards_sum:84671.0. Do układu wjechało 49745.0 pojazdów. Wyjechało 41546.0. Układ opuściło procentowo pojazdów:83.87
+Czas:2267.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::6.19
+Zapisano epizod zachłanny env4_learnt_42
+gready run 42 - rewards_mean:22.51 rewards_sum:90059.0. Do układu wjechało 49396.0 pojazdów. Wyjechało 44706.0. Układ opuściło procentowo pojazdów:90.25
+Czas:2327.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::6.19
+Zapisano epizod zachłanny env4_learnt_43
+gready run 43 - rewards_mean:22.73 rewards_sum:90901.0. Do układu wjechało 49510.0 pojazdów. Wyjechało 45182.0. Układ opuściło procentowo pojazdów:91.21
+Czas:2385.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::6.19
+Zapisano epizod zachłanny env4_learnt_44
+gready run 44 - rewards_mean:22.91 rewards_sum:91635.0. Do układu wjechało 49701.0 pojazdów. Wyjechało 45502.0. Układ opuściło procentowo pojazdów:91.86
+Czas:2449.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::6.19
+Zapisano epizod zachłanny env4_learnt_45
+gready run 45 - rewards_mean:22.84 rewards_sum:91362.0. Do układu wjechało 49608.0 pojazdów. Wyjechało 45331.0. Układ opuściło procentowo pojazdów:91.52
+Czas:2512.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::6.19
+Zapisano epizod zachłanny env4_learnt_46
+gready run 46 - rewards_mean:21.04 rewards_sum:84144.0. Do układu wjechało 49419.0 pojazdów. Wyjechało 41797.0. Układ opuściło procentowo pojazdów:84.38
+Czas:2572.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::6.19
+Zapisano epizod zachłanny env4_learnt_47
+gready run 47 - rewards_mean:23.17 rewards_sum:92680.0. Do układu wjechało 49529.0 pojazdów. Wyjechało 46112.0. Układ opuściło procentowo pojazdów:93.09
+Czas:2633.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::7.43
+Zapisano epizod zachłanny env4_learnt_48
+gready run 48 - rewards_mean:24.29 rewards_sum:97163.0. Do układu wjechało 59101.0 pojazdów. Wyjechało 48012.0. Układ opuściło procentowo pojazdów:80.77
+Czas:2697.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::7.43
+Zapisano epizod zachłanny env4_learnt_49
+gready run 49 - rewards_mean:24.42 rewards_sum:97674.0. Do układu wjechało 59027.0 pojazdów. Wyjechało 48306.0. Układ opuściło procentowo pojazdów:81.27
+Czas:2756.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::7.43
+Zapisano epizod zachłanny env4_learnt_50
+gready run 50 - rewards_mean:24.66 rewards_sum:98641.0. Do układu wjechało 59650.0 pojazdów. Wyjechało 48782.0. Układ opuściło procentowo pojazdów:82.07
+Czas:2820.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::7.43
+Zapisano epizod zachłanny env4_learnt_51
+gready run 51 - rewards_mean:24.97 rewards_sum:99869.0. Do układu wjechało 59466.0 pojazdów. Wyjechało 49409.0. Układ opuściło procentowo pojazdów:83.12
+Czas:2882.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::7.43
+Zapisano epizod zachłanny env4_learnt_52
+gready run 52 - rewards_mean:24.72 rewards_sum:98870.0. Do układu wjechało 59439.0 pojazdów. Wyjechało 48823.0. Układ opuściło procentowo pojazdów:82.14
+Czas:2945.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::7.43
+Zapisano epizod zachłanny env4_learnt_53
+gready run 53 - rewards_mean:23.36 rewards_sum:93438.0. Do układu wjechało 58815.0 pojazdów. Wyjechało 45544.0. Układ opuściło procentowo pojazdów:76.62
+Czas:3009.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::7.43
+Zapisano epizod zachłanny env4_learnt_54
+gready run 54 - rewards_mean:24.39 rewards_sum:97545.0. Do układu wjechało 59792.0 pojazdów. Wyjechało 47414.0. Układ opuściło procentowo pojazdów:79.77
+Czas:3074.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::7.43
+Zapisano epizod zachłanny env4_learnt_55
+gready run 55 - rewards_mean:23.72 rewards_sum:94874.0. Do układu wjechało 59506.0 pojazdów. Wyjechało 45905.0. Układ opuściło procentowo pojazdów:77.23
+Czas:3135.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::7.43
+Zapisano epizod zachłanny env4_learnt_56
+gready run 56 - rewards_mean:23.52 rewards_sum:94075.0. Do układu wjechało 58863.0 pojazdów. Wyjechało 45394.0. Układ opuściło procentowo pojazdów:76.37
+Czas:3197.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::7.43
+Zapisano epizod zachłanny env4_learnt_57
+gready run 57 - rewards_mean:24.14 rewards_sum:96556.0. Do układu wjechało 59218.0 pojazdów. Wyjechało 47130.0. Układ opuściło procentowo pojazdów:79.29
+Czas:3263.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::7.43
+Zapisano epizod zachłanny env4_learnt_58
+gready run 58 - rewards_mean:25.13 rewards_sum:100524.0. Do układu wjechało 59456.0 pojazdów. Wyjechało 49322.0. Układ opuściło procentowo pojazdów:82.98
+Czas:3338.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::7.43
+Zapisano epizod zachłanny env4_learnt_59
+gready run 59 - rewards_mean:28.01 rewards_sum:112040.0. Do układu wjechało 59590.0 pojazdów. Wyjechało 55637.0. Układ opuściło procentowo pojazdów:93.6
+Czas:3402.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::8.92
+Zapisano epizod zachłanny env4_learnt_60
+gready run 60 - rewards_mean:30.39 rewards_sum:121577.0. Do układu wjechało 71363.0 pojazdów. Wyjechało 60460.0. Układ opuściło procentowo pojazdów:84.76
+Czas:3469.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::8.92
+Zapisano epizod zachłanny env4_learnt_61
+gready run 61 - rewards_mean:30.75 rewards_sum:123017.0. Do układu wjechało 71604.0 pojazdów. Wyjechało 61207.0. Układ opuściło procentowo pojazdów:85.81
+Czas:3533.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::8.92
+Zapisano epizod zachłanny env4_learnt_62
+gready run 62 - rewards_mean:31.02 rewards_sum:124093.0. Do układu wjechało 71647.0 pojazdów. Wyjechało 61692.0. Układ opuściło procentowo pojazdów:86.49
+Czas:3601.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::8.92
+Zapisano epizod zachłanny env4_learnt_63
+gready run 63 - rewards_mean:31.12 rewards_sum:124465.0. Do układu wjechało 71175.0 pojazdów. Wyjechało 61898.0. Układ opuściło procentowo pojazdów:86.78
+Czas:3666.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::8.92
+Zapisano epizod zachłanny env4_learnt_64
+gready run 64 - rewards_mean:31.2 rewards_sum:124811.0. Do układu wjechało 71539.0 pojazdów. Wyjechało 62048.0. Układ opuściło procentowo pojazdów:86.99
+Czas:3734.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::8.92
+Zapisano epizod zachłanny env4_learnt_65
+gready run 65 - rewards_mean:31.21 rewards_sum:124849.0. Do układu wjechało 71644.0 pojazdów. Wyjechało 61927.0. Układ opuściło procentowo pojazdów:86.82
+Czas:3801.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::8.92
+Zapisano epizod zachłanny env4_learnt_66
+gready run 66 - rewards_mean:28.24 rewards_sum:112942.0. Do układu wjechało 71494.0 pojazdów. Wyjechało 55875.0. Układ opuściło procentowo pojazdów:78.33
+Czas:3868.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::8.92
+Zapisano epizod zachłanny env4_learnt_67
+gready run 67 - rewards_mean:31.49 rewards_sum:125977.0. Do układu wjechało 71495.0 pojazdów. Wyjechało 62718.0. Układ opuściło procentowo pojazdów:87.93
+Czas:3940.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::8.92
+Zapisano epizod zachłanny env4_learnt_68
+gready run 68 - rewards_mean:31.37 rewards_sum:125485.0. Do układu wjechało 71054.0 pojazdów. Wyjechało 62584.0. Układ opuściło procentowo pojazdów:87.74
+Czas:4006.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::8.92
+Zapisano epizod zachłanny env4_learnt_69
+gready run 69 - rewards_mean:30.9 rewards_sum:123612.0. Do układu wjechało 71018.0 pojazdów. Wyjechało 61669.0. Układ opuściło procentowo pojazdów:86.46
+Czas:4070.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::8.92
+Zapisano epizod zachłanny env4_learnt_70
+gready run 70 - rewards_mean:31.54 rewards_sum:126g180.0. Do układu wjechało 72017.0 pojazdów. Wyjechało 62868.0. Układ opuściło procentowo pojazdów:88.14
+Czas:4136.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::8.92
+Zapisano epizod zachłanny env4_learnt_71
+gready run 71 - rewards_mean:31.62 rewards_sum:126472.0. Do układu wjechało 71330.0 pojazdów. Wyjechało 63195.0. Układ opuściło procentowo pojazdów:88.6
+Czas:4202.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::8.92
+Zapisano epizod zachłanny env4_learnt_72
+gready run 72 - rewards_mean:31.54 rewards_sum:126153.0. Do układu wjechało 71079.0 pojazdów. Wyjechało 62767.0. Układ opuściło procentowo pojazdów:88.0
+Czas:4267.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::8.92
+Zapisano epizod zachłanny env4_learnt_73
+gready run 73 - rewards_mean:29.29 rewards_sum:117175.0. Do układu wjechało 71308.0 pojazdów. Wyjechało 57392.0. Układ opuściło procentowo pojazdów:80.46
+Czas:4336.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::8.92
+Zapisano epizod zachłanny env4_learnt_74
+gready run 74 - rewards_mean:30.26 rewards_sum:121040.0. Do układu wjechało 71077.0 pojazdów. Wyjechało 59953.0. Układ opuściło procentowo pojazdów:84.05
+Czas:4403.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::8.92
+Zapisano epizod zachłanny env4_learnt_75
+gready run 75 - rewards_mean:29.98 rewards_sum:119935.0. Do układu wjechało 71791.0 pojazdów. Wyjechało 59045.0. Układ opuściło procentowo pojazdów:82.78
+Czas:4468.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::8.92
+Zapisano epizod zachłanny env4_learnt_76
+gready run 76 - rewards_mean:30.04 rewards_sum:120147.0. Do układu wjechało 71350.0 pojazdów. Wyjechało 59239.0. Układ opuściło procentowo pojazdów:83.05
+Czas:4534.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::8.92
+Zapisano epizod zachłanny env4_learnt_77
+gready run 77 - rewards_mean:29.89 rewards_sum:119552.0. Do układu wjechało 71455.0 pojazdów. Wyjechało 59308.0. Układ opuściło procentowo pojazdów:83.15
+Czas:4601.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::8.92
+Zapisano epizod zachłanny env4_learnt_78
+gready run 78 - rewards_mean:30.54 rewards_sum:122142.0. Do układu wjechało 71348.0 pojazdów. Wyjechało 60499.0. Układ opuściło procentowo pojazdów:84.82
+Czas:4668.0 Epsilon:0.2 Średnia liczba wjeżdżających pojazdów::8.92
+Zapisano epizod zachłanny env4_learnt_79
+gready run 79 - rewards_mean:30.35 rewards_sum:121409.0. Do układu wjechało 71595.0 pojazdów. Wyjechało 60259.0. Układ opuściło procentowo pojazdów:84.48

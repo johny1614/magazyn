@@ -1,6 +1,6 @@
 from timeit import default_timer as timer
 from nn_trainer import train
-from services.drawerService import draw_rewards_mean, draw_rewards, draw_cars_out
+from services.drawerService import draw_rewards_mean, draw_rewards, draw_cars_out, draw_cars_out_percentage, draw_max
 from services.globals import Globals
 from services.runnerService import generate_random_epochs, run_learnt_greedy
 
@@ -34,6 +34,8 @@ while timer() - startTime < timeToLearn:
         if iterations_without_progress == max_iterations_without_progress:
             exit()
     results.append(result)
+    draw_cars_out_percentage(results)
     draw_rewards_mean(results)
     draw_rewards(results)
     draw_cars_out(results)
+    draw_max(results)

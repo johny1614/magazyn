@@ -39,14 +39,16 @@ class BaseClass:
         self.epochs_learn_done = 0
         self.u_value = 1
         self.cars_out_memory = []
+        self.loss_history = [[], [], [], []]
 
     def get_u(self, time):
-        EX = self.u_value # u_value to EX
+        EX = self.u_value  # u_value to EX
         sigma_par = 0.4
         mean_par = np.log(EX) - sigma_par * sigma_par / 2
-        u=2
-        mine= np.array([[np.random.lognormal(mean=mean_par, sigma=sigma_par) for x in range(time)] for x in env_settings.source_sections]).transpose()
-        old=np.array([[u] * time] * len(env_settings.source_sections)).transpose()
+        u = 2
+        mine = np.array([[np.random.lognormal(mean=mean_par, sigma=sigma_par) for x in range(time)] for x in
+                         env_settings.source_sections]).transpose()
+        old = np.array([[u] * time] * len(env_settings.source_sections)).transpose()
         return mine
 
 

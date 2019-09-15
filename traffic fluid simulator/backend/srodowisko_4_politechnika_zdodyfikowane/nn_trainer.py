@@ -5,6 +5,7 @@ from tensorflow.python.keras.layers import Dense, Activation
 from tensorflow.python.keras.models import Sequential
 
 from services.agentFactory import get_LearnSmartAgents, get_SmartAgents
+from services.drawerService import plot_losses
 from services.globals import Globals
 
 
@@ -58,6 +59,8 @@ def train(learntAgents=True, max_time_learn=60, agents=None, batches=None, actua
                 val_loss = 10 ** 10
             else:
                 val_loss = res.history['val_loss'][-1]
-        print('loss',val_loss_best)
+        Globals().loss_history[i].append(val_loss_best)
         model.set_weights(weights_best)
         model.save('static_files/model-agent' + str(i) + '.h5')
+    plot_losses()
+

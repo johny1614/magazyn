@@ -92,10 +92,11 @@ def run_learnt_greedy(saveJson=True):
                                 densityName='learnt_' + str(Globals().greedy_run_no))
         exportData.saveToJson()
     maximum_possible_cars_out = Globals().u_value * Globals().vp.max_time_greedy * 8
+    cars_out_percentage = round(100 * cars_out / maximum_possible_cars_out, 2)
     print(
         f'gready run {Globals().greedy_run_no} - rewards_mean:{round(rewards_mean, 2)} rewar'
         f'ds_sum:{round(rewards_sum, 0)}. Do układu wjechało {round(sum(sum(u)), 0)} pojazdów.'
         f' Wyjechało {round(cars_out, 0)}. Układ opuściło pr'
-        f'ocentowo pojazdów:{round(100 * cars_out / maximum_possible_cars_out, 2)}')
+        f'ocentowo pojazdów:{cars_out_percentage}')
     Globals().greedy_run_no += 1
-    return rewards_mean, rewards_sum, cars_out, agents, sum(sum(u))
+    return rewards_mean, rewards_sum, cars_out, agents, sum(sum(u)),cars_out_percentage
