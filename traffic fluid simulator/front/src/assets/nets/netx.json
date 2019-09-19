@@ -1,0 +1,252 @@
+{
+    "lines": [
+        {
+            "startPoint": {
+                "x": 240,
+                "y": 285
+            },
+            "endPoint": {
+                "x": 310,
+                "y": 285
+            },
+            "densities": [
+                "0"
+            ],
+            "ligths": {
+                "right": {
+                    "position": {
+                        "x": 270,
+                        "y": 330
+                    },
+                    "imageName": "arrow_right",
+                    "from": 0,
+                    "to": 5,
+                    "arrowWidth": 22,
+                    "rotation": 90
+                },
+                "left": {
+                    "position": {
+                        "x": 270,
+                        "y": 290
+                    },
+                    "imageName": "arrow_left",
+                    "from": 0,
+                    "to": 7,
+                    "arrowWidth": 22,
+                    "rotation": 90
+                },
+                "straight": {
+                    "position": {
+                        "x": 306,
+                        "y": 295
+                    },
+                    "imageName": "arrow_straight",
+                    "from": 0,
+                    "to": 6,
+                    "arrowWidth": 16,
+                    "rotation": 90
+                }
+            }
+        },
+        {
+            "startPoint": {
+                "x": 400,
+                "y": 400
+            },
+            "endPoint": {
+                "x": 400,
+                "y": 330
+            },
+            "ligths": {
+                "right": {
+                    "position": {
+                        "x": 410,
+                        "y": 300
+                    },
+                    "imageName": "arrow_right",
+                    "from": 1,
+                    "to": 6,
+                    "arrowWidth": 18,
+                    "rotation": 0
+                },
+                "left": {
+                    "position": {
+                        "x": 374,
+                        "y": 300
+                    },
+                    "imageName": "arrow_left",
+                    "from": 1,
+                    "to": 4,
+                    "arrowWidth": 18,
+                    "rotation": 0
+                },
+                "straight": {
+                    "position": {
+                        "x": 394,
+                        "y": 295
+                    },
+                    "imageName": "arrow_straight",
+                    "from": 1,
+                    "to": 7,
+                    "arrowWidth": 15,
+                    "rotation": 0
+                }
+            },
+            "densities": [
+                "1"
+            ],
+            "x_move":2
+        },
+        {
+            "startPoint": {
+                "x": 440,
+                "y": 240
+            },
+            "endPoint": {
+                "x": 510,
+                "y": 240
+            },
+            "densities": [
+                "2"
+            ],
+            "ligths": {
+                "right": {
+                    "position": {
+                        "x": 406,
+                        "y": 193
+                    },
+                    "imageName": "arrow_right",
+                    "from": 2,
+                    "to": 7,
+                    "arrowWidth": 20,
+                    "rotation": 270
+                },
+                "left": {
+                    "position": {
+                        "x": 406,
+                        "y": 232
+                    },
+                    "imageName": "arrow_left",
+                    "from": 2,
+                    "to": 5,
+                    "arrowWidth": 20,
+                    "rotation": 270
+                },
+                "straight": {
+                    "position": {
+                        "x": 402,
+                        "y": 227
+                    },
+                    "imageName": "arrow_straight",
+                    "from": 2,
+                    "to": 4,
+                    "arrowWidth": 16,
+                    "rotation": 270
+                }
+            }
+        },
+        {
+            "startPoint": {
+                "x": 370,
+                "y": 130
+            },
+            "endPoint": {
+                "x": 370,
+                "y": 200
+            },
+            "densities": [
+                "3"
+            ],
+            "x_move":2,
+            "ligths": {
+                "right": {
+                    "position": {
+                        "x": 285,
+                        "y": 195
+                    },
+                    "imageName": "arrow_right",
+                    "from": 3,
+                    "to": 4,
+                    "arrowWidth": 18,
+                    "rotation": 180
+                },
+                "left": {
+                    "position": {
+                        "x": 318,
+                        "y": 195
+                    },
+                    "imageName": "arrow_left",
+                    "from": 3,
+                    "to": 6,
+                    "arrowWidth": 18,
+                    "rotation": 180
+                },
+                "straight": {
+                    "position": {
+                        "x": 335,
+                        "y": 217
+                    },
+                    "imageName": "arrow_straight",
+                    "from": 3,
+                    "to": 5,
+                    "arrowWidth": 15,
+                    "rotation": 180
+                }
+            }
+        },
+        {
+            "startPoint": {
+                "x": 240,
+                "y": 240
+            },
+            "endPoint": {
+                "x": 310,
+                "y": 240
+            },
+            "densities": [
+                "4"
+            ]
+        },
+        {
+            "startPoint": {
+                "x": 370,
+                "y": 330
+            },
+            "endPoint": {
+                "x": 370,
+                "y": 400
+            },
+            "densities": [
+                "5"
+            ],
+            "x_move":2
+        },
+        {
+            "startPoint": {
+                "x": 440,
+                "y": 285
+            },
+            "endPoint": {
+                "x": 510,
+                "y": 285
+            },
+            "densities": [
+                "6"
+            ]
+        },
+        {
+            "startPoint": {
+                "x": 400,
+                "y": 200
+            },
+            "endPoint": {
+                "x": 400,
+                "y": 130
+            },
+            "densities": [
+                "7"
+            ],
+            "x_move":2
+        }
+    ]
+}

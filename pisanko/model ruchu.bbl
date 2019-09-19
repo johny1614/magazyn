@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{lwr}
+M.~J. Lighthill and G.~B. Whitham, ``On kinematic waves ii. a theory of traffic
+  flow on long crowded roads,'' {\em Proc. R. Soc. Lond. A}, vol.~229,
+  no.~1178, pp.~317--345, 1955.
+
 \bibitem{mobility_raport2019_col}
 T.~L. David~Schrank, Bill~Eisele, ``2019 urban mobility report.,'' 2019.
 
@@ -110,11 +115,6 @@ V.~A. Vu and G.~Tan, ``High-performance mesoscopic traffic simulation with gpu
   Symposium on Distributed Simulation and Real Time Applications},
   pp.~127--135, IEEE Press, 2017.
 
-\bibitem{lwr}
-M.~J. Lighthill and G.~B. Whitham, ``On kinematic waves ii. a theory of traffic
-  flow on long crowded roads,'' {\em Proc. R. Soc. Lond. A}, vol.~229,
-  no.~1178, pp.~317--345, 1955.
-
 \bibitem{gottlich}
 S.~G{\"o}ttlich, M.~Herty, and U.~Ziegler, ``Modeling and optimizing traffic
   light settings in road networks,'' {\em Computers \& operations research},
@@ -131,19 +131,23 @@ C.~F. Daganzo, ``The cell transmission model, part ii: network traffic,'' {\em
   Transportation Research Part B: Methodological}, vol.~29, no.~2, pp.~79--93,
   1995.
 
+\bibitem{adam}
+D.~P. Kingma and J.~Ba, ``Adam: A method for stochastic optimization,'' {\em
+  arXiv preprint arXiv:1412.6980}, 2014.
+
+\bibitem{OpenStreetMap}
+{OpenStreetMap contributors}, ``{Planet dump retrieved from
+  https://planet.osm.org }.'' \url{ https://www.openstreetmap.org }, 2017.
+
+\bibitem{rewards}
+S.~Touhbi, M.~A. Babram, T.~Nguyen-Huu, N.~Marilleau, M.~L. Hbid, C.~Cambier,
+  and S.~Stinckwich, ``Adaptive traffic signal control: Exploring reward
+  definition for reinforcement learning,'' {\em Procedia Computer Science},
+  vol.~109, pp.~513--520, 2017.
+
 \bibitem{wang2018cooperative}
 B.~Wang, X.~Fang, and B.~Zhang, ``Cooperative control for industrial
   multi-agent systems: Framework and problems,'' in {\em 2018 37th Chinese
   Control Conference (CCC)}, pp.~6971--6976, IEEE, 2018.
-
-\bibitem{frontend_backend}
-K.~Liu, J.~Jiang, X.~Ding, and H.~Sun, ``Design and development of management
-  information system for research project process based on front-end and
-  back-end separation,'' in {\em 2017 International Conference on Computing
-  Intelligence and Information System (CIIS)}, pp.~338--342, IEEE, 2017.
-
-\bibitem{canvas}
-A.~Deveria, ``Can i use... support tables for html5, css3, etc.''
-  \url{https://caniuse.com/#feat=canvas}, 2019 (accessed April 4, 2019).
 
 \end{thebibliography}

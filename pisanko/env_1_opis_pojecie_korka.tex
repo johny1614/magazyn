@@ -56,14 +56,22 @@
 	\tableofcontents
 	
 	\chapter {Środowiska symulacyjne i ich nauka}
+		\begin{itemize}
+		\item Sposób przepływu przez skrzyżowanie z powyższego obrazka definiuje macierz prawdopodobieństwa $ \textbf{P} $ określoną w przykładzie
+		\item Do sieci nie napływają żadne pojazdy, zatem wartości wektora źródła są równe 0 co jest zapisane jako $\textbf{u(t)}=\theta$ dla dowolnego $t$. 
+		\item Liczba pojazdów będąca na odcinku jest ograniczona przez $N_j(t)=7$ dla dowolnego odcinka $i$ i chwili $t$.
+		\item Maksymalny przepływ pojazdów w jednym interwale to $Q_j(t)=4$	
+	\end{itemize}
+	
 	\section{Środowisko 1}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=7cm]{images/env_1}
+		\includegraphics[width=37cm]{images/env_1}
 		\label{fig:env_1}
 		\caption{Środowisko 1}
 	\end{figure}
-	
+
+
 	Środowisko posiada 3 jednokierunkowe drogi. Każda droga ma 1 odcinek co daje w sumie 3 odcinki (są numerowane od 0 co widać na rysunku \ref{fig:env_1}).
 	W sieci dróg znajduje się 1 skrzyżowanie. Jest do niego przypisany agent, który odpowiada za sterowanie sygnalizacją świetlną. 
 	

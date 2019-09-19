@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.24)  10 SEP 2019 12:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.24)  19 SEP 2019 16:35
 entering extended mode
 **"./model ruchu.tex"
 ("model ruchu.tex"
@@ -678,16 +678,33 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks50
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.cfg"))
-\c@definicja=\count140
-\c@twr=\count141
-\c@mur=\count142
-
-("model ruchu.aux"
+("C:\Program Files\MiKTeX 2.9\tex/latex/makecell\makecell.sty"
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen261
+\c@nlinenum=\count140
+\TeXr@lab=\toks51
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/tools\afterpage.sty"
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks52
+\AP@partial=\box54
+\AP@footins=\box55
+)
+\c@definicja=\count141
+\c@twr=\count142
+\c@mur=\count143
+ ("model ruchu.aux"
 
 LaTeX Warning: Label `fig:agent-srodowisko' multiply defined.
 
 
-LaTeX Warning: Label `fig:3_single_road' multiply defined.
+LaTeX Warning: Label `fig:ctm_przyklad' multiply defined.
+
+
+LaTeX Warning: Label `fig:env_11' multiply defined.
+
+
+LaTeX Warning: Label `fig:env_11' multiply defined.
 
 
 LaTeX Warning: Label `fig:env_11' multiply defined.
@@ -695,35 +712,35 @@ LaTeX Warning: Label `fig:env_11' multiply defined.
 )
 \openout1 = `"model ruchu.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 56.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 69.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count143
-\scratchdimen=\dimen261
-\scratchbox=\box54
-\nofMPsegments=\count144
-\nofMParguments=\count145
-\everyMPshowfont=\toks51
-\MPscratchCnt=\count146
-\MPscratchDim=\dimen262
-\MPnumerator=\count147
-\makeMPintoPDFobject=\count148
-\everyMPtoPDFconversion=\toks52
+\scratchcounter=\count144
+\scratchdimen=\dimen262
+\scratchbox=\box56
+\nofMPsegments=\count145
+\nofMParguments=\count146
+\everyMPshowfont=\toks53
+\MPscratchCnt=\count147
+\MPscratchDim=\dimen263
+\MPnumerator=\count148
+\makeMPintoPDFobject=\count149
+\everyMPtoPDFconversion=\toks54
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -802,546 +819,609 @@ ABD: EveryShipout initializing macros
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 61.
+[0
+
+
+]
+Rozdzia\l  1.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 88.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 61.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 88.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 61.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 88.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 61.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 88.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 61.
+(Font)              <12> on input line 88.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 61.
+(Font)              <8> on input line 88.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 61.
- [1
-
-
-{C:/Users/KOMPUTER/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
-
-] ("model ruchu.toc"
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 6.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 6.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 6.
-
-[3])
-\tf@toc=\write6
-\openout6 = `"model ruchu.toc"'.
-
- [4]
-Rozdzia\l  1.
+(Font)              <6> on input line 88.
+ [1{C:/Users/KOMPUTER/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+Rozdzia\l  2.
 <liczbaPojazdowSwiat.png, id=21, 534.49687pt x 325.96782pt>
 File: liczbaPojazdowSwiat.png Graphic file (type png)
 <use liczbaPojazdowSwiat.png>
-Package pdftex.def Info: liczbaPojazdowSwiat.png  used on input line 69.
+Package pdftex.def Info: liczbaPojazdowSwiat.png  used on input line 131.
 (pdftex.def)             Requested size: 398.33858pt x 242.93832pt.
+[3
+
+ <./liczbaPojazdowSwiat.png>] [4]
+Rozdzia\l  3.
 [5
 
- <./liczbaPojazdowSwiat.png>] [6]
-Rozdzia\l  2.
-[7
-
-] [8
+] [6
 
 ]
-Rozdzia\l  3.
-[9]
-<agent-srodowisko.png, id=42, 493.845pt x 289.83281pt>
+Rozdzia\l  4.
+[7]
+<agent-srodowisko.png, id=39, 493.845pt x 289.83281pt>
 File: agent-srodowisko.png Graphic file (type png)
 <use agent-srodowisko.png>
-Package pdftex.def Info: agent-srodowisko.png  used on input line 104.
+Package pdftex.def Info: agent-srodowisko.png  used on input line 166.
 (pdftex.def)             Requested size: 398.33858pt x 233.77707pt.
- [10 <./agent-srodowisko.png>]
-Overfull \hbox (1.90044pt too wide) in paragraph at lines 124--125
-\T1/lmr/m/n/12 Idea dys-kon-to-wa-nia na-gród zo-staªa za-czerp-ni¦ta z ra-chun
-ku fi-nan-so-wego. Przy-kªa-dowo wpªyw
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
+ [8 <./agent-srodowisko.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
-<rewards-graph.png, id=46, 545.03625pt x 93.34875pt>
+<rewards-graph.png, id=43, 545.03625pt x 93.34875pt>
 File: rewards-graph.png Graphic file (type png)
 <use rewards-graph.png>
-Package pdftex.def Info: rewards-graph.png  used on input line 134.
+Package pdftex.def Info: rewards-graph.png  used on input line 196.
 (pdftex.def)             Requested size: 398.33858pt x 68.22377pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--137
+Underfull \hbox (badness 10000) in paragraph at lines 193--199
 
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 141--148
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 203--210
 
  []
 
-[12 <./rewards-graph.png>]
-<images/mountain_car.png, id=57, 292.09125pt x 195.73125pt>
+[10 <./rewards-graph.png>]
+<images/mountain_car.png, id=53, 292.09125pt x 195.73125pt>
 File: images/mountain_car.png Graphic file (type png)
 <use images/mountain_car.png>
-Package pdftex.def Info: images/mountain_car.png  used on input line 160.
+Package pdftex.def Info: images/mountain_car.png  used on input line 222.
 (pdftex.def)             Requested size: 284.52756pt x 190.68039pt.
- [13 <./images/mountain_car.png>] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 198--200
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 226.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 226.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 226.
+ [11 <./images/mountain_car.png>] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 260--262
 
  []
 
-[15] [16]
-Rozdzia\l  4.
-[17
+[13] [14]
+Rozdzia\l  5.
+[15
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 222--223
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 242--243
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
 
  []
 
-<images/CTM_flow_example.png, id=78, 727.96968pt x 264.99pt>
+<images/CTM_flow_example.png, id=76, 727.96968pt x 264.99pt>
 File: images/CTM_flow_example.png Graphic file (type png)
 <use images/CTM_flow_example.png>
-Package pdftex.def Info: images/CTM_flow_example.png  used on input line 253.
+Package pdftex.def Info: images/CTM_flow_example.png  used on input line 316.
 (pdftex.def)             Requested size: 398.33858pt x 145.005pt.
-[18]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 262.
+[16]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 325.
 
  ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 262.
- [19 <./images/CTM_flow_example.png>]
-<images/ctm_przyklad.png, id=87, 604.50844pt x 356.0803pt>
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 325.
+ [17 <./images/CTM_flow_example.png>]
+<images/ctm_przyklad.png, id=84, 604.50844pt x 356.0803pt>
 File: images/ctm_przyklad.png Graphic file (type png)
 <use images/ctm_przyklad.png>
-Package pdftex.def Info: images/ctm_przyklad.png  used on input line 308.
+Package pdftex.def Info: images/ctm_przyklad.png  used on input line 370.
 (pdftex.def)             Requested size: 398.33858pt x 234.63882pt.
- [20] [21 <./images/ctm_przyklad.png>] [22]
-<images/env_11_743015_przeplyw.png, id=100, 444.91219pt x 347.04657pt>
+ [18] [19 <./images/ctm_przyklad.png>]
+<images/env_11_perc_italic.png, id=93, 368.1253pt x 251.43938pt>
+File: images/env_11_perc_italic.png Graphic file (type png)
+<use images/env_11_perc_italic.png>
+Package pdftex.def Info: images/env_11_perc_italic.png  used on input line 408.
+
+(pdftex.def)             Requested size: 369.88582pt x 252.66263pt.
+ [20] [21 <./images/env_11_perc_italic.png>]
+<images/env_11_743015_procenty.png, id=101, 305.64188pt x 204.01219pt>
+File: images/env_11_743015_procenty.png Graphic file (type png)
+<use images/env_11_743015_procenty.png>
+Package pdftex.def Info: images/env_11_743015_procenty.png  used on input line 
+464.
+(pdftex.def)             Requested size: 199.16928pt x 132.94255pt.
+ [22 <./images/env_11_743015_procenty.png>]
+<images/env_11_743015_przeplyw.png, id=106, 444.91219pt x 347.04657pt>
 File: images/env_11_743015_przeplyw.png Graphic file (type png)
 <use images/env_11_743015_przeplyw.png>
 Package pdftex.def Info: images/env_11_743015_przeplyw.png  used on input line 
-375.
+515.
 (pdftex.def)             Requested size: 284.52756pt x 221.93958pt.
-<images/env_11_431331_procenty.png, id=101, 295.85532pt x 198.7425pt>
+<images/env_11_431331_procenty.png, id=107, 295.85532pt x 198.7425pt>
 File: images/env_11_431331_procenty.png Graphic file (type png)
 <use images/env_11_431331_procenty.png>
 Package pdftex.def Info: images/env_11_431331_procenty.png  used on input line 
-377.
+517.
 (pdftex.def)             Requested size: 284.52756pt x 191.13936pt.
- [23 <./images/env_11_743015_przeplyw.png> <./images/env_11_431331_procenty.png
->] [24]
-Rozdzia\l  5.
-<images/1_droga_4_odcinki.png, id=110, 522.45187pt x 82.05656pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--522
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--522
+
+ []
+
+[23 <./images/env_11_743015_przeplyw.png> <./images/env_11_431331_procenty.png>
+] [24]
+Rozdzia\l  6.
+<images/1_droga_4_odcinki.png, id=117, 522.45187pt x 82.05656pt>
 File: images/1_droga_4_odcinki.png Graphic file (type png)
 <use images/1_droga_4_odcinki.png>
-Package pdftex.def Info: images/1_droga_4_odcinki.png  used on input line 411.
+Package pdftex.def Info: images/1_droga_4_odcinki.png  used on input line 553.
 (pdftex.def)             Requested size: 398.33858pt x 62.56395pt.
 [25
 
 ] [26 <./images/1_droga_4_odcinki.png>]
-<images/env_11.png, id=119, 248.42813pt x 162.6075pt>
-File: images/env_11.png Graphic file (type png)
-<use images/env_11.png>
-Package pdftex.def Info: images/env_11.png  used on input line 522.
-(pdftex.def)             Requested size: 284.52756pt x 186.25034pt.
- [27 <./images/env_11.png>]
-<images/env_11_743015.png, id=124, 292.84406pt x 197.23688pt>
+<images/env_11_italic_no_perc.png, id=125, 368.1253pt x 251.43938pt>
+File: images/env_11_italic_no_perc.png Graphic file (type png)
+<use images/env_11_italic_no_perc.png>
+Package pdftex.def Info: images/env_11_italic_no_perc.png  used on input line 6
+64.
+(pdftex.def)             Requested size: 284.52756pt x 194.35321pt.
+ [27 <./images/env_11_italic_no_perc.png>]
+<images/env_11_743015.png, id=130, 292.84406pt x 197.23688pt>
 File: images/env_11_743015.png Graphic file (type png)
 <use images/env_11_743015.png>
-Package pdftex.def Info: images/env_11_743015.png  used on input line 530.
+Package pdftex.def Info: images/env_11_743015.png  used on input line 672.
 (pdftex.def)             Requested size: 284.52756pt x 191.65358pt.
-<images/env_11_743015_procenty.png, id=125, 305.64188pt x 204.01219pt>
+File: images/env_11_perc_italic.png Graphic file (type png)
+<use images/env_11_perc_italic.png>
+Package pdftex.def Info: images/env_11_perc_italic.png  used on input line 686.
+
+(pdftex.def)             Requested size: 284.52756pt x 194.35321pt.
+ [28 <./images/env_11_743015.png>] [29]
+File: images/env_11_perc_italic.png Graphic file (type png)
+<use images/env_11_perc_italic.png>
+Package pdftex.def Info: images/env_11_perc_italic.png  used on input line 745.
+
+(pdftex.def)             Requested size: 199.16928pt x 136.03996pt.
 File: images/env_11_743015_procenty.png Graphic file (type png)
 <use images/env_11_743015_procenty.png>
 Package pdftex.def Info: images/env_11_743015_procenty.png  used on input line 
-543.
-(pdftex.def)             Requested size: 284.52756pt x 189.9286pt.
- [28 <./images/env_11_743015.png>] [29 <./images/env_11_743015_procenty.png>]
-File: images/env_11.png Graphic file (type png)
-<use images/env_11.png>
-Package pdftex.def Info: images/env_11.png  used on input line 591.
-(pdftex.def)             Requested size: 199.16928pt x 130.36655pt.
-File: images/env_11_743015_procenty.png Graphic file (type png)
-<use images/env_11_743015_procenty.png>
-Package pdftex.def Info: images/env_11_743015_procenty.png  used on input line 
-591.
+745.
 (pdftex.def)             Requested size: 199.16928pt x 132.94255pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 587--616
+Underfull \hbox (badness 10000) in paragraph at lines 736--749
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 736--749
+
+ []
+
+[30]
 File: images/env_11_743015_procenty.png Graphic file (type png)
 <use images/env_11_743015_procenty.png>
 Package pdftex.def Info: images/env_11_743015_procenty.png  used on input line 
-632.
+807.
 (pdftex.def)             Requested size: 199.16928pt x 132.94255pt.
 File: images/env_11_431331_procenty.png Graphic file (type png)
 <use images/env_11_431331_procenty.png>
 Package pdftex.def Info: images/env_11_431331_procenty.png  used on input line 
-634.
+807.
 (pdftex.def)             Requested size: 199.16928pt x 133.79665pt.
-<images/env_11_04u1u3_procenty.png, id=134, 357.58594pt x 239.39438pt>
+<images/env_11_04u1u3_procenty.png, id=142, 357.58594pt x 239.39438pt>
 File: images/env_11_04u1u3_procenty.png Graphic file (type png)
 <use images/env_11_04u1u3_procenty.png>
 Package pdftex.def Info: images/env_11_04u1u3_procenty.png  used on input line 
-636.
+807.
 (pdftex.def)             Requested size: 199.16928pt x 133.34032pt.
-<images/env_11_000602_procenty.png, id=135, 244.66406pt x 165.61874pt>
+<images/env_11_000602_procenty.png, id=143, 244.66406pt x 165.61874pt>
 File: images/env_11_000602_procenty.png Graphic file (type png)
 <use images/env_11_000602_procenty.png>
 Package pdftex.def Info: images/env_11_000602_procenty.png  used on input line 
-638.
+807.
 (pdftex.def)             Requested size: 199.16928pt x 134.82518pt.
+ [31] [32 <./images/env_11_04u1u3_procenty.png> <./images/env_11_000602_procent
+y.png>]
+<images/env_11_faza_0_procenty_italic.png, id=152, 310.15875pt x 205.5178pt>
+File: images/env_11_faza_0_procenty_italic.png Graphic file (type png)
+<use images/env_11_faza_0_procenty_italic.png>
+Package pdftex.def Info: images/env_11_faza_0_procenty_italic.png  used on inpu
+t line 831.
+(pdftex.def)             Requested size: 284.52756pt x 188.53302pt.
 
-Overfull \hbox (54.8875pt too wide) in paragraph at lines 627--641
-[]  
+Underfull \hbox (badness 10000) in paragraph at lines 828--834
+
  []
 
-[30] [31 <./images/env_11_04u1u3_procenty.png> <./images/env_11_000602_procenty
-.png>]
-<images/env_11_faza_0_procenty.png, id=145, 225.84375pt x 160.34906pt>
-File: images/env_11_faza_0_procenty.png Graphic file (type png)
-<use images/env_11_faza_0_procenty.png>
-Package pdftex.def Info: images/env_11_faza_0_procenty.png  used on input line 
-665.
-(pdftex.def)             Requested size: 199.16928pt x 141.41833pt.
-<images/env_11_lights_0_943015_procenty.png, id=146, 215.30438pt x 145.29282pt>
+[33 <./images/env_11_faza_0_procenty_italic.png>]
+<images/env_11_lights_0_943015_procenty.png, id=157, 215.30438pt x 145.29282pt>
 
 File: images/env_11_lights_0_943015_procenty.png Graphic file (type png)
 <use images/env_11_lights_0_943015_procenty.png>
 Package pdftex.def Info: images/env_11_lights_0_943015_procenty.png  used on in
-put line 665.
+put line 935.
 (pdftex.def)             Requested size: 199.16928pt x 134.40704pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 661--669
-
- []
-
-[32 <./images/env_11_faza_0_procenty.png> <./images/env_11_lights_0_943015_proc
-enty.png>]
-File: images/env_11_lights_0_943015_procenty.png Graphic file (type png)
-<use images/env_11_lights_0_943015_procenty.png>
-Package pdftex.def Info: images/env_11_lights_0_943015_procenty.png  used on in
-put line 763.
-(pdftex.def)             Requested size: 199.16928pt x 134.40704pt.
-<images/env_11_lights_0_0121301_procenty.png, id=152, 217.5628pt x 145.29282pt>
+<images/env_11_lights_0_0121301_procenty.png, id=158, 217.5628pt x 145.29282pt>
 
 File: images/env_11_lights_0_0121301_procenty.png Graphic file (type png)
 <use images/env_11_lights_0_0121301_procenty.png>
 Package pdftex.def Info: images/env_11_lights_0_0121301_procenty.png  used on i
-nput line 763.
+nput line 935.
 (pdftex.def)             Requested size: 199.16928pt x 133.01698pt.
-<images/env_11_lights_01_093100_procenty.png, id=153, 226.59656pt x 145.29282pt
+<images/env_11_lights_01_093100_procenty.png, id=159, 226.59656pt x 145.29282pt
 >
 File: images/env_11_lights_01_093100_procenty.png Graphic file (type png)
 <use images/env_11_lights_01_093100_procenty.png>
 Package pdftex.def Info: images/env_11_lights_01_093100_procenty.png  used on i
-nput line 763.
+nput line 935.
 (pdftex.def)             Requested size: 199.16928pt x 127.7073pt.
-<images/env_11_lights_koncowe_procenty.png, id=154, 209.28188pt x 142.28156pt>
+<images/env_11_lights_koncowe_procenty.png, id=160, 209.28188pt x 142.28156pt>
 File: images/env_11_lights_koncowe_procenty.png Graphic file (type png)
 <use images/env_11_lights_koncowe_procenty.png>
 Package pdftex.def Info: images/env_11_lights_koncowe_procenty.png  used on inp
-ut line 763.
+ut line 935.
 (pdftex.def)             Requested size: 199.16928pt x 135.40552pt.
+ [34] [35 <./images/env_11_lights_0_943015_procenty.png> <./images/env_11_light
+s_0_0121301_procenty.png> <./images/env_11_lights_01_093100_procenty.png> <./im
+ages/env_11_lights_koncowe_procenty.png>] [36]
+<images/netx.png, id=175, 295.1025pt x 297.36093pt>
+File: images/netx.png Graphic file (type png)
+<use images/netx.png>
+Package pdftex.def Info: images/netx.png  used on input line 966.
+(pdftex.def)             Requested size: 284.52756pt x 286.71101pt.
+<images/netx_faza_0.png, id=176, 297.36093pt x 301.125pt>
+File: images/netx_faza_0.png Graphic file (type png)
+<use images/netx_faza_0.png>
+Package pdftex.def Info: images/netx_faza_0.png  used on input line 977.
+(pdftex.def)             Requested size: 168.59001pt x 170.71652pt.
+<images/netx_faza_0_n.png, id=177, 295.85532pt x 300.3722pt>
+File: images/netx_faza_0_n.png Graphic file (type png)
+<use images/netx_faza_0_n.png>
+Package pdftex.def Info: images/netx_faza_0_n.png  used on input line 977.
+(pdftex.def)             Requested size: 168.15172pt x 170.71652pt.
+<images/netx_faza_1.png, id=178, 289.83281pt x 300.3722pt>
+File: images/netx_faza_1.png Graphic file (type png)
+<use images/netx_faza_1.png>
+Package pdftex.def Info: images/netx_faza_1.png  used on input line 979.
+(pdftex.def)             Requested size: 164.72878pt x 170.71652pt.
+<images/netx_faza_1_n.png, id=179, 292.09125pt x 295.1025pt>
+File: images/netx_faza_1_n.png Graphic file (type png)
+<use images/netx_faza_1_n.png>
+Package pdftex.def Info: images/netx_faza_1_n.png  used on input line 979.
+(pdftex.def)             Requested size: 168.97624pt x 170.71652pt.
+<images/netx_faza_3.png, id=180, 295.85532pt x 298.86656pt>
+File: images/netx_faza_3.png Graphic file (type png)
+<use images/netx_faza_3.png>
+Package pdftex.def Info: images/netx_faza_3.png  used on input line 981.
+(pdftex.def)             Requested size: 168.99591pt x 170.71652pt.
+<images/netx_faza_2_n.png, id=181, 301.125pt x 296.60812pt>
+File: images/netx_faza_2_n.png Graphic file (type png)
+<use images/netx_faza_2_n.png>
+Package pdftex.def Info: images/netx_faza_2_n.png  used on input line 981.
+(pdftex.def)             Requested size: 173.32011pt x 170.71652pt.
+ [37 <./images/netx.png>] [38 <./images/netx_faza_0.png> <./images/netx_faza_0_
+n.png> <./images/netx_faza_1.png> <./images/netx_faza_1_n.png> <./images/netx_f
+aza_3.png> <./images/netx_faza_2_n.png>]
+<images/env_12_italic2.png, id=195, 257.46187pt x 172.39406pt>
+File: images/env_12_italic2.png Graphic file (type png)
+<use images/env_12_italic2.png>
+Package pdftex.def Info: images/env_12_italic2.png  used on input line 996.
+(pdftex.def)             Requested size: 227.62204pt x 152.41747pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [33]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [34 <./images/env_11_lights_0_0121301_procenty.png> <./images/env_11_lights_01
-_093100_procenty.png> <./images/env_11_lights_koncowe_procenty.png>]
-<images/env_12.png, id=164, 266.49562pt x 177.66376pt>
-File: images/env_12.png Graphic file (type png)
-<use images/env_12.png>
-Package pdftex.def Info: images/env_12.png  used on input line 789.
-(pdftex.def)             Requested size: 227.62204pt x 151.75227pt.
- [35 <./images/env_12.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 802--805
+Underfull \hbox (badness 10000) in paragraph at lines 1009--1012
 
  []
 
-<images/env_12_t0.png, id=169, 274.77657pt x 179.16937pt>
+<images/env_12_t0.png, id=196, 274.77657pt x 179.16937pt>
 File: images/env_12_t0.png Graphic file (type png)
 <use images/env_12_t0.png>
-Package pdftex.def Info: images/env_12_t0.png  used on input line 843.
+Package pdftex.def Info: images/env_12_t0.png  used on input line 1050.
 (pdftex.def)             Requested size: 142.26378pt x 92.76672pt.
-<images/env_12_t1.png, id=170, 226.59656pt x 148.30406pt>
+<images/env_12_t1.png, id=197, 226.59656pt x 148.30406pt>
 File: images/env_12_t1.png Graphic file (type png)
 <use images/env_12_t1.png>
-Package pdftex.def Info: images/env_12_t1.png  used on input line 843.
+Package pdftex.def Info: images/env_12_t1.png  used on input line 1050.
 (pdftex.def)             Requested size: 142.26378pt x 93.10843pt.
-<images/env_12_t2.png, id=171, 210.03468pt x 132.495pt>
+<images/env_12_t2.png, id=198, 210.03468pt x 132.495pt>
 File: images/env_12_t2.png Graphic file (type png)
 <use images/env_12_t2.png>
-Package pdftex.def Info: images/env_12_t2.png  used on input line 843.
+Package pdftex.def Info: images/env_12_t2.png  used on input line 1050.
 (pdftex.def)             Requested size: 142.26378pt x 89.7436pt.
-<images/env_12_t3.png, id=172, 211.54031pt x 130.23656pt>
+<images/env_12_t3.png, id=199, 211.54031pt x 130.23656pt>
 File: images/env_12_t3.png Graphic file (type png)
 <use images/env_12_t3.png>
-Package pdftex.def Info: images/env_12_t3.png  used on input line 843.
+Package pdftex.def Info: images/env_12_t3.png  used on input line 1050.
 (pdftex.def)             Requested size: 142.26378pt x 87.58792pt.
-[36 <./images/env_12_t0.png> <./images/env_12_t1.png> <./images/env_12_t2.png> 
-<./images/env_12_t3.png>]
-Rozdzia\l  6.
-<images/env_11_procenty.png, id=180, 250.68657pt x 170.88844pt>
-File: images/env_11_procenty.png Graphic file (type png)
-<use images/env_11_procenty.png>
-Package pdftex.def Info: images/env_11_procenty.png  used on input line 852.
-(pdftex.def)             Requested size: 284.52756pt x 193.97781pt.
-<images/env_11_fazy_procenty_no_yellow.png, id=181, 495.35063pt x 191.21437pt>
-File: images/env_11_fazy_procenty_no_yellow.png Graphic file (type png)
-<use images/env_11_fazy_procenty_no_yellow.png>
-Package pdftex.def Info: images/env_11_fazy_procenty_no_yellow.png  used on inp
-ut line 860.
-(pdftex.def)             Requested size: 483.69684pt x 186.71773pt.
+[39 <./images/env_12_italic2.png>] [40 <./images/env_12_t0.png> <./images/env_1
+2_t1.png> <./images/env_12_t2.png> <./images/env_12_t3.png>]
+Rozdzia\l  7.
+File: images/env_11_perc_italic.png Graphic file (type png)
+<use images/env_11_perc_italic.png>
+Package pdftex.def Info: images/env_11_perc_italic.png  used on input line 1073
+.
+(pdftex.def)             Requested size: 284.52756pt x 194.35321pt.
+[41
 
-Overfull \hbox (11.6656pt too wide) in paragraph at lines 860--862
+]
+<images/env_11_fazy_procenty_no_yellow_italic2.png, id=214, 579.66562pt x 202.5
+0656pt>
+File: images/env_11_fazy_procenty_no_yellow_italic2.png Graphic file (type png)
+
+<use images/env_11_fazy_procenty_no_yellow_italic2.png>
+Package pdftex.def Info: images/env_11_fazy_procenty_no_yellow_italic2.png  use
+d on input line 1081.
+(pdftex.def)             Requested size: 483.69684pt x 168.97957pt.
+
+Overfull \hbox (11.6656pt too wide) in paragraph at lines 1081--1083
  [][] 
  []
 
-[37
+[42 <./images/env_11_fazy_procenty_no_yellow_italic2.png>] [43]
+Overfull \hbox (49.38824pt too wide) in paragraph at lines 1116--1117
+[]\T1/lmr/m/n/12 Optymalizacja jest prze-pro-wa-dzana przez me-tod¦ Adam [28] z
+ pa-ra-me-trem $\OML/lmm/m/it/12 learning[]rate \OT1/lmr/m/n/12 =
+ []
 
- <./images/env_11_procenty.png>] [38 <./images/env_11_fazy_procenty_no_yellow.p
-ng>]
-<images/env_14.png, id=191, 274.77657pt x 134.75343pt>
-File: images/env_14.png Graphic file (type png)
-<use images/env_14.png>
-Package pdftex.def Info: images/env_14.png  used on input line 910.
-(pdftex.def)             Requested size: 284.52756pt x 139.54808pt.
- [39]
-<images/env_14_fazy.png, id=195, 767.86874pt x 167.87718pt>
-File: images/env_14_fazy.png Graphic file (type png)
-<use images/env_14_fazy.png>
-Package pdftex.def Info: images/env_14_fazy.png  used on input line 918.
-(pdftex.def)             Requested size: 483.69684pt x 105.75037pt.
+<images/env_14_italic2.png, id=223, 295.1025pt x 151.3153pt>
+File: images/env_14_italic2.png Graphic file (type png)
+<use images/env_14_italic2.png>
+Package pdftex.def Info: images/env_14_italic2.png  used on input line 1130.
+(pdftex.def)             Requested size: 284.52756pt x 145.89597pt.
+<images/env_14_fazy_italic3.png, id=224, 724.95844pt x 134.75343pt>
+File: images/env_14_fazy_italic3.png Graphic file (type png)
+<use images/env_14_fazy_italic3.png>
+Package pdftex.def Info: images/env_14_fazy_italic3.png  used on input line 113
+8.
+(pdftex.def)             Requested size: 483.69684pt x 89.9101pt.
 
-Overfull \hbox (11.6656pt too wide) in paragraph at lines 918--920
+Overfull \hbox (11.6656pt too wide) in paragraph at lines 1138--1140
  [][] 
  []
 
-<images/env_14_akcje.png, id=196, 654.94687pt x 438.8897pt>
-File: images/env_14_akcje.png Graphic file (type png)
-<use images/env_14_akcje.png>
-Package pdftex.def Info: images/env_14_akcje.png  used on input line 928.
-(pdftex.def)             Requested size: 483.69684pt x 324.13039pt.
-
-Overfull \hbox (11.6656pt too wide) in paragraph at lines 928--930
- [][] 
+[44 <./images/env_14_italic2.png>]
+<images/env_14_akcje_italic.png, id=229, 669.2503pt x 465.99094pt>
+File: images/env_14_akcje_italic.png Graphic file (type png)
+<use images/env_14_akcje_italic.png>
+Package pdftex.def Info: images/env_14_akcje_italic.png  used on input line 114
+8.
+(pdftex.def)             Requested size: 455.24408pt x 316.99051pt.
+ [45 <./images/env_14_fazy_italic3.png> <./images/env_14_akcje_italic.png>] [46
+]
+Overfull \hbox (49.38824pt too wide) in paragraph at lines 1184--1185
+[]\T1/lmr/m/n/12 Optymalizacja jest prze-pro-wa-dzana przez me-tod¦ Adam [28] z
+ pa-ra-me-trem $\OML/lmm/m/it/12 learning[]rate \OT1/lmr/m/n/12 =
  []
 
-
-Underfull \vbox (badness 1558) has occurred while \output is active []
-
- [40 <./images/env_14.png> <./images/env_14_fazy.png>] [41 <./images/env_14_akc
-je.png>]
-[42]
-<env_4_agenci.png, id=209, 411.78844pt x 385.44pt>
-File: env_4_agenci.png Graphic file (type png)
-<use env_4_agenci.png>
-Package pdftex.def Info: env_4_agenci.png  used on input line 976.
-(pdftex.def)             Requested size: 284.52756pt x 266.3244pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [43]
-<env_4_fazy.png, id=214, 722.7pt x 542.025pt>
+<images/env_4_agenci_italic_no_perc.png, id=238, 509.65407pt x 474.27188pt>
+File: images/env_4_agenci_italic_no_perc.png Graphic file (type png)
+<use images/env_4_agenci_italic_no_perc.png>
+Package pdftex.def Info: images/env_4_agenci_italic_no_perc.png  used on input 
+line 1196.
+(pdftex.def)             Requested size: 341.43306pt x 317.74603pt.
+[47]
+<env_4_fazy.png, id=242, 722.7pt x 542.025pt>
 File: env_4_fazy.png Graphic file (type png)
 <use env_4_fazy.png>
-Package pdftex.def Info: env_4_fazy.png  used on input line 987.
+Package pdftex.def Info: env_4_fazy.png  used on input line 1208.
 (pdftex.def)             Requested size: 398.33858pt x 298.7515pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [44 <./env_4_agenci.png>]
-<images/env_14_akcje_agent0_tabela.png, id=219, 490.83376pt x 579.66562pt>
+ [48 <./images/env_4_agenci_italic_no_perc.png>]
+<images/env_14_akcje_agent0_tabela.png, id=248, 490.83376pt x 579.66562pt>
 File: images/env_14_akcje_agent0_tabela.png Graphic file (type png)
 <use images/env_14_akcje_agent0_tabela.png>
 Package pdftex.def Info: images/env_14_akcje_agent0_tabela.png  used on input l
-ine 995.
+ine 1216.
 (pdftex.def)             Requested size: 398.33858pt x 470.44646pt.
+ [49 <./env_4_fazy.png>]
+[50 <./images/env_14_akcje_agent0_tabela.png>]
+<images/srodowisko_3_przeplywy_italic.png, id=257, 507.39563pt x 456.20438pt>
+File: images/srodowisko_3_przeplywy_italic.png Graphic file (type png)
+<use images/srodowisko_3_przeplywy_italic.png>
+Package pdftex.def Info: images/srodowisko_3_przeplywy_italic.png  used on inpu
+t line 1230.
+(pdftex.def)             Requested size: 398.33858pt x 358.16298pt.
+ [51 <./images/srodowisko_3_przeplywy_italic.png>]
+Overfull \hbox (49.38824pt too wide) in paragraph at lines 1258--1259
+[]\T1/lmr/m/n/12 Optymalizacja jest prze-pro-wa-dzana przez me-tod¦ Adam [28] z
+ pa-ra-me-trem $\OML/lmm/m/it/12 learning[]rate \OT1/lmr/m/n/12 =
+ []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [45 <./env_4_fazy.png>] [46 <./images/env_14_akcje_agent0_tabela.png>]
-<images/srodowisko_3_przeplywy.png, id=228, 532.99126pt x 457.71pt>
-File: images/srodowisko_3_przeplywy.png Graphic file (type png)
-<use images/srodowisko_3_przeplywy.png>
-Package pdftex.def Info: images/srodowisko_3_przeplywy.png  used on input line 
-1009.
-(pdftex.def)             Requested size: 398.33858pt x 342.08739pt.
- [47 <./images/srodowisko_3_przeplywy.png>] [48]
-<images/env_poli.png, id=236, 478.78876pt x 624.83438pt>
-File: images/env_poli.png Graphic file (type png)
-<use images/env_poli.png>
-Package pdftex.def Info: images/env_poli.png  used on input line 1043.
-(pdftex.def)             Requested size: 284.52756pt x 371.31866pt.
- [49 <./images/env_poli.png>]
-<images/env_poli_faza_0_wol.png, id=242, 194.97844pt x 255.20343pt>
+<images/env_poli_italic2.png, id=262, 670.75594pt x 879.285pt>
+File: images/env_poli_italic2.png Graphic file (type png)
+<use images/env_poli_italic2.png>
+Package pdftex.def Info: images/env_poli_italic2.png  used on input line 1267.
+(pdftex.def)             Requested size: 341.43306pt x 447.57076pt.
+[52]
+<images/env_poli_faza_0_wol.png, id=266, 194.97844pt x 255.20343pt>
 File: images/env_poli_faza_0_wol.png Graphic file (type png)
 <use images/env_poli_faza_0_wol.png>
-Package pdftex.def Info: images/env_poli_faza_0_wol.png  used on input line 105
-9.
+Package pdftex.def Info: images/env_poli_faza_0_wol.png  used on input line 128
+4.
 (pdftex.def)             Requested size: 86.95404pt x 113.81102pt.
-<images/env_poli_faza_0_pozostale.png, id=243, 219.82124pt x 219.06844pt>
+<images/env_poli_faza_0_pozostale.png, id=267, 219.82124pt x 219.06844pt>
 File: images/env_poli_faza_0_pozostale.png Graphic file (type png)
 <use images/env_poli_faza_0_pozostale.png>
 Package pdftex.def Info: images/env_poli_faza_0_pozostale.png  used on input li
-ne 1059.
+ne 1284.
 (pdftex.def)             Requested size: 114.2037pt x 113.81102pt.
-<images/env_poli_faza_1_wol.png, id=244, 185.94469pt x 245.41687pt>
+<images/env_poli_faza_1_wol.png, id=268, 185.94469pt x 245.41687pt>
 File: images/env_poli_faza_1_wol.png Graphic file (type png)
 <use images/env_poli_faza_1_wol.png>
-Package pdftex.def Info: images/env_poli_faza_1_wol.png  used on input line 106
-2.
+Package pdftex.def Info: images/env_poli_faza_1_wol.png  used on input line 128
+7.
 (pdftex.def)             Requested size: 86.23071pt x 113.81102pt.
-<images/env_poli_faza_1_pozostale.png, id=245, 228.855pt x 230.36063pt>
+<images/env_poli_faza_1_pozostale.png, id=269, 228.855pt x 230.36063pt>
 File: images/env_poli_faza_1_pozostale.png Graphic file (type png)
 <use images/env_poli_faza_1_pozostale.png>
 Package pdftex.def Info: images/env_poli_faza_1_pozostale.png  used on input li
-ne 1062.
+ne 1287.
 (pdftex.def)             Requested size: 113.0653pt x 113.81102pt.
-<images/env_poli_faza_2_wol.png, id=246, 166.37157pt x 237.13594pt>
+<images/env_poli_faza_2_wol.png, id=270, 166.37157pt x 237.13594pt>
 File: images/env_poli_faza_2_wol.png Graphic file (type png)
 <use images/env_poli_faza_2_wol.png>
-Package pdftex.def Info: images/env_poli_faza_2_wol.png  used on input line 106
-5.
+Package pdftex.def Info: images/env_poli_faza_2_wol.png  used on input line 129
+0.
 (pdftex.def)             Requested size: 79.84727pt x 113.81102pt.
-<images/env_poli_faza_2_pozostale.png, id=247, 217.5628pt x 214.55156pt>
+<images/env_poli_faza_2_pozostale.png, id=271, 217.5628pt x 214.55156pt>
 File: images/env_poli_faza_2_pozostale.png Graphic file (type png)
 <use images/env_poli_faza_2_pozostale.png>
 Package pdftex.def Info: images/env_poli_faza_2_pozostale.png  used on input li
-ne 1065.
+ne 1290.
 (pdftex.def)             Requested size: 115.40732pt x 113.81102pt.
-<images/env_poli_faza_3_wol.png, id=248, 178.41656pt x 243.15843pt>
+<images/env_poli_faza_3_wol.png, id=272, 178.41656pt x 243.15843pt>
 File: images/env_poli_faza_3_wol.png Graphic file (type png)
 <use images/env_poli_faza_3_wol.png>
-Package pdftex.def Info: images/env_poli_faza_3_wol.png  used on input line 106
-8.
+Package pdftex.def Info: images/env_poli_faza_3_wol.png  used on input line 129
+3.
 (pdftex.def)             Requested size: 83.50731pt x 113.81102pt.
-<images/env_poli_faza_3_pozostale.png, id=249, 219.82124pt x 217.5628pt>
+<images/env_poli_faza_3_pozostale.png, id=273, 219.82124pt x 217.5628pt>
 File: images/env_poli_faza_3_pozostale.png Graphic file (type png)
 <use images/env_poli_faza_3_pozostale.png>
 Package pdftex.def Info: images/env_poli_faza_3_pozostale.png  used on input li
-ne 1068.
+ne 1293.
 (pdftex.def)             Requested size: 114.9953pt x 113.81102pt.
-<images/env_poli_faza_zolte_wol.png, id=250, 97.11281pt x 127.22531pt>
+<images/env_poli_faza_zolte_wol.png, id=274, 97.11281pt x 127.22531pt>
 File: images/env_poli_faza_zolte_wol.png Graphic file (type png)
 <use images/env_poli_faza_zolte_wol.png>
 Package pdftex.def Info: images/env_poli_faza_zolte_wol.png  used on input line
- 1071.
+ 1296.
 (pdftex.def)             Requested size: 86.87762pt x 113.81102pt.
-<images/env_poli_faza_zolte_pozostale.png, id=251, 110.66344pt x 110.66344pt>
+<images/env_poli_faza_zolte_pozostale.png, id=275, 110.66344pt x 110.66344pt>
 File: images/env_poli_faza_zolte_pozostale.png Graphic file (type png)
 <use images/env_poli_faza_zolte_pozostale.png>
 Package pdftex.def Info: images/env_poli_faza_zolte_pozostale.png  used on inpu
-t line 1071.
+t line 1296.
 (pdftex.def)             Requested size: 113.81741pt x 113.81102pt.
+ [53 <./images/env_poli_italic2.png>] [54]
+Overfull \vbox (9.24858pt too high) has occurred while \output is active []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [50]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [51 <./images/env_poli_faza_0_wol.png> <./images/env_poli_faza_0_pozostale.png
-> <./images/env_poli_faza_1_wol.png> <./images/env_poli_faza_1_pozostale.png> <
-./images/env_poli_faza_2_wol.png> <./images/env_poli_faza_2_pozostale.png> <./i
-mages/env_poli_faza_3_wol.png> <./images/env_poli_faza_3_pozostale.png> <./imag
-es/env_poli_faza_zolte_wol.png> <./images/env_poli_faza_zolte_pozostale.png>] [
-52]
+[55 <./images/env_poli_faza_0_wol.png> <./images/env_poli_faza_0_pozostale.png>
+ <./images/env_poli_faza_1_wol.png> <./images/env_poli_faza_1_pozostale.png> <.
+/images/env_poli_faza_2_wol.png> <./images/env_poli_faza_2_pozostale.png> <./im
+ages/env_poli_faza_3_wol.png> <./images/env_poli_faza_3_pozostale.png> <./image
+s/env_poli_faza_zolte_wol.png> <./images/env_poli_faza_zolte_pozostale.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 1095.
+(Font)              <5> on input line 1323.
 
-[53] [54]
-Rozdzia\l  7.
+[56]
+<images/poli_wyniki/plot_cars_in.png, id=300, 465.99094pt x 365.86688pt>
+File: images/poli_wyniki/plot_cars_in.png Graphic file (type png)
+<use images/poli_wyniki/plot_cars_in.png>
+Package pdftex.def Info: images/poli_wyniki/plot_cars_in.png  used on input lin
+e 1339.
+(pdftex.def)             Requested size: 398.33858pt x 312.7636pt.
+ [57]
+<images/poli_wyniki/plot_cars_out_percentage_no_title.png, id=308, 475.7775pt x
+ 330.48468pt>
+File: images/poli_wyniki/plot_cars_out_percentage_no_title.png Graphic file (ty
+pe png)
+<use images/poli_wyniki/plot_cars_out_percentage_no_title.png>
+Package pdftex.def Info: images/poli_wyniki/plot_cars_out_percentage_no_title.p
+ng  used on input line 1346.
+(pdftex.def)             Requested size: 384.1122pt x 266.82376pt.
+<images/poli_wyniki/plot_cars_out_no_title.png, id=309, 477.28313pt x 330.48468
+pt>
+File: images/poli_wyniki/plot_cars_out_no_title.png Graphic file (type png)
+<use images/poli_wyniki/plot_cars_out_no_title.png>
+Package pdftex.def Info: images/poli_wyniki/plot_cars_out_no_title.png  used on
+ input line 1353.
+(pdftex.def)             Requested size: 384.1122pt x 265.96649pt.
+ [58 <./images/poli_wyniki/plot_cars_in.png>] [59 <./images/poli_wyniki/plot_ca
+rs_out_percentage_no_title.png> <./images/poli_wyniki/plot_cars_out_no_title.pn
+g>]
+<images/poli_wyniki/losses_no_title.png, id=319, 481.8pt x 361.35pt>
+File: images/poli_wyniki/losses_no_title.png Graphic file (type png)
+<use images/poli_wyniki/losses_no_title.png>
+Package pdftex.def Info: images/poli_wyniki/losses_no_title.png  used on input 
+line 1361.
+(pdftex.def)             Requested size: 398.33858pt x 298.76254pt.
+ [60 <./images/poli_wyniki/losses_no_title.png>]
+Rozdzia\l  8.
+[61
 
-Underfull \hbox (badness 10000) in paragraph at lines 1118--1130
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1118--1130
-
- []
-
-[55
-
-] ("model ruchu.bbl" [56]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 9.
+] ("model ruchu.bbl" [62]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 14.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 1748) in paragraph at lines 13--16
+Underfull \hbox (badness 1748) in paragraph at lines 18--21
 []\T1/lmr/m/n/12 polskawliczbach.pl, ``Sa-mo-chody oso-bowe w pol-sce w la-tach
  2003-2016 (¹ró-dªo:
  []
 
 
-Underfull \hbox (badness 6758) in paragraph at lines 18--21
+Underfull \hbox (badness 6758) in paragraph at lines 23--26
 []\T1/lmr/m/n/12 TomTom, ``Tom-tom traf-fic in-dex me-asu-ring con-ge-stion wor
 l-dwide).'' $\T1/lmtt/m/n/12 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--21
+Underfull \hbox (badness 10000) in paragraph at lines 23--26
 \T1/lmtt/m/n/12 / / www . tomtom . com / en _ gb / trafficindex / list ? citySi
 ze = ALL & continent = ALL &
  []
 
-[57
+[63
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 72--76
+Underfull \hbox (badness 10000) in paragraph at lines 77--81
 []\T1/lmr/m/n/12 T. Ma-tii-sen, ``https://neuro.cs.ut.ee/demystifying-deep-rein
 forcement-learning/.''
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--76
+Underfull \hbox (badness 10000) in paragraph at lines 77--81
 \T1/lmtt/m/n/12 https : / / neuro . cs . ut . ee / demystifying-[]deep-[]reinfo
 rcement-[]learning/$\T1/lmr/m/n/12 , 2019
  []
 
-[58]) [59] ("model ruchu.aux")
+[64]) [65] ("model ruchu.aux")
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15856 strings out of 492895
- 296249 string characters out of 3133470
- 385226 words of memory out of 3000000
- 19321 multiletter control sequences out of 15000+200000
- 104000 words of font info for 65 fonts, out of 3000000 for 9000
+ 16092 strings out of 492895
+ 300538 string characters out of 3133470
+ 395705 words of memory out of 3000000
+ 19541 multiletter control sequences out of 15000+200000
+ 100985 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 54i,16n,73p,1548b,351s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 54i,20n,73p,1593b,457s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
 iKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
 nc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy
@@ -1353,17 +1433,16 @@ fonts/type1/public/lm/lmbx8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 iKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr1
 0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
-m/lmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/lm/lmro12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
-Output written on "model ruchu.pdf" (59 pages, 2547720 bytes).
+Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm
+/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/lm/lmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
+Output written on "model ruchu.pdf" (66 pages, 3691699 bytes).
 PDF statistics:
- 368 PDF objects out of 1000 (max. 8388607)
+ 407 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 233 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 288 words of extra memory for PDF output out of 10000 (max. 10000000)
 

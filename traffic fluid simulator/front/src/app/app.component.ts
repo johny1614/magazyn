@@ -35,7 +35,7 @@ export class AppComponent {
   }
 
   ngOnInit(){
-    this.load_name='net4szerokie_cokolwiek'
+    this.load_name='netpolibuda_x'
     this.load();
   }
 
@@ -46,6 +46,7 @@ export class AppComponent {
     const first_occurance = this.load_name.indexOf('_');
     const net_name = this.load_name.substring(0, first_occurance);
     const den_name = this.load_name.substring(first_occurance + 1, 999);
+    console.log('den name',den_name)
     this.getJSON('assets/nets/' + net_name + '.json').subscribe(staticData => {
       this.nets = [NetFactory.netFromJson(staticData)];
       let net = 'assets/densities/' + net_name + '_' + den_name + '.json';
